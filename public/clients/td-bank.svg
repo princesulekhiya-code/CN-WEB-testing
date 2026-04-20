@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 40">
+  <rect x="0" y="5" width="30" height="30" rx="4" fill="#34A853" stroke="#2E9B4B" stroke-width="1"/>
+  <text x="5" y="27" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">TD</text>
+  <text x="38" y="27" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#34A853">Bank</text>
+</svg>
