@@ -95,7 +95,7 @@ const services: ServiceOffering[] = [
     icon: Lightbulb,
     title: "Digital Product Consultation",
     description:
-      "Our tech consultants analyze your business needs and formulate strategies to build the best solution that accelerates your operations.",
+      "Our strategists immerse in your operations to uncover growth levers and chart a technology roadmap that accelerates every initiative.",
     features: ["Business analysis", "Strategy formulation", "Tech advisory"],
     href: "/services/product-engineering/digital-product-consultation",
   },
@@ -103,7 +103,7 @@ const services: ServiceOffering[] = [
     icon: Settings,
     title: "Software Product Architecting",
     description:
-      "Experts analyze your IT infrastructure and utilize advanced tools to build scalable, robust software with smooth performance.",
+      "Seasoned architects evaluate your infrastructure landscape and leverage modern tooling to design resilient, high-performance systems built for scale.",
     features: ["System design", "Scalable architecture", "Tech stack selection"],
     href: "/services/product-engineering/software-product-architecting",
   },
@@ -111,7 +111,7 @@ const services: ServiceOffering[] = [
     icon: Palette,
     title: "Product Experience Design",
     description:
-      "UI/UX experts understand business specifics and follow latest industry trends to create intuitive flow and responsive design.",
+      "Design specialists translate business context and emerging patterns into intuitive interaction flows and responsive, brand-aligned interfaces.",
     features: ["User research", "Interaction design", "Responsive UX"],
     href: "/services/product-engineering/product-experience-design",
   },
@@ -119,7 +119,7 @@ const services: ServiceOffering[] = [
     icon: Target,
     title: "Product Prototyping",
     description:
-      "We leverage market insights and research to build software prototypes — validate, iterate, and optimize to fulfill requirements.",
+      "Grounded in market intelligence and user research, we craft interactive prototypes — test assumptions early, iterate rapidly, and refine until every requirement lands.",
     features: ["Rapid prototyping", "User validation", "Iterative testing"],
     href: "/services/product-engineering/product-prototyping",
   },
@@ -127,7 +127,7 @@ const services: ServiceOffering[] = [
     icon: Rocket,
     title: "Digital Product Development",
     description:
-      "Developers leverage latest technologies to build basic to advanced digital products and scale MVPs to full-fledged solutions.",
+      "Engineers harness cutting-edge stacks to construct everything from lean MVPs to feature-rich platforms — then scale them into market-leading products.",
     features: ["Full-stack development", "MVP to scale", "Cloud-native"],
     href: "/services/product-engineering/digital-product-development",
   },
@@ -135,7 +135,7 @@ const services: ServiceOffering[] = [
     icon: ShieldCheck,
     title: "Quality Engineering",
     description:
-      "Rigorous quality engineering to eliminate last-minute issues and equip products to face competitors in the early phase.",
+      "Disciplined QA embedded from day one — automated regression, performance profiling, and security sweeps so your product ships battle-ready.",
     features: ["Automated testing", "Performance QA", "Security testing"],
     href: "/services/product-engineering/quality-engineering",
   },
@@ -146,42 +146,42 @@ const processSteps = [
     step: "01",
     title: "Product Ideation",
     description:
-      "Strategy to determine business enhancement points, brand USP, and customer impact.",
+      "Identify the strategic inflection points in your business, crystallize your brand differentiators, and map expected customer impact.",
     icon: Lightbulb,
   },
   {
     step: "02",
     title: "Design & Prototyping",
     description:
-      "Shape app ideas into projects — use cases, functionalities, product roadmap, and MVP design.",
+      "Transform raw concepts into structured projects — defining use cases, feature sets, a phased roadmap, and an MVP blueprint.",
     icon: Palette,
   },
   {
     step: "03",
     title: "Product Development",
     description:
-      "Designs become functional — technology selection and feature integration for desirable products.",
+      "Designs come alive — selecting the optimal stack and integrating features sprint by sprint to deliver a cohesive, launch-ready product.",
     icon: Code2,
   },
   {
     step: "04",
     title: "Quality Assurance",
     description:
-      "Stability, security, and bug-free products through comprehensive test cases and tracking.",
+      "Comprehensive test coverage — functional, security, and performance — to ensure stable, defect-free releases every time.",
     icon: ShieldCheck,
   },
   {
     step: "05",
     title: "Deployment & Support",
     description:
-      "Deploy on respective platforms with metadata preparation and performance monitoring.",
+      "Seamless deployment to target platforms with optimized metadata, store compliance, and real-time performance monitoring from day one.",
     icon: Rocket,
   },
   {
     step: "06",
     title: "Product Sustenance",
     description:
-      "Regular updates, latest functionalities, and security measures without hampering operations.",
+      "Continuous evolution — rolling out new capabilities, security patches, and performance enhancements without disrupting live operations.",
     icon: RefreshCcw,
   },
 ];
@@ -271,25 +271,25 @@ const whyChoose = [
     icon: Award,
     title: "AI & ML Integration",
     description:
-      "Seamlessly integrate advanced AI/ML technologies for smarter decision-making and personalized experiences.",
+      "Weave AI and machine learning into your product DNA for sharper decisions, adaptive workflows, and personalized user journeys.",
   },
   {
     icon: Zap,
     title: "DevOps Excellence",
     description:
-      "Expert DevOps ensures smooth development with efficient testing, maintenance, and support.",
+      "Mature DevOps practices that streamline builds, automate testing, and keep maintenance and support running like clockwork.",
   },
   {
     icon: BarChart3,
     title: "Powerful Analytics",
     description:
-      "Advanced analytics tools to monitor and manage system performance for data-driven decisions.",
+      "Embedded analytics dashboards that surface real-time system health and user behavior — so every decision is data-informed.",
   },
   {
     icon: ShieldCheck,
     title: "Security-First Approach",
     description:
-      "End-to-end security measures throughout the development lifecycle for complete data protection.",
+      "Security woven into every phase of the lifecycle — from threat modeling and code review through deployment hardening and ongoing monitoring.",
   },
 ];
 
@@ -325,7 +325,7 @@ export default function ProductEngineeringPage() {
               heroReady ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
             }`}
           >
-            <ArrowLeft size={16} /> Back to Services
+            <ArrowLeft size={16} /> Return to services
           </Link>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -356,13 +356,13 @@ export default function ProductEngineeringPage() {
                   href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10"
                 >
-                  Get Free Consultation <ArrowRight className="w-4 h-4" />
+                  Schedule a free consultation <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/our-work"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
                 >
-                  View Our Work
+                  Explore our portfolio
                 </Link>
               </div>
             </div>
@@ -389,138 +389,25 @@ export default function ProductEngineeringPage() {
 
 function ProductHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg
-        viewBox="0 0 400 460"
-        fill="none"
-        className="relative w-full h-full drop-shadow-2xl"
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        {/* Dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        {/* Header */}
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        {/* Main card */}
-        <rect x="72" y="100" width="256" height="100" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="114" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="128" width="90" height="12" rx="4" className="fill-[#006ea3] dark:fill-[#3ba0d6]" />
-        <rect x="84" y="148" width="70" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <polyline points="220,186 234,164 248,172 262,152 276,158 290,144" className="stroke-[#006ea3] dark:stroke-[#3ba0d6]" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Two cards */}
-        <rect x="72" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="94" cy="238" r="10" className="fill-[#006ea3]/15" />
-        <rect x="112" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="242" width="40" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="84" y="260" width="96" height="6" rx="3" className="fill-[#006ea3]/30" />
-        <rect x="84" y="272" width="70" height="6" rx="3" className="fill-[#006ea3]/20" />
-        <rect x="208" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="230" cy="238" r="10" className="fill-emerald-500/15" />
-        <rect x="248" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="248" y="242" width="45" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="220" y="260" width="96" height="6" rx="3" className="fill-emerald-500/30" />
-        <rect x="220" y="272" width="75" height="6" rx="3" className="fill-emerald-500/20" />
-        {/* Bottom list items */}
-        <rect x="72" y="304" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="326" r="8" className="fill-[#006ea3]/15" />
-        <rect x="112" y="320" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="330" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="326" r="6" className="fill-[#006ea3]/20" />
-        <rect x="72" y="356" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="378" r="8" className="fill-violet-500/15" />
-        <rect x="112" y="372" width="70" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="382" width="110" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="378" r="6" className="fill-violet-500/20" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <Layers className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">End-to-End</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Product Build</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=600&fit=crop&q=80" alt="Product engineering and development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><Layers className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">Full Lifecycle</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Concept to scale</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <Palette className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">UX Design</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Research-led</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><Rocket className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">3x Faster</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Market delivery</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <Code2 className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Agile Dev</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">2-Week Sprints</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <Rocket className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Ship Fast</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">CI/CD Ready</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10"
-        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -656,7 +543,7 @@ function ProcessSection() {
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">How We Work</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Development <span className="text-black dark:text-white">Process</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A battle-tested methodology that ensures quality, transparency, and on-time delivery.</p>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A proven, field-tested methodology that ensures quality, transparency, and on-time delivery.</p>
         </motion.div>
         <div className="relative">
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
@@ -914,7 +801,7 @@ function CTASection() {
             href="/our-work"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
           >
-            View Our Work
+            Explore our portfolio
           </Link>
         </div>
       </div>

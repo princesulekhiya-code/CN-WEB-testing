@@ -91,7 +91,7 @@ const services: ServiceOffering[] = [
     icon: Layout,
     title: "CMS Development",
     description:
-      "Streamline your digital content with user-friendly CMS systems. We design, develop, and deploy for seamless content control.",
+      "Empower your editorial teams with intuitive CMS solutions — designed, built, and deployed for effortless content orchestration at scale.",
     features: ["Content management", "User-friendly", "SEO-ready"],
     href: "/services/wordpress-development/cms-development",
   },
@@ -99,7 +99,7 @@ const services: ServiceOffering[] = [
     icon: Code2,
     title: "Custom WordPress Web Development",
     description:
-      "From creative design to responsive development, we build WordPress websites that drive conversions and maximize ROI.",
+      "Bespoke WordPress builds from concept through pixel-perfect execution — engineered to convert visitors and deliver measurable returns.",
     features: ["Custom themes", "Responsive design", "High conversion"],
     href: "/services/wordpress-development/custom-wordpress-development",
   },
@@ -107,7 +107,7 @@ const services: ServiceOffering[] = [
     icon: ShoppingCart,
     title: "WordPress eCommerce Development",
     description:
-      "Powered with cross-functional plugins, our eCommerce development makes your online store feature-rich, engaging, and profitable.",
+      "WooCommerce storefronts supercharged with premium plugins — feature-rich, visually engaging, and optimized for revenue growth.",
     features: ["WooCommerce", "Payment gateways", "Product catalog"],
     href: "/services/wordpress-development/wordpress-ecommerce",
   },
@@ -115,7 +115,7 @@ const services: ServiceOffering[] = [
     icon: Puzzle,
     title: "WordPress Plugin Development",
     description:
-      "SEO-friendly, secured, and high-potent plugins that are scalable, easy-to-integrate, and simple to use.",
+      "Lightweight, secure, and SEO-aware custom plugins — built for seamless integration, intuitive admin controls, and long-term maintainability.",
     features: ["Custom plugins", "API hooks", "Security-first"],
     href: "/services/wordpress-development/wordpress-plugin-development",
   },
@@ -123,7 +123,7 @@ const services: ServiceOffering[] = [
     icon: Palette,
     title: "Responsive Theme Development",
     description:
-      "UX designers and solution architects use design thinking to develop user-friendly, responsive themes.",
+      "Design-thinking-led themes that adapt beautifully across every breakpoint — reinforcing your brand identity with every scroll.",
     features: ["Design thinking", "Mobile-first", "Brand identity"],
     href: "/services/wordpress-development/responsive-theme-development",
   },
@@ -131,7 +131,7 @@ const services: ServiceOffering[] = [
     icon: RefreshCcw,
     title: "WordPress Migration & Maintenance",
     description:
-      "All key aspects of site maintenance — core updates, security improvements, and seamless platform migrations.",
+      "Comprehensive site stewardship — core upgrades, vulnerability patching, and zero-downtime platform migrations handled end to end.",
     features: ["Core updates", "Security patches", "Zero-downtime migration"],
     href: "/services/wordpress-development/wordpress-migration-maintenance",
   },
@@ -142,42 +142,42 @@ const processSteps = [
     step: "01",
     title: "Research & Analysis",
     description:
-      "Understand business needs and define strategies for the right WordPress solution.",
+      "Map your business objectives, audience, and content strategy to define the ideal WordPress architecture.",
     icon: ClipboardList,
   },
   {
     step: "02",
     title: "UI/UX Designing",
     description:
-      "Visualize prototypes, create wireframes, and prepare working designs for the project.",
+      "Interactive prototypes and detailed wireframes that align stakeholders before any development begins.",
     icon: Palette,
   },
   {
     step: "03",
     title: "Development",
     description:
-      "Select right tech stack, build solutions integrating all required features and APIs.",
+      "Optimal stack selection followed by feature-by-feature builds with plugin and API integrations baked in.",
     icon: Code2,
   },
   {
     step: "04",
     title: "Quality Assurance",
     description:
-      "Manual and functional testing practices ensuring 100% bug-free delivery.",
+      "Thorough manual and automated testing — cross-browser, responsive, and functional — for a polished, defect-free launch.",
     icon: ShieldCheck,
   },
   {
     step: "05",
     title: "Deployment",
     description:
-      "Deploy on suitable platform or server with optimization and CDN configuration.",
+      "Production deployment on optimized hosting with CDN configuration, caching layers, and SSL for a fast, secure go-live.",
     icon: Rocket,
   },
   {
     step: "06",
     title: "Maintenance",
     description:
-      "Ongoing maintenance with core updates, security patches, and performance monitoring.",
+      "Proactive care — scheduled core updates, vulnerability patching, uptime monitoring, and performance tuning month over month.",
     icon: Settings,
   },
 ];
@@ -221,25 +221,25 @@ const whyChoose = [
     icon: Award,
     title: "Proven WordPress Experts",
     description:
-      "Close-knit team of experienced developers with wide expertise in WordPress and eCommerce development.",
+      "A tight-knit squad of seasoned WordPress engineers with deep expertise across themes, plugins, and WooCommerce.",
   },
   {
     icon: Palette,
     title: "Striking Designs",
     description:
-      "World-class quality and affordable WordPress design that fits your needs with visually appealing experiences.",
+      "Premium-grade design at accessible pricing — every site balances visual polish with usability and brand coherence.",
   },
   {
     icon: Zap,
     title: "Demand Driven Development",
     description:
-      "High-performance WordPress websites developed adhering to best industry practices and standards.",
+      "Performance-obsessed WordPress builds following industry best practices — optimized for Core Web Vitals and SEO from day one.",
   },
   {
     icon: HeartHandshake,
     title: "Full Customer Satisfaction",
     description:
-      "Extra mile solutions with tailored WordPress themes, plugins, and ongoing support.",
+      "We go beyond the brief — custom themes, purpose-built plugins, and responsive support that keeps your site thriving long after launch.",
   },
 ];
 
@@ -275,7 +275,7 @@ export default function WordPressDevelopmentPage() {
               heroReady ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
             }`}
           >
-            <ArrowLeft size={16} /> Back to Services
+            <ArrowLeft size={16} /> Return to services
           </Link>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -305,13 +305,13 @@ export default function WordPressDevelopmentPage() {
                   href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10"
                 >
-                  Get Free Consultation <ArrowRight className="w-4 h-4" />
+                  Schedule a free consultation <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/our-work"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
                 >
-                  View Our Work
+                  Explore our portfolio
                 </Link>
               </div>
             </div>
@@ -338,138 +338,25 @@ export default function WordPressDevelopmentPage() {
 
 function WPHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg
-        viewBox="0 0 400 460"
-        fill="none"
-        className="relative w-full h-full drop-shadow-2xl"
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        {/* Dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        {/* Header */}
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        {/* Main card */}
-        <rect x="72" y="100" width="256" height="100" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="114" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="128" width="90" height="12" rx="4" className="fill-[#006ea3] dark:fill-[#3ba0d6]" />
-        <rect x="84" y="148" width="70" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <polyline points="220,186 234,164 248,172 262,152 276,158 290,144" className="stroke-[#006ea3] dark:stroke-[#3ba0d6]" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Two cards */}
-        <rect x="72" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="94" cy="238" r="10" className="fill-[#006ea3]/15" />
-        <rect x="112" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="242" width="40" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="84" y="260" width="96" height="6" rx="3" className="fill-[#006ea3]/30" />
-        <rect x="84" y="272" width="70" height="6" rx="3" className="fill-[#006ea3]/20" />
-        <rect x="208" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="230" cy="238" r="10" className="fill-emerald-500/15" />
-        <rect x="248" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="248" y="242" width="45" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="220" y="260" width="96" height="6" rx="3" className="fill-emerald-500/30" />
-        <rect x="220" y="272" width="75" height="6" rx="3" className="fill-emerald-500/20" />
-        {/* Bottom list items */}
-        <rect x="72" y="304" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="326" r="8" className="fill-[#006ea3]/15" />
-        <rect x="112" y="320" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="330" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="326" r="6" className="fill-[#006ea3]/20" />
-        <rect x="72" y="356" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="378" r="8" className="fill-violet-500/15" />
-        <rect x="112" y="372" width="70" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="382" width="110" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="378" r="6" className="fill-violet-500/20" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <Globe className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">WordPress</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Expert Team</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=600&fit=crop&q=80" alt="WordPress development services" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><Globe className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">WordPress VIP</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Enterprise-grade</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <Rocket className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">2 Weeks</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">To Launch</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><Zap className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">Sub-2s Load</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Optimized speed</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <ShieldCheck className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Secure</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Hardened WP</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <Zap className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">95+ Score</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Performance</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10"
-        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -605,7 +492,7 @@ function ProcessSection() {
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">How We Work</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Development <span className="text-black dark:text-white">Process</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A battle-tested methodology that ensures quality, transparency, and on-time delivery.</p>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A streamlined, quality-first approach that ensures quality, transparency, and on-time delivery.</p>
         </motion.div>
         <div className="relative">
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
@@ -862,7 +749,7 @@ function CTASection() {
             href="/our-work"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
           >
-            View Our Work
+            Explore our portfolio
           </Link>
         </div>
       </div>

@@ -86,12 +86,12 @@ interface ServiceOffering {
 }
 
 const services: ServiceOffering[] = [
-  { icon: Store, title: "eCommerce Online Platform", description: "Advanced, scalable, and seamless B2B and B2C eCommerce online stores leveraging the latest tech stack and custom functionalities.", href: "/services/ecommerce-development/ecommerce-platform", features: ["B2B/B2C", "Scalable", "Custom"] },
-  { icon: Smartphone, title: "eCommerce Mobile App", description: "Omnichannel online stores supporting convenience shopping — anytime, on the go — boosting sales and building brand awareness.", href: "/services/ecommerce-development/ecommerce-mobile-app", features: ["Omnichannel", "iOS & Android", "On-the-go"] },
-  { icon: Layers, title: "Multi-Vendor Marketplace", description: "Reliable multi-vendor marketplaces with streamlined experiences for buyers and sellers, supporting multiple payment gateways.", href: "/services/ecommerce-development/multi-vendor-marketplace", features: ["Multi-vendor", "Payment gateways", "Buyer/Seller"] },
-  { icon: CreditCard, title: "Payment & Checkout", description: "Stripe, PayPal, and regional gateways with retries, fraud signals, and mobile-optimized one-page checkout flows.", href: "/services/ecommerce-development/payment-checkout", features: ["Stripe/PayPal", "Fraud detection", "One-page checkout"] },
-  { icon: Globe, title: "Headless Commerce", description: "Decoupled front and back-end architecture for ultimate flexibility — plug any backend to any frontend without impact.", href: "/services/ecommerce-development/headless-commerce", features: ["Decoupled", "API-first", "Flexible frontend"] },
-  { icon: ShieldCheck, title: "eCommerce Enterprise Software", description: "SEO-friendly custom enterprise portals supporting effortless business management with seamless user experience.", href: "/services/ecommerce-development/enterprise-ecommerce", features: ["Enterprise-grade", "SEO-friendly", "Management tools"] },
+  { icon: Store, title: "eCommerce Online Platform", description: "High-performance B2B and B2C storefronts built on modern stacks — purpose-designed for rich catalogues, custom workflows, and growth at scale.", href: "/services/ecommerce-development/ecommerce-platform", features: ["B2B/B2C", "Scalable", "Custom"] },
+  { icon: Smartphone, title: "eCommerce Mobile App", description: "Omnichannel mobile shopping experiences that meet customers wherever they are — driving conversions and deepening brand loyalty on every device.", href: "/services/ecommerce-development/ecommerce-mobile-app", features: ["Omnichannel", "iOS & Android", "On-the-go"] },
+  { icon: Layers, title: "Multi-Vendor Marketplace", description: "Robust marketplace platforms with frictionless buyer and seller journeys, multi-gateway payments, and built-in vendor management tools.", href: "/services/ecommerce-development/multi-vendor-marketplace", features: ["Multi-vendor", "Payment gateways", "Buyer/Seller"] },
+  { icon: CreditCard, title: "Payment & Checkout", description: "Stripe, PayPal, and regional gateways with intelligent retries, real-time fraud scoring, and mobile-optimized one-tap checkout flows.", href: "/services/ecommerce-development/payment-checkout", features: ["Stripe/PayPal", "Fraud detection", "One-page checkout"] },
+  { icon: Globe, title: "Headless Commerce", description: "API-first, composable architecture — swap or evolve any frontend independently while the commerce engine runs uninterrupted underneath.", href: "/services/ecommerce-development/headless-commerce", features: ["Decoupled", "API-first", "Flexible frontend"] },
+  { icon: ShieldCheck, title: "eCommerce Enterprise Software", description: "SEO-optimized enterprise portals that simplify complex operations and deliver a polished, conversion-focused shopping experience.", href: "/services/ecommerce-development/enterprise-ecommerce", features: ["Enterprise-grade", "SEO-friendly", "Management tools"] },
 ];
 
 const stats = [
@@ -102,12 +102,12 @@ const stats = [
 ];
 
 const processSteps = [
-  { step: "01", title: "Analysis", description: "Gain details about your business, understand requirements, and propose a feasible eCommerce solution.", icon: ClipboardList },
-  { step: "02", title: "Wireframing & Design", description: "Design wireframes, modules, and the app with mobile-first UX and conversion-focused layouts.", icon: Palette },
-  { step: "03", title: "Tech-Stack Selection", description: "Select the suitable tech stack, create database schema, and gain approval from the client.", icon: Settings },
-  { step: "04", title: "Development", description: "Start coding the solution, release codes for each module with agile sprint methodology.", icon: Code2 },
-  { step: "05", title: "Testing", description: "Perform various types of testing — ensure 100% bug-free quality and seek client approval.", icon: ShieldCheck },
-  { step: "06", title: "Deployment", description: "Deploy web version on the server, apps on relevant stores — available for public usage.", icon: Rocket },
+  { step: "01", title: "Analysis", description: "Deep-dive into your business model, catalogue structure, and customer journeys to define the ideal commerce architecture.", icon: ClipboardList },
+  { step: "02", title: "Wireframing & Design", description: "Conversion-focused wireframes and mobile-first layouts that guide shoppers effortlessly from browse to buy.", icon: Palette },
+  { step: "03", title: "Tech-Stack Selection", description: "Platform and stack recommendations matched to your scale, budget, and integration needs — signed off before a line of code.", icon: Settings },
+  { step: "04", title: "Development", description: "Sprint-based builds with modular releases — every feature tested in isolation before merging into the production codebase.", icon: Code2 },
+  { step: "05", title: "Testing", description: "Automated regression, payment-flow verification, load stress tests, and cross-device QA for a defect-free launch.", icon: ShieldCheck },
+  { step: "06", title: "Deployment", description: "Zero-downtime go-live on hosting infrastructure and app stores — with monitoring, CDN, and rollback readiness in place.", icon: Rocket },
 ];
 
 const techCategories: { label: string; items: { name: string; logo: string }[] }[] = [
@@ -178,57 +178,57 @@ const industries = [
     icon: ShoppingCart, name: "Retail", href: "/industry/ecommerce-solutions",
     desc: "Online stores, marketplaces & omnichannel retail commerce solutions",
     accent: "#8B5CF6", stat: "30+", statLabel: "Stores Built",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Stethoscope, name: "Healthcare", href: "/industry/healthcare-lifesciences",
     desc: "Medical supplies, pharmacy e-commerce & healthcare online stores",
     accent: "#EF4444", stat: "15+", statLabel: "Health Apps",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: CreditCard, name: "Finance", href: "/industry/banking-finance-insurance",
     desc: "Digital payments, fintech commerce & financial service platforms",
     accent: "#10B981", stat: "25+", statLabel: "FinTech Apps",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Truck, name: "Logistics", href: "/industry/transport-logistics",
     desc: "Supply chain commerce, delivery platforms & logistics e-commerce",
     accent: "#06B6D4", stat: "12+", statLabel: "Logistics Apps",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: GraduationCap, name: "Education", href: "/industry/education-elearning",
     desc: "Course platforms, EdTech commerce & education marketplace solutions",
     accent: "#F59E0B", stat: "20+", statLabel: "EdTech Solutions",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Building2, name: "Real Estate", href: "/industry/real-estate",
     desc: "Property listings, portals & real estate commerce platforms",
     accent: "#EC4899", stat: "10+", statLabel: "PropTech Apps",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Gamepad2, name: "Entertainment", href: "/industry/entertainment",
     desc: "Digital goods, subscriptions & entertainment commerce platforms",
     accent: "#A855F7", stat: "14+", statLabel: "Media Apps",
-    image: "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Factory, name: "Manufacturing", href: "/industry/enterprise-retail-manufacturing",
     desc: "B2B commerce, wholesale platforms & manufacturing e-commerce",
     accent: "#F97316", stat: "8+", statLabel: "Mfg Solutions",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop&q=80",
   },
 ];
 
 const whyChoose = [
-  { icon: Award, title: "Agile Development", description: "Rapid development and deployment with agile methodology, advanced tools, and high-quality products within deadline." },
-  { icon: TrendingUp, title: "Customer-Centric", description: "Client feedback as priority — customer-centric approach leading to quality delivery within timelines." },
-  { icon: Zap, title: "NDA & Security", description: "Client data confidentiality with standard NDA policies maintaining sensitivity and secrecy of shared details." },
-  { icon: HeartHandshake, title: "Flexible Approach", description: "Multiple development methodologies under a flexible approach — every project gets unique tactics and tech stack." },
+  { icon: Award, title: "Agile Development", description: "Sprint-driven delivery with modern toolchains — shipping production-ready features fast without compromising quality." },
+  { icon: TrendingUp, title: "Customer-Centric", description: "Your feedback shapes every iteration — we build around real user needs to deliver outcomes that hit the mark." },
+  { icon: Zap, title: "NDA & Security", description: "Strict confidentiality from day one — enforceable NDAs and enterprise-grade data handling protect every shared detail." },
+  { icon: HeartHandshake, title: "Flexible Approach", description: "No one-size-fits-all — each engagement gets a tailored methodology, tech stack, and team structure." },
 ];
 
 export default function EcommerceDevelopmentPage() {
@@ -252,119 +252,25 @@ export default function EcommerceDevelopmentPage() {
 
 function EcomHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg viewBox="0 0 400 460" fill="none" className="relative w-full h-full drop-shadow-2xl" initial={{ y: 20 }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-        {/* Dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        <rect x="72" y="100" width="256" height="100" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="114" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="128" width="90" height="12" rx="4" className="fill-[#006ea3] dark:fill-[#3ba0d6]" />
-        <rect x="84" y="148" width="70" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <polyline points="220,186 234,164 248,172 262,152 276,158 290,144" className="stroke-[#006ea3] dark:stroke-[#3ba0d6]" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        <rect x="72" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="94" cy="238" r="10" className="fill-[#006ea3]/15" />
-        <rect x="112" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="242" width="40" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="84" y="260" width="96" height="6" rx="3" className="fill-[#006ea3]/30" />
-        <rect x="84" y="272" width="70" height="6" rx="3" className="fill-[#006ea3]/20" />
-        <rect x="208" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="230" cy="238" r="10" className="fill-emerald-500/15" />
-        <rect x="248" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="248" y="242" width="45" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="220" y="260" width="96" height="6" rx="3" className="fill-emerald-500/30" />
-        <rect x="220" y="272" width="75" height="6" rx="3" className="fill-emerald-500/20" />
-        <rect x="72" y="304" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="326" r="8" className="fill-[#006ea3]/15" />
-        <rect x="112" y="320" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="330" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="326" r="6" className="fill-[#006ea3]/20" />
-        <rect x="72" y="356" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="378" r="8" className="fill-violet-500/15" />
-        <rect x="112" y="372" width="70" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="382" width="110" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="378" r="6" className="fill-violet-500/20" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <ShoppingCart className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Multi-Platform</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Web + Mobile</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80" alt="E-commerce development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><ShoppingCart className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">30+ Stores</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Built & scaled</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <CreditCard className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Payments</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Stripe + PayPal</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><BarChart3 className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">3x Revenue</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Avg client growth</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <TrendingUp className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">3x Conversion</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Optimized</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <Globe className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Multi-Currency</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Global Ready</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10" animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} />
-      <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5" animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -385,8 +291,8 @@ function HeroSection({ ready }: { ready: boolean }) {
               <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">View Our Work</Link>
             </div>
           </div>
-          <div className={`grid grid-cols-2 gap-4 transition-all duration-700 delay-300 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            {[{ icon: Store, label: "Storefronts" }, { icon: Smartphone, label: "Mobile" }, { icon: CreditCard, label: "Payments" }, { icon: BarChart3, label: "Analytics" }].map((item, i) => { const Icon = item.icon; return (<div key={item.label} className={`rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] p-6 text-center transition-all duration-500 ${ready ? "opacity-100 scale-100" : "opacity-0 scale-95"}`} style={{ transitionDelay: `${400 + i * 100}ms` }}><div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20"><Icon className="w-6 h-6 text-[#006ea3]" strokeWidth={1.5} /></div><div className="text-sm font-semibold text-black/70 dark:text-white/70">{item.label}</div></div>); })}
+          <div className={`transition-all duration-700 delay-300 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            <EcomHeroIllustration />
           </div>
         </div>
       </div>

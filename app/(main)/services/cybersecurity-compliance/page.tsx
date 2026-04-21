@@ -94,54 +94,54 @@ const services: ServiceOffering[] = [
   {
     icon: Search,
     title: "Security Assessment & Pen Testing",
-    description: "Identify weaknesses before attackers do — structured assessments, realistic attack simulations, and prioritized remediation guidance.",
+    description: "Surface gaps before adversaries exploit them — disciplined evaluations, authentic attack scenarios, and remediation priorities you can execute with confidence.",
     features: ["Vulnerability scans", "Pen tests", "Executive readouts"],
     href: "/services/cybersecurity-compliance/security-assessment",
   },
   {
     icon: Lock,
     title: "Data Protection & Encryption",
-    description: "Protect sensitive data across its lifecycle with classification, strong cryptography, and least-privilege access aligned to privacy expectations.",
+    description: "Safeguard sensitive information end to end through classification, robust cryptography, and least-privilege access that reflects privacy and regulatory norms.",
     features: ["Encryption", "DLP & IAM", "Key management"],
     href: "/services/cybersecurity-compliance/data-protection",
   },
   {
     icon: Radar,
     title: "Threat Monitoring & SOC",
-    description: "24/7 visibility into suspicious activity — correlation, enrichment, and response workflows tuned to your risk profile and compliance obligations.",
+    description: "Round-the-clock insight into anomalous behavior — correlated signals, enriched context, and response runbooks calibrated to your risk appetite and compliance duties.",
     features: ["SIEM & SOAR", "Threat intel", "Real-time alerting"],
     href: "/services/cybersecurity-compliance/threat-monitoring",
   },
   {
     icon: FileCheck,
     title: "Compliance & Regulatory Frameworks",
-    description: "Build evidence-ready controls for SOC 2, HIPAA, GDPR, PCI-DSS, ISO 27001, and sector-specific audits — without slowing delivery.",
+    description: "Stand up audit-defensible controls for SOC 2, HIPAA, GDPR, PCI-DSS, ISO 27001, and industry-specific examinations — while preserving delivery velocity.",
     features: ["Control mapping", "Policy packs", "Audit prep"],
     href: "/services/cybersecurity-compliance/compliance-frameworks",
   },
   {
     icon: ShieldAlert,
     title: "Incident Response & Recovery",
-    description: "Reduce dwell time and business impact with playbooks, forensics, containment, and recovery planning exercised before a real crisis.",
+    description: "Shorten attacker dwell time and limit operational fallout via rehearsed playbooks, digital forensics, containment, and recovery strategies validated ahead of a live event.",
     features: ["IR planning", "Forensics", "BCDR"],
     href: "/services/cybersecurity-compliance/incident-response",
   },
   {
     icon: Boxes,
     title: "Infrastructure & Cloud Security",
-    description: "Harden networks, cloud estates, containers, and endpoints with zero-trust patterns, posture management, and continuous configuration assurance.",
+    description: "Strengthen networks, multi-cloud environments, containers, and endpoints using zero-trust principles, posture governance, and ongoing configuration integrity checks.",
     features: ["Zero trust", "CSPM/CWPP", "K8s security"],
     href: "/services/cybersecurity-compliance/infrastructure-security",
   },
 ];
 
 const processSteps = [
-  { step: "01", title: "Scope & Threat Modeling", description: "Define assets, trust boundaries, and realistic adversary paths so controls and testing map to actual business risk.", icon: Target },
-  { step: "02", title: "Baseline Assessment", description: "Evidence collection across identity, data, endpoints, cloud, and applications to establish a prioritized gap view.", icon: ClipboardList },
-  { step: "03", title: "Control Design", description: "Architect compensating controls, encryption boundaries, logging pipelines, and least-privilege access aligned to frameworks.", icon: Layers },
-  { step: "04", title: "Implementation", description: "Deploy tooling, harden configurations, integrate monitoring, and validate that defenses work under realistic conditions.", icon: Settings },
-  { step: "05", title: "Validation & Testing", description: "Penetration tests, tabletop exercises, and control effectiveness reviews to prove readiness — not just checkbox compliance.", icon: Shield },
-  { step: "06", title: "Continuous Improvement", description: "KPIs, recurring threat reviews, and roadmap governance so security posture keeps pace with product and cloud change.", icon: Activity },
+  { step: "01", title: "Scope & Threat Modeling", description: "Inventory critical assets, delineate trust zones, and model credible threat paths so every control and test reflects true business exposure.", icon: Target },
+  { step: "02", title: "Baseline Assessment", description: "Gather substantiating artifacts across identity, data, endpoints, cloud, and applications to produce a ranked picture of where gaps matter most.", icon: ClipboardList },
+  { step: "03", title: "Control Design", description: "Engineer compensating safeguards, encryption perimeters, logging architectures, and least-privilege models that satisfy your chosen frameworks.", icon: Layers },
+  { step: "04", title: "Implementation", description: "Roll out tooling, tighten configurations, weave in observability, and stress-test defenses under lifelike operating conditions.", icon: Settings },
+  { step: "05", title: "Validation & Testing", description: "Penetration tests, tabletop exercises, and control-effectiveness scrutiny that demonstrate genuine preparedness rather than superficial compliance.", icon: Shield },
+  { step: "06", title: "Continuous Improvement", description: "Operating metrics, periodic threat reassessments, and roadmap stewardship so security maturity evolves alongside product releases and cloud drift.", icon: Activity },
 ];
 
 const techCategories: { label: string; items: { name: string; logo: string }[] }[] = [
@@ -213,28 +213,28 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
 ]
 
 const industries = [
-  { icon: Stethoscope, name: "Healthcare", desc: "HIPAA-aligned safeguards & BAAs" },
-  { icon: CreditCard, name: "FinTech", desc: "Fraud-resistant, audit-ready stacks" },
-  { icon: ShoppingCart, name: "E-Commerce", desc: "PCI scope reduction & checkout hardening" },
-  { icon: GraduationCap, name: "Education", desc: "Student data privacy & access controls" },
-  { icon: Landmark, name: "Government", desc: "FedRAMP-style rigor & supply chain risk" },
-  { icon: Banknote, name: "Banking", desc: "Resilience, fraud, & regulatory alignment" },
-  { icon: Factory, name: "Manufacturing", desc: "OT/IT segmentation & vendor risk" },
-  { icon: Scale, name: "Legal", desc: "Confidentiality, retention, & eDiscovery readiness" },
+  { icon: Stethoscope, name: "Healthcare", desc: "Safeguards aligned with HIPAA and robust BAAs" },
+  { icon: CreditCard, name: "FinTech", desc: "Stacks engineered for fraud resistance and audit readiness" },
+  { icon: ShoppingCart, name: "E-Commerce", desc: "Narrowed PCI footprint and hardened checkout flows" },
+  { icon: GraduationCap, name: "Education", desc: "Protection of student records and disciplined access governance" },
+  { icon: Landmark, name: "Government", desc: "FedRAMP-caliber discipline and third-party risk oversight" },
+  { icon: Banknote, name: "Banking", desc: "Operational resilience, fraud controls, and regulatory fit" },
+  { icon: Factory, name: "Manufacturing", desc: "OT/IT separation and disciplined vendor assurance" },
+  { icon: Scale, name: "Legal", desc: "Client confidentiality, retention policy, and eDiscovery preparedness" },
 ];
 
 const whyChoose = [
-  { icon: Award, title: "Certified Security Experts", description: "Practitioners across offensive security, cloud architecture, and GRC — credentialed and experienced in regulated environments." },
-  { icon: Activity, title: "24/7 Threat Monitoring", description: "Detection engineering and analyst coverage options that match your incident severity tiers and contractual SLAs." },
-  { icon: FileCheck, title: "Compliance-First Approach", description: "Controls designed for evidence — policies, logs, and change records auditors can follow without heroics." },
-  { icon: Shield, title: "Proactive Security Posture", description: "Red teaming, continuous validation, and posture drift detection so issues surface during business hours — not on a headline." },
+  { icon: Award, title: "Credentialed Security Practitioners", description: "Specialists spanning offensive operations, cloud architecture, and governance, risk, and compliance — certified and battle-tested in highly regulated settings." },
+  { icon: Activity, title: "Always-On Threat Oversight", description: "Detection engineering and analyst depth scaled to your incident classifications and the service levels you promise customers." },
+  { icon: FileCheck, title: "Evidence-Led Compliance", description: "Controls conceived as proof — documentation, telemetry, and change trails reviewers can trace without last-minute rescue work." },
+  { icon: Shield, title: "Forward-Looking Defense", description: "Adversary simulations, ongoing validation, and drift sensing so weaknesses appear in scheduled reviews — not breaking news." },
 ];
 
 const stats: { label: string; value: number; suffix: string; isDecimal?: boolean }[] = [
-  { value: 500, suffix: "+", label: "Security Audits" },
-  { value: 99, suffix: ".9%", label: "Threat Detection" },
-  { value: 50, suffix: "+", label: "Compliance Certifications" },
-  { value: 24, suffix: "/7", label: "Security Monitoring" },
+  { value: 500, suffix: "+", label: "Security Audits Delivered" },
+  { value: 99, suffix: ".9%", label: "Threat-Detection Accuracy" },
+  { value: 50, suffix: "+", label: "Earned Compliance Certifications" },
+  { value: 24, suffix: "/7", label: "Security Operations Coverage" },
 ];
 
 export default function CybersecurityCompliancePage() {
@@ -254,7 +254,7 @@ export default function CybersecurityCompliancePage() {
             href="/services"
             className={`inline-flex items-center gap-2 text-sm font-medium text-black/50 hover:text-black dark:text-white/50 dark:hover:text-white transition-all duration-500 mb-8 ${heroReady ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
           >
-            <ArrowLeft size={16} /> Back to Services
+            <ArrowLeft size={16} /> Return to Services
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -268,7 +268,7 @@ export default function CybersecurityCompliancePage() {
               <p
                 className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               >
-                Reduce breach risk and satisfy regulators with assessments, monitoring, and compliance programs built for modern cloud and software delivery.
+                Lower breach exposure and meet regulatory expectations through structured assessments, continuous monitoring, and compliance initiatives engineered for modern cloud platforms and software delivery.
               </p>
               <div
                 className={`mt-8 flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
@@ -277,13 +277,13 @@ export default function CybersecurityCompliancePage() {
                   href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10"
                 >
-                  Get Free Consultation <ArrowRight className="w-4 h-4" />
+                  Request a Free Consultation <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/our-work"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
                 >
-                  View Our Work
+                  Explore Our Work
                 </Link>
               </div>
             </div>
@@ -305,138 +305,25 @@ export default function CybersecurityCompliancePage() {
 
 function SecurityHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg
-        viewBox="0 0 400 460"
-        fill="none"
-        className="relative w-full h-full drop-shadow-2xl"
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        {/* Dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        {/* Header */}
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        {/* Main card */}
-        <rect x="72" y="100" width="256" height="100" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="114" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="128" width="90" height="12" rx="4" className="fill-[#006ea3] dark:fill-[#3ba0d6]" />
-        <rect x="84" y="148" width="70" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <polyline points="220,186 234,164 248,172 262,152 276,158 290,144" className="stroke-[#006ea3] dark:stroke-[#3ba0d6]" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Two cards */}
-        <rect x="72" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="94" cy="238" r="10" className="fill-[#006ea3]/15" />
-        <rect x="112" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="242" width="40" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="84" y="260" width="96" height="6" rx="3" className="fill-[#006ea3]/30" />
-        <rect x="84" y="272" width="70" height="6" rx="3" className="fill-[#006ea3]/20" />
-        <rect x="208" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="230" cy="238" r="10" className="fill-emerald-500/15" />
-        <rect x="248" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="248" y="242" width="45" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="220" y="260" width="96" height="6" rx="3" className="fill-emerald-500/30" />
-        <rect x="220" y="272" width="75" height="6" rx="3" className="fill-emerald-500/20" />
-        {/* Bottom list items */}
-        <rect x="72" y="304" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="326" r="8" className="fill-[#006ea3]/15" />
-        <rect x="112" y="320" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="330" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="326" r="6" className="fill-[#006ea3]/20" />
-        <rect x="72" y="356" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="378" r="8" className="fill-violet-500/15" />
-        <rect x="112" y="372" width="70" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="382" width="110" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="378" r="6" className="fill-violet-500/20" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <ShieldCheck className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Zero Trust</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Architecture</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop&q=80" alt="Cybersecurity and compliance" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><ShieldCheck className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">Zero Breach</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Track record</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <Zap className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">24/7 SOC</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Monitoring</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><CheckCircle2 className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">SOC 2 Ready</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Compliance certified</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <Settings className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">HIPAA/SOC2</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Compliant</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <BarChart3 className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">{"<1hr MTTR"}</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Response</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10"
-        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -516,9 +403,9 @@ function ServiceOfferingsSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#006ea3]/[0.02] to-transparent pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Our Services</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">What We <span className="text-black dark:text-white">Offer</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Comprehensive solutions tailored to your business needs.</p>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Capabilities</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">What We <span className="text-black dark:text-white">Deliver</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Full-spectrum offerings calibrated to your risk profile, regulatory landscape, and pace of delivery.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => {
@@ -547,7 +434,7 @@ function ServiceOfferingsSection() {
                       ))}
                     </div>
                     <div className="mt-5 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      Learn more <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      Discover more <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
                 </Link>
@@ -570,9 +457,9 @@ function ProcessSection() {
       <div className="absolute bottom-1/4 right-0 w-[300px] h-[300px] bg-[#006ea3]/[0.03] rounded-full blur-[100px] pointer-events-none" />
       <div className="relative mx-auto max-w-5xl px-6 py-24">
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">How We Work</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Development <span className="text-black dark:text-white">Process</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A battle-tested methodology that ensures quality, transparency, and on-time delivery.</p>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Engagement Model</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Delivery <span className="text-black dark:text-white">Process</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A proven, field-hardened approach that upholds rigor, clear communication, and dependable timelines.</p>
         </motion.div>
         <div className="relative">
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
@@ -661,9 +548,9 @@ function TechStackSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#006ea3]/[0.04] rounded-full blur-[120px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Technology Stack</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Built with <span className="text-black dark:text-white">Modern Tools</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Industry-leading tools and frameworks powering our solutions.</p>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Tooling Ecosystem</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Powered by <span className="text-black dark:text-white">Leading Platforms</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Enterprise-grade technologies and frameworks underpinning every engagement we run.</p>
         </motion.div>
         <motion.div className="flex justify-center mb-12" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.15 }}>
           <div className="inline-flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02]">
@@ -689,7 +576,7 @@ function TechStackSection() {
           </AnimatePresence>
         </motion.div>
         <motion.div className="mt-16 pt-12 border-t border-black/[0.06] dark:border-white/[0.06]" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }}>
-          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">And many more technologies we work with</p>
+          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">Plus a broad portfolio of additional platforms in active use</p>
           <div className="relative w-full">
             <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
@@ -720,9 +607,9 @@ function IndustriesSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/[0.03] via-transparent to-[#006ea3]/[0.02] dark:from-[#006ea3]/[0.02] dark:to-[#006ea3]/[0.01] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Industries</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Industries We <span className="text-black dark:text-white">Build For</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">Domain expertise across verticals — every solution is built with deep understanding of your industry.</p>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Sectors</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Industries We <span className="text-black dark:text-white">Serve</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">Depth across regulated and commercial verticals — each program reflects the nuances of how you operate.</p>
         </motion.div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {industries.map((ind, i) => {
@@ -755,8 +642,8 @@ function WhyChooseSection() {
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#006ea3]/[0.03] rounded-full blur-[120px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Why Us</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Why Choose <span className="text-black dark:text-white">Cloud Nexus</span></h2>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">The Cloud Nexus Difference</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Why Partner With <span className="text-black dark:text-white">Cloud Nexus</span></h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {whyChoose.map((item, i) => {
@@ -797,27 +684,27 @@ function CTASection() {
       />
       <div className="relative mx-auto max-w-7xl px-6 py-28 text-center">
         <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-          Ready to Secure Your
+          Ready to Protect Your
           <br />
-          <span className="text-[#006ea3]">Digital Assets?</span>
+          <span className="text-[#006ea3]">Digital Estate?</span>
         </h2>
         <p
           className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
-          Share your environment footprint and compliance targets — we&apos;ll propose a prioritized roadmap spanning testing, monitoring, and evidence collection.
+          Outline your technical footprint and compliance objectives — we will return a sequenced plan covering validation, continuous monitoring, and defensible evidence capture.
         </p>
         <div className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           <Link
             href="/resources/free-consultation"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20"
           >
-            Get a Free Consultation <ArrowRight className="w-4 h-4" />
+            Schedule a Free Consultation <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href="/our-work"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
           >
-            View Our Work
+            Explore Our Work
           </Link>
         </div>
       </div>

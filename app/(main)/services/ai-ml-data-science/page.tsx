@@ -5,7 +5,7 @@ import Image from "next/image";
 import {
   ArrowRight, ArrowLeft, Brain, Bot, BarChart3, Database,
   Cpu, Layers, Settings, Rocket, CheckCircle2, Users, Clock,
-  HeartHandshake, TrendingUp, Eye, Wrench,
+  HeartHandshake, TrendingUp, Eye, Wrench, Zap,
   ShoppingCart, CreditCard, Stethoscope, GraduationCap,
   Truck, Building2, Factory, Gamepad2,
 } from "lucide-react";
@@ -54,26 +54,26 @@ function useAnimatedCount(target: number, active: boolean, delay = 0) {
 interface ServiceOffering { icon: LucideIcon; title: string; description: string; features: string[]; href: string; }
 
 const services: ServiceOffering[] = [
-  { icon: Brain, title: "Machine Learning Solutions", description: "Custom ML models for prediction, classification, clustering, and recommendation systems — trained on your data, deployed at scale.", features: ["Custom ML models", "Model optimization", "Production deployment"], href: "/services/ai-ml-data-science/machine-learning" },
-  { icon: Bot, title: "Generative AI & LLMs", description: "LLM integration, fine-tuning, RAG pipelines, and AI-powered content generation tools that automate complex workflows intelligently.", features: ["LLM fine-tuning", "RAG pipelines", "AI assistants"], href: "/services/ai-ml-data-science/generative-ai" },
-  { icon: BarChart3, title: "Predictive Analytics", description: "Forecasting models for sales, demand, churn prediction, and risk assessment — turning historical data into future business intelligence.", features: ["Demand forecasting", "Churn prediction", "Risk modeling"], href: "/services/ai-ml-data-science/predictive-analytics" },
-  { icon: Database, title: "Data Engineering & Pipelines", description: "ETL pipelines, data lakes, warehouses, and real-time streaming architectures that form the backbone of your AI and analytics strategy.", features: ["ETL pipelines", "Data lakes", "Real-time streaming"], href: "/services/ai-ml-data-science/data-engineering" },
-  { icon: Eye, title: "Computer Vision", description: "Image recognition, object detection, OCR, video analytics, and visual inspection systems for manufacturing, healthcare, and retail.", features: ["Object detection", "OCR solutions", "Visual inspection"], href: "/services/ai-ml-data-science/computer-vision" },
-  { icon: Layers, title: "NLP & Conversational AI", description: "Chatbots, sentiment analysis, text classification, document intelligence, and voice-enabled interfaces powered by advanced NLP models.", features: ["Chatbots & voice", "Sentiment analysis", "Document AI"], href: "/services/ai-ml-data-science/nlp-conversational-ai" },
+  { icon: Brain, title: "Machine Learning Solutions", description: "Bespoke machine learning for prediction, classification, clustering, and recommendations—trained on your data and engineered for reliable, large-scale deployment.", features: ["Custom ML models", "Model optimization", "Production deployment"], href: "/services/ai-ml-data-science/machine-learning" },
+  { icon: Bot, title: "Generative AI & LLMs", description: "Large language model integration, fine-tuning, retrieval-augmented generation, and AI-assisted content systems that intelligently automate sophisticated workflows.", features: ["LLM fine-tuning", "RAG pipelines", "AI assistants"], href: "/services/ai-ml-data-science/generative-ai" },
+  { icon: BarChart3, title: "Predictive Analytics", description: "Forecasting for sales, demand, churn, and risk—transforming historical signals into forward-looking intelligence you can act on.", features: ["Demand forecasting", "Churn prediction", "Risk modeling"], href: "/services/ai-ml-data-science/predictive-analytics" },
+  { icon: Database, title: "Data Engineering & Pipelines", description: "ETL, lakes, warehouses, and real-time streaming architectures that anchor your AI initiatives and analytics roadmap.", features: ["ETL pipelines", "Data lakes", "Real-time streaming"], href: "/services/ai-ml-data-science/data-engineering" },
+  { icon: Eye, title: "Computer Vision", description: "Image recognition, object detection, OCR, video analytics, and visual inspection tailored to manufacturing, healthcare, and retail environments.", features: ["Object detection", "OCR solutions", "Visual inspection"], href: "/services/ai-ml-data-science/computer-vision" },
+  { icon: Layers, title: "NLP & Conversational AI", description: "Conversational agents, sentiment analysis, text classification, document intelligence, and voice experiences built on sophisticated natural language models.", features: ["Chatbots & voice", "Sentiment analysis", "Document AI"], href: "/services/ai-ml-data-science/nlp-conversational-ai" },
 ];
 
 const processSteps = [
-  { step: "01", title: "Data Assessment", description: "Evaluating data quality, availability, and identifying high-impact AI use cases aligned with your business objectives.", icon: Database },
-  { step: "02", title: "Data Engineering", description: "Building robust pipelines to clean, transform, enrich, and prepare data for modeling and analytics.", icon: Settings },
-  { step: "03", title: "Model Development", description: "Training, validating, and iterating on ML models with rigorous evaluation, hyperparameter tuning, and cross-validation.", icon: Brain },
-  { step: "04", title: "Integration & Deployment", description: "Deploying models as APIs, embedding into products, building user interfaces, and setting up inference infrastructure.", icon: Rocket },
-  { step: "05", title: "Monitoring & MLOps", description: "Model drift detection, performance tracking, A/B testing, and automated retraining pipelines for production reliability.", icon: Eye },
-  { step: "06", title: "Scale & Optimize", description: "Scaling inference infrastructure, optimizing costs, expanding use cases, and building a data-driven culture across the organization.", icon: TrendingUp },
+  { step: "01", title: "Data Assessment", description: "We assess data quality and coverage, then pinpoint high-impact AI opportunities that map cleanly to your strategic goals.", icon: Database },
+  { step: "02", title: "Data Engineering", description: "We construct dependable pipelines to cleanse, transform, enrich, and stage data for modeling and downstream analytics.", icon: Settings },
+  { step: "03", title: "Model Development", description: "We train, validate, and refine models through disciplined evaluation, hyperparameter optimization, and cross-validation.", icon: Brain },
+  { step: "04", title: "Integration & Deployment", description: "We ship models as APIs, embed them in products, craft interfaces where needed, and stand up resilient inference infrastructure.", icon: Rocket },
+  { step: "05", title: "Monitoring & MLOps", description: "Drift monitoring, performance telemetry, experimentation, and automated retraining keep production models dependable over time.", icon: Eye },
+  { step: "06", title: "Scale & Optimize", description: "We scale serving capacity, tune economics, broaden use cases, and nurture an organization-wide, data-informed operating rhythm.", icon: TrendingUp },
 ];
 
 const techCategories: { label: string; items: { name: string; logo: string }[] }[] = [
   {
-    label: "ML Frameworks",
+    label: "Machine Learning Frameworks",
     items: [
       { name: "TensorFlow", logo: `${DEVICON}/tensorflow/tensorflow-original.svg` },
       { name: "PyTorch", logo: `${DEVICON}/pytorch/pytorch-original.svg` },
@@ -83,7 +83,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "GenAI & LLMs",
+    label: "Generative AI & LLMs",
     items: [
       { name: "OpenAI", logo: `${DEVICON}/openai/openai-original.svg` },
       { name: "LangChain", logo: `${DEVICON}/devicon/devicon-original.svg` },
@@ -103,7 +103,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "MLOps & Infra",
+    label: "MLOps & Infrastructure",
     items: [
       { name: "MLflow", logo: `${DEVICON}/devicon/devicon-original.svg` },
       { name: "Kubeflow", logo: `${DEVICON}/devicon/devicon-original.svg` },
@@ -113,7 +113,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Vector & Data",
+    label: "Vector Search & Data Platforms",
     items: [
       { name: "Pinecone", logo: `${DEVICON}/devicon/devicon-original.svg` },
       { name: "Weaviate", logo: `${DEVICON}/devicon/devicon-original.svg` },
@@ -123,7 +123,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Languages & Tools",
+    label: "Languages & Core Tools",
     items: [
       { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
       { name: "R", logo: `${DEVICON}/r/r-original.svg` },
@@ -136,28 +136,28 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
 ]
 
 const industries = [
-  { icon: Stethoscope, name: "Healthcare", desc: "Medical imaging, drug discovery, patient analytics" },
-  { icon: CreditCard, name: "FinTech", desc: "Fraud detection, credit scoring, algo trading" },
-  { icon: ShoppingCart, name: "E-Commerce", desc: "Recommendations, demand forecasting, pricing" },
-  { icon: GraduationCap, name: "Education", desc: "Adaptive learning, content AI, analytics" },
-  { icon: Truck, name: "Logistics", desc: "Route optimization, demand prediction, IoT" },
-  { icon: Building2, name: "Real Estate", desc: "Price prediction, lead scoring, valuation" },
-  { icon: Factory, name: "Manufacturing", desc: "Predictive maintenance, quality control, vision" },
-  { icon: Gamepad2, name: "Media & Entertainment", desc: "Content recommendation, personalization" },
+  { icon: Stethoscope, name: "Healthcare", desc: "Clinical imaging, drug discovery, and patient-level analytics" },
+  { icon: CreditCard, name: "FinTech", desc: "Fraud prevention, credit risk scoring, and algorithmic trading" },
+  { icon: ShoppingCart, name: "E-Commerce", desc: "Recommendations, demand forecasting, and dynamic pricing" },
+  { icon: GraduationCap, name: "Education", desc: "Adaptive learning paths, learning content AI, and outcomes analytics" },
+  { icon: Truck, name: "Logistics", desc: "Routing optimization, demand sensing, and connected IoT telemetry" },
+  { icon: Building2, name: "Real Estate", desc: "Pricing models, lead prioritization, and property valuation" },
+  { icon: Factory, name: "Manufacturing", desc: "Predictive maintenance, quality control, and computer vision" },
+  { icon: Gamepad2, name: "Media & Entertainment", desc: "Content recommendations, personalization, and discovery" },
 ];
 
 const whyChoose = [
-  { icon: Users, title: "PhD-Level AI Team", description: "Data scientists and ML engineers with deep expertise in cutting-edge AI research and production-grade model deployment." },
-  { icon: Wrench, title: "Production-First Approach", description: "We build AI systems designed for production from day one — scalable, monitored, and maintainable, not just notebook experiments." },
-  { icon: TrendingUp, title: "Business-Driven AI", description: "Every AI solution tied to measurable business KPIs — revenue growth, cost reduction, efficiency gains, or customer satisfaction." },
-  { icon: HeartHandshake, title: "End-to-End Ownership", description: "From data strategy through model deployment and ongoing MLOps — we own the full lifecycle so you get results, not hand-offs." },
+  { icon: Users, title: "Doctorate-Caliber AI Talent", description: "Data scientists and machine learning engineers fluent in frontier research and the rigor required to ship models that survive real traffic." },
+  { icon: Wrench, title: "Production-First Engineering", description: "We architect for live systems from the outset—observable, elastic, and operable—rather than stopping at exploratory notebooks." },
+  { icon: TrendingUp, title: "Outcomes-Led AI", description: "Each initiative maps to quantifiable KPIs: revenue lift, cost takeout, operational throughput, or customer experience gains." },
+  { icon: HeartHandshake, title: "Full-Lifecycle Accountability", description: "From data strategy through deployment and continuous MLOps, we carry the thread so outcomes stay cohesive—not fragmented across vendors." },
 ];
 
 const stats: { label: string; value: number; suffix: string; isDecimal?: boolean }[] = [
-  { value: 120, suffix: "+", label: "AI Models Deployed" },
-  { value: 45, suffix: "+", label: "Enterprise Clients" },
-  { value: 99, suffix: "%", label: "Model Accuracy" },
-  { value: 10, suffix: "x", label: "Avg. ROI Delivered" },
+  { value: 120, suffix: "+", label: "AI Models Shipped to Production" },
+  { value: 45, suffix: "+", label: "Enterprise Engagements" },
+  { value: 99, suffix: "%", label: "Model Accuracy Achieved" },
+  { value: 10, suffix: "x", label: "Average ROI Multiple Delivered" },
 ];
 
 export default function AIMLDataSciencePage() {
@@ -170,14 +170,14 @@ export default function AIMLDataSciencePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#006ea3]/10 via-transparent to-transparent dark:from-[#006ea3]/5 pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,_var(--tw-gradient-stops))] from-indigo-500/5 via-transparent to-transparent pointer-events-none" />
         <div className="mx-auto max-w-7xl px-6 pt-28 pb-20 relative">
-          <Link href="/services" className={`inline-flex items-center gap-2 text-sm font-medium text-black/50 hover:text-black dark:text-white/50 dark:hover:text-white transition-all duration-500 mb-8 ${heroReady ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}><ArrowLeft size={16} /> Back to Services</Link>
+          <Link href="/services" className={`inline-flex items-center gap-2 text-sm font-medium text-black/50 hover:text-black dark:text-white/50 dark:hover:text-white transition-all duration-500 mb-8 ${heroReady ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}><ArrowLeft size={16} /> Return to Services</Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className={`text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1] transition-all duration-700 delay-100 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>AI, ML &<br /><span className="text-[#006ea3]">Data Science</span></h1>
-              <p className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Transform raw data into intelligent insights and automated decisions. From predictive analytics to generative AI, we deliver production-ready ML systems that drive real business value.</p>
+              <p className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Convert raw data into sharp insight and automated decisions. From predictive analytics through generative AI, we deliver machine learning systems that are production-ready and anchored in measurable business value.</p>
               <div className={`mt-8 flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10">Get Free Consultation <ArrowRight className="w-4 h-4" /></Link>
-                <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">View Our Work</Link>
+                <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10">Book a Free Consultation <ArrowRight className="w-4 h-4" /></Link>
+                <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">Explore Our Work</Link>
               </div>
             </div>
             <HeroStats />
@@ -197,149 +197,25 @@ export default function AIMLDataSciencePage() {
 
 function AIHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg
-        viewBox="0 0 400 460"
-        fill="none"
-        className="relative w-full h-full drop-shadow-2xl"
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        {/* Neural network / dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        {/* Header */}
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        {/* Model performance chart */}
-        <rect x="72" y="100" width="256" height="120" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="112" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="124" width="40" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        {/* Chart bars */}
-        <rect x="100" y="170" width="16" height="38" rx="4" className="fill-[#006ea3]/30" />
-        <rect x="124" y="155" width="16" height="53" rx="4" className="fill-[#006ea3]/40" />
-        <rect x="148" y="145" width="16" height="63" rx="4" className="fill-[#006ea3]/50" />
-        <rect x="172" y="160" width="16" height="48" rx="4" className="fill-[#006ea3]/40" />
-        <rect x="196" y="138" width="16" height="70" rx="4" className="fill-[#006ea3]/60" />
-        <rect x="220" y="148" width="16" height="60" rx="4" className="fill-[#006ea3]/50" />
-        <rect x="244" y="132" width="16" height="76" rx="4" className="fill-[#006ea3]" />
-        <rect x="268" y="142" width="16" height="66" rx="4" className="fill-[#006ea3]/70" />
-        {/* Neural network nodes */}
-        <rect x="72" y="232" width="120" height="80" rx="12" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="98" cy="260" r="6" className="fill-[#006ea3]/30 stroke-[#006ea3]/50" strokeWidth="1" />
-        <circle cx="132" cy="248" r="6" className="fill-[#006ea3]/40 stroke-[#006ea3]/60" strokeWidth="1" />
-        <circle cx="132" cy="272" r="6" className="fill-[#006ea3]/40 stroke-[#006ea3]/60" strokeWidth="1" />
-        <circle cx="166" cy="260" r="6" className="fill-[#006ea3]/50 stroke-[#006ea3]/70" strokeWidth="1" />
-        <line x1="104" y1="260" x2="126" y2="248" className="stroke-[#006ea3]/20" strokeWidth="1" />
-        <line x1="104" y1="260" x2="126" y2="272" className="stroke-[#006ea3]/20" strokeWidth="1" />
-        <line x1="138" y1="248" x2="160" y2="260" className="stroke-[#006ea3]/20" strokeWidth="1" />
-        <line x1="138" y1="272" x2="160" y2="260" className="stroke-[#006ea3]/20" strokeWidth="1" />
-        <rect x="84" y="288" width="50" height="5" rx="2.5" className="fill-black/30 dark:fill-white/30" />
-        <rect x="84" y="298" width="80" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        {/* Metrics */}
-        <rect x="204" y="232" width="124" height="38" rx="10" className="fill-emerald-500/8 stroke-emerald-500/15" strokeWidth="1" />
-        <rect x="216" y="242" width="30" height="5" rx="2.5" className="fill-emerald-500/40" />
-        <rect x="216" y="252" width="50" height="8" rx="3" className="fill-emerald-500" />
-        <rect x="296" y="244" width="20" height="14" rx="4" className="fill-emerald-500/20" />
-        <rect x="204" y="278" width="124" height="38" rx="10" className="fill-violet-500/8 stroke-violet-500/15" strokeWidth="1" />
-        <rect x="216" y="288" width="35" height="5" rx="2.5" className="fill-violet-500/40" />
-        <rect x="216" y="298" width="45" height="8" rx="3" className="fill-violet-500" />
-        <rect x="296" y="290" width="20" height="14" rx="4" className="fill-violet-500/20" />
-        {/* Bottom section */}
-        <rect x="72" y="326" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="348" r="10" className="fill-[#006ea3]/10" />
-        <rect x="114" y="341" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="114" y="351" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <rect x="114" y="360" width="100" height="4" rx="2" className="fill-black/10 dark:fill-white/10" />
-        <rect x="280" y="342" width="36" height="12" rx="6" className="fill-[#006ea3]/15" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <Brain className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">ML Models</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Production-ready</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=600&fit=crop&q=80" alt="AI and machine learning solutions" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><Brain className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">Deep Learning</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Custom models</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <TrendingUp className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">99% Accuracy</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Fine-tuned</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><TrendingUp className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">99% Accuracy</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Production models</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <Database className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Data Pipelines</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Real-time</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <Eye className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Computer Vision</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Deep Learning</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10"
-        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -419,9 +295,9 @@ function ServiceOfferingsSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#006ea3]/[0.02] to-transparent pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Our Services</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">What We <span className="text-black dark:text-white">Offer</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Comprehensive solutions tailored to your business needs.</p>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Our capabilities</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">What We <span className="text-black dark:text-white">Deliver</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Full-spectrum offerings shaped precisely around your operational and strategic priorities.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => {
@@ -450,7 +326,7 @@ function ServiceOfferingsSection() {
                       ))}
                     </div>
                     <div className="mt-5 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      Learn more <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      Explore the service <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
                 </Link>
@@ -473,9 +349,9 @@ function ProcessSection() {
       <div className="absolute bottom-1/4 right-0 w-[300px] h-[300px] bg-[#006ea3]/[0.03] rounded-full blur-[100px] pointer-events-none" />
       <div className="relative mx-auto max-w-5xl px-6 py-24">
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">How We Work</span>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">How we engage</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Development <span className="text-black dark:text-white">Process</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A battle-tested methodology that ensures quality, transparency, and on-time delivery.</p>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A field-proven methodology that upholds quality, transparency, and predictable delivery.</p>
         </motion.div>
         <div className="relative">
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
@@ -564,9 +440,9 @@ function TechStackSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#006ea3]/[0.04] rounded-full blur-[120px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Technology Stack</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Built with <span className="text-black dark:text-white">Modern Tools</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Industry-leading tools and frameworks powering our solutions.</p>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Technology stack</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Engineered with <span className="text-black dark:text-white">Leading Tools</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Best-in-class platforms and frameworks underpinning every build we release.</p>
         </motion.div>
         <motion.div className="flex justify-center mb-12" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.15 }}>
           <div className="inline-flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02]">
@@ -592,7 +468,7 @@ function TechStackSection() {
           </AnimatePresence>
         </motion.div>
         <motion.div className="mt-16 pt-12 border-t border-black/[0.06] dark:border-white/[0.06]" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }}>
-          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">And many more technologies we work with</p>
+          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">Plus the wider technology ecosystem we routinely integrate</p>
           <div className="relative w-full">
             <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
@@ -623,9 +499,9 @@ function IndustriesSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/[0.03] via-transparent to-[#006ea3]/[0.02] dark:from-[#006ea3]/[0.02] dark:to-[#006ea3]/[0.01] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Industries</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Industries We <span className="text-black dark:text-white">Build For</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">Domain expertise across verticals — every solution is built with deep understanding of your industry.</p>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Sectors</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Industries We <span className="text-black dark:text-white">Serve</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">Specialist depth across verticals—every solution is crafted with a thorough grasp of your industry's dynamics.</p>
         </motion.div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {industries.map((ind, i) => {
@@ -658,7 +534,7 @@ function WhyChooseSection() {
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#006ea3]/[0.03] rounded-full blur-[120px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Why Us</span>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Why partner with us</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Why Choose <span className="text-black dark:text-white">Cloud Nexus</span></h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -692,11 +568,11 @@ function CTASection() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#006ea3]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]" style={{ backgroundImage: "linear-gradient(rgba(0,110,163,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,110,163,0.3) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
       <div className="relative mx-auto max-w-7xl px-6 py-28 text-center">
-        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>Ready to Unlock the<br /><span className="text-[#006ea3]">Power of AI?</span></h2>
-        <p className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Let us help you leverage AI and data science to make smarter decisions, automate workflows, and build intelligent products that scale.</p>
+        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>Ready to Activate<br /><span className="text-[#006ea3]">AI at Full Strength?</span></h2>
+        <p className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Partner with us to apply AI and data science toward sharper decisions, streamlined automation, and intelligent products engineered to scale with demand.</p>
         <div className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20">Get a Free Consultation <ArrowRight className="w-4 h-4" /></Link>
-          <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">View Our Work</Link>
+          <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20">Schedule a Free Consultation <ArrowRight className="w-4 h-4" /></Link>
+          <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">Browse Our Portfolio</Link>
         </div>
       </div>
     </div>

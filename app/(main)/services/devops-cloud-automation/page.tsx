@@ -54,21 +54,21 @@ function useAnimatedCount(target: number, active: boolean, delay = 0) {
 interface ServiceOffering { icon: LucideIcon; title: string; description: string; features: string[]; href: string; }
 
 const services: ServiceOffering[] = [
-  { icon: GitBranch, title: "CI/CD Pipeline Engineering", description: "Automated build, test, and deploy pipelines using GitHub Actions, Jenkins, GitLab CI, and ArgoCD for rapid, reliable software delivery.", features: ["Automated builds", "Testing gates", "Zero-downtime deploys"], href: "/services/devops-cloud-automation/ci-cd-pipelines" },
-  { icon: Box, title: "Containerization & Orchestration", description: "Docker containerization and Kubernetes orchestration for consistent, portable, and scalable deployments across any environment.", features: ["Docker & K8s", "Helm charts", "Service mesh"], href: "/services/devops-cloud-automation/containerization" },
-  { icon: Server, title: "Infrastructure as Code (IaC)", description: "Terraform, Pulumi, and CloudFormation for reproducible, version-controlled, and auditable infrastructure provisioning at scale.", features: ["Terraform", "Pulumi", "Multi-cloud IaC"], href: "/services/devops-cloud-automation/infrastructure-as-code" },
-  { icon: BarChart3, title: "Monitoring & Observability", description: "Full-stack monitoring with Prometheus, Grafana, distributed tracing, and log aggregation for complete visibility into production systems.", features: ["Prometheus & Grafana", "Distributed tracing", "Log aggregation"], href: "/services/devops-cloud-automation/monitoring-observability" },
-  { icon: Shield, title: "DevSecOps", description: "Security scanning integrated into CI/CD — SAST, DAST, container scanning, secrets management, and compliance-as-code for secure pipelines.", features: ["SAST & DAST", "Container scanning", "Compliance-as-code"], href: "/services/devops-cloud-automation/devsecops" },
-  { icon: Zap, title: "Cloud Automation & Auto-Scaling", description: "Dynamic scaling policies, load balancing, serverless automation, and cost optimization for peak performance at minimal infrastructure cost.", features: ["Auto-scaling", "Serverless", "Cost optimization"], href: "/services/devops-cloud-automation/cloud-automation" },
+  { icon: GitBranch, title: "CI/CD Pipeline Engineering", description: "End-to-end automated build, test, and release pipelines on GitHub Actions, Jenkins, GitLab CI, and ArgoCD — shipping production-grade code with every merge.", features: ["Automated builds", "Testing gates", "Zero-downtime deploys"], href: "/services/devops-cloud-automation/ci-cd-pipelines" },
+  { icon: Box, title: "Containerization & Orchestration", description: "Docker-packaged workloads orchestrated by Kubernetes — delivering consistent, portable, and elastically scalable deployments across any cloud or on-prem environment.", features: ["Docker & K8s", "Helm charts", "Service mesh"], href: "/services/devops-cloud-automation/containerization" },
+  { icon: Server, title: "Infrastructure as Code (IaC)", description: "Terraform, Pulumi, and CloudFormation blueprints that make infrastructure reproducible, version-tracked, and auditable — provisioning at scale in minutes, not days.", features: ["Terraform", "Pulumi", "Multi-cloud IaC"], href: "/services/devops-cloud-automation/infrastructure-as-code" },
+  { icon: BarChart3, title: "Monitoring & Observability", description: "Full-stack visibility via Prometheus, Grafana, distributed tracing, and centralized log aggregation — so every anomaly surfaces before users notice.", features: ["Prometheus & Grafana", "Distributed tracing", "Log aggregation"], href: "/services/devops-cloud-automation/monitoring-observability" },
+  { icon: Shield, title: "DevSecOps", description: "Security woven into the pipeline — SAST, DAST, container image scanning, secrets vaulting, and compliance-as-code that keep every release audit-ready.", features: ["SAST & DAST", "Container scanning", "Compliance-as-code"], href: "/services/devops-cloud-automation/devsecops" },
+  { icon: Zap, title: "Cloud Automation & Auto-Scaling", description: "Intelligent scaling policies, global load balancing, serverless event handlers, and FinOps optimization — peak throughput at the lowest viable cost.", features: ["Auto-scaling", "Serverless", "Cost optimization"], href: "/services/devops-cloud-automation/cloud-automation" },
 ];
 
 const processSteps = [
-  { step: "01", title: "Assessment & Discovery", description: "Evaluate current deployment processes, infrastructure, tooling, and pain points to establish a DevOps transformation baseline.", icon: Settings },
-  { step: "02", title: "Pipeline Architecture", description: "Design CI/CD architecture with automated testing, staging environments, production gates, and rollback strategies.", icon: GitBranch },
-  { step: "03", title: "Infrastructure Setup", description: "Provision cloud infrastructure with IaC, set up container orchestration, and configure networking and security controls.", icon: Server },
-  { step: "04", title: "Automation & Integration", description: "Automate deployments, scaling policies, backup strategies, security scanning, and alerting across the delivery pipeline.", icon: Rocket },
-  { step: "05", title: "Observability Setup", description: "Configure dashboards, alerting rules, log aggregation, distributed tracing, and incident response workflows.", icon: BarChart3 },
-  { step: "06", title: "Optimization & Handover", description: "Continuous improvement of pipeline speed, reliability, cost efficiency, and knowledge transfer to your engineering team.", icon: TrendingUp },
+  { step: "01", title: "Assessment & Discovery", description: "Audit existing deploy workflows, infrastructure sprawl, tooling gaps, and team pain points to set a clear DevOps transformation baseline.", icon: Settings },
+  { step: "02", title: "Pipeline Architecture", description: "Blueprint the CI/CD topology — automated test gates, isolated staging environments, promotion rules, and instant rollback capabilities.", icon: GitBranch },
+  { step: "03", title: "Infrastructure Setup", description: "Spin up cloud infrastructure via IaC, stand up container orchestration clusters, and harden networking and access controls.", icon: Server },
+  { step: "04", title: "Automation & Integration", description: "Wire deployments, auto-scaling rules, backup schedules, security scans, and alert routing into a single cohesive delivery pipeline.", icon: Rocket },
+  { step: "05", title: "Observability Setup", description: "Instrument dashboards, alerting thresholds, centralized logs, distributed traces, and on-call incident-response playbooks.", icon: BarChart3 },
+  { step: "06", title: "Optimization & Handover", description: "Iterate on pipeline speed, cost efficiency, and reliability — then transfer ownership with documentation, training, and pair sessions.", icon: TrendingUp },
 ];
 
 const techCategories: { label: string; items: { name: string; logo: string }[] }[] = [
@@ -169,14 +169,14 @@ export default function DevOpsCloudAutomationPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#006ea3]/10 via-transparent to-transparent dark:from-[#006ea3]/5 pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,_var(--tw-gradient-stops))] from-indigo-500/5 via-transparent to-transparent pointer-events-none" />
         <div className="mx-auto max-w-7xl px-6 pt-28 pb-20 relative">
-          <Link href="/services" className={`inline-flex items-center gap-2 text-sm font-medium text-black/50 hover:text-black dark:text-white/50 dark:hover:text-white transition-all duration-500 mb-8 ${heroReady ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}><ArrowLeft size={16} /> Back to Services</Link>
+          <Link href="/services" className={`inline-flex items-center gap-2 text-sm font-medium text-black/50 hover:text-black dark:text-white/50 dark:hover:text-white transition-all duration-500 mb-8 ${heroReady ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}><ArrowLeft size={16} /> Return to services</Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className={`text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1] transition-all duration-700 delay-100 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>DevOps & Cloud<br /><span className="text-[#006ea3]">Automation</span></h1>
-              <p className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Engineer CI/CD pipelines, containerized deployments, and automated infrastructure that enable your team to ship faster, more reliably, and with confidence.</p>
+              <p className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Architect resilient CI/CD pipelines, container-orchestrated deployments, and self-healing infrastructure — so your engineering team ships faster with fewer incidents and full confidence.</p>
               <div className={`mt-8 flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10">Get Free Consultation <ArrowRight className="w-4 h-4" /></Link>
-                <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">View Our Work</Link>
+                <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10">Schedule a free consultation <ArrowRight className="w-4 h-4" /></Link>
+                <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">Explore our portfolio</Link>
               </div>
             </div>
             <HeroStats />
@@ -196,138 +196,25 @@ export default function DevOpsCloudAutomationPage() {
 
 function DevOpsHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg
-        viewBox="0 0 400 460"
-        fill="none"
-        className="relative w-full h-full drop-shadow-2xl"
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        {/* Dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        {/* Header */}
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        {/* Main card */}
-        <rect x="72" y="100" width="256" height="100" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="114" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="128" width="90" height="12" rx="4" className="fill-[#006ea3] dark:fill-[#3ba0d6]" />
-        <rect x="84" y="148" width="70" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <polyline points="220,186 234,164 248,172 262,152 276,158 290,144" className="stroke-[#006ea3] dark:stroke-[#3ba0d6]" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Two cards */}
-        <rect x="72" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="94" cy="238" r="10" className="fill-[#006ea3]/15" />
-        <rect x="112" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="242" width="40" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="84" y="260" width="96" height="6" rx="3" className="fill-[#006ea3]/30" />
-        <rect x="84" y="272" width="70" height="6" rx="3" className="fill-[#006ea3]/20" />
-        <rect x="208" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="230" cy="238" r="10" className="fill-emerald-500/15" />
-        <rect x="248" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="248" y="242" width="45" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="220" y="260" width="96" height="6" rx="3" className="fill-emerald-500/30" />
-        <rect x="220" y="272" width="75" height="6" rx="3" className="fill-emerald-500/20" />
-        {/* Bottom list items */}
-        <rect x="72" y="304" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="326" r="8" className="fill-[#006ea3]/15" />
-        <rect x="112" y="320" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="330" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="326" r="6" className="fill-[#006ea3]/20" />
-        <rect x="72" y="356" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="378" r="8" className="fill-violet-500/15" />
-        <rect x="112" y="372" width="70" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="382" width="110" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="378" r="6" className="fill-violet-500/20" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <Settings className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">CI/CD</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Automated</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop&q=80" alt="DevOps and cloud automation" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><Settings className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">CI/CD</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Fully automated</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <Rocket className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">10x Deploys</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Per Day</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><Rocket className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">10x Deploy</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Faster releases</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <Layers className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Kubernetes</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Orchestration</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <BarChart3 className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">99.9% SLA</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Guaranteed</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10"
-        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -463,7 +350,7 @@ function ProcessSection() {
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">How We Work</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Development <span className="text-black dark:text-white">Process</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A battle-tested methodology that ensures quality, transparency, and on-time delivery.</p>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A repeatable, engineer-proven framework that ensures quality, transparency, and on-time delivery.</p>
         </motion.div>
         <div className="relative">
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
@@ -684,7 +571,7 @@ function CTASection() {
         <p className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Let us automate your infrastructure and build deployment pipelines that your team will love — faster releases, fewer failures, lower costs.</p>
         <div className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20">Get a Free Consultation <ArrowRight className="w-4 h-4" /></Link>
-          <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">View Our Work</Link>
+          <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">Explore our portfolio</Link>
         </div>
       </div>
     </div>

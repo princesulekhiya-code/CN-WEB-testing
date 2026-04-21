@@ -87,28 +87,28 @@ interface ServiceOffering {
 }
 
 const services: ServiceOffering[] = [
-  { icon: RefreshCcw, title: "Architecture Modernization", description: "Set objectives and employ microservices, cloud-native architecture, and monolithic-to-microservices migration for future-proof systems.", href: "/services/digital-transformation/architecture-modernization", features: ["Microservices", "Cloud-native", "Migration"] },
-  { icon: Code2, title: "Technology Modernization", description: "Micro-frontends, cloud development, JavaScript migration to PWA/SPA, and server-side modernization with latest tech stacks.", href: "/services/digital-transformation/technology-modernization", features: ["Micro-frontends", "PWA/SPA", "Server-side"] },
-  { icon: Palette, title: "UI/UX Modernization", description: "Adopt the latest design trends and experiences to create engaging products that boost user engagement and business value.", href: "/services/digital-transformation/ui-ux-modernization", features: ["Design trends", "User engagement", "Modern UX"] },
-  { icon: Workflow, title: "Integration Modernization", description: "Enterprise integration with communication protocol integration, third-party app, and API/SDK integration for a personalized experience.", href: "/services/digital-transformation/integration-modernization", features: ["API/SDK", "Third-party", "Protocols"] },
-  { icon: Bot, title: "Data Engineering & AI", description: "Real-time decision-making using AI-powered data architecture to accelerate data modernization and product customization.", href: "/services/digital-transformation/data-engineering-ai", features: ["AI-powered", "Real-time data", "ML pipelines"] },
-  { icon: Settings, title: "Product Re-engineering", description: "Enhance legacy products with new features, performance optimization, and faster speed-to-market through product re-engineering.", href: "/services/digital-transformation/product-re-engineering", features: ["Legacy upgrade", "Performance", "Speed-to-market"] },
+  { icon: RefreshCcw, title: "Architecture Modernization", description: "Establish clear goals and implement microservices, cloud-native design, and monolith-to-microservices transitions to engineer systems ready for what comes next.", href: "/services/digital-transformation/architecture-modernization", features: ["Microservices", "Cloud-native", "Migration"] },
+  { icon: Code2, title: "Technology Modernization", description: "Engineer micro-frontends, cloud-native development, JavaScript modernization into PWA and SPA experiences, and server-side renewal with today’s strongest stacks.", href: "/services/digital-transformation/technology-modernization", features: ["Micro-frontends", "PWA/SPA", "Server-side"] },
+  { icon: Palette, title: "UI/UX Modernization", description: "Apply contemporary design patterns and experiences to shape compelling products that deepen engagement and strengthen business outcomes.", href: "/services/digital-transformation/ui-ux-modernization", features: ["Design trends", "User engagement", "Modern UX"] },
+  { icon: Workflow, title: "Integration Modernization", description: "Advance enterprise connectivity through protocol harmonization, third-party applications, and API and SDK integration for a cohesive, tailored experience.", href: "/services/digital-transformation/integration-modernization", features: ["API/SDK", "Third-party", "Protocols"] },
+  { icon: Bot, title: "Data Engineering & AI", description: "Power real-time decisions with AI-led data architecture that accelerates data modernization and refines product customization.", href: "/services/digital-transformation/data-engineering-ai", features: ["AI-powered", "Real-time data", "ML pipelines"] },
+  { icon: Settings, title: "Product Re-engineering", description: "Elevate legacy products with new capabilities, performance tuning, and a faster path to market through disciplined re-engineering.", href: "/services/digital-transformation/product-re-engineering", features: ["Legacy upgrade", "Performance", "Speed-to-market"] },
 ];
 
 const stats = [
-  { label: "Transformations", value: 200, suffix: "+" },
-  { label: "Client Retention", value: 96, suffix: "%" },
-  { label: "Faster Delivery", value: 3, suffix: "x" },
-  { label: "Cost Savings", value: 40, suffix: "%" },
+  { label: "Transformation Programs", value: 200, suffix: "+" },
+  { label: "Client Retention Rate", value: 96, suffix: "%" },
+  { label: "Delivery Acceleration", value: 3, suffix: "x" },
+  { label: "Realized Cost Savings", value: 40, suffix: "%" },
 ];
 
 const processSteps = [
-  { step: "01", title: "Discover", description: "Understand business needs, gain clarity on modernization goals, and plan clear business outcomes.", icon: ClipboardList },
-  { step: "02", title: "Elaborate", description: "Define the most suitable solution for app modernization and manage all required team resources.", icon: Settings },
-  { step: "03", title: "Strategy", description: "Draft a digital transformation plan with guided strategies to define the development process.", icon: BarChart3 },
-  { step: "04", title: "Build", description: "Execute planned strategies using agile methodology with CI/CD pipelines and DevOps practices.", icon: Code2 },
-  { step: "05", title: "Operate", description: "Modernize legacy applications, deploy to production, and extend the required operational assistance.", icon: ShieldCheck },
-  { step: "06", title: "Evolve", description: "Continuous improvement cycles with emerging technologies, user feedback, and market evolution.", icon: Rocket },
+  { step: "01", title: "Discover", description: "Map business priorities, sharpen modernization objectives, and align on transparent, measurable business outcomes.", icon: ClipboardList },
+  { step: "02", title: "Elaborate", description: "Shape the optimal approach to application modernization and orchestrate the teams and resources the initiative requires.", icon: Settings },
+  { step: "03", title: "Strategy", description: "Produce a digital transformation roadmap with expert-led strategy that defines how delivery will proceed.", icon: BarChart3 },
+  { step: "04", title: "Build", description: "Execute the roadmap through agile delivery, CI/CD automation, and mature DevOps practices.", icon: Code2 },
+  { step: "05", title: "Operate", description: "Modernize legacy applications, move confidently into production, and sustain the operational support you rely on.", icon: ShieldCheck },
+  { step: "06", title: "Evolve", description: "Maintain momentum through continuous improvement, emerging technology adoption, user insight, and responsiveness to market shifts.", icon: Rocket },
 ];
 
 const techCategories: { label: string; items: { name: string; logo: string }[] }[] = [
@@ -178,59 +178,59 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
 const industries = [
   {
     icon: Stethoscope, name: "Healthcare", href: "/industry/healthcare-lifesciences",
-    desc: "Digital health transformation, patient portals & healthcare modernization",
+    desc: "Digital health modernization, patient engagement portals, and sustained healthcare renewal",
     accent: "#EF4444", stat: "15+", statLabel: "Health Apps",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: ShoppingCart, name: "Retail", href: "/industry/ecommerce-solutions",
-    desc: "Omnichannel transformation, e-commerce modernization & retail digitization",
+    desc: "Omnichannel evolution, e-commerce renewal, and comprehensive retail digitization",
     accent: "#8B5CF6", stat: "30+", statLabel: "Stores Built",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: CreditCard, name: "Finance", href: "/industry/banking-finance-insurance",
-    desc: "Digital banking transformation, fintech platforms & financial modernization",
+    desc: "Digital banking modernization, fintech platforms, and end-to-end financial services renewal",
     accent: "#10B981", stat: "25+", statLabel: "FinTech Apps",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Truck, name: "Logistics", href: "/industry/transport-logistics",
-    desc: "Supply chain transformation, fleet automation & logistics digitization",
+    desc: "Supply chain modernization, fleet automation, and logistics-wide digitization",
     accent: "#06B6D4", stat: "12+", statLabel: "Logistics Apps",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: GraduationCap, name: "Education", href: "/industry/education-elearning",
-    desc: "EdTech transformation, LMS modernization & education digitization",
+    desc: "EdTech modernization, learning platform renewal, and education-sector digitization",
     accent: "#F59E0B", stat: "20+", statLabel: "EdTech Solutions",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Building2, name: "Real Estate", href: "/industry/real-estate",
-    desc: "PropTech transformation, smart buildings & real estate digitization",
+    desc: "PropTech modernization, intelligent buildings, and real estate digitization at scale",
     accent: "#EC4899", stat: "10+", statLabel: "PropTech Apps",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Gamepad2, name: "Entertainment", href: "/industry/entertainment",
-    desc: "Streaming transformation, content platform modernization & media digitization",
+    desc: "Streaming modernization, content platform renewal, and media industry digitization",
     accent: "#A855F7", stat: "14+", statLabel: "Media Apps",
-    image: "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Factory, name: "Manufacturing", href: "/industry/enterprise-retail-manufacturing",
-    desc: "Industry 4.0 transformation, smart factories & manufacturing digitization",
+    desc: "Industry 4.0 modernization, smart factories, and manufacturing operations digitization",
     accent: "#F97316", stat: "8+", statLabel: "Mfg Solutions",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop&q=80",
   },
 ];
 
 const whyChoose = [
-  { icon: Award, title: "Low Business Disruption", description: "No alterations to existing assets and legacy code throughout the migration process." },
-  { icon: TrendingUp, title: "Faster Time to Market", description: "Quick and efficient managed cloud services for greater business agility and speed to value." },
-  { icon: Zap, title: "Selective Refactoring", description: "Mitigate risks by carrying out application refactoring to selective groups with precision." },
-  { icon: HeartHandshake, title: "On-Time Delivery", description: "Highly adaptable, scalable tooling to achieve speed to value and reduce run costs." },
+  { icon: Award, title: "Minimal Operational Disruption", description: "Leave existing assets and legacy code unaltered for the full duration of the migration." },
+  { icon: TrendingUp, title: "Compressed Time-to-Market", description: "Responsive, expertly managed cloud services that heighten agility and shorten the path to value." },
+  { icon: Zap, title: "Precision Refactoring", description: "Lower risk by refactoring applications in carefully scoped cohorts with exacting control." },
+  { icon: HeartHandshake, title: "Reliable On-Time Delivery", description: "Flexible, scalable tooling that pairs speed-to-value with leaner ongoing operating expense." },
 ];
 
 export default function DigitalTransformationPage() {
@@ -257,119 +257,25 @@ export default function DigitalTransformationPage() {
 
 function TransformHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg viewBox="0 0 400 460" fill="none" className="relative w-full h-full drop-shadow-2xl" initial={{ y: 20 }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-        {/* Dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        <rect x="72" y="100" width="256" height="100" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="114" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="128" width="90" height="12" rx="4" className="fill-[#006ea3] dark:fill-[#3ba0d6]" />
-        <rect x="84" y="148" width="70" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <polyline points="220,186 234,164 248,172 262,152 276,158 290,144" className="stroke-[#006ea3] dark:stroke-[#3ba0d6]" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        <rect x="72" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="94" cy="238" r="10" className="fill-[#006ea3]/15" />
-        <rect x="112" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="242" width="40" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="84" y="260" width="96" height="6" rx="3" className="fill-[#006ea3]/30" />
-        <rect x="84" y="272" width="70" height="6" rx="3" className="fill-[#006ea3]/20" />
-        <rect x="208" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="230" cy="238" r="10" className="fill-emerald-500/15" />
-        <rect x="248" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="248" y="242" width="45" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="220" y="260" width="96" height="6" rx="3" className="fill-emerald-500/30" />
-        <rect x="220" y="272" width="75" height="6" rx="3" className="fill-emerald-500/20" />
-        <rect x="72" y="304" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="326" r="8" className="fill-[#006ea3]/15" />
-        <rect x="112" y="320" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="330" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="326" r="6" className="fill-[#006ea3]/20" />
-        <rect x="72" y="356" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="378" r="8" className="fill-violet-500/15" />
-        <rect x="112" y="372" width="70" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="382" width="110" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="378" r="6" className="fill-violet-500/20" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <Rocket className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Modernize</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Legacy Systems</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1488229297570-58520851e868?w=800&h=600&fit=crop&q=80" alt="Digital transformation strategy" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><Rocket className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">360° Digital</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Full transformation</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <Zap className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">5x Faster</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Operations</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><BarChart3 className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">40% Faster</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Time-to-market</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <Layers className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Cloud-Native</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Architecture</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <TrendingUp className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">40% Savings</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Cost Reduction</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10" animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} />
-      <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5" animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -383,41 +289,26 @@ function HeroSection({ ready }: { ready: boolean }) {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <span className={`inline-block text-xs font-bold tracking-widest text-[#006ea3] uppercase mb-4 transition-all duration-500 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-              Drive Innovation
+              Propel Innovation
             </span>
             <h1 className={`text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1] transition-all duration-700 delay-100 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
               Digital Modernization<br />
               <span className="text-[#006ea3]">& Transformation</span>
             </h1>
             <p className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-              Automate, transform & modernize your enterprise processes with our digital modernization & transformation services to drive greater customer value.
+              Automate, reinvent, and modernize enterprise workflows through our digital modernization and transformation services to deliver greater value to your customers.
             </p>
             <div className={`mt-8 flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
               <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10">
-                Get Free Consultation <ArrowRight className="w-4 h-4" />
+                Schedule a Free Consultation <ArrowRight className="w-4 h-4" />
               </Link>
               <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">
-                View Our Work
+                Explore Our Work
               </Link>
             </div>
           </div>
-          <div className={`grid grid-cols-2 gap-4 transition-all duration-700 delay-300 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            {[
-              { icon: RefreshCcw, label: "Modernization" },
-              { icon: Bot, label: "AI & Data" },
-              { icon: Cloud, label: "Cloud" },
-              { icon: Workflow, label: "Automation" },
-            ].map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.label} className={`rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] p-6 text-center transition-all duration-500 ${ready ? "opacity-100 scale-100" : "opacity-0 scale-95"}`} style={{ transitionDelay: `${400 + i * 100}ms` }}>
-                  <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20">
-                    <Icon className="w-6 h-6 text-[#006ea3]" strokeWidth={1.5} />
-                  </div>
-                  <div className="text-sm font-semibold text-black/70 dark:text-white/70">{item.label}</div>
-                </div>
-              );
-            })}
+          <div className={`transition-all duration-700 delay-300 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            <TransformHeroIllustration />
           </div>
         </div>
       </div>
@@ -498,7 +389,7 @@ function ServiceOfferingsSection() {
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Our Services</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">What We <span className="text-black dark:text-white">Offer</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Comprehensive solutions tailored to your business needs.</p>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Full-spectrum capabilities aligned precisely with your business priorities.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => {
@@ -527,7 +418,7 @@ function ServiceOfferingsSection() {
                       ))}
                     </div>
                     <div className="mt-5 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      Learn more <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      Learn More <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
                 </Link>
@@ -552,7 +443,7 @@ function ProcessSection() {
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">How We Work</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Development <span className="text-black dark:text-white">Process</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A battle-tested methodology that ensures quality, transparency, and on-time delivery.</p>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A proven methodology that safeguards quality, full transparency, and dependable on-time delivery.</p>
         </motion.div>
         <div className="relative">
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
@@ -642,8 +533,8 @@ function TechStackSection() {
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Technology Stack</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Built with <span className="text-black dark:text-white">Modern Tools</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Industry-leading tools and frameworks powering our solutions.</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Engineered on a <span className="text-black dark:text-white">Modern Stack</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Best-in-class platforms and frameworks underpinning every solution we ship.</p>
         </motion.div>
         <motion.div className="flex justify-center mb-12" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.15 }}>
           <div className="inline-flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02]">
@@ -669,7 +560,7 @@ function TechStackSection() {
           </AnimatePresence>
         </motion.div>
         <motion.div className="mt-16 pt-12 border-t border-black/[0.06] dark:border-white/[0.06]" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }}>
-          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">And many more technologies we work with</p>
+          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">Plus an expanding roster of technologies we apply every day</p>
           <div className="relative w-full">
             <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
@@ -715,7 +606,7 @@ function IndustriesSection() {
             Industries We <span className="text-black dark:text-white">Build For</span>
           </h2>
           <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-            Domain expertise across verticals — every solution is built with deep understanding of your industry.
+            Deep domain strength across verticals—each engagement reflects nuanced understanding of how your sector operates.
           </p>
         </motion.div>
 
@@ -766,7 +657,7 @@ function IndustriesSection() {
                       {ind.desc}
                     </p>
                     <div className="mt-4 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      Explore industry <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      Explore This Industry <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
                 </Link>
@@ -788,7 +679,7 @@ function WhyChooseSection() {
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#006ea3]/[0.03] rounded-full blur-[120px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Why Us</span>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Why Partner With Us</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Why Choose <span className="text-black dark:text-white">Cloud Nexus</span></h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -826,14 +717,14 @@ function CTASection() {
           Ready to Transform<br /><span className="text-[#006ea3]">Your Business?</span>
         </h2>
         <p className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          Leverage the power of digital transformation with a free consultation from our tech experts.
+          Unlock the impact of digital transformation with a complimentary consultation led by our senior technology advisors.
         </p>
         <div className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20">
-            Get a Free Consultation <ArrowRight className="w-4 h-4" />
+            Book Your Free Consultation <ArrowRight className="w-4 h-4" />
           </Link>
           <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">
-            View Our Work
+            Explore Our Work
           </Link>
         </div>
       </div>

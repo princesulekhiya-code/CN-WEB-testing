@@ -74,12 +74,12 @@ const categories: ServiceCategory[] = [
     id: "intelligent-automation",
     icon: Cpu,
     title: "Intelligent Automation",
-    subtitle: "Move forward digitally with bold steps — AI-powered solutions and emerging technologies to create sustainable value and solve critical business challenges.",
+    subtitle: "Harness AI, machine learning, and next-gen technologies to unlock hidden efficiencies, automate complex workflows, and build a future-ready digital foundation.",
     services: [
       {
         icon: Brain,
         title: "AI, ML & Data Science",
-        description: "Predictive analytics, NLP, computer vision, and intelligent automation — turning raw data into actionable business intelligence.",
+        description: "From predictive models and natural language processing to computer vision and smart automation — we transform unstructured data into strategic decisions.",
         href: "/services/ai-ml-data-science",
         highlights: ["Machine learning models", "NLP & chatbots", "Data pipelines"],
         sublinks: [
@@ -94,7 +94,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Zap,
         title: "Digital Transformation",
-        description: "Modernizing legacy systems, automating workflows, and integrating cutting-edge technologies to future-proof your business.",
+        description: "Revitalize outdated systems, streamline manual processes, and weave in modern tech stacks — so your organization stays ahead of industry shifts.",
         href: "/services/digital-transformation",
         highlights: ["Legacy modernization", "Process automation", "Change management"],
         sublinks: [
@@ -109,7 +109,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Shield,
         title: "Cybersecurity & Compliance",
-        description: "Comprehensive security audits, penetration testing, and regulatory compliance frameworks — SOC2, HIPAA, GDPR, and more.",
+        description: "End-to-end security assessments, proactive threat detection, and compliance readiness for SOC 2, HIPAA, GDPR, and beyond — protecting what matters most.",
         href: "/services/cybersecurity-compliance",
         highlights: ["Penetration testing", "Compliance frameworks", "Threat detection"],
         sublinks: [
@@ -124,7 +124,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Settings,
         title: "Technology Consulting",
-        description: "Big data, digital experience, AI & data science, chatbot, IoT, and augmented reality consulting to align emerging tech with your business goals.",
+        description: "Strategic advisory across big data, digital experience, IoT, AR, and conversational AI — bridging the gap between emerging tech and tangible business outcomes.",
         href: "/services/technology-consulting",
         highlights: ["AI & data consulting", "IoT strategy", "AR consulting"],
         sublinks: [
@@ -142,12 +142,12 @@ const categories: ServiceCategory[] = [
     id: "software-engineering",
     icon: Wrench,
     title: "Software Engineering",
-    subtitle: "Transform your business digitally by developing mobile apps, web platforms, and software built for agility, resilience, and growth.",
+    subtitle: "Craft robust mobile apps, high-performance web platforms, and enterprise-grade software — engineered for speed, reliability, and seamless scalability.",
     services: [
       {
         icon: Smartphone,
         title: "Mobile App Development",
-        description: "Native and cross-platform iOS & Android applications with seamless UI/UX, offline support, and advanced functionality.",
+        description: "Pixel-perfect native and cross-platform apps for iOS & Android — with fluid interactions, offline-first design, and features users actually love.",
         href: "/services/mobile-app-development",
         highlights: ["React Native & Flutter", "Native iOS/Android", "App Store optimization"],
         sublinks: [
@@ -161,7 +161,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Globe,
         title: "Web Development",
-        description: "Responsive, secure, and lightning-fast web applications — from startup landing pages to complex enterprise platforms.",
+        description: "Blazing-fast, secure, and fully responsive web experiences — whether it's a conversion-focused landing page or a complex multi-tenant platform.",
         href: "/services/web-development",
         highlights: ["Next.js & React", "Progressive Web Apps", "Performance optimization"],
         sublinks: [
@@ -176,7 +176,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Monitor,
         title: "Software Development",
-        description: "Full-cycle custom software solutions — enterprise apps, API development, and complex system integrations built for scale.",
+        description: "Complete lifecycle software engineering — from enterprise applications and API ecosystems to intricate system integrations that grow with your ambition.",
         href: "/services/software-development",
         highlights: ["Enterprise apps", "API development", "System integration"],
         sublinks: [
@@ -191,7 +191,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Boxes,
         title: "MVP Development",
-        description: "Prototype design, single-feature MVPs, full MVP builds, scaling to full product, and expert MVP consulting — from idea to launch-ready in weeks.",
+        description: "Validate fast with lean prototypes, single-feature MVPs, or full product builds — then scale confidently with our expert guidance at every stage.",
         href: "/services/mvp-development",
         highlights: ["Prototype design", "MVP build & scale", "MVP consulting"],
         sublinks: [
@@ -206,7 +206,7 @@ const categories: ServiceCategory[] = [
       {
         icon: UsersRound,
         title: "Hire Dedicated Developers",
-        description: "Scale your team on demand with pre-vetted senior engineers — flexible hiring models from individual contributors to full pods.",
+        description: "Plug in pre-vetted senior talent exactly when you need it — from individual specialists to fully integrated engineering pods, tailored to your workflow.",
         href: "/services/hire-dedicated-developers",
         highlights: ["Staff augmentation", "Dedicated teams", "Flexible models"],
         sublinks: [
@@ -221,7 +221,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Palette,
         title: "UI/UX Design",
-        description: "User-centric design solutions focused on usability, engagement, and modern aesthetics — from research to pixel-perfect interfaces.",
+        description: "Research-backed, conversion-driven design — blending intuitive usability with contemporary aesthetics to create interfaces people remember.",
         href: "/services/ui-ux-design",
         highlights: ["Design systems", "User research", "Prototyping & testing"],
         sublinks: [
@@ -236,7 +236,7 @@ const categories: ServiceCategory[] = [
       {
         icon: CloudCog,
         title: "SaaS Development",
-        description: "Multi-tenant SaaS platforms with subscription billing, role-based access, and scalable cloud-native architecture.",
+        description: "Purpose-built multi-tenant platforms with flexible billing models, granular access control, and cloud-native infrastructure designed for rapid growth.",
         href: "/services/saas-development",
         highlights: ["Multi-tenant", "Subscription billing", "Cloud-native"],
         sublinks: [
@@ -251,7 +251,7 @@ const categories: ServiceCategory[] = [
       {
         icon: ServerCog,
         title: "IT Consulting",
-        description: "IT infrastructure planning, system integration, and strategic IT advisory to optimize your technology operations.",
+        description: "Clear-eyed infrastructure planning, seamless system integration, and strategic IT advisory — getting the most out of every technology dollar.",
         href: "/services/it-consulting",
         highlights: ["IT strategy", "System integration", "Infrastructure planning"],
         sublinks: [
@@ -269,12 +269,12 @@ const categories: ServiceCategory[] = [
     id: "digital-automation",
     icon: Briefcase,
     title: "Digital Automation",
-    subtitle: "Shape your digital vision with expert transformation, growth marketing, and scalable cloud solutions to rewire your organization's capabilities.",
+    subtitle: "Accelerate revenue with growth-focused marketing, cloud-native infrastructure, and product-led engineering — turning operational complexity into competitive advantage.",
     services: [
       {
         icon: Package,
         title: "Product Engineering",
-        description: "End-to-end product development from ideation and prototyping to market launch and scaling — turning ideas into market-ready products.",
+        description: "Full-spectrum product creation — ideation workshops, rapid prototyping, iterative builds, and market launch — transforming concepts into category-defining products.",
         href: "/services/product-engineering",
         highlights: ["Idea to launch", "Product strategy", "Scalable architecture"],
         sublinks: [
@@ -289,7 +289,7 @@ const categories: ServiceCategory[] = [
       {
         icon: ShoppingBag,
         title: "E-Commerce Development",
-        description: "Scalable online stores with payment gateways, inventory management, and headless commerce for modern retail experiences.",
+        description: "High-converting storefronts with secure checkout flows, real-time inventory sync, and headless architecture for omnichannel retail that scales effortlessly.",
         href: "/services/ecommerce-development",
         highlights: ["Shopify & Magento", "Payment integration", "Headless commerce"],
         sublinks: [
@@ -304,7 +304,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Blocks,
         title: "WordPress Development",
-        description: "Custom WordPress themes, plugins, WooCommerce stores, and headless WordPress solutions for content-driven businesses.",
+        description: "Bespoke WordPress themes, performance-optimized plugins, WooCommerce setups, and headless CMS solutions — empowering content-first brands to publish at scale.",
         href: "/services/wordpress-development",
         highlights: ["Custom themes", "WooCommerce", "Headless WordPress"],
         sublinks: [
@@ -319,7 +319,7 @@ const categories: ServiceCategory[] = [
       {
         icon: TrendingUp,
         title: "Digital Marketing",
-        description: "Full-funnel digital marketing — SEO, PPC advertising, social media, email marketing, content strategy, and app store optimization.",
+        description: "Data-driven, full-funnel campaigns — organic search, paid acquisition, social engagement, email nurturing, and ASO — engineered to maximize every click.",
         href: "/services/digital-marketing",
         highlights: ["SEO & PPC", "Social media & email", "Content & ASO"],
         sublinks: [
@@ -334,7 +334,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Cloud,
         title: "Cloud Services",
-        description: "Cloud implementation strategy, application services, management, DevOps, migration, and infrastructure — on AWS, Azure & GCP.",
+        description: "Architecture, migration, and managed services across AWS, Azure & GCP — with DevOps baked in for cost-efficient, always-on cloud operations.",
         href: "/services/cloud-services",
         highlights: ["Cloud migration", "DevOps as a service", "Infrastructure & IaC"],
         sublinks: [
@@ -349,7 +349,7 @@ const categories: ServiceCategory[] = [
       {
         icon: GitMerge,
         title: "DevOps & Cloud Automation",
-        description: "CI/CD pipelines, containerization with Docker & Kubernetes, IaC with Terraform, and automated infrastructure for faster delivery.",
+        description: "Automated CI/CD, Docker & Kubernetes orchestration, Terraform-driven IaC, and self-healing infrastructure — shipping features faster with zero-drama deployments.",
         href: "/services/devops-cloud-automation",
         highlights: ["CI/CD pipelines", "Kubernetes & Docker", "Infrastructure as Code"],
         sublinks: [
@@ -366,70 +366,70 @@ const categories: ServiceCategory[] = [
 ];
 
 const processSteps = [
-  { step: "01", title: "Discovery & Strategy", description: "We deep-dive into your business goals, pain points, and technical landscape to craft a tailored strategy.", icon: Lightbulb },
-  { step: "02", title: "Design & Architecture", description: "Our team designs intuitive interfaces and robust system architectures that scale with your growth.", icon: Layers },
-  { step: "03", title: "Agile Development", description: "Iterative sprints with continuous feedback loops ensure transparent progress and rapid delivery.", icon: Cog },
-  { step: "04", title: "Testing & QA", description: "Rigorous automated and manual testing across devices, browsers, and edge cases for bulletproof quality.", icon: CheckCircle2 },
-  { step: "05", title: "Deployment & Launch", description: "Zero-downtime deployments with monitoring, rollback strategies, and performance optimization.", icon: Rocket },
-  { step: "06", title: "Support & Growth", description: "Ongoing maintenance, analytics-driven improvements, and scaling support as your business evolves.", icon: HeartHandshake },
+  { step: "01", title: "Discovery & Strategy", description: "We map your objectives, uncover friction points, and evaluate your tech ecosystem — then distill it all into a clear, actionable roadmap.", icon: Lightbulb },
+  { step: "02", title: "Design & Architecture", description: "Intuitive interfaces meet resilient system blueprints — designed to delight users today and handle ten-fold growth tomorrow.", icon: Layers },
+  { step: "03", title: "Agile Development", description: "Two-week sprints, daily standups, and real-time demos keep you in the loop while we ship production-ready features fast.", icon: Cog },
+  { step: "04", title: "Testing & QA", description: "Automated regression suites, manual edge-case sweeps, cross-device coverage — every release meets the bar before it leaves the lab.", icon: CheckCircle2 },
+  { step: "05", title: "Deployment & Launch", description: "Seamless rollouts with blue-green deploys, instant rollback capability, and performance baselining for a confident go-live.", icon: Rocket },
+  { step: "06", title: "Support & Growth", description: "Post-launch, we stay engaged — monitoring health, iterating on analytics insights, and scaling infrastructure as demand climbs.", icon: HeartHandshake },
 ];
 
 const industries = [
   {
     icon: CreditCard, name: "FinTech & Banking", href: "/industry/banking-finance-insurance",
-    desc: "Mobile banking, payment gateways, trading platforms & regulatory compliance",
+    desc: "Secure digital banking, seamless payment rails, real-time trading interfaces & built-in regulatory safeguards",
     accent: "#10B981", stat: "25+", statLabel: "FinTech Apps",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Stethoscope, name: "Healthcare", href: "/industry/healthcare-lifesciences",
-    desc: "Telemedicine, EHR systems, patient portals & HIPAA-compliant solutions",
+    desc: "Virtual care platforms, electronic health records, patient engagement portals & privacy-first architecture",
     accent: "#EF4444", stat: "15+", statLabel: "Health Apps",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: ShoppingCart, name: "E-Commerce", href: "/industry/ecommerce-solutions",
-    desc: "Online stores, marketplaces, inventory management & headless commerce",
+    desc: "Conversion-optimized storefronts, multi-vendor marketplaces, live inventory sync & composable commerce stacks",
     accent: "#8B5CF6", stat: "30+", statLabel: "Stores Built",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: GraduationCap, name: "Education", href: "/industry/education-elearning",
-    desc: "LMS platforms, interactive courses, virtual classrooms & EdTech apps",
+    desc: "Immersive learning management systems, gamified courses, live virtual classrooms & adaptive EdTech experiences",
     accent: "#F59E0B", stat: "20+", statLabel: "EdTech Solutions",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Truck, name: "Logistics", href: "/industry/transport-logistics",
-    desc: "Fleet tracking, route optimization, warehouse management & supply chain",
+    desc: "GPS fleet visibility, AI-powered route planning, warehouse automation & end-to-end supply chain orchestration",
     accent: "#06B6D4", stat: "12+", statLabel: "Logistics Apps",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Building2, name: "Real Estate", href: "/industry/real-estate",
-    desc: "Property listings, virtual tours, CRM systems & tenant management",
+    desc: "Smart property portals, 3D virtual walkthroughs, agent CRM tools & automated tenant lifecycle management",
     accent: "#EC4899", stat: "10+", statLabel: "PropTech Apps",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Factory, name: "Manufacturing", href: "/industry/enterprise-retail-manufacturing",
-    desc: "IoT dashboards, ERP integrations, quality control & production tracking",
+    desc: "Real-time IoT monitoring, ERP connectors, automated QC workflows & digital production line tracking",
     accent: "#F97316", stat: "8+", statLabel: "Mfg Solutions",
     image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: BarChart3, name: "SaaS & Startups", href: "/industry/fintech",
-    desc: "MVP builds, multi-tenant platforms, subscription billing & rapid scaling",
+    desc: "Lean MVP launches, multi-tenant platform architecture, recurring billing engines & growth-stage scaling playbooks",
     accent: "#006ea3", stat: "40+", statLabel: "SaaS Products",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&q=80",
   },
 ];
 
 const stats = [
-  { value: 150, suffix: "+", label: "Projects Delivered", description: "Enterprise-grade solutions shipped globally" },
-  { value: 50, suffix: "+", label: "Global Clients", description: "From Fortune 500 to fast-growing startups" },
-  { value: 98, suffix: "%", label: "Client Retention", description: "Long-term partnerships built on trust" },
-  { value: 10, suffix: "+", label: "Industries Served", description: "Across healthcare, fintech, retail & more" },
+  { value: 150, suffix: "+", label: "Projects Delivered", description: "Production-ready products launched across three continents" },
+  { value: 50, suffix: "+", label: "Global Clients", description: "Partnering with ambitious brands — from seed-stage to enterprise" },
+  { value: 98, suffix: "%", label: "Client Retention", description: "Relationships built on transparency, results, and mutual growth" },
+  { value: 10, suffix: "+", label: "Industries Served", description: "Deep vertical expertise from fintech to healthcare and beyond" },
 ];
 
 /* ═══════════════════════════════════════════════════════
@@ -715,7 +715,7 @@ function StatsBar() {
           className="text-center mb-14"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
-            Numbers That <span className="text-black dark:text-white">Speak Volumes</span>
+            Results That <span className="text-black dark:text-white">Tell the Story</span>
           </h2>
         </motion.div>
 
@@ -763,10 +763,10 @@ function ProcessTimeline() {
         className="text-center mb-16"
       >
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
-          How We Bring <span className="text-black dark:text-white">Ideas to Life</span>
+          From Concept to <span className="text-black dark:text-white">Production</span>
         </h2>
         <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-          A proven six-step methodology that ensures quality, transparency, and on-time delivery.
+          A battle-tested six-phase process balancing speed, quality, and full visibility — so there are no surprises on launch day.
         </p>
       </motion.div>
 
@@ -825,12 +825,12 @@ function IndustriesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Industries We Serve</span>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Industry Expertise</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
-            Powering Innovation Across <span className="text-black dark:text-white">Every Industry</span>
+            Built for <span className="text-black dark:text-white">Your Industry</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            Deep domain expertise from banking to healthcare, e-commerce to logistics — ensuring every solution addresses real industry challenges.
+            Vertical-specific knowledge baked into every engagement — from regulatory nuances in finance to patient-safety standards in healthcare.
           </p>
         </motion.div>
 
@@ -857,12 +857,12 @@ function IndustriesSection() {
                       src={industry.image}
                       alt={industry.name}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out saturate-[0.85] group-hover:saturate-100"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       unoptimized
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                    <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5 dark:from-black/60 dark:via-black/20 dark:to-black/10" />
+                    <div className="absolute inset-0 bg-[#006ea3]/[0.06] dark:bg-[#006ea3]/[0.08] mix-blend-overlay group-hover:bg-transparent transition-colors duration-500" />
 
                     <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-xl bg-white/90 dark:bg-black/50 border border-white/20 backdrop-blur-md shadow-lg group-hover:bg-[#006ea3] group-hover:border-[#006ea3]/50 transition-all duration-300">
                       <IndIcon className="w-4 h-4 text-black/60 dark:text-white/70 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
@@ -899,10 +899,10 @@ function IndustriesSection() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4"
         >
           {[
-            { text: "Customized industry solutions", icon: Lightbulb },
-            { text: "Domain-expert engineering teams", icon: Users },
-            { text: "Regulatory compliance built-in", icon: Shield },
-            { text: "Scalable architectures for growth", icon: Layers },
+            { text: "Tailored vertical solutions", icon: Lightbulb },
+            { text: "Engineers with domain expertise", icon: Users },
+            { text: "Compliance woven in from day one", icon: Shield },
+            { text: "Architecture that scales with demand", icon: Layers },
           ].map((item) => {
             const HIcon = item.icon;
             return (
@@ -926,10 +926,10 @@ function WhyChooseUs() {
   const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
   const items = [
-    { icon: Users, title: "Expert Teams", stat: "120+", statLabel: "Engineers", desc: "Senior engineers, designers, and strategists with deep domain expertise across industries.", highlights: ["Full-stack expertise", "Domain specialists", "Certified professionals"] },
-    { icon: Clock, title: "On-Time Delivery", stat: "95%", statLabel: "On Schedule", desc: "Agile sprints with transparent timelines — 95% of projects delivered on or ahead of schedule.", highlights: ["Agile methodology", "Sprint-based delivery", "Transparent timelines"] },
-    { icon: Layers, title: "Scalable Solutions", stat: "10x", statLabel: "Growth Ready", desc: "Architectures built to handle 10x growth — from startup MVP to enterprise-grade systems.", highlights: ["Cloud-native design", "Microservices architecture", "Auto-scaling infra"] },
-    { icon: HeartHandshake, title: "Long-Term Partnership", stat: "98%", statLabel: "Retention", desc: "We don't just build and leave. Ongoing support, optimization, and strategic guidance as you grow.", highlights: ["Dedicated support", "Continuous optimization", "Strategic guidance"] },
+    { icon: Users, title: "Elite Engineering Talent", stat: "120+", statLabel: "Engineers", desc: "Seasoned developers, designers, and strategists — hand-picked for domain depth and cross-functional agility.", highlights: ["Full-stack expertise", "Domain specialists", "Certified professionals"] },
+    { icon: Clock, title: "Predictable Delivery", stat: "95%", statLabel: "On Schedule", desc: "Structured sprints, real-time dashboards, and proactive risk mitigation — 95% of milestones hit on or ahead of schedule.", highlights: ["Agile methodology", "Sprint-based delivery", "Transparent timelines"] },
+    { icon: Layers, title: "Built to Scale", stat: "10x", statLabel: "Growth Ready", desc: "Cloud-native blueprints engineered for ten-fold traffic surges — so your stack never becomes the bottleneck.", highlights: ["Cloud-native design", "Microservices architecture", "Auto-scaling infra"] },
+    { icon: HeartHandshake, title: "Partners, Not Vendors", stat: "98%", statLabel: "Retention", desc: "Post-launch isn't goodbye — we stay embedded with proactive monitoring, continuous optimization, and growth strategy.", highlights: ["Dedicated support", "Continuous optimization", "Strategic guidance"] },
   ];
 
   return (
@@ -945,10 +945,10 @@ function WhyChooseUs() {
           className="text-center mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
-            Why Businesses <span className="text-black dark:text-white">Choose Us</span>
+            The Cloud Nexus <span className="text-black dark:text-white">Advantage</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            We combine technical excellence with business acumen to deliver solutions that truly move the needle.
+            Technical depth meets business intuition — every solution is calibrated to deliver measurable impact, not just clean code.
           </p>
         </motion.div>
 
@@ -1025,9 +1025,9 @@ function CTASection() {
           transition={{ duration: 0.6 }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]"
         >
-          Ready to Build Something
+          Let&apos;s Turn Your Next Big Idea
           <br />
-          <span className="text-black dark:text-white">Extraordinary?</span>
+          <span className="text-black dark:text-white">Into Reality</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -1035,7 +1035,7 @@ function CTASection() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed"
         >
-          Let&apos;s discuss your project. Our team of experts is ready to turn your vision into a market-leading reality.
+          Share your challenge, and we&apos;ll map a clear path — from architecture to launch — backed by engineers who&apos;ve done it hundreds of times.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -1088,65 +1088,133 @@ export default function ServicesPage() {
           }}
         />
 
-        <div className="mx-auto max-w-7xl px-6 pt-28 sm:pt-32 pb-24 text-center relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#006ea3]/10 border border-[#006ea3]/20 text-[#006ea3] text-xs font-semibold tracking-wide mb-8"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            Full-Spectrum Digital Services
-          </motion.div>
+        <div className="mx-auto max-w-7xl px-6 pt-28 sm:pt-32 pb-24 relative">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
-          >
-            Innovative Services.
-            <br />
-            <span className="text-[#006ea3]">Driving Real Growth.</span>
-          </motion.h1>
+            {/* Left — Text Content */}
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#006ea3]/10 border border-[#006ea3]/20 text-[#006ea3] text-xs font-semibold tracking-wide mb-8"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                End-to-End Digital Capabilities
+              </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-6 text-lg md:text-xl font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed"
-          >
-            From strategy to deployment, we deliver full-spectrum digital services that help businesses innovate, scale, and lead in their markets.
-          </motion.p>
+              <motion.h1
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-5xl xl:text-6xl"
+              >
+                Engineering Excellence.
+                <br />
+                <span className="text-[#006ea3]">Measurable Impact.</span>
+              </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-            className="mt-3 text-sm md:text-base font-medium text-[#006ea3]/70 max-w-xl mx-auto leading-relaxed tracking-wide"
-          >
-            Trusted by 50+ companies &bull; 200+ projects delivered &bull; 98% client retention
-          </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.25 }}
+                className="mt-6 text-lg md:text-xl font-medium text-black/50 dark:text-white/50 max-w-xl leading-relaxed"
+              >
+                Strategy, design, engineering, and growth — one partner covering the entire digital lifecycle so you can focus on what matters most: your business.
+              </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              href="/resources/free-consultation"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10"
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.35 }}
+                className="mt-3 text-sm md:text-base font-medium text-[#006ea3]/70 max-w-xl leading-relaxed tracking-wide"
+              >
+                50+ global partners &bull; 200+ production launches &bull; 98% client retention rate
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.45 }}
+                className="mt-10 flex flex-col sm:flex-row gap-4"
+              >
+                <Link
+                  href="/resources/free-consultation"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10"
+                >
+                  Get Free Consultation <ArrowRight className="w-4 h-4" />
+                </Link>
+                <button
+                  onClick={scrollToServices}
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
+                >
+                  Explore Services
+                </button>
+              </motion.div>
+            </div>
+
+            {/* Right — Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, x: 40 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="relative hidden lg:block"
             >
-              Get Free Consultation <ArrowRight className="w-4 h-4" />
-            </Link>
-            <button
-              onClick={scrollToServices}
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
-            >
-              Explore Services
-            </button>
-          </motion.div>
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+                <Image
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80"
+                  alt="Our engineering team collaborating on digital solutions"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              </div>
+
+              {/* Floating stats badge — top-right */}
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10">
+                    <Rocket className="w-4.5 h-4.5 text-[#006ea3]" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-black dark:text-white">200+</div>
+                    <div className="text-[10px] font-medium text-black/40 dark:text-white/40">Projects Shipped</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Floating badge — bottom-left */}
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
+                className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10">
+                    <CheckCircle2 className="w-4.5 h-4.5 text-emerald-500" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-black dark:text-white">98%</div>
+                    <div className="text-[10px] font-medium text-black/40 dark:text-white/40">Client Retention</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Decorative glow behind image */}
+              <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
+            </motion.div>
+
+          </div>
         </div>
       </div>
 

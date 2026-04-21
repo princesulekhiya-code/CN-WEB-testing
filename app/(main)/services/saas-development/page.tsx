@@ -86,33 +86,33 @@ interface ServiceOffering {
 }
 
 const services: ServiceOffering[] = [
-  { icon: Layers, title: "Custom SaaS Platform", description: "Tech-advanced developers leverage the latest tools and technologies to turn ideas into reality with custom SaaS platform development.", href: "/services/saas-development/custom-saas-platform", features: ["Custom logic", "Scalable", "Cloud-native"] },
-  { icon: Palette, title: "SaaS UI/UX Design", description: "Experienced designers create user-friendly and interactive enterprise-grade UI/UX designs intending to drive higher revenue.", href: "/services/saas-development/saas-ui-ux-design", features: ["User-friendly", "Interactive", "Enterprise-grade"] },
-  { icon: Smartphone, title: "SaaS Mobile Solutions", description: "Both native and hybrid SaaS mobile app solutions leveraging the importance of smartphone users for maximum reach.", href: "/services/saas-development/saas-mobile-solutions", features: ["Native", "Hybrid", "Cross-platform"] },
-  { icon: CreditCard, title: "Subscription & Billing", description: "Stripe Billing or custom ledgers for trials, proration, usage meters, and dunning workflows that finance teams can audit.", href: "/services/saas-development/subscription-billing", features: ["Stripe Billing", "Usage meters", "Dunning"] },
-  { icon: Lock, title: "SaaS Security & Compliance", description: "Best industry practices to maintain SaaS product security and ensure meeting industry standards for platform development.", href: "/services/saas-development/saas-security", features: ["SOC 2", "GDPR", "Encryption"] },
-  { icon: Database, title: "SaaS API & Integration", description: "Expert developers integrate varied third-party APIs into your SaaS app by linking external data sources to enhance operations.", href: "/services/saas-development/saas-api-integration", features: ["REST API", "Webhooks", "SDK"] },
+  { icon: Layers, title: "Custom SaaS Platform", description: "Senior engineers apply modern stacks and proven patterns to translate your vision into a bespoke SaaS platform engineered for longevity.", href: "/services/saas-development/custom-saas-platform", features: ["Tailored logic", "Elastic scale", "Cloud-native"] },
+  { icon: Palette, title: "SaaS UI/UX Design", description: "Product designers craft intuitive, engaging interfaces at enterprise caliber—purpose-built to lift adoption, retention, and revenue.", href: "/services/saas-development/saas-ui-ux-design", features: ["Intuitive UX", "Rich interaction", "Enterprise polish"] },
+  { icon: Smartphone, title: "SaaS Mobile Solutions", description: "Native and hybrid mobile experiences that meet users where they are—on device—so your SaaS reaches the widest possible audience.", href: "/services/saas-development/saas-mobile-solutions", features: ["Native builds", "Hybrid delivery", "Cross-platform"] },
+  { icon: CreditCard, title: "Subscription & Billing", description: "Stripe Billing or bespoke ledgers covering trials, proration, usage-based metering, and dunning—structured so finance can reconcile with confidence.", href: "/services/saas-development/subscription-billing", features: ["Stripe Billing", "Usage metering", "Dunning flows"] },
+  { icon: Lock, title: "SaaS Security & Compliance", description: "Rigorous controls and recognized frameworks to harden your product, align with regulatory expectations, and uphold trust at every layer.", href: "/services/saas-development/saas-security", features: ["SOC 2", "GDPR", "Encryption"] },
+  { icon: Database, title: "SaaS API & Integration", description: "Integration specialists connect diverse third-party APIs and external data sources to your SaaS so workflows stay synchronized end to end.", href: "/services/saas-development/saas-api-integration", features: ["REST APIs", "Webhooks", "SDKs"] },
 ];
 
 const stats: { label: string; value: number; suffix: string; isDecimal?: boolean }[] = [
-  { label: "SaaS Products", value: 120, suffix: "+" },
+  { label: "SaaS Products Delivered", value: 120, suffix: "+" },
   { label: "Active Users", value: 2, suffix: "M+" },
-  { label: "Uptime", value: 99, suffix: ".9%" },
-  { label: "Faster Deployment", value: 4, suffix: "x" },
+  { label: "Platform Uptime", value: 99, suffix: ".9%" },
+  { label: "Faster Deployments", value: 4, suffix: "x" },
 ];
 
 const processSteps = [
-  { step: "01", title: "Market Research", description: "Extensive research and customer requirement analysis to build solutions with the required tools and technologies.", icon: ClipboardList },
-  { step: "02", title: "Build MVP", description: "Basic version of the software with fundamental features — quick value to users with minimal expenses.", icon: Code2 },
-  { step: "03", title: "Technical Planning", description: "Determine technical aspects needing attention while developing and scaling the MVP for long-term goals.", icon: Settings },
-  { step: "04", title: "Feature Definition", description: "List features and functionalities that satisfy customer demands and differentiate your business.", icon: BarChart3 },
-  { step: "05", title: "Development & QA", description: "Develop the solution with selected technology, carry out quality assurance in parallel and post-development.", icon: ShieldCheck },
-  { step: "06", title: "Launch & Feedback", description: "Launch product in active market, seek customer feedback for improvements and user experience refinement.", icon: Rocket },
+  { step: "01", title: "Market Research", description: "Deep discovery and structured requirements work so the build targets the right problems—with the stack and architecture that fit.", icon: ClipboardList },
+  { step: "02", title: "Build MVP", description: "A lean first release with the essentials—fast time-to-value for users while keeping spend disciplined.", icon: Code2 },
+  { step: "03", title: "Technical Planning", description: "Clarify what must evolve technically as the MVP grows, so scaling and roadmap decisions stay coherent over time.", icon: Settings },
+  { step: "04", title: "Feature Definition", description: "Prioritize capabilities that match customer expectations and sharpen the positioning that sets you apart.", icon: BarChart3 },
+  { step: "05", title: "Development & QA", description: "Engineer on the chosen stack while quality assurance runs in parallel—during build and after each milestone.", icon: ShieldCheck },
+  { step: "06", title: "Launch & Feedback", description: "Take the product live in market, then channel user input into measurable improvements and a sharper experience.", icon: Rocket },
 ];
 
 const techCategories: { label: string; items: { name: string; logo: string }[] }[] = [
   {
-    label: "Backend",
+    label: "Backend Stack",
     items: [
       { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
       { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
@@ -122,7 +122,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Frontend",
+    label: "Frontend Stack",
     items: [
       { name: "React", logo: `${DEVICON}/react/react-original.svg` },
       { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
@@ -132,7 +132,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Mobile",
+    label: "Mobile Stack",
     items: [
       { name: "Swift", logo: `${DEVICON}/swift/swift-original.svg` },
       { name: "Kotlin", logo: `${DEVICON}/kotlin/kotlin-original.svg` },
@@ -141,7 +141,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Database",
+    label: "Database Layer",
     items: [
       { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
       { name: "MySQL", logo: `${DEVICON}/mysql/mysql-original.svg` },
@@ -151,7 +151,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Infrastructure",
+    label: "Cloud Infrastructure",
     items: [
       { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-plain-wordmark.svg` },
       { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
@@ -161,7 +161,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Payments",
+    label: "Payments Stack",
     items: [
       { name: "Stripe", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
       { name: "PayPal", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
@@ -175,59 +175,59 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
 const industries = [
   {
     icon: Stethoscope, name: "Healthcare", href: "/industry/healthcare-lifesciences",
-    desc: "Patient portals, telemedicine SaaS & healthcare cloud platforms",
-    accent: "#EF4444", stat: "15+", statLabel: "Health Apps",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&q=80",
+    desc: "Patient portals, telemedicine SaaS, and cloud-native healthcare platforms",
+    accent: "#EF4444", stat: "15+", statLabel: "Healthcare Products",
+    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: ShoppingCart, name: "Retail", href: "/industry/ecommerce-solutions",
-    desc: "Inventory, POS, e-commerce SaaS & retail cloud platforms",
-    accent: "#8B5CF6", stat: "30+", statLabel: "Stores Built",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80",
+    desc: "Inventory, POS, e-commerce SaaS, and retail cloud platforms",
+    accent: "#8B5CF6", stat: "30+", statLabel: "Stores Launched",
+    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: CreditCard, name: "Fintech", href: "/industry/banking-finance-insurance",
-    desc: "Payments, lending, banking SaaS & financial cloud platforms",
-    accent: "#10B981", stat: "25+", statLabel: "FinTech Apps",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&q=80",
+    desc: "Payments, lending, banking SaaS, and financial cloud platforms",
+    accent: "#10B981", stat: "25+", statLabel: "FinTech Products",
+    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Truck, name: "Logistics", href: "/industry/transport-logistics",
-    desc: "Fleet tracking, supply chain SaaS & logistics cloud platforms",
-    accent: "#06B6D4", stat: "12+", statLabel: "Logistics Apps",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&q=80",
+    desc: "Fleet visibility, supply-chain SaaS, and logistics cloud platforms",
+    accent: "#06B6D4", stat: "12+", statLabel: "Logistics Platforms",
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: GraduationCap, name: "Education", href: "/industry/education-elearning",
-    desc: "LMS, e-learning platforms & education SaaS solutions",
-    accent: "#F59E0B", stat: "20+", statLabel: "EdTech Solutions",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop&q=80",
+    desc: "LMS, online learning platforms, and education-focused SaaS",
+    accent: "#F59E0B", stat: "20+", statLabel: "EdTech Platforms",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Building2, name: "Real Estate", href: "/industry/real-estate",
-    desc: "Property management SaaS, tenant portals & real estate cloud platforms",
-    accent: "#EC4899", stat: "10+", statLabel: "PropTech Apps",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80",
+    desc: "Property-management SaaS, tenant portals, and real-estate cloud platforms",
+    accent: "#EC4899", stat: "10+", statLabel: "PropTech Products",
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Gamepad2, name: "Entertainment", href: "/industry/entertainment",
-    desc: "Streaming, content SaaS & entertainment cloud platforms",
-    accent: "#A855F7", stat: "14+", statLabel: "Media Apps",
-    image: "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=600&h=400&fit=crop&q=80",
+    desc: "Streaming, content SaaS, and entertainment cloud platforms",
+    accent: "#A855F7", stat: "14+", statLabel: "Media Experiences",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop&q=80",
   },
   {
     icon: Factory, name: "Enterprise", href: "/industry/enterprise-retail-manufacturing",
-    desc: "ERP, workflow automation SaaS & enterprise cloud platforms",
-    accent: "#F97316", stat: "8+", statLabel: "Enterprise Apps",
+    desc: "ERP, workflow-automation SaaS, and enterprise cloud platforms",
+    accent: "#F97316", stat: "8+", statLabel: "Enterprise Systems",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop&q=80",
   },
 ];
 
 const whyChoose = [
-  { icon: Award, title: "Quality Solutions", description: "Advanced features and functionalities that improve overall business operations and efficiency." },
-  { icon: TrendingUp, title: "CI/CD Approach", description: "Agile SaaS development process with CI/CD and DevOps — release updates every 2-3 weeks." },
-  { icon: Zap, title: "Data Security", description: "Standard practices to keep data secure with maintained security features at every stage." },
-  { icon: HeartHandshake, title: "Geo-Specific Hosting", description: "Geo-specific hosting in deployment and maintenance ensuring the app stays responsive across markets." },
+  { icon: Award, title: "Quality Solutions", description: "Sophisticated capabilities that streamline operations, elevate efficiency, and compound business outcomes." },
+  { icon: TrendingUp, title: "CI/CD Approach", description: "An agile SaaS delivery model powered by CI/CD and DevOps—shipping meaningful updates every two to three weeks." },
+  { icon: Zap, title: "Data Security", description: "Established safeguards and continuous vigilance so data stays protected at every phase of the lifecycle." },
+  { icon: HeartHandshake, title: "Geo-Specific Hosting", description: "Region-aware hosting across deployment and operations so performance stays crisp in every market you serve." },
 ];
 
 export default function SaasDevelopmentPage() {
@@ -251,119 +251,25 @@ export default function SaasDevelopmentPage() {
 
 function SaaSHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg viewBox="0 0 400 460" fill="none" className="relative w-full h-full drop-shadow-2xl" initial={{ y: 20 }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-        {/* Dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        <rect x="72" y="100" width="256" height="100" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="114" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="128" width="90" height="12" rx="4" className="fill-[#006ea3] dark:fill-[#3ba0d6]" />
-        <rect x="84" y="148" width="70" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <polyline points="220,186 234,164 248,172 262,152 276,158 290,144" className="stroke-[#006ea3] dark:stroke-[#3ba0d6]" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        <rect x="72" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="94" cy="238" r="10" className="fill-[#006ea3]/15" />
-        <rect x="112" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="242" width="40" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="84" y="260" width="96" height="6" rx="3" className="fill-[#006ea3]/30" />
-        <rect x="84" y="272" width="70" height="6" rx="3" className="fill-[#006ea3]/20" />
-        <rect x="208" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="230" cy="238" r="10" className="fill-emerald-500/15" />
-        <rect x="248" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="248" y="242" width="45" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="220" y="260" width="96" height="6" rx="3" className="fill-emerald-500/30" />
-        <rect x="220" y="272" width="75" height="6" rx="3" className="fill-emerald-500/20" />
-        <rect x="72" y="304" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="326" r="8" className="fill-[#006ea3]/15" />
-        <rect x="112" y="320" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="330" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="326" r="6" className="fill-[#006ea3]/20" />
-        <rect x="72" y="356" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="378" r="8" className="fill-violet-500/15" />
-        <rect x="112" y="372" width="70" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="382" width="110" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="378" r="6" className="fill-violet-500/20" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <Cloud className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Multi-Tenant</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Architecture</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80" alt="SaaS platform development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><Cloud className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">Multi-Tenant</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Cloud-native</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <CreditCard className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Billing</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Stripe + Paddle</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><BarChart3 className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">99.99%</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Platform uptime</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <ShieldCheck className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">SOC2 Ready</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Compliant</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <TrendingUp className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">99.99% SLA</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Uptime</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10" animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} />
-      <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5" animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }} />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -376,16 +282,16 @@ function HeroSection({ ready }: { ready: boolean }) {
       <div className="mx-auto max-w-7xl px-6 pt-28 pb-20 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className={`inline-block text-xs font-bold tracking-widest text-[#006ea3] uppercase mb-4 transition-all duration-500 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Scalable, Secure & User-Friendly</span>
+            <span className={`inline-block text-xs font-bold tracking-widest text-[#006ea3] uppercase mb-4 transition-all duration-500 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Scalable, Secure, and Effortless to Use</span>
             <h1 className={`text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1] transition-all duration-700 delay-100 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>SaaS Application<br /><span className="text-[#006ea3]">Development Services</span></h1>
-            <p className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Turn your innovative idea into a fully-fledged SaaS application that captures customers&apos; attention and generates consistent revenue.</p>
+            <p className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Shape a bold concept into a production-grade SaaS product that earns attention, wins trust, and compounds recurring revenue.</p>
             <div className={`mt-8 flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-              <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10">Get Free Consultation <ArrowRight className="w-4 h-4" /></Link>
-              <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">View Our Work</Link>
+              <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10">Book a Free Consultation <ArrowRight className="w-4 h-4" /></Link>
+              <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">Explore Our Work</Link>
             </div>
           </div>
-          <div className={`grid grid-cols-2 gap-4 transition-all duration-700 delay-300 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            {[{ icon: Cloud, label: "Cloud" }, { icon: Layers, label: "Multi-Tenant" }, { icon: Lock, label: "Security" }, { icon: Zap, label: "Performance" }].map((item, i) => { const Icon = item.icon; return (<div key={item.label} className={`rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] p-6 text-center transition-all duration-500 ${ready ? "opacity-100 scale-100" : "opacity-0 scale-95"}`} style={{ transitionDelay: `${400 + i * 100}ms` }}><div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20"><Icon className="w-6 h-6 text-[#006ea3]" strokeWidth={1.5} /></div><div className="text-sm font-semibold text-black/70 dark:text-white/70">{item.label}</div></div>); })}
+          <div className={`transition-all duration-700 delay-300 ${ready ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            <SaaSHeroIllustration />
           </div>
         </div>
       </div>
@@ -456,9 +362,9 @@ function ServiceCardIllustration({ index }: { index: number }) {
   );
 }
 
-function ServiceOfferingsSection() { const { ref, visible } = useInView(0.1); return (<div ref={ref} className="mx-auto max-w-7xl px-6 py-24"><div className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}><h2 className="text-3xl md:text-4xl font-bold tracking-tight">Our SaaS Development Offerings</h2><p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Highly experienced SaaS developers build robust, efficient, and scalable customized SaaS products.</p></div><div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{services.map((s, i) => { const Icon = s.icon; return (<Link key={s.title} href={s.href} className={`group block p-6 rounded-2xl border border-black/[0.06] bg-black/[0.02] hover:border-[#006ea3]/30 hover:bg-black/[0.04] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#006ea3]/5 transition-all duration-500 dark:border-white/[0.06] dark:bg-white/[0.02] dark:hover:border-[#006ea3]/30 dark:hover:bg-white/[0.04] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${200 + i * 80}ms` }}><div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-black/[0.03] dark:border-white/10 dark:bg-white/[0.05] group-hover:border-[#006ea3]/30 group-hover:bg-[#006ea3]/10 transition-all duration-500"><Icon className="w-5 h-5 text-black/60 dark:text-white/60 group-hover:text-[#006ea3] transition-colors duration-500" strokeWidth={1.5} /></div><h3 className="text-lg font-semibold tracking-tight group-hover:text-[#006ea3] transition-colors duration-300">{s.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed">{s.description}</p><div className="mt-4 flex flex-wrap gap-2">{s.features.map(f => (<span key={f} className="inline-flex items-center gap-1 text-[11px] font-medium text-black/35 dark:text-white/35 bg-black/[0.03] dark:bg-white/[0.04] px-2 py-0.5 rounded-md group-hover:text-[#006ea3]/70 group-hover:bg-[#006ea3]/5 transition-all duration-500"><CheckCircle2 className="w-3 h-3" />{f}</span>))}</div><div className="mt-4 flex items-center text-xs font-semibold text-[#006ea3] opacity-0 group-hover:opacity-100 transition-opacity duration-300">Learn More <ArrowRight className="w-3 h-3 ml-1" /></div></Link>); })}</div></div>); }
+function ServiceOfferingsSection() { const { ref, visible } = useInView(0.1); return (<div ref={ref} className="mx-auto max-w-7xl px-6 py-24"><div className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}><h2 className="text-3xl md:text-4xl font-bold tracking-tight">SaaS Development Offerings</h2><p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Veteran SaaS engineers craft resilient, efficient, and elastic products—each one tailored to your roadmap and operating model.</p></div><div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{services.map((s, i) => { const Icon = s.icon; return (<Link key={s.title} href={s.href} className={`group block p-6 rounded-2xl border border-black/[0.06] bg-black/[0.02] hover:border-[#006ea3]/30 hover:bg-black/[0.04] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#006ea3]/5 transition-all duration-500 dark:border-white/[0.06] dark:bg-white/[0.02] dark:hover:border-[#006ea3]/30 dark:hover:bg-white/[0.04] ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${200 + i * 80}ms` }}><div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-black/[0.03] dark:border-white/10 dark:bg-white/[0.05] group-hover:border-[#006ea3]/30 group-hover:bg-[#006ea3]/10 transition-all duration-500"><Icon className="w-5 h-5 text-black/60 dark:text-white/60 group-hover:text-[#006ea3] transition-colors duration-500" strokeWidth={1.5} /></div><h3 className="text-lg font-semibold tracking-tight group-hover:text-[#006ea3] transition-colors duration-300">{s.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed">{s.description}</p><div className="mt-4 flex flex-wrap gap-2">{s.features.map(f => (<span key={f} className="inline-flex items-center gap-1 text-[11px] font-medium text-black/35 dark:text-white/35 bg-black/[0.03] dark:bg-white/[0.04] px-2 py-0.5 rounded-md group-hover:text-[#006ea3]/70 group-hover:bg-[#006ea3]/5 transition-all duration-500"><CheckCircle2 className="w-3 h-3" />{f}</span>))}</div><div className="mt-4 flex items-center text-xs font-semibold text-[#006ea3] opacity-0 group-hover:opacity-100 transition-opacity duration-300">See Details <ArrowRight className="w-3 h-3 ml-1" /></div></Link>); })}</div></div>); }
 
-function ProcessSection() { const { ref, visible } = useInView(0.1); return (<div ref={ref} className="border-y border-black/[0.06] dark:border-white/[0.06] bg-black/[0.01] dark:bg-white/[0.01]"><div className="mx-auto max-w-5xl px-6 py-24"><div className={`text-center mb-16 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}><h2 className="text-3xl md:text-4xl font-bold tracking-tight">SaaS Product Development Process</h2><p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A well-balanced and organized approach for successful SaaS product development.</p></div><div className="relative"><div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-black/[0.08] dark:bg-white/[0.08] md:-translate-x-px" />{processSteps.map((step, i) => { const StepIcon = step.icon; const isLeft = i % 2 === 0; return (<div key={step.step} className={`relative flex items-start mb-12 last:mb-0 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${300 + i * 120}ms` }}><div className="hidden md:grid md:grid-cols-[1fr_48px_1fr] w-full items-start"><div className={isLeft ? "pr-10 text-right" : ""}>{isLeft && (<div className="flex flex-col items-end"><span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase mb-1">Step {step.step}</span><h3 className="text-lg font-semibold tracking-tight">{step.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed max-w-sm ml-auto">{step.description}</p></div>)}</div><div className="flex justify-center relative z-10"><div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20 bg-white dark:bg-black"><StepIcon className="w-5 h-5 text-[#006ea3]" strokeWidth={1.5} /></div></div><div className={!isLeft ? "pl-10" : ""}>{!isLeft && (<div className="flex flex-col items-start"><span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase mb-1">Step {step.step}</span><h3 className="text-lg font-semibold tracking-tight">{step.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed max-w-sm">{step.description}</p></div>)}</div></div><div className="md:hidden flex items-start gap-5 w-full"><div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20 bg-white dark:bg-black relative z-10"><StepIcon className="w-5 h-5 text-[#006ea3]" strokeWidth={1.5} /></div><div className="flex-1 pt-0.5"><span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase">Step {step.step}</span><h3 className="text-base font-semibold mt-1 tracking-tight">{step.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed">{step.description}</p></div></div></div>); })}</div></div></div>); }
+function ProcessSection() { const { ref, visible } = useInView(0.1); return (<div ref={ref} className="border-y border-black/[0.06] dark:border-white/[0.06] bg-black/[0.01] dark:bg-white/[0.01]"><div className="mx-auto max-w-5xl px-6 py-24"><div className={`text-center mb-16 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}><h2 className="text-3xl md:text-4xl font-bold tracking-tight">SaaS Product Development Process</h2><p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A measured, end-to-end framework that keeps SaaS initiatives aligned from discovery through scale.</p></div><div className="relative"><div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-black/[0.08] dark:bg-white/[0.08] md:-translate-x-px" />{processSteps.map((step, i) => { const StepIcon = step.icon; const isLeft = i % 2 === 0; return (<div key={step.step} className={`relative flex items-start mb-12 last:mb-0 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${300 + i * 120}ms` }}><div className="hidden md:grid md:grid-cols-[1fr_48px_1fr] w-full items-start"><div className={isLeft ? "pr-10 text-right" : ""}>{isLeft && (<div className="flex flex-col items-end"><span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase mb-1">Step {step.step}</span><h3 className="text-lg font-semibold tracking-tight">{step.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed max-w-sm ml-auto">{step.description}</p></div>)}</div><div className="flex justify-center relative z-10"><div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20 bg-white dark:bg-black"><StepIcon className="w-5 h-5 text-[#006ea3]" strokeWidth={1.5} /></div></div><div className={!isLeft ? "pl-10" : ""}>{!isLeft && (<div className="flex flex-col items-start"><span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase mb-1">Step {step.step}</span><h3 className="text-lg font-semibold tracking-tight">{step.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed max-w-sm">{step.description}</p></div>)}</div></div><div className="md:hidden flex items-start gap-5 w-full"><div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20 bg-white dark:bg-black relative z-10"><StepIcon className="w-5 h-5 text-[#006ea3]" strokeWidth={1.5} /></div><div className="flex-1 pt-0.5"><span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase">Step {step.step}</span><h3 className="text-base font-semibold mt-1 tracking-tight">{step.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed">{step.description}</p></div></div></div>); })}</div></div></div>); }
 
 function TechStackSection() {
   const { ref, visible } = useInView(0.15);
@@ -466,9 +372,9 @@ function TechStackSection() {
   return (
     <div ref={ref} className="mx-auto max-w-7xl px-6 py-24">
       <div className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Built On Top Technologies</h2>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Built on Leading-Edge Technology</h2>
         <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-          Advanced technologies and tools for building robust, scalable SaaS products.
+          A curated stack of proven tools and runtimes for dependable, high-scale SaaS delivery.
         </p>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -519,7 +425,7 @@ function IndustriesSection() {
             Industries We <span className="text-black dark:text-white">Build For</span>
           </h2>
           <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-            Domain expertise across verticals — every solution is built with deep understanding of your industry.
+            Proven expertise across verticals—every engagement is informed by a thorough grasp of your industry context.
           </p>
         </motion.div>
 
@@ -570,7 +476,7 @@ function IndustriesSection() {
                       {ind.desc}
                     </p>
                     <div className="mt-4 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      Explore industry <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      Explore the industry <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
                 </Link>
@@ -583,6 +489,6 @@ function IndustriesSection() {
   );
 }
 
-function WhyChooseSection() { const { ref, visible } = useInView(0.2); return (<div ref={ref} className="mx-auto max-w-7xl px-6 py-24"><div className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}><h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why Choose Cloud Nexus for SaaS</h2></div><div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">{whyChoose.map((item, i) => { const ItemIcon = item.icon; return (<div key={item.title} className={`text-center p-6 rounded-2xl border border-black/[0.04] dark:border-white/[0.04] hover:border-[#006ea3]/15 transition-all duration-600 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${200 + i * 100}ms` }}><div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#006ea3]/10 border border-[#006ea3]/20"><ItemIcon className="w-6 h-6 text-[#006ea3]" strokeWidth={1.5} /></div><h3 className="text-base font-semibold tracking-tight">{item.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed">{item.description}</p></div>); })}</div></div>); }
+function WhyChooseSection() { const { ref, visible } = useInView(0.2); return (<div ref={ref} className="mx-auto max-w-7xl px-6 py-24"><div className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}><h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why Partner with Cloud Nexus on SaaS</h2></div><div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">{whyChoose.map((item, i) => { const ItemIcon = item.icon; return (<div key={item.title} className={`text-center p-6 rounded-2xl border border-black/[0.04] dark:border-white/[0.04] hover:border-[#006ea3]/15 transition-all duration-600 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${200 + i * 100}ms` }}><div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#006ea3]/10 border border-[#006ea3]/20"><ItemIcon className="w-6 h-6 text-[#006ea3]" strokeWidth={1.5} /></div><h3 className="text-base font-semibold tracking-tight">{item.title}</h3><p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed">{item.description}</p></div>); })}</div></div>); }
 
-function CTASection() { const { ref, visible } = useInView(0.25); return (<div ref={ref} className="relative overflow-hidden"><div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/8 via-transparent to-[#006ea3]/5 dark:from-[#006ea3]/5 dark:to-[#006ea3]/3 pointer-events-none" /><div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#006ea3]/5 rounded-full blur-[120px] pointer-events-none" /><div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]" style={{ backgroundImage: "linear-gradient(rgba(0,110,163,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,110,163,0.3) 1px, transparent 1px)", backgroundSize: "40px 40px" }} /><div className="relative mx-auto max-w-7xl px-6 py-28 text-center"><h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>Ready to Launch Your<br /><span className="text-[#006ea3]">SaaS Product?</span></h2><p className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Don&apos;t let your idea remain just an idea. Partner with us to transform it into a revenue-generating SaaS reality.</p><div className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}><Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20">Get a Free Consultation <ArrowRight className="w-4 h-4" /></Link><Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">View Our Work</Link></div></div></div>); }
+function CTASection() { const { ref, visible } = useInView(0.25); return (<div ref={ref} className="relative overflow-hidden"><div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/8 via-transparent to-[#006ea3]/5 dark:from-[#006ea3]/5 dark:to-[#006ea3]/3 pointer-events-none" /><div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#006ea3]/5 rounded-full blur-[120px] pointer-events-none" /><div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]" style={{ backgroundImage: "linear-gradient(rgba(0,110,163,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,110,163,0.3) 1px, transparent 1px)", backgroundSize: "40px 40px" }} /><div className="relative mx-auto max-w-7xl px-6 py-28 text-center"><h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>Ready to Launch Your<br /><span className="text-[#006ea3]">SaaS Product?</span></h2><p className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Keep your concept from stalling at the whiteboard—work with us to ship a SaaS that earns recurring revenue in market.</p><div className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}><Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20">Start with a Free Consultation <ArrowRight className="w-4 h-4" /></Link><Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">Explore Our Work</Link></div></div></div>); }

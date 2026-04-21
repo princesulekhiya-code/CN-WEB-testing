@@ -63,54 +63,54 @@ const services: ServiceOffering[] = [
   {
     icon: Server,
     title: "IT Assessments",
-    description: "Comprehensive evaluation of your IT environment, business processes, and infrastructure to identify improvement areas and enhance security and efficiency.",
+    description: "A thorough review of your IT landscape, operational workflows, and underlying infrastructure to surface opportunities for improvement while strengthening security posture and operational efficiency.",
     features: ["Infrastructure audit", "Security evaluation", "Performance analysis"],
     href: "/services/it-consulting/it-assessments",
   },
   {
     icon: Network,
     title: "IT Strategy & Planning",
-    description: "Strategic IT planning and technology investment guidance aligned with your business goals to ensure you invest in the right technology at the right time.",
+    description: "Forward-looking IT roadmapping and capital allocation counsel anchored to your objectives—so every technology decision is timed, scoped, and prioritized for maximum impact.",
     features: ["Technology roadmaps", "Investment planning", "Resource allocation"],
     href: "/services/it-consulting/it-strategy-planning",
   },
   {
     icon: Layers,
     title: "Digital Transformation Consulting",
-    description: "In-depth analysis of business processes to improve efficiency and guide digital transformation initiatives that drive measurable business outcomes.",
+    description: "Rigorous examination of how work gets done—paired with a practical modernization path—so transformation programs produce tangible, measurable business value.",
     features: ["Process analysis", "Digital roadmap", "Change management"],
     href: "/services/it-consulting/digital-transformation-consulting",
   },
   {
     icon: ShieldCheck,
     title: "Security Risk Assessments",
-    description: "Identify security vulnerabilities, assess risk levels, and implement preventive measures to protect your technology-dependent business operations.",
+    description: "Surface security gaps, quantify exposure, and put proactive controls in place to safeguard the systems and data your operations depend on.",
     features: ["Vulnerability scanning", "Risk analysis", "Preventive measures"],
     href: "/services/it-consulting/security-risk-assessments",
   },
   {
     icon: Cloud,
     title: "Cloud & Data Migration Services",
-    description: "Choose the right cloud and data migration strategy with expert guidance on platform selection, cost analysis, and seamless migration execution.",
+    description: "Define an optimal cloud and migration approach with seasoned guidance on platform fit, total-cost insight, and disciplined execution for a smooth transition.",
     features: ["Cloud strategy", "Data migration", "Platform selection"],
     href: "/services/it-consulting/cloud-data-migration",
   },
   {
     icon: Monitor,
     title: "Custom Web & Mobile App Development",
-    description: "Enterprise-grade web and mobile application development delivered by experienced tech teams to help your business grow in the competitive market.",
-    features: ["Web applications", "Mobile apps", "Enterprise solutions"],
+    description: "Mission-critical web and mobile solutions engineered by senior practitioners—built to scale, differentiate, and compete in demanding markets.",
+    features: ["Web applications", "Mobile applications", "Enterprise solutions"],
     href: "/services/it-consulting/custom-app-development",
   },
 ];
 
 const processSteps = [
-  { step: "01", title: "Analyze", description: "Our IT analysts inspect and identify the problem, and propose the most suitable solution by making automation easier for employees to use.", icon: Settings },
-  { step: "02", title: "Strategies", description: "Analysts prepare the roadmap for app/web development and create marketing strategies to leverage the latest technologies.", icon: Rocket },
-  { step: "03", title: "Perform", description: "To maintain product quality, our IT experts closely analyze the workflow, track project work, and resolve upcoming issues proactively.", icon: BarChart3 },
-  { step: "04", title: "Implement", description: "Deploy solutions with phased rollouts, testing, and integration checks to ensure smooth adoption across your organization.", icon: Layers },
-  { step: "05", title: "Monitor", description: "Continuous monitoring and performance tracking to ensure your IT systems operate at peak efficiency with minimal downtime.", icon: Network },
-  { step: "06", title: "Optimize", description: "Regular reviews, performance tuning, and strategic adjustments to keep your IT infrastructure aligned with evolving business needs.", icon: Server },
+  { step: "01", title: "Analyze", description: "Our analysts diagnose root causes, frame the challenge clearly, and recommend an approach that simplifies automation and improves day-to-day usability for your teams.", icon: Settings },
+  { step: "02", title: "Strategies", description: "Teams architect the roadmap for web and application delivery and craft marketing strategies that put modern technology to work for your brand.", icon: Rocket },
+  { step: "03", title: "Perform", description: "To uphold quality, specialists scrutinize workflows, maintain visibility into delivery, and address risks early—before they affect outcomes.", icon: BarChart3 },
+  { step: "04", title: "Implement", description: "Roll out capabilities in measured phases with rigorous testing and integration validation so adoption proceeds smoothly company-wide.", icon: Layers },
+  { step: "05", title: "Monitor", description: "Ongoing observability and performance oversight keep environments running efficiently and interruptions rare.", icon: Network },
+  { step: "06", title: "Optimize", description: "Periodic assessments, tuning, and strategic recalibration ensure infrastructure and investments continue to match shifting priorities.", icon: Server },
 ];
 
 const techCategories: { label: string; items: { name: string; logo: string }[] }[] = [
@@ -177,28 +177,28 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
 ]
 
 const industries = [
-  { icon: Stethoscope, name: "Healthcare", desc: "HIPAA-compliant IT infrastructure" },
-  { icon: ShoppingCart, name: "E-Commerce", desc: "Scalable retail tech solutions" },
-  { icon: CreditCard, name: "Banking & Finance", desc: "Secure fintech infrastructure" },
-  { icon: GraduationCap, name: "Education", desc: "EdTech platform consulting" },
-  { icon: Truck, name: "Logistics", desc: "Supply chain IT optimization" },
-  { icon: Building2, name: "Real Estate", desc: "PropTech digital solutions" },
-  { icon: Factory, name: "Manufacturing", desc: "Smart factory & IoT integration" },
-  { icon: Briefcase, name: "Enterprise", desc: "Large-scale IT transformation" },
+  { icon: Stethoscope, name: "Healthcare", desc: "HIPAA-aligned technology foundations" },
+  { icon: ShoppingCart, name: "E-Commerce", desc: "Retail platforms engineered to scale" },
+  { icon: CreditCard, name: "Banking & Finance", desc: "Hardened infrastructure for financial services" },
+  { icon: GraduationCap, name: "Education", desc: "Learning-technology advisory" },
+  { icon: Truck, name: "Logistics", desc: "Supply-chain systems tuned for performance" },
+  { icon: Building2, name: "Real Estate", desc: "Digital capabilities for property technology" },
+  { icon: Factory, name: "Manufacturing", desc: "Connected operations and IoT enablement" },
+  { icon: Briefcase, name: "Enterprise", desc: "Organization-wide modernization programs" },
 ];
 
 const whyChoose = [
-  { icon: Users, title: "Quick Project Delivery", description: "Expert IT consultants analyze project requirements and use suitable tools and technologies to build and deliver projects quickly and efficiently." },
-  { icon: Clock, title: "Potential Cost Savings", description: "Experienced tech resources complete tasks in less time with minimum resources, delivering better results than in-house teams with more assistance." },
-  { icon: ShieldCheck, title: "Reduced Security Risks", description: "Expert IT consultants identify and resolve bugs and security issues in your system and network with deep expertise in external resource management." },
-  { icon: HeartHandshake, title: "Boost Productivity", description: "Our IT consultants ease your ongoing multi-tasks so you can properly focus on core business functions and other strategic priorities." },
+  { icon: Users, title: "Quick Project Delivery", description: "Expert consultants distill requirements, deploy the right tools and technologies, and execute efficiently—accelerating delivery without compromising rigor." },
+  { icon: Clock, title: "Potential Cost Savings", description: "Veteran practitioners deliver faster with lean staffing—often surpassing in-house outcomes while furnishing greater hands-on expert support." },
+  { icon: ShieldCheck, title: "Reduced Security Risks", description: "Experts find and remediate bugs and security weaknesses across systems and networks, backed by deep skill in governing external technical resources." },
+  { icon: HeartHandshake, title: "Boost Productivity", description: "We absorb operational technical load so leadership can concentrate on revenue-generating work and longer-range strategy." },
 ];
 
 const stats: { label: string; value: number; suffix: string; isDecimal?: boolean }[] = [
   { value: 200, suffix: "+", label: "IT Projects Delivered" },
   { value: 50, suffix: "+", label: "Enterprise Clients" },
-  { value: 98, suffix: "%", label: "Client Satisfaction" },
-  { value: 15, suffix: "+", label: "Years of Experience" },
+  { value: 98, suffix: "%", label: "Client Satisfaction Rate" },
+  { value: 15, suffix: "+", label: "Years of Expertise" },
 ];
 
 export default function ItConsultingPage() {
@@ -212,7 +212,7 @@ export default function ItConsultingPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,_var(--tw-gradient-stops))] from-indigo-500/5 via-transparent to-transparent pointer-events-none" />
         <div className="mx-auto max-w-7xl px-6 pt-28 pb-20 relative">
           <Link href="/services" className={`inline-flex items-center gap-2 text-sm font-medium text-black/50 hover:text-black dark:text-white/50 dark:hover:text-white transition-all duration-500 mb-8 ${heroReady ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}>
-            <ArrowLeft size={16} /> Back to Services
+            <ArrowLeft size={16} /> Return to Services
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -220,14 +220,14 @@ export default function ItConsultingPage() {
                 IT<br /><span className="text-[#006ea3]">Consulting</span>
               </h1>
               <p className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                Leverage our deep-domain technology expertise in digital transformation to develop short- and long-term strategies that future-proof your business and maximize ROI.
+                Apply our specialized technology depth across digital transformation to craft near- and long-range plans that future-proof your organization and maximize return on investment.
               </p>
               <div className={`mt-8 flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
                 <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10">
-                  Get Free IT Consultation <ArrowRight className="w-4 h-4" />
+                  Request a Complimentary IT Consultation <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">
-                  View Our Work
+                  Explore Our Portfolio
                 </Link>
               </div>
             </div>
@@ -249,138 +249,25 @@ export default function ItConsultingPage() {
 
 function ITHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg
-        viewBox="0 0 400 460"
-        fill="none"
-        className="relative w-full h-full drop-shadow-2xl"
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        {/* Dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        {/* Header */}
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        {/* Main card */}
-        <rect x="72" y="100" width="256" height="100" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="114" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="128" width="90" height="12" rx="4" className="fill-[#006ea3] dark:fill-[#3ba0d6]" />
-        <rect x="84" y="148" width="70" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <polyline points="220,186 234,164 248,172 262,152 276,158 290,144" className="stroke-[#006ea3] dark:stroke-[#3ba0d6]" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Two cards */}
-        <rect x="72" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="94" cy="238" r="10" className="fill-[#006ea3]/15" />
-        <rect x="112" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="242" width="40" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="84" y="260" width="96" height="6" rx="3" className="fill-[#006ea3]/30" />
-        <rect x="84" y="272" width="70" height="6" rx="3" className="fill-[#006ea3]/20" />
-        <rect x="208" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="230" cy="238" r="10" className="fill-emerald-500/15" />
-        <rect x="248" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="248" y="242" width="45" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="220" y="260" width="96" height="6" rx="3" className="fill-emerald-500/30" />
-        <rect x="220" y="272" width="75" height="6" rx="3" className="fill-emerald-500/20" />
-        {/* Bottom list items */}
-        <rect x="72" y="304" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="326" r="8" className="fill-[#006ea3]/15" />
-        <rect x="112" y="320" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="330" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="326" r="6" className="fill-[#006ea3]/20" />
-        <rect x="72" y="356" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="378" r="8" className="fill-violet-500/15" />
-        <rect x="112" y="372" width="70" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="382" width="110" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="378" r="6" className="fill-violet-500/20" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <Settings className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">IT Strategy</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Advisory</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80" alt="IT consulting services" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><Settings className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">IT Strategy</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">End-to-end</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <TrendingUp className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">30% Savings</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Cost Optimized</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><CheckCircle2 className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">ROI Driven</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Measurable results</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <ShieldCheck className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Risk Analysis</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Assessment</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <Rocket className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Digital Ready</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Transformation</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10"
-        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -462,7 +349,7 @@ function ServiceOfferingsSection() {
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Our Services</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">What We <span className="text-black dark:text-white">Offer</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Comprehensive solutions tailored to your business needs.</p>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">End-to-end capabilities shaped around the outcomes your business requires.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => {
@@ -491,7 +378,7 @@ function ServiceOfferingsSection() {
                       ))}
                     </div>
                     <div className="mt-5 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      Learn more <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      Discover more <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
                 </Link>
@@ -516,7 +403,7 @@ function ProcessSection() {
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">How We Work</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Development <span className="text-black dark:text-white">Process</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A battle-tested methodology that ensures quality, transparency, and on-time delivery.</p>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A proven operating model that safeguards quality, preserves transparency, and honors committed timelines.</p>
         </motion.div>
         <div className="relative">
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
@@ -606,8 +493,8 @@ function TechStackSection() {
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Technology Stack</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Built with <span className="text-black dark:text-white">Modern Tools</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Industry-leading tools and frameworks powering our solutions.</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Engineered with <span className="text-black dark:text-white">Contemporary Tooling</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Best-in-class platforms and frameworks underpinning every engagement we deliver.</p>
         </motion.div>
         <motion.div className="flex justify-center mb-12" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.15 }}>
           <div className="inline-flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02]">
@@ -633,7 +520,7 @@ function TechStackSection() {
           </AnimatePresence>
         </motion.div>
         <motion.div className="mt-16 pt-12 border-t border-black/[0.06] dark:border-white/[0.06]" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }}>
-          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">And many more technologies we work with</p>
+          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">Plus an expanding roster of platforms we deploy routinely</p>
           <div className="relative w-full">
             <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
@@ -666,7 +553,7 @@ function IndustriesSection() {
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Industries</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Industries We <span className="text-black dark:text-white">Build For</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">Domain expertise across verticals — every solution is built with deep understanding of your industry.</p>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">Sector-specific fluency across markets—each engagement reflects nuanced knowledge of how your industry operates.</p>
         </motion.div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {industries.map((ind, i) => {
@@ -733,11 +620,11 @@ function CTASection() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#006ea3]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]" style={{ backgroundImage: "linear-gradient(rgba(0,110,163,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,110,163,0.3) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
       <div className="relative mx-auto max-w-7xl px-6 py-28 text-center">
-        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>Future-Proof Your Business with<br /><span className="text-[#006ea3]">IT Consulting Expertise</span></h2>
-        <p className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Ready to grow but unsure of the right tech path? Our free IT consultation helps you simplify digital transformation and find the best-fit solutions for your business.</p>
+        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>Fortify Your Business for What Comes Next with<br /><span className="text-[#006ea3]">IT Consulting Expertise</span></h2>
+        <p className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Scaling fast yet uncertain which technology route to take? A complimentary IT consultation clarifies digital transformation and surfaces the solutions that align with your objectives.</p>
         <div className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20">Get Free IT Consultation <ArrowRight className="w-4 h-4" /></Link>
-          <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">View Our Work</Link>
+          <Link href="/resources/free-consultation" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20">Request a Complimentary IT Consultation <ArrowRight className="w-4 h-4" /></Link>
+          <Link href="/our-work" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors">Explore Our Portfolio</Link>
         </div>
       </div>
     </div>

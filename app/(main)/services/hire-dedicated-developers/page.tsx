@@ -72,42 +72,42 @@ const services: ServiceOffering[] = [
   {
     icon: Smartphone,
     title: "Hire Mobile App Developers",
-    description: "Skilled Android, iOS, Flutter, and React Native developers who build high-performing mobile apps with scalable architecture and faster go-to-market execution.",
-    features: ["iOS & Android", "Flutter & React Native", "App Store ready"],
+    description: "Seasoned Android, iOS, Flutter, and React Native specialists who deliver high-performance mobile experiences on robust architecture—compressing time-to-market without cutting corners.",
+    features: ["iOS & Android", "Flutter & React Native", "Store-ready releases"],
     href: "/services/hire-dedicated-developers/hire-mobile-app-developers",
   },
   {
     icon: Monitor,
     title: "Hire Front-End Developers",
-    description: "Front-end specialists proficient in React, Angular, Vue.js, and modern UI frameworks — delivering responsive, accessible, high-performance interfaces.",
+    description: "Front-end specialists at home in React, Angular, Vue.js, and modern UI stacks—shipping interfaces that remain responsive, accessible, and performance-tuned end to end.",
     features: ["React & Angular", "Vue.js", "Responsive design"],
     href: "/services/hire-dedicated-developers/hire-frontend-developers",
   },
   {
     icon: Server,
     title: "Hire Back-End Developers",
-    description: "Backend engineers with expertise in Node.js, Python, .NET, Java, and modern APIs — building robust architectures and high-performance systems.",
+    description: "Server-side experts in Node.js, Python, .NET, Java, and today’s API patterns—building dependable platforms designed for scale, throughput, and uptime.",
     features: ["Node.js & Python", ".NET & Java", "API design"],
     href: "/services/hire-dedicated-developers/hire-backend-developers",
   },
   {
     icon: Database,
     title: "Hire Database Developers",
-    description: "Database specialists in MySQL, MongoDB, PostgreSQL, and Redis — building optimized data storage, processing, and analytics systems.",
+    description: "Data-layer experts spanning MySQL, MongoDB, PostgreSQL, and Redis—tuning storage, processing, and analytics pipelines from ingestion through insight.",
     features: ["SQL & NoSQL", "Data modeling", "Performance tuning"],
     href: "/services/hire-dedicated-developers/hire-database-developers",
   },
   {
     icon: Megaphone,
     title: "Hire Digital Marketing Experts",
-    description: "AI-driven digital marketers specializing in SEO, PPC, social media, content strategy, and performance marketing for measurable ROI.",
+    description: "Growth strategists who blend AI-accelerated execution with SEO, PPC, social, content, and performance initiatives—anchored to clear, measurable ROI.",
     features: ["SEO & PPC", "Social media", "Performance marketing"],
     href: "/services/hire-dedicated-developers/hire-digital-marketing-experts",
   },
   {
     icon: ShoppingCart,
     title: "Hire eCommerce & CMS Experts",
-    description: "Experts in WordPress, Shopify, Magento, and custom CMS platforms — building conversion-focused digital storefronts with seamless integrations.",
+    description: "WordPress, Shopify, Magento, and custom CMS practitioners—building storefronts engineered for conversion and connected through seamless integrations.",
     features: ["Shopify & Magento", "WordPress", "Custom CMS"],
     href: "/services/hire-dedicated-developers/hire-ecommerce-cms-experts",
   },
@@ -116,33 +116,33 @@ const services: ServiceOffering[] = [
 const engagementModels = [
   {
     title: "Onshore/Offshore Development",
-    description: "Balance global expertise with local visibility. Real-time collaboration, time zone-friendly workflows, and predictable delivery with cost efficiency.",
+    description: "Pair worldwide depth with local visibility. Collaborate in real time across time zones, keep delivery predictable, and optimize spend without sacrificing quality.",
     icon: Users,
   },
   {
     title: "Hybrid Dedicated Development",
-    description: "Combine local collaboration with remote execution. Faster execution, seamless communication, and consistent output across distributed teams.",
+    description: "Unite on-site alignment with remote execution—faster iteration, fluid communication, and steady throughput across distributed squads.",
     icon: Handshake,
   },
   {
     title: "ODC / Build-Operate-Transfer",
-    description: "Launch your offshore development center effortlessly. We handle setup, operations, and governance — then transfer complete ownership when ready.",
+    description: "Stand up an offshore development center without the operational drag. We run setup, day-to-day operations, and governance—then hand over full ownership when you are ready.",
     icon: Building2,
   },
 ];
 
 const processSteps = [
-  { step: "01", title: "Share Requirements", description: "Tell us your goals, technologies, and timeline. We analyze your needs and recommend developers with the right skillset.", icon: Settings },
-  { step: "02", title: "Receive Vetted Profiles", description: "Carefully screened developer profiles matching your project scope — evaluated for technical skills, domain knowledge, and communication.", icon: Users },
-  { step: "03", title: "Interview & Finalize", description: "Connect with shortlisted developers to assess fit, code logic, and professionalism before finalizing your ideal team members.", icon: Palette },
-  { step: "04", title: "Onboard in 48 Hours", description: "Your developer starts fully equipped with tools, access, and project onboarding support — productive from day one.", icon: Rocket },
-  { step: "05", title: "Sprint Integration", description: "Merge into your backlog, definition of done, and release trains with shared quality bars and agile ceremonies.", icon: BarChart3 },
-  { step: "06", title: "Scale or Transition", description: "Adjust headcount, rotate specialists, or hand off with runbooks when the engagement evolves.", icon: ShieldCheck },
+  { step: "01", title: "Share Requirements", description: "Document your goals, technology choices, and timeline. We review the brief and recommend engineers whose skills match your needs with precision.", icon: Settings },
+  { step: "02", title: "Receive Vetted Profiles", description: "Get carefully screened candidate profiles aligned to your scope—each checked for technical strength, domain fit, and clear, professional communication.", icon: Users },
+  { step: "03", title: "Interview & Finalize", description: "Speak with shortlisted professionals to confirm fit, problem-solving approach, and conduct before you commit to the right people.", icon: Palette },
+  { step: "04", title: "Onboard in 48 Hours", description: "Your engineer starts with tools, access, and structured onboarding in place—delivering real value from day one.", icon: Rocket },
+  { step: "05", title: "Sprint Integration", description: "Join your backlog, definition of done, and release rhythm with shared quality standards and the agile practices your team already trusts.", icon: BarChart3 },
+  { step: "06", title: "Scale or Transition", description: "Right-size the team, rotate subject-matter experts, or transition with runbooks as the program matures.", icon: ShieldCheck },
 ];
 
 const techCategories: { label: string; items: { name: string; logo: string }[] }[] = [
   {
-    label: "Mobile",
+    label: "Mobile Product Engineering",
     items: [
       { name: "Swift", logo: `${DEVICON}/swift/swift-original.svg` },
       { name: "Kotlin", logo: `${DEVICON}/kotlin/kotlin-original.svg` },
@@ -153,7 +153,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Frontend",
+    label: "Front-End Engineering",
     items: [
       { name: "React", logo: `${DEVICON}/react/react-original.svg` },
       { name: "Angular", logo: `${DEVICON}/angular/angular-original.svg` },
@@ -164,7 +164,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Backend",
+    label: "Back-End Engineering",
     items: [
       { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
       { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
@@ -175,7 +175,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Database",
+    label: "Data & Storage Platforms",
     items: [
       { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
       { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
@@ -186,7 +186,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "Cloud & DevOps",
+    label: "Cloud Infrastructure & DevOps",
     items: [
       { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-plain-wordmark.svg` },
       { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
@@ -197,7 +197,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     ],
   },
   {
-    label: "CMS & eCommerce",
+    label: "CMS & Commerce",
     items: [
       { name: "WordPress", logo: `${DEVICON}/wordpress/wordpress-original.svg` },
       { name: "Shopify", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
@@ -210,34 +210,34 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
 ]
 
 const industries = [
-  { icon: Stethoscope, name: "Healthcare", desc: "Telemedicine, EMR, wellness" },
-  { icon: CreditCard, name: "FinTech", desc: "Banking, payments, insurance" },
-  { icon: ShoppingCart, name: "E-Commerce", desc: "Marketplaces, retail, mCommerce" },
-  { icon: Truck, name: "Logistics", desc: "Fleet, delivery, supply chain" },
-  { icon: GraduationCap, name: "Education", desc: "EdTech, LMS, eLearning" },
-  { icon: Building2, name: "Real Estate", desc: "PropTech, listings, tours" },
-  { icon: Gamepad2, name: "Entertainment", desc: "Streaming, gaming, media" },
-  { icon: Factory, name: "Manufacturing", desc: "ERP, IoT, automation" },
+  { icon: Stethoscope, name: "Healthcare", desc: "Telehealth, electronic health records, proactive wellness programs" },
+  { icon: CreditCard, name: "FinTech", desc: "Banking cores, payments infrastructure, insurance technology" },
+  { icon: ShoppingCart, name: "E-Commerce", desc: "Multi-vendor marketplaces, retail experiences, mobile shopping" },
+  { icon: Truck, name: "Logistics", desc: "Fleet management, final-mile delivery, end-to-end supply networks" },
+  { icon: GraduationCap, name: "Education", desc: "Learning platforms, learning management systems, digital instruction" },
+  { icon: Building2, name: "Real Estate", desc: "Property technology, listing ecosystems, immersive virtual showings" },
+  { icon: Gamepad2, name: "Entertainment", desc: "Streaming services, interactive games, digital media" },
+  { icon: Factory, name: "Manufacturing", desc: "Enterprise resource planning, industrial IoT, automated operations" },
 ];
 
 const whyChoose = [
-  { icon: Zap, title: "Cross-Functional Expertise", description: "Developers with advanced skills in new-age technologies — delivering full-cycle digital products with speed and precision." },
-  { icon: Clock, title: "Scalable & Flexible", description: "Scale your team up or down without friction. Adaptable engagement models to stay agile and meet shifting deadlines." },
-  { icon: Award, title: "Agile & Transparent", description: "Open sprints, daily updates, and clear reporting — you're informed, involved, and confident at every development phase." },
-  { icon: HeartHandshake, title: "Pre-Vetted Industry Talent", description: "Developers handpicked for technical depth and industry familiarity in healthcare, fintech, retail, and more." },
+  { icon: Zap, title: "Breadth Across Disciplines", description: "Teams fluent in modern stacks—taking digital products from concept through launch with speed and uncompromising quality." },
+  { icon: Clock, title: "Elastic, Right-Sized Capacity", description: "Grow or tighten headcount without heavy overhead. How we work adapts to your roadmap and shifting timelines." },
+  { icon: Award, title: "Iterative Delivery, Full Visibility", description: "Transparent sprint rhythm, steady check-ins, and straightforward reporting—so you always know where things stand." },
+  { icon: HeartHandshake, title: "Screened for Sector Fit", description: "Professionals selected for technical depth and industry context spanning healthcare, financial services, retail, and related fields." },
 ];
 
 const stats: { label: string; value: number; suffix: string; isDecimal?: boolean }[] = [
-  { value: 250, suffix: "+", label: "Developers Available" },
-  { value: 100, suffix: "+", label: "Projects Delivered" },
-  { value: 48, suffix: "hr", label: "Onboarding Time" },
-  { value: 40, suffix: "%", label: "Cost Savings" },
+  { value: 250, suffix: "+", label: "Developers Available to Start" },
+  { value: 100, suffix: "+", label: "Projects Delivered to Production" },
+  { value: 48, suffix: "hr", label: "Standard Time to Onboard" },
+  { value: 40, suffix: "%", label: "Typical Engineering Cost Savings" },
 ];
 
 const pricingModels = [
-  { title: "Fixed Price", description: "Quality solutions delivered within defined timeline and budget — ideal for well-scoped projects with clear requirements.", icon: Briefcase },
-  { title: "Time & Material", description: "Pay for actual hours and resources used — perfect for evolving projects where scope and features may change.", icon: Clock },
-  { title: "Monthly Hiring", description: "Fixed monthly charge for dedicated resources — ideal for larger, long-term projects requiring consistent capacity.", icon: UserPlus },
+  { title: "Fixed Price", description: "Outcome-focused delivery within an agreed schedule and cap—best suited to initiatives with crisp scope and stable requirements.", icon: Briefcase },
+  { title: "Time & Material", description: "Invest only in the hours and assets consumed—ideal when priorities shift and the feature set is still taking shape.", icon: Clock },
+  { title: "Monthly Hiring", description: "A predictable monthly investment in dedicated capacity—tailored to sustained programs that demand continuous throughput.", icon: UserPlus },
 ];
 
 /* ═══════════════════════════════════════════════════════
@@ -263,7 +263,7 @@ export default function HireDedicatedDevelopersPage() {
               heroReady ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
             }`}
           >
-            <ArrowLeft size={16} /> Back to Services
+            <ArrowLeft size={16} /> Return to Services
           </Link>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -282,7 +282,7 @@ export default function HireDedicatedDevelopersPage() {
                   heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >
-                Scale your business faster with flexible engagement models, proven expertise, and real-world experience. Onboard experienced, vetted developers within 48 hours and reduce development costs by up to 40%.
+                Scale with engagement models that bend to your priorities, depth you can rely on, and teams that have shipped before. Bring in pre-vetted engineers in as little as 48 hours and trim engineering spend by as much as 40%.
               </p>
               <div
                 className={`mt-8 flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-300 ${
@@ -293,13 +293,13 @@ export default function HireDedicatedDevelopersPage() {
                   href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10"
                 >
-                  Start Hiring Now <ArrowRight className="w-4 h-4" />
+                  Begin Hiring Today <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/our-work"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
                 >
-                  View Our Work
+                  Explore Our Portfolio
                 </Link>
               </div>
             </div>
@@ -328,138 +328,25 @@ export default function HireDedicatedDevelopersPage() {
 
 function HireHeroIllustration() {
   return (
-    <motion.div
-      className="relative w-full max-w-md mx-auto aspect-square"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-    >
-      <div className="absolute inset-0 bg-[#006ea3]/10 dark:bg-[#006ea3]/5 rounded-full blur-[80px] scale-75" />
-      <motion.svg
-        viewBox="0 0 400 460"
-        fill="none"
-        className="relative w-full h-full drop-shadow-2xl"
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        {/* Dashboard */}
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-white dark:fill-[#1a1a1a] stroke-black/10 dark:stroke-white/10" strokeWidth="2" />
-        <rect x="60" y="50" width="280" height="380" rx="16" className="fill-transparent stroke-[#006ea3]/20" strokeWidth="1" />
-        {/* Header */}
-        <rect x="72" y="66" width="100" height="10" rx="4" className="fill-black/60 dark:fill-white/60" />
-        <rect x="72" y="82" width="150" height="6" rx="3" className="fill-black/20 dark:fill-white/20" />
-        <rect x="280" y="66" width="48" height="20" rx="8" className="fill-[#006ea3]" />
-        <rect x="288" y="73" width="32" height="6" rx="3" className="fill-white" />
-        {/* Main card */}
-        <rect x="72" y="100" width="256" height="100" rx="12" className="fill-[#006ea3]/5 dark:fill-[#006ea3]/10 stroke-[#006ea3]/15" strokeWidth="1" />
-        <rect x="84" y="114" width="60" height="6" rx="3" className="fill-[#006ea3]/50" />
-        <rect x="84" y="128" width="90" height="12" rx="4" className="fill-[#006ea3] dark:fill-[#3ba0d6]" />
-        <rect x="84" y="148" width="70" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <polyline points="220,186 234,164 248,172 262,152 276,158 290,144" className="stroke-[#006ea3] dark:stroke-[#3ba0d6]" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        {/* Two cards */}
-        <rect x="72" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="94" cy="238" r="10" className="fill-[#006ea3]/15" />
-        <rect x="112" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="242" width="40" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="84" y="260" width="96" height="6" rx="3" className="fill-[#006ea3]/30" />
-        <rect x="84" y="272" width="70" height="6" rx="3" className="fill-[#006ea3]/20" />
-        <rect x="208" y="212" width="120" height="80" rx="10" className="fill-black/[0.03] dark:fill-white/[0.04] stroke-black/[0.06] dark:stroke-white/[0.06]" strokeWidth="1" />
-        <circle cx="230" cy="238" r="10" className="fill-emerald-500/15" />
-        <rect x="248" y="232" width="60" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="248" y="242" width="45" height="4" rx="2" className="fill-black/20 dark:fill-white/20" />
-        <rect x="220" y="260" width="96" height="6" rx="3" className="fill-emerald-500/30" />
-        <rect x="220" y="272" width="75" height="6" rx="3" className="fill-emerald-500/20" />
-        {/* Bottom list items */}
-        <rect x="72" y="304" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="326" r="8" className="fill-[#006ea3]/15" />
-        <rect x="112" y="320" width="80" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="330" width="120" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="326" r="6" className="fill-[#006ea3]/20" />
-        <rect x="72" y="356" width="256" height="44" rx="10" className="fill-black/[0.02] dark:fill-white/[0.03] stroke-black/[0.04] dark:stroke-white/[0.04]" strokeWidth="1" />
-        <circle cx="96" cy="378" r="8" className="fill-violet-500/15" />
-        <rect x="112" y="372" width="70" height="5" rx="2.5" className="fill-black/40 dark:fill-white/40" />
-        <rect x="112" y="382" width="110" height="4" rx="2" className="fill-black/15 dark:fill-white/15" />
-        <circle cx="308" cy="378" r="6" className="fill-violet-500/20" />
-      </motion.svg>
-
-      <motion.div
-        className="absolute top-12 -left-4 md:top-16 md:-left-8 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#006ea315" }}>
-            <Users className="w-3.5 h-3.5" style={{ color: "#006ea3" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">500+ Devs</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Available</p>
-          </div>
+    <motion.div className="relative w-full max-w-md mx-auto aspect-[4/3]" initial={{ opacity: 0, scale: 0.92, x: 20 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}>
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
+        <Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80" alt="Hire dedicated developers" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10"><Users className="w-4 h-4 text-[#006ea3]" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">150+ Devs</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">Ready to deploy</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute top-28 -right-2 md:top-32 md:-right-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#10b98115" }}>
-            <Clock className="w-3.5 h-3.5" style={{ color: "#10b981" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">48hr Match</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Fast Hiring</p>
-          </div>
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.0 }} className="absolute -bottom-4 -left-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10"><Clock className="w-4 h-4 text-emerald-500" /></div>
+          <div><div className="text-sm font-bold text-black dark:text-white">48 Hours</div><div className="text-[10px] font-medium text-black/40 dark:text-white/40">To first match</div></div>
         </div>
       </motion.div>
-
-      <motion.div
-        className="absolute bottom-24 -left-2 md:bottom-28 md:-left-6 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#8b5cf615" }}>
-            <Code2 className="w-3.5 h-3.5" style={{ color: "#8b5cf6" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Full-Stack</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Expertise</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-16 -right-2 md:bottom-20 md:-right-4 px-3 py-2 rounded-xl bg-white dark:bg-[#1a1a1a] border border-black/[0.08] dark:border-white/[0.08] shadow-lg shadow-black/5 dark:shadow-black/20"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f59e0b15" }}>
-            <HeartHandshake className="w-3.5 h-3.5" style={{ color: "#f59e0b" }} />
-          </div>
-          <div>
-            <p className="text-[10px] font-bold text-black/70 dark:text-white/70">Dedicated</p>
-            <p className="text-[9px] text-black/40 dark:text-white/40">Teams</p>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-[#006ea3]/10"
-        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-[#006ea3]/5"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0, 0.2] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      />
+      <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
     </motion.div>
   );
 }
@@ -540,8 +427,8 @@ function ServiceOfferingsSection() {
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Our Services</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">What We <span className="text-black dark:text-white">Offer</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Comprehensive solutions tailored to your business needs.</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Capabilities We <span className="text-black dark:text-white">Deliver</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">End-to-end expertise shaped around your operating context and growth priorities.</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => {
@@ -570,7 +457,7 @@ function ServiceOfferingsSection() {
                       ))}
                     </div>
                     <div className="mt-5 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      Learn more <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      Explore the offering <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
                 </Link>
@@ -594,9 +481,9 @@ function EngagementModelsSection() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Flexible Engagement Models</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Engagement Models That Flex With You</h2>
           <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-            Transparent collaboration options that let you scale teams, control priorities, and align developers with your workflows.
+            Clear, adaptable ways of working that let you scale capacity, steer priorities, and embed engineers in your rituals.
           </p>
         </div>
 
@@ -636,8 +523,8 @@ function ProcessSection() {
       <div className="relative mx-auto max-w-5xl px-6 py-24">
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">How We Work</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Development <span className="text-black dark:text-white">Process</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A battle-tested methodology that ensures quality, transparency, and on-time delivery.</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Our Delivery <span className="text-black dark:text-white">Process</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">A proven operating model that safeguards quality, visibility, and dependable release cadence.</p>
         </motion.div>
         <div className="relative">
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
@@ -726,9 +613,9 @@ function TechStackSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#006ea3]/[0.04] rounded-full blur-[120px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Technology Stack</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Built with <span className="text-black dark:text-white">Modern Tools</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Industry-leading tools and frameworks powering our solutions.</p>
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Technology Landscape</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Built on <span className="text-black dark:text-white">Proven Tooling</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Industry-leading frameworks and platforms form the foundation of every engagement we take on.</p>
         </motion.div>
         <motion.div className="flex justify-center mb-12" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.15 }}>
           <div className="inline-flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02]">
@@ -754,7 +641,7 @@ function TechStackSection() {
           </AnimatePresence>
         </motion.div>
         <motion.div className="mt-16 pt-12 border-t border-black/[0.06] dark:border-white/[0.06]" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }}>
-          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">And many more technologies we work with</p>
+          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">And the broader stack we wire in every day</p>
           <div className="relative w-full">
             <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
@@ -787,9 +674,9 @@ function PricingModelsSection() {
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Flexible Pricing Models</h2>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Pricing Models That Fit the Brief</h2>
         <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-          Choose a billing structure that aligns with your project scope, budget, and engagement duration.
+          Select commercial terms that mirror your scope, investment appetite, and expected runway.
         </p>
       </div>
 
@@ -826,8 +713,8 @@ function IndustriesSection() {
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Industries</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Industries We <span className="text-black dark:text-white">Build For</span></h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">Domain expertise across verticals — every solution is built with deep understanding of your industry.</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Sectors We <span className="text-black dark:text-white">Support</span></h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">Sector-savvy perspective across industries—each build reflects how your market actually operates.</p>
         </motion.div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {industries.map((ind, i) => {
@@ -861,7 +748,7 @@ function WhyChooseSection() {
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Why Us</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Why Choose <span className="text-black dark:text-white">Cloud Nexus</span></h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">Why Partner With <span className="text-black dark:text-white">Cloud Nexus</span></h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {whyChoose.map((item, i) => {
@@ -909,14 +796,14 @@ function CTASection() {
         >
           Ready to Hire
           <br />
-          <span className="text-[#006ea3]">Dedicated Developers?</span>
+          <span className="text-[#006ea3]">Dedicated Developers for Your Stack?</span>
         </h2>
         <p
           className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Tell us the roles, stack, and timeline — we&apos;ll assemble a dedicated team that ships like your in-house org. Start with a 7-day risk-free trial.
+          Tell us the roles, technologies, and schedule you require—we will stand up a dedicated squad that delivers at the pace of your internal team. Begin with a seven-day trial at no risk.
         </p>
         <div
           className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${
@@ -927,13 +814,13 @@ function CTASection() {
             href="/resources/free-consultation"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20"
           >
-            Start 7-Day Free Trial <ArrowRight className="w-4 h-4" />
+            Start Your 7-Day Free Trial <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href="/our-work"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
           >
-            View Our Work
+            Explore Our Portfolio
           </Link>
         </div>
       </div>
