@@ -485,14 +485,8 @@ export const KnownFor: FC = () => {
   return (
     <section className="w-full py-12 bg-white dark:bg-black">
       <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="text-center mb-2">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black dark:text-white">
-            What We&apos;re Known For
-          </h2>
-        </div>
-
         {/* Carousel within max-w-7xl container */}
-        <div className="relative group/carousel mt-8 md:mt-12 overflow-hidden">
+        <div className="relative group/carousel overflow-hidden">
           {/* Left arrow */}
           <button
             onClick={() => scroll('left')}

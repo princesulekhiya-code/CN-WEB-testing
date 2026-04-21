@@ -22,7 +22,7 @@ export function BuildScaleThrive() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto"
         >
-          From hiring top talent to building innovative solutions, CloudNexus simplifies growth with tailored strategies that deliver measurable impact.
+          From top talent to breakthrough solutions—CloudNexus drives growth with strategies that deliver real results.
         </motion.p>
       </div>
     </section>

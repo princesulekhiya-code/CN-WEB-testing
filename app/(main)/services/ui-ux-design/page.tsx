@@ -138,7 +138,7 @@ const services: ServiceOffering[] = [
   },
 ];
 
-const stats = [
+const stats: { label: string; value: number; suffix: string; isDecimal?: boolean }[] = [
   { value: 500, suffix: "+", label: "Designs Delivered" },
   { value: 120, suffix: "+", label: "Happy Clients" },
   { value: 95, suffix: "%", label: "User Satisfaction" },
@@ -698,30 +698,30 @@ function TechStackSection() {
           <AnimatePresence mode="wait">
             <motion.div key={activeTab} initial={{ opacity: 0, y: 12, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -12, scale: 0.98 }} transition={{ duration: 0.35, ease: "easeInOut" }} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-5">
               {techCategories[activeTab].items.map((tech, i) => (
-                <motion.div key={tech.name} initial={{ opacity: 0, y: 16, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }} className="group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white/80 dark:bg-white/[0.02] hover:border-[#006ea3]/30 hover:bg-[#006ea3]/[0.03] dark:hover:border-[#006ea3]/30 dark:hover:bg-[#006ea3]/[0.05] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#006ea3]/5 transition-all duration-300 cursor-default">
+                <motion.div key={`${activeTab}-${tech}-${i}`} initial={{ opacity: 0, y: 16, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }} className="group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white/80 dark:bg-white/[0.02] hover:border-[#006ea3]/30 hover:bg-[#006ea3]/[0.03] dark:hover:border-[#006ea3]/30 dark:hover:bg-[#006ea3]/[0.05] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#006ea3]/5 transition-all duration-300 cursor-default">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#006ea3]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                   <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
-                    <Image src={tech.logo} alt={tech.name} width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-sm" unoptimized />
+                  <div className="relative flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20 text-xs font-bold text-[#006ea3] group-hover:scale-110 transition-transform duration-300">
+                    {tech.slice(0, 2)}
                   </div>
-                  <span className="relative text-sm md:text-base font-semibold text-black/70 dark:text-white/60 group-hover:text-[#006ea3] transition-colors duration-300 text-center">{tech.name}</span>
+                  <span className="relative text-sm md:text-base font-semibold text-black/70 dark:text-white/60 group-hover:text-[#006ea3] transition-colors duration-300 text-center">{tech}</span>
                 </motion.div>
               ))}
             </motion.div>
           </AnimatePresence>
         </motion.div>
         <motion.div className="mt-16 pt-12 border-t border-black/[0.06] dark:border-white/[0.06]" initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.5 }}>
-          <p className="text-center text-xs font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">And many more technologies we work with</p>
+          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">And many more technologies we work with</p>
           <div className="relative w-full">
             <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
-            <div className="group flex overflow-hidden w-full [--gap:2.5rem] md:[--gap:3rem] [--duration:40s] gap-[var(--gap)]">
+            <div className="group flex overflow-hidden w-full [--gap:3.5rem] md:[--gap:4.5rem] [--duration:40s] gap-[var(--gap)]">
               {Array(3).fill(0).map((_, i) => (
                 <div key={i} className="flex shrink-0 items-center gap-[var(--gap)] animate-marquee group-hover:[animation-play-state:paused]">
                   {allTechs.map((tech, j) => (
-                    <div key={`${i}-${j}`} className="flex items-center gap-2.5 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-default whitespace-nowrap" title={tech.name}>
-                      <Image src={tech.logo} alt={tech.name} width={20} height={20} className="w-5 h-5 object-contain flex-shrink-0" unoptimized />
-                      <span className="text-xs font-medium text-black/50 dark:text-white/40">{tech.name}</span>
+                    <div key={`${i}-${j}-${tech}`} className="flex items-center gap-3.5 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-default whitespace-nowrap" title={tech}>
+                      <span className="flex h-8 w-8 md:h-9 md:w-9 flex-shrink-0 items-center justify-center rounded bg-[#006ea3]/15 text-xs font-bold text-[#006ea3]">{tech.slice(0, 2)}</span>
+                      <span className="text-sm md:text-base font-medium text-black/50 dark:text-white/40">{tech}</span>
                     </div>
                   ))}
                 </div>

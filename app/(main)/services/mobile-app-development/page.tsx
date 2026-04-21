@@ -209,7 +209,7 @@ const whyChoose = [
   { icon: HeartHandshake, title: "Post-Launch Partnership", description: "Ongoing maintenance, crash monitoring, performance optimization, and feature evolution." },
 ];
 
-const stats = [
+const stats: { label: string; value: number; suffix: string; isDecimal?: boolean }[] = [
   { value: 100, suffix: "+", label: "Apps Delivered" },
   { value: 50, suffix: "+", label: "Happy Clients" },
   { value: 98, suffix: "%", label: "App Store Approval" },
@@ -927,14 +927,14 @@ function TechStackSection() {
           animate={visible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <p className="text-center text-xs font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">
+          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">
             And many more technologies we work with
           </p>
           <div className="relative w-full">
             <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
 
-            <div className="group flex overflow-hidden w-full [--gap:2.5rem] md:[--gap:3rem] [--duration:40s] gap-[var(--gap)]">
+            <div className="group flex overflow-hidden w-full [--gap:3.5rem] md:[--gap:4.5rem] [--duration:40s] gap-[var(--gap)]">
               {Array(3)
                 .fill(0)
                 .map((_, i) => (
@@ -945,18 +945,18 @@ function TechStackSection() {
                     {allTechs.map((tech, j) => (
                       <div
                         key={`${i}-${j}`}
-                        className="flex items-center gap-2.5 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-default whitespace-nowrap"
+                        className="flex items-center gap-3.5 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-default whitespace-nowrap"
                         title={tech.name}
                       >
                         <Image
                           src={tech.logo}
                           alt={tech.name}
-                          width={20}
-                          height={20}
-                          className="w-5 h-5 object-contain flex-shrink-0"
+                          width={32}
+                          height={32}
+                          className="w-8 h-8 md:w-9 md:h-9 object-contain flex-shrink-0"
                           unoptimized
                         />
-                        <span className="text-xs font-medium text-black/50 dark:text-white/40">
+                        <span className="text-sm md:text-base font-medium text-black/50 dark:text-white/40">
                           {tech.name}
                         </span>
                       </div>

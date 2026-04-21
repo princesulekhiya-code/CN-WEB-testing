@@ -31,6 +31,16 @@ const faqs = [
       "Agile methodology, CI/CD, comprehensive testing, code reviews, security audits. Compliant with HIPAA, SOC 2, GDPR.",
   },
   {
+    question: "How is quality maintained throughout development?",
+    answer:
+      "Quality is ensured through code reviews, automated testing, performance checks, and continuous validation against defined requirements.",
+  },
+  {
+    question: "How is project progress tracked?",
+    answer:
+      "Progress is tracked through defined milestones, sprint reports, and transparent communication channels, ensuring visibility at every stage.",
+  },
+  {
     question: "What is your pricing model?",
     answer:
       "Fixed-price, time & material, or dedicated teams — flexible to your scope and budget.",
@@ -47,8 +57,9 @@ const faqs = [
   },
 ];
 
-const leftFaqs = faqs.slice(0, 4);
-const rightFaqs = faqs.slice(4);
+const leftColumnCount = Math.ceil(faqs.length / 2);
+const leftFaqs = faqs.slice(0, leftColumnCount);
+const rightFaqs = faqs.slice(leftColumnCount);
 
 function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
   const [open, setOpen] = useState(false);
@@ -121,7 +132,7 @@ export function FAQs() {
             </div>
             <div className="divide-y divide-black/[0.05] dark:divide-white/[0.05]">
               {rightFaqs.map((faq, i) => (
-                <FAQItem key={faq.question} faq={faq} index={i + 4} />
+                <FAQItem key={faq.question} faq={faq} index={i + leftColumnCount} />
               ))}
             </div>
           </div>
