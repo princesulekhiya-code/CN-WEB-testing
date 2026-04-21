@@ -1,43 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Smartphone, Globe, Cloud, Palette, Zap, TrendingUp, Brain,
   Shield, GitMerge, ArrowRight, CheckCircle2, Layers, Users, Clock,
   Lightbulb, Rocket, BarChart3, HeartHandshake, Building2, GraduationCap,
   CreditCard, ShoppingCart, Stethoscope, Truck, Factory, Cog,
   Monitor, UsersRound, Package, ShoppingBag, CloudCog, Blocks, Boxes,
-  Settings, ServerCog, Cpu, Wrench, Briefcase,
+  Settings, ServerCog, Cpu, Wrench, Briefcase, ChevronRight, Sparkles,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useRef, useState, useEffect, useCallback } from "react";
+import { motion, useInView as useMotionInView } from "framer-motion";
 
-/* ═══════════════════════════════════════════════════════
-   INTERSECTION OBSERVER HOOK
-   ═══════════════════════════════════════════════════════ */
-
-function useInView(threshold = 0.2) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return { ref, visible };
-}
+const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
 /* ═══════════════════════════════════════════════════════
    ANIMATED COUNTER HOOK
@@ -389,53 +366,63 @@ const categories: ServiceCategory[] = [
 ];
 
 const processSteps = [
-  {
-    step: "01",
-    title: "Discovery & Strategy",
-    description: "We deep-dive into your business goals, pain points, and technical landscape to craft a tailored strategy.",
-    icon: Lightbulb,
-  },
-  {
-    step: "02",
-    title: "Design & Architecture",
-    description: "Our team designs intuitive interfaces and robust system architectures that scale with your growth.",
-    icon: Layers,
-  },
-  {
-    step: "03",
-    title: "Agile Development",
-    description: "Iterative sprints with continuous feedback loops ensure transparent progress and rapid delivery.",
-    icon: Cog,
-  },
-  {
-    step: "04",
-    title: "Testing & QA",
-    description: "Rigorous automated and manual testing across devices, browsers, and edge cases for bulletproof quality.",
-    icon: CheckCircle2,
-  },
-  {
-    step: "05",
-    title: "Deployment & Launch",
-    description: "Zero-downtime deployments with monitoring, rollback strategies, and performance optimization.",
-    icon: Rocket,
-  },
-  {
-    step: "06",
-    title: "Support & Growth",
-    description: "Ongoing maintenance, analytics-driven improvements, and scaling support as your business evolves.",
-    icon: HeartHandshake,
-  },
+  { step: "01", title: "Discovery & Strategy", description: "We deep-dive into your business goals, pain points, and technical landscape to craft a tailored strategy.", icon: Lightbulb },
+  { step: "02", title: "Design & Architecture", description: "Our team designs intuitive interfaces and robust system architectures that scale with your growth.", icon: Layers },
+  { step: "03", title: "Agile Development", description: "Iterative sprints with continuous feedback loops ensure transparent progress and rapid delivery.", icon: Cog },
+  { step: "04", title: "Testing & QA", description: "Rigorous automated and manual testing across devices, browsers, and edge cases for bulletproof quality.", icon: CheckCircle2 },
+  { step: "05", title: "Deployment & Launch", description: "Zero-downtime deployments with monitoring, rollback strategies, and performance optimization.", icon: Rocket },
+  { step: "06", title: "Support & Growth", description: "Ongoing maintenance, analytics-driven improvements, and scaling support as your business evolves.", icon: HeartHandshake },
 ];
 
 const industries = [
-  { icon: CreditCard, name: "FinTech & Banking", href: "/industry/banking-finance-insurance" },
-  { icon: Stethoscope, name: "Healthcare", href: "/industry/healthcare-lifesciences" },
-  { icon: ShoppingCart, name: "E-Commerce", href: "/industry/ecommerce-solutions" },
-  { icon: GraduationCap, name: "Education", href: "/industry/education-elearning" },
-  { icon: Truck, name: "Logistics", href: "/industry/transport-logistics" },
-  { icon: Building2, name: "Real Estate", href: "/industry/real-estate" },
-  { icon: Factory, name: "Manufacturing", href: "/industry/enterprise-retail-manufacturing" },
-  { icon: BarChart3, name: "SaaS & Startups", href: "/industry/fintech" },
+  {
+    icon: CreditCard, name: "FinTech & Banking", href: "/industry/banking-finance-insurance",
+    desc: "Mobile banking, payment gateways, trading platforms & regulatory compliance",
+    accent: "#10B981", stat: "25+", statLabel: "FinTech Apps",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    icon: Stethoscope, name: "Healthcare", href: "/industry/healthcare-lifesciences",
+    desc: "Telemedicine, EHR systems, patient portals & HIPAA-compliant solutions",
+    accent: "#EF4444", stat: "15+", statLabel: "Health Apps",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    icon: ShoppingCart, name: "E-Commerce", href: "/industry/ecommerce-solutions",
+    desc: "Online stores, marketplaces, inventory management & headless commerce",
+    accent: "#8B5CF6", stat: "30+", statLabel: "Stores Built",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    icon: GraduationCap, name: "Education", href: "/industry/education-elearning",
+    desc: "LMS platforms, interactive courses, virtual classrooms & EdTech apps",
+    accent: "#F59E0B", stat: "20+", statLabel: "EdTech Solutions",
+    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    icon: Truck, name: "Logistics", href: "/industry/transport-logistics",
+    desc: "Fleet tracking, route optimization, warehouse management & supply chain",
+    accent: "#06B6D4", stat: "12+", statLabel: "Logistics Apps",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    icon: Building2, name: "Real Estate", href: "/industry/real-estate",
+    desc: "Property listings, virtual tours, CRM systems & tenant management",
+    accent: "#EC4899", stat: "10+", statLabel: "PropTech Apps",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    icon: Factory, name: "Manufacturing", href: "/industry/enterprise-retail-manufacturing",
+    desc: "IoT dashboards, ERP integrations, quality control & production tracking",
+    accent: "#F97316", stat: "8+", statLabel: "Mfg Solutions",
+    image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    icon: BarChart3, name: "SaaS & Startups", href: "/industry/fintech",
+    desc: "MVP builds, multi-tenant platforms, subscription billing & rapid scaling",
+    accent: "#006ea3", stat: "40+", statLabel: "SaaS Products",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+  },
 ];
 
 const stats = [
@@ -446,140 +433,304 @@ const stats = [
 ];
 
 /* ═══════════════════════════════════════════════════════
-   COMPONENTS
+   MOTION VARIANTS
    ═══════════════════════════════════════════════════════ */
 
-function ServiceCard({ service, delay }: { service: Service; delay: number }) {
-  const Icon = service.icon;
-  const hasSublinks = service.sublinks && service.sublinks.length > 0;
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay, ease: [0.25, 0.46, 0.45, 0.94] },
+  }),
+};
+
+const stagger = {
+  visible: { transition: { staggerChildren: 0.08 } },
+};
+
+const cardVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } },
+};
+
+/* ═══════════════════════════════════════════════════════
+   SERVICE CARD ILLUSTRATIONS (Tech Logo Icons)
+   ═══════════════════════════════════════════════════════ */
+
+interface CardLogoData {
+  logos: string[];
+  accent: string;
+}
+
+const serviceCardLogos: Record<string, CardLogoData> = {
+  "AI, ML & Data Science": {
+    logos: ["python/python-original.svg", "tensorflow/tensorflow-original.svg", "jupyter/jupyter-original-wordmark.svg"],
+    accent: "#FF6F00",
+  },
+  "Digital Transformation": {
+    logos: ["kubernetes/kubernetes-original.svg", "docker/docker-original.svg", "terraform/terraform-original.svg"],
+    accent: "#326CE5",
+  },
+  "Cybersecurity & Compliance": {
+    logos: ["linux/linux-original.svg", "amazonwebservices/amazonwebservices-plain-wordmark.svg", "nginx/nginx-original.svg"],
+    accent: "#E53935",
+  },
+  "Technology Consulting": {
+    logos: ["jira/jira-original.svg", "confluence/confluence-original.svg", "googlecloud/googlecloud-original.svg"],
+    accent: "#4285F4",
+  },
+  "Mobile App Development": {
+    logos: ["swift/swift-original.svg", "kotlin/kotlin-original.svg", "flutter/flutter-original.svg"],
+    accent: "#F05138",
+  },
+  "Web Development": {
+    logos: ["react/react-original.svg", "nextjs/nextjs-original.svg", "typescript/typescript-original.svg"],
+    accent: "#61DAFB",
+  },
+  "Software Development": {
+    logos: ["java/java-original.svg", "dotnetcore/dotnetcore-original.svg", "postgresql/postgresql-original.svg"],
+    accent: "#5382A1",
+  },
+  "MVP Development": {
+    logos: ["firebase/firebase-original.svg", "react/react-original.svg", "figma/figma-original.svg"],
+    accent: "#FFCA28",
+  },
+  "Hire Dedicated Developers": {
+    logos: ["github/github-original.svg", "javascript/javascript-original.svg", "react/react-original.svg"],
+    accent: "#8B5CF6",
+  },
+  "UI/UX Design": {
+    logos: ["figma/figma-original.svg", "sketch/sketch-original.svg", "illustrator/illustrator-plain.svg"],
+    accent: "#A259FF",
+  },
+  "SaaS Development": {
+    logos: ["react/react-original.svg", "amazonwebservices/amazonwebservices-plain-wordmark.svg", "redis/redis-original.svg"],
+    accent: "#FF9900",
+  },
+  "IT Consulting": {
+    logos: ["jira/jira-original.svg", "azure/azure-original.svg", "confluence/confluence-original.svg"],
+    accent: "#0078D4",
+  },
+  "Product Engineering": {
+    logos: ["figma/figma-original.svg", "react/react-original.svg", "nodejs/nodejs-original.svg"],
+    accent: "#00BCD4",
+  },
+  "E-Commerce Development": {
+    logos: ["woocommerce/woocommerce-original.svg", "shopify/shopify-original.svg", "magento/magento-original.svg"],
+    accent: "#96588A",
+  },
+  "WordPress Development": {
+    logos: ["wordpress/wordpress-original.svg", "php/php-original.svg", "mysql/mysql-original.svg"],
+    accent: "#21759B",
+  },
+  "Digital Marketing": {
+    logos: ["google/google-original.svg", "wordpress/wordpress-original.svg", "googlecloud/googlecloud-original.svg"],
+    accent: "#34A853",
+  },
+  "Cloud Services": {
+    logos: ["amazonwebservices/amazonwebservices-plain-wordmark.svg", "googlecloud/googlecloud-original.svg", "azure/azure-original.svg"],
+    accent: "#FF9900",
+  },
+  "DevOps & Cloud Automation": {
+    logos: ["docker/docker-original.svg", "kubernetes/kubernetes-original.svg", "terraform/terraform-original.svg"],
+    accent: "#2496ED",
+  },
+};
+
+function ServiceCardIllustration({ title }: { title: string }) {
+  const data = serviceCardLogos[title];
+  if (!data) return null;
 
   return (
-    <div
-      className="group h-full rounded-2xl border border-black/[0.08] bg-black/[0.02] p-6 transition-all duration-500 hover:border-[#006ea3]/30 hover:bg-black/[0.04] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#006ea3]/5 dark:border-white/[0.08] dark:bg-white/[0.02] dark:hover:border-[#006ea3]/30 dark:hover:bg-white/[0.04]"
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      <Link href={service.href} className="block">
-        <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-black/[0.03] dark:border-white/10 dark:bg-white/[0.05] group-hover:border-[#006ea3]/30 group-hover:bg-[#006ea3]/10 transition-all duration-500">
-          <Icon className="w-5 h-5 text-black/60 dark:text-white/60 group-hover:text-[#006ea3] transition-colors duration-500" strokeWidth={1.5} />
+    <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative z-10">
+        <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white dark:bg-white/10 shadow-lg shadow-black/5 dark:shadow-black/20 border border-black/[0.06] dark:border-white/[0.08] flex items-center justify-center group-hover:scale-110 group-hover:shadow-xl transition-all duration-500">
+          <Image src={`${DEVICON}/${data.logos[0]}`} alt="" width={40} height={40} className="w-9 h-9 md:w-10 md:h-10 object-contain" unoptimized />
         </div>
-        <h3 className="text-lg font-semibold tracking-tight group-hover:text-[#006ea3] transition-colors duration-300">
-          {service.title}
-        </h3>
-      </Link>
+      </div>
 
-      {hasSublinks ? (
-        <ul className="mt-3 space-y-1.5">
-          {service.sublinks!.map((sub) => (
-            <li key={sub.href}>
-              <Link
-                href={sub.href}
-                className="inline-flex items-center gap-1.5 text-[13px] font-medium text-black/50 dark:text-white/50 hover:text-[#006ea3] transition-colors duration-300"
-              >
-                <ArrowRight className="w-3 h-3 flex-shrink-0" />
-                {sub.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <>
-          <p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed group-hover:text-black/60 dark:group-hover:text-white/60 transition-colors duration-300">
-            {service.description}
-          </p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {service.highlights.map((h) => (
-              <span
-                key={h}
-                className="inline-flex items-center gap-1 text-[11px] font-medium text-black/35 dark:text-white/35 bg-black/[0.03] dark:bg-white/[0.04] px-2 py-0.5 rounded-md group-hover:text-[#006ea3]/70 group-hover:bg-[#006ea3]/5 transition-all duration-500"
-              >
-                <CheckCircle2 className="w-3 h-3" />
-                {h}
-              </span>
-            ))}
-          </div>
-          <div className="mt-5 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-            Learn more <ArrowRight className="w-3.5 h-3.5 ml-1" />
-          </div>
-        </>
-      )}
+      <div className="absolute w-32 h-32 md:w-36 md:h-36 rounded-full border border-dashed opacity-20 group-hover:opacity-40 group-hover:rotate-[30deg] transition-all duration-1000" style={{ borderColor: data.accent }} />
+
+      <div className="absolute top-1 right-6 md:top-2 md:right-10 z-10">
+        <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-white dark:bg-white/10 shadow-md shadow-black/5 dark:shadow-black/20 border border-black/[0.06] dark:border-white/[0.08] flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500">
+          <Image src={`${DEVICON}/${data.logos[1]}`} alt="" width={24} height={24} className="w-5 h-5 md:w-6 md:h-6 object-contain" unoptimized />
+        </div>
+      </div>
+
+      <div className="absolute bottom-1 left-6 md:bottom-2 md:left-10 z-10">
+        <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-white dark:bg-white/10 shadow-md shadow-black/5 dark:shadow-black/20 border border-black/[0.06] dark:border-white/[0.08] flex items-center justify-center group-hover:-translate-x-1 group-hover:translate-y-1 transition-transform duration-500">
+          <Image src={`${DEVICON}/${data.logos[2]}`} alt="" width={24} height={24} className="w-5 h-5 md:w-6 md:h-6 object-contain" unoptimized />
+        </div>
+      </div>
+
+      <div className="absolute top-4 left-12 w-1.5 h-1.5 rounded-full opacity-20 group-hover:opacity-50 transition-opacity duration-500" style={{ backgroundColor: data.accent }} />
+      <div className="absolute bottom-6 right-12 w-1.5 h-1.5 rounded-full opacity-15 group-hover:opacity-40 transition-opacity duration-500" style={{ backgroundColor: data.accent }} />
+
+      <div className="absolute w-20 h-20 rounded-full blur-2xl opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-500" style={{ backgroundColor: data.accent }} />
     </div>
   );
 }
 
-function CategorySection({ category, index }: { category: ServiceCategory; index: number }) {
-  const { ref, visible } = useInView(0.1);
-  const CatIcon = category.icon;
+/* ═══════════════════════════════════════════════════════
+   COMPONENTS
+   ═══════════════════════════════════════════════════════ */
+
+function ServiceCard({ service }: { service: Service }) {
+  const Icon = service.icon;
+  const hasSublinks = service.sublinks && service.sublinks.length > 0;
+  const hasIllustration = !!serviceCardLogos[service.title];
 
   return (
-    <div ref={ref} className="mb-20 last:mb-0">
-      {/* Category Header */}
-      <div
-        className={`text-center mb-10 transition-all duration-700 ${
-          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-        }`}
-        style={{ transitionDelay: `${index * 100}ms` }}
-      >
-        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#006ea3]/10 border border-[#006ea3]/20">
-          <CatIcon className="w-6 h-6 text-[#006ea3]" strokeWidth={1.5} />
-        </div>
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">{category.title}</h2>
-        <p className="mt-2 text-sm md:text-base font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed">
-          {category.subtitle}
-        </p>
-      </div>
+    <motion.div
+      variants={cardVariant}
+      className="group relative h-full rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#006ea3]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#006ea3]/10 dark:hover:shadow-[#006ea3]/5 overflow-hidden transition-all duration-500"
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-[#006ea3]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-      {/* Service Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {category.services.map((service, i) => (
-          <div
-            key={service.title}
-            className={`transition-all duration-600 ${
-              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-            style={{ transitionDelay: `${200 + i * 80}ms` }}
-          >
-            <ServiceCard service={service} delay={0} />
+      {hasIllustration && (
+        <div className="relative h-32 md:h-36 overflow-hidden rounded-t-2xl bg-gradient-to-br from-[#006ea3]/[0.03] via-transparent to-[#006ea3]/[0.02] dark:from-[#006ea3]/[0.05] dark:to-[#006ea3]/[0.02] border-b border-black/[0.04] dark:border-white/[0.04] group-hover:from-[#006ea3]/[0.06] group-hover:to-[#006ea3]/[0.03] transition-all duration-500">
+          <div className="absolute inset-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-700 ease-out">
+            <ServiceCardIllustration title={service.title} />
           </div>
-        ))}
+          <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-lg bg-white/80 dark:bg-black/40 border border-black/[0.06] dark:border-white/[0.06] backdrop-blur-sm group-hover:bg-[#006ea3]/10 group-hover:border-[#006ea3]/20 transition-all duration-300">
+            <Icon className="w-4 h-4 text-black/50 dark:text-white/50 group-hover:text-[#006ea3] transition-colors duration-300" strokeWidth={1.5} />
+          </div>
+        </div>
+      )}
+
+      <div className={`relative z-10 ${hasIllustration ? "p-5 md:p-6" : "p-6 sm:p-7"} h-full flex flex-col`}>
+        {!hasIllustration && (
+          <Link href={service.href} className="block">
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-[#006ea3]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#006ea3] dark:text-[#ededed] group-hover:text-[#006ea3] group-hover:border-[#006ea3]/30 group-hover:bg-white dark:group-hover:bg-[#1a1a1a] transition-all duration-500 shadow-sm">
+              <Icon className="w-5 h-5" strokeWidth={1.5} />
+            </div>
+          </Link>
+        )}
+
+        <Link href={service.href} className="block">
+          <h3 className="text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] group-hover:text-[#006ea3] transition-colors duration-300">
+            {service.title}
+          </h3>
+        </Link>
+
+        {hasSublinks ? (
+          <ul className="mt-3 space-y-1.5 flex-1">
+            {service.sublinks!.map((sub) => (
+              <li key={sub.href}>
+                <Link
+                  href={sub.href}
+                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-black/50 dark:text-white/50 hover:text-[#006ea3] transition-colors duration-300"
+                >
+                  <ChevronRight className="w-3 h-3 flex-shrink-0" />
+                  {sub.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="flex-1 flex flex-col">
+            <p className="mt-2 text-sm font-medium text-black/45 dark:text-[#8b8b8b] leading-relaxed group-hover:text-black/60 dark:group-hover:text-[#a1a1a1] transition-colors duration-300 line-clamp-2">
+              {service.description}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {service.highlights.map((h) => (
+                <span
+                  key={h}
+                  className="inline-flex items-center gap-1 text-[11px] font-medium text-[#006ea3]/70 dark:text-[#006ea3]/60 bg-[#006ea3]/[0.06] dark:bg-[#006ea3]/[0.08] px-2.5 py-1 rounded-full group-hover:text-[#006ea3] group-hover:bg-[#006ea3]/10 transition-all duration-500"
+                >
+                  <CheckCircle2 className="w-3 h-3" strokeWidth={2} />
+                  {h}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="mt-5 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+          Learn more <ArrowRight className="w-3.5 h-3.5 ml-1" />
+        </div>
       </div>
+    </motion.div>
+  );
+}
+
+function CategorySection({ category, index }: { category: ServiceCategory; index: number }) {
+  const CatIcon = category.icon;
+  const ref = useRef(null);
+  const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <div ref={ref} className="mb-24 last:mb-0">
+      <motion.div
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="text-center mb-12"
+      >
+        <motion.div variants={fadeUp} custom={index * 0.1} className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#006ea3]/10 border border-[#006ea3]/20">
+          <CatIcon className="w-7 h-7 text-[#006ea3]" strokeWidth={1.5} />
+        </motion.div>
+        <motion.h2 variants={fadeUp} custom={index * 0.1 + 0.1} className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
+          {category.title}
+        </motion.h2>
+        <motion.p variants={fadeUp} custom={index * 0.1 + 0.2} className="mt-3 text-sm md:text-base font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed">
+          {category.subtitle}
+        </motion.p>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={stagger}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+      >
+        {category.services.map((service) => (
+          <ServiceCard key={service.title} service={service} />
+        ))}
+      </motion.div>
     </div>
   );
 }
 
 function StatsBar() {
-  const { ref, visible } = useInView(0.2);
-  const c0 = useAnimatedCount(stats[0].value, visible, 0);
-  const c1 = useAnimatedCount(stats[1].value, visible, 150);
-  const c2 = useAnimatedCount(stats[2].value, visible, 300);
-  const c3 = useAnimatedCount(stats[3].value, visible, 450);
+  const ref = useRef(null);
+  const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
+  const c0 = useAnimatedCount(stats[0].value, isInView, 0);
+  const c1 = useAnimatedCount(stats[1].value, isInView, 150);
+  const c2 = useAnimatedCount(stats[2].value, isInView, 300);
+  const c3 = useAnimatedCount(stats[3].value, isInView, 450);
   const counts = [c0, c1, c2, c3];
 
   return (
     <div ref={ref} className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-[#006ea3]/[0.04] via-transparent to-[#006ea3]/[0.04] dark:from-[#006ea3]/[0.03] dark:to-[#006ea3]/[0.03] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-[#006ea3]/[0.04] rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-[#006ea3]/[0.05] rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-20">
-        <div
-          className={`text-center mb-12 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+      <div className="relative mx-auto max-w-7xl px-6 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
             Numbers That <span className="text-black dark:text-white">Speak Volumes</span>
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {stats.map((stat, i) => (
-            <div
+            <motion.div
               key={stat.label}
-              className={`group relative p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white/60 dark:bg-white/[0.02] hover:border-[#006ea3]/30 dark:hover:border-[#006ea3]/30 transition-all duration-500 ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-              style={{ transitionDelay: `${200 + i * 120}ms` }}
+              initial={{ opacity: 0, y: 24 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+              className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#006ea3]/10 dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#006ea3]/8 overflow-hidden transition-all duration-500 p-6 md:p-8"
             >
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#006ea3]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#006ea3]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
               <div className="relative">
                 <div className="text-4xl md:text-5xl font-bold text-[#006ea3] tabular-nums tracking-tight">
                   {counts[i]}{stat.suffix}
@@ -587,12 +738,11 @@ function StatsBar() {
                 <div className="mt-2 text-sm md:text-base font-semibold text-black/70 dark:text-white/70">
                   {stat.label}
                 </div>
-                <div className="mt-1 text-xs md:text-sm text-black/40 dark:text-white/35 leading-relaxed">
+                <div className="mt-1 text-xs md:text-sm text-black/40 dark:text-white/35 leading-relaxed font-medium">
                   {stat.description}
                 </div>
               </div>
-              <div className="absolute bottom-0 left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/30 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -601,85 +751,56 @@ function StatsBar() {
 }
 
 function ProcessTimeline() {
-  const { ref, visible } = useInView(0.15);
+  const ref = useRef(null);
+  const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <div ref={ref} className="mx-auto max-w-5xl px-6 py-24">
-      {/* Section heading */}
-      <div
-        className={`text-center mb-16 transition-all duration-700 ${
-          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-        }`}
+    <div ref={ref} className="mx-auto max-w-6xl px-6 py-28">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16"
       >
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
           How We Bring <span className="text-black dark:text-white">Ideas to Life</span>
         </h2>
-        <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
+        <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
           A proven six-step methodology that ensures quality, transparency, and on-time delivery.
         </p>
-      </div>
+      </motion.div>
 
-      {/* Timeline */}
-      <div className="relative">
-        {/* Vertical connector line */}
-        <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-black/[0.08] dark:bg-white/[0.08] md:-translate-x-px" />
-
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {processSteps.map((step, i) => {
           const StepIcon = step.icon;
-          const isLeft = i % 2 === 0;
-
           return (
-            <div
+            <motion.div
               key={step.step}
-              className={`relative flex items-start mb-12 last:mb-0 transition-all duration-700 ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${300 + i * 120}ms` }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
+              className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#006ea3]/10 dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#006ea3]/8 overflow-hidden transition-all duration-500 p-6 sm:p-7"
             >
-              {/* Desktop: alternating layout */}
-              <div className="hidden md:grid md:grid-cols-[1fr_48px_1fr] w-full items-start">
-                {/* Left content */}
-                <div className={`${isLeft ? "pr-10 text-right" : ""}`}>
-                  {isLeft && (
-                    <div className="flex flex-col items-end">
-                      <span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase mb-1">Step {step.step}</span>
-                      <h3 className="text-lg font-semibold tracking-tight">{step.title}</h3>
-                      <p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed max-w-sm ml-auto">{step.description}</p>
-                    </div>
-                  )}
-                </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#006ea3]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* Center dot */}
-                <div className="flex justify-center relative z-10">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20 bg-white dark:bg-black">
-                    <StepIcon className="w-5 h-5 text-[#006ea3]" strokeWidth={1.5} />
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-5">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#006ea3]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#006ea3] group-hover:border-[#006ea3]/30 transition-all duration-500 shadow-sm">
+                    <StepIcon className="w-6 h-6" strokeWidth={1.5} />
                   </div>
+                  <span className="text-3xl font-bold text-[#006ea3]/20 dark:text-[#006ea3]/15 tabular-nums group-hover:text-[#006ea3]/35 transition-colors duration-500">
+                    {step.step}
+                  </span>
                 </div>
-
-                {/* Right content */}
-                <div className={`${!isLeft ? "pl-10" : ""}`}>
-                  {!isLeft && (
-                    <div className="flex flex-col items-start">
-                      <span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase mb-1">Step {step.step}</span>
-                      <h3 className="text-lg font-semibold tracking-tight">{step.title}</h3>
-                      <p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed max-w-sm">{step.description}</p>
-                    </div>
-                  )}
-                </div>
+                <h3 className="text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] mb-2 group-hover:text-black dark:group-hover:text-white transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p className="text-sm font-medium text-black/45 dark:text-[#8b8b8b] leading-relaxed group-hover:text-black/55 dark:group-hover:text-[#a1a1a1] transition-colors duration-300">
+                  {step.description}
+                </p>
               </div>
-
-              {/* Mobile: left-aligned layout */}
-              <div className="md:hidden flex items-start gap-5 w-full">
-                <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20 bg-white dark:bg-black relative z-10">
-                  <StepIcon className="w-5 h-5 text-[#006ea3]" strokeWidth={1.5} />
-                </div>
-                <div className="flex-1 pt-0.5">
-                  <span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase">Step {step.step}</span>
-                  <h3 className="text-base font-semibold mt-1 tracking-tight">{step.title}</h3>
-                  <p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed">{step.description}</p>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>
@@ -688,61 +809,94 @@ function ProcessTimeline() {
 }
 
 function IndustriesSection() {
-  const { ref, visible } = useInView(0.15);
+  const ref = useRef(null);
+  const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
   return (
     <div ref={ref} className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/[0.04] via-transparent to-[#006ea3]/[0.03] dark:from-[#006ea3]/[0.03] dark:to-[#006ea3]/[0.02] pointer-events-none" />
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#006ea3]/[0.04] rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#006ea3]/[0.05] rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#006ea3]/[0.03] rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-24">
-        {/* Header — centered */}
-        <div
-          className={`text-center mb-16 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+      <div className="relative mx-auto max-w-7xl px-6 py-28">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Industries We Serve</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
             Powering Innovation Across <span className="text-black dark:text-white">Every Industry</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
             Deep domain expertise from banking to healthcare, e-commerce to logistics — ensuring every solution addresses real industry challenges.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Industry grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 mb-14">
           {industries.map((industry, i) => {
             const IndIcon = industry.icon;
             return (
-              <Link
+              <motion.div
                 key={industry.name}
-                href={industry.href}
-                className={`group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white/60 dark:bg-white/[0.02] hover:border-[#006ea3]/30 dark:hover:border-[#006ea3]/30 overflow-hidden transition-all duration-500 ${
-                  visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
-                style={{ transitionDelay: `${200 + i * 70}ms` }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.15 + i * 0.06 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-b from-[#006ea3]/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Link
+                  href={industry.href}
+                  className="group relative block h-full rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#006ea3]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#006ea3]/10 dark:hover:shadow-[#006ea3]/5 overflow-hidden transition-all duration-500"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#006ea3]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-[#006ea3]/10 border border-[#006ea3]/20 group-hover:bg-[#006ea3]/15 group-hover:border-[#006ea3]/30 group-hover:scale-110 transition-all duration-300">
-                  <IndIcon className="w-6 h-6 text-[#006ea3]" strokeWidth={1.5} />
-                </div>
-                <span className="relative text-sm md:text-base font-semibold tracking-tight text-center group-hover:text-[#006ea3] transition-colors duration-300">
-                  {industry.name}
-                </span>
-                <ArrowRight className="relative w-4 h-4 text-black/15 dark:text-white/15 group-hover:text-[#006ea3] group-hover:translate-x-1 transition-all duration-300" />
-              </Link>
+                  {/* Image header */}
+                  <div className="relative h-36 md:h-40 overflow-hidden rounded-t-2xl border-b border-black/[0.04] dark:border-white/[0.04]">
+                    <Image
+                      src={industry.image}
+                      alt={industry.name}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                    <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
+
+                    <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-xl bg-white/90 dark:bg-black/50 border border-white/20 backdrop-blur-md shadow-lg group-hover:bg-[#006ea3] group-hover:border-[#006ea3]/50 transition-all duration-300">
+                      <IndIcon className="w-4 h-4 text-black/60 dark:text-white/70 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                    </div>
+
+                    <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded-lg bg-white/90 dark:bg-black/50 border border-white/20 backdrop-blur-md shadow-lg">
+                      <span className="text-xs font-bold text-[#006ea3]">{industry.stat}</span>
+                      <span className="text-[9px] font-medium text-black/50 dark:text-white/40 ml-1">{industry.statLabel}</span>
+                    </div>
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="relative p-5 md:p-6">
+                    <h3 className="text-base md:text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] group-hover:text-[#006ea3] transition-colors duration-300">
+                      {industry.name}
+                    </h3>
+                    <p className="mt-2 text-[13px] font-medium text-black/45 dark:text-[#8b8b8b] leading-relaxed group-hover:text-black/55 dark:group-hover:text-[#a1a1a1] transition-colors duration-300">
+                      {industry.desc}
+                    </p>
+                    <div className="mt-4 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+                      Explore industry <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
             );
           })}
         </div>
 
-        {/* Bottom highlights */}
-        <div
-          className={`grid grid-cols-2 md:grid-cols-4 gap-4 transition-all duration-700 delay-500 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4"
         >
           {[
             { text: "Customized industry solutions", icon: Lightbulb },
@@ -754,21 +908,22 @@ function IndustriesSection() {
             return (
               <div
                 key={item.text}
-                className="flex items-center gap-3 p-4 rounded-xl border border-black/[0.04] dark:border-white/[0.04] bg-black/[0.01] dark:bg-white/[0.01]"
+                className="flex items-center gap-3 p-4 rounded-xl border border-[#006ea3]/10 dark:border-white/[0.04] bg-white/60 dark:bg-white/[0.01]"
               >
                 <HIcon className="w-4 h-4 text-[#006ea3] flex-shrink-0" strokeWidth={1.5} />
                 <span className="text-xs md:text-sm font-medium text-black/50 dark:text-white/45">{item.text}</span>
               </div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 }
 
 function WhyChooseUs() {
-  const { ref, visible } = useInView(0.15);
+  const ref = useRef(null);
+  const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
   const items = [
     { icon: Users, title: "Expert Teams", stat: "120+", statLabel: "Engineers", desc: "Senior engineers, designers, and strategists with deep domain expertise across industries.", highlights: ["Full-stack expertise", "Domain specialists", "Certified professionals"] },
@@ -780,44 +935,41 @@ function WhyChooseUs() {
   return (
     <div ref={ref} className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#006ea3]/[0.03] via-transparent to-[#006ea3]/[0.03] dark:from-[#006ea3]/[0.02] dark:to-[#006ea3]/[0.02] pointer-events-none" />
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#006ea3]/[0.04] rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#006ea3]/[0.03] rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#006ea3]/[0.05] rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-24">
-        <div
-          className={`text-center mb-16 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+      <div className="relative mx-auto max-w-7xl px-6 py-28">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
             Why Businesses <span className="text-black dark:text-white">Choose Us</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
             We combine technical excellence with business acumen to deliver solutions that truly move the needle.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {items.map((item, i) => {
             const ItemIcon = item.icon;
             return (
-              <div
+              <motion.div
                 key={item.title}
-                className={`group relative flex flex-col rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white/60 dark:bg-white/[0.02] hover:border-[#006ea3]/30 dark:hover:border-[#006ea3]/30 overflow-hidden transition-all duration-500 ${
-                  visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
-                style={{ transitionDelay: `${200 + i * 120}ms` }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
+                className="group relative flex flex-col rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#006ea3]/10 dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#006ea3]/8 overflow-hidden transition-all duration-500"
               >
-                <div className="absolute inset-0 bg-gradient-to-b from-[#006ea3]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-                {/* Top accent line */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#006ea3]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative p-6 md:p-7 flex flex-col flex-1">
-                  {/* Icon + Stat row */}
                   <div className="flex items-start justify-between mb-5">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#006ea3]/10 border border-[#006ea3]/20 group-hover:bg-[#006ea3]/15 group-hover:border-[#006ea3]/30 transition-all duration-300">
-                      <ItemIcon className="w-6 h-6 text-[#006ea3]" strokeWidth={1.5} />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#006ea3]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#006ea3] group-hover:border-[#006ea3]/30 transition-all duration-500 shadow-sm">
+                      <ItemIcon className="w-6 h-6" strokeWidth={1.5} />
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-[#006ea3] tabular-nums leading-none">{item.stat}</div>
@@ -825,11 +977,9 @@ function WhyChooseUs() {
                     </div>
                   </div>
 
-                  {/* Title & Description */}
-                  <h3 className="text-lg font-bold tracking-tight mb-2">{item.title}</h3>
-                  <p className="text-sm text-black/50 dark:text-white/45 leading-relaxed mb-5">{item.desc}</p>
+                  <h3 className="text-lg font-bold tracking-tight text-black/85 dark:text-[#ededed] mb-2 group-hover:text-black dark:group-hover:text-white transition-colors duration-300">{item.title}</h3>
+                  <p className="text-sm text-black/50 dark:text-[#8b8b8b] leading-relaxed mb-5 font-medium">{item.desc}</p>
 
-                  {/* Highlight tags */}
                   <div className="mt-auto flex flex-wrap gap-2">
                     {item.highlights.map((h) => (
                       <span
@@ -842,13 +992,70 @@ function WhyChooseUs() {
                     ))}
                   </div>
                 </div>
-
-                {/* Bottom accent line */}
-                <div className="h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
+              </motion.div>
             );
           })}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function CTASection() {
+  const ref = useRef(null);
+  const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <div ref={ref} className="relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/[0.06] via-transparent to-[#006ea3]/[0.04] dark:from-[#006ea3]/[0.04] dark:to-[#006ea3]/[0.02] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#006ea3]/[0.06] rounded-full blur-[120px] pointer-events-none" />
+
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,110,163,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,110,163,0.3) 1px, transparent 1px)`,
+          backgroundSize: "40px 40px",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-7xl px-6 py-28 text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]"
+        >
+          Ready to Build Something
+          <br />
+          <span className="text-black dark:text-white">Extraordinary?</span>
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed"
+        >
+          Let&apos;s discuss your project. Our team of experts is ready to turn your vision into a market-leading reality.
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <Link
+            href="/resources/free-consultation"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20"
+          >
+            Get a Free Consultation <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="/our-work"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
+          >
+            View Our Work
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
@@ -859,14 +1066,6 @@ function WhyChooseUs() {
    ═══════════════════════════════════════════════════════ */
 
 export default function ServicesPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const [heroVisible, setHeroVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setHeroVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
   const scrollToServices = useCallback(() => {
     const el = document.getElementById("services-grid");
     el?.scrollIntoView({ behavior: "smooth" });
@@ -876,38 +1075,64 @@ export default function ServicesPage() {
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
 
       {/* ── Hero ── */}
-      <div ref={heroRef} className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#006ea3]/10 via-transparent to-transparent dark:from-[#006ea3]/5 pointer-events-none" />
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#006ea3]/10 via-transparent to-transparent dark:from-[#006ea3]/8 pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_var(--tw-gradient-stops))] from-[#006ea3]/5 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_var(--tw-gradient-stops))] from-[#006ea3]/[0.03] via-transparent to-transparent pointer-events-none" />
 
-        <div className="mx-auto max-w-7xl px-6 pt-28 pb-20 text-center relative">
-          <h1
-            className={`text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl transition-all duration-700 ${
-              heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            }`}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.02] dark:opacity-[0.03]"
+          style={{
+            backgroundImage: `radial-gradient(circle, rgba(0,110,163,0.5) 1px, transparent 1px)`,
+            backgroundSize: "32px 32px",
+          }}
+        />
+
+        <div className="mx-auto max-w-7xl px-6 pt-28 sm:pt-32 pb-24 text-center relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#006ea3]/10 border border-[#006ea3]/20 text-[#006ea3] text-xs font-semibold tracking-wide mb-8"
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            Full-Spectrum Digital Services
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
           >
             Innovative Services.
             <br />
             <span className="text-[#006ea3]">Driving Real Growth.</span>
-          </h1>
-          <p
-            className={`mt-6 text-lg md:text-xl font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${
-              heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="mt-6 text-lg md:text-xl font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed"
           >
             From strategy to deployment, we deliver full-spectrum digital services that help businesses innovate, scale, and lead in their markets.
-          </p>
-          <p
-            className={`mt-3 text-sm md:text-base font-medium text-[#006ea3]/70 max-w-xl mx-auto leading-relaxed tracking-wide transition-all duration-700 delay-200 ${
-              heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="mt-3 text-sm md:text-base font-medium text-[#006ea3]/70 max-w-xl mx-auto leading-relaxed tracking-wide"
           >
             Trusted by 50+ companies &bull; 200+ projects delivered &bull; 98% client retention
-          </p>
-          <div
-            className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${
-              heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45 }}
+            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
               href="/resources/free-consultation"
@@ -921,7 +1146,7 @@ export default function ServicesPage() {
             >
               Explore Services
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -947,62 +1172,5 @@ export default function ServicesPage() {
       {/* ── CTA ── */}
       <CTASection />
     </section>
-  );
-}
-
-function CTASection() {
-  const { ref, visible } = useInView(0.25);
-
-  return (
-    <div ref={ref} className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/8 via-transparent to-[#006ea3]/5 dark:from-[#006ea3]/5 dark:to-[#006ea3]/3 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#006ea3]/5 rounded-full blur-[120px] pointer-events-none" />
-
-      {/* Grid pattern overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,110,163,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,110,163,0.3) 1px, transparent 1px)`,
-          backgroundSize: "40px 40px",
-        }}
-      />
-
-      <div className="relative mx-auto max-w-7xl px-6 py-28 text-center">
-        <h2
-          className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b] transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-        >
-          Ready to Build Something
-          <br />
-          <span className="text-black dark:text-white">Extraordinary?</span>
-        </h2>
-        <p
-          className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          Let&apos;s discuss your project. Our team of experts is ready to turn your vision into a market-leading reality.
-        </p>
-        <div
-          className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          <Link
-            href="/resources/free-consultation"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20"
-          >
-            Get a Free Consultation <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            href="/our-work"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
-          >
-            View Our Work
-          </Link>
-        </div>
-      </div>
-    </div>
   );
 }
