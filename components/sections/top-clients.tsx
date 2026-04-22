@@ -53,9 +53,6 @@ export const TopClients: FC = () => {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="inline-block text-[11px] font-semibold text-[#4EB3E8] uppercase tracking-[0.2em] mb-4">
-            Trusted Partners
-          </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
             Companies That <span className="text-black dark:text-white">Trust Us</span>
           </h2>

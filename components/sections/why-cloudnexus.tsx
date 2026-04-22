@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Globe, Handshake, BrainCircuit, ArrowRight, Award, Target, Users } from "lucide-react";
 import Link from "next/link";
 
@@ -56,15 +57,22 @@ const features = [
 ];
 
 export function WhyCloudNexus() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+  const orbY1 = useTransform(scrollYProgress, [0, 1], ["-30%", "30%"]);
+  const orbY2 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
+
   return (
-    <section className="w-full py-20 md:py-28 bg-white dark:bg-black">
-      <div className="mx-auto max-w-7xl px-6 md:px-8">
+    <section ref={sectionRef} className="relative w-full py-20 md:py-28 bg-white dark:bg-black overflow-hidden">
+      <motion.div style={{ y: orbY1 }} className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-[#4EB3E8]/[0.04] rounded-full blur-[120px] pointer-events-none" />
+      <motion.div style={{ y: orbY2 }} className="absolute -bottom-20 -right-20 w-[350px] h-[350px] bg-indigo-500/[0.04] rounded-full blur-[100px] pointer-events-none" />
+      <div className="relative mx-auto max-w-7xl px-6 md:px-8">
         <div className="text-center mb-14">
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              transition={{ type: "spring", stiffness: 100, damping: 15 }}
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]"
             >
               Your Partner for Scalable,
@@ -73,10 +81,10 @@ export function WhyCloudNexus() {
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
               className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto"
             >
               For over a decade, CloudNexus has helped enterprises hire smarter,
@@ -84,14 +92,20 @@ export function WhyCloudNexus() {
             </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {features.map((feature, index) => (
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+        >
+          {features.map((feature) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 + index * 0.08 }}
+              variants={{
+                hidden: { opacity: 0, y: 40, scale: 0.95 },
+                visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 100, damping: 15 } },
+              }}
               className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#121212] border border-[#4EB3E8]/10 dark:border-[#2e2e2e] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/50 hover:bg-[#cde3fc] dark:hover:bg-[#161616] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(59,130,246,0.08)] transition-all duration-500 p-6 sm:p-8 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#4EB3E8]/[0.03] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -119,13 +133,13 @@ export function WhyCloudNexus() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.3 }}
+          transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.4 }}
           className="mt-10 flex justify-center"
         >
           <Link

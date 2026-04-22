@@ -6,7 +6,7 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "What services does CloudNexus offer?",
+    question: "What services and solutions does CloudNexus provide?",
     answer:
       "Custom Software, Mobile Apps, Web Development, Cloud & SaaS, UI/UX Design, Digital Transformation, AI/ML, Cybersecurity, and DevOps.",
   },
@@ -26,19 +26,14 @@ const faqs = [
       "15+ industries: Healthcare, E-Commerce, Fintech, Education, Real Estate, Logistics, Media, and more.",
   },
   {
-    question: "How do you ensure quality and security?",
+    question: "How do you ensure quality, security, and reliability throughout development?",
     answer:
-      "Agile methodology, CI/CD, comprehensive testing, code reviews, security audits. Compliant with HIPAA, SOC 2, GDPR.",
+      "Through Agile methodology, CI/CD pipelines, code reviews, automated testing, performance checks, security audits, and continuous validation. Compliant with HIPAA, SOC 2, and GDPR.",
   },
   {
-    question: "How is quality maintained throughout development?",
+    question: "How do you track and communicate project progress?",
     answer:
-      "Quality is ensured through code reviews, automated testing, performance checks, and continuous validation against defined requirements.",
-  },
-  {
-    question: "How is project progress tracked?",
-    answer:
-      "Progress is tracked through defined milestones, sprint reports, and transparent communication channels, ensuring visibility at every stage.",
+      "Through defined milestones, sprint reports, and transparent communication channels — ensuring full visibility and regular client updates at every stage.",
   },
   {
     question: "What is your pricing model?",
@@ -61,15 +56,15 @@ const leftColumnCount = Math.ceil(faqs.length / 2);
 const leftFaqs = faqs.slice(0, leftColumnCount);
 const rightFaqs = faqs.slice(leftColumnCount);
 
-function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
+function FAQItem({ faq }: { faq: typeof faqs[0]; index: number }) {
   const [open, setOpen] = useState(false);
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: index * 0.04 }}
+      variants={{
+        hidden: { opacity: 0, y: 24, scale: 0.97 },
+        visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 120, damping: 16 } },
+      }}
     >
       <button
         onClick={() => setOpen(!open)}
@@ -111,9 +106,6 @@ export function FAQs() {
             transition={{ duration: 0.4 }}
             className="md:w-[280px] flex-shrink-0 mb-8 md:mb-0 md:sticky md:top-24"
           >
-            <span className="inline-block text-[10px] font-semibold text-black/35 dark:text-white/30 uppercase tracking-[0.2em] mb-2">
-              FAQ
-            </span>
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b] leading-tight">
               Frequently Asked
               <br />
@@ -125,16 +117,28 @@ export function FAQs() {
           </motion.div>
 
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-0">
-            <div className="divide-y divide-black/[0.05] dark:divide-white/[0.05]">
+            <motion.div
+              className="divide-y divide-black/[0.05] dark:divide-white/[0.05]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-40px" }}
+              variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
+            >
               {leftFaqs.map((faq, i) => (
                 <FAQItem key={faq.question} faq={faq} index={i} />
               ))}
-            </div>
-            <div className="divide-y divide-black/[0.05] dark:divide-white/[0.05]">
+            </motion.div>
+            <motion.div
+              className="divide-y divide-black/[0.05] dark:divide-white/[0.05]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-40px" }}
+              variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } } }}
+            >
               {rightFaqs.map((faq, i) => (
                 <FAQItem key={faq.question} faq={faq} index={i + leftColumnCount} />
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { type FC, useRef, useCallback, useState, useEffect } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import {
   ArrowRight, Code2, Smartphone, Globe, Cloud, Palette,
@@ -449,8 +450,11 @@ const services = [
 
 export const KnownFor: FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const totalCards = services.length;
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+  const orbY = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
 
   const scrollToIndex = useCallback((index: number) => {
     const el = scrollRef.current;
@@ -483,8 +487,9 @@ export const KnownFor: FC = () => {
   }, [totalCards]);
 
   return (
-    <section className="w-full py-12 bg-white dark:bg-black">
-      <div className="mx-auto max-w-7xl px-6 md:px-8">
+    <section ref={sectionRef} className="relative w-full py-12 bg-white dark:bg-black overflow-hidden">
+      <motion.div style={{ y: orbY }} className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#4EB3E8]/[0.03] rounded-full blur-[120px] pointer-events-none" />
+      <div className="relative mx-auto max-w-7xl px-6 md:px-8">
         {/* Carousel within max-w-7xl container */}
         <div className="relative group/carousel overflow-hidden">
           {/* Left arrow */}

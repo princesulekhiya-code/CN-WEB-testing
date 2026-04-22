@@ -154,9 +154,6 @@ export default function AboutUsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block text-[11px] font-semibold text-[#4EB3E8] uppercase tracking-[0.2em] mb-4">
-                Our Mission
-              </span>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
                 Empowering Enterprises
                 <br className="hidden sm:block" />

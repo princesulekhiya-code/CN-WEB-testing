@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
@@ -105,9 +106,6 @@ export function TechStack() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="inline-block text-[11px] font-semibold text-[#4EB3E8] uppercase tracking-[0.2em] mb-4">
-            Technology Stack
-          </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
             Built with <span className="text-black dark:text-white">modern technology</span>
           </h2>
@@ -140,35 +138,38 @@ export function TechStack() {
         </div>
 
         {/* Tech Grid */}
-        <div
-          className={`transition-all duration-700 delay-300 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+        <motion.div
+          key={activeTab}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5"
+          initial="hidden"
+          animate={visible ? "visible" : "hidden"}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.06 } } }}
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
-            {categories[activeTab].items.map((tech, i) => (
-              <div
-                key={tech.name}
-                className="group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.03] dark:hover:border-[#4EB3E8]/30 dark:hover:bg-[#4EB3E8]/[0.05] transition-all duration-300 cursor-default"
-                style={{ animationDelay: `${i * 60}ms` }}
-              >
-                <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
-                  <Image
-                    src={tech.logo}
-                    alt={tech.name}
-                    width={48}
-                    height={48}
-                    className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-110 transition-transform duration-300"
-                    unoptimized
-                  />
-                </div>
-                <span className="text-sm md:text-base font-semibold text-black/70 dark:text-white/60 group-hover:text-black dark:group-hover:text-white transition-colors duration-300 text-center">
-                  {tech.name}
-                </span>
+          {categories[activeTab].items.map((tech) => (
+            <motion.div
+              key={tech.name}
+              variants={{
+                hidden: { opacity: 0, y: 30, scale: 0.9 },
+                visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 120, damping: 14 } },
+              }}
+              className="group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.03] dark:hover:border-[#4EB3E8]/30 dark:hover:bg-[#4EB3E8]/[0.05] transition-all duration-300 cursor-default"
+            >
+              <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                <Image
+                  src={tech.logo}
+                  alt={tech.name}
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-110 transition-transform duration-300"
+                  unoptimized
+                />
               </div>
-            ))}
-          </div>
-        </div>
+              <span className="text-sm md:text-base font-semibold text-black/70 dark:text-white/60 group-hover:text-black dark:group-hover:text-white transition-colors duration-300 text-center">
+                {tech.name}
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
 
         {/* Scrolling marquee of all tech */}
         <div
@@ -176,9 +177,6 @@ export function TechStack() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <p className="text-center text-sm font-semibold text-black/30 dark:text-white/25 uppercase tracking-[0.2em] mb-8">
-            And many more technologies we work with
-          </p>
           <div className="relative w-full">
             <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { TypingAnimation } from '../ui/typing-animation';
 import { Component, type ReactNode, useState, useEffect, useRef, useCallback } from 'react';
 import { useTheme } from 'next-themes';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const SPLINE_DARK = 'https://prod.spline.design/s5qNGeR6oT0MDO0i/scene.splinecode';
 const SPLINE_LIGHT = 'https://prod.spline.design/GKBZHlmODH6AWg9T/scene.splinecode';
@@ -176,16 +177,18 @@ function HeroStats() {
 export function HeroSection() {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Before mount resolvedTheme is undefined (SSR) — default to dark
   const splineScene = mounted && resolvedTheme === 'light' ? SPLINE_LIGHT : SPLINE_DARK;
 
   return (
-    <section className="relative w-full overflow-hidden py-8 sm:py-12">
+    <section ref={sectionRef} className="relative w-full overflow-hidden py-8 sm:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
@@ -261,9 +264,9 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div
+      <motion.div
+        style={{ y: bgY, background: 'radial-gradient(circle, oklch(0.55 0.245 262 / 12%) 0%, transparent 70%)' }}
         className="absolute top-0 right-0 -z-10 translate-x-1/2 -translate-y-1/2 pointer-events-none w-[700px] h-[700px]"
-        style={{ background: 'radial-gradient(circle, oklch(0.55 0.245 262 / 12%) 0%, transparent 70%)' }}
       />
     </section>
   );

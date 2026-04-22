@@ -805,54 +805,96 @@ function ProcessTimeline() {
   const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <div ref={ref} className="mx-auto max-w-6xl px-6 py-28">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-16"
-      >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
-          From Concept to <span className="text-black dark:text-white">Production</span>
-        </h2>
-        <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-          A battle-tested six-phase process balancing speed, quality, and full visibility — so there are no surprises on launch day.
-        </p>
-      </motion.div>
+    <div ref={ref} className="relative overflow-hidden border-y border-black/[0.06] dark:border-white/[0.06]">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#4EB3E8]/[0.02] via-transparent to-[#4EB3E8]/[0.02] dark:from-[#4EB3E8]/[0.01] dark:to-[#4EB3E8]/[0.01] pointer-events-none" />
+      <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-[#4EB3E8]/[0.03] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 w-[300px] h-[300px] bg-[#4EB3E8]/[0.03] rounded-full blur-[100px] pointer-events-none" />
+      <div className="relative mx-auto max-w-5xl px-6 py-28">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+            From Concept to <span className="text-black dark:text-white">Production</span>
+          </h2>
+          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
+            A battle-tested six-phase process balancing speed, quality, and full visibility — so there are no surprises on launch day.
+          </p>
+        </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {processSteps.map((step, i) => {
-          const StepIcon = step.icon;
-          return (
-            <motion.div
-              key={step.step}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
-              className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#4EB3E8]/10 dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#4EB3E8]/8 overflow-hidden transition-all duration-500 p-6 sm:p-7"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#4EB3E8]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#4EB3E8]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-5">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#4EB3E8]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#4EB3E8] group-hover:border-[#4EB3E8]/30 transition-all duration-500 shadow-sm">
-                    <StepIcon className="w-6 h-6" strokeWidth={1.5} />
+        <div className="relative">
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
+            <div className="w-px h-full bg-gradient-to-b from-[#4EB3E8]/30 via-[#4EB3E8]/15 to-[#4EB3E8]/5" />
+          </div>
+          {processSteps.map((step, i) => {
+            const StepIcon = step.icon;
+            const isLeft = i % 2 === 0;
+            return (
+              <motion.div key={step.step} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 + i * 0.12 }} className="relative mb-16 last:mb-0">
+                <div className="hidden md:grid md:grid-cols-[1fr_72px_1fr] w-full items-start">
+                  <div className={isLeft ? "pr-12" : ""}>
+                    {isLeft && (
+                      <div className="group flex flex-col items-end text-right rounded-2xl p-6 border border-transparent hover:border-[#4EB3E8]/15 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#4EB3E8]/[0.04] transition-all duration-500">
+                        <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase mb-2">Step {step.step}</span>
+                        <h3 className="text-xl font-bold tracking-tight group-hover:text-[#4EB3E8] transition-colors duration-300">{step.title}</h3>
+                        <p className="mt-3 text-sm font-medium text-black/45 dark:text-white/40 leading-relaxed max-w-sm ml-auto">{step.description}</p>
+                        <div className="mt-4 flex items-center gap-2 w-full max-w-[200px] ml-auto">
+                          <div className="flex-1 h-1 rounded-full bg-black/[0.04] dark:bg-white/[0.04] overflow-hidden">
+                            <motion.div className="h-full rounded-full bg-[#4EB3E8]/30" initial={{ width: 0 }} animate={isInView ? { width: `${((i + 1) / processSteps.length) * 100}%` } : {}} transition={{ duration: 1, delay: 0.6 + i * 0.15, ease: "easeOut" }} />
+                          </div>
+                          <span className="text-[10px] font-semibold text-black/20 dark:text-white/15 tabular-nums">{i + 1}/{processSteps.length}</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  <span className="text-3xl font-bold text-[#4EB3E8]/20 dark:text-[#4EB3E8]/15 tabular-nums group-hover:text-[#4EB3E8]/35 transition-colors duration-500">
-                    {step.step}
-                  </span>
+                  <div className="flex justify-center relative z-10">
+                    <div className="group relative">
+                      <motion.div className="absolute inset-0 rounded-2xl border border-[#4EB3E8]/20" initial={{ scale: 1, opacity: 0 }} animate={isInView ? { scale: [1, 1.5, 1.5], opacity: [0, 0.3, 0] } : {}} transition={{ duration: 2, delay: 0.5 + i * 0.2, repeat: Infinity, repeatDelay: 3 }} />
+                      <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#4EB3E8] flex items-center justify-center z-10">
+                        <span className="text-[9px] font-bold text-white">{step.step}</span>
+                      </div>
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white dark:bg-black border-2 border-[#4EB3E8]/25 shadow-lg shadow-[#4EB3E8]/10 group-hover:border-[#4EB3E8]/50 group-hover:shadow-[#4EB3E8]/20 group-hover:scale-110 transition-all duration-500">
+                        <StepIcon className="w-6 h-6 text-[#4EB3E8]" strokeWidth={1.5} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={!isLeft ? "pl-12" : ""}>
+                    {!isLeft && (
+                      <div className="group flex flex-col items-start text-left rounded-2xl p-6 border border-transparent hover:border-[#4EB3E8]/15 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#4EB3E8]/[0.04] transition-all duration-500">
+                        <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase mb-2">Step {step.step}</span>
+                        <h3 className="text-xl font-bold tracking-tight group-hover:text-[#4EB3E8] transition-colors duration-300">{step.title}</h3>
+                        <p className="mt-3 text-sm font-medium text-black/45 dark:text-white/40 leading-relaxed max-w-sm">{step.description}</p>
+                        <div className="mt-4 flex items-center gap-2 w-full max-w-[200px]">
+                          <div className="flex-1 h-1 rounded-full bg-black/[0.04] dark:bg-white/[0.04] overflow-hidden">
+                            <motion.div className="h-full rounded-full bg-[#4EB3E8]/30" initial={{ width: 0 }} animate={isInView ? { width: `${((i + 1) / processSteps.length) * 100}%` } : {}} transition={{ duration: 1, delay: 0.6 + i * 0.15, ease: "easeOut" }} />
+                          </div>
+                          <span className="text-[10px] font-semibold text-black/20 dark:text-white/15 tabular-nums">{i + 1}/{processSteps.length}</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] mb-2 group-hover:text-black dark:group-hover:text-white transition-colors duration-300">
-                  {step.title}
-                </h3>
-                <p className="text-sm font-medium text-black/45 dark:text-[#8b8b8b] leading-relaxed group-hover:text-black/55 dark:group-hover:text-[#a1a1a1] transition-colors duration-300">
-                  {step.description}
-                </p>
-              </div>
-            </motion.div>
-          );
-        })}
+                <div className="md:hidden flex items-start gap-5 w-full">
+                  <div className="flex-shrink-0 relative z-10">
+                    <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#4EB3E8] flex items-center justify-center">
+                      <span className="text-[8px] font-bold text-white">{step.step}</span>
+                    </div>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white dark:bg-black border-2 border-[#4EB3E8]/25 shadow-md shadow-[#4EB3E8]/10">
+                      <StepIcon className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
+                    </div>
+                  </div>
+                  <div className="flex-1 pt-0.5">
+                    <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase">Step {step.step}</span>
+                    <h3 className="text-base font-bold mt-1 tracking-tight">{step.title}</h3>
+                    <p className="mt-2 text-sm font-medium text-black/45 dark:text-white/40 leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
@@ -875,7 +917,6 @@ function IndustriesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-[11px] font-semibold text-[#4EB3E8] uppercase tracking-[0.2em] mb-4">Industry Expertise</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
             Built for <span className="text-black dark:text-white">Your Industry</span>
           </h2>
@@ -1143,15 +1184,6 @@ export default function ServicesPage() {
 
             {/* Left — Text Content */}
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#4EB3E8]/10 border border-[#4EB3E8]/20 text-[#4EB3E8] text-xs font-semibold tracking-wide mb-8"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                End-to-End Digital Capabilities
-              </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 24 }}

@@ -173,54 +173,14 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
 ]
 
 const industries = [
-  {
-    icon: Stethoscope, name: "Healthcare", href: "/industry/healthcare-lifesciences",
-    desc: "Patient portals, telemedicine SaaS, and cloud-native healthcare platforms",
-    accent: "#EF4444", stat: "15+", statLabel: "Healthcare Products",
-    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    icon: ShoppingCart, name: "Retail", href: "/industry/ecommerce-solutions",
-    desc: "Inventory, POS, e-commerce SaaS, and retail cloud platforms",
-    accent: "#8B5CF6", stat: "30+", statLabel: "Stores Launched",
-    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    icon: CreditCard, name: "Fintech", href: "/industry/banking-finance-insurance",
-    desc: "Payments, lending, banking SaaS, and financial cloud platforms",
-    accent: "#10B981", stat: "25+", statLabel: "FinTech Products",
-    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    icon: Truck, name: "Logistics", href: "/industry/transport-logistics",
-    desc: "Fleet visibility, supply-chain SaaS, and logistics cloud platforms",
-    accent: "#06B6D4", stat: "12+", statLabel: "Logistics Platforms",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    icon: GraduationCap, name: "Education", href: "/industry/education-elearning",
-    desc: "LMS, online learning platforms, and education-focused SaaS",
-    accent: "#F59E0B", stat: "20+", statLabel: "EdTech Platforms",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    icon: Building2, name: "Real Estate", href: "/industry/real-estate",
-    desc: "Property-management SaaS, tenant portals, and real-estate cloud platforms",
-    accent: "#EC4899", stat: "10+", statLabel: "PropTech Products",
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    icon: Gamepad2, name: "Entertainment", href: "/industry/entertainment",
-    desc: "Streaming, content SaaS, and entertainment cloud platforms",
-    accent: "#A855F7", stat: "14+", statLabel: "Media Experiences",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop&q=80",
-  },
-  {
-    icon: Factory, name: "Enterprise", href: "/industry/enterprise-retail-manufacturing",
-    desc: "ERP, workflow-automation SaaS, and enterprise cloud platforms",
-    accent: "#F97316", stat: "8+", statLabel: "Enterprise Systems",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop&q=80",
-  },
+  { icon: CreditCard, name: "FinTech & Banking", href: "/industry/banking-finance-insurance", desc: "Secure digital banking, seamless payment rails, real-time trading interfaces & built-in regulatory safeguards", accent: "#10B981", stat: "25+", statLabel: "FinTech Apps", image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&h=400&fit=crop&q=80" },
+  { icon: Stethoscope, name: "Healthcare", href: "/industry/healthcare-lifesciences", desc: "Virtual care platforms, electronic health records, patient engagement portals & privacy-first architecture", accent: "#EF4444", stat: "15+", statLabel: "Health Apps", image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop&q=80" },
+  { icon: ShoppingCart, name: "E-Commerce", href: "/industry/ecommerce-solutions", desc: "Conversion-optimized storefronts, multi-vendor marketplaces, live inventory sync & composable commerce stacks", accent: "#8B5CF6", stat: "30+", statLabel: "Stores Built", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop&q=80" },
+  { icon: GraduationCap, name: "Education", href: "/industry/education-elearning", desc: "Immersive learning management systems, gamified courses, live virtual classrooms & adaptive EdTech experiences", accent: "#F59E0B", stat: "20+", statLabel: "EdTech Solutions", image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80" },
+  { icon: Truck, name: "Logistics", href: "/industry/transport-logistics", desc: "GPS fleet visibility, AI-powered route planning, warehouse automation & end-to-end supply chain orchestration", accent: "#06B6D4", stat: "12+", statLabel: "Logistics Apps", image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop&q=80" },
+  { icon: Building2, name: "Real Estate", href: "/industry/real-estate", desc: "Smart property portals, 3D virtual walkthroughs, agent CRM tools & automated tenant lifecycle management", accent: "#EC4899", stat: "10+", statLabel: "PropTech Apps", image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop&q=80" },
+  { icon: Factory, name: "Manufacturing", href: "/industry/enterprise-retail-manufacturing", desc: "Real-time IoT monitoring, ERP connectors, automated QC workflows & digital production line tracking", accent: "#F97316", stat: "8+", statLabel: "Mfg Solutions", image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop&q=80" },
+  { icon: BarChart3, name: "SaaS & Startups", href: "/industry/fintech", desc: "Lean MVP launches, multi-tenant platform architecture, recurring billing engines & growth-stage scaling playbooks", accent: "#4EB3E8", stat: "40+", statLabel: "SaaS Products", image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&q=80" },
 ];
 
 const whyChoose = [
@@ -406,77 +366,44 @@ function IndustriesSection() {
   const { ref, visible } = useInView(0.15);
 
   return (
-    <div ref={ref} className="relative overflow-hidden border-y border-black/[0.06] dark:border-white/[0.06]">
+    <div ref={ref} className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#4EB3E8]/[0.04] via-transparent to-[#4EB3E8]/[0.03] dark:from-[#4EB3E8]/[0.03] dark:to-[#4EB3E8]/[0.02] pointer-events-none" />
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#4EB3E8]/[0.05] rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#4EB3E8]/[0.03] rounded-full blur-[100px] pointer-events-none" />
-
       <div className="relative mx-auto max-w-7xl px-6 py-28">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 24 }}
-          animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="inline-block text-[11px] font-semibold text-[#4EB3E8] uppercase tracking-[0.2em] mb-4">
-            Industries
-          </span>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
-            Industries We <span className="text-black dark:text-white">Build For</span>
+            Industries We <span className="text-black dark:text-white">Serve</span>
           </h2>
-          <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-            Proven expertise across verticals—every engagement is informed by a thorough grasp of your industry context.
+          <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
+            Vertical-specific knowledge baked into every engagement — from regulatory nuances in finance to patient-safety standards in healthcare.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
-          {industries.map((ind, i) => {
-            const IndIcon = ind.icon;
+          {industries.map((industry, i) => {
+            const IndIcon = industry.icon;
             return (
-              <motion.div
-                key={ind.name}
-                initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                animate={visible ? { opacity: 1, y: 0, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.15 + i * 0.06 }}
-              >
-                <Link
-                  href={ind.href}
-                  className="group relative block h-full rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#4EB3E8]/10 dark:hover:shadow-[#4EB3E8]/5 overflow-hidden transition-all duration-500"
-                >
+              <motion.div key={industry.name} initial={{ opacity: 0, y: 20 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.15 + i * 0.06 }}>
+                <Link href={industry.href} className="group relative block h-full rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#4EB3E8]/10 dark:hover:shadow-[#4EB3E8]/5 overflow-hidden transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-b from-[#4EB3E8]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                   <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#4EB3E8]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
                   <div className="relative h-36 md:h-40 overflow-hidden rounded-t-2xl border-b border-black/[0.04] dark:border-white/[0.04]">
-                    <Image
-                      src={ind.image}
-                      alt={ind.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      unoptimized
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                    <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
-
+                    <Image src={industry.image} alt={industry.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out saturate-[0.85] group-hover:saturate-100" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" unoptimized />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5 dark:from-black/60 dark:via-black/20 dark:to-black/10" />
+                    <div className="absolute inset-0 bg-[#4EB3E8]/[0.06] dark:bg-[#4EB3E8]/[0.08] mix-blend-overlay group-hover:bg-transparent transition-colors duration-500" />
                     <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-xl bg-white/90 dark:bg-black/50 border border-white/20 backdrop-blur-md shadow-lg group-hover:bg-[#4EB3E8] group-hover:border-[#4EB3E8]/50 transition-all duration-300">
                       <IndIcon className="w-4 h-4 text-black/60 dark:text-white/70 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                     </div>
-
                     <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded-lg bg-white/90 dark:bg-black/50 border border-white/20 backdrop-blur-md shadow-lg">
-                      <span className="text-xs font-bold text-[#4EB3E8]">{ind.stat}</span>
-                      <span className="text-[9px] font-medium text-black/50 dark:text-white/40 ml-1">{ind.statLabel}</span>
+                      <span className="text-xs font-bold text-[#4EB3E8]">{industry.stat}</span>
+                      <span className="text-[9px] font-medium text-black/50 dark:text-white/40 ml-1">{industry.statLabel}</span>
                     </div>
                   </div>
-
                   <div className="relative p-5 md:p-6">
-                    <h3 className="text-base md:text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] group-hover:text-[#4EB3E8] transition-colors duration-300">
-                      {ind.name}
-                    </h3>
-                    <p className="mt-2 text-[13px] font-medium text-black/45 dark:text-[#8b8b8b] leading-relaxed group-hover:text-black/55 dark:group-hover:text-[#a1a1a1] transition-colors duration-300">
-                      {ind.desc}
-                    </p>
+                    <h3 className="text-base md:text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] group-hover:text-[#4EB3E8] transition-colors duration-300">{industry.name}</h3>
+                    <p className="mt-2 text-[13px] font-medium text-black/45 dark:text-[#8b8b8b] leading-relaxed group-hover:text-black/55 dark:group-hover:text-[#a1a1a1] transition-colors duration-300">{industry.desc}</p>
                     <div className="mt-4 flex items-center text-[13px] font-semibold text-[#4EB3E8] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      Explore the industry <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      Explore industry <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
                 </Link>

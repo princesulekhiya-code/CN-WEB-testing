@@ -86,17 +86,32 @@ const NAV_ITEMS: NavItem[] = [
 export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const lastScrollY = useRef(0);
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 12);
+
+      if (currentY < 60) {
+        setHidden(false);
+      } else if (currentY > lastScrollY.current + 5) {
+        setHidden(true);
+        setOpenDropdown(null);
+      } else if (currentY < lastScrollY.current - 5) {
+        setHidden(false);
+      }
+      lastScrollY.current = currentY;
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -130,10 +145,15 @@ export function Navbar() {
   };
 
   return (
+    <>
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ${
+        hidden && !mobileOpen
+          ? "-translate-y-full shadow-none"
+          : "translate-y-0"
+      } ${
         scrolled
-          ? "border-b border-black/[0.08] bg-white shadow-lg shadow-black/5 backdrop-blur-2xl dark:border-white/[0.10] dark:bg-black/98 dark:shadow-black/40"
+          ? "border-b border-black/[0.08] bg-white/95 shadow-lg shadow-black/5 backdrop-blur-2xl dark:border-white/[0.10] dark:bg-black/95 dark:shadow-black/40"
           : "border-b border-black/[0.04] bg-white backdrop-blur-xl dark:border-white/[0.06] dark:bg-black/95"
       }`}
     >
@@ -378,5 +398,7 @@ export function Navbar() {
         </div>
       )}
     </header>
+    <div className="h-[58px]" />
+    </>
   );
 }

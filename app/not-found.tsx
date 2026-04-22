@@ -5,9 +5,6 @@ export default function NotFound() {
   return (
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white flex flex-col items-center justify-center">
       <div className="mx-auto max-w-2xl px-6 text-center">
-        <span className="inline-block text-[11px] font-semibold text-black/40 dark:text-white/40 uppercase tracking-[0.2em] mb-4">
-          404
-        </span>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
           Page Not Found
         </h1>
