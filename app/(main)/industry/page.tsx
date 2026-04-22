@@ -192,7 +192,7 @@ export default function IndustryPage() {
       </div>
 
       {/* Industries Grid */}
-      <div className="mx-auto max-w-7xl px-6 py-24">
+      <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {industries.map((industry, i) => {
             const Icon = industry.icon;
@@ -238,7 +238,7 @@ export default function IndustryPage() {
 
       {/* CTA */}
       <div className="border-t border-black/[0.06] dark:border-white/[0.06]">
-        <div className="mx-auto max-w-7xl px-6 py-24 text-center">
+        <div className="mx-auto max-w-7xl px-6 py-16 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

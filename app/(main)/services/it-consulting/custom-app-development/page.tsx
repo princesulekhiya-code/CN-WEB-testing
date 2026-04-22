@@ -117,7 +117,7 @@ function HeroVisual({ heroReady }: { heroReady: boolean }) {
 function ServiceOfferingsSection() {
   const { ref, visible } = useInView(0.1);
   return (
-    <div ref={ref} className="mx-auto max-w-7xl px-6 py-24">
+    <div ref={ref} className="mx-auto max-w-7xl px-6 py-16">
       <div className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Custom App Development Services</h2>
         <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Full-cycle application development — from web and mobile to enterprise systems and APIs — built for performance, scale, and growth.</p>
@@ -140,7 +140,7 @@ function ProcessSection() {
   const { ref, visible } = useInView(0.1);
   return (
     <div ref={ref} className="border-y border-black/[0.06] dark:border-white/[0.06] bg-black/[0.01] dark:bg-white/[0.01]">
-      <div className="mx-auto max-w-5xl px-6 py-24">
+      <div className="mx-auto max-w-5xl px-6 py-16">
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Our Development Process</h2>
           <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">An agile, six-phase process from requirements through post-launch support — delivering quality applications on time.</p>
@@ -169,7 +169,7 @@ function ProcessSection() {
 function TechStackSection() {
   const { ref, visible } = useInView(0.15);
   return (
-    <div ref={ref} className="mx-auto max-w-7xl px-6 py-24">
+    <div ref={ref} className="mx-auto max-w-7xl px-6 py-16">
       <div className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Technologies We Use</h2>
         <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">Modern, battle-tested technology stacks across frontend, backend, mobile, databases, and cloud infrastructure.</p>
@@ -189,7 +189,7 @@ function TechStackSection() {
 function WhyChooseSection() {
   const { ref, visible } = useInView(0.2);
   return (
-    <div ref={ref} className="mx-auto max-w-7xl px-6 py-24">
+    <div ref={ref} className="mx-auto max-w-7xl px-6 py-16">
       <div className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why Choose Cloud Nexus for App Development</h2>
       </div>
@@ -213,7 +213,7 @@ function CTASection() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/8 via-transparent to-[#006ea3]/5 dark:from-[#006ea3]/5 dark:to-[#006ea3]/3 pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#006ea3]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]" style={{ backgroundImage: "linear-gradient(rgba(0,110,163,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,110,163,0.3) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-      <div className="relative mx-auto max-w-7xl px-6 py-28 text-center">
+      <div className="relative mx-auto max-w-7xl px-6 py-20 text-center">
         <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>Have an App Idea?<br /><span className="text-[#006ea3]">Let&apos;s Build It Together</span></h2>
         <p className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>Share your project requirements and get a free technical consultation. Our team will evaluate your idea and propose the best technology approach.</p>
         <div className={`mt-10 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 delay-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>

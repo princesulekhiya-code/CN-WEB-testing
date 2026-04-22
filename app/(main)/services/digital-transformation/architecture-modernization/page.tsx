@@ -251,7 +251,7 @@ function ServiceOfferingsSection() {
   const { ref, visible } = useInView(0.1);
 
   return (
-    <div ref={ref} className="mx-auto max-w-7xl px-6 py-24">
+    <div ref={ref} className="mx-auto max-w-7xl px-6 py-16">
       <div
         className={`text-center mb-14 transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -308,7 +308,7 @@ function ProcessSection() {
 
   return (
     <div ref={ref} className="border-y border-black/[0.06] dark:border-white/[0.06] bg-black/[0.01] dark:bg-white/[0.01]">
-      <div className="mx-auto max-w-5xl px-6 py-24">
+      <div className="mx-auto max-w-5xl px-6 py-16">
         <div
           className={`text-center mb-16 transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -392,7 +392,7 @@ function TechStackSection() {
   const { ref, visible } = useInView(0.15);
 
   return (
-    <div ref={ref} className="mx-auto max-w-7xl px-6 py-24">
+    <div ref={ref} className="mx-auto max-w-7xl px-6 py-16">
       <div
         className={`text-center mb-14 transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -435,7 +435,7 @@ function WhyChooseSection() {
   const { ref, visible } = useInView(0.2);
 
   return (
-    <div ref={ref} className="mx-auto max-w-7xl px-6 py-24">
+    <div ref={ref} className="mx-auto max-w-7xl px-6 py-16">
       <div
         className={`text-center mb-14 transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -477,7 +477,7 @@ function CTASection() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#4EB3E8]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]" style={{ backgroundImage: "linear-gradient(rgba(0,110,163,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,110,163,0.3) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-28 text-center">
+      <div className="relative mx-auto max-w-7xl px-6 py-20 text-center">
         <h2
           className={`text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"

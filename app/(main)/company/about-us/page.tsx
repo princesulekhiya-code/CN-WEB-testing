@@ -145,7 +145,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* Mission */}
-      <div className="w-full py-16 md:py-24 px-6 md:px-8">
+      <div className="w-full py-12 md:py-16 px-6 md:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -210,7 +210,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* Values */}
-      <div className="w-full py-16 md:py-24 px-6 md:px-8 border-t border-black/[0.06] dark:border-[#1e1e1e] dark:border-white/[0.06]">
+      <div className="w-full py-12 md:py-16 px-6 md:px-8 border-t border-black/[0.06] dark:border-[#1e1e1e] dark:border-white/[0.06]">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
@@ -268,7 +268,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* Team Pillars */}
-      <div className="w-full py-16 md:py-24 px-6 md:px-8 border-t border-black/[0.06] dark:border-[#1e1e1e] dark:border-white/[0.06]">
+      <div className="w-full py-12 md:py-16 px-6 md:px-8 border-t border-black/[0.06] dark:border-[#1e1e1e] dark:border-white/[0.06]">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col gap-6 mb-14">
             <motion.div
@@ -336,7 +336,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* CTA */}
-      <div className="w-full py-16 md:py-24 px-6 md:px-8 border-t border-black/[0.06] dark:border-[#1e1e1e] dark:border-white/[0.06]">
+      <div className="w-full py-12 md:py-16 px-6 md:px-8 border-t border-black/[0.06] dark:border-[#1e1e1e] dark:border-white/[0.06]">
         <div className="mx-auto max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
