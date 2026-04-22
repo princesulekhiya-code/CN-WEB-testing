@@ -37,7 +37,7 @@ export function FreeConsultation() {
       <div className="mx-auto max-w-5xl px-6 md:px-8">
         <div
           ref={sectionRef}
-          className={`relative overflow-hidden rounded-2xl border border-[#006ea3]/10 dark:border-white/[0.08] bg-[#D9EAFD] dark:bg-gradient-to-br dark:from-[#0a0a0a] dark:via-[#0f0f0f] dark:to-zinc-900 transition-all duration-700 ease-out ${
+          className={`relative overflow-hidden rounded-2xl border border-[#4EB3E8]/10 dark:border-white/[0.08] bg-[#D9EAFD] dark:bg-gradient-to-br dark:from-[#0a0a0a] dark:via-[#0f0f0f] dark:to-zinc-900 transition-all duration-700 ease-out ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
@@ -47,7 +47,7 @@ export function FreeConsultation() {
             }`}
           />
           <div
-            className={`absolute bottom-0 left-0 w-60 h-60 bg-[#006ea3]/10 rounded-full blur-3xl pointer-events-none translate-y-1/2 -translate-x-1/3 transition-opacity duration-1000 delay-500 ${
+            className={`absolute bottom-0 left-0 w-60 h-60 bg-[#4EB3E8]/10 rounded-full blur-3xl pointer-events-none translate-y-1/2 -translate-x-1/3 transition-opacity duration-1000 delay-500 ${
               visible ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -55,7 +55,7 @@ export function FreeConsultation() {
           <div className="relative px-5 py-10 sm:px-8 sm:py-12 md:px-14 md:py-16 flex flex-col md:flex-row items-center gap-8 sm:gap-10 md:gap-14">
             <div className="flex-1 text-center md:text-left">
               <span
-                className={`inline-block text-[11px] font-semibold text-[#006ea3] dark:text-indigo-400 uppercase tracking-[0.2em] mb-4 transition-all duration-500 delay-200 ${
+                className={`inline-block text-[11px] font-semibold text-[#4EB3E8] dark:text-indigo-400 uppercase tracking-[0.2em] mb-4 transition-all duration-500 delay-200 ${
                   visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
                 }`}
               >
@@ -114,9 +114,9 @@ export function FreeConsultation() {
                 visible ? "opacity-100 translate-x-0 scale-100" : "opacity-0 translate-x-6 scale-95"
               }`}
             >
-              <div className="w-44 h-44 rounded-2xl border border-[#006ea3]/10 dark:border-white/[0.08] bg-white dark:bg-white/[0.04] backdrop-blur-sm flex flex-col items-center justify-center gap-3">
-                <div className="w-14 h-14 rounded-xl bg-[#006ea3]/10 dark:bg-indigo-500/15 flex items-center justify-center">
-                  <MessageSquare size={28} strokeWidth={1.5} className="text-[#006ea3] dark:text-indigo-400" />
+              <div className="w-44 h-44 rounded-2xl border border-[#4EB3E8]/10 dark:border-white/[0.08] bg-white dark:bg-white/[0.04] backdrop-blur-sm flex flex-col items-center justify-center gap-3">
+                <div className="w-14 h-14 rounded-xl bg-[#4EB3E8]/10 dark:bg-indigo-500/15 flex items-center justify-center">
+                  <MessageSquare size={28} strokeWidth={1.5} className="text-[#4EB3E8] dark:text-indigo-400" />
                 </div>
                 <div className="text-center">
                   <p className="text-xs font-semibold text-black dark:text-white">Talk to an Expert</p>
@@ -127,7 +127,7 @@ export function FreeConsultation() {
                 {[...Array(3)].map((_, i) => (
                   <div key={i} className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                     visible ? "scale-100" : "scale-0"
-                  } ${i === 0 ? "bg-[#006ea3] dark:bg-indigo-400" : "bg-black/15 dark:bg-white/20"}`}
+                  } ${i === 0 ? "bg-[#4EB3E8] dark:bg-indigo-400" : "bg-black/15 dark:bg-white/20"}`}
                   style={{ transitionDelay: `${700 + i * 100}ms` }}
                   />
                 ))}

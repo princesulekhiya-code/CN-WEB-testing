@@ -148,7 +148,7 @@ export function Navbar() {
             <Image
               src="/asset/cn-logo.png"
               alt="Cloud Nexus Logo"
-              className="object-contain dark:[filter:invert(1)_hue-rotate(180deg)_brightness(1.1)]"
+              className="object-contain [filter:saturate(1.6)_hue-rotate(-12deg)_brightness(0.7)_contrast(1.15)] dark:[filter:invert(1)_hue-rotate(180deg)_saturate(1.2)_brightness(1.15)]"
               fill
               sizes="176px"
               priority

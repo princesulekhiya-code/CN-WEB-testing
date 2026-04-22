@@ -186,7 +186,7 @@ export const projects: Project[] = [
   {
     id: "fleettrack-logistics",
     tag: "Fleet Management",
-    tagColor: "bg-[#006ea3]/15 text-[#4a7db8] border-[#006ea3]/30",
+    tagColor: "bg-[#4EB3E8]/15 text-[#4a7db8] border-[#4EB3E8]/30",
     company: "FleetTrack",
     industry: "Transport & Logistics",
     industrySlug: "transport-logistics",
@@ -207,7 +207,7 @@ export const projects: Project[] = [
       { phase: "Predictive Maintenance", detail: "ML models for breakdown prediction" },
     ],
     gradient: "from-[#1a4a7a]/10 via-transparent to-transparent",
-    accentColor: "#006ea3",
+    accentColor: "#4EB3E8",
   },
   {
     id: "shipwise-supply",
@@ -398,7 +398,7 @@ export const projects: Project[] = [
   {
     id: "finapp-ai",
     tag: "AI-Powered Finance",
-    tagColor: "bg-[#006ea3]/15 text-[#4a7db8] border-[#006ea3]/30",
+    tagColor: "bg-[#4EB3E8]/15 text-[#4a7db8] border-[#4EB3E8]/30",
     company: "FinSmart",
     industry: "Banking, Finance & Insurance",
     industrySlug: "banking-finance-insurance",
@@ -419,7 +419,7 @@ export const projects: Project[] = [
       { phase: "Launch & Monitor", detail: "Cross-platform release, fraud monitoring" },
     ],
     gradient: "from-[#1a4a7a]/10 via-transparent to-transparent",
-    accentColor: "#006ea3",
+    accentColor: "#4EB3E8",
   },
   {
     id: "insuretech-claims",

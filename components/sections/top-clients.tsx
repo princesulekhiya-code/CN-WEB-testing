@@ -53,7 +53,7 @@ export const TopClients: FC = () => {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">
+          <span className="inline-block text-[11px] font-semibold text-[#4EB3E8] uppercase tracking-[0.2em] mb-4">
             Trusted Partners
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
@@ -84,7 +84,7 @@ export const TopClients: FC = () => {
                   {row1.map((client, j) => (
                     <div
                       key={j}
-                      className="flex items-center justify-center shrink-0 h-20 md:h-24 px-8 md:px-10 rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/90 hover:border-[#006ea3]/30 hover:bg-[#006ea3]/[0.04] dark:hover:bg-white dark:hover:border-[#006ea3]/30 transition-all duration-300 group/card"
+                      className="flex items-center justify-center shrink-0 h-20 md:h-24 px-8 md:px-10 rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/90 hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.04] dark:hover:bg-white dark:hover:border-[#4EB3E8]/30 transition-all duration-300 group/card"
                       title={client.name}
                     >
                       <Image
@@ -122,7 +122,7 @@ export const TopClients: FC = () => {
                   {row2.map((client, j) => (
                     <div
                       key={j}
-                      className="flex items-center justify-center shrink-0 h-20 md:h-24 px-8 md:px-10 rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/90 hover:border-[#006ea3]/30 hover:bg-[#006ea3]/[0.04] dark:hover:bg-white dark:hover:border-[#006ea3]/30 transition-all duration-300 group/card"
+                      className="flex items-center justify-center shrink-0 h-20 md:h-24 px-8 md:px-10 rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/90 hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.04] dark:hover:bg-white dark:hover:border-[#4EB3E8]/30 transition-all duration-300 group/card"
                       title={client.name}
                     >
                       <Image

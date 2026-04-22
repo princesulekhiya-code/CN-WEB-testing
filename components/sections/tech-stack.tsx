@@ -105,7 +105,7 @@ export function TechStack() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">
+          <span className="inline-block text-[11px] font-semibold text-[#4EB3E8] uppercase tracking-[0.2em] mb-4">
             Technology Stack
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
@@ -129,7 +129,7 @@ export function TechStack() {
                 onClick={() => setActiveTab(i)}
                 className={`px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 ${
                   activeTab === i
-                    ? "bg-[#006ea3] text-white shadow-lg shadow-[#006ea3]/20"
+                    ? "bg-[#4EB3E8] text-white shadow-lg shadow-[#4EB3E8]/20"
                     : "text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/[0.04] dark:hover:bg-white/[0.04]"
                 }`}
               >
@@ -149,7 +149,7 @@ export function TechStack() {
             {categories[activeTab].items.map((tech, i) => (
               <div
                 key={tech.name}
-                className="group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] hover:border-[#006ea3]/30 hover:bg-[#006ea3]/[0.03] dark:hover:border-[#006ea3]/30 dark:hover:bg-[#006ea3]/[0.05] transition-all duration-300 cursor-default"
+                className="group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.03] dark:hover:border-[#4EB3E8]/30 dark:hover:bg-[#4EB3E8]/[0.05] transition-all duration-300 cursor-default"
                 style={{ animationDelay: `${i * 60}ms` }}
               >
                 <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">

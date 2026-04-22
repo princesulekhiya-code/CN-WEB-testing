@@ -90,7 +90,7 @@ export default function CareerPage() {
                       </span>
                     </div>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-black/30 dark:text-white/30 group-hover:text-[#006ea3] group-hover:translate-x-1 transition-all" />
+                  <ArrowRight className="w-5 h-5 text-black/30 dark:text-white/30 group-hover:text-[#4EB3E8] group-hover:translate-x-1 transition-all" />
                 </div>
               </Link>
             </motion.div>

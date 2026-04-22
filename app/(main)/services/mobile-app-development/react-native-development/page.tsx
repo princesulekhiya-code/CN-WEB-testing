@@ -221,7 +221,7 @@ export default function ReactNativeDevelopmentPage() {
 function HeroSection({ heroReady }: { heroReady: boolean }) {
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#006ea3]/10 via-transparent to-transparent dark:from-[#006ea3]/5 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#4EB3E8]/10 via-transparent to-transparent dark:from-[#4EB3E8]/5 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,_var(--tw-gradient-stops))] from-indigo-500/5 via-transparent to-transparent pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-6 pt-28 pb-20 relative">
@@ -243,7 +243,7 @@ function HeroSection({ heroReady }: { heroReady: boolean }) {
             >
               React Native
               <br />
-              <span className="text-[#006ea3]">Development</span>
+              <span className="text-[#4EB3E8]">Development</span>
             </h1>
             <p
               className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-xl transition-all duration-700 delay-200 ${
@@ -282,7 +282,7 @@ function HeroSection({ heroReady }: { heroReady: boolean }) {
 function HeroAccent({ heroReady }: { heroReady: boolean }) {
   return (
     <div
-      className={`relative rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-[#006ea3]/[0.08] via-black/[0.02] to-transparent dark:from-[#006ea3]/[0.06] dark:via-white/[0.02] p-8 md:p-10 transition-all duration-700 delay-150 ${
+      className={`relative rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-[#4EB3E8]/[0.08] via-black/[0.02] to-transparent dark:from-[#4EB3E8]/[0.06] dark:via-white/[0.02] p-8 md:p-10 transition-all duration-700 delay-150 ${
         heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
     >
@@ -300,7 +300,7 @@ function HeroAccent({ heroReady }: { heroReady: boolean }) {
             <span className="text-xs font-semibold uppercase tracking-wider text-black/40 dark:text-white/40">
               {row.label}
             </span>
-            <span className="text-sm font-semibold text-[#006ea3] text-right">{row.value}</span>
+            <span className="text-sm font-semibold text-[#4EB3E8] text-right">{row.value}</span>
           </div>
         ))}
       </div>
@@ -330,18 +330,18 @@ function OfferingsSection() {
           return (
             <div
               key={offering.title}
-              className={`group p-6 rounded-2xl border border-black/[0.06] bg-black/[0.02] hover:border-[#006ea3]/30 hover:bg-black/[0.04] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#006ea3]/5 transition-all duration-500 dark:border-white/[0.06] dark:bg-white/[0.02] dark:hover:border-[#006ea3]/30 dark:hover:bg-white/[0.04] ${
+              className={`group p-6 rounded-2xl border border-black/[0.06] bg-black/[0.02] hover:border-[#4EB3E8]/30 hover:bg-black/[0.04] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4EB3E8]/5 transition-all duration-500 dark:border-white/[0.06] dark:bg-white/[0.02] dark:hover:border-[#4EB3E8]/30 dark:hover:bg-white/[0.04] ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${200 + i * 80}ms` }}
             >
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-black/[0.03] dark:border-white/10 dark:bg-white/[0.05] group-hover:border-[#006ea3]/30 group-hover:bg-[#006ea3]/10 transition-all duration-500">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-black/[0.03] dark:border-white/10 dark:bg-white/[0.05] group-hover:border-[#4EB3E8]/30 group-hover:bg-[#4EB3E8]/10 transition-all duration-500">
                 <Icon
-                  className="w-5 h-5 text-black/60 dark:text-white/60 group-hover:text-[#006ea3] transition-colors duration-500"
+                  className="w-5 h-5 text-black/60 dark:text-white/60 group-hover:text-[#4EB3E8] transition-colors duration-500"
                   strokeWidth={1.5}
                 />
               </div>
-              <h3 className="text-lg font-semibold tracking-tight group-hover:text-[#006ea3] transition-colors duration-300">
+              <h3 className="text-lg font-semibold tracking-tight group-hover:text-[#4EB3E8] transition-colors duration-300">
                 {offering.title}
               </h3>
               <p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed">
@@ -351,7 +351,7 @@ function OfferingsSection() {
                 {offering.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1 text-[11px] font-medium text-black/35 dark:text-white/35 bg-black/[0.03] dark:bg-white/[0.04] px-2 py-0.5 rounded-md group-hover:text-[#006ea3]/70 group-hover:bg-[#006ea3]/5 transition-all duration-500"
+                    className="inline-flex items-center gap-1 text-[11px] font-medium text-black/35 dark:text-white/35 bg-black/[0.03] dark:bg-white/[0.04] px-2 py-0.5 rounded-md group-hover:text-[#4EB3E8]/70 group-hover:bg-[#4EB3E8]/5 transition-all duration-500"
                   >
                     <CheckCircle2 className="w-3 h-3" />
                     {tag}
@@ -402,7 +402,7 @@ function ProcessSection() {
                   <div className={isLeft ? "pr-10 text-right" : ""}>
                     {isLeft && (
                       <div className="flex flex-col items-end">
-                        <span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase mb-1">
+                        <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase mb-1">
                           Step {step.step}
                         </span>
                         <h3 className="text-lg font-semibold tracking-tight">{step.title}</h3>
@@ -413,14 +413,14 @@ function ProcessSection() {
                     )}
                   </div>
                   <div className="flex justify-center relative z-10">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20 bg-white dark:bg-black">
-                      <StepIcon className="w-5 h-5 text-[#006ea3]" strokeWidth={1.5} />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20 bg-white dark:bg-black">
+                      <StepIcon className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
                     </div>
                   </div>
                   <div className={!isLeft ? "pl-10" : ""}>
                     {!isLeft && (
                       <div className="flex flex-col items-start">
-                        <span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase mb-1">
+                        <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase mb-1">
                           Step {step.step}
                         </span>
                         <h3 className="text-lg font-semibold tracking-tight">{step.title}</h3>
@@ -433,11 +433,11 @@ function ProcessSection() {
                 </div>
 
                 <div className="md:hidden flex items-start gap-5 w-full">
-                  <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-[#006ea3]/10 border border-[#006ea3]/20 bg-white dark:bg-black relative z-10">
-                    <StepIcon className="w-5 h-5 text-[#006ea3]" strokeWidth={1.5} />
+                  <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20 bg-white dark:bg-black relative z-10">
+                    <StepIcon className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1 pt-0.5">
-                    <span className="text-[11px] font-bold text-[#006ea3] tracking-widest uppercase">
+                    <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase">
                       Step {step.step}
                     </span>
                     <h3 className="text-base font-semibold mt-1 tracking-tight">{step.title}</h3>
@@ -480,12 +480,12 @@ function TechStackSection() {
             }`}
             style={{ transitionDelay: `${200 + ci * 100}ms` }}
           >
-            <h3 className="text-sm font-semibold text-[#006ea3] uppercase tracking-wider mb-4">{cat.label}</h3>
+            <h3 className="text-sm font-semibold text-[#4EB3E8] uppercase tracking-wider mb-4">{cat.label}</h3>
             <div className="flex flex-wrap gap-2">
               {cat.items.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1.5 rounded-lg border border-black/[0.08] bg-black/[0.02] text-sm font-medium text-black/60 dark:border-white/[0.08] dark:bg-white/[0.02] dark:text-white/60 hover:border-[#006ea3]/30 hover:text-[#006ea3] transition-all duration-300"
+                  className="px-3 py-1.5 rounded-lg border border-black/[0.08] bg-black/[0.02] text-sm font-medium text-black/60 dark:border-white/[0.08] dark:bg-white/[0.02] dark:text-white/60 hover:border-[#4EB3E8]/30 hover:text-[#4EB3E8] transition-all duration-300"
                 >
                   {tech}
                 </span>
@@ -521,13 +521,13 @@ function WhyChooseSection() {
             return (
               <div
                 key={item.title}
-                className={`text-center p-6 rounded-2xl border border-black/[0.04] dark:border-white/[0.04] hover:border-[#006ea3]/15 transition-all duration-600 ${
+                className={`text-center p-6 rounded-2xl border border-black/[0.04] dark:border-white/[0.04] hover:border-[#4EB3E8]/15 transition-all duration-600 ${
                   visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${200 + i * 100}ms` }}
               >
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#006ea3]/10 border border-[#006ea3]/20">
-                  <ItemIcon className="w-6 h-6 text-[#006ea3]" strokeWidth={1.5} />
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20">
+                  <ItemIcon className="w-6 h-6 text-[#4EB3E8]" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-base font-semibold tracking-tight">{item.title}</h3>
                 <p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed">
@@ -547,8 +547,8 @@ function CTASection() {
 
   return (
     <div ref={ref} className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/12 via-[#006ea3]/6 to-[#004d73]/10 dark:from-[#006ea3]/10 dark:via-[#006ea3]/5 dark:to-[#004d73]/15 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,720px)] h-[420px] bg-[#006ea3]/15 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#4EB3E8]/12 via-[#4EB3E8]/6 to-[#004d73]/10 dark:from-[#4EB3E8]/10 dark:via-[#4EB3E8]/5 dark:to-[#004d73]/15 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,720px)] h-[420px] bg-[#4EB3E8]/15 rounded-full blur-[100px] pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.04] dark:opacity-[0.05]"
         style={{
@@ -566,7 +566,7 @@ function CTASection() {
         >
           Ready to Build with
           <br />
-          <span className="text-[#006ea3]">React Native?</span>
+          <span className="text-[#4EB3E8]">React Native?</span>
         </h2>
         <p
           className={`mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${
@@ -582,7 +582,7 @@ function CTASection() {
         >
           <Link
             href="/resources/free-consultation"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/25"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#4EB3E8] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#4EB3E8]/25"
           >
             Get a Free Consultation <ArrowRight className="w-4 h-4" />
           </Link>

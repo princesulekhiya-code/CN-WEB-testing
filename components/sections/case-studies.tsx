@@ -109,7 +109,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: "fintech",
     tag: "AI-Powered Finance",
-    tagColor: "bg-[#006ea3]/15 text-[#4a7db8] border-[#006ea3]/30",
+    tagColor: "bg-[#4EB3E8]/15 text-[#4a7db8] border-[#4EB3E8]/30",
     company: "FinTech",
     industry: "Financial Technology",
     headline: "AI-powered financial management app with fraud detection and smart budgeting.",
@@ -131,7 +131,7 @@ const caseStudies: CaseStudy[] = [
       { phase: "Launch & Monitor", detail: "Cross-platform release with real-time fraud monitoring" },
     ],
     gradient: "from-[#1a4a7a]/10 via-transparent to-transparent",
-    accentColor: "#006ea3",
+    accentColor: "#4EB3E8",
   },
   {
     id: "analytics",
@@ -218,7 +218,7 @@ const recentWork: CaseStudy[] = [
   {
     id: "fleettrack",
     tag: "Fleet Management",
-    tagColor: "bg-[#006ea3]/15 text-[#4a7db8] border-[#006ea3]/30",
+    tagColor: "bg-[#4EB3E8]/15 text-[#4a7db8] border-[#4EB3E8]/30",
     company: "FleetTrack",
     industry: "Transport & Logistics",
     headline: "IoT-powered fleet management system reducing fuel costs by 25% across 2000+ vehicles.",
@@ -238,7 +238,7 @@ const recentWork: CaseStudy[] = [
       { phase: "Predictive Maintenance", detail: "ML models for breakdown prediction" },
     ],
     gradient: "from-[#1a4a7a]/10 via-transparent to-transparent",
-    accentColor: "#006ea3",
+    accentColor: "#4EB3E8",
   },
   {
     id: "factoryiq",
@@ -356,7 +356,7 @@ const MetricCounter = memo(function MetricCounter({ value, suffix, label, active
     <div className="flex flex-col gap-1">
       <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black dark:text-white tabular-nums">
         {value % 1 !== 0 ? count.toFixed(2) : Math.round(count)}
-        <span className="text-lg font-medium text-[#006ea3]">{suffix}</span>
+        <span className="text-lg font-medium text-[#4EB3E8]">{suffix}</span>
       </span>
       <span className="text-[13px] text-black/45 dark:text-[#8b8b8b] leading-tight">{label}</span>
     </div>
@@ -516,7 +516,7 @@ export function CaseStudies() {
         </div>
 
         {/* Main Card */}
-        <Card className="bg-[#D9EAFD] dark:bg-[#0d0d0d] border-[#006ea3]/10 dark:border-[#1e1e1e] rounded-2xl overflow-hidden shadow-2xl p-0">
+        <Card className="bg-[#D9EAFD] dark:bg-[#0d0d0d] border-[#4EB3E8]/10 dark:border-[#1e1e1e] rounded-2xl overflow-hidden shadow-2xl p-0">
           <div className="grid lg:grid-cols-[1fr_360px] min-h-[480px]">
 
             {/* Left — Story */}
@@ -562,7 +562,7 @@ export function CaseStudies() {
               {/* Metrics */}
               <div
                 ref={metricsRef}
-                className="flex flex-col gap-4 pt-8 border-t border-[#006ea3]/10 dark:border-[#1e1e1e]"
+                className="flex flex-col gap-4 pt-8 border-t border-[#4EB3E8]/10 dark:border-[#1e1e1e]"
               >
                 <span className="text-[11px] font-semibold text-black/35 dark:text-[#555] uppercase tracking-widest">
                   Key Metrics
@@ -588,7 +588,7 @@ export function CaseStudies() {
             </div>
 
             {/* Right — Timeline */}
-            <div className="border-t lg:border-t-0 lg:border-l border-[#006ea3]/10 dark:border-[#1e1e1e] p-5 sm:p-8 md:p-10 flex flex-col gap-0">
+            <div className="border-t lg:border-t-0 lg:border-l border-[#4EB3E8]/10 dark:border-[#1e1e1e] p-5 sm:p-8 md:p-10 flex flex-col gap-0">
               <div className="flex items-center gap-2 mb-8">
                 <TrendingUp className="w-4 h-4 text-black/35 dark:text-[#555]" />
                 <span className="text-[12px] font-semibold text-black/35 dark:text-[#555] uppercase tracking-widest">

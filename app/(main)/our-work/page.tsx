@@ -44,7 +44,7 @@ const MetricCounter = memo(function MetricCounter({ value, suffix, label, active
     <div className="flex flex-col gap-1">
       <span className="text-3xl lg:text-4xl font-bold text-foreground tabular-nums">
         {value % 1 !== 0 ? count.toFixed(2) : Math.round(count)}
-        <span className="text-lg font-medium text-[#006ea3]">{suffix}</span>
+        <span className="text-lg font-medium text-[#4EB3E8]">{suffix}</span>
       </span>
       <span className="text-[13px] text-muted-foreground leading-tight">{label}</span>
     </div>

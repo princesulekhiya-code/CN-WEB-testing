@@ -139,16 +139,16 @@ export default function IndustryPage() {
 
       {/* Hero */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#006ea3]/10 via-transparent to-transparent dark:from-[#006ea3]/5 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#4EB3E8]/10 via-transparent to-transparent dark:from-[#4EB3E8]/5 pointer-events-none" />
         <div className="mx-auto max-w-7xl px-6 pt-28 pb-16 text-center relative">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#006ea3]/10 border border-[#006ea3]/20 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#4EB3E8]/10 border border-[#4EB3E8]/20 mb-8"
           >
-            <div className="w-1.5 h-1.5 rounded-full bg-[#006ea3] animate-pulse" />
-            <span className="text-[13px] font-semibold text-[#006ea3] tracking-wide uppercase">Industries</span>
+            <div className="w-1.5 h-1.5 rounded-full bg-[#4EB3E8] animate-pulse" />
+            <span className="text-[13px] font-semibold text-[#4EB3E8] tracking-wide uppercase">Industries</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -158,7 +158,7 @@ export default function IndustryPage() {
           >
             Tailored Solutions for
             <br />
-            <span className="text-[#006ea3]">Every Industry</span>
+            <span className="text-[#4EB3E8]">Every Industry</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -183,7 +183,7 @@ export default function IndustryPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-[#006ea3]">{stat.value}</div>
+                <div className="text-3xl md:text-4xl font-bold text-[#4EB3E8]">{stat.value}</div>
                 <div className="mt-1 text-sm font-medium text-black/40 dark:text-white/40">{stat.label}</div>
               </motion.div>
             ))}
@@ -204,11 +204,11 @@ export default function IndustryPage() {
                 transition={{ duration: 0.4, delay: i * 0.04 }}
               >
                 <Link href={industry.href}>
-                  <div className="group h-full rounded-2xl border border-black/[0.08] bg-black/[0.02] p-6 transition-all duration-500 hover:border-[#006ea3]/30 hover:bg-black/[0.04] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#006ea3]/5 dark:border-white/[0.08] dark:bg-white/[0.02] dark:hover:border-[#006ea3]/30 dark:hover:bg-white/[0.04]">
-                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-black/[0.03] dark:border-white/10 dark:bg-white/[0.05] group-hover:border-[#006ea3]/30 group-hover:bg-[#006ea3]/10 transition-all duration-500">
-                      <Icon className="w-5 h-5 text-black/60 dark:text-white/60 group-hover:text-[#006ea3] transition-colors duration-500" strokeWidth={1.5} />
+                  <div className="group h-full rounded-2xl border border-black/[0.08] bg-black/[0.02] p-6 transition-all duration-500 hover:border-[#4EB3E8]/30 hover:bg-black/[0.04] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4EB3E8]/5 dark:border-white/[0.08] dark:bg-white/[0.02] dark:hover:border-[#4EB3E8]/30 dark:hover:bg-white/[0.04]">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-black/[0.03] dark:border-white/10 dark:bg-white/[0.05] group-hover:border-[#4EB3E8]/30 group-hover:bg-[#4EB3E8]/10 transition-all duration-500">
+                      <Icon className="w-5 h-5 text-black/60 dark:text-white/60 group-hover:text-[#4EB3E8] transition-colors duration-500" strokeWidth={1.5} />
                     </div>
-                    <h3 className="text-lg font-semibold tracking-tight group-hover:text-[#006ea3] transition-colors duration-300">
+                    <h3 className="text-lg font-semibold tracking-tight group-hover:text-[#4EB3E8] transition-colors duration-300">
                       {industry.title}
                     </h3>
                     <p className="mt-2 text-sm font-medium text-black/45 dark:text-white/45 leading-relaxed group-hover:text-black/60 dark:group-hover:text-white/60 transition-colors duration-300">
@@ -218,14 +218,14 @@ export default function IndustryPage() {
                       {industry.highlights.map((h) => (
                         <span
                           key={h}
-                          className="inline-flex items-center gap-1 text-[11px] font-medium text-black/35 dark:text-white/35 bg-black/[0.03] dark:bg-white/[0.04] px-2 py-0.5 rounded-md group-hover:text-[#006ea3]/70 group-hover:bg-[#006ea3]/5 transition-all duration-500"
+                          className="inline-flex items-center gap-1 text-[11px] font-medium text-black/35 dark:text-white/35 bg-black/[0.03] dark:bg-white/[0.04] px-2 py-0.5 rounded-md group-hover:text-[#4EB3E8]/70 group-hover:bg-[#4EB3E8]/5 transition-all duration-500"
                         >
                           <CheckCircle2 className="w-3 h-3" />
                           {h}
                         </span>
                       ))}
                     </div>
-                    <div className="mt-5 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+                    <div className="mt-5 flex items-center text-[13px] font-semibold text-[#4EB3E8] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
                       Explore <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>

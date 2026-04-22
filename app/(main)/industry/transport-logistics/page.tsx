@@ -35,7 +35,7 @@ const projects: Project[] = [
   {
     id: "fleettrack",
     tag: "Fleet Management",
-    tagColor: "bg-[#006ea3]/15 text-[#4a7db8] border-[#006ea3]/30",
+    tagColor: "bg-[#4EB3E8]/15 text-[#4a7db8] border-[#4EB3E8]/30",
     company: "FleetTrack",
     industry: "Transport & Logistics",
     headline: "IoT-powered fleet management system reducing fuel costs by 25% across 2000+ vehicles.",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     solution:
       "GPS + IoT sensor integration for real-time fleet tracking. AI-based route optimization engine. Predictive maintenance alerts reducing breakdowns by 40%.",
     duration: "90 days",
-    accentColor: "#006ea3",
+    accentColor: "#4EB3E8",
     metrics: [
       { value: 25, suffix: "%", label: "Fuel cost reduction" },
       { value: 2000, suffix: "+", label: "Vehicles tracked" },

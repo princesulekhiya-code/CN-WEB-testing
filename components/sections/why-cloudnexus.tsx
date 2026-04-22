@@ -92,12 +92,12 @@ export function WhyCloudNexus() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 + index * 0.08 }}
-              className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#121212] border border-[#006ea3]/10 dark:border-[#2e2e2e] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/50 hover:bg-[#cde3fc] dark:hover:bg-[#161616] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(59,130,246,0.08)] transition-all duration-500 p-6 sm:p-8 overflow-hidden"
+              className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#121212] border border-[#4EB3E8]/10 dark:border-[#2e2e2e] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/50 hover:bg-[#cde3fc] dark:hover:bg-[#161616] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(59,130,246,0.08)] transition-all duration-500 p-6 sm:p-8 overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#006ea3]/[0.03] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#4EB3E8]/[0.03] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative z-10">
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg border border-[#006ea3]/20 dark:border-[#2e2e2e] bg-white dark:bg-[#1a1a1a] text-[#006ea3] dark:text-[#ededed] group-hover:text-[#006ea3] group-hover:border-[#006ea3]/30 transition-colors duration-500">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg border border-[#4EB3E8]/20 dark:border-[#2e2e2e] bg-white dark:bg-[#1a1a1a] text-[#4EB3E8] dark:text-[#ededed] group-hover:text-[#4EB3E8] group-hover:border-[#4EB3E8]/30 transition-colors duration-500">
                   <feature.Icon className="w-6 h-6 stroke-[1.5]" />
                 </div>
 
@@ -108,7 +108,7 @@ export function WhyCloudNexus() {
                   {feature.description}
                 </p>
 
-                <div className="pt-4 border-t border-[#006ea3]/10 dark:border-[#2e2e2e] group-hover:border-[#006ea3]/20 transition-colors duration-500">
+                <div className="pt-4 border-t border-[#4EB3E8]/10 dark:border-[#2e2e2e] group-hover:border-[#4EB3E8]/20 transition-colors duration-500">
                   <span className="text-2xl font-bold text-black dark:text-white tabular-nums">
                     {feature.stat}
                   </span>

@@ -21,9 +21,9 @@ function SplineFallback() {
   return (
     <div className="w-full h-full flex items-center justify-center">
       <div className="relative w-64 h-64">
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#006ea3]/20 via-indigo-500/10 to-transparent animate-pulse" />
+        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#4EB3E8]/20 via-indigo-500/10 to-transparent animate-pulse" />
         <div className="absolute inset-8 rounded-full bg-gradient-to-tr from-[#1a4a7a]/15 via-transparent to-indigo-500/10 animate-pulse delay-300" />
-        <div className="absolute inset-16 rounded-full bg-gradient-to-br from-[#006ea3]/10 to-transparent animate-pulse delay-700" />
+        <div className="absolute inset-16 rounded-full bg-gradient-to-br from-[#4EB3E8]/10 to-transparent animate-pulse delay-700" />
       </div>
     </div>
   );
@@ -163,7 +163,7 @@ function HeroStats() {
           >
             <span className="text-2xl sm:text-3xl font-bold text-foreground tabular-nums">
               {counts[i]}
-              <span className="text-[#006ea3]">{data.suffix}</span>
+              <span className="text-[#4EB3E8]">{data.suffix}</span>
             </span>
             <span className="text-[11px] text-muted-foreground mt-0.5">{data.label}</span>
           </div>
@@ -198,9 +198,9 @@ export function HeroSection() {
                 Pioneering Innovation.
               </span>
               <span className="flex flex-wrap justify-center lg:justify-start gap-x-3 text-muted-foreground/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both text-[7.5vw] sm:text-5xl lg:text-6xl">
-                <span className="text-[#006ea3]">with Smart</span>
+                <span className="text-[#4EB3E8]">with Smart</span>
                 <span
-                  className="text-[#006ea3] pb-1 glitch-text"
+                  className="text-[#4EB3E8] pb-1 glitch-text"
                   data-text="Solutions."
                 >
                   Solutions.

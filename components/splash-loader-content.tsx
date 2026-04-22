@@ -72,9 +72,9 @@ export function SplashLoaderContent({
           aria-hidden
         >
           <span className="sr-only">Loading</span>
-          <div className="h-1.5 w-1.5 rounded-full bg-[#006ea3] motion-reduce:animate-none animate-[pulse_1.2s_ease-in-out_infinite]" />
-          <div className="h-1.5 w-1.5 rounded-full bg-[#006ea3] motion-reduce:animate-none animate-[pulse_1.2s_ease-in-out_0.2s_infinite]" />
-          <div className="h-1.5 w-1.5 rounded-full bg-[#006ea3] motion-reduce:animate-none animate-[pulse_1.2s_ease-in-out_0.4s_infinite]" />
+          <div className="h-1.5 w-1.5 rounded-full bg-[#4EB3E8] motion-reduce:animate-none animate-[pulse_1.2s_ease-in-out_infinite]" />
+          <div className="h-1.5 w-1.5 rounded-full bg-[#4EB3E8] motion-reduce:animate-none animate-[pulse_1.2s_ease-in-out_0.2s_infinite]" />
+          <div className="h-1.5 w-1.5 rounded-full bg-[#4EB3E8] motion-reduce:animate-none animate-[pulse_1.2s_ease-in-out_0.4s_infinite]" />
         </div>
       ) : null}
     </div>

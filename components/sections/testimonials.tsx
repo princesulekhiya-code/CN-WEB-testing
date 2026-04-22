@@ -42,7 +42,7 @@ const reviews = [
     title: "Engineering Manager",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026024f",
     logo: "C",
-    logoColor: "bg-[#006ea3]",
+    logoColor: "bg-[#4EB3E8]",
   }
 ];
 
@@ -62,7 +62,7 @@ const ReviewCard = ({
   logoColor: string;
 }) => {
   return (
-    <Card className="w-[32rem] max-w-full shrink-0 rounded-2xl border-[#006ea3]/10 bg-[#D9EAFD] dark:border-white/10 dark:bg-black p-8 shadow-none transition-colors hover:border-[#006ea3]/25 dark:hover:border-white/20 sm:p-10">
+    <Card className="w-[32rem] max-w-full shrink-0 rounded-2xl border-[#4EB3E8]/10 bg-[#D9EAFD] dark:border-white/10 dark:bg-black p-8 shadow-none transition-colors hover:border-[#4EB3E8]/25 dark:hover:border-white/20 sm:p-10">
       <div className="flex h-full flex-col justify-between gap-6">
         <p className="text-black/50 dark:text-zinc-400 font-medium leading-relaxed text-sm sm:text-base">
           &ldquo;{text}&rdquo;

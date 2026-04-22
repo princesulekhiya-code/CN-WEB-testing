@@ -86,9 +86,9 @@ export default function CustomSoftwareDevelopmentPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="group p-6 rounded-2xl border border-black/[0.06] bg-black/[0.02] hover:border-[#006ea3]/30 hover:bg-black/[0.04] transition-all dark:border-white/[0.06] dark:bg-white/[0.02] dark:hover:border-[#006ea3]/30 dark:hover:bg-white/[0.04]"
+                className="group p-6 rounded-2xl border border-black/[0.06] bg-black/[0.02] hover:border-[#4EB3E8]/30 hover:bg-black/[0.04] transition-all dark:border-white/[0.06] dark:bg-white/[0.02] dark:hover:border-[#4EB3E8]/30 dark:hover:bg-white/[0.04]"
               >
-                <item.icon size={24} className="text-[#006ea3] mb-4" />
+                <item.icon size={24} className="text-[#4EB3E8] mb-4" />
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                 <p className="text-sm text-black/50 dark:text-white/50 leading-relaxed">{item.desc}</p>
               </motion.div>
@@ -108,7 +108,7 @@ export default function CustomSoftwareDevelopmentPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
               >
-                <span className="text-4xl font-bold text-[#006ea3]/20">{item.step}</span>
+                <span className="text-4xl font-bold text-[#4EB3E8]/20">{item.step}</span>
                 <h3 className="text-lg font-semibold mt-2 mb-2">{item.title}</h3>
                 <p className="text-sm text-black/50 dark:text-white/50 leading-relaxed">{item.desc}</p>
               </motion.div>

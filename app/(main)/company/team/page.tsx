@@ -11,9 +11,9 @@ export default function TeamPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#006ea3]/10 border border-[#006ea3]/20"
+          className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20"
         >
-          <Users className="w-7 h-7 text-[#006ea3]" strokeWidth={1.5} />
+          <Users className="w-7 h-7 text-[#4EB3E8]" strokeWidth={1.5} />
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

@@ -19,14 +19,14 @@ const projects: Project[] = [
   {
     id: "finsmart",
     tag: "AI-Powered Finance",
-    tagColor: "bg-[#006ea3]/15 text-[#4a7db8] border-[#006ea3]/30",
+    tagColor: "bg-[#4EB3E8]/15 text-[#4a7db8] border-[#4EB3E8]/30",
     company: "FinSmart",
     industry: "Banking & Finance",
     headline: "AI-powered financial management app with fraud detection and smart budgeting.",
     challenge: "Secure handling of sensitive financial data. Building accurate AI models for fraud detection.",
     solution: "Cross-platform app with bank-grade encryption, biometric auth. ML algorithms for spending analysis and anomaly detection. Seamless digital wallet integration.",
     duration: "80 days",
-    accentColor: "#006ea3",
+    accentColor: "#4EB3E8",
     metrics: [
       { value: 95, suffix: "%", label: "Fraud detection rate" },
       { value: 40, suffix: "%", label: "Better money mgmt" },

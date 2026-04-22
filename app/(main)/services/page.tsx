@@ -8,7 +8,7 @@ import {
   Lightbulb, Rocket, BarChart3, HeartHandshake, Building2, GraduationCap,
   CreditCard, ShoppingCart, Stethoscope, Truck, Factory, Cog,
   Monitor, UsersRound, Package, ShoppingBag, CloudCog, Blocks, Boxes,
-  Settings, ServerCog, Cpu, Wrench, Briefcase, ChevronRight, Sparkles,
+  Settings, ServerCog, Cpu, Wrench, Briefcase, ChevronRight, Sparkles, Code2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useRef, useState, useEffect, useCallback } from "react";
@@ -420,7 +420,7 @@ const industries = [
   {
     icon: BarChart3, name: "SaaS & Startups", href: "/industry/fintech",
     desc: "Lean MVP launches, multi-tenant platform architecture, recurring billing engines & growth-stage scaling playbooks",
-    accent: "#006ea3", stat: "40+", statLabel: "SaaS Products",
+    accent: "#4EB3E8", stat: "40+", statLabel: "SaaS Products",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&q=80",
   },
 ];
@@ -573,6 +573,55 @@ function ServiceCardIllustration({ title }: { title: string }) {
 }
 
 /* ═══════════════════════════════════════════════════════
+   CATEGORY VISUALS — gradient icon badges with tech logos
+   ═══════════════════════════════════════════════════════ */
+
+const categoryLogos: Record<string, { logos: string[]; gradient: string }> = {
+  'intelligent-automation': {
+    logos: ['python/python-original.svg', 'tensorflow/tensorflow-original.svg', 'pytorch/pytorch-original.svg'],
+    gradient: 'from-[#4EB3E8] via-[#006ea3] to-[#1a4a7a]',
+  },
+  'software-engineering': {
+    logos: ['react/react-original.svg', 'nodejs/nodejs-original.svg', 'typescript/typescript-original.svg'],
+    gradient: 'from-[#4EB3E8] via-[#3b82f6] to-[#6366f1]',
+  },
+  'digital-automation': {
+    logos: ['googlecloud/googlecloud-original.svg', 'docker/docker-original.svg', 'kubernetes/kubernetes-original.svg'],
+    gradient: 'from-[#4EB3E8] via-[#06b6d4] to-[#10b981]',
+  },
+};
+
+function CategoryVisual({ id }: { id: string }) {
+  const data = categoryLogos[id];
+  if (!data) return null;
+
+  return (
+    <div className="relative flex items-center justify-center h-20">
+      {/* Background glow */}
+      <div className={`absolute w-40 h-40 rounded-full bg-gradient-to-br ${data.gradient} opacity-[0.07] dark:opacity-[0.12] blur-3xl`} />
+
+      {/* Logo trio */}
+      <div className="relative flex items-center gap-3">
+        {/* Left logo */}
+        <div className="w-11 h-11 rounded-xl bg-white dark:bg-white/10 shadow-md shadow-black/5 dark:shadow-black/20 border border-black/[0.06] dark:border-white/[0.08] flex items-center justify-center -rotate-6 hover:rotate-0 hover:scale-110 transition-all duration-500">
+          <Image src={`${DEVICON}/${data.logos[0]}`} alt="" width={28} height={28} className="w-6 h-6 object-contain" unoptimized />
+        </div>
+
+        {/* Center logo — larger */}
+        <div className="w-14 h-14 rounded-2xl bg-white dark:bg-white/10 shadow-lg shadow-black/8 dark:shadow-black/30 border border-black/[0.06] dark:border-white/[0.08] flex items-center justify-center z-10 hover:scale-110 transition-transform duration-500">
+          <Image src={`${DEVICON}/${data.logos[1]}`} alt="" width={36} height={36} className="w-8 h-8 object-contain" unoptimized />
+        </div>
+
+        {/* Right logo */}
+        <div className="w-11 h-11 rounded-xl bg-white dark:bg-white/10 shadow-md shadow-black/5 dark:shadow-black/20 border border-black/[0.06] dark:border-white/[0.08] flex items-center justify-center rotate-6 hover:rotate-0 hover:scale-110 transition-all duration-500">
+          <Image src={`${DEVICON}/${data.logos[2]}`} alt="" width={28} height={28} className="w-6 h-6 object-contain" unoptimized />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════
    COMPONENTS
    ═══════════════════════════════════════════════════════ */
 
@@ -584,18 +633,18 @@ function ServiceCard({ service }: { service: Service }) {
   return (
     <motion.div
       variants={cardVariant}
-      className="group relative h-full rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#006ea3]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#006ea3]/10 dark:hover:shadow-[#006ea3]/5 overflow-hidden transition-all duration-500"
+      className="group relative h-full rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#4EB3E8]/10 dark:hover:shadow-[#4EB3E8]/5 overflow-hidden transition-all duration-500"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#006ea3]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-      <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#4EB3E8]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#4EB3E8]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {hasIllustration && (
-        <div className="relative h-32 md:h-36 overflow-hidden rounded-t-2xl bg-gradient-to-br from-[#006ea3]/[0.03] via-transparent to-[#006ea3]/[0.02] dark:from-[#006ea3]/[0.05] dark:to-[#006ea3]/[0.02] border-b border-black/[0.04] dark:border-white/[0.04] group-hover:from-[#006ea3]/[0.06] group-hover:to-[#006ea3]/[0.03] transition-all duration-500">
+        <div className="relative h-32 md:h-36 overflow-hidden rounded-t-2xl bg-gradient-to-br from-[#4EB3E8]/[0.03] via-transparent to-[#4EB3E8]/[0.02] dark:from-[#4EB3E8]/[0.05] dark:to-[#4EB3E8]/[0.02] border-b border-black/[0.04] dark:border-white/[0.04] group-hover:from-[#4EB3E8]/[0.06] group-hover:to-[#4EB3E8]/[0.03] transition-all duration-500">
           <div className="absolute inset-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-700 ease-out">
             <ServiceCardIllustration title={service.title} />
           </div>
-          <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-lg bg-white/80 dark:bg-black/40 border border-black/[0.06] dark:border-white/[0.06] backdrop-blur-sm group-hover:bg-[#006ea3]/10 group-hover:border-[#006ea3]/20 transition-all duration-300">
-            <Icon className="w-4 h-4 text-black/50 dark:text-white/50 group-hover:text-[#006ea3] transition-colors duration-300" strokeWidth={1.5} />
+          <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-lg bg-white/80 dark:bg-black/40 border border-black/[0.06] dark:border-white/[0.06] backdrop-blur-sm group-hover:bg-[#4EB3E8]/10 group-hover:border-[#4EB3E8]/20 transition-all duration-300">
+            <Icon className="w-4 h-4 text-black/50 dark:text-white/50 group-hover:text-[#4EB3E8] transition-colors duration-300" strokeWidth={1.5} />
           </div>
         </div>
       )}
@@ -603,14 +652,14 @@ function ServiceCard({ service }: { service: Service }) {
       <div className={`relative z-10 ${hasIllustration ? "p-5 md:p-6" : "p-6 sm:p-7"} h-full flex flex-col`}>
         {!hasIllustration && (
           <Link href={service.href} className="block">
-            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-[#006ea3]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#006ea3] dark:text-[#ededed] group-hover:text-[#006ea3] group-hover:border-[#006ea3]/30 group-hover:bg-white dark:group-hover:bg-[#1a1a1a] transition-all duration-500 shadow-sm">
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-[#4EB3E8]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#4EB3E8] dark:text-[#ededed] group-hover:text-[#4EB3E8] group-hover:border-[#4EB3E8]/30 group-hover:bg-white dark:group-hover:bg-[#1a1a1a] transition-all duration-500 shadow-sm">
               <Icon className="w-5 h-5" strokeWidth={1.5} />
             </div>
           </Link>
         )}
 
         <Link href={service.href} className="block">
-          <h3 className="text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] group-hover:text-[#006ea3] transition-colors duration-300">
+          <h3 className="text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] group-hover:text-[#4EB3E8] transition-colors duration-300">
             {service.title}
           </h3>
         </Link>
@@ -621,7 +670,7 @@ function ServiceCard({ service }: { service: Service }) {
               <li key={sub.href}>
                 <Link
                   href={sub.href}
-                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-black/50 dark:text-white/50 hover:text-[#006ea3] transition-colors duration-300"
+                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-black/50 dark:text-white/50 hover:text-[#4EB3E8] transition-colors duration-300"
                 >
                   <ChevronRight className="w-3 h-3 flex-shrink-0" />
                   {sub.label}
@@ -638,7 +687,7 @@ function ServiceCard({ service }: { service: Service }) {
               {service.highlights.map((h) => (
                 <span
                   key={h}
-                  className="inline-flex items-center gap-1 text-[11px] font-medium text-[#006ea3]/70 dark:text-[#006ea3]/60 bg-[#006ea3]/[0.06] dark:bg-[#006ea3]/[0.08] px-2.5 py-1 rounded-full group-hover:text-[#006ea3] group-hover:bg-[#006ea3]/10 transition-all duration-500"
+                  className="inline-flex items-center gap-1 text-[11px] font-medium text-[#4EB3E8]/70 dark:text-[#4EB3E8]/60 bg-[#4EB3E8]/[0.06] dark:bg-[#4EB3E8]/[0.08] px-2.5 py-1 rounded-full group-hover:text-[#4EB3E8] group-hover:bg-[#4EB3E8]/10 transition-all duration-500"
                 >
                   <CheckCircle2 className="w-3 h-3" strokeWidth={2} />
                   {h}
@@ -648,7 +697,7 @@ function ServiceCard({ service }: { service: Service }) {
           </div>
         )}
 
-        <div className="mt-5 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+        <div className="mt-5 flex items-center text-[13px] font-semibold text-[#4EB3E8] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
           Learn more <ArrowRight className="w-3.5 h-3.5 ml-1" />
         </div>
       </div>
@@ -668,11 +717,12 @@ function CategorySection({ category, index }: { category: ServiceCategory; index
         animate={isInView ? "visible" : "hidden"}
         className="text-center mb-12"
       >
-        <motion.div variants={fadeUp} custom={index * 0.1} className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#006ea3]/10 border border-[#006ea3]/20">
-          <CatIcon className="w-7 h-7 text-[#006ea3]" strokeWidth={1.5} />
+        <motion.div variants={fadeUp} custom={index * 0.1} className="mx-auto mb-6">
+          <CategoryVisual id={category.id} />
         </motion.div>
-        <motion.h2 variants={fadeUp} custom={index * 0.1 + 0.1} className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
-          {category.title}
+        <motion.h2 variants={fadeUp} custom={index * 0.1 + 0.1} className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          {category.title.split(' ').slice(0, -1).join(' ')}{' '}
+          <span className="text-black dark:text-white">{category.title.split(' ').slice(-1)[0]}</span>
         </motion.h2>
         <motion.p variants={fadeUp} custom={index * 0.1 + 0.2} className="mt-3 text-sm md:text-base font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed">
           {category.subtitle}
@@ -704,8 +754,8 @@ function StatsBar() {
 
   return (
     <div ref={ref} className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#006ea3]/[0.04] via-transparent to-[#006ea3]/[0.04] dark:from-[#006ea3]/[0.03] dark:to-[#006ea3]/[0.03] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-[#006ea3]/[0.05] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#4EB3E8]/[0.04] via-transparent to-[#4EB3E8]/[0.04] dark:from-[#4EB3E8]/[0.03] dark:to-[#4EB3E8]/[0.03] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-[#4EB3E8]/[0.05] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-24">
         <motion.div
@@ -726,13 +776,13 @@ function StatsBar() {
               initial={{ opacity: 0, y: 24 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-              className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#006ea3]/10 dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#006ea3]/8 overflow-hidden transition-all duration-500 p-6 md:p-8"
+              className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#4EB3E8]/10 dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#4EB3E8]/8 overflow-hidden transition-all duration-500 p-6 md:p-8"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#006ea3]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#4EB3E8]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#4EB3E8]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative">
-                <div className="text-4xl md:text-5xl font-bold text-[#006ea3] tabular-nums tracking-tight">
+                <div className="text-4xl md:text-5xl font-bold text-[#4EB3E8] tabular-nums tracking-tight">
                   {counts[i]}{stat.suffix}
                 </div>
                 <div className="mt-2 text-sm md:text-base font-semibold text-black/70 dark:text-white/70">
@@ -779,17 +829,17 @@ function ProcessTimeline() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
-              className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#006ea3]/10 dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#006ea3]/8 overflow-hidden transition-all duration-500 p-6 sm:p-7"
+              className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#4EB3E8]/10 dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#4EB3E8]/8 overflow-hidden transition-all duration-500 p-6 sm:p-7"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#006ea3]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#4EB3E8]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#4EB3E8]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-5">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#006ea3]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#006ea3] group-hover:border-[#006ea3]/30 transition-all duration-500 shadow-sm">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#4EB3E8]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#4EB3E8] group-hover:border-[#4EB3E8]/30 transition-all duration-500 shadow-sm">
                     <StepIcon className="w-6 h-6" strokeWidth={1.5} />
                   </div>
-                  <span className="text-3xl font-bold text-[#006ea3]/20 dark:text-[#006ea3]/15 tabular-nums group-hover:text-[#006ea3]/35 transition-colors duration-500">
+                  <span className="text-3xl font-bold text-[#4EB3E8]/20 dark:text-[#4EB3E8]/15 tabular-nums group-hover:text-[#4EB3E8]/35 transition-colors duration-500">
                     {step.step}
                   </span>
                 </div>
@@ -814,9 +864,9 @@ function IndustriesSection() {
 
   return (
     <div ref={ref} className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/[0.04] via-transparent to-[#006ea3]/[0.03] dark:from-[#006ea3]/[0.03] dark:to-[#006ea3]/[0.02] pointer-events-none" />
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#006ea3]/[0.05] rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#006ea3]/[0.03] rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#4EB3E8]/[0.04] via-transparent to-[#4EB3E8]/[0.03] dark:from-[#4EB3E8]/[0.03] dark:to-[#4EB3E8]/[0.02] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#4EB3E8]/[0.05] rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#4EB3E8]/[0.03] rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-28">
         <motion.div
@@ -825,7 +875,7 @@ function IndustriesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-[11px] font-semibold text-[#006ea3] uppercase tracking-[0.2em] mb-4">Industry Expertise</span>
+          <span className="inline-block text-[11px] font-semibold text-[#4EB3E8] uppercase tracking-[0.2em] mb-4">Industry Expertise</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
             Built for <span className="text-black dark:text-white">Your Industry</span>
           </h2>
@@ -846,10 +896,10 @@ function IndustriesSection() {
               >
                 <Link
                   href={industry.href}
-                  className="group relative block h-full rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#006ea3]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#006ea3]/10 dark:hover:shadow-[#006ea3]/5 overflow-hidden transition-all duration-500"
+                  className="group relative block h-full rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#4EB3E8]/10 dark:hover:shadow-[#4EB3E8]/5 overflow-hidden transition-all duration-500"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#006ea3]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#4EB3E8]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#4EB3E8]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Image header */}
                   <div className="relative h-36 md:h-40 overflow-hidden rounded-t-2xl border-b border-black/[0.04] dark:border-white/[0.04]">
@@ -862,27 +912,27 @@ function IndustriesSection() {
                       unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5 dark:from-black/60 dark:via-black/20 dark:to-black/10" />
-                    <div className="absolute inset-0 bg-[#006ea3]/[0.06] dark:bg-[#006ea3]/[0.08] mix-blend-overlay group-hover:bg-transparent transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-[#4EB3E8]/[0.06] dark:bg-[#4EB3E8]/[0.08] mix-blend-overlay group-hover:bg-transparent transition-colors duration-500" />
 
-                    <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-xl bg-white/90 dark:bg-black/50 border border-white/20 backdrop-blur-md shadow-lg group-hover:bg-[#006ea3] group-hover:border-[#006ea3]/50 transition-all duration-300">
+                    <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-xl bg-white/90 dark:bg-black/50 border border-white/20 backdrop-blur-md shadow-lg group-hover:bg-[#4EB3E8] group-hover:border-[#4EB3E8]/50 transition-all duration-300">
                       <IndIcon className="w-4 h-4 text-black/60 dark:text-white/70 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                     </div>
 
                     <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded-lg bg-white/90 dark:bg-black/50 border border-white/20 backdrop-blur-md shadow-lg">
-                      <span className="text-xs font-bold text-[#006ea3]">{industry.stat}</span>
+                      <span className="text-xs font-bold text-[#4EB3E8]">{industry.stat}</span>
                       <span className="text-[9px] font-medium text-black/50 dark:text-white/40 ml-1">{industry.statLabel}</span>
                     </div>
                   </div>
 
                   {/* Card Content */}
                   <div className="relative p-5 md:p-6">
-                    <h3 className="text-base md:text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] group-hover:text-[#006ea3] transition-colors duration-300">
+                    <h3 className="text-base md:text-lg font-semibold tracking-tight text-black/85 dark:text-[#ededed] group-hover:text-[#4EB3E8] transition-colors duration-300">
                       {industry.name}
                     </h3>
                     <p className="mt-2 text-[13px] font-medium text-black/45 dark:text-[#8b8b8b] leading-relaxed group-hover:text-black/55 dark:group-hover:text-[#a1a1a1] transition-colors duration-300">
                       {industry.desc}
                     </p>
-                    <div className="mt-4 flex items-center text-[13px] font-semibold text-[#006ea3] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+                    <div className="mt-4 flex items-center text-[13px] font-semibold text-[#4EB3E8] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
                       Explore industry <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
@@ -908,9 +958,9 @@ function IndustriesSection() {
             return (
               <div
                 key={item.text}
-                className="flex items-center gap-3 p-4 rounded-xl border border-[#006ea3]/10 dark:border-white/[0.04] bg-white/60 dark:bg-white/[0.01]"
+                className="flex items-center gap-3 p-4 rounded-xl border border-[#4EB3E8]/10 dark:border-white/[0.04] bg-white/60 dark:bg-white/[0.01]"
               >
-                <HIcon className="w-4 h-4 text-[#006ea3] flex-shrink-0" strokeWidth={1.5} />
+                <HIcon className="w-4 h-4 text-[#4EB3E8] flex-shrink-0" strokeWidth={1.5} />
                 <span className="text-xs md:text-sm font-medium text-black/50 dark:text-white/45">{item.text}</span>
               </div>
             );
@@ -934,8 +984,8 @@ function WhyChooseUs() {
 
   return (
     <div ref={ref} className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#006ea3]/[0.03] via-transparent to-[#006ea3]/[0.03] dark:from-[#006ea3]/[0.02] dark:to-[#006ea3]/[0.02] pointer-events-none" />
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#006ea3]/[0.05] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#4EB3E8]/[0.03] via-transparent to-[#4EB3E8]/[0.03] dark:from-[#4EB3E8]/[0.02] dark:to-[#4EB3E8]/[0.02] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#4EB3E8]/[0.05] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-28">
         <motion.div
@@ -961,18 +1011,18 @@ function WhyChooseUs() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
-                className="group relative flex flex-col rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#006ea3]/10 dark:border-white/[0.06] hover:border-[#006ea3]/25 dark:hover:border-[#006ea3]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#006ea3]/8 overflow-hidden transition-all duration-500"
+                className="group relative flex flex-col rounded-2xl bg-[#D9EAFD] dark:bg-[#0a0a0a] border border-[#4EB3E8]/10 dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#cde3fc] dark:hover:bg-[#111] hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#4EB3E8]/8 overflow-hidden transition-all duration-500"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#006ea3]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="h-[2px] bg-gradient-to-r from-transparent via-[#006ea3]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#4EB3E8]/[0.04] rounded-full blur-2xl pointer-events-none -translate-y-1/2 translate-x-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="h-[2px] bg-gradient-to-r from-transparent via-[#4EB3E8]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative p-6 md:p-7 flex flex-col flex-1">
                   <div className="flex items-start justify-between mb-5">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#006ea3]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#006ea3] group-hover:border-[#006ea3]/30 transition-all duration-500 shadow-sm">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#4EB3E8]/20 dark:border-white/10 bg-white dark:bg-[#161616] text-[#4EB3E8] group-hover:border-[#4EB3E8]/30 transition-all duration-500 shadow-sm">
                       <ItemIcon className="w-6 h-6" strokeWidth={1.5} />
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-[#006ea3] tabular-nums leading-none">{item.stat}</div>
+                      <div className="text-2xl font-bold text-[#4EB3E8] tabular-nums leading-none">{item.stat}</div>
                       <div className="text-[10px] font-semibold text-black/30 dark:text-white/25 uppercase tracking-wider mt-1">{item.statLabel}</div>
                     </div>
                   </div>
@@ -984,7 +1034,7 @@ function WhyChooseUs() {
                     {item.highlights.map((h) => (
                       <span
                         key={h}
-                        className="inline-flex items-center gap-1 text-[11px] font-medium text-[#006ea3]/80 dark:text-[#006ea3]/70 bg-[#006ea3]/[0.06] dark:bg-[#006ea3]/[0.08] px-2.5 py-1 rounded-full"
+                        className="inline-flex items-center gap-1 text-[11px] font-medium text-[#4EB3E8]/80 dark:text-[#4EB3E8]/70 bg-[#4EB3E8]/[0.06] dark:bg-[#4EB3E8]/[0.08] px-2.5 py-1 rounded-full"
                       >
                         <CheckCircle2 className="w-3 h-3" strokeWidth={2} />
                         {h}
@@ -1007,8 +1057,8 @@ function CTASection() {
 
   return (
     <div ref={ref} className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#006ea3]/[0.06] via-transparent to-[#006ea3]/[0.04] dark:from-[#006ea3]/[0.04] dark:to-[#006ea3]/[0.02] pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#006ea3]/[0.06] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#4EB3E8]/[0.06] via-transparent to-[#4EB3E8]/[0.04] dark:from-[#4EB3E8]/[0.04] dark:to-[#4EB3E8]/[0.02] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#4EB3E8]/[0.06] rounded-full blur-[120px] pointer-events-none" />
 
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]"
@@ -1045,7 +1095,7 @@ function CTASection() {
         >
           <Link
             href="/resources/free-consultation"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#4EB3E8] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#4EB3E8]/20"
           >
             Get a Free Consultation <ArrowRight className="w-4 h-4" />
           </Link>
@@ -1076,9 +1126,9 @@ export default function ServicesPage() {
 
       {/* ── Hero ── */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#006ea3]/10 via-transparent to-transparent dark:from-[#006ea3]/8 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_var(--tw-gradient-stops))] from-[#006ea3]/5 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_var(--tw-gradient-stops))] from-[#006ea3]/[0.03] via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#4EB3E8]/10 via-transparent to-transparent dark:from-[#4EB3E8]/8 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,_var(--tw-gradient-stops))] from-[#4EB3E8]/5 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_var(--tw-gradient-stops))] from-[#4EB3E8]/[0.03] via-transparent to-transparent pointer-events-none" />
 
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.02] dark:opacity-[0.03]"
@@ -1097,7 +1147,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#006ea3]/10 border border-[#006ea3]/20 text-[#006ea3] text-xs font-semibold tracking-wide mb-8"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#4EB3E8]/10 border border-[#4EB3E8]/20 text-[#4EB3E8] text-xs font-semibold tracking-wide mb-8"
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 End-to-End Digital Capabilities
@@ -1111,7 +1161,7 @@ export default function ServicesPage() {
               >
                 Engineering Excellence.
                 <br />
-                <span className="text-[#006ea3]">Measurable Impact.</span>
+                <span className="text-[#4EB3E8]">Measurable Impact.</span>
               </motion.h1>
 
               <motion.p
@@ -1127,7 +1177,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.35 }}
-                className="mt-3 text-sm md:text-base font-medium text-[#006ea3]/70 max-w-xl leading-relaxed tracking-wide"
+                className="mt-3 text-sm md:text-base font-medium text-[#4EB3E8]/70 max-w-xl leading-relaxed tracking-wide"
               >
                 50+ global partners &bull; 200+ production launches &bull; 98% client retention rate
               </motion.p>
@@ -1170,7 +1220,7 @@ export default function ServicesPage() {
                   priority
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#006ea3]/10 dark:from-black/50 dark:via-black/10 dark:to-[#006ea3]/15" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[#4EB3E8]/10 dark:from-black/50 dark:via-black/10 dark:to-[#4EB3E8]/15" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
 
@@ -1182,8 +1232,8 @@ export default function ServicesPage() {
                 className="absolute -top-4 -right-4 px-4 py-3 rounded-xl bg-white/95 dark:bg-[#111]/95 backdrop-blur-xl border border-black/[0.06] dark:border-white/[0.08] shadow-xl shadow-black/10 dark:shadow-black/30"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#006ea3]/10">
-                    <Rocket className="w-4.5 h-4.5 text-[#006ea3]" />
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#4EB3E8]/10">
+                    <Rocket className="w-4.5 h-4.5 text-[#4EB3E8]" />
                   </div>
                   <div>
                     <div className="text-sm font-bold text-black dark:text-white">200+</div>
@@ -1211,7 +1261,7 @@ export default function ServicesPage() {
               </motion.div>
 
               {/* Decorative glow behind image */}
-              <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#006ea3]/20 via-[#006ea3]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
+              <div className="absolute -inset-8 -z-10 bg-gradient-to-br from-[#4EB3E8]/20 via-[#4EB3E8]/5 to-transparent rounded-3xl blur-3xl opacity-60 dark:opacity-40" />
             </motion.div>
 
           </div>
