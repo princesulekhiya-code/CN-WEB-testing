@@ -63,11 +63,11 @@ export function WhyCloudNexus() {
   const orbY2 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
 
   return (
-    <section ref={sectionRef} className="relative w-full py-20 md:py-28 bg-white dark:bg-black overflow-hidden">
+    <section ref={sectionRef} className="relative w-full py-14 md:py-20 bg-white dark:bg-black overflow-hidden">
       <motion.div style={{ y: orbY1 }} className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-[#4EB3E8]/[0.04] rounded-full blur-[120px] pointer-events-none" />
       <motion.div style={{ y: orbY2 }} className="absolute -bottom-20 -right-20 w-[350px] h-[350px] bg-indigo-500/[0.04] rounded-full blur-[100px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 md:px-8">
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

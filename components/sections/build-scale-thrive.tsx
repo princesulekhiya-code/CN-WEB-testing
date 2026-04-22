@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function BuildScaleThrive() {
   return (
-    <section className="w-full py-20 md:py-28 bg-white dark:bg-black">
+    <section className="w-full py-14 md:py-20 bg-white dark:bg-black">
       <div className="w-full px-6 md:px-10 lg:px-16 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

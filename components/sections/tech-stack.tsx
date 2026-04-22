@@ -97,12 +97,12 @@ export function TechStack() {
   return (
     <section
       ref={ref}
-      className="w-full py-20 md:py-28 bg-white dark:bg-black overflow-hidden"
+      className="w-full py-14 md:py-20 bg-white dark:bg-black overflow-hidden"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         {/* Header */}
         <div
-          className={`text-center mb-14 transition-all duration-700 ${
+          className={`text-center mb-10 transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >

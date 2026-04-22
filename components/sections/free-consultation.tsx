@@ -37,7 +37,7 @@ export function FreeConsultation() {
   }, []);
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white dark:bg-black">
+    <section className="w-full py-12 md:py-16 bg-white dark:bg-black">
       <div className="mx-auto max-w-5xl px-6 md:px-8">
         <div
           ref={sectionRef}
