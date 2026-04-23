@@ -14,6 +14,7 @@ export function NavigationLoader() {
   const [visible, setVisible] = useState(false);
   const [showSplash, setShowSplash] = useState(false);
   const splashChecked = useRef(false);
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
     if (splashChecked.current) return;
@@ -22,17 +23,22 @@ export function NavigationLoader() {
       setShowSplash(true);
       setVisible(true);
       setLoading(true);
+      const safety = window.setTimeout(() => {
+        sessionStorage.setItem(SPLASH_KEY, "1");
+        setLoading(false);
+        setTimeout(() => { setVisible(false); setShowSplash(false); }, 300);
+      }, 8000);
+      return () => window.clearTimeout(safety);
     }
   }, []);
 
   const handleVideoEnd = useCallback(() => {
     sessionStorage.setItem(SPLASH_KEY, "1");
     setLoading(false);
-    const timer = window.setTimeout(() => {
+    window.setTimeout(() => {
       setVisible(false);
       setShowSplash(false);
     }, 300);
-    return () => window.clearTimeout(timer);
   }, []);
 
   const startLoading = useCallback(() => {
@@ -41,9 +47,13 @@ export function NavigationLoader() {
   }, []);
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     if (showSplash) return;
     setLoading(false);
-    const timer = window.setTimeout(() => setVisible(false), 150);
+    const timer = window.setTimeout(() => setVisible(false), 200);
     return () => window.clearTimeout(timer);
   }, [pathname, showSplash]);
 
@@ -85,7 +95,7 @@ export function NavigationLoader() {
     <div
       className={cn(
         "fixed inset-0 z-[10001] flex min-h-dvh w-full flex-col bg-black transition-opacity",
-        showSplash ? "duration-300" : "duration-150",
+        showSplash ? "duration-300" : "duration-200",
         loading ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
       )}
       role={loading ? "status" : "presentation"}
