@@ -18,7 +18,7 @@ export function NavigationLoader() {
 
   useEffect(() => {
     setLoading(false);
-    const timer = window.setTimeout(() => setVisible(false), 400);
+    const timer = window.setTimeout(() => setVisible(false), 150);
     return () => window.clearTimeout(timer);
   }, [pathname]);
 
@@ -58,7 +58,7 @@ export function NavigationLoader() {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-[10001] flex min-h-dvh w-full flex-col bg-black transition-opacity duration-300",
+        "fixed inset-0 z-[10001] flex min-h-dvh w-full flex-col bg-black transition-opacity duration-150",
         loading ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
       )}
       role={loading ? "status" : "presentation"}
