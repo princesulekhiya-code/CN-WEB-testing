@@ -118,7 +118,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
       { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
       { name: "PHP", logo: `${DEVICON}/php/php-original.svg` },
       { name: "Java", logo: `${DEVICON}/java/java-original.svg` },
-      { name: "Ruby on Rails", logo: `${DEVICON}/rails/rails-original-wordmark.svg` },
+      { name: "Ruby on Rails", logo: `${DEVICON}/rails/rails-plain.svg` },
     ],
   },
   {
@@ -126,7 +126,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     items: [
       { name: "React", logo: `${DEVICON}/react/react-original.svg` },
       { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
-      { name: "Angular", logo: `${DEVICON}/angular/angular-original.svg` },
+      { name: "Angular", logo: `${DEVICON}/angularjs/angularjs-original.svg` },
       { name: "Vue.js", logo: `${DEVICON}/vuejs/vuejs-original.svg` },
       { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
     ],
@@ -153,7 +153,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
   {
     label: "Cloud Infrastructure",
     items: [
-      { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-plain-wordmark.svg` },
+      { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
       { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
       { name: "GCP", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
       { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },

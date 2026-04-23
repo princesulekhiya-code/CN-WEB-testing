@@ -186,23 +186,56 @@ const processSteps = [
 const techCategories = [
   {
     label: "WordPress Core",
-    items: ["WordPress", "PHP 8+", "MySQL", "REST API", "WP CLI", "Gutenberg"],
+    items: [
+      { name: "WordPress", logo: `${DEVICON}/wordpress/wordpress-original.svg` },
+      { name: "PHP 8+", logo: `${DEVICON}/php/php-original.svg` },
+      { name: "MySQL", logo: `${DEVICON}/mysql/mysql-original.svg` },
+      { name: "REST API", logo: `${DEVICON}/restapi/restapi-original.svg` },
+      { name: "WP CLI", logo: `${DEVICON}/wpcli/wpcli-original.svg` },
+      { name: "Gutenberg", logo: `${DEVICON}/wordpress/wordpress-original.svg` }
+    ],
   },
   {
     label: "Themes & Builders",
-    items: ["Elementor", "Divi", "ACF Pro", "Custom Themes", "Block Editor"],
+    items: [
+      { name: "Elementor", logo: `${DEVICON}/wordpress/wordpress-original.svg` },
+      { name: "Divi", logo: `${DEVICON}/wordpress/wordpress-original.svg` },
+      { name: "ACF Pro", logo: `${DEVICON}/acfpro/acfpro-original.svg` },
+      { name: "Custom Themes", logo: `${DEVICON}/customthemes/customthemes-original.svg` },
+      { name: "Block Editor", logo: `${DEVICON}/blockeditor/blockeditor-original.svg` }
+    ],
   },
   {
     label: "eCommerce",
-    items: ["WooCommerce", "Shopify", "Magento", "Payment Gateways", "Subscriptions"],
+    items: [
+      { name: "WooCommerce", logo: `${DEVICON}/woocommerce/woocommerce-original.svg` },
+      { name: "Shopify", logo: `${DEVICON}/shopify/shopify-original.svg` },
+      { name: "Magento", logo: `${DEVICON}/magento/magento-original.svg` },
+      { name: "Payment Gateways", logo: `${DEVICON}/paymentgateways/paymentgateways-original.svg` },
+      { name: "Subscriptions", logo: `${DEVICON}/subscriptions/subscriptions-original.svg` }
+    ],
   },
   {
     label: "Frontend",
-    items: ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind CSS"],
+    items: [
+      { name: "HTML5", logo: `${DEVICON}/html5/html5-original.svg` },
+      { name: "CSS3", logo: `${DEVICON}/css3/css3-original.svg` },
+      { name: "JavaScript", logo: `${DEVICON}/javascript/javascript-original.svg` },
+      { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+      { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
+      { name: "Tailwind CSS", logo: `${DEVICON}/tailwindcss/tailwindcss-original.svg` }
+    ],
   },
   {
     label: "DevOps",
-    items: ["Docker", "Cloudflare", "AWS", "cPanel", "Git", "CI/CD"],
+    items: [
+      { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+      { name: "Cloudflare", logo: `${DEVICON}/cloudflare/cloudflare-original.svg` },
+      { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+      { name: "cPanel", logo: `${DEVICON}/cpanel/cpanel-original.svg` },
+      { name: "Git", logo: `${DEVICON}/git/git-original.svg` },
+      { name: "CI/CD", logo: `${DEVICON}/cicd/cicd-original.svg` }
+    ],
   },
 ];
 
@@ -594,13 +627,13 @@ function TechStackSection() {
           <AnimatePresence mode="wait">
             <motion.div key={activeTab} initial={{ opacity: 0, y: 12, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -12, scale: 0.98 }} transition={{ duration: 0.35, ease: "easeInOut" }} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-5">
               {techCategories[activeTab].items.map((tech, i) => (
-                <motion.div key={`${activeTab}-${tech}-${i}`} initial={{ opacity: 0, y: 16, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }} className="group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white/80 dark:bg-white/[0.02] hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.03] dark:hover:border-[#4EB3E8]/30 dark:hover:bg-[#4EB3E8]/[0.05] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4EB3E8]/5 transition-all duration-300 cursor-default">
+                <motion.div key={`${tech.name}-${i}`} initial={{ opacity: 0, y: 16, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }} className="group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white/80 dark:bg-white/[0.02] hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.03] dark:hover:border-[#4EB3E8]/30 dark:hover:bg-[#4EB3E8]/[0.05] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4EB3E8]/5 transition-all duration-300 cursor-default">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#4EB3E8]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                   <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#4EB3E8]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20 text-xs font-bold text-[#4EB3E8] group-hover:scale-110 transition-transform duration-300">
-                    {tech.slice(0, 2)}
+                  <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                    <img src={tech.logo} alt={tech.name} width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-sm" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.style.display = "none"; (e.currentTarget.nextElementSibling as HTMLElement).style.display = "flex"; }} /><span style={{ display: "none" }} className="w-10 h-10 md:w-12 md:h-12 items-center justify-center rounded-xl bg-[#4EB3E8]/10 text-[#4EB3E8] text-lg md:text-xl font-bold group-hover:scale-110 transition-transform duration-300">{tech.name.charAt(0)}</span>
                   </div>
-                  <span className="relative text-sm md:text-base font-semibold text-black/70 dark:text-white/60 group-hover:text-[#4EB3E8] transition-colors duration-300 text-center">{tech}</span>
+                  <span className="relative text-sm md:text-base font-semibold text-black/70 dark:text-white/60 group-hover:text-[#4EB3E8] transition-colors duration-300 text-center">{tech.name}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -614,9 +647,9 @@ function TechStackSection() {
               {Array(3).fill(0).map((_, i) => (
                 <div key={i} className="flex shrink-0 items-center gap-[var(--gap)] animate-marquee group-hover:[animation-play-state:paused]">
                   {allTechs.map((tech, j) => (
-                    <div key={`${i}-${j}-${tech}`} className="flex items-center gap-3.5 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-default whitespace-nowrap" title={tech}>
-                      <span className="flex h-8 w-8 md:h-9 md:w-9 flex-shrink-0 items-center justify-center rounded bg-[#4EB3E8]/15 text-xs font-bold text-[#4EB3E8]">{tech.slice(0, 2)}</span>
-                      <span className="text-sm md:text-base font-medium text-black/50 dark:text-white/40">{tech}</span>
+                    <div key={`${i}-${j}-${tech.name}`} className="flex items-center gap-3.5 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-default whitespace-nowrap" title={tech.name}>
+                      <img src={tech.logo} alt={tech.name} width={32} height={32} className="w-8 h-8 md:w-9 md:h-9 object-contain flex-shrink-0" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.style.display = "none"; (e.currentTarget.nextElementSibling as HTMLElement).style.display = "flex"; }} /><span style={{ display: "none" }} className="w-8 h-8 md:w-9 md:h-9 items-center justify-center rounded-lg bg-[#4EB3E8]/10 text-[#4EB3E8] text-sm font-bold flex-shrink-0">{tech.name.charAt(0)}</span>
+                      <span className="text-sm md:text-base font-medium text-black/50 dark:text-white/40">{tech.name}</span>
                     </div>
                   ))}
                 </div>

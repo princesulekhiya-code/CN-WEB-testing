@@ -127,7 +127,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
       { name: "React", logo: `${DEVICON}/react/react-original.svg` },
       { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
       { name: "Vue.js", logo: `${DEVICON}/vuejs/vuejs-original.svg` },
-      { name: "Angular", logo: `${DEVICON}/angular/angular-original.svg` },
+      { name: "Angular", logo: `${DEVICON}/angularjs/angularjs-original.svg` },
       { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
     ],
   },
@@ -146,7 +146,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
     items: [
       { name: "Stripe", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
       { name: "PayPal", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
-      { name: "Razorpay", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+      { name: "Razorpay", logo: `${DEVICON}/javascript/javascript-original.svg` },
       { name: "Square", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
       { name: "Braintree", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
     ],
@@ -164,7 +164,7 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
   {
     label: "Infrastructure",
     items: [
-      { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-plain-wordmark.svg` },
+      { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
       { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
       { name: "GCP", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
       { name: "Cloudflare", logo: `${DEVICON}/cloudflare/cloudflare-original.svg` },
