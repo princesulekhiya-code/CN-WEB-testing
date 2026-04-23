@@ -296,9 +296,6 @@ export default function EmailMarketingPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

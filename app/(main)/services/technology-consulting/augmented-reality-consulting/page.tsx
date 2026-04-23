@@ -101,27 +101,27 @@ const techCategories: { label: string; items: { name: string; logo: string }[] }
       { name: "Vuforia", logo: `${DEVICON}/unity/unity-original.svg` },
       { name: "Spark AR", logo: `${DEVICON}/sparkar/sparkar-original.svg` },
       { name: "8th Wall", logo: `${DEVICON}/javascript/javascript-original.svg` }
-    ].map(techItem) },
+    ] },
   { label: "3D Tools", items: [
       { name: "Unity", logo: `${DEVICON}/unity/unity-original.svg` },
       { name: "Unreal Engine", logo: `${DEVICON}/unrealengine/unrealengine-original.svg` },
       { name: "Blender", logo: `${DEVICON}/blender/blender-original.svg` },
       { name: "Maya", logo: `${DEVICON}/maya/maya-original.svg` },
       { name: "Cinema 4D", logo: `${DEVICON}/linux/linux-original.svg` }
-    ].map(techItem) },
+    ] },
   { label: "WebAR", items: [
       { name: "Three.js", logo: `${DEVICON}/threejs/threejs-original.svg` },
       { name: "A-Frame", logo: `${DEVICON}/aframe/aframe-original.svg` },
       { name: "WebXR", logo: `${DEVICON}/javascript/javascript-original.svg` },
       { name: "8th Wall", logo: `${DEVICON}/javascript/javascript-original.svg` },
       { name: "Zappar", logo: `${DEVICON}/zappar/zappar-original.svg` }
-    ].map(techItem) },
+    ] },
   { label: "Cloud", items: [
       { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
       { name: "Azure Spatial Anchors", logo: `${DEVICON}/azure/azure-original.svg` },
       { name: "Google Cloud", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
       { name: "Firebase", logo: `${DEVICON}/firebase/firebase-original.svg` }
-    ].map(techItem) },
+    ] },
 ];
 
 const stats = [

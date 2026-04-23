@@ -149,6 +149,7 @@ export default function WordPressPluginDevelopmentPage() {
             </div>
         </div>
       </div>
+      </div>
       <ServiceOfferingsSection />
       <ProcessSection />
       <TechStackSection />

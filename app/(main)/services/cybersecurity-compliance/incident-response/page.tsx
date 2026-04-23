@@ -166,7 +166,7 @@ export default function IncidentResponsePage() {
                       <Rocket className="w-4 h-4 text-[#4EB3E8]" />
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-black dark:text-white">< 15 min</div>
+                      <div className="text-sm font-bold text-black dark:text-white">{"< 15 min"}</div>
                       <div className="text-[10px] font-medium text-black/40 dark:text-white/40">Response time</div>
                     </div>
                   </div>

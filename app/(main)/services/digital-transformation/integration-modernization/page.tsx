@@ -177,9 +177,6 @@ export default function IntegrationModernizationPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

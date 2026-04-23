@@ -179,9 +179,6 @@ export default function MultiVendorMarketplacePage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

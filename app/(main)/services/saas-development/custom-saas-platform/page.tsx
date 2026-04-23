@@ -181,9 +181,6 @@ export default function CustomSaasPlatformPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

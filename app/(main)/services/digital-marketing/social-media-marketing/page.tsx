@@ -322,9 +322,6 @@ export default function SocialMediaMarketingPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

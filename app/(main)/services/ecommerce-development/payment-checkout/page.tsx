@@ -178,9 +178,6 @@ export default function PaymentCheckoutPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

@@ -177,9 +177,6 @@ export default function ProductReEngineeringPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

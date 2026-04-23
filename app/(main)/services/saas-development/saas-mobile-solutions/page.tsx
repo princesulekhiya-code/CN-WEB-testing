@@ -180,9 +180,6 @@ export default function SaasMobileSolutionsPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

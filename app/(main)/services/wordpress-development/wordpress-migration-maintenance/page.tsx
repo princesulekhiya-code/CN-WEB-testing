@@ -149,6 +149,7 @@ export default function WordPressMigrationMaintenancePage() {
             </div>
         </div>
       </div>
+      </div>
       <ServiceOfferingsSection />
       <ProcessSection />
       <TechStackSection />

@@ -9,7 +9,7 @@ import {
   Layers,
   PenTool,
   Type,
-  Image,
+  Image as ImageIcon,
   Film,
   CheckCircle2,
   Search,
@@ -106,7 +106,7 @@ const services: ServiceOffering[] = [
     features: ["Type scales", "Pairing rules", "Contrast checks"],
   },
   {
-    icon: Image,
+    icon: ImageIcon,
     title: "Marketing Collateral Design",
     description:
       "Slides, one-pagers, and campaign visuals that inherit the same grid, photography direction, and CTA styling as your digital product.",
@@ -134,7 +134,7 @@ const processSteps = [
     title: "Moodboarding",
     description:
       "Curated references align the team on lighting, texture, and energy — a shared north star before expensive illustration or photo shoots.",
-    icon: Image,
+    icon: ImageIcon,
   },
   {
     step: "03",
@@ -375,7 +375,7 @@ function HeroStats({ heroReady }: { heroReady: boolean }) {
   const items = [
     { icon: Palette, label: "Colors" },
     { icon: Type, label: "Typography" },
-    { icon: Image, label: "Imagery" },
+    { icon: ImageIcon, label: "Imagery" },
     { icon: Layers, label: "Systems" },
   ];
 

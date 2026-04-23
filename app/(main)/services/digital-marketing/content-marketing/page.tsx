@@ -291,9 +291,6 @@ export default function ContentMarketingPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

@@ -149,6 +149,7 @@ export default function UIUXConsultingPage() {
             </div>
         </div>
       </div>
+      </div>
       <ServiceOfferingsSection />
       <ProcessSection />
       <TechStackSection />

@@ -149,6 +149,7 @@ export default function ResponsiveThemeDevelopmentPage() {
             </div>
         </div>
       </div>
+      </div>
       <ServiceOfferingsSection />
       <ProcessSection />
       <TechStackSection />

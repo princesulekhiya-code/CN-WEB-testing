@@ -176,9 +176,6 @@ export default function UiUxModernizationPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

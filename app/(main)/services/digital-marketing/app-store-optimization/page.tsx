@@ -294,9 +294,6 @@ export default function AppStoreOptimizationPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

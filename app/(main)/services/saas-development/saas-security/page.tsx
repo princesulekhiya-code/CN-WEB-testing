@@ -181,9 +181,6 @@ export default function SaasSecurityPage() {
                 </motion.div>
               </motion.div>
             </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>

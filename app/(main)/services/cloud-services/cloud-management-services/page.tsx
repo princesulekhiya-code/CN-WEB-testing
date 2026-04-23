@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  ArrowRight, ArrowLeft, CloudCog, Shield, BarChart3, RefreshCw,
+  ArrowRight, ArrowLeft, Cloud, CloudCog, Shield, BarChart3, RefreshCw,
   CheckCircle2, ClipboardList, Settings, Rocket, Gauge, Zap,
   Award, HeartHandshake, Users, Clock,
 } from "lucide-react";
