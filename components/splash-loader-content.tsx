@@ -1,23 +1,72 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 type SplashLoaderContentProps = {
   showIndicator?: boolean;
   active?: boolean;
+  mode?: "video" | "spinner";
+  onVideoEnd?: () => void;
   className?: string;
 };
 
 export function SplashLoaderContent({
   showIndicator = true,
   active = true,
+  mode = "spinner",
+  onVideoEnd,
   className,
 }: SplashLoaderContentProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el || mode !== "video") return;
+
+    if (!active) {
+      el.pause();
+      return;
+    }
+
+    el.muted = true;
+    el.playbackRate = 1.8;
+    el.currentTime = 0;
+    void el.play().catch(() => {});
+  }, [active, mode]);
+
+  if (mode === "video") {
+    return (
+      <div
+        className={cn(
+          "flex min-h-0 w-full flex-1 flex-col items-center justify-center bg-black px-4 py-6 sm:px-8",
+          className
+        )}
+      >
+        <div className="relative flex min-h-0 w-full max-w-[min(1400px,100%)] flex-1 items-center justify-center animate-[fadeInScale_0.3s_ease-out_both]">
+          <video
+            ref={videoRef}
+            className="h-auto w-full max-h-[min(85dvh,92vw)] object-contain"
+            autoPlay
+            muted
+            playsInline
+            preload="auto"
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate"
+            aria-label="Cloud Nexus loading animation"
+            onEnded={onVideoEnd}
+          >
+            <source src="/loader/cloud-nexus-splash.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(
         "flex min-h-0 w-full flex-1 flex-col items-center justify-center gap-4 bg-black px-4 py-6 sm:px-8",
-        "motion-reduce:animate-none",
         className
       )}
     >
