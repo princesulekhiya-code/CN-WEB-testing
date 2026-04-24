@@ -2,50 +2,50 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { SplashLoaderContent } from "@/components/splash-loader-content";
 import { cn } from "@/lib/utils";
 import { acquireBodyScrollLock } from "@/lib/body-scroll-lock";
 
 export function NavigationLoader() {
   const pathname = usePathname();
-  const [loading, setLoading] = useState(true);
-  const [visible, setVisible] = useState(true);
-  const [showSplash, setShowSplash] = useState(true);
-  const isFirstNav = useRef(true);
+  const [phase, setPhase] = useState<"splash" | "nav" | "idle">("splash");
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const prevPathname = useRef(pathname);
 
-  const handleVideoEnd = useCallback(() => {
-    setLoading(false);
-    setShowSplash(false);
-    window.setTimeout(() => setVisible(false), 300);
+  const dismissSplash = useCallback(() => {
+    setPhase("idle");
   }, []);
 
   useEffect(() => {
-    const safety = window.setTimeout(handleVideoEnd, 6000);
-    return () => window.clearTimeout(safety);
-  }, [handleVideoEnd]);
+    const el = videoRef.current;
+    if (!el) return;
+    el.muted = true;
+    el.playbackRate = 1.8;
+    el.currentTime = 0;
+    el.play().catch(() => {});
 
-  const startLoading = useCallback(() => {
-    setLoading(true);
-    setVisible(true);
-  }, []);
+    const onEnd = () => dismissSplash();
+    el.addEventListener("ended", onEnd);
+
+    const safety = window.setTimeout(dismissSplash, 6000);
+    return () => {
+      el.removeEventListener("ended", onEnd);
+      window.clearTimeout(safety);
+    };
+  }, [dismissSplash]);
 
   useEffect(() => {
-    if (isFirstNav.current) {
-      isFirstNav.current = false;
-      return;
+    if (phase === "splash") return;
+    if (prevPathname.current !== pathname) {
+      prevPathname.current = pathname;
+      setPhase("idle");
     }
-    if (showSplash) return;
-    setLoading(false);
-    const timer = window.setTimeout(() => setVisible(false), 200);
-    return () => window.clearTimeout(timer);
-  }, [pathname, showSplash]);
+  }, [pathname, phase]);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      if (showSplash) return;
+      if (phase === "splash") return;
       const anchor = (e.target as HTMLElement).closest("a");
       if (!anchor) return;
-
       const href = anchor.getAttribute("href");
       if (
         !href ||
@@ -54,43 +54,49 @@ export function NavigationLoader() {
         href.startsWith("mailto:") ||
         href.startsWith("tel:") ||
         anchor.target === "_blank"
-      ) {
-        return;
-      }
-
-      if (href !== pathname) {
-        startLoading();
-      }
+      ) return;
+      if (href !== pathname) setPhase("nav");
     };
-
     document.addEventListener("click", handleClick, true);
     return () => document.removeEventListener("click", handleClick, true);
-  }, [pathname, startLoading, showSplash]);
+  }, [pathname, phase]);
 
   useEffect(() => {
-    if (!visible) return;
+    if (phase === "idle") return;
     return acquireBodyScrollLock();
-  }, [visible]);
+  }, [phase]);
 
-  if (!visible) return null;
+  const isActive = phase !== "idle";
 
   return (
     <div
       className={cn(
         "fixed inset-0 z-[10001] flex min-h-dvh w-full flex-col bg-black transition-opacity",
-        showSplash ? "duration-300" : "duration-200",
-        loading ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        phase === "splash" ? "duration-300" : "duration-200",
+        isActive ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
       )}
-      role={loading ? "status" : "presentation"}
-      aria-busy={loading}
-      aria-live={loading ? "polite" : undefined}
-      aria-hidden={!loading}
+      aria-hidden={!isActive}
     >
-      <SplashLoaderContent
-        active={loading}
-        mode={showSplash ? "video" : "spinner"}
-        onVideoEnd={handleVideoEnd}
-      />
+      {phase === "splash" ? (
+        <div className="flex min-h-0 w-full flex-1 flex-col items-center justify-center bg-black">
+          <div className="relative flex min-h-0 w-full max-w-[min(1400px,100%)] flex-1 items-center justify-center">
+            <video
+              ref={videoRef}
+              className="h-auto w-full max-h-[min(85dvh,92vw)] object-contain"
+              autoPlay
+              muted
+              playsInline
+              preload="auto"
+            >
+              <source src="/loader/cloud-nexus-splash.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      ) : phase === "nav" ? (
+        <div className="flex min-h-0 w-full flex-1 items-center justify-center bg-black">
+          <div className="h-10 w-10 rounded-full border-[3px] border-white/10 border-t-[#4EB3E8] animate-spin" />
+        </div>
+      ) : null}
     </div>
   );
 }
