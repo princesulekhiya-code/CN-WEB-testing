@@ -55,7 +55,10 @@ export function NavigationLoader() {
         href.startsWith("tel:") ||
         anchor.target === "_blank"
       ) return;
-      if (href !== pathname) setPhase("nav");
+      if (href !== pathname) {
+        setPhase("nav");
+        window.setTimeout(() => setPhase("idle"), 500);
+      }
     };
     document.addEventListener("click", handleClick, true);
     return () => document.removeEventListener("click", handleClick, true);
