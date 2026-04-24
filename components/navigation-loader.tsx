@@ -6,40 +6,23 @@ import { SplashLoaderContent } from "@/components/splash-loader-content";
 import { cn } from "@/lib/utils";
 import { acquireBodyScrollLock } from "@/lib/body-scroll-lock";
 
-const SPLASH_KEY = "cn_splash_shown";
-
 export function NavigationLoader() {
   const pathname = usePathname();
-  const [loading, setLoading] = useState(false);
-  const [visible, setVisible] = useState(false);
-  const [showSplash, setShowSplash] = useState(false);
-  const splashChecked = useRef(false);
-  const isFirstRender = useRef(true);
-
-  useEffect(() => {
-    if (splashChecked.current) return;
-    splashChecked.current = true;
-    if (!sessionStorage.getItem(SPLASH_KEY)) {
-      setShowSplash(true);
-      setVisible(true);
-      setLoading(true);
-      const safety = window.setTimeout(() => {
-        sessionStorage.setItem(SPLASH_KEY, "1");
-        setLoading(false);
-        setTimeout(() => { setVisible(false); setShowSplash(false); }, 300);
-      }, 8000);
-      return () => window.clearTimeout(safety);
-    }
-  }, []);
+  const [loading, setLoading] = useState(true);
+  const [visible, setVisible] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
+  const isFirstNav = useRef(true);
 
   const handleVideoEnd = useCallback(() => {
-    sessionStorage.setItem(SPLASH_KEY, "1");
     setLoading(false);
-    window.setTimeout(() => {
-      setVisible(false);
-      setShowSplash(false);
-    }, 300);
+    setShowSplash(false);
+    window.setTimeout(() => setVisible(false), 300);
   }, []);
+
+  useEffect(() => {
+    const safety = window.setTimeout(handleVideoEnd, 6000);
+    return () => window.clearTimeout(safety);
+  }, [handleVideoEnd]);
 
   const startLoading = useCallback(() => {
     setLoading(true);
@@ -47,8 +30,8 @@ export function NavigationLoader() {
   }, []);
 
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
+    if (isFirstNav.current) {
+      isFirstNav.current = false;
       return;
     }
     if (showSplash) return;
