@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { acquireBodyScrollLock } from "@/lib/body-scroll-lock";
@@ -9,11 +9,11 @@ export function NavigationLoader() {
   const pathname = usePathname();
   const [phase, setPhase] = useState<"splash" | "nav" | "idle">("splash");
   const videoRef = useRef<HTMLVideoElement>(null);
-  const prevPathname = useRef(pathname);
+  const phaseRef = useRef(phase);
+  const pathnameRef = useRef(pathname);
 
-  const dismissSplash = useCallback(() => {
-    setPhase("idle");
-  }, []);
+  phaseRef.current = phase;
+  pathnameRef.current = pathname;
 
   useEffect(() => {
     const el = videoRef.current;
@@ -23,27 +23,23 @@ export function NavigationLoader() {
     el.currentTime = 0;
     el.play().catch(() => {});
 
-    const onEnd = () => dismissSplash();
-    el.addEventListener("ended", onEnd);
-
-    const safety = window.setTimeout(dismissSplash, 6000);
+    const dismiss = () => setPhase("idle");
+    el.addEventListener("ended", dismiss);
+    const safety = window.setTimeout(dismiss, 6000);
     return () => {
-      el.removeEventListener("ended", onEnd);
+      el.removeEventListener("ended", dismiss);
       window.clearTimeout(safety);
     };
-  }, [dismissSplash]);
+  }, []);
 
   useEffect(() => {
-    if (phase === "splash") return;
-    if (prevPathname.current !== pathname) {
-      prevPathname.current = pathname;
-      setPhase("idle");
-    }
-  }, [pathname, phase]);
+    if (phaseRef.current === "splash") return;
+    setPhase("idle");
+  }, [pathname]);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      if (phase === "splash") return;
+      if (phaseRef.current === "splash") return;
       const anchor = (e.target as HTMLElement).closest("a");
       if (!anchor) return;
       const href = anchor.getAttribute("href");
@@ -55,14 +51,14 @@ export function NavigationLoader() {
         href.startsWith("tel:") ||
         anchor.target === "_blank"
       ) return;
-      if (href !== pathname) {
+      if (href !== pathnameRef.current) {
         setPhase("nav");
         window.setTimeout(() => setPhase("idle"), 500);
       }
     };
     document.addEventListener("click", handleClick, true);
     return () => document.removeEventListener("click", handleClick, true);
-  }, [pathname, phase]);
+  }, []);
 
   useEffect(() => {
     if (phase === "idle") return;
