@@ -53,15 +53,12 @@ const AIMLVisual = () => (
 /** 4. Mobile App – glowing minimal frame border trace */
 const MobileVisual = () => (
   <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000 overflow-hidden">
-    <div className="absolute right-4 bottom-[-10%] w-24 h-48 border border-white/5 rounded-3xl overflow-hidden group-hover:-translate-y-4 transition-transform duration-1000 ease-out">
-      {/* Animated gradient tracing the border */}
+    <div className="absolute right-4 bottom-[-10%] w-24 h-48 border border-[#006ea3]/15 dark:border-white/5 rounded-3xl overflow-hidden group-hover:-translate-y-4 transition-transform duration-1000 ease-out">
       <div className="absolute inset-0 bg-gradient-to-b from-[#006ea3]/0 via-[#006ea3]/40 to-[#006ea3]/0 opacity-50 -translate-y-[100%] group-hover:animate-[shimmer_3s_infinite]" />
-      {/* Screen glow */}
       <div className="absolute inset-2 bg-gradient-to-br from-[#006ea3]/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000 delay-300" />
-      {/* Screen elements */}
-      <div className="absolute top-6 left-4 right-4 h-2 bg-white/5 rounded-full" />
-      <div className="absolute top-10 left-4 right-10 h-2 bg-white/5 rounded-full" />
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-8 h-1 bg-white/10 rounded-full" />
+      <div className="absolute top-6 left-4 right-4 h-2 bg-[#006ea3]/10 dark:bg-white/5 rounded-full" />
+      <div className="absolute top-10 left-4 right-10 h-2 bg-[#006ea3]/10 dark:bg-white/5 rounded-full" />
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-8 h-1 bg-[#006ea3]/15 dark:bg-white/10 rounded-full" />
     </div>
   </div>
 );
@@ -71,11 +68,11 @@ const WebVisual = () => (
   <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000 overflow-hidden">
     <div className="absolute right-4 bottom-4 w-40 h-28 perspective-1000">
       <div className="relative w-full h-full transform-style-3d rotate-x-12 rotate-y-[-10deg]">
-        <div className="absolute inset-0 bg-[#111] border border-white/10 rounded-xl translate-z-0 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:border-[#006ea3]/30 transition-all duration-700 shadow-2xl" />
-        <div className="absolute inset-0 bg-[#1a1a1a]/80 backdrop-blur-sm border border-white/5 rounded-xl -translate-z-4 group-hover:-translate-x-2 group-hover:translate-y-2 transition-all duration-700 delay-100 shadow-2xl flex flex-col p-3 gap-2">
+        <div className="absolute inset-0 bg-white dark:bg-[#111] border border-[#006ea3]/15 dark:border-white/10 rounded-xl translate-z-0 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:border-[#006ea3]/30 transition-all duration-700 shadow-2xl" />
+        <div className="absolute inset-0 bg-[#f0f7ff]/80 dark:bg-[#1a1a1a]/80 backdrop-blur-sm border border-[#006ea3]/10 dark:border-white/5 rounded-xl -translate-z-4 group-hover:-translate-x-2 group-hover:translate-y-2 transition-all duration-700 delay-100 shadow-2xl flex flex-col p-3 gap-2">
           <div className="w-1/3 h-1.5 bg-[#006ea3]/40 rounded-full" />
-          <div className="w-1/2 h-1.5 bg-white/10 rounded-full" />
-          <div className="w-5/6 h-1.5 bg-white/10 rounded-full" />
+          <div className="w-1/2 h-1.5 bg-[#006ea3]/15 dark:bg-white/10 rounded-full" />
+          <div className="w-5/6 h-1.5 bg-[#006ea3]/15 dark:bg-white/10 rounded-full" />
         </div>
       </div>
     </div>
@@ -85,15 +82,15 @@ const WebVisual = () => (
 /** 6. Cloud & SaaS – faint bezier curve network */
 const CloudVisual = () => (
   <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000 overflow-hidden">
-    <svg className="absolute right-[-10%] bottom-[-10%] w-64 h-64 text-[#006ea3]/20" viewBox="0 0 100 100">
-      <path d="M 20 80 Q 40 50 80 20" fill="none" stroke="currentColor" strokeWidth="0.5" className="custom-dash group-hover:animate-[dash_3s_linear_infinite]" />
-      <path d="M 10 50 Q 50 10 90 60" fill="none" stroke="currentColor" strokeWidth="0.5" className="custom-dash group-hover:animate-[dash_4s_linear_infinite]" />
-      <path d="M 30 90 Q 70 80 80 40" fill="none" stroke="currentColor" strokeWidth="0.5" className="custom-dash group-hover:animate-[dash_5s_linear_infinite]" />
-      <circle cx="20" cy="80" r="1.5" fill="#006ea3" className="opacity-50 group-hover:opacity-100 group-hover:shadow-[0_0_8px_#006ea3] transition-all duration-1000" />
-      <circle cx="80" cy="20" r="1.5" fill="#006ea3" className="opacity-50 group-hover:opacity-100 group-hover:shadow-[0_0_8px_#006ea3] transition-all duration-1000 delay-100" />
-      <circle cx="10" cy="50" r="1" fill="#8b5cf6" className="opacity-50 group-hover:opacity-100 transition-all duration-1000 delay-200" />
-      <circle cx="90" cy="60" r="1" fill="#ec4899" className="opacity-50 group-hover:opacity-100 transition-all duration-1000 delay-300" />
-      <circle cx="80" cy="40" r="2" fill="white" className="opacity-20 group-hover:opacity-80 transition-all duration-1000 delay-400" />
+    <svg className="absolute right-[-10%] bottom-[-10%] w-64 h-64 text-[#006ea3]/40 dark:text-[#006ea3]/20" viewBox="0 0 100 100">
+      <path d="M 20 80 Q 40 50 80 20" fill="none" stroke="currentColor" strokeWidth="1" className="custom-dash group-hover:animate-[dash_3s_linear_infinite]" />
+      <path d="M 10 50 Q 50 10 90 60" fill="none" stroke="currentColor" strokeWidth="1" className="custom-dash group-hover:animate-[dash_4s_linear_infinite]" />
+      <path d="M 30 90 Q 70 80 80 40" fill="none" stroke="currentColor" strokeWidth="1" className="custom-dash group-hover:animate-[dash_5s_linear_infinite]" />
+      <circle cx="20" cy="80" r="2.5" fill="#006ea3" className="opacity-60 group-hover:opacity-100 group-hover:shadow-[0_0_8px_#006ea3] transition-all duration-1000" />
+      <circle cx="80" cy="20" r="2.5" fill="#006ea3" className="opacity-60 group-hover:opacity-100 group-hover:shadow-[0_0_8px_#006ea3] transition-all duration-1000 delay-100" />
+      <circle cx="10" cy="50" r="2" fill="#8b5cf6" className="opacity-60 group-hover:opacity-100 transition-all duration-1000 delay-200" />
+      <circle cx="90" cy="60" r="2" fill="#ec4899" className="opacity-60 group-hover:opacity-100 transition-all duration-1000 delay-300" />
+      <circle cx="80" cy="40" r="3" fill="#006ea3" className="opacity-40 group-hover:opacity-80 transition-all duration-1000 delay-400" />
     </svg>
   </div>
 );
@@ -105,7 +102,7 @@ const DigitalTransformVisual = () => (
       {[...Array(16)].map((_, i) => (
         <div 
           key={i} 
-          className="bg-white/5 border border-white/10 w-full h-full rounded-[2px] group-hover:rounded-full group-hover:bg-[#006ea3]/20 group-hover:border-[#006ea3]/40 transition-all duration-1000 ease-in-out" 
+          className="bg-[#006ea3]/5 dark:bg-white/5 border border-[#006ea3]/15 dark:border-white/10 w-full h-full rounded-[2px] group-hover:rounded-full group-hover:bg-[#006ea3]/20 group-hover:border-[#006ea3]/40 transition-all duration-1000 ease-in-out" 
           style={{ transitionDelay: `${(i % 4 + Math.floor(i / 4)) * 50}ms` }} 
         />
       ))}
@@ -131,7 +128,7 @@ const CyberVisual = () => (
       <div className="absolute w-32 h-32 border-t-2 border-r-2 border-transparent border-t-[#006ea3]/50 rounded-full animate-[spin_4s_linear_infinite]" />
       <div className="absolute w-40 h-40 border-b-2 border-l-2 border-transparent border-b-[#8b5cf6]/50 rounded-full animate-[spin_5s_linear_infinite_reverse]" />
       <div className="absolute w-48 h-48 border-t-[1px] border-transparent border-t-[#ec4899]/30 rounded-full animate-[spin_7s_linear_infinite]" />
-      <div className="absolute w-2 h-2 bg-white/20 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
+      <div className="absolute w-2 h-2 bg-[#006ea3]/40 dark:bg-white/20 rounded-full shadow-[0_0_15px_rgba(0,110,163,0.5)] dark:shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
     </div>
   </div>
 );
@@ -139,8 +136,7 @@ const CyberVisual = () => (
 /** 10. DevOps – glowing infinite loop path */
 const DevOpsVisual = () => (
   <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000 overflow-hidden">
-    <svg className="absolute right-4 bottom-4 w-48 h-24 text-white/5" viewBox="0 0 100 50">
-      {/* Background path */}
+    <svg className="absolute right-4 bottom-4 w-48 h-24 text-[#006ea3]/10 dark:text-white/5" viewBox="0 0 100 50">
       <path d="M 25 25 C 10 10, 10 40, 25 25 C 40 10, 60 40, 75 25 C 90 10, 90 40, 75 25 C 60 10, 40 40, 25 25" fill="none" stroke="currentColor" strokeWidth="2" />
       {/* Animated glowing path */}
       <path d="M 25 25 C 10 10, 10 40, 25 25 C 40 10, 60 40, 75 25 C 90 10, 90 40, 75 25 C 60 10, 40 40, 25 25" fill="none" stroke="#006ea3" strokeWidth="2" strokeLinecap="round" className="custom-infinity opacity-0 group-hover:opacity-100 transition-opacity duration-1000 group-hover:animate-[infinity_4s_linear_infinite]" style={{ filter: 'drop-shadow(0 0 4px #006ea3)' }} />
@@ -155,7 +151,7 @@ const SoftwareDevVisual = () => (
       {[0, 1, 2, 3].map((i) => (
         <div key={i} className="flex gap-1.5 translate-x-8 group-hover:translate-x-0 transition-transform duration-700" style={{ transitionDelay: `${i * 100}ms` }}>
           <div className="h-2 rounded-full bg-[#006ea3]/30" style={{ width: `${30 + i * 10}%` }} />
-          <div className="h-2 rounded-full bg-white/10 flex-1" />
+          <div className="h-2 rounded-full bg-[#006ea3]/10 dark:bg-white/10 flex-1" />
         </div>
       ))}
     </div>
@@ -183,7 +179,7 @@ const ProductEngVisual = () => (
       <div className="absolute bottom-3 left-3 right-3 flex gap-1.5">
         <div className="h-1.5 w-1/4 rounded-full bg-[#006ea3]/30" />
         <div className="h-1.5 w-1/3 rounded-full bg-[#8b5cf6]/20" />
-        <div className="h-1.5 flex-1 rounded-full bg-white/10" />
+        <div className="h-1.5 flex-1 rounded-full bg-[#006ea3]/10 dark:bg-white/10" />
       </div>
     </div>
   </div>
@@ -208,10 +204,10 @@ const EcommerceVisual = () => (
   <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000 overflow-hidden">
     <div className="absolute right-4 bottom-4 w-36 h-32 flex flex-col gap-2">
       {[0, 1, 2].map((i) => (
-        <div key={i} className="flex items-center gap-2 bg-white/5 border border-[#006ea3]/15 rounded-lg p-2 translate-x-12 group-hover:translate-x-0 transition-transform duration-600" style={{ transitionDelay: `${i * 120}ms` }}>
+        <div key={i} className="flex items-center gap-2 bg-[#006ea3]/5 dark:bg-white/5 border border-[#006ea3]/15 rounded-lg p-2 translate-x-12 group-hover:translate-x-0 transition-transform duration-600" style={{ transitionDelay: `${i * 120}ms` }}>
           <div className="w-6 h-6 rounded bg-[#006ea3]/20 flex-shrink-0" />
           <div className="flex-1 flex flex-col gap-1">
-            <div className="h-1.5 w-3/4 rounded-full bg-white/10" />
+            <div className="h-1.5 w-3/4 rounded-full bg-[#006ea3]/10 dark:bg-white/10" />
             <div className="h-1.5 w-1/2 rounded-full bg-[#006ea3]/15" />
           </div>
         </div>
@@ -224,7 +220,7 @@ const EcommerceVisual = () => (
 const SaaSVisual = () => (
   <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000 overflow-hidden">
     <div className="absolute right-2 bottom-2 w-44 h-32">
-      <div className="absolute top-0 right-0 w-32 h-20 bg-white/5 border border-[#006ea3]/20 rounded-lg p-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+      <div className="absolute top-0 right-0 w-32 h-20 bg-[#006ea3]/5 dark:bg-white/5 border border-[#006ea3]/20 rounded-lg p-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
         <div className="flex gap-1 mb-2">
           {[1, 2, 3].map((i) => <div key={i} className="w-1 h-1 rounded-full bg-[#006ea3]/40" />)}
         </div>
@@ -234,8 +230,8 @@ const SaaSVisual = () => (
           ))}
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-24 h-14 bg-white/5 border border-[#8b5cf6]/15 rounded-lg p-2 translate-x-[-10px] group-hover:translate-x-0 transition-transform duration-700 delay-200">
-        <div className="h-1.5 w-3/4 rounded-full bg-white/10 mb-1.5" />
+      <div className="absolute bottom-0 left-0 w-24 h-14 bg-[#8b5cf6]/5 dark:bg-white/5 border border-[#8b5cf6]/15 rounded-lg p-2 translate-x-[-10px] group-hover:translate-x-0 transition-transform duration-700 delay-200">
+        <div className="h-1.5 w-3/4 rounded-full bg-[#006ea3]/10 dark:bg-white/10 mb-1.5" />
         <div className="h-1.5 w-1/2 rounded-full bg-[#8b5cf6]/20" />
       </div>
     </div>

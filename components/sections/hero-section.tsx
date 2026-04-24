@@ -229,7 +229,7 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 w-full sm:w-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-1000 fill-mode-both">
               <Link href="/resources/free-consultation">
                 <Button size="lg" className="w-full sm:w-auto rounded-sm bg-black text-white hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80">
-                  let's connect
+                  Let's connect
                 </Button>
               </Link>
               <Link href="/services">
