@@ -31,7 +31,7 @@ export function NavigationLoader() {
     prevPath.current = pathname;
     setShowNav(true);
     if (navTimeout.current) clearTimeout(navTimeout.current);
-    navTimeout.current = setTimeout(() => setShowNav(false), 400);
+    navTimeout.current = setTimeout(() => setShowNav(false), 5000);
     return () => { if (navTimeout.current) clearTimeout(navTimeout.current); };
   }, [pathname]);
 
@@ -60,8 +60,18 @@ export function NavigationLoader() {
 
   if (showNav) {
     return (
-      <div className="fixed inset-0 z-[10001] flex min-h-dvh w-full items-center justify-center bg-black/80 backdrop-blur-sm transition-opacity duration-200">
-        <div className="h-10 w-10 rounded-full border-[3px] border-white/10 border-t-[#4EB3E8] animate-spin" />
+      <div className="fixed inset-0 z-[10001] flex min-h-dvh w-full flex-col items-center justify-center bg-black">
+        <video
+          className="h-auto w-full max-w-[1400px] max-h-[85dvh] object-contain"
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
+          onEnded={() => setShowNav(false)}
+          ref={(el) => { if (el) el.playbackRate = 2.5; }}
+        >
+          <source src="/loader/cloud-nexus-splash.mp4" type="video/mp4" />
+        </video>
       </div>
     );
   }
