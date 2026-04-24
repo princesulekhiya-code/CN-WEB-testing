@@ -24,11 +24,20 @@ export function NavigationLoader() {
     return () => window.clearTimeout(safety);
   }, []);
 
+  const navTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   useEffect(() => {
     if (phase.current === "splash") return;
     if (pathnameRef.current !== pathname) {
       pathnameRef.current = pathname;
-      setPhase("idle");
+      if (navTimer.current) {
+        clearTimeout(navTimer.current);
+        navTimer.current = null;
+      }
+      navTimer.current = setTimeout(() => {
+        setPhase("idle");
+        navTimer.current = null;
+      }, 300);
     }
   }, [pathname]);
 
@@ -47,8 +56,12 @@ export function NavigationLoader() {
         anchor.target === "_blank"
       ) return;
       if (href !== pathnameRef.current) {
+        if (navTimer.current) clearTimeout(navTimer.current);
         setPhase("nav");
-        window.setTimeout(() => setPhase("idle"), 500);
+        navTimer.current = setTimeout(() => {
+          setPhase("idle");
+          navTimer.current = null;
+        }, 500);
       }
     };
     document.addEventListener("click", handleClick, true);
