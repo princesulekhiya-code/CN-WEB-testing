@@ -151,8 +151,8 @@ export default function ThreatMonitoringPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&h=600&fit=crop&q=80"
-                    alt="24/7 SIEM"
+                    src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop&q=80"
+                    alt="Threat Monitoring & SIEM"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

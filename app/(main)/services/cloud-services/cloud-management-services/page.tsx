@@ -157,8 +157,8 @@ export default function CloudManagementServicesPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop&q=80"
-                    alt="Managed Cloud"
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80"
+                    alt="Cloud Management Monitoring Dashboard"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

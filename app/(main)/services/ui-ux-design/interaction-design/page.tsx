@@ -112,8 +112,8 @@ export default function InteractionDesignPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&q=80"
-                    alt="IxD Expert"
+                    src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop&q=80"
+                    alt="Interaction Design"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

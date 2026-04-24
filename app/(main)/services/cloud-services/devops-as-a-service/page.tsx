@@ -166,8 +166,8 @@ export default function DevOpsAsAServicePage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=600&fit=crop&q=80"
-                    alt="DevOps Team"
+                    src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop&q=80"
+                    alt="DevOps CI/CD Pipeline Automation"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

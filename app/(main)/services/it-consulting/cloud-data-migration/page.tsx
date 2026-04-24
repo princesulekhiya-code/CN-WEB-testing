@@ -324,8 +324,8 @@ export default function CloudDataMigrationPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80"
-                    alt="Zero Downtime"
+                    src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop&q=80"
+                    alt="Cloud & Data Migration"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

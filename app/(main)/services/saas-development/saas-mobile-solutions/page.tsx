@@ -145,8 +145,8 @@ export default function SaasMobileSolutionsPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&q=80"
-                    alt="Mobile SaaS"
+                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80"
+                    alt="SaaS Mobile Solutions"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

@@ -141,8 +141,8 @@ export default function UiUxModernizationPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&q=80"
-                    alt="UX Refresh"
+                    src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=600&fit=crop&q=80"
+                    alt="UI/UX Modernization"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

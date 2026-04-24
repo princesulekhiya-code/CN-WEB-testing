@@ -162,8 +162,8 @@ function HeroVisual({ ready }: { ready: boolean }) {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=600&fit=crop&q=80"
-                    alt="300% ROAS"
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80"
+                    alt="PPC Advertising & Analytics"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

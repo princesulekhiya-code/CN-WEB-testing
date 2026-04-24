@@ -266,8 +266,8 @@ export default function ChatbotConsultingPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop&q=80"
-                    alt="AI Chatbots"
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=80"
+                    alt="Chatbot & Conversational AI"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

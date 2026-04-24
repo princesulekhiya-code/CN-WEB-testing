@@ -299,7 +299,7 @@ export default function NLPConversationalAIPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1531746790095-e5f4a734ce87?w=800&h=600&fit=crop&q=80"
+                    src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop&q=80"
                     alt="NLP Engine"
                     fill
                     className="object-cover"

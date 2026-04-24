@@ -142,8 +142,8 @@ export default function ProductReEngineeringPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop&q=80"
-                    alt="Re-Engineer"
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80"
+                    alt="Product Re-Engineering"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

@@ -144,8 +144,8 @@ export default function SaasUiUxDesignPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&q=80"
-                    alt="SaaS UX"
+                    src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop&q=80"
+                    alt="SaaS UI/UX Design"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

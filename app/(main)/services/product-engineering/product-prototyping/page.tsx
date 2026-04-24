@@ -303,8 +303,8 @@ export default function ProductPrototypingPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80"
-                    alt="Rapid Proto"
+                    src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=600&fit=crop&q=80"
+                    alt="Product Prototyping & Wireframes"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

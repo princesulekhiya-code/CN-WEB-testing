@@ -320,8 +320,8 @@ export default function WebDesignPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&q=80"
-                    alt="Web Design"
+                    src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=600&fit=crop&q=80"
+                    alt="Web Design & Layout"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

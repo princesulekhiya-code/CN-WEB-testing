@@ -309,8 +309,8 @@ export default function SoftwareProductArchitectingPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80"
-                    alt="Scalable Arch"
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80"
+                    alt="Software Architecture & Infrastructure"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"

@@ -256,8 +256,8 @@ export default function ContentMarketingPage() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                   <Image
-                    src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=600&fit=crop&q=80"
-                    alt="Content First"
+                    src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop&q=80"
+                    alt="Content Marketing & Writing"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
