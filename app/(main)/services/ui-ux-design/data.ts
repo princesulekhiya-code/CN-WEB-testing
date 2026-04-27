@@ -1,4 +1,4 @@
-import { Monitor, Smartphone, Palette, MousePointer, TestTube2, MessageSquare, Search, Layout, Code2, ShieldCheck, Rocket, Award, TrendingUp, Zap, HeartHandshake, Users, Layers } from "lucide-react";
+import { Award, Code2, HeartHandshake, Layers, Layout, MessageSquare, Monitor, MousePointer, Palette, Rocket, Search, ShieldCheck, Smartphone, TestTube2, TrendingUp, Users, Zap } from "lucide-react";
 import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
@@ -21,7 +21,14 @@ export const processHeading: ServicePageSectionProps = { headingGray: "Our Devel
 export const techHeading: ServicePageSectionProps = { headingGray: "Built With", headingWhite: "Contemporary Tooling", subtitle: "Elite-grade tools and frameworks form the foundation of every solution we deliver." };
 export const ctaProps: CTAProps = { headingTop: "Is It Time to Transform Your", headingBottom: "User Experience?", description: "Partner with us on interfaces your users will love—effortlessly intuitive, inclusive, and unmistakably true to your brand identity." };
 
-export const services: ServiceOffering[] = [];
+export const services: ServiceOffering[] = [
+  { icon: Monitor, title: "UI/UX Web Design", description: "Seasoned specialists craft memorable experiences that crystallize your brand and enrich how people discover, use, and return to your product.", features: ["Web interface design", "Brand identity", "User engagement"], href: "/services/ui-ux-design/web-design" , logos: ["figma/figma-original.svg", "html5/html5-original.svg", "css3/css3-original.svg"], accent: "#F24E1E"},
+  { icon: Smartphone, title: "UI/UX Mobile Design", description: "Forward-looking layouts across every screen and OS—calibrated to your goals and built to widen your audience.", features: ["iOS & Android", "Cross-platform", "Mobile-first"], href: "/services/ui-ux-design/mobile-design" , logos: ["figma/figma-original.svg", "sketch/sketch-original.svg", "react/react-original.svg"], accent: "#FF7262"},
+  { icon: Palette, title: "Visual Design", description: "Polished, extensible, low-friction outputs and templates that scale gracefully as your business evolves.", features: ["Design systems", "Brand guidelines", "Visual identity"], href: "/services/ui-ux-design/visual-design" , logos: ["photoshop/photoshop-original.svg", "illustrator/illustrator-plain.svg", "figma/figma-original.svg"], accent: "#31A8FF"},
+  { icon: MousePointer, title: "Interaction Design", description: "Human-centered interfaces that establish instant clarity by blending trusted patterns with leading-edge interaction craft.", features: ["Micro-interactions", "Animations", "User flows"], href: "/services/ui-ux-design/interaction-design" , logos: ["aftereffects/aftereffects-original.svg", "figma/figma-original.svg", "javascript/javascript-original.svg"], accent: "#9999FF"},
+  { icon: TestTube2, title: "Design Testing", description: "Evidence-based, build-ready solutions verified end-to-end so they meet both operational standards and business expectations.", features: ["Usability testing", "A/B testing", "User feedback"], href: "/services/ui-ux-design/design-testing" , logos: ["figma/figma-original.svg", "react/react-original.svg", "storybook/storybook-original.svg"], accent: "#FF4785"},
+  { icon: MessageSquare, title: "UI/UX Consulting", description: "Advisors analyze your users and business context to propose inventive paths that slot cleanly into Android and iOS ecosystems.", features: ["UX audit", "Strategy consulting", "Design review"], href: "/services/ui-ux-design/ui-ux-consulting" , logos: ["figma/figma-original.svg", "sketch/sketch-original.svg", "nodejs/nodejs-original.svg"], accent: "#4EB3E8"},
+];
 
 export const processSteps: ProcessStep[] = [{
     step: "01",

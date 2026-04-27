@@ -5,6 +5,12 @@ export interface ServiceOffering {
   title: string;
   description: string;
   features: string[];
+  /** Link to the sub-service detail page */
+  href?: string;
+  /** Tech logos shown in the card illustration (devicon paths relative to DEVICON base) */
+  logos?: string[];
+  /** Accent color for the card illustration elements */
+  accent?: string;
   /** When set with titleEmphasis, card title renders as gray prefix + emphasized word (software sub-pages). */
   titleRest?: string;
   titleEmphasis?: string;
