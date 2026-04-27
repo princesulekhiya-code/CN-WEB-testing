@@ -1,4 +1,4 @@
-import { Lightbulb, Target, Rocket, ShieldCheck, RefreshCcw, Settings, Palette, Code2, BarChart3, Zap, Award, Stethoscope, ShoppingCart, CreditCard, Truck, GraduationCap, Building2, Gamepad2, Factory, Layers } from "lucide-react";
+import { Award, BarChart3, Building2, Code2, CreditCard, Factory, Gamepad2, GraduationCap, Layers, Lightbulb, Palette, RefreshCcw, Rocket, Settings, ShieldCheck, ShoppingCart, Stethoscope, Target, Truck, Zap } from "lucide-react";
 import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
@@ -21,7 +21,14 @@ export const processHeading: ServicePageSectionProps = { headingGray: "Our Devel
 export const techHeading: ServicePageSectionProps = { headingGray: "Built with", headingWhite: "Modern Tools", subtitle: "Industry-leading tools and frameworks powering our solutions." };
 export const ctaProps: CTAProps = { headingTop: "Ready to Build Your", headingBottom: "Digital Product?", description: "Partner with a product-minded engineering team that owns outcomes from discovery through\r\n          scale." };
 
-export const services: ServiceOffering[] = [];
+export const services: ServiceOffering[] = [
+  { icon: Lightbulb, title: "Digital Product Consultation", description: "Our strategists immerse in your operations to uncover growth levers and chart a technology roadmap that accelerates every initiative.", features: ["Business analysis", "Strategy formulation", "Tech advisory"], href: "/services/product-engineering/digital-product-consultation" , logos: ["figma/figma-original.svg", "react/react-original.svg", "nodejs/nodejs-original.svg"], accent: "#F24E1E"},
+  { icon: Settings, title: "Software Product Architecting", description: "Seasoned architects evaluate your infrastructure landscape and leverage modern tooling to design resilient, high-performance systems built for scale.", features: ["System design", "Scalable architecture", "Tech stack selection"], href: "/services/product-engineering/software-product-architecting" , logos: ["docker/docker-original.svg", "kubernetes/kubernetes-original.svg", "amazonwebservices/amazonwebservices-plain-wordmark.svg"], accent: "#2496ED"},
+  { icon: Palette, title: "Product Experience Design", description: "Design specialists translate business context and emerging patterns into intuitive interaction flows and responsive, brand-aligned interfaces.", features: ["User research", "Interaction design", "Responsive UX"], href: "/services/product-engineering/product-experience-design" , logos: ["figma/figma-original.svg", "sketch/sketch-original.svg", "css3/css3-original.svg"], accent: "#F24E1E"},
+  { icon: Target, title: "Product Prototyping", description: "Grounded in market intelligence and user research, we craft interactive prototypes — test assumptions early, iterate rapidly, and refine until every requirement lands.", features: ["Rapid prototyping", "User validation", "Iterative testing"], href: "/services/product-engineering/product-prototyping" , logos: ["react/react-original.svg", "figma/figma-original.svg", "typescript/typescript-original.svg"], accent: "#61DAFB"},
+  { icon: Rocket, title: "Digital Product Development", description: "Engineers harness cutting-edge stacks to construct everything from lean MVPs to feature-rich platforms — then scale them into market-leading products.", features: ["Full-stack development", "MVP to scale", "Cloud-native"], href: "/services/product-engineering/digital-product-development" , logos: ["react/react-original.svg", "nodejs/nodejs-original.svg", "typescript/typescript-original.svg"], accent: "#3178C6"},
+  { icon: ShieldCheck, title: "Quality Engineering", description: "Disciplined QA embedded from day one — automated regression, performance profiling, and security sweeps so your product ships battle-ready.", features: ["Automated testing", "Performance QA", "Security testing"], href: "/services/product-engineering/quality-engineering" , logos: ["python/python-original.svg", "jest/jest-plain.svg", "nodejs/nodejs-original.svg"], accent: "#4EB3E8"},
+];
 
 export const processSteps: ProcessStep[] = [{
     step: "01",

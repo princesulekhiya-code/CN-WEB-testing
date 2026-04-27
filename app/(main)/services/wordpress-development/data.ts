@@ -1,4 +1,4 @@
-import { Layout, Code2, ShoppingCart, Puzzle, Palette, RefreshCcw, ClipboardList, Settings, ShieldCheck, Rocket, Award, Zap, HeartHandshake, Clock, Stethoscope, CreditCard, GraduationCap, Building2, Gamepad2, Factory, Globe, Truck, BarChart3 } from "lucide-react";
+import { Award, BarChart3, Building2, ClipboardList, Clock, Code2, CreditCard, Factory, Gamepad2, Globe, GraduationCap, HeartHandshake, Layout, Palette, Puzzle, RefreshCcw, Rocket, Settings, ShieldCheck, ShoppingCart, Stethoscope, Truck, Zap } from "lucide-react";
 import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
@@ -21,7 +21,14 @@ export const processHeading: ServicePageSectionProps = { headingGray: "Our Devel
 export const techHeading: ServicePageSectionProps = { headingGray: "Built with", headingWhite: "Modern Tools", subtitle: "Industry-leading tools and frameworks powering our solutions." };
 export const ctaProps: CTAProps = { headingTop: "Ready to Launch Your", headingBottom: "WordPress Site?", description: "Tell us about your catalog, editorial team, or headless goals — we&apos;ll map a build that&apos;s fast, secure, and easy to operate." };
 
-export const services: ServiceOffering[] = [];
+export const services: ServiceOffering[] = [
+  { icon: Layout, title: "CMS Development", description: "Empower your editorial teams with intuitive CMS solutions — designed, built, and deployed for effortless content orchestration at scale.", features: ["Content management", "User-friendly", "SEO-ready"], href: "/services/wordpress-development/cms-development" , logos: ["wordpress/wordpress-original.svg", "php/php-original.svg", "mysql/mysql-original.svg"], accent: "#21759B"},
+  { icon: Code2, title: "Custom WordPress Web Development", description: "Bespoke WordPress builds from concept through pixel-perfect execution — engineered to convert visitors and deliver measurable returns.", features: ["Custom themes", "Responsive design", "High conversion"], href: "/services/wordpress-development/custom-wordpress-development" , logos: ["wordpress/wordpress-original.svg", "html5/html5-original.svg", "css3/css3-original.svg"], accent: "#21759B"},
+  { icon: ShoppingCart, title: "WordPress eCommerce Development", description: "WooCommerce storefronts supercharged with premium plugins — feature-rich, visually engaging, and optimized for revenue growth.", features: ["WooCommerce", "Payment gateways", "Product catalog"], href: "/services/wordpress-development/wordpress-ecommerce" , logos: ["woocommerce/woocommerce-original.svg", "wordpress/wordpress-original.svg", "php/php-original.svg"], accent: "#96588A"},
+  { icon: Puzzle, title: "WordPress Plugin Development", description: "Lightweight, secure, and SEO-aware custom plugins — built for seamless integration, intuitive admin controls, and long-term maintainability.", features: ["Custom plugins", "API hooks", "Security-first"], href: "/services/wordpress-development/wordpress-plugin-development" , logos: ["php/php-original.svg", "wordpress/wordpress-original.svg", "javascript/javascript-original.svg"], accent: "#777BB4"},
+  { icon: Palette, title: "Responsive Theme Development", description: "Design-thinking-led themes that adapt beautifully across every breakpoint — reinforcing your brand identity with every scroll.", features: ["Design thinking", "Mobile-first", "Brand identity"], href: "/services/wordpress-development/responsive-theme-development" , logos: ["css3/css3-original.svg", "html5/html5-original.svg", "wordpress/wordpress-original.svg"], accent: "#E34F26"},
+  { icon: RefreshCcw, title: "WordPress Migration & Maintenance", description: "Comprehensive site stewardship — core upgrades, vulnerability patching, and zero-downtime platform migrations handled end to end.", features: ["Core updates", "Security patches", "Zero-downtime migration"], href: "/services/wordpress-development/wordpress-migration-maintenance" , logos: ["wordpress/wordpress-original.svg", "docker/docker-original.svg", "git/git-original.svg"], accent: "#4EB3E8"},
+];
 
 export const processSteps: ProcessStep[] = [{
     step: "01",
