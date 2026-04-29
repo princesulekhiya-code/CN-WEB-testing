@@ -1,0 +1,179 @@
+.heroWrap {
+  border-bottom: 1px solid rgba(123, 92, 255, 0.28);
+}
+
+.heroTitle {
+  text-wrap: balance;
+}
+
+.heroImageCard {
+  box-shadow: 0 10px 36px rgba(15, 23, 42, 0.07);
+}
+
+:global(.dark) .heroImageCard {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.articleMain {
+  letter-spacing: 0;
+}
+
+.tldrCard {
+  border-radius: 14px;
+}
+
+.introCopy p {
+  margin: 0;
+}
+
+.articleBody h2 {
+  margin: 3rem 0 1rem;
+  color: rgba(15, 23, 42, 0.96);
+  font-size: clamp(1.7rem, 2.1vw, 2.05rem);
+  font-weight: 620;
+  line-height: 1.26;
+  letter-spacing: -0.018em;
+  scroll-margin-top: 88px;
+}
+
+.articleBody h3 {
+  margin: 1.65rem 0 0.75rem;
+  color: rgba(15, 23, 42, 0.96);
+  font-size: 1.3rem;
+  font-weight: 610;
+  line-height: 1.38;
+  letter-spacing: -0.013em;
+}
+
+.articleBody p {
+  margin: 0 0 1rem;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.0012em;
+  color: rgba(15, 23, 42, 0.74);
+}
+
+.articleBody ul {
+  margin: 0.2rem 0 1.2rem;
+  padding-left: 1.25rem;
+}
+
+.articleBody li {
+  margin: 0.4rem 0;
+  font-size: 15.8px;
+  line-height: 1.82;
+  color: rgba(15, 23, 42, 0.74);
+}
+
+.articleBody li::marker {
+  color: #4eb3e8;
+}
+
+.iconList {
+  list-style: none;
+  margin: 0.45rem 0 1.2rem;
+  padding: 0;
+}
+
+.iconListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0.55rem 0;
+  font-size: 15.8px;
+  line-height: 1.76;
+  color: rgba(15, 23, 42, 0.74);
+}
+
+.iconBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.18rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(78, 179, 232, 0.32);
+  background: rgba(78, 179, 232, 0.11);
+  color: #2b95d4;
+  flex-shrink: 0;
+}
+
+.numberedFlow {
+  list-style: none;
+  margin: 0.9rem 0 1.2rem;
+  padding: 0;
+}
+
+.numberedItem {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.9rem;
+  margin: 0 0 1rem;
+  padding: 1rem 1rem 0.95rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  background: rgba(78, 179, 232, 0.04);
+}
+
+.numberBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.85rem;
+  width: 1.85rem;
+  border-radius: 999px;
+  background: #4eb3e8;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stepTitle {
+  margin: 0.2rem 0 0.55rem !important;
+}
+
+.promoCard,
+.tocCard {
+  border-radius: 16px;
+}
+
+.promoTitle {
+  font-size: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .promoTitle {
+    font-size: 1.7rem;
+  }
+}
+
+:global(.dark) .articleBody h2,
+:global(.dark) .articleBody h3 {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+:global(.dark) .articleBody p,
+:global(.dark) .articleBody li {
+  color: rgba(255, 255, 255, 0.73);
+}
+
+:global(.dark) .iconListItem {
+  color: rgba(255, 255, 255, 0.73);
+}
+
+:global(.dark) .iconBadge {
+  border-color: rgba(78, 179, 232, 0.44);
+  background: rgba(78, 179, 232, 0.2);
+  color: #7bc8f2;
+}
+
+:global(.dark) .numberedItem {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(78, 179, 232, 0.1);
+}
+
+:global(.dark) .heroWrap {
+  border-bottom-color: rgba(123, 92, 255, 0.22);
+}
