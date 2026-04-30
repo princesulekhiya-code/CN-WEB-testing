@@ -82,6 +82,7 @@ export interface ServicePageSectionProps {
   headingGray: string;
   headingWhite: string;
   subtitle: string;
+  headingTail?: string;
 }
 
 export interface CTAProps {

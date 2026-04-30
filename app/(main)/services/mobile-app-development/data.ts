@@ -1,5 +1,6 @@
 import { Apple, BarChart3, Building2, Clock, Cloud, Code2, Cpu, CreditCard, Factory, Gamepad2, Globe, GraduationCap, HeartHandshake, Layers, MessageCircle, Palette, Rocket, Settings, ShieldCheck, ShoppingCart, Smartphone, Stethoscope, TabletSmartphone, Truck, Users, Utensils, Zap } from "lucide-react";
 import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, WhyNeedProps, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 

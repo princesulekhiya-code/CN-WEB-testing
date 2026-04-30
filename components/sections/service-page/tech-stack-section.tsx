@@ -8,7 +8,7 @@ import type { TechCategory, TechItem, ServicePageSectionProps } from "./types";
 export function TechStackSection({
   heading,
   categories,
-}: ServicePageSectionProps & { categories: TechCategory[] }) {
+}: { heading: ServicePageSectionProps; categories: TechCategory[] }) {
   const { ref, visible } = useInView(0.1);
   const [activeTab, setActiveTab] = useState(0);
   const allTechs = categories.flatMap((c) => c.items);

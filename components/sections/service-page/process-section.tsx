@@ -7,7 +7,7 @@ import type { ProcessStep, ServicePageSectionProps } from "./types";
 export function ProcessSection({
   heading,
   steps,
-}: ServicePageSectionProps & { steps: ProcessStep[] }) {
+}: { heading: ServicePageSectionProps; steps: ProcessStep[] }) {
   const { ref, visible } = useInView(0.1);
 
   return (

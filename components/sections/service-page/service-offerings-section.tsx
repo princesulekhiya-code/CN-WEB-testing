@@ -12,7 +12,7 @@ const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 export function ServiceOfferingsSection({
   heading,
   services,
-}: ServicePageSectionProps & { services: ServiceOffering[] }) {
+}: { heading: ServicePageSectionProps; services: ServiceOffering[] }) {
   const { ref, visible } = useInView(0.1);
 
   if (services.length === 0) return null;

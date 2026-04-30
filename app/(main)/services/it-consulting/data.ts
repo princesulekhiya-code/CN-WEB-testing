@@ -1,5 +1,6 @@
 import { BarChart3, Briefcase, Building2, Clock, Cloud, CreditCard, Factory, GraduationCap, Headphones, HeartHandshake, Layers, Monitor, Network, Rocket, Server, Settings, ShieldCheck, ShoppingCart, Stethoscope, TrendingUp, Truck, Users } from "lucide-react";
 import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 

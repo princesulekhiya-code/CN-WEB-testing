@@ -294,7 +294,7 @@ export function CaseStudiesSection({
                               backgroundColor: metricsVisible
                                 ? study.accentColor
                                 : "transparent",
-                              ringColor: metricsVisible
+                              outlineColor: metricsVisible
                                 ? `${study.accentColor}30`
                                 : "#33333330",
                             }}

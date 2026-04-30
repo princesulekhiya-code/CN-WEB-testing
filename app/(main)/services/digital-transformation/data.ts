@@ -1,5 +1,6 @@
 import { RefreshCcw, Workflow, Bot, Database, Cloud, BarChart3, Settings, Code2, ShieldCheck, Rocket, Zap, Award, TrendingUp, HeartHandshake, Stethoscope, ShoppingCart, CreditCard, Truck, GraduationCap, Building2, Gamepad2, Factory, ClipboardList, Palette, Layers } from "lucide-react";
 import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
