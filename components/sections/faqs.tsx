@@ -106,7 +106,7 @@ export function FAQs() {
             transition={{ duration: 0.4 }}
             className="md:w-[280px] flex-shrink-0 mb-8 md:mb-0 md:sticky md:top-24"
           >
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b] leading-tight">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#4EB3E8] leading-tight">
               Frequently Asked
               <br />
               <span className="text-black dark:text-white">Questions</span>

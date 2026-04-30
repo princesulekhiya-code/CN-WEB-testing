@@ -103,7 +103,7 @@ export function Testimonials() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
         <div className="mb-8 sm:mb-10 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
             Client <span className="text-black dark:text-white">Testimonials</span>
           </h2>
         </div>

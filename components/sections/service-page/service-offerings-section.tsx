@@ -28,7 +28,7 @@ export function ServiceOfferingsSection({
           animate={visible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
             {heading.headingGray} <span className="text-black dark:text-white">{heading.headingWhite}</span>
             {heading.headingTail != null && heading.headingTail !== "" ? <> {heading.headingTail}</> : null}
           </h2>
@@ -87,13 +87,13 @@ function ServiceCard({
         <h3
           className={
             service.titleRest != null && service.titleEmphasis != null
-              ? "text-lg font-semibold tracking-tight text-[#999] dark:text-[#8b8b8b] group-hover:text-[#4EB3E8] transition-colors duration-300"
+              ? "text-lg font-semibold tracking-tight text-[#4EB3E8] group-hover:text-[#4EB3E8] transition-colors duration-300"
               : "text-lg font-semibold tracking-tight group-hover:text-[#4EB3E8] transition-colors duration-300"
           }
         >
           {service.titleRest != null && service.titleEmphasis != null ? (
             <>
-              <span className="text-[#999] dark:text-[#8b8b8b] group-hover:text-inherit">{service.titleRest} </span>
+              <span className="text-[#4EB3E8] group-hover:text-inherit">{service.titleRest} </span>
               <span className="text-black dark:text-white group-hover:text-inherit">{service.titleEmphasis}</span>
             </>
           ) : (

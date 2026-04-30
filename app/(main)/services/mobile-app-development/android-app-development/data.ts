@@ -1,5 +1,5 @@
 import { Smartphone, TabletSmartphone, Watch, Code2, TrendingUp, Settings2, Users, BadgeCheck, Kanban, HeartHandshake, ClipboardList, Palette, ShieldCheck, Rocket, LifeBuoy } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, WhyNeedProps, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -131,6 +131,40 @@ export const techCategories: TechCategory[] = [{ label: "Languages", items: [
       { name: "Mockito", logo: `${DEVICON}/mockito/mockito-original.svg` },
       { name: "Firebase Test Lab", logo: `${DEVICON}/firebase/firebase-original.svg` }
     ] },];
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Android Apps Can Be",
+  headingHighlight: "Game-Changing",
+  subtitle: "Our industry-focused Android development services help your business reach 3 billion+ devices and unlock access to varied benefits.",
+  image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80&fit=crop",
+  imageAlt: "Android app development benefits",
+  items: [
+    {
+      title: "Massive Market Reach",
+      description: "Android dominates with 72% global market share. A native Android app puts your brand in front of billions of users across phones, tablets, wearables, and TVs — maximizing your addressable audience.",
+    },
+    {
+      title: "Higher Conversion Rates",
+      description: "Push notifications, deep links, and personalized experiences drive 3x higher conversion rates compared to mobile web. Android apps keep users engaged and coming back.",
+    },
+    {
+      title: "Revenue Through Google Play",
+      description: "Monetize via in-app purchases, subscriptions, or ad placements. Google Play's flexible billing system and global payment support help you generate consistent revenue streams.",
+    },
+    {
+      title: "Offline-First Capabilities",
+      description: "Native Android apps work seamlessly without internet — caching data locally and syncing when connectivity returns. Critical for users in emerging markets and field operations.",
+    },
+    {
+      title: "Hardware Integration",
+      description: "Access device cameras, GPS, biometrics, NFC, and Bluetooth directly. Build powerful features like barcode scanning, contactless payments, and location-based services that web apps can't match.",
+    },
+    {
+      title: "Brand Presence & Loyalty",
+      description: "A dedicated app icon on the home screen keeps your brand top-of-mind. Combined with push notifications and widgets, you build a direct, always-on channel with your customers.",
+    },
+  ],
+};
 
 export const whyChoose: WhyChooseItem[] = [{
     icon: Users,

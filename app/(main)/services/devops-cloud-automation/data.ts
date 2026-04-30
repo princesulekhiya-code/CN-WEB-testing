@@ -1,5 +1,6 @@
 import { BarChart3, Box, Building2, Clock, CreditCard, Factory, Gamepad2, GitBranch, GraduationCap, HeartHandshake, Layers, Rocket, Server, Settings, Shield, ShoppingCart, Stethoscope, TrendingUp, Truck, Users, Wrench, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Assessment & D
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "DevOps Can Be",
+  headingHighlight: "Business-Critical",
+  subtitle: "DevOps isn't just about tools — it's about shipping faster, recovering quicker, and building the confidence to deploy anytime.",
+  image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&fit=crop",
+  imageAlt: "DevOps and cloud infrastructure",
+  items: [
+    { title: "10x Faster Deployments", description: "CI/CD pipelines, automated testing, and infrastructure as code reduce deployment time from days to minutes. Ship multiple times per day with confidence." },
+    { title: "99.99% Uptime Reliability", description: "Auto-scaling, load balancing, health checks, and self-healing infrastructure ensure your applications stay available even during traffic spikes and failures." },
+    { title: "40-60% Infrastructure Cost Savings", description: "Right-sized resources, spot instances, reserved capacity, and automated scaling eliminate cloud waste. Pay only for what you actually use." },
+    { title: "Faster Incident Recovery", description: "Automated monitoring, alerting, and rollback capabilities reduce mean time to recovery (MTTR) from hours to minutes. Issues get fixed before users notice." },
+    { title: "Security by Default", description: "DevSecOps integrates security scanning, vulnerability detection, and compliance checks directly into the pipeline. Catch threats before they reach production." },
+    { title: "Team Productivity Boost", description: "Eliminate manual deployments, environment inconsistencies, and configuration drift. Developers focus on building features instead of fighting infrastructure." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Users, title: "Certified DevOps Engineers", description: "AWS, Azure, and Kubernetes certified engineers with hands-on experience building production-grade pipelines for high-scale systems." },
   { icon: Wrench, title: "Production-Proven Practices", description: "Battle-tested patterns from 200+ deployments — we bring real-world experience, not just theoretical best practices." },
   { icon: TrendingUp, title: "10x Faster Delivery", description: "Teams we work with ship 10x faster with 90% fewer deployment failures and 50%+ reduction in infrastructure costs." },
   { icon: HeartHandshake, title: "Knowledge Transfer", description: "We don't just build — we upskill your team with documentation, training, and pair programming so you own your infrastructure." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "chorus-devops",
+    tag: "Healthcare DevOps",
+    tagColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
+    company: "CHORUS",
+    industry: "Healthcare / Google",
+    headline: "CI/CD and cloud infrastructure for CHORUS achieving 99.9% uptime across 3 platforms.",
+    challenge: "Multi-platform deployment complexity. Healthcare compliance in CI/CD. Zero-downtime releases.",
+    solution: "Automated CI/CD pipelines, containerized deployments, health-check monitoring, and security scanning in pipeline.",
+    duration: "45 days",
+    metrics: [
+      {
+        value: 99.9,
+        suffix: "%",
+        label: "Uptime"
+      },
+      {
+        value: 0,
+        suffix: " breaches",
+        label: "Security incidents"
+      },
+      {
+        value: 10,
+        suffix: "x",
+        label: "Deploy frequency"
+      }
+    ],
+    timeline: [
+      {
+        phase: "CI/CD Pipeline",
+        detail: "Automated build, test, deploy"
+      },
+      {
+        phase: "Infrastructure as Code",
+        detail: "Terraform, Docker, Kubernetes"
+      },
+      {
+        phase: "Security Integration",
+        detail: "SAST/SCA in pipeline"
+      },
+      {
+        phase: "Monitoring Setup",
+        detail: "Health checks, alerting, dashboards"
+      }
+    ],
+    accentColor: "#10b981"
+  }
+];

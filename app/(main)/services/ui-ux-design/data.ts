@@ -1,5 +1,6 @@
 import { Award, Code2, HeartHandshake, Layers, Layout, MessageSquare, Monitor, MousePointer, Palette, Rocket, Search, ShieldCheck, Smartphone, TestTube2, TrendingUp, Users, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -125,6 +126,23 @@ export const techCategories: TechCategory[] = [{
     ],
   },];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Great Design Can Be",
+  headingHighlight: "Profit-Driving",
+  subtitle: "Every dollar invested in UX returns $100. Strategic design reduces development costs, increases conversions, and builds lasting brand loyalty.",
+  image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80&fit=crop",
+  imageAlt: "UI UX design process",
+  items: [
+    { title: "Higher Conversion Rates", description: "Well-designed interfaces guide users toward action. Strategic UX can boost conversions by 200-400% through clearer navigation, better CTAs, and reduced friction." },
+    { title: "Reduced Development Costs", description: "Design-first approach catches usability issues before a single line of code is written. Fixing problems in design costs 10x less than fixing them in development." },
+    { title: "Stronger Brand Perception", description: "Consistent, polished design signals professionalism and builds trust. Users form opinions about your brand in 0.05 seconds — make every pixel count." },
+    { title: "Lower Support Costs", description: "Intuitive interfaces mean fewer confused users, fewer support tickets, and lower training costs. Great UX is the best documentation your product can have." },
+    { title: "Increased User Retention", description: "Apps with superior UX see 3x higher retention rates. Delightful interactions, smooth animations, and thoughtful micro-interactions keep users coming back." },
+    { title: "Data-Driven Design Decisions", description: "User research, A/B testing, and analytics-informed iterations ensure every design choice is validated by real behavior, not assumptions." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{
     icon: Award,
     title: "World-Class Design Standards",
@@ -149,3 +167,53 @@ export const whyChoose: WhyChooseItem[] = [{
     description:
       "We refuse to limit our lens to tools or passing fads—choosing instead distinctive methods and a tailored design strategy.",
   },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "edtech-ux",
+    tag: "EdTech Design",
+    tagColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
+    company: "EdTech",
+    industry: "Education Technology",
+    headline: "User-centered design for AI-driven e-learning platform achieving 3x engagement.",
+    challenge: "Complex learning paths needed intuitive navigation. Balancing gamification with academic rigor.",
+    solution: "Research-driven UX with adaptive interfaces, personalized dashboards, and gamification elements that boosted engagement 3x.",
+    duration: "30 days",
+    metrics: [
+      {
+        value: 3,
+        suffix: "x",
+        label: "Engagement increase"
+      },
+      {
+        value: 45,
+        suffix: "%",
+        label: "Learner improvement"
+      },
+      {
+        value: 92,
+        suffix: "%",
+        label: "User satisfaction"
+      }
+    ],
+    timeline: [
+      {
+        phase: "User Research",
+        detail: "Interviews, personas, journey mapping"
+      },
+      {
+        phase: "Wireframes",
+        detail: "Low-fidelity flows and navigation"
+      },
+      {
+        phase: "Visual Design",
+        detail: "High-fidelity screens and design system"
+      },
+      {
+        phase: "Usability Testing",
+        detail: "User testing and iteration"
+      }
+    ],
+    accentColor: "#8b5cf6"
+  }
+];

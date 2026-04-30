@@ -61,7 +61,7 @@ export function FreeConsultation() {
           <div className="relative px-5 py-10 sm:px-8 sm:py-12 md:px-14 md:py-16 flex flex-col md:flex-row items-center gap-8 sm:gap-10 md:gap-14">
             <div className="flex-1 text-center md:text-left">
               <h2
-                className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b] leading-tight mb-4 transition-all duration-600 delay-300 ${
+                className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8] leading-tight mb-4 transition-all duration-600 delay-300 ${
                   visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >

@@ -1,5 +1,5 @@
 import { Store, ShoppingBag, CreditCard, Truck, BarChart3, ShieldCheck, Smartphone, Globe, Layers, Settings, Code2, Rocket, Zap, Award, TrendingUp, HeartHandshake, Stethoscope, ShoppingCart, GraduationCap, Building2, Gamepad2, Factory, ClipboardList, Palette } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -42,7 +42,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Analysis", des
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "E-Commerce Can Be",
+  headingHighlight: "Revenue-Multiplying",
+  subtitle: "A strategically built e-commerce platform doesn't just sell products — it creates experiences that convert browsers into loyal customers.",
+  image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&fit=crop",
+  imageAlt: "E-commerce shopping experience",
+  items: [
+    { title: "24/7 Global Storefront", description: "Your e-commerce store never closes. Serve customers across time zones with automated inventory, payments, and fulfillment — generating revenue while you sleep." },
+    { title: "Higher Average Order Value", description: "AI-powered recommendations, bundle offers, and dynamic upselling increase average cart value by 20-35%. Every visitor becomes a higher-value customer." },
+    { title: "Reduced Operational Costs", description: "Automated inventory management, order processing, and customer communication eliminate manual work. Scale from 100 to 100,000 orders without proportional staff increases." },
+    { title: "Rich Customer Insights", description: "Track every click, search, and purchase. Understand buying patterns, seasonal trends, and customer segments to make smarter merchandising and marketing decisions." },
+    { title: "Omnichannel Selling", description: "Sell on your website, mobile app, social media, and marketplaces from one unified platform. Consistent inventory, pricing, and branding everywhere your customers are." },
+    { title: "Personalized Shopping Experience", description: "Dynamic content, personalized search results, and tailored promotions make each visitor feel like the store was built just for them — driving loyalty and repeat purchases." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Award, title: "Agile Development", description: "Sprint-driven delivery with modern toolchains — shipping production-ready features fast without compromising quality." },
   { icon: TrendingUp, title: "Customer-Centric", description: "Your feedback shapes every iteration — we build around real user needs to deliver outcomes that hit the mark." },
   { icon: Zap, title: "NDA & Security", description: "Strict confidentiality from day one — enforceable NDAs and enterprise-grade data handling protect every shared detail." },
   { icon: HeartHandshake, title: "Flexible Approach", description: "No one-size-fits-all — each engagement gets a tailored methodology, tech stack, and team structure." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "cartflow-ec",
+    tag: "Headless Commerce",
+    tagColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
+    company: "CartFlow",
+    industry: "E-Commerce",
+    headline: "AI-powered headless commerce platform driving 38% increase in average order value.",
+    challenge: "Generic product suggestions leading to 71% cart abandonment. No real-time ML infrastructure.",
+    solution: "Headless commerce with real-time ML recommendation engine, multi-currency support, and dynamic pricing.",
+    duration: "60 days",
+    metrics: [
+      {
+        value: 38,
+        suffix: "%",
+        label: "AOV increase"
+      },
+      {
+        value: 22,
+        suffix: "%",
+        label: "Abandonment drop"
+      },
+      {
+        value: 18,
+        suffix: "ms",
+        label: "Inference latency"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Data Pipeline",
+        detail: "Kafka streams for clickstream data"
+      },
+      {
+        phase: "ML Recommendations",
+        detail: "Hybrid collaborative filtering"
+      },
+      {
+        phase: "Commerce Platform",
+        detail: "Headless API with dynamic pricing"
+      },
+      {
+        phase: "Launch & Optimize",
+        detail: "Canary rollout with A/B testing"
+      }
+    ],
+    accentColor: "#8b5cf6"
+  }
+];

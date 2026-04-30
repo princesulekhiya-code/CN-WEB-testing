@@ -1,5 +1,6 @@
 import { BarChart3, Building2, Clock, CreditCard, Factory, FlaskConical, Gamepad2, Gauge, GraduationCap, HeartHandshake, Layers, Palette, Rocket, Settings, ShieldCheck, ShoppingCart, Stethoscope, Target, TrendingUp, Truck, Users, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Ideation & Res
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "MVPs Can Be",
+  headingHighlight: "Market Validators",
+  subtitle: "Test your idea with real users in weeks, not months. Build just enough to prove the concept and attract investors.",
+  image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80&fit=crop",
+  imageAlt: "MVP product development startup",
+  items: [
+    { title: "Validate Before You Invest", description: "Test your core hypothesis with real users before committing to full development. An MVP saves you from spending months building features nobody wants." },
+    { title: "Attract Investors with Proof", description: "A working MVP with real user traction speaks louder than any pitch deck. Show investors validated demand, engagement metrics, and a clear growth path." },
+    { title: "Weeks to Market, Not Months", description: "Go from idea to launched product in 6-8 weeks. Our rapid MVP framework prioritizes core features that prove the concept without over-engineering." },
+    { title: "Learn from Real User Behavior", description: "Analytics, session recordings, and feedback loops reveal how users actually interact with your product — insights that surveys and focus groups can never provide." },
+    { title: "Minimize Financial Risk", description: "Build only what's essential to test your idea. If the market responds, invest more. If it doesn't, pivot early at a fraction of the cost of full development." },
+    { title: "Foundation for Scale", description: "Our MVPs aren't throwaway prototypes. Clean architecture and modular code mean your MVP evolves into your production product without costly rewrites." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: FlaskConical, title: "Creative Strategists", description: "Strategic UX leadership and growth-oriented partners who design for outcomes—not checkbox features." },
   { icon: Gauge, title: "Scalability at the Core", description: "Lean, adaptable foundations built to mature gracefully as requirements deepen and audiences expand." },
   { icon: Users, title: "Cross-Functional Delivery", description: "Analysts, designers, front- and back-end engineers, project leadership, and QA in one accountable delivery unit." },
   { icon: HeartHandshake, title: "Fuelling Startups", description: "We back founders with real upside—shortening the path from momentum to measurable returns." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "fintech-mvp",
+    tag: "Fintech MVP",
+    tagColor: "bg-[#4EB3E8]/15 text-[#4a7db8] border-[#4EB3E8]/30",
+    company: "FinTech App",
+    industry: "Financial Technology",
+    headline: "Rapid MVP for AI-powered financial management app — concept to App Store in 80 days.",
+    challenge: "Validating AI-driven budgeting with real users. Building bank-grade security for MVP.",
+    solution: "Lean MVP with core AI features, bank-grade encryption, and biometric auth — launched in 80 days to validate market fit.",
+    duration: "80 days",
+    metrics: [
+      {
+        value: 95,
+        suffix: "%",
+        label: "Fraud detection"
+      },
+      {
+        value: 80,
+        suffix: " days",
+        label: "To market"
+      },
+      {
+        value: 40,
+        suffix: "%",
+        label: "Better budgeting"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Concept Validation",
+        detail: "User research, feature prioritization"
+      },
+      {
+        phase: "Core Build",
+        detail: "AI engine, security, payments"
+      },
+      {
+        phase: "Beta Testing",
+        detail: "User feedback, iteration"
+      },
+      {
+        phase: "App Store Launch",
+        detail: "Store optimization, release"
+      }
+    ],
+    accentColor: "#4EB3E8"
+  }
+];

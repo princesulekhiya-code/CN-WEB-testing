@@ -1,8 +1,9 @@
 "use client";
 
 import { Layers, Rocket } from "lucide-react";
-import { HeroSection, ServiceOfferingsSection, ProcessSection, TechStackSection, WhyChooseSection, CTASection } from "@/components/sections/service-page";
-import { heroProps, servicesHeading, processHeading, techHeading, ctaProps, services, processSteps, techCategories, whyChoose } from "./data";
+import { HeroSection, ServiceOfferingsSection, ProcessSection, TechStackSection, WhyNeedSection, WhyChooseSection, CTASection } from "@/components/sections/service-page";
+import { CaseStudiesSection } from "@/components/sections/industry-page";
+import { heroProps, servicesHeading, processHeading, techHeading, ctaProps, services, processSteps, techCategories, whyNeedProps, whyChoose , caseStudyProjects } from "./data";
 
 export default function ProductEngineeringPage() {
   const hero = {
@@ -17,7 +18,9 @@ export default function ProductEngineeringPage() {
       <ServiceOfferingsSection heading={servicesHeading} services={services} />
       <ProcessSection heading={processHeading} steps={processSteps} />
       <TechStackSection heading={techHeading} categories={techCategories} />
+      <WhyNeedSection {...whyNeedProps} />
       <WhyChooseSection items={whyChoose} />
+      <CaseStudiesSection projects={caseStudyProjects} />
       <CTASection {...ctaProps} />
     </section>
   );

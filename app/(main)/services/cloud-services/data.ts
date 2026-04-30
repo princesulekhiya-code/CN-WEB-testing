@@ -1,5 +1,6 @@
 import { BarChart3, Building2, Clock, Cloud, CloudCog, CreditCard, Database, Factory, Gamepad2, Globe, GraduationCap, HeartHandshake, Layers, Rocket, Server, Settings, Shield, ShieldCheck, ShoppingCart, Stethoscope, Truck, Users, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Discovery & TC
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Cloud Services Can",
+  headingHighlight: "Transform Operations",
+  subtitle: "Migrate, optimize, and innovate on the cloud — reduce costs, improve performance, and gain the agility your business needs.",
+  image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&fit=crop",
+  imageAlt: "Cloud computing infrastructure",
+  items: [
+    { title: "Eliminate Capital Expenses", description: "Shift from heavy upfront hardware investments to predictable monthly costs. Scale resources on demand and pay only for what you consume." },
+    { title: "Global Infrastructure Instantly", description: "Deploy to any region worldwide in minutes. Serve users from data centers closest to them with sub-100ms latency and built-in redundancy." },
+    { title: "Elastic Scalability", description: "Auto-scale from handling 10 requests to 10 million per second. Cloud infrastructure grows and shrinks automatically with your traffic patterns." },
+    { title: "Built-In Disaster Recovery", description: "Multi-region replication, automated backups, and failover systems ensure your data and applications survive any outage or disaster scenario." },
+    { title: "Enhanced Security Posture", description: "Enterprise-grade encryption, identity management, network isolation, and compliance certifications (SOC 2, HIPAA, PCI-DSS) built into the platform." },
+    { title: "Innovation Acceleration", description: "Access managed AI/ML services, serverless computing, IoT platforms, and databases without building from scratch. Experiment and launch new capabilities in days." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Users, title: "Certified Cloud Engineers", description: "AWS, Azure, and GCP certified architects with 5+ years average experience in enterprise cloud transformation." },
   { icon: Clock, title: "Faster Time-to-Cloud", description: "Proven migration waves with rehearsed cutovers — typical enterprise migration completed in 8-12 weeks." },
   { icon: ShieldCheck, title: "Security-First Approach", description: "Landing zones, encryption defaults, and compliance pipelines built in from day one — not bolted on after." },
   { icon: HeartHandshake, title: "Ongoing FinOps Partnership", description: "Monthly cost reviews, rightsize recommendations, and waste detection so cloud spend stays predictable." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "chorus-cloud",
+    tag: "Multi-Cloud Healthcare",
+    tagColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
+    company: "CHORUS",
+    industry: "Healthcare / Google",
+    headline: "Cloud-native healthcare platform deployed across multiple regions with 99.9% availability.",
+    challenge: "Multi-region deployment for healthcare compliance. High availability requirements.",
+    solution: "Cloud-native architecture with auto-scaling, multi-region replication, and healthcare-grade security.",
+    duration: "120 days",
+    metrics: [
+      {
+        value: 99.9,
+        suffix: "%",
+        label: "Availability"
+      },
+      {
+        value: 3,
+        suffix: " regions",
+        label: "Deployed in"
+      },
+      {
+        value: 0,
+        suffix: " breaches",
+        label: "Incidents"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Cloud Architecture",
+        detail: "Multi-region, auto-scaling design"
+      },
+      {
+        phase: "Migration",
+        detail: "Zero-downtime deployment"
+      },
+      {
+        phase: "Security Hardening",
+        detail: "Healthcare compliance, encryption"
+      },
+      {
+        phase: "Monitoring",
+        detail: "24/7 observability, alerting"
+      }
+    ],
+    accentColor: "#10b981"
+  }
+];

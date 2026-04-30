@@ -1,5 +1,6 @@
 import { BarChart3, Braces, Briefcase, Building2, Clock, Code, Code2, Cpu, CreditCard, Factory, GitBranch, GraduationCap, HeartHandshake, Layers, Package, Palette, Rocket, Settings, ShieldCheck, ShoppingCart, Stethoscope, Terminal, Truck, Users, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,121 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Discovery & An
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Custom Software Can Be",
+  headingHighlight: "Your Edge",
+  subtitle: "Off-the-shelf tools limit growth. Purpose-built software aligns perfectly with your workflows, compliance needs, and competitive strategy.",
+  image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80&fit=crop",
+  imageAlt: "Software development process",
+  items: [
+    { title: "Tailored to Your Business", description: "Custom software is built around your exact workflows, eliminating workarounds and manual processes that generic tools force upon your teams." },
+    { title: "Competitive Differentiation", description: "While competitors use the same SaaS tools, custom software gives you unique capabilities, faster operations, and proprietary advantages that can't be copied." },
+    { title: "Seamless System Integration", description: "Connect your CRM, ERP, payment gateways, and legacy systems into one unified platform — eliminating data silos and manual data entry." },
+    { title: "Complete Ownership & Control", description: "Own your codebase, data, and roadmap. No vendor lock-in, no surprise price hikes, and full control over security and compliance." },
+    { title: "Scalable Architecture", description: "Built to grow with your business — handle increasing users, transactions, and data volumes without performance degradation or costly migrations." },
+    { title: "Long-Term Cost Efficiency", description: "Eliminate per-seat licensing fees that compound with growth. Custom software pays for itself as your team and user base expand." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Cpu, title: "Engineering Excellence", description: "Specialists who pair deep domain fluency with disciplined, product-led technical planning on every engagement." },
   { icon: Rocket, title: "Future-Ready Solutions", description: "Architectures that leverage cloud-native services, IoT, AR/VR, AI/ML, and analytics so capabilities stay ahead of demand." },
   { icon: Clock, title: "Timely Delivery", description: "Mature build and go-to-market rhythms that keep launches aligned with the dates we commit to together." },
   { icon: Zap, title: "Smart Solutions", description: "Modern tooling applied to mirror operational reality and elevate the experience for every user cohort." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "factoryiq-sw",
+    tag: "Smart Factory",
+    tagColor: "bg-orange-500/15 text-orange-400 border-orange-500/30",
+    company: "FactoryIQ",
+    industry: "Manufacturing",
+    headline: "IoT-powered smart factory platform reducing downtime by 45% across 12 production lines.",
+    challenge: "Unplanned equipment downtime costing millions. No predictive maintenance capability.",
+    solution: "1000+ IoT sensors for real-time monitoring. ML-based predictive maintenance models. Unified OEE dashboard.",
+    duration: "100 days",
+    metrics: [
+      {
+        value: 45,
+        suffix: "%",
+        label: "Downtime reduced"
+      },
+      {
+        value: 1000,
+        suffix: "+",
+        label: "IoT sensors"
+      },
+      {
+        value: 30,
+        suffix: "%",
+        label: "OEE improvement"
+      }
+    ],
+    timeline: [
+      {
+        phase: "IoT Infrastructure",
+        detail: "Sensor deployment, edge computing"
+      },
+      {
+        phase: "Data Platform",
+        detail: "Time-series DB, streaming pipeline"
+      },
+      {
+        phase: "Predictive Models",
+        detail: "Equipment failure prediction"
+      },
+      {
+        phase: "Dashboard & Alerts",
+        detail: "OEE tracking, maintenance alerts"
+      }
+    ],
+    accentColor: "#f97316"
+  },
+  {
+    id: "paybridge-sw",
+    tag: "Payment Gateway",
+    tagColor: "bg-indigo-500/15 text-indigo-400 border-indigo-500/30",
+    company: "PayBridge",
+    industry: "Fintech",
+    headline: "Unified payment gateway processing $500M+ annually with 99.99% uptime.",
+    challenge: "Supporting 50+ payment methods. PCI-DSS Level 1 compliance. Sub-200ms transaction processing.",
+    solution: "Multi-acquirer routing for optimal success rates. PCI-DSS Level 1 certified. Smart retry logic with fallback routing.",
+    duration: "100 days",
+    metrics: [
+      {
+        value: 500,
+        suffix: "M+",
+        label: "Annual volume ($)"
+      },
+      {
+        value: 99.99,
+        suffix: "%",
+        label: "Uptime"
+      },
+      {
+        value: 150,
+        suffix: "ms",
+        label: "Avg latency"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Gateway Architecture",
+        detail: "Multi-acquirer routing, tokenization"
+      },
+      {
+        phase: "PCI Compliance",
+        detail: "Level 1 certification, encryption"
+      },
+      {
+        phase: "Smart Routing",
+        detail: "Success rate optimization"
+      },
+      {
+        phase: "Merchant Dashboard",
+        detail: "Real-time analytics"
+      }
+    ],
+    accentColor: "#6366f1"
+  }
+];

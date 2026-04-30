@@ -1,5 +1,6 @@
 import { BarChart3, Brain, Building2, Clock, Cpu, CreditCard, Database, Factory, Gamepad2, Glasses, GraduationCap, HeartHandshake, Layers, MessageSquare, Monitor, Rocket, Settings, ShieldCheck, ShoppingCart, Stethoscope, TrendingUp, Truck, Users } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Assessment & D
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Tech Consulting Can",
+  headingHighlight: "Save Millions",
+  subtitle: "The right technology decisions today prevent costly mistakes tomorrow. Expert guidance aligns your tech strategy with business outcomes.",
+  image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&fit=crop",
+  imageAlt: "Technology consulting strategy session",
+  items: [
+    { title: "Avoid Costly Tech Mistakes", description: "Wrong technology choices cost enterprises millions in rewrites and migrations. Expert evaluation of architectures, tools, and vendors prevents expensive dead ends." },
+    { title: "Strategic Technology Roadmap", description: "Align your technology investments with 3-5 year business goals. Prioritize initiatives that deliver maximum impact and avoid shiny-object syndrome." },
+    { title: "Vendor-Neutral Recommendations", description: "No hidden partnerships or reseller incentives. Get honest, unbiased advice on cloud providers, tools, and platforms based solely on your needs." },
+    { title: "Technical Due Diligence", description: "Evaluating an acquisition or investment? Our deep-dive code audits, architecture reviews, and scalability assessments reveal the true state of technology assets." },
+    { title: "Team & Process Optimization", description: "Identify bottlenecks in your engineering organization. Improve development workflows, CI/CD practices, and team structures for measurable velocity gains." },
+    { title: "Risk Mitigation", description: "Security audits, compliance gap analysis, and disaster recovery planning protect your business from technical failures, breaches, and regulatory penalties." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Users, title: "Accomplished technology strategists", description: "Trusted advisors who untangle complexity with depth across industries and today's technology stacks." },
   { icon: Clock, title: "A client-first partnership", description: "We anchor every decision in your objectives—working side by side until the outcomes you expect are realized." },
   { icon: ShieldCheck, title: "Full-lifecycle partnership", description: "From discovery and planning through delivery and long-term stewardship—we stay with you at every stage." },
   { icon: HeartHandshake, title: "Value-led engagement models", description: "Advisory shaped for measurable impact—raising ROI while keeping technical depth uncompromised." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "pharma-tc",
+    tag: "Tech Assessment",
+    tagColor: "bg-sky-500/15 text-sky-400 border-sky-500/30",
+    company: "Pharma",
+    industry: "Pharmaceutical",
+    headline: "Technology assessment and IoT strategy for cold chain monitoring across 5 regions.",
+    challenge: "Evaluating IoT vendors and architectures. Compliance requirements across multiple regions.",
+    solution: "Comprehensive technology assessment, vendor evaluation, and architecture design leading to successful IoT deployment.",
+    duration: "30 days",
+    metrics: [
+      {
+        value: 5,
+        suffix: " vendors",
+        label: "Evaluated"
+      },
+      {
+        value: 40,
+        suffix: "%",
+        label: "Cost savings identified"
+      },
+      {
+        value: 100,
+        suffix: "%",
+        label: "Compliance aligned"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Current State Audit",
+        detail: "Systems, processes, pain points"
+      },
+      {
+        phase: "Technology Evaluation",
+        detail: "Vendor comparison, POCs"
+      },
+      {
+        phase: "Architecture Design",
+        detail: "Target state, migration plan"
+      },
+      {
+        phase: "Roadmap Delivery",
+        detail: "Prioritized implementation plan"
+      }
+    ],
+    accentColor: "#0ea5e9"
+  }
+];

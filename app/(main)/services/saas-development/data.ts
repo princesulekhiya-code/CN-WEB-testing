@@ -1,5 +1,5 @@
 import { Layers, CreditCard, Cloud, Lock, Zap, Database, Smartphone, Settings, Code2, ShieldCheck, Rocket, Award, TrendingUp, HeartHandshake, Stethoscope, ShoppingCart, Truck, GraduationCap, Building2, Gamepad2, Factory, ClipboardList, Palette, BarChart3 } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +39,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Market Researc
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "SaaS Products Can",
+  headingHighlight: "Scale Infinitely",
+  subtitle: "Build multi-tenant platforms with subscription billing, seamless onboarding, and architecture that scales with every new customer.",
+  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&fit=crop",
+  imageAlt: "SaaS development dashboard",
+  items: [
+    { title: "Predictable Recurring Revenue", description: "Subscription models create reliable monthly income streams. Combined with low churn and upsell opportunities, SaaS businesses achieve valuations 3-7x higher than traditional software." },
+    { title: "Multi-Tenant Architecture", description: "Serve thousands of customers efficiently from shared infrastructure with complete data isolation. Lower per-customer costs while maintaining enterprise-grade security." },
+    { title: "Self-Service Onboarding", description: "Automated sign-up, guided setup, and interactive tutorials let customers start using your product in minutes — no sales calls or manual provisioning required." },
+    { title: "Usage-Based Monetization", description: "Flexible pricing tiers, usage metering, and add-on modules let customers start small and expand naturally. Grow revenue as customers grow their usage." },
+    { title: "Built-In Analytics & Insights", description: "Embedded analytics dashboards give your customers valuable insights from their own data — increasing stickiness, perceived value, and willingness to pay." },
+    { title: "API-First Extensibility", description: "RESTful APIs, webhooks, and marketplace integrations let customers connect your SaaS with their existing tools — making your product indispensable to their workflow." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Award, title: "Quality Solutions", description: "Sophisticated capabilities that streamline operations, elevate efficiency, and compound business outcomes." },
   { icon: TrendingUp, title: "CI/CD Approach", description: "An agile SaaS delivery model powered by CI/CD and DevOps—shipping meaningful updates every two to three weeks." },
   { icon: Zap, title: "Data Security", description: "Established safeguards and continuous vigilance so data stays protected at every phase of the lifecycle." },
   { icon: HeartHandshake, title: "Geo-Specific Hosting", description: "Region-aware hosting across deployment and operations so performance stays crisp in every market you serve." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "edtech-saas",
+    tag: "SaaS Platform",
+    tagColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
+    company: "EdTech",
+    industry: "Education Technology",
+    headline: "Multi-tenant SaaS e-learning platform serving 10K+ students with subscription billing.",
+    challenge: "Multi-tenant architecture for data isolation. Subscription billing with multiple tiers.",
+    solution: "Multi-tenant SaaS platform with AI-driven learning, Stripe billing, and self-service onboarding.",
+    duration: "90 days",
+    metrics: [
+      {
+        value: 10,
+        suffix: "K+",
+        label: "Active users"
+      },
+      {
+        value: 99.9,
+        suffix: "%",
+        label: "Uptime"
+      },
+      {
+        value: 3,
+        suffix: " tiers",
+        label: "Pricing plans"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Multi-Tenant Architecture",
+        detail: "Data isolation, tenant management"
+      },
+      {
+        phase: "Billing Integration",
+        detail: "Stripe subscriptions, metering"
+      },
+      {
+        phase: "Self-Service Onboarding",
+        detail: "Automated setup, guided tour"
+      },
+      {
+        phase: "Launch & Scale",
+        detail: "Production deployment, monitoring"
+      }
+    ],
+    accentColor: "#8b5cf6"
+  }
+];

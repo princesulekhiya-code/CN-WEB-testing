@@ -1,5 +1,5 @@
 import { RefreshCcw, Workflow, Bot, Database, Cloud, BarChart3, Settings, Code2, ShieldCheck, Rocket, Zap, Award, TrendingUp, HeartHandshake, Stethoscope, ShoppingCart, CreditCard, Truck, GraduationCap, Building2, Gamepad2, Factory, ClipboardList, Palette, Layers } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -42,7 +42,121 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Discover", des
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Digital Transformation Is",
+  headingHighlight: "Non-Negotiable",
+  subtitle: "Modernize legacy systems, automate workflows, and build digital-first capabilities that keep your business competitive and resilient.",
+  image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&fit=crop",
+  imageAlt: "Digital transformation in enterprise",
+  items: [
+    { title: "Legacy System Modernization", description: "Replace aging monoliths with cloud-native architectures. Reduce maintenance costs by 60%, improve performance, and unlock the agility that modern business demands." },
+    { title: "Process Automation at Scale", description: "Automate manual workflows across HR, finance, operations, and customer service. RPA and intelligent automation free hundreds of employee hours per month." },
+    { title: "Data-Driven Decision Culture", description: "Break down data silos with unified platforms. Real-time dashboards, predictive analytics, and self-service BI empower every team to make informed decisions." },
+    { title: "Enhanced Customer Experience", description: "Omnichannel digital touchpoints — apps, portals, chatbots, and IoT — create seamless customer journeys that increase satisfaction and lifetime value." },
+    { title: "Operational Resilience", description: "Cloud infrastructure, disaster recovery, and distributed systems ensure business continuity. Weather disruptions, scale during peaks, and operate from anywhere." },
+    { title: "Innovation Velocity", description: "Modern tech stacks and DevOps practices cut release cycles from months to days. Experiment, iterate, and respond to market changes before competitors can react." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Award, title: "Minimal Operational Disruption", description: "Leave existing assets and legacy code unaltered for the full duration of the migration." },
   { icon: TrendingUp, title: "Compressed Time-to-Market", description: "Responsive, expertly managed cloud services that heighten agility and shorten the path to value." },
   { icon: Zap, title: "Precision Refactoring", description: "Lower risk by refactoring applications in carefully scoped cohorts with exacting control." },
   { icon: HeartHandshake, title: "Reliable On-Time Delivery", description: "Flexible, scalable tooling that pairs speed-to-value with leaner ongoing operating expense." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "factoryiq-dt",
+    tag: "Digital Factory",
+    tagColor: "bg-orange-500/15 text-orange-400 border-orange-500/30",
+    company: "FactoryIQ",
+    industry: "Manufacturing",
+    headline: "Digital transformation of 12 production lines with IoT and predictive maintenance.",
+    challenge: "Legacy systems causing unplanned downtime. Siloed production data across facilities.",
+    solution: "IoT sensors, real-time dashboards, predictive ML models, and unified data platform replacing legacy systems.",
+    duration: "100 days",
+    metrics: [
+      {
+        value: 45,
+        suffix: "%",
+        label: "Downtime reduced"
+      },
+      {
+        value: 30,
+        suffix: "%",
+        label: "OEE improvement"
+      },
+      {
+        value: 12,
+        suffix: " lines",
+        label: "Digitized"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Legacy Assessment",
+        detail: "Audit existing systems, identify gaps"
+      },
+      {
+        phase: "IoT Deployment",
+        detail: "1000+ sensors, edge computing"
+      },
+      {
+        phase: "Platform Migration",
+        detail: "Legacy to cloud-native transition"
+      },
+      {
+        phase: "Digital Operations",
+        detail: "Automated workflows, dashboards"
+      }
+    ],
+    accentColor: "#f97316"
+  },
+  {
+    id: "fleettrack-dt",
+    tag: "Fleet Digitization",
+    tagColor: "bg-[#4EB3E8]/15 text-[#4a7db8] border-[#4EB3E8]/30",
+    company: "FleetTrack",
+    industry: "Transport & Logistics",
+    headline: "IoT-powered fleet management transforming manual logistics into data-driven operations.",
+    challenge: "No real-time visibility. Manual route planning. High fuel costs across 2000+ vehicles.",
+    solution: "GPS + IoT integration, AI route optimization, predictive maintenance, reducing fuel costs by 25%.",
+    duration: "90 days",
+    metrics: [
+      {
+        value: 25,
+        suffix: "%",
+        label: "Fuel cost cut"
+      },
+      {
+        value: 2000,
+        suffix: "+",
+        label: "Vehicles tracked"
+      },
+      {
+        value: 40,
+        suffix: "%",
+        label: "Fewer breakdowns"
+      }
+    ],
+    timeline: [
+      {
+        phase: "IoT Integration",
+        detail: "GPS trackers, fuel sensors"
+      },
+      {
+        phase: "Real-Time Platform",
+        detail: "Dashboard with geofencing"
+      },
+      {
+        phase: "AI Route Engine",
+        detail: "Optimization with traffic data"
+      },
+      {
+        phase: "Predictive Maintenance",
+        detail: "ML-based breakdown prediction"
+      }
+    ],
+    accentColor: "#4EB3E8"
+  }
+];

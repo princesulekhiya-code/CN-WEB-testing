@@ -1,5 +1,5 @@
 import { BarChart3, Briefcase, Building2, Clock, Cloud, CreditCard, Factory, GraduationCap, Headphones, HeartHandshake, Layers, Monitor, Network, Rocket, Server, Settings, ShieldCheck, ShoppingCart, Stethoscope, TrendingUp, Truck, Users } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +39,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Analyze", desc
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "IT Consulting Can",
+  headingHighlight: "Drive Efficiency",
+  subtitle: "Optimize your IT infrastructure, reduce operational costs, and build systems that support your business growth strategy.",
+  image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80&fit=crop",
+  imageAlt: "IT infrastructure consulting",
+  items: [
+    { title: "Infrastructure Cost Optimization", description: "Audit your current IT spend and eliminate waste. Right-size servers, consolidate licenses, and negotiate vendor contracts to cut costs by 30-50%." },
+    { title: "System Integration", description: "Connect disconnected tools and platforms into a unified ecosystem. Eliminate manual data transfers, reduce errors, and give teams a single source of truth." },
+    { title: "Cloud Migration Strategy", description: "Plan and execute migrations from on-premise to cloud with zero downtime. Choose the right cloud strategy — lift-and-shift, re-platform, or cloud-native rebuild." },
+    { title: "IT Governance & Standards", description: "Establish frameworks for technology decisions, vendor management, and change control. Prevent shadow IT and ensure consistent practices across the organization." },
+    { title: "Scalable IT Architecture", description: "Design infrastructure that grows with your business. Avoid the cycle of outgrowing systems and expensive emergency upgrades every 2-3 years." },
+    { title: "Managed IT Services", description: "Offload day-to-day IT operations — monitoring, patching, support, and maintenance — so your internal team focuses on strategic initiatives that drive growth." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Users, title: "Quick Project Delivery", description: "Expert consultants distill requirements, deploy the right tools and technologies, and execute efficiently—accelerating delivery without compromising rigor." },
   { icon: Clock, title: "Potential Cost Savings", description: "Veteran practitioners deliver faster with lean staffing—often surpassing in-house outcomes while furnishing greater hands-on expert support." },
   { icon: ShieldCheck, title: "Reduced Security Risks", description: "Experts find and remediate bugs and security weaknesses across systems and networks, backed by deep skill in governing external technical resources." },
   { icon: HeartHandshake, title: "Boost Productivity", description: "We absorb operational technical load so leadership can concentrate on revenue-generating work and longer-range strategy." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "factoryiq-it",
+    tag: "IT Modernization",
+    tagColor: "bg-orange-500/15 text-orange-400 border-orange-500/30",
+    company: "FactoryIQ",
+    industry: "Manufacturing",
+    headline: "IT infrastructure modernization enabling IoT deployment across 12 production lines.",
+    challenge: "Legacy IT infrastructure unable to support IoT data volumes. Siloed systems.",
+    solution: "IT assessment, cloud migration strategy, network upgrade, and infrastructure redesign supporting 1000+ IoT sensors.",
+    duration: "45 days",
+    metrics: [
+      {
+        value: 12,
+        suffix: " lines",
+        label: "Modernized"
+      },
+      {
+        value: 60,
+        suffix: "%",
+        label: "Infra cost savings"
+      },
+      {
+        value: 1000,
+        suffix: "+",
+        label: "IoT devices supported"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Infrastructure Audit",
+        detail: "Current state assessment"
+      },
+      {
+        phase: "Cloud Strategy",
+        detail: "Migration planning, cost analysis"
+      },
+      {
+        phase: "Network Design",
+        detail: "IoT-ready network architecture"
+      },
+      {
+        phase: "Implementation",
+        detail: "Phased rollout with monitoring"
+      }
+    ],
+    accentColor: "#f97316"
+  }
+];

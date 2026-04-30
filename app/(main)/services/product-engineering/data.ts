@@ -1,5 +1,6 @@
 import { Award, BarChart3, Building2, Code2, CreditCard, Factory, Gamepad2, GraduationCap, Layers, Lightbulb, Palette, RefreshCcw, Rocket, Settings, ShieldCheck, ShoppingCart, Stethoscope, Target, Truck, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -75,6 +76,23 @@ export const processSteps: ProcessStep[] = [{
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Product Engineering Can",
+  headingHighlight: "Accelerate Growth",
+  subtitle: "Transform your vision into a market-ready product with end-to-end engineering that balances speed, quality, and scalability.",
+  image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80&fit=crop",
+  imageAlt: "Product engineering and ideation",
+  items: [
+    { title: "Idea to Market Faster", description: "Structured product engineering reduces time-to-market by 40%. Validated prototypes, agile sprints, and CI/CD pipelines get your product in front of users quickly." },
+    { title: "Reduced Technical Debt", description: "Clean architecture from day one means fewer rewrites, easier maintenance, and a codebase that scales with your business instead of holding it back." },
+    { title: "User-Centered Development", description: "Every feature is validated against real user needs through research, prototyping, and iterative testing — ensuring you build what people actually want." },
+    { title: "Scalable From Day One", description: "Microservices, cloud-native architecture, and horizontal scaling built into the foundation. Your product handles 10 users or 10 million without re-engineering." },
+    { title: "Cross-Functional Expertise", description: "Strategy, design, engineering, QA, and DevOps working as one team. No handoff gaps, no miscommunication, no wasted cycles between departments." },
+    { title: "Post-Launch Evolution", description: "Product engineering doesn't end at launch. Continuous analytics, user feedback loops, and feature iterations keep your product ahead of the competition." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{
     icon: Award,
     title: "AI & ML Integration",
@@ -99,3 +117,100 @@ export const whyChoose: WhyChooseItem[] = [{
     description:
       "Security woven into every phase of the lifecycle — from threat modeling and code review through deployment hardening and ongoing monitoring.",
   },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "cartflow-pe",
+    tag: "E-Commerce Product",
+    tagColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
+    company: "CartFlow",
+    industry: "E-Commerce",
+    headline: "End-to-end product engineering for headless commerce platform with ML recommendations.",
+    challenge: "Building a scalable, real-time ML recommendation engine from concept to production.",
+    solution: "Full product lifecycle — research, architecture, development, testing, and launch of headless commerce with ML-powered personalization.",
+    duration: "60 days",
+    metrics: [
+      {
+        value: 38,
+        suffix: "%",
+        label: "AOV increase"
+      },
+      {
+        value: 22,
+        suffix: "%",
+        label: "Cart abandonment drop"
+      },
+      {
+        value: 18,
+        suffix: "ms",
+        label: "ML inference"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Product Discovery",
+        detail: "Market research, user needs analysis"
+      },
+      {
+        phase: "Architecture Design",
+        detail: "Headless commerce + ML pipeline"
+      },
+      {
+        phase: "Sprint Development",
+        detail: "Iterative build with CI/CD"
+      },
+      {
+        phase: "Launch & Iterate",
+        detail: "Phased rollout with analytics"
+      }
+    ],
+    accentColor: "#8b5cf6"
+  },
+  {
+    id: "pharma-pe",
+    tag: "IoT Product",
+    tagColor: "bg-sky-500/15 text-sky-400 border-sky-500/30",
+    company: "Pharma",
+    industry: "Pharmaceutical",
+    headline: "Cold chain monitoring product achieving 40% reduction in spoilage for pharma client.",
+    challenge: "Real-time temperature monitoring across distributed facilities. Compliance requirements.",
+    solution: "IoT-enabled platform with AI-driven alerts, centralized dashboards, and enterprise-grade integration.",
+    duration: "75 days",
+    metrics: [
+      {
+        value: 40,
+        suffix: "%",
+        label: "Spoilage reduced"
+      },
+      {
+        value: 100,
+        suffix: "%",
+        label: "Compliance met"
+      },
+      {
+        value: 5,
+        suffix: " regions",
+        label: "Coverage"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Product Scoping",
+        detail: "Requirements, compliance mapping"
+      },
+      {
+        phase: "IoT Architecture",
+        detail: "Sensor selection, edge computing"
+      },
+      {
+        phase: "Platform Build",
+        detail: "Dashboard, alerts, integrations"
+      },
+      {
+        phase: "Deployment",
+        detail: "Multi-region rollout"
+      }
+    ],
+    accentColor: "#0ea5e9"
+  }
+];

@@ -633,7 +633,7 @@ function ServiceCard({ service }: { service: Service }) {
   return (
     <motion.div
       variants={cardVariant}
-      className="group relative h-full rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#4EB3E8]/10 dark:hover:shadow-[#4EB3E8]/5 overflow-hidden transition-all duration-500"
+      className="group relative h-full w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] xl:w-[calc(25%-12px)] rounded-2xl bg-white/80 dark:bg-[#0a0a0a] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#111] hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#4EB3E8]/10 dark:hover:shadow-[#4EB3E8]/5 overflow-hidden transition-all duration-500"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-[#4EB3E8]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-[#4EB3E8]/40 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -720,7 +720,7 @@ function CategorySection({ category, index }: { category: ServiceCategory; index
         <motion.div variants={fadeUp} custom={index * 0.1} className="mx-auto mb-6">
           <CategoryVisual id={category.id} />
         </motion.div>
-        <motion.h2 variants={fadeUp} custom={index * 0.1 + 0.1} className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+        <motion.h2 variants={fadeUp} custom={index * 0.1 + 0.1} className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-[#4EB3E8]">
           {category.title.split(' ').slice(0, -1).join(' ')}{' '}
           <span className="text-black dark:text-white">{category.title.split(' ').slice(-1)[0]}</span>
         </motion.h2>
@@ -733,7 +733,7 @@ function CategorySection({ category, index }: { category: ServiceCategory; index
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={stagger}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+        className="flex flex-wrap justify-center gap-4"
       >
         {category.services.map((service) => (
           <ServiceCard key={service.title} service={service} />
@@ -764,7 +764,7 @@ function StatsBar() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
             Results That <span className="text-black dark:text-white">Tell the Story</span>
           </h2>
         </motion.div>
@@ -816,7 +816,7 @@ function ProcessTimeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
             From Concept to <span className="text-black dark:text-white">Production</span>
           </h2>
           <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
@@ -917,7 +917,7 @@ function IndustriesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
             Built for <span className="text-black dark:text-white">Your Industry</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
@@ -1017,7 +1017,7 @@ function WhyChooseUs() {
   const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
   const items = [
-    { icon: Users, title: "Elite Engineering Talent", stat: "120+", statLabel: "Engineers", desc: "Seasoned developers, designers, and strategists — hand-picked for domain depth and cross-functional agility.", highlights: ["Full-stack expertise", "Domain specialists", "Certified professionals"] },
+    { icon: Users, title: "Elite Engineering Talent", stat: "90+", statLabel: "Engineers", desc: "Seasoned developers, designers, and strategists — hand-picked for domain depth and cross-functional agility.", highlights: ["Full-stack expertise", "Domain specialists", "Certified professionals"] },
     { icon: Clock, title: "Predictable Delivery", stat: "95%", statLabel: "On Schedule", desc: "Structured sprints, real-time dashboards, and proactive risk mitigation — 95% of milestones hit on or ahead of schedule.", highlights: ["Agile methodology", "Sprint-based delivery", "Transparent timelines"] },
     { icon: Layers, title: "Built to Scale", stat: "10x", statLabel: "Growth Ready", desc: "Cloud-native blueprints engineered for ten-fold traffic surges — so your stack never becomes the bottleneck.", highlights: ["Cloud-native design", "Microservices architecture", "Auto-scaling infra"] },
     { icon: HeartHandshake, title: "Partners, Not Vendors", stat: "98%", statLabel: "Retention", desc: "Post-launch isn't goodbye — we stay embedded with proactive monitoring, continuous optimization, and growth strategy.", highlights: ["Dedicated support", "Continuous optimization", "Strategic guidance"] },
@@ -1035,7 +1035,7 @@ function WhyChooseUs() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
             The Cloud Nexus <span className="text-black dark:text-white">Advantage</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
@@ -1114,7 +1114,7 @@ function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]"
         >
           Let&apos;s Turn Your Next Big Idea
           <br />

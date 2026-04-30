@@ -102,3 +102,17 @@ export interface CTAProps {
   /** Stronger cyan backdrop (React Native page style) */
   cyanBoldBackdrop?: boolean;
 }
+
+export interface WhyNeedItem {
+  title: string;
+  description: string;
+}
+
+export interface WhyNeedProps {
+  heading: string;
+  headingHighlight: string;
+  subtitle: string;
+  image: string;
+  imageAlt: string;
+  items: WhyNeedItem[];
+}

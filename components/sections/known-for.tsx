@@ -301,27 +301,6 @@ const ITConsultVisual = () => (
 
 const services = [
   {
-    title: 'Custom Software Development',
-    description: 'End-to-end scalable software engineered to your exact specifications — from architecture to deployment.',
-    icon: Code2,
-    href: '/services/custom-software-development',
-    Visual: CustomSoftwareVisual,
-  },
-  {
-    title: 'UI/UX Design',
-    description: 'User-centric design that converts — from wireframes to pixel-perfect interfaces.',
-    icon: Palette,
-    href: '/services/ui-ux-design',
-    Visual: UIUXVisual,
-  },
-  {
-    title: 'AI, ML & Data Science',
-    description: 'Predictive analytics, NLP, computer vision, and intelligent automation tailored to your data.',
-    icon: Brain,
-    href: '/services/ai-ml-data-science',
-    Visual: AIMLVisual,
-  },
-  {
     title: 'Mobile App Development',
     description: 'High-performance iOS & Android apps with immersive, platform-native experiences.',
     icon: Smartphone,
@@ -334,41 +313,6 @@ const services = [
     icon: Globe,
     href: '/services/web-development',
     Visual: WebVisual,
-  },
-  {
-    title: 'Cloud & SaaS Solutions',
-    description: 'Cloud migration, multi-tenant SaaS architecture, and managed infrastructure on AWS, Azure & GCP.',
-    icon: Cloud,
-    href: '/services/cloud-saas-solutions',
-    Visual: CloudVisual,
-  },
-  {
-    title: 'Digital Transformation',
-    description: 'Modernizing legacy systems with cloud-native, microservices-driven architectures.',
-    icon: Zap,
-    href: '/services/digital-transformation',
-    Visual: DigitalTransformVisual,
-  },
-  {
-    title: 'Digital Marketing',
-    description: 'SEO, paid media, social campaigns, and analytics-driven growth strategies.',
-    icon: TrendingUp,
-    href: '/services/digital-marketing',
-    Visual: DigitalMarketingVisual,
-  },
-  {
-    title: 'Cybersecurity & Compliance',
-    description: 'Advanced audits, penetration testing, and compliance frameworks (SOC2, HIPAA, GDPR).',
-    icon: Shield,
-    href: '/services/cybersecurity-compliance',
-    Visual: CyberVisual,
-  },
-  {
-    title: 'DevOps & Cloud Automation',
-    description: 'CI/CD pipelines, containerization, IaC, and automated delivery for faster, reliable releases.',
-    icon: GitMerge,
-    href: '/services/devops-cloud-automation',
-    Visual: DevOpsVisual,
   },
   {
     title: 'Software Development',
@@ -399,6 +343,20 @@ const services = [
     Visual: WordPressVisual,
   },
   {
+    title: 'UI/UX Design',
+    description: 'User-centric design that converts — from wireframes to pixel-perfect interfaces.',
+    icon: Palette,
+    href: '/services/ui-ux-design',
+    Visual: UIUXVisual,
+  },
+  {
+    title: 'Digital Transformation',
+    description: 'Modernizing legacy systems with cloud-native, microservices-driven architectures.',
+    icon: Zap,
+    href: '/services/digital-transformation',
+    Visual: DigitalTransformVisual,
+  },
+  {
     title: 'E-Commerce Development',
     description: 'Scalable online stores with payment gateways, inventory management, and headless commerce solutions.',
     icon: ShoppingBag,
@@ -411,6 +369,13 @@ const services = [
     icon: CloudCog,
     href: '/services/saas-development',
     Visual: SaaSVisual,
+  },
+  {
+    title: 'Digital Marketing',
+    description: 'SEO, paid media, social campaigns, and analytics-driven growth strategies.',
+    icon: TrendingUp,
+    href: '/services/digital-marketing',
+    Visual: DigitalMarketingVisual,
   },
   {
     title: 'Technology Consulting',
@@ -439,6 +404,41 @@ const services = [
     icon: ServerCog,
     href: '/services/it-consulting',
     Visual: ITConsultVisual,
+  },
+  {
+    title: 'Custom Software Development',
+    description: 'End-to-end scalable software engineered to your exact specifications — from architecture to deployment.',
+    icon: Code2,
+    href: '/services/custom-software-development',
+    Visual: CustomSoftwareVisual,
+  },
+  {
+    title: 'AI, ML & Data Science',
+    description: 'Predictive analytics, NLP, computer vision, and intelligent automation tailored to your data.',
+    icon: Brain,
+    href: '/services/ai-ml-data-science',
+    Visual: AIMLVisual,
+  },
+  {
+    title: 'Cloud & SaaS Solutions',
+    description: 'Cloud migration, multi-tenant SaaS architecture, and managed infrastructure on AWS, Azure & GCP.',
+    icon: Cloud,
+    href: '/services/cloud-saas-solutions',
+    Visual: CloudVisual,
+  },
+  {
+    title: 'Cybersecurity & Compliance',
+    description: 'Advanced audits, penetration testing, and compliance frameworks (SOC2, HIPAA, GDPR).',
+    icon: Shield,
+    href: '/services/cybersecurity-compliance',
+    Visual: CyberVisual,
+  },
+  {
+    title: 'DevOps & Cloud Automation',
+    description: 'CI/CD pipelines, containerization, IaC, and automated delivery for faster, reliable releases.',
+    icon: GitMerge,
+    href: '/services/devops-cloud-automation',
+    Visual: DevOpsVisual,
   },
 ];
 

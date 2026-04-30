@@ -1,5 +1,6 @@
 import { Activity, Award, Banknote, BarChart3, Boxes, Building2, ClipboardList, Clock, CreditCard, Database, Factory, FileCheck, GraduationCap, HeartHandshake, Landmark, Layers, Lock, Radar, Scale, Search, Settings, Shield, ShieldAlert, ShieldCheck, ShoppingCart, Stethoscope, Target, Truck, Users, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Scope & Threat
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Cybersecurity Is",
+  headingHighlight: "Business-Essential",
+  subtitle: "The average data breach costs $4.45M. Proactive security and compliance aren't expenses — they're investments that protect everything you've built.",
+  image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&q=80&fit=crop",
+  imageAlt: "Cybersecurity protection shield",
+  items: [
+    { title: "Breach Prevention", description: "Proactive security assessments, penetration testing, and vulnerability management identify and eliminate threats before attackers exploit them." },
+    { title: "Regulatory Compliance", description: "Navigate GDPR, HIPAA, SOC 2, PCI-DSS, and ISO 27001 requirements with structured compliance programs that pass audits and build stakeholder confidence." },
+    { title: "Customer Trust & Retention", description: "82% of consumers will stop doing business after a data breach. Demonstrated security practices build the trust that retains customers and wins enterprise deals." },
+    { title: "Reduced Financial Risk", description: "Prevent the $4.45M average breach cost, regulatory fines, legal fees, and business disruption. Security investment delivers 300%+ ROI versus breach remediation." },
+    { title: "24/7 Threat Monitoring", description: "Continuous security monitoring, intrusion detection, and automated incident response ensure threats are caught and contained before they cause damage." },
+    { title: "Secure Development Practices", description: "DevSecOps integrates security into every stage of development. Code scanning, dependency audits, and security testing catch vulnerabilities before deployment." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Award, title: "Credentialed Security Practitioners", description: "Specialists spanning offensive operations, cloud architecture, and governance, risk, and compliance — certified and battle-tested in highly regulated settings." },
   { icon: Activity, title: "Always-On Threat Oversight", description: "Detection engineering and analyst depth scaled to your incident classifications and the service levels you promise customers." },
   { icon: FileCheck, title: "Evidence-Led Compliance", description: "Controls conceived as proof — documentation, telemetry, and change trails reviewers can trace without last-minute rescue work." },
   { icon: Shield, title: "Forward-Looking Defense", description: "Adversary simulations, ongoing validation, and drift sensing so weaknesses appear in scheduled reviews — not breaking news." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "paybridge-sec",
+    tag: "PCI-DSS Compliance",
+    tagColor: "bg-indigo-500/15 text-indigo-400 border-indigo-500/30",
+    company: "PayBridge",
+    industry: "Fintech",
+    headline: "PCI-DSS Level 1 certified payment gateway processing $500M+ annually.",
+    challenge: "Achieving PCI-DSS Level 1 across 50+ payment methods. Sub-200ms latency with full encryption.",
+    solution: "End-to-end encryption, tokenization, vulnerability scanning, and compliance automation achieving Level 1 certification.",
+    duration: "100 days",
+    metrics: [
+      {
+        value: 99.99,
+        suffix: "%",
+        label: "Uptime"
+      },
+      {
+        value: 100,
+        suffix: "%",
+        label: "PCI compliance"
+      },
+      {
+        value: 0,
+        suffix: " breaches",
+        label: "Incidents"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Security Audit",
+        detail: "Vulnerability assessment, gap analysis"
+      },
+      {
+        phase: "Encryption Layer",
+        detail: "Tokenization, end-to-end encryption"
+      },
+      {
+        phase: "Compliance Automation",
+        detail: "Continuous scanning, audit trails"
+      },
+      {
+        phase: "Certification",
+        detail: "PCI-DSS Level 1 achieved"
+      }
+    ],
+    accentColor: "#6366f1"
+  }
+];

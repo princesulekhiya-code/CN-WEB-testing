@@ -4,15 +4,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { ArrowRight, Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
+import { ArrowRight, Menu, X, ChevronDown, Sun, Moon, Smartphone, Globe, Code2, Users, Boxes, Palette, Zap, ShoppingBag, Cloud, Megaphone, Settings, Rocket, ServerCog, Layout, Monitor, HeartPulse, Truck, Share2, Building2, GraduationCap, Landmark, Plane, Factory, Droplets, Film, PackageCheck, Wrench, Wallet, ShoppingCart, LifeBuoy, Mail, BookOpen, Briefcase, CalendarCheck, Eye, Heart, UserCircle, Calendar, Info, GitBranch, Server, Gift } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/navbar/language-switcher";
 
+interface NavChild {
+  label: string;
+  href: string;
+  description?: string;
+  icon?: LucideIcon;
+}
+
 interface NavItem {
   label: string;
   href?: string;
-  children?: { label: string; href: string; description?: string }[];
+  children?: NavChild[];
 }
 
 const NAV_ITEMS: NavItem[] = [
@@ -20,65 +28,65 @@ const NAV_ITEMS: NavItem[] = [
     label: "Services",
     href: "/services",
     children: [
-      { label: "Mobile App Development", href: "/services/mobile-app-development", description: "iOS & Android applications" },
-      { label: "Web Development", href: "/services/web-development", description: "Responsive & fast web apps" },
-      { label: "Software Development", href: "/services/software-development", description: "Full-cycle software solutions" },
-      { label: "Hire Dedicated Developers", href: "/services/hire-dedicated-developers", description: "Scale your team on demand" },
-      { label: "Product Engineering", href: "/services/product-engineering", description: "Idea to market-ready product" },
-      { label: "WordPress Development", href: "/services/wordpress-development", description: "Custom themes & plugins" },
-      { label: "UI/UX Design", href: "/services/ui-ux-design", description: "User-centric design solutions" },
-      { label: "Digital Transformation", href: "/services/digital-transformation", description: "Modernizing legacy systems" },
-      { label: "E-Commerce Development", href: "/services/ecommerce-development", description: "Online store platforms" },
-      { label: "SaaS Development", href: "/services/saas-development", description: "Multi-tenant SaaS products" },
-      { label: "Digital Marketing", href: "/services/digital-marketing", description: "SEO, social media & campaigns" },
-      { label: "Technology Consulting", href: "/services/technology-consulting", description: "Strategic tech advisory" },
-      { label: "MVP Development", href: "/services/mvp-development", description: "Rapid prototype & launch" },
-      { label: "Cloud Services", href: "/services/cloud-services", description: "AWS, Azure & GCP solutions" },
-      { label: "IT Consulting", href: "/services/it-consulting", description: "Infrastructure & IT strategy" },
+      { label: "Mobile App Development", href: "/services/mobile-app-development", description: "iOS & Android applications", icon: Smartphone },
+      { label: "Web Development", href: "/services/web-development", description: "Responsive & fast web apps", icon: Globe },
+      { label: "Software Development", href: "/services/software-development", description: "Full-cycle software solutions", icon: Code2 },
+      { label: "Hire Dedicated Developers", href: "/services/hire-dedicated-developers", description: "Scale your team on demand", icon: Users },
+      { label: "Product Engineering", href: "/services/product-engineering", description: "Idea to market-ready product", icon: Boxes },
+      { label: "WordPress Development", href: "/services/wordpress-development", description: "Custom themes & plugins", icon: Layout },
+      { label: "UI/UX Design", href: "/services/ui-ux-design", description: "User-centric design solutions", icon: Palette },
+      { label: "Digital Transformation", href: "/services/digital-transformation", description: "Modernizing legacy systems", icon: Zap },
+      { label: "E-Commerce Development", href: "/services/ecommerce-development", description: "Online store platforms", icon: ShoppingBag },
+      { label: "SaaS Development", href: "/services/saas-development", description: "Multi-tenant SaaS products", icon: Cloud },
+      { label: "Digital Marketing", href: "/services/digital-marketing", description: "SEO, social media & campaigns", icon: Megaphone },
+      { label: "Technology Consulting", href: "/services/technology-consulting", description: "Strategic tech advisory", icon: Settings },
+      { label: "MVP Development", href: "/services/mvp-development", description: "Rapid prototype & launch", icon: Rocket },
+      { label: "Cloud Services", href: "/services/cloud-services", description: "AWS, Azure & GCP solutions", icon: ServerCog },
+      { label: "IT Consulting", href: "/services/it-consulting", description: "Infrastructure & IT strategy", icon: Monitor },
     ],
   },
   {
     label: "Industry",
     href: "/industry",
     children: [
-      { label: "Healthcare & Lifesciences", href: "/industry/healthcare-lifesciences", description: "HIPAA-compliant digital health solutions" },
-      { label: "E-Commerce Solutions", href: "/industry/ecommerce-solutions", description: "Scalable online retail platforms" },
-      { label: "Transport & Logistics", href: "/industry/transport-logistics", description: "Fleet & supply chain management" },
-      { label: "Social Networking", href: "/industry/social-networking", description: "Community & social platforms" },
-      { label: "Real Estate", href: "/industry/real-estate", description: "Property tech & listing platforms" },
-      { label: "Education & eLearning", href: "/industry/education-elearning", description: "EdTech & LMS solutions" },
-      { label: "Banking, Finance & Insurance", href: "/industry/banking-finance-insurance", description: "Secure fintech solutions" },
-      { label: "Travel & Hospitality", href: "/industry/travel-hospitality", description: "Booking & travel platforms" },
-      { label: "Enterprise Retail & Manufacturing", href: "/industry/enterprise-retail-manufacturing", description: "IoT & smart factory systems" },
-      { label: "Oil & Gas", href: "/industry/oil-gas", description: "Energy sector digital solutions" },
-      { label: "Media & Entertainment", href: "/industry/media-entertainment", description: "Streaming & content platforms" },
-      { label: "On Demand Delivery", href: "/industry/on-demand-delivery", description: "Delivery & logistics apps" },
-      { label: "Home Service", href: "/industry/home-service", description: "On-demand home service platforms" },
-      { label: "Fintech", href: "/industry/fintech", description: "Financial technology solutions" },
-      { label: "mCommerce", href: "/industry/mcommerce", description: "Mobile commerce platforms" },
+      { label: "Healthcare & Lifesciences", href: "/industry/healthcare-lifesciences", description: "HIPAA-compliant digital health solutions", icon: HeartPulse },
+      { label: "E-Commerce Solutions", href: "/industry/ecommerce-solutions", description: "Scalable online retail platforms", icon: ShoppingCart },
+      { label: "Transport & Logistics", href: "/industry/transport-logistics", description: "Fleet & supply chain management", icon: Truck },
+      { label: "Social Networking", href: "/industry/social-networking", description: "Community & social platforms", icon: Share2 },
+      { label: "Real Estate", href: "/industry/real-estate", description: "Property tech & listing platforms", icon: Building2 },
+      { label: "Education & eLearning", href: "/industry/education-elearning", description: "EdTech & LMS solutions", icon: GraduationCap },
+      { label: "Banking, Finance & Insurance", href: "/industry/banking-finance-insurance", description: "Secure fintech solutions", icon: Landmark },
+      { label: "Travel & Hospitality", href: "/industry/travel-hospitality", description: "Booking & travel platforms", icon: Plane },
+      { label: "Enterprise Retail & Manufacturing", href: "/industry/enterprise-retail-manufacturing", description: "IoT & smart factory systems", icon: Factory },
+      { label: "Oil & Gas", href: "/industry/oil-gas", description: "Energy sector digital solutions", icon: Droplets },
+      { label: "Media & Entertainment", href: "/industry/media-entertainment", description: "Streaming & content platforms", icon: Film },
+      { label: "On Demand Delivery", href: "/industry/on-demand-delivery", description: "Delivery & logistics apps", icon: PackageCheck },
+      { label: "Home Service", href: "/industry/home-service", description: "On-demand home service platforms", icon: Wrench },
+      { label: "Fintech", href: "/industry/fintech", description: "Financial technology solutions", icon: Wallet },
+      { label: "mCommerce", href: "/industry/mcommerce", description: "Mobile commerce platforms", icon: Smartphone },
     ],
   },
   {
     label: "Resources",
     children: [
-      { label: "Support", href: "/resources/support", description: "Help center & technical support" },
-      { label: "Contact Us", href: "/resources/contact", description: "Get in touch with our team" },
-      { label: "Blogs", href: "/resources/blog", description: "Insights, tutorials & updates" },
-      { label: "Careers", href: "/resources/career", description: "Join the CloudNexus team" },
-      { label: "Free Consultation", href: "/resources/free-consultation", description: "Book a free strategy session" },
+      { label: "Support", href: "/resources/support", description: "Help center & technical support", icon: LifeBuoy },
+      { label: "Contact Us", href: "/resources/contact", description: "Get in touch with our team", icon: Mail },
+      { label: "Blogs", href: "/resources/blog", description: "Insights, tutorials & updates", icon: BookOpen },
+      { label: "Careers", href: "/resources/career", description: "Join the CloudNexus team", icon: Briefcase },
+      { label: "Free Consultation", href: "/resources/free-consultation", description: "Book a free strategy session", icon: CalendarCheck },
     ],
   },
   {
     label: "Company",
     children: [
-      { label: "Overview", href: "/company/overview", description: "Who we are & what we do" },
-      { label: "Life @ Cloud Nexus", href: "/company/life-at-cloud-nexus", description: "Our culture & work life" },
-      { label: "Team", href: "/company/team", description: "Meet the people behind CN" },
-      { label: "Events", href: "/company/events", description: "Meetups, webinars & conferences" },
-      { label: "About Us", href: "/company/about-us", description: "Our mission, vision & story" },
-      { label: "Process Methodology", href: "/company/process-methodology", description: "How we deliver projects" },
-      { label: "Infrastructure", href: "/company/infrastructure", description: "Our tech & systems setup" },
-      { label: "Career Benefits", href: "/company/career-benefits", description: "Perks of working with us" },
+      { label: "Overview", href: "/company/overview", description: "Who we are & what we do", icon: Eye },
+      { label: "Life @ Cloud Nexus", href: "/company/life-at-cloud-nexus", description: "Our culture & work life", icon: Heart },
+      { label: "Team", href: "/company/team", description: "Meet the people behind CN", icon: Users },
+      { label: "Events", href: "/company/events", description: "Meetups, webinars & conferences", icon: Calendar },
+      { label: "About Us", href: "/company/about-us", description: "Our mission, vision & story", icon: Info },
+      { label: "Process Methodology", href: "/company/process-methodology", description: "How we deliver projects", icon: GitBranch },
+      { label: "Infrastructure", href: "/company/infrastructure", description: "Our tech & systems setup", icon: Server },
+      { label: "Career Benefits", href: "/company/career-benefits", description: "Perks of working with us", icon: Gift },
     ],
   },
 ];
@@ -247,26 +255,40 @@ export function Navbar() {
                         </>
                       )}
                       <div
-                        className={`p-2 ${
-                          item.children.length > 10 ? "grid grid-cols-3 gap-0.5" : item.children.length > 6 ? "grid grid-cols-2 gap-0.5" : ""
+                        className={`p-2.5 ${
+                          item.children.length > 10
+                            ? "grid grid-cols-3 gap-2"
+                            : item.children.length > 6
+                              ? "grid grid-cols-2 gap-2"
+                              : "grid grid-cols-1 gap-1"
                         }`}
                       >
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="group flex flex-col gap-0.5 rounded-lg px-3 py-2.5 transition-colors hover:bg-black/[0.04] dark:hover:bg-white/[0.06]"
-                          >
-                            <span className="text-sm font-medium text-black/90 group-hover:text-black dark:text-white/90 dark:group-hover:text-white">
-                              {child.label}
-                            </span>
-                            {child.description && (
-                              <span className="text-xs text-black/40 group-hover:text-black/55 dark:text-white/40 dark:group-hover:text-white/55">
-                                {child.description}
-                              </span>
-                            )}
-                          </Link>
-                        ))}
+                        {item.children.map((child) => {
+                          const ChildIcon = child.icon;
+                          return (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className="group flex items-center gap-3 rounded-xl px-3 py-3 transition-all duration-200 hover:bg-black/[0.04] dark:hover:bg-white/[0.06] border border-transparent hover:border-black/[0.06] dark:hover:border-white/[0.08]"
+                            >
+                              {ChildIcon && (
+                                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-black/[0.04] dark:bg-white/[0.06] group-hover:bg-[#4EB3E8]/10 transition-colors duration-200">
+                                  <ChildIcon className="w-4 h-4 text-black/50 dark:text-white/50 group-hover:text-[#4EB3E8] transition-colors duration-200" strokeWidth={1.8} />
+                                </div>
+                              )}
+                              <div className="flex flex-col min-w-0">
+                                <span className="text-[13px] font-semibold text-black/85 group-hover:text-black dark:text-white/85 dark:group-hover:text-white leading-tight">
+                                  {child.label}
+                                </span>
+                                {child.description && (
+                                  <span className="text-[11px] text-black/35 group-hover:text-black/50 dark:text-white/35 dark:group-hover:text-white/50 leading-tight mt-0.5">
+                                    {child.description}
+                                  </span>
+                                )}
+                              </div>
+                            </Link>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>

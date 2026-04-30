@@ -1,85 +1,694 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Mail, MessageCircle, Phone, FileText, Clock, HelpCircle } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import {
+  MessageCircle, Mail, Phone, FileText, HelpCircle, Clock,
+  Headphones, ArrowRight, ChevronDown, Shield, Zap, Globe,
+  CheckCircle2, Send, Search, LifeBuoy, BookOpen, Video,
+  type LucideIcon,
+} from "lucide-react";
 
-const supportOptions = [
+/* ═══════ TYPING ANIMATION ═══════ */
+const typingPhrases = [
+  "How do I integrate the API?",
+  "What are the SLA guarantees?",
+  "How to reset my password?",
+  "Billing and invoice questions",
+  "Deployment best practices",
+];
+
+function TypingPlaceholder() {
+  const [phraseIdx, setPhraseIdx] = useState(0);
+  const [charIdx, setCharIdx] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const phrase = typingPhrases[phraseIdx];
+    let timeout: NodeJS.Timeout;
+
+    if (!deleting && charIdx < phrase.length) {
+      timeout = setTimeout(() => setCharIdx((c) => c + 1), 55);
+    } else if (!deleting && charIdx === phrase.length) {
+      timeout = setTimeout(() => setDeleting(true), 2000);
+    } else if (deleting && charIdx > 0) {
+      timeout = setTimeout(() => setCharIdx((c) => c - 1), 30);
+    } else if (deleting && charIdx === 0) {
+      setDeleting(false);
+      setPhraseIdx((p) => (p + 1) % typingPhrases.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [charIdx, deleting, phraseIdx]);
+
+  const text = typingPhrases[phraseIdx].slice(0, charIdx);
+
+  return (
+    <span className="text-black/25 dark:text-white/25">
+      {text}
+      <motion.span
+        animate={{ opacity: [1, 0] }}
+        transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
+        className="inline-block w-[2px] h-4 bg-[#4EB3E8] ml-0.5 align-middle"
+      />
+    </span>
+  );
+}
+
+/* ═══════ HERO SECTION ═══════ */
+const quickLinks: { icon: LucideIcon; label: string; desc: string }[] = [
+  { icon: MessageCircle, label: "Live Chat", desc: "Instant help" },
+  { icon: BookOpen, label: "Docs", desc: "Guides & API" },
+  { icon: HelpCircle, label: "FAQs", desc: "Quick answers" },
+  { icon: Phone, label: "Call Us", desc: "Talk to expert" },
+];
+
+function HeroSection({ searchQuery, setSearchQuery }: { searchQuery: string; setSearchQuery: (v: string) => void }) {
+  const [focusedSearch, setFocusedSearch] = useState(false);
+
+  return (
+    <div className="relative overflow-hidden">
+      {/* Animated dot grid background */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]">
+        <svg className="w-full h-full">
+          <defs>
+            <pattern id="hero-dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hero-dots)" />
+        </svg>
+      </div>
+
+      {/* Ambient glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          animate={{ scale: [1, 1.15, 1], opacity: [0.06, 0.09, 0.06] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#4EB3E8] rounded-full blur-[120px]"
+        />
+        <motion.div
+          animate={{ scale: [1, 1.1, 1], opacity: [0.04, 0.07, 0.04] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-[#4EB3E8] rounded-full blur-[100px]"
+        />
+      </div>
+
+      {/* Floating decorative icons */}
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
+        {[
+          { Icon: MessageCircle, pos: "top-32 left-[8%]", y: [0, -14, 0], r: [0, 6, 0], dur: 5, d: 0 },
+          { Icon: Mail, pos: "top-40 right-[10%]", y: [0, 12, 0], r: [0, -5, 0], dur: 6, d: 1 },
+          { Icon: Shield, pos: "bottom-32 left-[15%]", y: [0, -10, 0], r: [0, 4, 0], dur: 7, d: 2 },
+          { Icon: Headphones, pos: "bottom-36 right-[12%]", y: [0, 16, 0], r: [0, -8, 0], dur: 5.5, d: 0.5 },
+          { Icon: Zap, pos: "top-52 left-[25%]", y: [0, -8, 0], r: [0, -3, 0], dur: 4.5, d: 1.5 },
+          { Icon: Globe, pos: "top-48 right-[22%]", y: [0, 10, 0], r: [0, 5, 0], dur: 6.5, d: 3 },
+        ].map(({ Icon, pos, y, r, dur, d }, i) => (
+          <motion.div
+            key={i}
+            animate={{ y, rotate: r }}
+            transition={{ duration: dur, repeat: Infinity, ease: "easeInOut", delay: d }}
+            className={`absolute ${pos} flex h-10 w-10 items-center justify-center rounded-xl bg-[#4EB3E8]/[0.06] border border-[#4EB3E8]/[0.08]`}
+          >
+            <Icon className="w-4 h-4 text-[#4EB3E8]/40" strokeWidth={1.5} />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Animated pulse rings behind heading */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden md:block">
+        {[200, 300, 400].map((size, i) => (
+          <motion.div
+            key={size}
+            animate={{ scale: [0.8, 1.1, 0.8], opacity: [0.03, 0.06, 0.03] }}
+            transition={{ duration: 6 + i * 2, repeat: Infinity, ease: "easeInOut", delay: i * 1.5 }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#4EB3E8]/[0.08]"
+            style={{ width: size, height: size }}
+          />
+        ))}
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-8 text-center">
+        {/* Live status */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-emerald-500/8 border border-emerald-500/15"
+        >
+          <motion.div
+            animate={{ scale: [1, 1.4, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-2 h-2 rounded-full bg-emerald-500"
+          />
+          <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">All Systems Operational</span>
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight"
+        >
+          <span className="text-[#4EB3E8]">How Can We</span>{" "}
+          <span>Help You?</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-5 text-base md:text-lg text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed"
+        >
+          Our dedicated support team is here to ensure your success. Whether you need instant help or in-depth guidance, choose the channel that works best for you.
+        </motion.p>
+
+        {/* Animated Search Bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className={`mt-8 max-w-xl mx-auto relative transition-all duration-500 ${focusedSearch ? "scale-[1.02]" : ""}`}
+        >
+          <Search className={`absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 transition-colors duration-300 ${focusedSearch ? "text-[#4EB3E8]" : "text-black/30 dark:text-white/30"}`} />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onFocus={() => setFocusedSearch(true)}
+            onBlur={() => setFocusedSearch(false)}
+            className="w-full pl-12 pr-4 py-4 rounded-2xl bg-[#f5f5f5] dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 focus:shadow-lg focus:shadow-[#4EB3E8]/[0.06] transition-all duration-300"
+          />
+          {!searchQuery && !focusedSearch && (
+            <div className="absolute left-12 top-1/2 -translate-y-1/2 text-sm font-medium pointer-events-none">
+              <TypingPlaceholder />
+            </div>
+          )}
+        </motion.div>
+
+        {/* Quick Access Pills */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-5 flex flex-wrap justify-center gap-2"
+        >
+          {["Getting Started", "Account Issues", "Billing", "API Docs", "Integrations"].map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setSearchQuery(tag)}
+              className="px-4 py-2 rounded-full text-xs font-semibold border border-black/[0.06] dark:border-white/[0.06] text-black/50 dark:text-white/40 hover:border-[#4EB3E8]/30 hover:text-[#4EB3E8] hover:bg-[#4EB3E8]/[0.04] transition-all duration-300"
+            >
+              {tag}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Quick Action Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto"
+        >
+          {quickLinks.map(({ icon: Icon, label, desc }, i) => (
+            <motion.button
+              key={label}
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.97 }}
+              className="group flex flex-col items-center gap-2 p-4 rounded-2xl bg-[#f8f9fa] dark:bg-white/[0.02] border border-black/[0.05] dark:border-white/[0.05] hover:border-[#4EB3E8]/20 hover:shadow-lg hover:shadow-[#4EB3E8]/[0.04] transition-all duration-300"
+            >
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#4EB3E8]/[0.06] border border-[#4EB3E8]/10 group-hover:bg-[#4EB3E8]/12 group-hover:border-[#4EB3E8]/25 transition-all duration-300">
+                <Icon className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
+              </div>
+              <span className="text-xs font-bold tracking-tight group-hover:text-[#4EB3E8] transition-colors duration-300">{label}</span>
+              <span className="text-[10px] text-black/35 dark:text-white/30 font-medium">{desc}</span>
+            </motion.button>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════ ANIMATED COUNTER ═══════ */
+function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [count, setCount] = useState(0);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    if (!isInView || hasAnimated.current) return;
+    hasAnimated.current = true;
+    const duration = 1600;
+    const start = performance.now();
+    const tick = (now: number) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(eased * value));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }, [isInView, value]);
+
+  return <span ref={ref} className="tabular-nums">{count}{suffix}</span>;
+}
+
+/* ═══════ DATA ═══════ */
+const supportChannels = [
   {
     icon: MessageCircle,
     title: "Live Chat",
-    description: "Chat with our support team in real-time for instant help.",
+    description: "Connect with our support specialists instantly. Average response time under 30 seconds during business hours.",
+    action: "Start Chat",
+    href: "#",
+    badge: "Fastest",
   },
   {
     icon: Mail,
     title: "Email Support",
-    description: "Send us a detailed email and we'll respond within 24 hours.",
+    description: "Send us a detailed inquiry with attachments. Our team responds within 4 business hours guaranteed.",
+    action: "Send Email",
+    href: "mailto:support@cloudnexus.com",
+    badge: "Detailed",
   },
   {
     icon: Phone,
     title: "Phone Support",
-    description: "Call our dedicated support line for urgent issues.",
-  },
-  {
-    icon: FileText,
-    title: "Knowledge Base",
-    description: "Browse our documentation and guides for self-service help.",
-  },
-  {
-    icon: HelpCircle,
-    title: "FAQs",
-    description: "Find quick answers to the most commonly asked questions.",
-  },
-  {
-    icon: Clock,
-    title: "24/7 Monitoring",
-    description: "Our systems are monitored round the clock for uptime and performance.",
+    description: "Speak directly with a senior engineer for urgent production issues. Available 24/7 for enterprise clients.",
+    action: "Call Now",
+    href: "tel:+1234567890",
+    badge: "Priority",
   },
 ];
 
+const selfServiceOptions = [
+  { icon: BookOpen, title: "Documentation", description: "Comprehensive guides, API references, and integration walkthroughs.", href: "#" },
+  { icon: Video, title: "Video Tutorials", description: "Step-by-step video guides for common tasks and advanced features.", href: "#" },
+  { icon: FileText, title: "Knowledge Base", description: "Searchable database of articles, troubleshooting guides, and best practices.", href: "#" },
+  { icon: HelpCircle, title: "Community Forum", description: "Connect with other users, share solutions, and get peer support.", href: "#" },
+];
+
+const faqs = [
+  { q: "What are your support hours?", a: "Our live chat and email support are available Monday to Friday, 9 AM to 6 PM IST. Enterprise clients with Premium Support have access to 24/7 phone support and dedicated account managers. All critical production issues are triaged within 15 minutes regardless of the plan." },
+  { q: "How quickly will I get a response?", a: "Live chat: under 30 seconds average. Email: within 4 business hours guaranteed (typically under 2 hours). Phone: immediate connection during business hours. Enterprise SLA guarantees are outlined in your service agreement with response times as low as 15 minutes for P0 issues." },
+  { q: "Do you offer dedicated account managers?", a: "Yes, all Enterprise and Premium plan clients are assigned a dedicated Technical Account Manager (TAM) who understands your architecture, handles escalations, and conducts quarterly business reviews to align our support with your growth goals." },
+  { q: "What is included in your SLA?", a: "Our SLA covers uptime guarantees (99.9% for Standard, 99.99% for Enterprise), response time commitments, escalation procedures, and financial credits for any SLA breaches. Custom SLAs are available for clients with specific compliance or regulatory requirements." },
+  { q: "Can I upgrade my support plan?", a: "Absolutely. You can upgrade your support tier at any time from your dashboard. Changes take effect immediately, and you'll only be billed the prorated difference. Contact your account manager or our sales team for Enterprise plan upgrades." },
+  { q: "How do I report a critical production issue?", a: "For P0/critical issues: Call our 24/7 hotline, use the 'Critical' flag in live chat, or email urgent@cloudnexus.com. All critical issues are triaged within 15 minutes with a dedicated incident commander assigned. You'll receive real-time status updates via your preferred channel." },
+];
+
+const slaStats = [
+  { value: 99.9, suffix: "%", label: "Uptime SLA", icon: Shield },
+  { value: 30, suffix: "s", label: "Avg Chat Response", icon: Zap },
+  { value: 4, suffix: "hr", label: "Email Response", icon: Clock },
+  { value: 24, suffix: "/7", label: "Enterprise Support", icon: Globe },
+];
+
+/* ═══════ PAGE ═══════ */
 export default function SupportPage() {
+  const [openFaq, setOpenFaq] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const filteredFaqs = searchQuery
+    ? faqs.filter((f) => f.q.toLowerCase().includes(searchQuery.toLowerCase()) || f.a.toLowerCase().includes(searchQuery.toLowerCase()))
+    : faqs;
+
   return (
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
-      <div className="mx-auto max-w-7xl px-4 pt-24 pb-12 lg:px-8 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold tracking-tight sm:text-5xl"
-        >
-          Support
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-4 text-lg text-black/50 dark:text-white/50 max-w-2xl mx-auto"
-        >
-          We&apos;re here to help. Choose a support channel that works best for you.
-        </motion.p>
-      </div>
 
-      <div className="mx-auto max-w-7xl px-4 pb-24 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {supportOptions.map((option, i) => {
-            const Icon = option.icon;
+      {/* ═══════ HERO ═══════ */}
+      <HeroSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
+      {/* ═══════ SLA STATS ═══════ */}
+      <div className="mx-auto max-w-7xl px-6 pb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {slaStats.map((stat, i) => {
+            const Icon = stat.icon;
             return (
               <motion.div
-                key={option.title}
-                initial={{ opacity: 0, y: 30 }}
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group rounded-2xl border border-black/[0.08] bg-black/[0.02] p-6 transition-all duration-300 hover:border-black/[0.15] hover:bg-black/[0.05] dark:border-white/[0.08] dark:bg-white/[0.02] dark:hover:border-white/[0.15] dark:hover:bg-white/[0.05]"
+                transition={{ duration: 0.4, delay: 0.1 * i }}
+                className="relative rounded-2xl p-5 text-center overflow-hidden bg-[#f5f5f5] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.05]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-black/[0.08] bg-black/[0.03] dark:border-white/[0.08] dark:bg-white/[0.03] mb-4">
-                  <Icon className="w-6 h-6 text-[#4EB3E8]" />
+                <div className="flex justify-center mb-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20">
+                    <Icon className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold">{option.title}</h3>
-                <p className="mt-2 text-sm text-black/45 dark:text-white/45 leading-relaxed">
-                  {option.description}
-                </p>
+                <div className="text-2xl md:text-3xl font-black tracking-tight text-[#4EB3E8]">
+                  <Counter value={stat.value} suffix={stat.suffix} />
+                </div>
+                <div className="text-[11px] font-semibold text-black/40 dark:text-white/40 mt-1 uppercase tracking-wider">
+                  {stat.label}
+                </div>
               </motion.div>
             );
           })}
+        </div>
+      </div>
+
+      {/* ═══════ SUPPORT CHANNELS ═══════ */}
+      <div className="mx-auto max-w-7xl px-6 pb-20">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            <span className="text-[#4EB3E8]">Get in Touch</span>{" "}
+            <span>With Our Team</span>
+          </h2>
+          <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
+            Choose your preferred support channel. All channels are staffed by experienced engineers.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-5">
+          {supportChannels.map((channel, i) => {
+            const Icon = channel.icon;
+            return (
+              <motion.div
+                key={channel.title}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * i }}
+                className="group relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4EB3E8]/[0.06]"
+              >
+                <div className="h-[2px] w-full bg-[#4EB3E8]/20 group-hover:bg-[#4EB3E8] transition-colors duration-500" />
+
+                <div className="flex flex-col h-full p-7 bg-[#f8f9fa] dark:bg-white/[0.02] border border-t-0 border-black/[0.06] dark:border-white/[0.06] group-hover:border-[#4EB3E8]/15 rounded-b-2xl transition-colors duration-500">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider mb-5 bg-[#4EB3E8]/8 text-[#4EB3E8]">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#4EB3E8]" />
+                    {channel.badge}
+                  </div>
+
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4EB3E8]/[0.06] border border-[#4EB3E8]/10 group-hover:bg-[#4EB3E8]/10 group-hover:border-[#4EB3E8]/25 transition-all duration-500">
+                    <Icon className="w-7 h-7 text-[#4EB3E8] group-hover:scale-110 transition-transform duration-500" strokeWidth={1.5} />
+                  </div>
+
+                  <h3 className="text-xl font-bold tracking-tight mb-2">{channel.title}</h3>
+                  <p className="text-sm text-black/50 dark:text-white/45 leading-relaxed flex-1">
+                    {channel.description}
+                  </p>
+
+                  <div className="mt-6">
+                    <Link
+                      href={channel.href}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-[#4EB3E8] hover:bg-[#3da0d5] transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20"
+                    >
+                      {channel.action}
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* ═══════ SELF-SERVICE ═══════ */}
+      <div className="border-y border-black/[0.05] dark:border-white/[0.05]">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              <span className="text-[#4EB3E8]">Self-Service</span>{" "}
+              <span>Resources</span>
+            </h2>
+            <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
+              Find answers on your own with our comprehensive resource library.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {selfServiceOptions.map((opt, i) => {
+              const Icon = opt.icon;
+              return (
+                <motion.div
+                  key={opt.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.08 * i }}
+                >
+                  <Link
+                    href={opt.href}
+                    className="group flex flex-col h-full rounded-2xl p-6 bg-[#f8f9fa] dark:bg-white/[0.02] border border-black/[0.05] dark:border-white/[0.05] hover:border-[#4EB3E8]/25 hover:bg-white dark:hover:bg-white/[0.04] hover:-translate-y-1 hover:shadow-lg transition-all duration-400"
+                  >
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#4EB3E8]/8 border border-[#4EB3E8]/15 group-hover:bg-[#4EB3E8]/15 group-hover:border-[#4EB3E8]/30 transition-all duration-400">
+                      <Icon className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="text-base font-bold tracking-tight mb-1.5 group-hover:text-[#4EB3E8] transition-colors duration-300">{opt.title}</h3>
+                    <p className="text-sm text-black/45 dark:text-white/40 leading-relaxed flex-1">{opt.description}</p>
+                    <div className="mt-4 flex items-center gap-1 text-xs font-semibold text-[#4EB3E8] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Browse <ArrowRight className="w-3 h-3" />
+                    </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* ═══════ FAQ + CONTACT FORM ═══════ */}
+      <div className="mx-auto max-w-7xl px-6 py-20">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            <span className="text-[#4EB3E8]">Frequently Asked</span>{" "}
+            <span>Questions</span>
+          </h2>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-5 gap-10 items-start">
+          {/* FAQ Accordion */}
+          <div className="lg:col-span-3 space-y-3">
+            {filteredFaqs.map((faq, i) => {
+              const isOpen = openFaq === i;
+              return (
+                <motion.div
+                  key={faq.q}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.35, delay: 0.05 * i }}
+                >
+                  <button
+                    onClick={() => setOpenFaq(isOpen ? -1 : i)}
+                    className={`w-full text-left rounded-xl p-5 transition-all duration-300 ${
+                      isOpen
+                        ? "bg-white dark:bg-[#0c1322] shadow-lg border border-[#4EB3E8]/20"
+                        : "bg-[#f8f9fa] dark:bg-white/[0.02] border border-transparent hover:bg-[#f0f0f0] dark:hover:bg-white/[0.04]"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        {isOpen && (
+                          <div className="w-1 h-5 rounded-full bg-[#4EB3E8] flex-shrink-0" />
+                        )}
+                        <h3 className={`text-sm font-bold tracking-tight ${isOpen ? "text-[#4EB3E8]" : ""}`}>
+                          {faq.q}
+                        </h3>
+                      </div>
+                      <ChevronDown
+                        className={`w-4 h-4 flex-shrink-0 text-black/30 dark:text-white/30 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#4EB3E8]" : ""}`}
+                      />
+                    </div>
+
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <p className="pt-3 pl-4 text-sm text-black/50 dark:text-white/45 leading-relaxed">
+                            {faq.a}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </button>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Contact Form */}
+          <motion.div
+            className="lg:col-span-2"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="rounded-2xl p-7 bg-[#f8f9fa] dark:bg-[#0c1322] border border-black/[0.06] dark:border-white/[0.06] sticky top-28">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20">
+                  <Send className="w-5 h-5 text-[#4EB3E8]" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold tracking-tight">Send a Message</h3>
+                  <p className="text-xs text-black/40 dark:text-white/40">We&apos;ll get back within 4 hours</p>
+                </div>
+              </div>
+
+              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <div>
+                  <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Name</label>
+                  <input
+                    type="text"
+                    placeholder="Your full name"
+                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Email</label>
+                  <input
+                    type="email"
+                    placeholder="you@company.com"
+                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Priority</label>
+                  <select className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium text-black/60 dark:text-white/60 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all">
+                    <option>Low - General question</option>
+                    <option>Medium - Feature request</option>
+                    <option>High - Bug report</option>
+                    <option>Critical - Production down</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Message</label>
+                  <textarea
+                    rows={4}
+                    placeholder="Describe your issue or question..."
+                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all resize-none"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20"
+                >
+                  Send Message
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </form>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* ═══════ SUPPORT PROMISE ═══════ */}
+      <div className="border-t border-black/[0.05] dark:border-white/[0.05]">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <motion.div
+            className="text-center mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              <span className="text-[#4EB3E8]">Our Support</span>{" "}
+              <span>Promise</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { icon: Headphones, title: "Human-First Support", desc: "No chatbots, no runaround. Every conversation starts with an experienced engineer who understands your stack." },
+              { icon: Shield, title: "Enterprise-Grade SLA", desc: "Guaranteed response times, uptime commitments, and financial credits — backed by transparent reporting." },
+              { icon: CheckCircle2, title: "Resolution, Not Deflection", desc: "We don't close tickets until you're satisfied. Our CSAT score consistently exceeds 98% across all channels." },
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 * i }}
+                  className="group rounded-2xl p-7 bg-[#f8f9fa] dark:bg-white/[0.02] border border-black/[0.05] dark:border-white/[0.05] hover:border-[#4EB3E8]/20 hover:-translate-y-1 hover:shadow-lg transition-all duration-400"
+                >
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20 group-hover:bg-[#4EB3E8]/15 transition-all duration-300">
+                    <Icon className="w-6 h-6 text-[#4EB3E8]" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-lg font-bold tracking-tight mb-2 group-hover:text-[#4EB3E8] transition-colors duration-300">{item.title}</h3>
+                  <p className="text-sm text-black/50 dark:text-white/45 leading-relaxed">{item.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* ═══════ CTA ═══════ */}
+      <div className="border-t border-black/[0.06] dark:border-white/[0.06]">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <div className="relative rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02] p-10 sm:p-14 text-center overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, rgba(78,179,232,0.04) 0%, transparent 70%)" }} />
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="relative"
+            >
+              <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-[#4EB3E8]/10">
+                <Headphones className="w-6 h-6 text-[#4EB3E8]" />
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+                Still Need Help?
+                <br />
+                <span className="text-[#4EB3E8]">We&apos;re Here For You</span>
+              </h2>
+
+              <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed">
+                Schedule a free consultation with our solutions team to discuss your specific needs and find the right support plan.
+              </p>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/resources/free-consultation"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-lg"
+                >
+                  Book Free Consultation <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/resources/contact"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
+                >
+                  Contact Sales
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

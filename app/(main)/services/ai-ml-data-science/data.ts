@@ -1,5 +1,6 @@
 import { BarChart3, Bot, Brain, Building2, Clock, Cpu, CreditCard, Database, Eye, Factory, Gamepad2, GraduationCap, HeartHandshake, Layers, Rocket, Settings, ShoppingCart, Stethoscope, TrendingUp, Truck, Users, Wrench, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,121 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Data Assessmen
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "AI & ML Can Be",
+  headingHighlight: "Revolutionary",
+  subtitle: "Harness artificial intelligence to automate decisions, uncover hidden insights, and build products that learn and improve over time.",
+  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&fit=crop",
+  imageAlt: "AI and machine learning visualization",
+  items: [
+    { title: "Intelligent Automation", description: "Automate repetitive cognitive tasks — document processing, customer support, quality inspection — freeing your team to focus on high-value strategic work." },
+    { title: "Predictive Business Intelligence", description: "ML models forecast demand, churn, revenue, and risks before they materialize. Make proactive decisions backed by data instead of gut feeling." },
+    { title: "Personalized User Experiences", description: "Recommendation engines, dynamic pricing, and adaptive content deliver uniquely tailored experiences that increase engagement and conversion rates by 30-50%." },
+    { title: "Unstructured Data Insights", description: "Extract value from images, documents, audio, and video using computer vision and NLP. Unlock insights hidden in 80% of enterprise data that traditional analytics miss." },
+    { title: "Operational Efficiency", description: "AI-powered process optimization reduces waste, speeds up workflows, and identifies bottlenecks across supply chains, manufacturing, and service delivery." },
+    { title: "Scalable Decision Making", description: "Deploy ML models that make thousands of accurate decisions per second — credit scoring, fraud detection, content moderation — at a scale humans simply cannot match." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Users, title: "Doctorate-Caliber AI Talent", description: "Data scientists and machine learning engineers fluent in frontier research and the rigor required to ship models that survive real traffic." },
   { icon: Wrench, title: "Production-First Engineering", description: "We architect for live systems from the outset—observable, elastic, and operable—rather than stopping at exploratory notebooks." },
   { icon: TrendingUp, title: "Outcomes-Led AI", description: "Each initiative maps to quantifiable KPIs: revenue lift, cost takeout, operational throughput, or customer experience gains." },
   { icon: HeartHandshake, title: "Full-Lifecycle Accountability", description: "From data strategy through deployment and continuous MLOps, we carry the thread so outcomes stay cohesive—not fragmented across vendors." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "chorus-ai",
+    tag: "Healthcare AI",
+    tagColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
+    company: "CHORUS",
+    industry: "Healthcare / Google",
+    headline: "Cross-platform healthcare app with AI-driven vitals monitoring for Google.",
+    challenge: "Real-time BLE data synchronization. Healthcare-grade data security across platforms.",
+    solution: "Scalable cross-platform app tracking live patient vitals via BLE with secure AI-driven monitoring.",
+    duration: "120 days",
+    metrics: [
+      {
+        value: 99.9,
+        suffix: "%",
+        label: "Uptime achieved"
+      },
+      {
+        value: 3,
+        suffix: " platforms",
+        label: "Deployed on"
+      },
+      {
+        value: 0,
+        suffix: " breaches",
+        label: "Security incidents"
+      }
+    ],
+    timeline: [
+      {
+        phase: "AI Architecture",
+        detail: "ML model for vitals prediction"
+      },
+      {
+        phase: "BLE Integration",
+        detail: "Real-time device connectivity"
+      },
+      {
+        phase: "Security Layer",
+        detail: "SAST, SCA, healthcare encryption"
+      },
+      {
+        phase: "Multi-Platform Deploy",
+        detail: "Web, Android, iOS release"
+      }
+    ],
+    accentColor: "#10b981"
+  },
+  {
+    id: "analytics-ai",
+    tag: "Predictive Analytics",
+    tagColor: "bg-amber-500/15 text-amber-400 border-amber-500/30",
+    company: "FinTech BI",
+    industry: "Business Intelligence",
+    headline: "Predictive analytics platform transforming reactive decisions into proactive strategy.",
+    challenge: "Reliance on static reporting. Difficulty in data analysis. Inefficient resource management.",
+    solution: "Analyze large volumes of historical and real-time data. Build predictive models for demand forecasting and risk detection.",
+    duration: "60 days",
+    metrics: [
+      {
+        value: 60,
+        suffix: "%",
+        label: "Smarter decisions"
+      },
+      {
+        value: 35,
+        suffix: "%",
+        label: "Resource optimized"
+      },
+      {
+        value: 3,
+        suffix: "x",
+        label: "Risk detection speed"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Data Infrastructure",
+        detail: "Historical and real-time data pipelines"
+      },
+      {
+        phase: "Predictive Models",
+        detail: "Demand forecasting, risk detection"
+      },
+      {
+        phase: "Dashboard Design",
+        detail: "Interactive insights dashboards"
+      },
+      {
+        phase: "Strategy Enablement",
+        detail: "Proactive decision workflows"
+      }
+    ],
+    accentColor: "#f59e0b"
+  }
+];

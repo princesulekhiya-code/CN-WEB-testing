@@ -1,5 +1,6 @@
 import { BarChart3, Building2, Clock, CreditCard, Factory, Gamepad2, GraduationCap, HeartHandshake, Layers, Mail, Palette, Rocket, Search, Settings, Share2, ShoppingCart, Stethoscope, Target, TrendingUp, Truck, Users, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Audit & Discov
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Digital Marketing Can Be",
+  headingHighlight: "Growth-Defining",
+  subtitle: "Data-driven marketing strategies that attract, engage, and convert your ideal customers across every digital touchpoint.",
+  image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80&fit=crop",
+  imageAlt: "Digital marketing analytics dashboard",
+  items: [
+    { title: "Measurable ROI on Every Dollar", description: "Unlike traditional marketing, every digital campaign is trackable. Know exactly which channels, ads, and keywords generate revenue — and optimize spend in real time." },
+    { title: "Targeted Audience Reach", description: "Reach your ideal customers based on demographics, interests, behavior, and intent. No more broadcasting to masses — speak directly to people ready to buy." },
+    { title: "Organic Traffic That Compounds", description: "SEO-driven content creates assets that generate traffic for years. Unlike paid ads that stop when budget runs out, organic rankings build compound returns." },
+    { title: "Multi-Channel Presence", description: "Search, social, email, content, and paid ads working together in a unified strategy. Meet your customers wherever they spend their digital time." },
+    { title: "Real-Time Campaign Optimization", description: "Adjust messaging, targeting, and budgets instantly based on performance data. Traditional marketing takes months to pivot — digital marketing takes minutes." },
+    { title: "Brand Authority Building", description: "Consistent content, thought leadership, and social proof establish your brand as an industry authority. Trust drives conversions more than any ad campaign." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Users, title: "Certified Marketing Experts", description: "Google, Meta, and HubSpot certified specialists with 5+ years average experience in performance marketing." },
   { icon: Clock, title: "Data-Driven Approach", description: "Every decision backed by analytics — real-time dashboards, A/B tests, and attribution modeling for measurable ROI." },
   { icon: TrendingUp, title: "Omnichannel Strategy", description: "Seamless campaigns across search, social, email, and content channels for maximum reach and engagement." },
   { icon: HeartHandshake, title: "Transparent Reporting", description: "Weekly updates, monthly deep-dives, and always-on dashboards so you know exactly where your budget goes." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "edtech-dm",
+    tag: "Growth Marketing",
+    tagColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
+    company: "EdTech",
+    industry: "Education Technology",
+    headline: "Digital marketing strategy driving 10K+ active students to AI-powered e-learning platform.",
+    challenge: "Low brand awareness in competitive edtech market. High customer acquisition cost.",
+    solution: "SEO-driven content strategy, social media campaigns, and performance marketing achieving 10K+ active users.",
+    duration: "60 days",
+    metrics: [
+      {
+        value: 10,
+        suffix: "K+",
+        label: "Active students"
+      },
+      {
+        value: 3,
+        suffix: "x",
+        label: "Organic traffic"
+      },
+      {
+        value: 45,
+        suffix: "%",
+        label: "Lower CAC"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Market Research",
+        detail: "Competitor analysis, audience segmentation"
+      },
+      {
+        phase: "Content Strategy",
+        detail: "SEO content, blog, social media"
+      },
+      {
+        phase: "Paid Campaigns",
+        detail: "Google Ads, social media ads"
+      },
+      {
+        phase: "Optimization",
+        detail: "A/B testing, conversion tuning"
+      }
+    ],
+    accentColor: "#8b5cf6"
+  }
+];

@@ -1,5 +1,6 @@
 import { Award, BarChart3, Briefcase, Building2, Clock, Code2, CreditCard, Database, Factory, Gamepad2, GraduationCap, Handshake, Headphones, HeartHandshake, Megaphone, Monitor, Palette, Rocket, Server, Settings, ShieldCheck, ShoppingCart, Smartphone, Stethoscope, Truck, UserPlus, Users, Utensils, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,74 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Share Requirem
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Dedicated Teams Can Be",
+  headingHighlight: "Your Superpower",
+  subtitle: "Scale your engineering capacity instantly with pre-vetted developers who integrate seamlessly with your existing team and processes.",
+  image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&fit=crop",
+  imageAlt: "Dedicated development team collaboration",
+  items: [
+    { title: "Rapid Team Scaling", description: "Go from request to productive developer in days, not months. Our bench of pre-vetted engineers lets you scale up or down based on project demands." },
+    { title: "Significant Cost Savings", description: "Save 40-60% compared to local hiring — no recruitment fees, office costs, benefits overhead, or the risk and expense of bad hires." },
+    { title: "Access to Niche Expertise", description: "Find specialists in React, Kotlin, DevOps, AI/ML, and 50+ other technologies. Get exact skill matches that are nearly impossible to recruit locally." },
+    { title: "Full Management Control", description: "Your dedicated developers work exclusively on your project, follow your processes, attend your standups, and report directly to your team leads." },
+    { title: "Zero Administrative Burden", description: "We handle payroll, taxes, benefits, hardware, and HR. You focus purely on building product while we manage the operational overhead." },
+    { title: "Flexible Engagement Models", description: "Start with one developer or an entire squad. Adjust team size monthly. No long-term contracts or minimum commitments required." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Zap, title: "Breadth Across Disciplines", description: "Teams fluent in modern stacks—taking digital products from concept through launch with speed and uncompromising quality." },
   { icon: Clock, title: "Elastic, Right-Sized Capacity", description: "Grow or tighten headcount without heavy overhead. How we work adapts to your roadmap and shifting timelines." },
   { icon: Award, title: "Iterative Delivery, Full Visibility", description: "Transparent sprint rhythm, steady check-ins, and straightforward reporting—so you always know where things stand." },
   { icon: HeartHandshake, title: "Screened for Sector Fit", description: "Professionals selected for technical depth and industry context spanning healthcare, financial services, retail, and related fields." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "chorus-hire",
+    tag: "Dedicated Team",
+    tagColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
+    company: "CHORUS (Google)",
+    industry: "Healthcare",
+    headline: "Dedicated cross-platform engineering team for Google's healthcare monitoring app.",
+    challenge: "Needed specialized BLE and cross-platform expertise. Healthcare-grade security requirements.",
+    solution: "Deployed a dedicated 8-person team with React Native, BLE, and security expertise. Full integration with Google's processes.",
+    duration: "120 days",
+    metrics: [
+      {
+        value: 8,
+        suffix: " engineers",
+        label: "Dedicated team"
+      },
+      {
+        value: 99.9,
+        suffix: "%",
+        label: "Uptime achieved"
+      },
+      {
+        value: 3,
+        suffix: " platforms",
+        label: "Delivered"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Team Assembly",
+        detail: "Specialist recruitment and vetting"
+      },
+      {
+        phase: "Client Integration",
+        detail: "Process alignment and onboarding"
+      },
+      {
+        phase: "Sprint Delivery",
+        detail: "Agile development with daily standups"
+      },
+      {
+        phase: "Knowledge Transfer",
+        detail: "Documentation and handover"
+      }
+    ],
+    accentColor: "#10b981"
+  }
+];

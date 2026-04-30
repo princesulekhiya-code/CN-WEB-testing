@@ -1,5 +1,6 @@
 import { Award, BarChart3, Building2, ClipboardList, Clock, Code2, CreditCard, Factory, Gamepad2, Globe, GraduationCap, HeartHandshake, Layout, Palette, Puzzle, RefreshCcw, Rocket, Settings, ShieldCheck, ShoppingCart, Stethoscope, Truck, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -127,6 +128,23 @@ export const techCategories: TechCategory[] = [{
     ],
   },];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "WordPress Can Be",
+  headingHighlight: "Enterprise-Ready",
+  subtitle: "WordPress powers 43% of the web. With the right engineering, it becomes a scalable, secure platform for serious business applications.",
+  image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80&fit=crop",
+  imageAlt: "WordPress development",
+  items: [
+    { title: "Rapid Content Management", description: "Empower your marketing team to publish, update, and manage content without developer involvement. Intuitive editors and custom blocks make content changes instant." },
+    { title: "Cost-Effective Development", description: "WordPress's extensive ecosystem of themes, plugins, and community resources reduces development time by 40-60% compared to building from scratch." },
+    { title: "SEO Built Into the Foundation", description: "Clean permalinks, semantic HTML, fast loading, and deep integration with SEO tools give your content a natural ranking advantage from day one." },
+    { title: "Massive Plugin Ecosystem", description: "60,000+ plugins for payments, memberships, booking, multilingual support, and more. Add complex functionality without custom development costs." },
+    { title: "Scalable Architecture", description: "With proper engineering — headless setups, CDN integration, and optimized hosting — WordPress handles millions of monthly visitors without breaking a sweat." },
+    { title: "Easy Team Adoption", description: "Your team likely already knows WordPress. Minimal training, familiar interface, and vast documentation mean faster onboarding and immediate productivity." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{
     icon: Award,
     title: "Proven WordPress Experts",
@@ -151,3 +169,53 @@ export const whyChoose: WhyChooseItem[] = [{
     description:
       "We go beyond the brief — custom themes, purpose-built plugins, and responsive support that keeps your site thriving long after launch.",
   },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "edtech-wp",
+    tag: "Content Platform",
+    tagColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
+    company: "EdTech Blog",
+    industry: "Education",
+    headline: "WordPress-powered content hub driving organic traffic for edtech brand.",
+    challenge: "Need for fast, SEO-optimized content management. Multiple content types and author workflows.",
+    solution: "Custom WordPress theme with advanced SEO, custom Gutenberg blocks, and multi-author workflow management.",
+    duration: "30 days",
+    metrics: [
+      {
+        value: 3,
+        suffix: "x",
+        label: "Organic traffic"
+      },
+      {
+        value: 98,
+        suffix: "/100",
+        label: "PageSpeed score"
+      },
+      {
+        value: 50,
+        suffix: "+",
+        label: "Blog posts/month"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Theme Design",
+        detail: "Custom responsive theme"
+      },
+      {
+        phase: "SEO Setup",
+        detail: "Technical SEO, schema markup"
+      },
+      {
+        phase: "Content Workflow",
+        detail: "Multi-author, editorial calendar"
+      },
+      {
+        phase: "Performance",
+        detail: "Caching, CDN, optimization"
+      }
+    ],
+    accentColor: "#10b981"
+  }
+];

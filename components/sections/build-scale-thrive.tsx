@@ -11,7 +11,7 @@ export function BuildScaleThrive() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]"
         >
           Build, Scale, and Thrive with <span className="text-black dark:text-white">CloudNexus</span>
         </motion.h2>

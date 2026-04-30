@@ -1,5 +1,5 @@
 import { Apple, BarChart3, Building2, Clock, Cloud, Code2, Cpu, CreditCard, Factory, Gamepad2, Globe, GraduationCap, HeartHandshake, Layers, MessageCircle, Palette, Rocket, Settings, ShieldCheck, ShoppingCart, Smartphone, Stethoscope, TabletSmartphone, Truck, Users, Utensils, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, WhyNeedProps, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +39,185 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Strategy & Res
 
 export const techCategories: TechCategory[] = [];
 
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Mobile Apps Can Be",
+  headingHighlight: "Game-Changing",
+  subtitle: "Our industry-focused app development services help your business become successful and gain access to varied benefits.",
+  image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80&fit=crop",
+  imageAlt: "Mobile app development benefits",
+  items: [
+    {
+      title: "Effective Customer Connect",
+      description: "Mobile apps create a direct, always-on communication channel with your customers. Push notifications, in-app messaging, and personalized content keep users engaged and informed in real-time.",
+    },
+    {
+      title: "Raise Conversion Rates",
+      description: "Apps deliver 3x higher conversion rates than mobile websites. Streamlined checkout flows, saved preferences, and one-tap actions reduce friction and drive more completed transactions.",
+    },
+    {
+      title: "Brilliant Marketing Channel",
+      description: "Your app is a 24/7 marketing platform — push promotions, loyalty programs, referral rewards, and geo-targeted offers directly to users' home screens without ad spend.",
+    },
+    {
+      title: "Round-the-Clock Accessibility",
+      description: "Unlike websites, mobile apps work offline with cached data and sync when connected. Your customers can browse products, access content, and use core features anytime, anywhere.",
+    },
+    {
+      title: "Maximum User Engagement",
+      description: "Mobile apps are highly effective in brand building, user engagement, and offer multiple benefits because of its easy accessibility for users on varied devices and browsers.",
+    },
+    {
+      title: "Competitive Edge in Market",
+      description: "A polished mobile app signals innovation and reliability. Businesses with dedicated apps see higher customer retention, stronger brand loyalty, and a clear advantage over competitors still relying on web-only presence.",
+    },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Users, title: "Senior Mobile Engineers", description: "Dedicated squads of iOS and Android experts averaging more than five years in production mobile work." },
   { icon: Clock, title: "Rapid Time-to-Market", description: "Agile cadence in two-week increments—move from concept to App Store readiness in as few as eight weeks." },
   { icon: ShieldCheck, title: "Enterprise-Grade Security", description: "Encryption in transit and at rest, biometric authentication, hardened storage, and adherence to HIPAA and PCI-DSS." },
   { icon: HeartHandshake, title: "Post-Launch Partnership", description: "Sustained maintenance, crash analytics, performance refinement, and thoughtful expansion of the product roadmap." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "chorus-mobile",
+    tag: "Healthcare App",
+    tagColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
+    company: "CHORUS",
+    industry: "Healthcare / Google",
+    headline: "Cross-platform healthcare app for Google with real-time patient vitals monitoring.",
+    challenge: "Inconsistent BLE performance across platforms. Real-time data synchronization. Maintaining healthcare-grade data security.",
+    solution: "Built CHORUS — a scalable cross-platform app (Web, Android, iOS) tracking live patient vitals such as heart rate and oxygen levels via BLE.",
+    duration: "120 days",
+    metrics: [
+      {
+        value: 99.9,
+        suffix: "%",
+        label: "Uptime achieved"
+      },
+      {
+        value: 3,
+        suffix: " platforms",
+        label: "Web, Android, iOS"
+      },
+      {
+        value: 0,
+        suffix: " breaches",
+        label: "Security incidents"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Platform Architecture",
+        detail: "Cross-platform framework selection, BLE protocol design"
+      },
+      {
+        phase: "Vitals Integration",
+        detail: "Real-time heart rate, oxygen level tracking"
+      },
+      {
+        phase: "Security Hardening",
+        detail: "SAST, SCA scanning, healthcare-grade encryption"
+      },
+      {
+        phase: "Multi-Platform Launch",
+        detail: "Synchronized release across all platforms"
+      }
+    ],
+    accentColor: "#10b981"
+  },
+  {
+    id: "edtech-mobile",
+    tag: "AI-Driven Platform",
+    tagColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
+    company: "EdTech",
+    industry: "Education Technology",
+    headline: "AI-driven e-learning platform with personalized learning paths and live classes.",
+    challenge: "Creating a scalable AI model for personalized learning. Ensuring real-time performance for live classes.",
+    solution: "Developed a web and mobile platform with AI-driven course recommendations, adaptive learning paths, and WebRTC live classes.",
+    duration: "90 days",
+    metrics: [
+      {
+        value: 45,
+        suffix: "%",
+        label: "Learner improvement"
+      },
+      {
+        value: 3,
+        suffix: "x",
+        label: "Engagement increase"
+      },
+      {
+        value: 10,
+        suffix: "K+",
+        label: "Active students"
+      }
+    ],
+    timeline: [
+      {
+        phase: "AI Model Design",
+        detail: "Adaptive learning algorithm, recommendation system"
+      },
+      {
+        phase: "Live Class Engine",
+        detail: "WebRTC for real-time video and chat"
+      },
+      {
+        phase: "Gamification Layer",
+        detail: "Points, badges, leaderboards"
+      },
+      {
+        phase: "Scale & Launch",
+        detail: "Platform rollout for students and educators"
+      }
+    ],
+    accentColor: "#8b5cf6"
+  },
+  {
+    id: "fintech-mobile",
+    tag: "AI-Powered Finance",
+    tagColor: "bg-[#4EB3E8]/15 text-[#4a7db8] border-[#4EB3E8]/30",
+    company: "FinTech App",
+    industry: "Financial Technology",
+    headline: "AI-powered financial management app with fraud detection and smart budgeting.",
+    challenge: "Ensuring secure handling of sensitive financial data. Building accurate AI models for spending analysis.",
+    solution: "Cross-platform mobile app with AI-driven insights, bank-grade encryption, biometric auth, and ML-based budgeting.",
+    duration: "80 days",
+    metrics: [
+      {
+        value: 95,
+        suffix: "%",
+        label: "Fraud detection"
+      },
+      {
+        value: 40,
+        suffix: "%",
+        label: "Better budgeting"
+      },
+      {
+        value: 100,
+        suffix: "%",
+        label: "Data encryption"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Security Architecture",
+        detail: "Bank-grade encryption, biometric auth"
+      },
+      {
+        phase: "AI Model Training",
+        detail: "Spending analysis, anomaly detection"
+      },
+      {
+        phase: "Payment Integration",
+        detail: "Digital wallets, payment gateways"
+      },
+      {
+        phase: "Launch & Monitor",
+        detail: "Cross-platform release with monitoring"
+      }
+    ],
+    accentColor: "#4EB3E8"
+  }
+];

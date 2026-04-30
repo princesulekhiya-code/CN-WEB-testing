@@ -22,7 +22,7 @@ import {
   Home,
   Wallet,
   Smartphone,
-  Sparkles,
+
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -74,7 +74,7 @@ const industries: Industry[] = [
       "Conversion rate optimization",
     ],
     accentColor: "#8b5cf6",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&fit=crop",
+    image: "/images/ecommerce-delivery.png",
     services: ["Online Stores", "Marketplaces", "Payment Gateways", "Inventory Systems"],
   },
   {
@@ -329,7 +329,7 @@ const industries: Industry[] = [
 const stats = [
   { value: "15+", label: "Industries Served", color: "#4EB3E8" },
   { value: "200+", label: "Projects Delivered", color: "#10b981" },
-  { value: "50+", label: "Global Clients", color: "#8b5cf6" },
+  { value: "10+", label: "Global Clients", color: "#8b5cf6" },
   { value: "98%", label: "Client Satisfaction", color: "#f59e0b" },
 ];
 
@@ -525,62 +525,77 @@ export default function IndustryPage() {
           ))}
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 pt-32 pb-20 text-center relative">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#4EB3E8]/8 border border-[#4EB3E8]/15 mb-8"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#4EB3E8]" />
-            <span className="text-[13px] font-bold text-[#4EB3E8] tracking-wide uppercase">
-              Industries We Serve
-            </span>
-          </motion.div>
+        <div className="mx-auto max-w-7xl px-6 pt-32 pb-20 relative">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left - Text */}
+            <div>
+              <motion.h1
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-[1.1]"
+              >
+                Tailored Solutions for
+                <br />
+                <span className="bg-gradient-to-r from-[#4EB3E8] via-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent">
+                  Every Industry
+                </span>
+              </motion.h1>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-7xl leading-[1.1]"
-          >
-            Tailored Solutions for
-            <br />
-            <span className="bg-gradient-to-r from-[#4EB3E8] via-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent">
-              Every Industry
-            </span>
-          </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mt-6 text-lg font-medium text-black/45 dark:text-white/45 max-w-lg leading-relaxed"
+              >
+                Explore our hands-on expertise in creating tailor-made digital
+                solutions packed with strategy, operations and technologies across
+                15+ industry verticals.
+              </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-lg font-medium text-black/45 dark:text-white/45 max-w-2xl mx-auto leading-relaxed"
-          >
-            Explore our hands-on expertise in creating tailor-made digital
-            solutions packed with strategy, operations and technologies across
-            15+ industry verticals.
-          </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="mt-10 flex flex-col sm:flex-row gap-4"
+              >
+                <Link
+                  href="/resources/free-consultation"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-lg"
+                >
+                  Let&apos;s Talk <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/our-work"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
+                >
+                  View Our Work
+                </Link>
+              </motion.div>
+            </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              href="/resources/free-consultation"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-lg"
+            {/* Right - Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="relative"
             >
-              Let&apos;s Talk <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/our-work"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
-            >
-              View Our Work
-            </Link>
-          </motion.div>
+              <div className="absolute -inset-4 rounded-3xl bg-[#4EB3E8]/[0.06] blur-2xl pointer-events-none" />
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-black/[0.08] dark:border-white/[0.06] shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&fit=crop"
+                  alt="Digital solutions across industries"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#4EB3E8]/20 via-transparent to-[#8b5cf6]/10 mix-blend-overlay" />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
 
@@ -635,11 +650,11 @@ export default function IndustryPage() {
               className="relative"
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-                Don&apos;t See Your Industry?
+                We Serve Every Industry
               </h2>
               <p className="mt-5 text-base font-medium text-black/45 dark:text-white/45 max-w-xl mx-auto leading-relaxed">
-                We work across verticals. Let&apos;s discuss how we can build
-                the right solution for your domain.
+                From startups to enterprises, we build tailored digital solutions
+                for your domain. Let&apos;s create something impactful together.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

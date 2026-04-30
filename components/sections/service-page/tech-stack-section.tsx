@@ -22,7 +22,7 @@ export function TechStackSection({
 
       <div className="relative mx-auto max-w-7xl px-6 py-16">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 24 }} animate={visible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
             {heading.headingGray}{" "}
             <span className="text-black dark:text-white">{heading.headingWhite}</span>
           </h2>

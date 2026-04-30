@@ -23,7 +23,7 @@ export function TechStackSection() {
           animate={visible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#999] dark:text-[#8b8b8b]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
             NLP &amp; Conversational AI{" "}
             <span className="text-black dark:text-white">Technologies</span>
           </h2>

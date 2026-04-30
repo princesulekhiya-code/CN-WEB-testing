@@ -1,5 +1,6 @@
 import { BarChart3, Building2, Clock, Code2, CreditCard, Factory, FileCode2, Gamepad2, Globe, GraduationCap, HeartHandshake, Layers, Monitor, Palette, Rocket, Search, Settings, ShieldCheck, ShoppingCart, Smartphone, Stethoscope, Truck, Users, Zap } from "lucide-react";
-import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps } from "@/components/sections/service-page";
+import type { ServiceOffering, ProcessStep, TechCategory, WhyChooseItem, ServicePageHeroProps, ServicePageSectionProps, CTAProps, WhyNeedProps,} from "@/components/sections/service-page";
+import type { Project } from "@/components/sections/industry-page";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -39,7 +40,121 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Strategy & Res
 
 export const techCategories: TechCategory[] = [];
 
+
+export const whyNeedProps: WhyNeedProps = {
+  heading: "Web Apps Can Be",
+  headingHighlight: "Transformative",
+  subtitle: "A high-performance web application is no longer optional — it's the cornerstone of digital growth and customer trust.",
+  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&fit=crop",
+  imageAlt: "Web development workspace",
+  items: [
+    { title: "Global Reach & Accessibility", description: "Web applications are accessible from any device with a browser — no downloads, no app store approvals. Reach customers worldwide instantly with zero friction." },
+    { title: "Lower Customer Acquisition Cost", description: "SEO-driven organic traffic, shareable URLs, and instant indexing reduce your marketing spend while driving qualified visitors directly to your product." },
+    { title: "Seamless Cross-Platform Experience", description: "One responsive codebase delivers a consistent experience across desktop, tablet, and mobile — eliminating the cost of maintaining separate native apps." },
+    { title: "Real-Time Data & Analytics", description: "Web apps integrate with analytics, heatmaps, and A/B testing tools out of the box. Make data-driven decisions and optimize conversion funnels in real time." },
+    { title: "Rapid Iteration & Deployment", description: "Ship updates instantly to all users without app store review cycles. Fix bugs, launch features, and test ideas in hours instead of weeks." },
+    { title: "Enterprise-Grade Scalability", description: "Modern web architectures scale horizontally with cloud infrastructure. Handle traffic spikes, global users, and growing data volumes without re-architecting." },
+  ],
+};
+
 export const whyChoose: WhyChooseItem[] = [{ icon: Users, title: "Seasoned Engineering Bench", description: "Full-stack practitioners averaging five or more years across React, Next.js, Node.js, and major cloud ecosystems." },
   { icon: Clock, title: "Compressed Launch Windows", description: "Agile cadences with two-week iterations—concept to production-ready in as few as six weeks." },
   { icon: ShieldCheck, title: "Hardened Speed & Safety", description: "OWASP-aligned builds, Core Web Vitals excellence, SSL, CSP, and security practices fit for demanding enterprises." },
   { icon: HeartHandshake, title: "Continuity After Go-Live", description: "Sustained maintenance, observability, analytics, SEO refinement, and roadmap-driven enhancements." },];
+
+export const caseStudyProjects: Project[] = [
+  {
+    id: "cartflow-web",
+    tag: "Headless Commerce",
+    tagColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
+    company: "CartFlow",
+    industry: "E-Commerce",
+    headline: "AI-powered headless commerce platform driving 38% increase in average order value.",
+    challenge: "Generic product suggestions leading to 71% cart abandonment. No real-time ML infrastructure.",
+    solution: "Built a headless commerce platform with real-time ML recommendation engine, multi-currency support, and dynamic pricing.",
+    duration: "60 days",
+    metrics: [
+      {
+        value: 38,
+        suffix: "%",
+        label: "AOV increase"
+      },
+      {
+        value: 22,
+        suffix: "%",
+        label: "Abandonment drop"
+      },
+      {
+        value: 18,
+        suffix: "ms",
+        label: "Inference latency"
+      }
+    ],
+    timeline: [
+      {
+        phase: "Data Pipeline",
+        detail: "Kafka streams for clickstream and purchase history"
+      },
+      {
+        phase: "ML Model Training",
+        detail: "Collaborative filtering + content-based hybrid"
+      },
+      {
+        phase: "API & Caching",
+        detail: "Spring Boot with Redis caching layer"
+      },
+      {
+        phase: "Rollout & Tuning",
+        detail: "Canary deployment at 5% → 100%"
+      }
+    ],
+    accentColor: "#8b5cf6"
+  },
+  {
+    id: "edtech-web",
+    tag: "EdTech Platform",
+    tagColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
+    company: "EdTech",
+    industry: "Education Technology",
+    headline: "AI-driven e-learning platform with personalized learning paths serving 10K+ students.",
+    challenge: "Scalable AI for personalized learning. Real-time live classes and collaboration at scale.",
+    solution: "Web platform with AI-driven course recommendations, adaptive learning paths, WebRTC live classes, and gamification.",
+    duration: "90 days",
+    metrics: [
+      {
+        value: 45,
+        suffix: "%",
+        label: "Learner improvement"
+      },
+      {
+        value: 3,
+        suffix: "x",
+        label: "Engagement"
+      },
+      {
+        value: 10,
+        suffix: "K+",
+        label: "Active students"
+      }
+    ],
+    timeline: [
+      {
+        phase: "AI Learning Engine",
+        detail: "Personalized path algorithm"
+      },
+      {
+        phase: "Live Class System",
+        detail: "WebRTC video & collaboration"
+      },
+      {
+        phase: "Gamification",
+        detail: "Points, badges, leaderboards"
+      },
+      {
+        phase: "Platform Launch",
+        detail: "Full rollout with analytics"
+      }
+    ],
+    accentColor: "#10b981"
+  }
+];
