@@ -113,23 +113,26 @@ export function FreeConsultation() {
                 visible ? "opacity-100 translate-x-0 scale-100" : "opacity-0 translate-x-6 scale-95"
               }`}
             >
-              <div className="w-44 h-44 rounded-2xl border border-[#4EB3E8]/10 dark:border-white/[0.08] bg-white dark:bg-white/[0.04] backdrop-blur-sm flex flex-col items-center justify-center gap-3">
-                <div className="w-14 h-14 rounded-xl bg-[#4EB3E8]/10 dark:bg-indigo-500/15 flex items-center justify-center">
-                  <MessageSquare size={28} strokeWidth={1.5} className="text-[#4EB3E8] dark:text-indigo-400" />
-                </div>
-                <div className="text-center">
-                  <p className="text-xs font-semibold text-black dark:text-white">Talk to an Expert</p>
-                  <p className="text-[10px] text-black/40 dark:text-white/40 mt-0.5">Response within 24hrs</p>
-                </div>
-              </div>
-              <div className="flex gap-1.5">
-                {[...Array(3)].map((_, i) => (
-                  <div key={i} className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                    visible ? "scale-100" : "scale-0"
-                  } ${i === 0 ? "bg-[#4EB3E8] dark:bg-indigo-400" : "bg-black/15 dark:bg-white/20"}`}
-                  style={{ transitionDelay: `${700 + i * 100}ms` }}
-                  />
-                ))}
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: MessageSquare, label: "Expert Advice", sub: "1-on-1 sessions", color: "#4EB3E8" },
+                  { icon: Clock, label: "Quick Response", sub: "Within 24 hours", color: "#8b5cf6" },
+                  { icon: Shield, label: "No Strings", sub: "Zero commitment", color: "#10b981" },
+                  { icon: ArrowRight, label: "Free Call", sub: "30 min session", color: "#f59e0b" },
+                ].map((card) => {
+                  const Icon = card.icon;
+                  return (
+                    <div key={card.label} className="w-[100px] h-[100px] rounded-xl border border-black/[0.04] dark:border-white/[0.06] bg-white dark:bg-white/[0.04] backdrop-blur-sm flex flex-col items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300" style={{ boxShadow: `0 2px 12px ${card.color}10` }}>
+                      <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${card.color}15` }}>
+                        <Icon size={18} strokeWidth={1.5} style={{ color: card.color }} />
+                      </div>
+                      <div className="text-center">
+                        <p className="text-[10px] font-bold text-black/80 dark:text-white/80 leading-tight">{card.label}</p>
+                        <p className="text-[8px] text-black/35 dark:text-white/30 mt-0.5">{card.sub}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

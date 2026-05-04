@@ -1,10 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { Shield, Loader2, AlertCircle, Mail, Lock, KeyRound } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Shield, Loader2, AlertCircle, Mail, Lock, KeyRound, Eye, EyeOff, ArrowRight, Fingerprint } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useAdminAuth } from "@/lib/admin-auth-context";
+
+function FloatingParticle({ delay, x, y, size }: { delay: number; x: number; y: number; size: number }) {
+  return (
+    <motion.div
+      className="absolute rounded-full bg-[#4EB3E8]"
+      style={{ width: size, height: size, left: `${x}%`, top: `${y}%` }}
+      animate={{ y: [0, -30, 0], opacity: [0.1, 0.3, 0.1], scale: [1, 1.3, 1] }}
+      transition={{ duration: 4 + Math.random() * 3, repeat: Infinity, delay, ease: "easeInOut" }}
+    />
+  );
+}
 
 export default function AdminLoginPage() {
   const { login, verify2FA } = useAdminAuth();
@@ -13,11 +26,15 @@ export default function AdminLoginPage() {
   const [step, setStep] = useState<"credentials" | "otp">("credentials");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [challengeId, setChallengeId] = useState("");
   const [otpCode, setOtpCode] = useState("");
   const [devCode, setDevCode] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,86 +72,256 @@ export default function AdminLoginPage() {
     }
   };
 
-  const inputCls = "w-full rounded-xl border border-black/[0.08] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.03] px-4 py-3 pl-11 text-sm outline-none focus:border-[#4EB3E8] focus:ring-1 focus:ring-[#4EB3E8]/20 transition-all duration-200 placeholder:text-black/30 dark:placeholder:text-white/25";
+  const inputCls = "w-full rounded-xl border border-black/[0.08] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.04] px-4 py-3.5 pl-12 text-sm outline-none focus:border-[#4EB3E8] focus:ring-2 focus:ring-[#4EB3E8]/15 transition-all duration-300 placeholder:text-black/30 dark:placeholder:text-white/25";
+
+  const particles = Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: 2 + Math.random() * 4,
+    delay: Math.random() * 3,
+  }));
+
+  if (!mounted) return null;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f5f5f5] dark:bg-[#0a0a0a] px-4">
-      <div className="w-full max-w-sm">
-        <div className="text-center mb-8">
-          <div className="mx-auto mb-4 w-14 h-14 rounded-2xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20 flex items-center justify-center">
-            <Shield className="w-7 h-7 text-[#4EB3E8]" />
-          </div>
-          <h1 className="text-2xl font-bold tracking-tight text-black dark:text-white">Admin Login</h1>
-          <p className="text-sm text-black/45 dark:text-white/40 mt-1">
-            {step === "credentials" ? "Sign in to your admin account" : "Enter the verification code"}
-          </p>
+    <div className="min-h-screen flex bg-[#fafafa] dark:bg-[#050505]">
+      {/* Left Panel - Branding */}
+      <div className="hidden lg:flex lg:w-[45%] xl:w-[50%] relative overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0d1f3c] to-[#091420]">
+        <div className="absolute inset-0">
+          {particles.map((p) => (
+            <FloatingParticle key={p.id} delay={p.delay} x={p.x} y={p.y} size={p.size} />
+          ))}
         </div>
 
-        <div className="rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white dark:bg-[#111] p-6">
-          {error && (
-            <div className="mb-4 flex items-center gap-2 rounded-xl border border-red-500/20 bg-red-500/5 px-3 py-2.5 text-xs text-red-600 dark:text-red-400">
-              <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" />
-              {error}
-            </div>
-          )}
+        <div className="absolute inset-0" style={{ background: "radial-gradient(circle at 30% 50%, rgba(78,179,232,0.08) 0%, transparent 60%)" }} />
 
-          {step === "credentials" ? (
-            <form onSubmit={handleLogin} className="space-y-4">
-              <div>
-                <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">Email</label>
-                <div className="relative">
-                  <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-black/25 dark:text-white/25" />
-                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="admin@cloudnexus.com" className={inputCls} />
-                </div>
+        <div className="relative z-10 flex flex-col justify-center px-14 xl:px-20 w-full">
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+            <div className="flex items-center gap-3 mb-10">
+              <div className="relative w-[140px] h-[40px]">
+                <Image src="/asset/cn-logo.png" alt="Cloud Nexus" fill className="object-contain [filter:invert(1)_hue-rotate(180deg)_saturate(1.2)_brightness(1.15)]" sizes="140px" />
               </div>
-              <div>
-                <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">Password</label>
-                <div className="relative">
-                  <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-black/25 dark:text-white/25" />
-                  <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="Enter password" className={inputCls} />
+            </div>
+            <div className="text-white/30 text-[10px] font-semibold tracking-[0.15em] uppercase mb-4">Admin Portal</div>
+
+            <h2 className="text-4xl xl:text-5xl font-black text-white leading-[1.15] tracking-tight mb-5">
+              Manage Your<br />
+              <span className="text-[#4EB3E8]">Digital Empire</span>
+            </h2>
+            <p className="text-white/40 text-sm leading-relaxed max-w-sm">
+              Access your admin dashboard to manage content, monitor analytics, and control every aspect of your platform.
+            </p>
+
+            <div className="mt-12 flex items-center gap-8">
+              {[
+                { value: "180+", label: "Pages" },
+                { value: "20+", label: "Services" },
+                { value: "99.9%", label: "Uptime" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-2xl font-black text-white tracking-tight">{stat.value}</div>
+                  <div className="text-[10px] text-white/30 font-semibold tracking-wider uppercase mt-0.5">{stat.label}</div>
                 </div>
-              </div>
-              <button type="submit" disabled={loading} className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300 disabled:opacity-60">
-                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
-                {loading ? "Signing in..." : "Sign In"}
-              </button>
-              <p className="text-center text-xs text-black/35 dark:text-white/30">
-                Don&apos;t have an account?{" "}
-                <Link href="/admin/signup" className="text-[#4EB3E8] font-semibold hover:underline">Create one</Link>
-              </p>
-            </form>
-          ) : (
-            <form onSubmit={handleVerify} className="space-y-4">
-              <div className="text-center mb-2">
-                <div className="mx-auto mb-3 w-10 h-10 rounded-xl bg-[#4EB3E8]/10 flex items-center justify-center">
-                  <KeyRound className="w-5 h-5 text-[#4EB3E8]" />
-                </div>
-                <p className="text-xs text-black/50 dark:text-white/40">
-                  A 6-digit code has been sent to <span className="font-semibold text-black/70 dark:text-white/60">{email}</span>
-                </p>
-                {devCode && (
-                  <p className="mt-2 text-xs text-amber-600 dark:text-amber-400 bg-amber-500/5 border border-amber-500/20 rounded-lg px-3 py-1.5 inline-block">
-                    Dev code: <span className="font-mono font-bold">{devCode}</span>
-                  </p>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-8 left-14 xl:left-20 flex items-center gap-2 text-white/20 text-[10px] tracking-wider"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
+          >
+            <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+            All systems operational
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Right Panel - Login Form */}
+      <div className="flex-1 flex items-center justify-center px-6 py-12 relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#4EB3E8]/[0.03] rounded-full blur-3xl pointer-events-none" />
+
+        <motion.div
+          className="w-full max-w-[400px] relative"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Mobile Logo */}
+          <div className="lg:hidden text-center mb-10">
+            <div className="relative w-[160px] h-[45px] mx-auto mb-2">
+              <Image src="/asset/cn-logo.png" alt="Cloud Nexus" fill className="object-contain [filter:saturate(1.6)_hue-rotate(-12deg)_brightness(0.7)_contrast(1.15)] dark:[filter:invert(1)_hue-rotate(180deg)_saturate(1.2)_brightness(1.15)]" sizes="160px" />
+            </div>
+            <p className="text-[10px] text-black/30 dark:text-white/25 font-semibold tracking-[0.15em] uppercase">Admin Portal</p>
+          </div>
+
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-xl bg-[#4EB3E8]/10 flex items-center justify-center">
+                {step === "credentials" ? (
+                  <Shield className="w-5 h-5 text-[#4EB3E8]" />
+                ) : (
+                  <Fingerprint className="w-5 h-5 text-[#4EB3E8]" />
                 )}
               </div>
               <div>
-                <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">Verification Code</label>
-                <div className="relative">
-                  <KeyRound className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-black/25 dark:text-white/25" />
-                  <input type="text" value={otpCode} onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, "").slice(0, 6))} required placeholder="000000" maxLength={6} className={`${inputCls} text-center tracking-[0.5em] font-mono text-lg`} />
-                </div>
+                <h1 className="text-xl font-bold tracking-tight">
+                  {step === "credentials" ? "Welcome back" : "Verification"}
+                </h1>
+                <p className="text-xs text-black/40 dark:text-white/35">
+                  {step === "credentials" ? "Sign in to your admin account" : "Enter the code to continue"}
+                </p>
               </div>
-              <button type="submit" disabled={loading || otpCode.length < 6} className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300 disabled:opacity-60">
-                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
-                {loading ? "Verifying..." : "Verify & Sign In"}
-              </button>
-              <button type="button" onClick={() => { setStep("credentials"); setError(""); }} className="w-full text-xs text-black/40 dark:text-white/35 hover:text-[#4EB3E8] transition-colors text-center">
-                Back to login
-              </button>
-            </form>
-          )}
-        </div>
+            </div>
+          </div>
+
+          <AnimatePresence mode="wait">
+            {error && (
+              <motion.div
+                initial={{ opacity: 0, y: -8, height: 0 }}
+                animate={{ opacity: 1, y: 0, height: "auto" }}
+                exit={{ opacity: 0, y: -8, height: 0 }}
+                className="mb-5 flex items-center gap-2.5 rounded-xl border border-red-500/15 bg-red-500/[0.04] px-4 py-3 text-xs text-red-600 dark:text-red-400"
+              >
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                {error}
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <AnimatePresence mode="wait">
+            {step === "credentials" ? (
+              <motion.form
+                key="credentials"
+                onSubmit={handleLogin}
+                className="space-y-5"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div>
+                  <label className="block text-xs font-semibold mb-2 text-black/60 dark:text-white/50">Email Address</label>
+                  <div className="relative group">
+                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-black/20 dark:text-white/20 group-focus-within:text-[#4EB3E8] transition-colors" />
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="admin@cloudnexus.com" className={inputCls} />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold mb-2 text-black/60 dark:text-white/50">Password</label>
+                  <div className="relative group">
+                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-black/20 dark:text-white/20 group-focus-within:text-[#4EB3E8] transition-colors" />
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                      placeholder="Enter your password"
+                      className={`${inputCls} pr-12`}
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 text-black/20 dark:text-white/20 hover:text-black/50 dark:hover:text-white/50 transition-colors"
+                    >
+                      {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300 disabled:opacity-60 shadow-lg shadow-[#4EB3E8]/20 hover:shadow-xl hover:shadow-[#4EB3E8]/30 hover:-translate-y-0.5 active:translate-y-0"
+                >
+                  {loading ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <>Sign In <ArrowRight className="w-4 h-4" /></>
+                  )}
+                </button>
+
+                <div className="relative my-6">
+                  <div className="absolute inset-0 flex items-center">
+                    <div className="w-full border-t border-black/[0.06] dark:border-white/[0.06]" />
+                  </div>
+                  <div className="relative flex justify-center text-[10px] uppercase tracking-widest">
+                    <span className="bg-[#fafafa] dark:bg-[#050505] px-3 text-black/25 dark:text-white/20 font-semibold">or</span>
+                  </div>
+                </div>
+
+                <p className="text-center text-xs text-black/35 dark:text-white/30">
+                  Don&apos;t have an account?{" "}
+                  <Link href="/admin/signup" className="text-[#4EB3E8] font-semibold hover:underline">Create one</Link>
+                </p>
+              </motion.form>
+            ) : (
+              <motion.form
+                key="otp"
+                onSubmit={handleVerify}
+                className="space-y-5"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="text-center mb-4 p-4 rounded-xl bg-[#4EB3E8]/[0.04] border border-[#4EB3E8]/10">
+                  <p className="text-xs text-black/50 dark:text-white/40">
+                    A 6-digit code was sent to
+                  </p>
+                  <p className="text-sm font-semibold text-black/80 dark:text-white/70 mt-0.5">{email}</p>
+                  {devCode && (
+                    <div className="mt-3 text-xs text-amber-600 dark:text-amber-400 bg-amber-500/5 border border-amber-500/20 rounded-lg px-3 py-2 inline-block">
+                      Dev code: <span className="font-mono font-bold text-sm">{devCode}</span>
+                    </div>
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold mb-2 text-black/60 dark:text-white/50">Verification Code</label>
+                  <div className="relative group">
+                    <KeyRound className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-black/20 dark:text-white/20 group-focus-within:text-[#4EB3E8] transition-colors" />
+                    <input
+                      type="text"
+                      value={otpCode}
+                      onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                      required
+                      placeholder="000000"
+                      maxLength={6}
+                      autoFocus
+                      className={`${inputCls} text-center tracking-[0.4em] font-mono text-lg`}
+                    />
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={loading || otpCode.length < 6}
+                  className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300 disabled:opacity-60 shadow-lg shadow-[#4EB3E8]/20 hover:shadow-xl hover:shadow-[#4EB3E8]/30 hover:-translate-y-0.5 active:translate-y-0"
+                >
+                  {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <>Verify & Sign In <ArrowRight className="w-4 h-4" /></>}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => { setStep("credentials"); setError(""); }}
+                  className="w-full text-xs text-black/35 dark:text-white/30 hover:text-[#4EB3E8] transition-colors text-center py-2"
+                >
+                  ← Back to login
+                </button>
+              </motion.form>
+            )}
+          </AnimatePresence>
+
+          <div className="mt-8 text-center text-[10px] text-black/20 dark:text-white/15 space-x-4">
+            <span>Protected by 2FA</span>
+            <span>·</span>
+            <span>256-bit encryption</span>
+            <span>·</span>
+            <span>SOC 2 compliant</span>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

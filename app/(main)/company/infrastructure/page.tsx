@@ -344,10 +344,10 @@ export default function InfrastructurePage() {
               {activePipe >= 0 && (
                 <motion.div initial={{ opacity: 0, height: 0, marginTop: 0 }} animate={{ opacity: 1, height: "auto", marginTop: 28 }} exit={{ opacity: 0, height: 0, marginTop: 0 }}
                   transition={{ duration: 0.3, ease: "easeOut" }} className="overflow-hidden">
-                  <div className="rounded-2xl p-8 bg-white dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.06] relative overflow-hidden shadow-lg">
+                  <div className="rounded-2xl p-5 sm:p-6 md:p-8 bg-white dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.06] relative overflow-hidden shadow-lg">
                     <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl" style={{ backgroundColor: pipelineSteps[activePipe].color }} />
-                    <div className="flex items-start gap-5">
-                      <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 border"
+                    <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center flex-shrink-0 border"
                         style={{ backgroundColor: `${pipelineSteps[activePipe].color}12`, borderColor: `${pipelineSteps[activePipe].color}20` }}>
                         {(() => { const Icon = pipelineSteps[activePipe].icon; return <Icon className="w-6 h-6" style={{ color: pipelineSteps[activePipe].color }} strokeWidth={1.5} />; })()}
                       </div>
