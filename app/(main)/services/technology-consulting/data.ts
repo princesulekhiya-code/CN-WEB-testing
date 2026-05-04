@@ -38,7 +38,39 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Assessment & D
   { step: "05", title: "Testing & QA", description: "Comprehensive validation so capabilities perform as expected—catching issues early and strengthening reliability.", icon: ShieldCheck },
   { step: "06", title: "Ongoing Support", description: "Proactive maintenance, observability, and continuous improvement so your technology keeps performing at its best.", icon: HeartHandshake },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Cloud & DevOps", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
+    { name: "Google Cloud", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Kubernetes", logo: `${DEVICON}/kubernetes/kubernetes-original.svg` },
+  ] },
+  { label: "AI & Data", items: [
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "TensorFlow", logo: `${DEVICON}/tensorflow/tensorflow-original.svg` },
+    { name: "PyTorch", logo: `${DEVICON}/pytorch/pytorch-original.svg` },
+    { name: "Apache Spark", logo: `${DEVICON}/apachespark/apachespark-original.svg` },
+  ] },
+  { label: "IoT & AR", items: [
+    { name: "Arduino", logo: `${DEVICON}/arduino/arduino-original.svg` },
+    { name: "Raspberry Pi", logo: `${DEVICON}/raspberrypi/raspberrypi-original.svg` },
+    { name: "Unity", logo: `${DEVICON}/unity/unity-original.svg` },
+    { name: "Unreal Engine", logo: `${DEVICON}/unrealengine/unrealengine-original.svg` },
+  ] },
+  { label: "Development", items: [
+    { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Java", logo: `${DEVICON}/java/java-original.svg` },
+    { name: ".NET Core", logo: `${DEVICON}/dotnetcore/dotnetcore-original.svg` },
+  ] },
+  { label: "Databases", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "Redis", logo: `${DEVICON}/redis/redis-original.svg` },
+    { name: "Neo4j", logo: `${DEVICON}/neo4j/neo4j-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

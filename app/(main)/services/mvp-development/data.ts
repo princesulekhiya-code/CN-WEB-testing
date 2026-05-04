@@ -38,7 +38,38 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Ideation & Res
   { step: "05", title: "App Testing", description: "Targeted usability sessions with curated cohorts to surface defects and experience gaps before you go live.", icon: ShieldCheck },
   { step: "06", title: "Deployment & Launch", description: "App Store submission, refined listings, on-brand copy, and optional ASO support to strengthen discoverability.", icon: BarChart3 },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Frontend", items: [
+    { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
+    { name: "Flutter", logo: `${DEVICON}/flutter/flutter-original.svg` },
+    { name: "React Native", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Tailwind CSS", logo: `${DEVICON}/tailwindcss/tailwindcss-original.svg` },
+  ] },
+  { label: "Backend", items: [
+    { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "Firebase", logo: `${DEVICON}/firebase/firebase-original.svg` },
+    { name: "Supabase", logo: `${DEVICON}/supabase/supabase-original.svg` },
+    { name: "GraphQL", logo: `${DEVICON}/graphql/graphql-plain.svg` },
+  ] },
+  { label: "Databases", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "Redis", logo: `${DEVICON}/redis/redis-original.svg` },
+  ] },
+  { label: "Cloud & DevOps", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Vercel", logo: `${DEVICON}/vercel/vercel-original.svg` },
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "GitHub Actions", logo: `${DEVICON}/github/github-original.svg` },
+  ] },
+  { label: "Design & Testing", items: [
+    { name: "Figma", logo: `${DEVICON}/figma/figma-original.svg` },
+    { name: "Jest", logo: `${DEVICON}/jest/jest-plain.svg` },
+    { name: "Cypress", logo: `${DEVICON}/cypressio/cypressio-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

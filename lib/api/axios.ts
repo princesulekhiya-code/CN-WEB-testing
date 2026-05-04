@@ -11,9 +11,8 @@ const apiClient = axios.create({
 // Request interceptor
 apiClient.interceptors.request.use(
   (config) => {
-    // Attach auth token if available
     if (typeof window !== "undefined") {
-      const token = localStorage.getItem("token");
+      const token = localStorage.getItem("admin_token") || localStorage.getItem("token");
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;
       }
@@ -37,11 +36,3 @@ apiClient.interceptors.response.use(
 );
 
 export default apiClient;
-
-
-
-
-
-
-
-

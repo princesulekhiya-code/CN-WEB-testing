@@ -38,7 +38,38 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Data Assessmen
   { step: "05", title: "Monitoring & MLOps", description: "Drift monitoring, performance telemetry, experimentation, and automated retraining keep production models dependable over time.", icon: Eye },
   { step: "06", title: "Scale & Optimize", description: "We scale serving capacity, tune economics, broaden use cases, and nurture an organization-wide, data-informed operating rhythm.", icon: TrendingUp },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Languages", items: [
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "R", logo: `${DEVICON}/r/r-original.svg` },
+    { name: "Julia", logo: `${DEVICON}/julia/julia-original.svg` },
+    { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
+  ] },
+  { label: "ML Frameworks", items: [
+    { name: "TensorFlow", logo: `${DEVICON}/tensorflow/tensorflow-original.svg` },
+    { name: "PyTorch", logo: `${DEVICON}/pytorch/pytorch-original.svg` },
+    { name: "scikit-learn", logo: `${DEVICON}/scikitlearn/scikitlearn-original.svg` },
+    { name: "Keras", logo: `${DEVICON}/keras/keras-original.svg` },
+    { name: "OpenCV", logo: `${DEVICON}/opencv/opencv-original.svg` },
+  ] },
+  { label: "Data Tools", items: [
+    { name: "Pandas", logo: `${DEVICON}/pandas/pandas-original.svg` },
+    { name: "NumPy", logo: `${DEVICON}/numpy/numpy-original.svg` },
+    { name: "Jupyter", logo: `${DEVICON}/jupyter/jupyter-original.svg` },
+    { name: "Apache Spark", logo: `${DEVICON}/apachespark/apachespark-original.svg` },
+  ] },
+  { label: "Cloud AI", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Google Cloud", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
+    { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
+  ] },
+  { label: "Databases", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "Redis", logo: `${DEVICON}/redis/redis-original.svg` },
+    { name: "Neo4j", logo: `${DEVICON}/neo4j/neo4j-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

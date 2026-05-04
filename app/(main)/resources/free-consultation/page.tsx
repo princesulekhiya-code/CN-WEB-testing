@@ -433,11 +433,11 @@ export default function FreeConsultationPage() {
                   Book Free Consultation <ArrowRight className="w-4 h-4" />
                 </a>
                 <div className="flex items-center justify-center gap-4">
-                  <a href="mailto:hello@cloudnexus.com" className="flex items-center gap-2 text-sm font-semibold text-black/50 dark:text-white/45 hover:text-[#4EB3E8] transition-colors">
+                  <a href="mailto:work@cloudnexus.in" className="flex items-center gap-2 text-sm font-semibold text-black/50 dark:text-white/45 hover:text-[#4EB3E8] transition-colors">
                     <Mail className="w-4 h-4" /> Email Us
                   </a>
                   <span className="text-black/15 dark:text-white/15">|</span>
-                  <a href="tel:+1234567890" className="flex items-center gap-2 text-sm font-semibold text-black/50 dark:text-white/45 hover:text-[#4EB3E8] transition-colors">
+                  <a href="tel:+918793830447" className="flex items-center gap-2 text-sm font-semibold text-black/50 dark:text-white/45 hover:text-[#4EB3E8] transition-colors">
                     <Phone className="w-4 h-4" /> Call Us
                   </a>
                 </div>

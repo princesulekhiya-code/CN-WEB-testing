@@ -74,7 +74,41 @@ export const processSteps: ProcessStep[] = [{
     icon: RefreshCcw,
   },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Languages", items: [
+    { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "Java", logo: `${DEVICON}/java/java-original.svg` },
+    { name: "Go", logo: `${DEVICON}/go/go-original.svg` },
+    { name: "Rust", logo: `${DEVICON}/rust/rust-original.svg` },
+  ] },
+  { label: "Frameworks", items: [
+    { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
+    { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Spring Boot", logo: `${DEVICON}/spring/spring-original.svg` },
+    { name: ".NET Core", logo: `${DEVICON}/dotnetcore/dotnetcore-original.svg` },
+  ] },
+  { label: "Cloud & DevOps", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Kubernetes", logo: `${DEVICON}/kubernetes/kubernetes-original.svg` },
+    { name: "Terraform", logo: `${DEVICON}/terraform/terraform-original.svg` },
+    { name: "GitHub Actions", logo: `${DEVICON}/github/github-original.svg` },
+  ] },
+  { label: "Databases", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "Redis", logo: `${DEVICON}/redis/redis-original.svg` },
+    { name: "Elasticsearch", logo: `${DEVICON}/elasticsearch/elasticsearch-original.svg` },
+  ] },
+  { label: "Testing", items: [
+    { name: "Jest", logo: `${DEVICON}/jest/jest-plain.svg` },
+    { name: "Cypress", logo: `${DEVICON}/cypressio/cypressio-original.svg` },
+    { name: "Selenium", logo: `${DEVICON}/selenium/selenium-original.svg` },
+    { name: "JUnit", logo: `${DEVICON}/java/java-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

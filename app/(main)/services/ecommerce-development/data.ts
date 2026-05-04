@@ -41,7 +41,39 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Analysis", des
   { step: "05", title: "Testing", description: "Automated regression, payment-flow verification, load stress tests, and cross-device QA for a defect-free launch.", icon: ShieldCheck },
   { step: "06", title: "Deployment", description: "Zero-downtime go-live on hosting infrastructure and app stores — with monitoring, CDN, and rollback readiness in place.", icon: Rocket },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Platforms", items: [
+    { name: "Shopify", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Magento", logo: `${DEVICON}/magento/magento-original.svg` },
+    { name: "WooCommerce", logo: `${DEVICON}/woocommerce/woocommerce-original.svg` },
+    { name: "BigCommerce", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+  ] },
+  { label: "Frontend", items: [
+    { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
+    { name: "Vue.js", logo: `${DEVICON}/vuejs/vuejs-original.svg` },
+    { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
+    { name: "Tailwind CSS", logo: `${DEVICON}/tailwindcss/tailwindcss-original.svg` },
+  ] },
+  { label: "Backend", items: [
+    { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "PHP", logo: `${DEVICON}/php/php-original.svg` },
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "GraphQL", logo: `${DEVICON}/graphql/graphql-plain.svg` },
+  ] },
+  { label: "Databases", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "MySQL", logo: `${DEVICON}/mysql/mysql-original.svg` },
+    { name: "Redis", logo: `${DEVICON}/redis/redis-original.svg` },
+  ] },
+  { label: "Payments & Cloud", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Firebase", logo: `${DEVICON}/firebase/firebase-original.svg` },
+    { name: "Nginx", logo: `${DEVICON}/nginx/nginx-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

@@ -38,7 +38,37 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Analyze", desc
   { step: "05", title: "Monitor", description: "Ongoing observability and performance oversight keep environments running efficiently and interruptions rare.", icon: Network },
   { step: "06", title: "Optimize", description: "Periodic assessments, tuning, and strategic recalibration ensure infrastructure and investments continue to match shifting priorities.", icon: Server },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Cloud Platforms", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
+    { name: "Google Cloud", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
+  ] },
+  { label: "Infrastructure", items: [
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Kubernetes", logo: `${DEVICON}/kubernetes/kubernetes-original.svg` },
+    { name: "Terraform", logo: `${DEVICON}/terraform/terraform-original.svg` },
+    { name: "Linux", logo: `${DEVICON}/linux/linux-original.svg` },
+  ] },
+  { label: "Development", items: [
+    { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "Java", logo: `${DEVICON}/java/java-original.svg` },
+  ] },
+  { label: "Data & Analytics", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "Elasticsearch", logo: `${DEVICON}/elasticsearch/elasticsearch-original.svg` },
+    { name: "Grafana", logo: `${DEVICON}/grafana/grafana-original.svg` },
+  ] },
+  { label: "Security", items: [
+    { name: "Git", logo: `${DEVICON}/git/git-original.svg` },
+    { name: "Jira", logo: `${DEVICON}/jira/jira-original.svg` },
+    { name: "Confluence", logo: `${DEVICON}/confluence/confluence-original.svg` },
+    { name: "GitHub", logo: `${DEVICON}/github/github-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

@@ -68,16 +68,19 @@ const NAV_ITEMS: NavItem[] = [
   },
   {
     label: "Resources",
+    href: "/resources",
     children: [
       { label: "Support", href: "/resources/support", description: "Help center & technical support", icon: LifeBuoy },
       { label: "Contact Us", href: "/resources/contact", description: "Get in touch with our team", icon: Mail },
       { label: "Blogs", href: "/resources/blog", description: "Insights, tutorials & updates", icon: BookOpen },
       { label: "Careers", href: "/resources/career", description: "Join the CloudNexus team", icon: Briefcase },
       { label: "Free Consultation", href: "/resources/free-consultation", description: "Book a free strategy session", icon: CalendarCheck },
+      { label: "Career Benefits", href: "/company/career-benefits", description: "Perks & benefits of working with us", icon: Gift },
     ],
   },
   {
     label: "Company",
+    href: "/company",
     children: [
       { label: "Overview", href: "/company/overview", description: "Who we are & what we do", icon: Eye },
       { label: "Life @ Cloud Nexus", href: "/company/life-at-cloud-nexus", description: "Our culture & work life", icon: Heart },

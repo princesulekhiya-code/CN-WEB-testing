@@ -38,7 +38,40 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Share Requirem
   { step: "05", title: "Sprint Integration", description: "Join your backlog, definition of done, and release rhythm with shared quality standards and the agile practices your team already trusts.", icon: BarChart3 },
   { step: "06", title: "Scale or Transition", description: "Right-size the team, rotate subject-matter experts, or transition with runbooks as the program matures.", icon: ShieldCheck },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Frontend", items: [
+    { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Angular", logo: `${DEVICON}/angular/angular-original.svg` },
+    { name: "Vue.js", logo: `${DEVICON}/vuejs/vuejs-original.svg` },
+    { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
+    { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
+  ] },
+  { label: "Backend", items: [
+    { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "Java", logo: `${DEVICON}/java/java-original.svg` },
+    { name: "PHP", logo: `${DEVICON}/php/php-original.svg` },
+    { name: "Go", logo: `${DEVICON}/go/go-original.svg` },
+  ] },
+  { label: "Mobile", items: [
+    { name: "React Native", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Flutter", logo: `${DEVICON}/flutter/flutter-original.svg` },
+    { name: "Swift", logo: `${DEVICON}/swift/swift-original.svg` },
+    { name: "Kotlin", logo: `${DEVICON}/kotlin/kotlin-original.svg` },
+  ] },
+  { label: "Cloud & DevOps", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Kubernetes", logo: `${DEVICON}/kubernetes/kubernetes-original.svg` },
+  ] },
+  { label: "Databases", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "MySQL", logo: `${DEVICON}/mysql/mysql-original.svg` },
+    { name: "Redis", logo: `${DEVICON}/redis/redis-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

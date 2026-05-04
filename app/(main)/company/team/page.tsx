@@ -468,7 +468,7 @@ export default function TeamPage() {
               We&apos;re always looking for talented engineers, designers, and strategists who are passionate about building the future.
             </p>
             <a
-              href="mailto:contact@cloudnexus.com"
+              href="mailto:hr@cloudnexus.in"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#4EB3E8] text-white text-sm font-semibold hover:bg-[#3a9fd4] hover:shadow-lg hover:shadow-[#4EB3E8]/20 transition-all duration-300"
             >
               Get In Touch

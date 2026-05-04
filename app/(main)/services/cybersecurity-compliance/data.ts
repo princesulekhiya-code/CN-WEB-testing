@@ -38,7 +38,37 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Scope & Threat
   { step: "05", title: "Validation & Testing", description: "Penetration tests, tabletop exercises, and control-effectiveness scrutiny that demonstrate genuine preparedness rather than superficial compliance.", icon: Shield },
   { step: "06", title: "Continuous Improvement", description: "Operating metrics, periodic threat reassessments, and roadmap stewardship so security maturity evolves alongside product releases and cloud drift.", icon: Activity },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Security Tools", items: [
+    { name: "Nessus", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Burp Suite", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "OWASP ZAP", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Metasploit", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+  ] },
+  { label: "Cloud Security", items: [
+    { name: "AWS Security Hub", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Azure Sentinel", logo: `${DEVICON}/azure/azure-original.svg` },
+    { name: "Google SCC", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
+  ] },
+  { label: "Monitoring & SIEM", items: [
+    { name: "Splunk", logo: `${DEVICON}/splunk/splunk-original-wordmark.svg` },
+    { name: "ELK Stack", logo: `${DEVICON}/elasticsearch/elasticsearch-original.svg` },
+    { name: "Grafana", logo: `${DEVICON}/grafana/grafana-original.svg` },
+    { name: "Prometheus", logo: `${DEVICON}/prometheus/prometheus-original.svg` },
+  ] },
+  { label: "Infrastructure", items: [
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Kubernetes", logo: `${DEVICON}/kubernetes/kubernetes-original.svg` },
+    { name: "Terraform", logo: `${DEVICON}/terraform/terraform-original.svg` },
+    { name: "Linux", logo: `${DEVICON}/linux/linux-original.svg` },
+  ] },
+  { label: "Scripting", items: [
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "Bash", logo: `${DEVICON}/bash/bash-original.svg` },
+    { name: "Go", logo: `${DEVICON}/go/go-original.svg` },
+    { name: "PowerShell", logo: `${DEVICON}/powershell/powershell-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

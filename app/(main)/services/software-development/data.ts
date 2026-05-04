@@ -38,7 +38,42 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Discovery & An
   { step: "05", title: "Security & Performance", description: "Thorough control review, capacity validation, and live-operations visibility calibrated for dependable performance under real workloads.", icon: ShieldCheck },
   { step: "06", title: "Sustain & Evolve", description: "Priorities stay honest through backlog refinement and product telemetry, so improvements track observed usage rather than guesswork—ongoing maturation by design.", icon: BarChart3 },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Languages", items: [
+    { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "Java", logo: `${DEVICON}/java/java-original.svg` },
+    { name: "C#", logo: `${DEVICON}/csharp/csharp-original.svg` },
+    { name: "Go", logo: `${DEVICON}/go/go-original.svg` },
+  ] },
+  { label: "Frameworks", items: [
+    { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: ".NET Core", logo: `${DEVICON}/dotnetcore/dotnetcore-original.svg` },
+    { name: "Spring Boot", logo: `${DEVICON}/spring/spring-original.svg` },
+    { name: "Django", logo: `${DEVICON}/django/django-plain.svg` },
+  ] },
+  { label: "Databases", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "MySQL", logo: `${DEVICON}/mysql/mysql-original.svg` },
+    { name: "Redis", logo: `${DEVICON}/redis/redis-original.svg` },
+    { name: "SQL Server", logo: `${DEVICON}/microsoftsqlserver/microsoftsqlserver-original.svg` },
+  ] },
+  { label: "Cloud", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
+    { name: "Google Cloud", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Kubernetes", logo: `${DEVICON}/kubernetes/kubernetes-original.svg` },
+  ] },
+  { label: "Testing", items: [
+    { name: "Jest", logo: `${DEVICON}/jest/jest-plain.svg` },
+    { name: "Selenium", logo: `${DEVICON}/selenium/selenium-original.svg` },
+    { name: "JUnit", logo: `${DEVICON}/java/java-original.svg` },
+    { name: "Cypress", logo: `${DEVICON}/cypressio/cypressio-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

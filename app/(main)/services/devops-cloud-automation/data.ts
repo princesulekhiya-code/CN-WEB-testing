@@ -38,7 +38,35 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Assessment & D
   { step: "05", title: "Observability Setup", description: "Instrument dashboards, alerting thresholds, centralized logs, distributed traces, and on-call incident-response playbooks.", icon: BarChart3 },
   { step: "06", title: "Optimization & Handover", description: "Iterate on pipeline speed, cost efficiency, and reliability — then transfer ownership with documentation, training, and pair sessions.", icon: TrendingUp },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "CI/CD", items: [
+    { name: "GitHub Actions", logo: `${DEVICON}/github/github-original.svg` },
+    { name: "GitLab CI", logo: `${DEVICON}/gitlab/gitlab-original.svg` },
+    { name: "Jenkins", logo: `${DEVICON}/jenkins/jenkins-original.svg` },
+    { name: "ArgoCD", logo: `${DEVICON}/argocd/argocd-original.svg` },
+  ] },
+  { label: "Containers", items: [
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Kubernetes", logo: `${DEVICON}/kubernetes/kubernetes-original.svg` },
+    { name: "Helm", logo: `${DEVICON}/helm/helm-original.svg` },
+    { name: "Podman", logo: `${DEVICON}/podman/podman-original.svg` },
+  ] },
+  { label: "IaC", items: [
+    { name: "Terraform", logo: `${DEVICON}/terraform/terraform-original.svg` },
+    { name: "Ansible", logo: `${DEVICON}/ansible/ansible-original.svg` },
+    { name: "Pulumi", logo: `${DEVICON}/pulumi/pulumi-original.svg` },
+  ] },
+  { label: "Monitoring", items: [
+    { name: "Grafana", logo: `${DEVICON}/grafana/grafana-original.svg` },
+    { name: "Prometheus", logo: `${DEVICON}/prometheus/prometheus-original.svg` },
+    { name: "ELK Stack", logo: `${DEVICON}/elasticsearch/elasticsearch-original.svg` },
+  ] },
+  { label: "Cloud", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
+    { name: "Google Cloud", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

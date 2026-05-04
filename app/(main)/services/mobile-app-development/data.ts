@@ -38,7 +38,40 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Strategy & Res
   { step: "05", title: "QA & Testing", description: "Functional, performance, security, and device-matrix validation across 100+ physical handsets and OS releases.", icon: ShieldCheck },
   { step: "06", title: "Deployment & Support", description: "Store submissions, ASO, post-launch observability, performance tuning, and continuous feature evolution.", icon: Rocket },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Languages", items: [
+    { name: "Swift", logo: `${DEVICON}/swift/swift-original.svg` },
+    { name: "Kotlin", logo: `${DEVICON}/kotlin/kotlin-original.svg` },
+    { name: "Dart", logo: `${DEVICON}/dart/dart-original.svg` },
+    { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
+    { name: "JavaScript", logo: `${DEVICON}/javascript/javascript-original.svg` },
+  ] },
+  { label: "Frameworks", items: [
+    { name: "React Native", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Flutter", logo: `${DEVICON}/flutter/flutter-original.svg` },
+    { name: "SwiftUI", logo: `${DEVICON}/swift/swift-original.svg` },
+    { name: "Jetpack Compose", logo: `${DEVICON}/kotlin/kotlin-original.svg` },
+  ] },
+  { label: "Backend", items: [
+    { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Firebase", logo: `${DEVICON}/firebase/firebase-original.svg` },
+    { name: "GraphQL", logo: `${DEVICON}/graphql/graphql-plain.svg` },
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+  ] },
+  { label: "DevOps", items: [
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "GitHub Actions", logo: `${DEVICON}/github/github-original.svg` },
+    { name: "Fastlane", logo: `${DEVICON}/apple/apple-original.svg` },
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+  ] },
+  { label: "Testing", items: [
+    { name: "Jest", logo: `${DEVICON}/jest/jest-plain.svg` },
+    { name: "Detox", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "XCTest", logo: `${DEVICON}/apple/apple-original.svg` },
+    { name: "Appium", logo: `${DEVICON}/selenium/selenium-original.svg` },
+  ] },
+];
 
 export const whyNeedProps: WhyNeedProps = {
   heading: "Mobile Apps Can Be",

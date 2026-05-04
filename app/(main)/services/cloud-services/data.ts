@@ -38,7 +38,38 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Discovery & TC
   { step: "05", title: "Operational Hardening", description: "Backups, patching automation, incident response hooks, and chaos drills appropriate to your maturity.", icon: Shield },
   { step: "06", title: "FinOps Cadence", description: "Monthly reviews tying usage trends to product releases so cloud spend stays explainable to finance.", icon: Database },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Cloud Platforms", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
+    { name: "Google Cloud", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
+    { name: "DigitalOcean", logo: `${DEVICON}/digitalocean/digitalocean-original.svg` },
+  ] },
+  { label: "Containers & Orchestration", items: [
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Kubernetes", logo: `${DEVICON}/kubernetes/kubernetes-original.svg` },
+    { name: "Helm", logo: `${DEVICON}/helm/helm-original.svg` },
+    { name: "Rancher", logo: `${DEVICON}/rancher/rancher-original.svg` },
+  ] },
+  { label: "IaC & Automation", items: [
+    { name: "Terraform", logo: `${DEVICON}/terraform/terraform-original.svg` },
+    { name: "Ansible", logo: `${DEVICON}/ansible/ansible-original.svg` },
+    { name: "Pulumi", logo: `${DEVICON}/pulumi/pulumi-original.svg` },
+    { name: "CloudFormation", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+  ] },
+  { label: "Monitoring", items: [
+    { name: "Grafana", logo: `${DEVICON}/grafana/grafana-original.svg` },
+    { name: "Prometheus", logo: `${DEVICON}/prometheus/prometheus-original.svg` },
+    { name: "Datadog", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "ELK Stack", logo: `${DEVICON}/elasticsearch/elasticsearch-original.svg` },
+  ] },
+  { label: "Databases", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "Redis", logo: `${DEVICON}/redis/redis-original.svg` },
+    { name: "DynamoDB", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

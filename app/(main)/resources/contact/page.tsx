@@ -5,9 +5,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Mail, MapPin, Phone, Send, Clock, CheckCircle2,
-  ArrowRight, Building2, Globe, MessageSquare,
+  ArrowRight, Building2, Globe, MessageSquare, Loader2, AlertCircle,
 } from "lucide-react";
 import Link from "next/link";
+import { submitContactForm } from "@/lib/api/services/contact.service";
 
 const subjects = [
   "Mobile App Development",
@@ -41,7 +42,7 @@ const budgets = [
 ];
 
 const contactInfo = [
-  { icon: Mail, label: "Email Us", value: "contact@cloudnexus.com", href: "mailto:contact@cloudnexus.com" },
+  { icon: Mail, label: "Email Us", value: "work@cloudnexus.in", href: "mailto:work@cloudnexus.in" },
   { icon: Phone, label: "Call Us", value: "+91 87938 30447", href: "tel:+918793830447" },
   { icon: Clock, label: "Working Hours", value: "Mon - Sat, 9 AM - 7 PM IST", href: null },
 ];
@@ -52,12 +53,73 @@ const offices = [
   { city: "Bengaluru", address: "2nd Stage, BTM Layout, Karnataka 560076" },
 ];
 
+const heardFromOptions = [
+  "Google Search",
+  "Social Media",
+  "Referral",
+  "LinkedIn",
+  "Clutch / GoodFirms",
+  "Other",
+];
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [form, setForm] = useState({
+    fullName: "",
+    companyName: "",
+    email: "",
+    phone: "",
+    interestedIn: "",
+    estimatedBudget: "",
+    projectDetails: "",
+    heardFrom: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      await submitContactForm({
+        fullName: form.fullName,
+        email: form.email,
+        interestedIn: form.interestedIn,
+        projectDetails: form.projectDetails,
+        companyName: form.companyName || undefined,
+        phone: form.phone || undefined,
+        estimatedBudget: form.estimatedBudget || undefined,
+        heardFrom: form.heardFrom || undefined,
+      });
+      setSubmitted(true);
+      setForm({
+        fullName: "",
+        companyName: "",
+        email: "",
+        phone: "",
+        interestedIn: "",
+        estimatedBudget: "",
+        projectDetails: "",
+        heardFrom: "",
+      });
+    } catch (err: unknown) {
+      const msg =
+        err && typeof err === "object" && "response" in err
+          ? (err as { response?: { data?: { message?: string } } }).response?.data?.message
+          : undefined;
+      setError(msg || "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputCls = "w-full rounded-xl border border-black/[0.08] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.03] px-4 py-3 text-sm outline-none focus:border-[#4EB3E8] focus:ring-1 focus:ring-[#4EB3E8]/20 transition-all duration-200 placeholder:text-black/30 dark:placeholder:text-white/25";
@@ -87,7 +149,6 @@ export default function ContactPage() {
             </p>
           </motion.div>
 
-          {/* Quick stats */}
           <motion.div
             className="flex flex-wrap justify-center gap-8 mt-10"
             initial={{ opacity: 0, y: 16 }}
@@ -152,19 +213,30 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {error && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mb-5 flex items-center gap-2 rounded-xl border border-red-500/20 bg-red-500/5 px-4 py-3 text-sm text-red-600 dark:text-red-400"
+                  >
+                    <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                    {error}
+                  </motion.div>
+                )}
+
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
                         Full Name <span className="text-[#4EB3E8]">*</span>
                       </label>
-                      <input type="text" required placeholder="John Doe" className={inputCls} />
+                      <input type="text" name="fullName" value={form.fullName} onChange={handleChange} required placeholder="John Doe" className={inputCls} />
                     </div>
                     <div>
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
                         Company Name
                       </label>
-                      <input type="text" placeholder="Your company" className={inputCls} />
+                      <input type="text" name="companyName" value={form.companyName} onChange={handleChange} placeholder="Your company" className={inputCls} />
                     </div>
                   </div>
 
@@ -173,13 +245,13 @@ export default function ContactPage() {
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
                         Email Address <span className="text-[#4EB3E8]">*</span>
                       </label>
-                      <input type="email" required placeholder="john@company.com" className={inputCls} />
+                      <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="john@company.com" className={inputCls} />
                     </div>
                     <div>
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
                         Phone Number
                       </label>
-                      <input type="tel" placeholder="+91 XXXXX XXXXX" className={inputCls} />
+                      <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+91 XXXXX XXXXX" className={inputCls} />
                     </div>
                   </div>
 
@@ -188,7 +260,7 @@ export default function ContactPage() {
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
                         I&apos;m Interested In <span className="text-[#4EB3E8]">*</span>
                       </label>
-                      <select required className={inputCls} defaultValue="">
+                      <select name="interestedIn" value={form.interestedIn} onChange={handleChange} required className={inputCls}>
                         <option value="" disabled>Select a service</option>
                         {subjects.map((s) => (
                           <option key={s} value={s}>{s}</option>
@@ -199,7 +271,7 @@ export default function ContactPage() {
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
                         Estimated Budget
                       </label>
-                      <select className={inputCls} defaultValue="">
+                      <select name="estimatedBudget" value={form.estimatedBudget} onChange={handleChange} className={inputCls}>
                         <option value="" disabled>Select budget range</option>
                         {budgets.map((b) => (
                           <option key={b} value={b}>{b}</option>
@@ -213,6 +285,9 @@ export default function ContactPage() {
                       Project Details <span className="text-[#4EB3E8]">*</span>
                     </label>
                     <textarea
+                      name="projectDetails"
+                      value={form.projectDetails}
+                      onChange={handleChange}
                       rows={5}
                       required
                       placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
@@ -224,24 +299,31 @@ export default function ContactPage() {
                     <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
                       How Did You Hear About Us?
                     </label>
-                    <select className={inputCls} defaultValue="">
+                    <select name="heardFrom" value={form.heardFrom} onChange={handleChange} className={inputCls}>
                       <option value="" disabled>Select an option</option>
-                      <option>Google Search</option>
-                      <option>Social Media</option>
-                      <option>Referral</option>
-                      <option>LinkedIn</option>
-                      <option>Clutch / GoodFirms</option>
-                      <option>Other</option>
+                      {heardFromOptions.map((o) => (
+                        <option key={o} value={o}>{o}</option>
+                      ))}
                     </select>
                   </div>
 
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-[#4EB3E8] text-white hover:bg-[#3a9fd4] rounded-xl h-12 text-sm font-semibold transition-all duration-300"
+                    disabled={loading}
+                    className="w-full bg-[#4EB3E8] text-white hover:bg-[#3a9fd4] rounded-xl h-12 text-sm font-semibold transition-all duration-300 disabled:opacity-60"
                   >
-                    <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                    {loading ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4 mr-2" />
+                        Send Message
+                      </>
+                    )}
                   </Button>
 
                   <p className="text-center text-xs text-black/30 dark:text-white/25">
@@ -259,7 +341,6 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            {/* Contact cards */}
             {contactInfo.map((item, i) => {
               const Icon = item.icon;
               const inner = (

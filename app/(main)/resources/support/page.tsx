@@ -7,8 +7,10 @@ import {
   MessageCircle, Mail, Phone, FileText, HelpCircle, Clock,
   Headphones, ArrowRight, ChevronDown, Shield, Zap, Globe,
   CheckCircle2, Send, Search, LifeBuoy, BookOpen, Video,
+  Loader2, AlertCircle,
   type LucideIcon,
 } from "lucide-react";
+import { submitSupportForm } from "@/lib/api/services/contact.service";
 
 /* ═══════ TYPING ANIMATION ═══════ */
 const typingPhrases = [
@@ -130,21 +132,6 @@ function HeroSection({ searchQuery, setSearchQuery }: { searchQuery: string; set
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-8 text-center">
-        {/* Live status */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-emerald-500/8 border border-emerald-500/15"
-        >
-          <motion.div
-            animate={{ scale: [1, 1.4, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-2 h-2 rounded-full bg-emerald-500"
-          />
-          <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">All Systems Operational</span>
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -272,7 +259,7 @@ const supportChannels = [
     title: "Email Support",
     description: "Send us a detailed inquiry with attachments. Our team responds within 4 business hours guaranteed.",
     action: "Send Email",
-    href: "mailto:support@cloudnexus.com",
+    href: "mailto:work@cloudnexus.in",
     badge: "Detailed",
   },
   {
@@ -280,7 +267,7 @@ const supportChannels = [
     title: "Phone Support",
     description: "Speak directly with a senior engineer for urgent production issues. Available 24/7 for enterprise clients.",
     action: "Call Now",
-    href: "tel:+1234567890",
+    href: "tel:+918793830447",
     badge: "Priority",
   },
 ];
@@ -298,7 +285,7 @@ const faqs = [
   { q: "Do you offer dedicated account managers?", a: "Yes, all Enterprise and Premium plan clients are assigned a dedicated Technical Account Manager (TAM) who understands your architecture, handles escalations, and conducts quarterly business reviews to align our support with your growth goals." },
   { q: "What is included in your SLA?", a: "Our SLA covers uptime guarantees (99.9% for Standard, 99.99% for Enterprise), response time commitments, escalation procedures, and financial credits for any SLA breaches. Custom SLAs are available for clients with specific compliance or regulatory requirements." },
   { q: "Can I upgrade my support plan?", a: "Absolutely. You can upgrade your support tier at any time from your dashboard. Changes take effect immediately, and you'll only be billed the prorated difference. Contact your account manager or our sales team for Enterprise plan upgrades." },
-  { q: "How do I report a critical production issue?", a: "For P0/critical issues: Call our 24/7 hotline, use the 'Critical' flag in live chat, or email urgent@cloudnexus.com. All critical issues are triaged within 15 minutes with a dedicated incident commander assigned. You'll receive real-time status updates via your preferred channel." },
+  { q: "How do I report a critical production issue?", a: "For P0/critical issues: Call our 24/7 hotline, use the 'Critical' flag in live chat, or email work@cloudnexus.in. All critical issues are triaged within 15 minutes with a dedicated incident commander assigned. You'll receive real-time status updates via your preferred channel." },
 ];
 
 const slaStats = [
@@ -309,9 +296,49 @@ const slaStats = [
 ];
 
 /* ═══════ PAGE ═══════ */
+const priorityToInterest: Record<string, string> = {
+  "Low - General question": "Support - General Question",
+  "Medium - Feature request": "Support - Feature Request",
+  "High - Bug report": "Support - Bug Report",
+  "Critical - Production down": "Support - Critical Issue",
+};
+
 export default function SupportPage() {
   const [openFaq, setOpenFaq] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
+
+  const [supportForm, setSupportForm] = useState({ name: "", email: "", priority: "Low - General question", message: "" });
+  const [supportLoading, setSupportLoading] = useState(false);
+  const [supportError, setSupportError] = useState("");
+  const [supportSent, setSupportSent] = useState(false);
+
+  const handleSupportChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setSupportForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSupportSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSupportLoading(true);
+    setSupportError("");
+    try {
+      await submitSupportForm({
+        fullName: supportForm.name,
+        email: supportForm.email,
+        interestedIn: priorityToInterest[supportForm.priority] || "Support",
+        projectDetails: supportForm.message,
+      });
+      setSupportSent(true);
+      setSupportForm({ name: "", email: "", priority: "Low - General question", message: "" });
+    } catch (err: unknown) {
+      const msg =
+        err && typeof err === "object" && "response" in err
+          ? (err as { response?: { data?: { message?: string } } }).response?.data?.message
+          : undefined;
+      setSupportError(msg || "Something went wrong. Please try again.");
+    } finally {
+      setSupportLoading(false);
+    }
+  };
   const filteredFaqs = searchQuery
     ? faqs.filter((f) => f.q.toLowerCase().includes(searchQuery.toLowerCase()) || f.a.toLowerCase().includes(searchQuery.toLowerCase()))
     : faqs;
@@ -555,48 +582,105 @@ export default function SupportPage() {
                 </div>
               </div>
 
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <div>
-                  <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Name</label>
-                  <input
-                    type="text"
-                    placeholder="Your full name"
-                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Email</label>
-                  <input
-                    type="email"
-                    placeholder="you@company.com"
-                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Priority</label>
-                  <select className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium text-black/60 dark:text-white/60 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all">
-                    <option>Low - General question</option>
-                    <option>Medium - Feature request</option>
-                    <option>High - Bug report</option>
-                    <option>Critical - Production down</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Message</label>
-                  <textarea
-                    rows={4}
-                    placeholder="Describe your issue or question..."
-                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all resize-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20"
+              {supportSent ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-6"
                 >
-                  Send Message
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </form>
+                  <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10 border border-green-500/20">
+                    <CheckCircle2 className="w-6 h-6 text-green-500" />
+                  </div>
+                  <h4 className="text-base font-bold mb-1">Message Sent!</h4>
+                  <p className="text-xs text-black/45 dark:text-white/40 mb-4">We&apos;ll respond within 4 hours.</p>
+                  <button onClick={() => setSupportSent(false)} className="text-xs font-semibold text-[#4EB3E8] hover:underline">
+                    Send Another
+                  </button>
+                </motion.div>
+              ) : (
+                <>
+                  {supportError && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="mb-4 flex items-center gap-2 rounded-xl border border-red-500/20 bg-red-500/5 px-3 py-2.5 text-xs text-red-600 dark:text-red-400"
+                    >
+                      <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" />
+                      {supportError}
+                    </motion.div>
+                  )}
+
+                  <form className="space-y-4" onSubmit={handleSupportSubmit}>
+                    <div>
+                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={supportForm.name}
+                        onChange={handleSupportChange}
+                        required
+                        placeholder="Your full name"
+                        className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={supportForm.email}
+                        onChange={handleSupportChange}
+                        required
+                        placeholder="you@company.com"
+                        className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Priority</label>
+                      <select
+                        name="priority"
+                        value={supportForm.priority}
+                        onChange={handleSupportChange}
+                        className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium text-black/60 dark:text-white/60 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
+                      >
+                        <option>Low - General question</option>
+                        <option>Medium - Feature request</option>
+                        <option>High - Bug report</option>
+                        <option>Critical - Production down</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Message</label>
+                      <textarea
+                        name="message"
+                        value={supportForm.message}
+                        onChange={handleSupportChange}
+                        required
+                        rows={4}
+                        placeholder="Describe your issue or question..."
+                        className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all resize-none"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={supportLoading}
+                      className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20 disabled:opacity-60"
+                    >
+                      {supportLoading ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <ArrowRight className="w-4 h-4" />
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </>
+              )}
             </div>
           </motion.div>
         </div>

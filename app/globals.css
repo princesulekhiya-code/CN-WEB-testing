@@ -374,6 +374,32 @@ html.lenis body {
     from { opacity: 0; }
     to { opacity: 1; }
   }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+/* ── Native select/option dark mode fix ─────────────────────── */
+select {
+  color-scheme: light dark;
+}
+
+.dark select,
+.dark option {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+.dark select option:checked,
+.dark select option:hover {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+select option {
+  padding: 8px 12px;
 }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }

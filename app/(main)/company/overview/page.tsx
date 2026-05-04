@@ -9,6 +9,7 @@ import {
   Code2, Layers, HeartHandshake, Lightbulb, Clock, CheckCircle2,
   MapPin, BarChart3, Smartphone, Boxes, Layout, Palette,
   ShoppingBag, Cloud, Megaphone, Settings, ServerCog, Monitor, Phone,
+  Sprout, Leaf, TreePine, Sun,
 } from "lucide-react";
 
 /* ═══════ ANIMATED COUNTER ═══════ */
@@ -37,7 +38,7 @@ function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
 /* ═══════ DATA ═══════ */
 const stats = [
   { value: 200, suffix: "+", label: "Projects Delivered", icon: Rocket },
-  { value: 10, suffix: "+", label: "Years of Excellence", icon: Award },
+  { value: 1, suffix: "+", label: "Year of Excellence", icon: Award },
   { value: 90, suffix: "+", label: "Scalable Teams", icon: Users },
   { value: 15, suffix: "+", label: "Industries Served", icon: Globe },
 ];
@@ -50,15 +51,6 @@ const whyCloudNexus = [
   { icon: Globe, title: "Expert Team & Global Experience", desc: "Our team of seasoned IT consultants, engineers, and strategists brings extensive experience in helping businesses worldwide navigate complex technological landscapes." },
   { icon: BarChart3, title: "Business-Centric Results", desc: "We don't just implement technology — we align it with your business objectives, ensuring measurable improvements in efficiency, productivity, and profitability." },
   { icon: CheckCircle2, title: "End-to-End Support", desc: "From initial consultation to deployment and ongoing support, we are committed to providing seamless, 24/7 assistance, ensuring smooth and uninterrupted IT operations." },
-];
-
-const journeyMilestones = [
-  { year: "2013", title: "Foundation", desc: "CloudNexus founded with a mission to bridge the global tech talent gap and deliver scalable digital solutions.", icon: Lightbulb },
-  { year: "2016", title: "Enterprise Growth", desc: "Expanded to 100+ enterprise clients across India and the US, establishing a reputation for quality delivery.", icon: Building2 },
-  { year: "2018", title: "Startup Ecosystem", desc: "Launched dedicated engineering pod model for Y Combinator startups, becoming a trusted technology partner.", icon: Rocket },
-  { year: "2020", title: "Strategic Partnerships", desc: "Partnered with Tiger Global and Accel-backed ventures, scaling operations to serve high-growth companies.", icon: Handshake },
-  { year: "2023", title: "Industry Recognition", desc: "Recognized as LinkedIn Top 20 Company — two consecutive years, validating our culture and delivery excellence.", icon: Award },
-  { year: "2025", title: "AI-Powered Future", desc: "Launched AI-powered talent matching, expanded to 90+ scalable teams, and achieved 500+ successful project deliveries.", icon: BrainCircuit },
 ];
 
 const offerings = [
@@ -232,8 +224,6 @@ function VisionMissionSection() {
 
 /* ═══════ PAGE ═══════ */
 export default function OverviewPage() {
-  const [activeJourney, setActiveJourney] = useState(5);
-
   return (
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
 
@@ -330,7 +320,7 @@ export default function OverviewPage() {
                 >
                   {[
                     { val: "200+", lbl: "Projects" },
-                    { val: "10+", lbl: "Years" },
+                    { val: "1+", lbl: "Year" },
                     { val: "90+", lbl: "Teams" },
                   ].map((s) => (
                     <div key={s.lbl} className="flex-1 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 px-3 py-2.5 text-center">
@@ -513,7 +503,7 @@ export default function OverviewPage() {
               <div className="absolute bottom-0 left-0 right-0 p-6 space-y-3">
                 {[
                   { num: "200+", label: "Projects Delivered" },
-                  { num: "10+", label: "Years of Excellence" },
+                  { num: "1+", label: "Year of Excellence" },
                   { num: "90+", label: "Scalable Teams" },
                 ].map((s, i) => (
                   <motion.div
@@ -564,103 +554,6 @@ export default function OverviewPage() {
         </div>
       </div>
 
-      {/* ═══════ JOURNEY TIMELINE ═══════ */}
-      <div className="border-y border-black/[0.05] dark:border-white/[0.05]">
-        <div className="mx-auto max-w-7xl px-6 py-20">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              <span className="text-[#4EB3E8]">Our</span>{" "}
-              <span>Journey</span>
-            </h2>
-            <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
-              A decade of growth, innovation, and relentless pursuit of excellence.
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-5 gap-8 items-start">
-            {/* Left - Year selector */}
-            <div className="lg:col-span-2 space-y-2">
-              {journeyMilestones.map((m, i) => {
-                const isActive = activeJourney === i;
-                return (
-                  <motion.button
-                    key={m.year}
-                    initial={{ opacity: 0, x: -16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.06 * i }}
-                    onClick={() => setActiveJourney(i)}
-                    className={`w-full text-left flex items-center gap-4 p-4 rounded-xl transition-all duration-300 ${
-                      isActive
-                        ? "bg-white dark:bg-[#0c1322] border border-[#4EB3E8]/20 shadow-lg shadow-[#4EB3E8]/[0.04]"
-                        : "bg-transparent hover:bg-[#f5f5f5] dark:hover:bg-white/[0.02] border border-transparent"
-                    }`}
-                  >
-                    {isActive && <div className="w-1 h-8 rounded-full bg-[#4EB3E8] flex-shrink-0" />}
-                    <div className={`text-xl font-black tracking-tight transition-colors duration-300 ${isActive ? "text-[#4EB3E8]" : "text-black/25 dark:text-white/20"}`}>
-                      {m.year}
-                    </div>
-                    <div className={`text-sm font-semibold transition-colors duration-300 ${isActive ? "" : "text-black/40 dark:text-white/35"}`}>
-                      {m.title}
-                    </div>
-                    {isActive && <ChevronRight className="w-4 h-4 text-[#4EB3E8] ml-auto flex-shrink-0" />}
-                  </motion.button>
-                );
-              })}
-            </div>
-
-            {/* Right - Active milestone detail */}
-            <div className="lg:col-span-3">
-              <motion.div
-                key={activeJourney}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="rounded-2xl p-8 bg-[#f8f9fa] dark:bg-white/[0.02] border border-black/[0.06] dark:border-white/[0.06]"
-              >
-                {(() => {
-                  const m = journeyMilestones[activeJourney];
-                  const Icon = m.icon;
-                  return (
-                    <>
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20">
-                          <Icon className="w-7 h-7 text-[#4EB3E8]" strokeWidth={1.5} />
-                        </div>
-                        <div>
-                          <div className="text-xs font-bold text-[#4EB3E8] uppercase tracking-wider">{m.year}</div>
-                          <h3 className="text-2xl font-bold tracking-tight">{m.title}</h3>
-                        </div>
-                      </div>
-                      <p className="text-base text-black/50 dark:text-white/45 leading-relaxed">{m.desc}</p>
-
-                      {/* Decorative */}
-                      <div className="mt-8 flex items-center gap-2">
-                        {journeyMilestones.map((_, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() => setActiveJourney(idx)}
-                            className={`h-1.5 rounded-full transition-all duration-300 ${
-                              idx === activeJourney ? "w-8 bg-[#4EB3E8]" : "w-1.5 bg-black/10 dark:bg-white/10 hover:bg-[#4EB3E8]/40"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    </>
-                  );
-                })()}
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* ═══════ GLOBAL PRESENCE ═══════ */}
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div
@@ -707,6 +600,63 @@ export default function OverviewPage() {
               </motion.div>
             );
           })}
+        </div>
+      </div>
+
+      {/* ═══════ GROWTH JOURNEY ═══════ */}
+      <div className="bg-[#fafafa] dark:bg-white/[0.015] border-y border-black/[0.06] dark:border-white/[0.06]">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <motion.div className="text-center mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Our Growth <span className="text-[#4EB3E8]">Journey</span></h2>
+            <p className="text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
+              From a seed of an idea to a growing force in technology — every milestone marks a step toward our vision.
+            </p>
+          </motion.div>
+
+          <div className="relative max-w-4xl mx-auto">
+            <div className="flex flex-col items-center mb-0">
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                className="rounded-3xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 w-full">
+                <img src="/assets/images/growth-plant.png" alt="Growing plant seedling symbolizing company growth" className="w-full h-[280px] md:h-[350px] object-cover" />
+              </motion.div>
+              <div className="w-[3px] h-16 bg-gradient-to-b from-[#4EB3E8] to-[#4EB3E8]/40 rounded-full" />
+            </div>
+
+            <div className="absolute left-6 md:left-1/2 top-[calc(350px+4rem)] bottom-0 w-[3px] bg-gradient-to-b from-[#4EB3E8]/30 via-[#4EB3E8]/20 to-[#10b981]/10 dark:from-[#4EB3E8]/25 dark:via-[#4EB3E8]/15 dark:to-[#10b981]/5 md:-translate-x-[1.5px] rounded-full" />
+
+            {[
+              { icon: Sprout, date: "19 Jan 2025", title: "The Seed Was Planted", desc: "Cloud Nexus was founded with a clear mission — to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful.", color: "#4EB3E8" },
+              { icon: Leaf, date: "Mid 2025", title: "Taking Root & Growing", desc: "We expanded our team, onboarded our first global clients, and delivered 30+ successful projects. Our expertise in mobile, web, cloud, and AI started gaining recognition across industries.", color: "#8b5cf6" },
+              { icon: TreePine, date: "Early 2026", title: "Branching Out", desc: "With 50+ projects delivered across 15+ industries, we began attending global tech conferences like GITEX, built dedicated AI/ML capabilities, and expanded our service portfolio significantly.", color: "#10b981" },
+              { icon: Sun, date: "Today & Beyond", title: "Reaching New Heights", desc: "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning — with plans to scale further, innovate boldly, and create lasting impact.", color: "#f59e0b" },
+            ].map((step, i) => {
+              const Icon = step.icon;
+              const isLeft = i % 2 === 0;
+              return (
+                <div key={step.date} className="relative mb-12 last:mb-0">
+                  <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 z-10 top-4">
+                    <motion.div whileInView={{ scale: [0.5, 1.2, 1] }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.5 }}
+                      className="w-12 h-12 rounded-full flex items-center justify-center border-[3px] bg-white dark:bg-[#0a0a0a] shadow-lg"
+                      style={{ borderColor: step.color, boxShadow: `0 0 20px ${step.color}20` }}>
+                      <Icon className="w-5 h-5" style={{ color: step.color }} strokeWidth={1.5} />
+                    </motion.div>
+                  </div>
+
+                  <motion.div initial={{ opacity: 0, x: isLeft ? -40 : 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1, duration: 0.5 }}
+                    className={`ml-20 md:ml-0 md:w-[calc(50%-3.5rem)] ${isLeft ? "md:mr-auto" : "md:ml-auto"}`}>
+                    <div className="group rounded-2xl p-6 bg-white dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.06] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+                      <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style={{ backgroundColor: step.color }} />
+                      <span className="text-[10px] font-black tracking-widest px-3 py-1 rounded-full text-white mb-3 inline-block" style={{ backgroundColor: step.color }}>
+                        {step.date}
+                      </span>
+                      <h4 className="text-lg font-bold mb-2">{step.title}</h4>
+                      <p className="text-xs text-black/50 dark:text-white/45 leading-relaxed">{step.desc}</p>
+                    </div>
+                  </motion.div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
 

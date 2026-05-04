@@ -41,7 +41,39 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Discover", des
   { step: "05", title: "Operate", description: "Modernize legacy applications, move confidently into production, and sustain the operational support you rely on.", icon: ShieldCheck },
   { step: "06", title: "Evolve", description: "Maintain momentum through continuous improvement, emerging technology adoption, user insight, and responsiveness to market shifts.", icon: Rocket },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Frontend", items: [
+    { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+    { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
+    { name: "Angular", logo: `${DEVICON}/angular/angular-original.svg` },
+    { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
+  ] },
+  { label: "Backend", items: [
+    { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
+    { name: "Java", logo: `${DEVICON}/java/java-original.svg` },
+    { name: ".NET Core", logo: `${DEVICON}/dotnetcore/dotnetcore-original.svg` },
+  ] },
+  { label: "Cloud", items: [
+    { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
+    { name: "Google Cloud", logo: `${DEVICON}/googlecloud/googlecloud-original.svg` },
+    { name: "Docker", logo: `${DEVICON}/docker/docker-original.svg` },
+    { name: "Kubernetes", logo: `${DEVICON}/kubernetes/kubernetes-original.svg` },
+  ] },
+  { label: "Data & AI", items: [
+    { name: "TensorFlow", logo: `${DEVICON}/tensorflow/tensorflow-original.svg` },
+    { name: "PyTorch", logo: `${DEVICON}/pytorch/pytorch-original.svg` },
+    { name: "Apache Kafka", logo: `${DEVICON}/apachekafka/apachekafka-original.svg` },
+    { name: "Apache Spark", logo: `${DEVICON}/apachespark/apachespark-original.svg` },
+  ] },
+  { label: "Databases", items: [
+    { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+    { name: "MongoDB", logo: `${DEVICON}/mongodb/mongodb-original.svg` },
+    { name: "Redis", logo: `${DEVICON}/redis/redis-original.svg` },
+    { name: "Elasticsearch", logo: `${DEVICON}/elasticsearch/elasticsearch-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {

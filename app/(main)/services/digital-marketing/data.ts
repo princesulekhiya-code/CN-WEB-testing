@@ -38,7 +38,35 @@ export const processSteps: ProcessStep[] = [{ step: "01", title: "Audit & Discov
   { step: "05", title: "Optimization & Testing", description: "Continuous A/B testing, bid adjustments, funnel analysis, and content iteration for peak performance.", icon: TrendingUp },
   { step: "06", title: "Reporting & Insights", description: "Transparent reporting with clear KPIs, ROI tracking, attribution modeling, and strategic recommendations.", icon: BarChart3 },];
 
-export const techCategories: TechCategory[] = [];
+export const techCategories: TechCategory[] = [
+  { label: "Analytics", items: [
+    { name: "Google Analytics", logo: `${DEVICON}/google/google-original.svg` },
+    { name: "Mixpanel", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Hotjar", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Tableau", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+  ] },
+  { label: "Advertising", items: [
+    { name: "Google Ads", logo: `${DEVICON}/google/google-original.svg` },
+    { name: "Meta Ads", logo: `${DEVICON}/facebook/facebook-original.svg` },
+    { name: "LinkedIn Ads", logo: `${DEVICON}/linkedin/linkedin-original.svg` },
+  ] },
+  { label: "SEO", items: [
+    { name: "SEMrush", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Ahrefs", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Moz", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "Google Search Console", logo: `${DEVICON}/google/google-original.svg` },
+  ] },
+  { label: "Email & Automation", items: [
+    { name: "Mailchimp", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "HubSpot", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+    { name: "SendGrid", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
+  ] },
+  { label: "CMS & Design", items: [
+    { name: "WordPress", logo: `${DEVICON}/wordpress/wordpress-original.svg` },
+    { name: "Figma", logo: `${DEVICON}/figma/figma-original.svg` },
+    { name: "Canva", logo: `${DEVICON}/canva/canva-original.svg` },
+  ] },
+];
 
 
 export const whyNeedProps: WhyNeedProps = {
