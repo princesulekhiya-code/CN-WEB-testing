@@ -214,14 +214,14 @@ export function HeroSection() {
             {/* Description */}
             <div className="relative max-w-xl mx-auto lg:mx-0 w-full flex flex-col items-center lg:items-start">
               <span className="invisible text-center lg:text-left text-base md:text-lg font-medium leading-relaxed select-none pointer-events-none">
-              Code-to-cloud, no bottlenecks. Architected for scale, engineered for trust, built and shipped for you.
+              Code to cloud—seamless, scalable, and built for performance. We design, deploy, and deliver solutions you can trust.
               </span>
               <TypingAnimation
                 delay={700}
                 duration={25}
                 className="absolute inset-x-0 top-0 text-center lg:text-left text-base md:text-lg font-medium text-muted-foreground leading-relaxed"
               >
-                Code-to-cloud, no bottlenecks. Architected for scale, engineered for trust, built and shipped for you.
+                Code to cloud—seamless, scalable, and built for performance. We design, deploy, and deliver solutions you can trust.
               </TypingAnimation>
             </div>
 

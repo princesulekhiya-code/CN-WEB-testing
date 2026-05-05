@@ -46,15 +46,40 @@ const faqs = [
       "Yes — bug fixes, monitoring, security updates, feature enhancements, and 24/7 support based on your SLA.",
   },
   {
-    question: "Can I see examples of your past work?",
+    question: "What tech stack does CloudNexus work with?",
     answer:
-      "Visit our 'Our Work' section for 30+ projects with challenges, approach, tech used, and outcomes.",
+      "React, Next.js, Node.js, Python, Flutter, React Native, AWS, Azure, GCP, Docker, Kubernetes, PostgreSQL, MongoDB, and more — we pick the best tools for your project.",
+  },
+  {
+    question: "Can CloudNexus help migrate my existing application to the cloud?",
+    answer:
+      "Absolutely. We handle end-to-end cloud migration — infrastructure assessment, architecture redesign, data migration, and post-migration optimization on AWS, Azure, or GCP.",
+  },
+  {
+    question: "Do you offer AI and Machine Learning solutions?",
+    answer:
+      "Yes — from computer vision and NLP to predictive analytics, recommendation engines, and custom AI model training. We build production-ready AI solutions tailored to your business.",
+  },
+  {
+    question: "What is your process for a new project from start to finish?",
+    answer:
+      "Discovery & consultation → requirement analysis → UI/UX design → agile development → QA & testing → deployment → post-launch support. Every step is transparent with regular check-ins.",
+  },
+  {
+    question: "Do you build mobile apps for both iOS and Android?",
+    answer:
+      "Yes — we build native (Swift, Kotlin) and cross-platform (Flutter, React Native) mobile applications. We help you choose the right approach based on your budget, timeline, and user needs.",
+  },
+  {
+    question: "How can I get a free consultation with CloudNexus?",
+    answer:
+      "Simply visit our Free Consultation page or click 'Join Now' in the navigation bar. Book a 30-minute strategy session — no commitment, no cost. Our experts will assess your needs and recommend the best path forward.",
   },
 ];
 
-const leftColumnCount = Math.ceil(faqs.length / 2);
-const leftFaqs = faqs.slice(0, leftColumnCount);
-const rightFaqs = faqs.slice(leftColumnCount);
+const halfCount = Math.ceil(faqs.length / 2);
+const leftFaqs = faqs.slice(0, halfCount);
+const rightFaqs = faqs.slice(halfCount);
 
 function FAQItem({ faq }: { faq: typeof faqs[0]; index: number }) {
   const [open, setOpen] = useState(false);
@@ -97,21 +122,21 @@ function FAQItem({ faq }: { faq: typeof faqs[0]; index: number }) {
 export function FAQs() {
   return (
     <section className="w-full py-14 md:py-20 bg-white dark:bg-black">
-      <div className="mx-auto max-w-5xl px-6 md:px-8">
-        <div className="flex flex-col md:flex-row md:items-start md:gap-16">
+      <div className="mx-auto max-w-6xl px-6 md:px-8">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="md:w-[280px] flex-shrink-0 mb-8 md:mb-0 md:sticky md:top-24"
+            className="lg:w-[260px] flex-shrink-0 mb-8 lg:mb-0 lg:sticky lg:top-24"
           >
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#4EB3E8] leading-tight">
-              Frequently Asked
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight">
+              <span className="text-[#4EB3E8]">Frequently Asked</span>
               <br />
               <span className="text-black dark:text-white">Questions</span>
             </h2>
-            <p className="mt-3 text-xs text-black/45 dark:text-white/35 leading-relaxed max-w-[240px]">
+            <p className="mt-3 text-xs text-black/45 dark:text-white/35 leading-relaxed max-w-[220px]">
               Everything you need to know about working with CloudNexus.
             </p>
           </motion.div>
@@ -136,7 +161,7 @@ export function FAQs() {
               variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } } }}
             >
               {rightFaqs.map((faq, i) => (
-                <FAQItem key={faq.question} faq={faq} index={i + leftColumnCount} />
+                <FAQItem key={faq.question} faq={faq} index={i + halfCount} />
               ))}
             </motion.div>
           </div>

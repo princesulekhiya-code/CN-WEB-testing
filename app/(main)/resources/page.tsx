@@ -70,7 +70,7 @@ const resources = [
 ];
 
 const stats = [
-  { value: "50+", label: "Projects Delivered", icon: CheckCircle2 },
+  { value: "150+", label: "Projects Delivered", icon: CheckCircle2 },
   { value: "24/7", label: "Support Available", icon: Clock },
   { value: "99.9%", label: "Client Satisfaction", icon: Star },
   { value: "15+", label: "Services Offered", icon: Zap },
@@ -341,17 +341,44 @@ export default function ResourcesPage() {
           {[
             {
               category: "Frontend",
-              techs: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "React Native", "Flutter", "Vue.js", "Angular"],
+              techs: [
+                { name: "React.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+                { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+                { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+                { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+                { name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+                { name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+                { name: "Vue.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
+                { name: "Angular", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
+              ],
               desc: "Modern, responsive interfaces built with component-driven frameworks and optimized for performance across all devices.",
             },
             {
               category: "Backend & Cloud",
-              techs: ["Node.js", "Python", "Go", "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker"],
+              techs: [
+                { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+                { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+                { name: "Go", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
+                { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+                { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+                { name: "Redis", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
+                { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
+                { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+              ],
               desc: "Robust server architectures, microservices, and cloud-native deployments that scale seamlessly from prototype to production.",
             },
             {
               category: "AI/ML & DevOps",
-              techs: ["TensorFlow", "PyTorch", "OpenAI", "Kubernetes", "Jenkins", "GitHub Actions", "Terraform", "Datadog"],
+              techs: [
+                { name: "TensorFlow", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+                { name: "PyTorch", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+                { name: "OpenAI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openai/openai-original.svg" },
+                { name: "Kubernetes", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+                { name: "Jenkins", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
+                { name: "GitHub Actions", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+                { name: "Terraform", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+                { name: "Grafana", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" },
+              ],
               desc: "Intelligent automation, machine learning pipelines, and CI/CD workflows that accelerate delivery while maintaining quality.",
             },
           ].map((stack, i) => (
@@ -359,9 +386,12 @@ export default function ResourcesPage() {
               <div className="h-full rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white dark:bg-white/[0.02] p-7">
                 <h3 className="text-lg font-bold mb-2 text-[#4EB3E8]">{stack.category}</h3>
                 <p className="text-xs text-black/50 dark:text-white/40 leading-relaxed mb-5">{stack.desc}</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="grid grid-cols-4 gap-3">
                   {stack.techs.map((t) => (
-                    <span key={t} className="text-[11px] font-semibold px-3 py-1.5 rounded-lg bg-black/[0.03] dark:bg-white/[0.04] text-black/60 dark:text-white/50 border border-black/[0.04] dark:border-white/[0.04]">{t}</span>
+                    <div key={t.name} className="flex flex-col items-center gap-2 p-3 rounded-xl bg-black/[0.02] dark:bg-white/[0.03] border border-black/[0.04] dark:border-white/[0.04] hover:border-[#4EB3E8]/30 hover:-translate-y-0.5 transition-all duration-300 group">
+                      <img src={t.logo} alt={t.name} className="w-8 h-8 object-contain dark:brightness-90 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-[9px] font-semibold text-black/50 dark:text-white/40 text-center leading-tight">{t.name}</span>
+                    </div>
                   ))}
                 </div>
               </div>

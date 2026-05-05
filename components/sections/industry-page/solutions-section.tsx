@@ -142,22 +142,22 @@ export function IndustrySolutionsSection({
                     </div>
                   </div>
 
-                  {/* Left-right navigation arrows */}
+                  {/* Left-right navigation arrows — anchored inside the content card */}
                   {solutions.length > 1 && (
-                    <>
+                    <div className="absolute bottom-6 right-6 z-20 flex items-center gap-2">
                       <button
                         onClick={goPrev}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-sm flex items-center justify-center text-black/40 dark:text-white/50 hover:text-black dark:hover:text-white hover:border-black/25 dark:hover:border-white/25 hover:bg-white dark:hover:bg-white/10 transition-all duration-300 active:scale-95"
+                        className="w-9 h-9 rounded-full border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-sm flex items-center justify-center text-black/40 dark:text-white/50 hover:text-black dark:hover:text-white hover:border-black/25 dark:hover:border-white/25 hover:bg-white dark:hover:bg-white/10 transition-all duration-300 active:scale-95"
                       >
-                        <ChevronLeft className="w-5 h-5" />
+                        <ChevronLeft className="w-4 h-4" />
                       </button>
                       <button
                         onClick={goNext}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-sm flex items-center justify-center text-black/40 dark:text-white/50 hover:text-black dark:hover:text-white hover:border-black/25 dark:hover:border-white/25 hover:bg-white dark:hover:bg-white/10 transition-all duration-300 active:scale-95"
+                        className="w-9 h-9 rounded-full border border-black/10 dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-sm flex items-center justify-center text-black/40 dark:text-white/50 hover:text-black dark:hover:text-white hover:border-black/25 dark:hover:border-white/25 hover:bg-white dark:hover:bg-white/10 transition-all duration-300 active:scale-95"
                       >
-                        <ChevronRight className="w-5 h-5" />
+                        <ChevronRight className="w-4 h-4" />
                       </button>
-                    </>
+                    </div>
                   )}
 
                   {/* Bottom dot indicators */}

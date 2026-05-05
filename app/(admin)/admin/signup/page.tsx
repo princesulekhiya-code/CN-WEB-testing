@@ -169,23 +169,12 @@ export default function AdminSignupPage() {
           </div>
 
           <div className="mb-8">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-[#4EB3E8]/10 flex items-center justify-center">
-                {step === "register" ? (
-                  <Sparkles className="w-5 h-5 text-[#4EB3E8]" />
-                ) : (
-                  <KeyRound className="w-5 h-5 text-[#4EB3E8]" />
-                )}
-              </div>
-              <div>
-                <h1 className="text-xl font-bold tracking-tight">
-                  {step === "register" ? "Create account" : "Verify identity"}
-                </h1>
-                <p className="text-xs text-black/40 dark:text-white/35">
-                  {step === "register" ? "Set up your admin credentials" : "Enter the code to complete signup"}
-                </p>
-              </div>
-            </div>
+            <h1 className="text-xl font-bold tracking-tight">
+              {step === "register" ? "Create account" : "Verify identity"}
+            </h1>
+            <p className="text-xs text-black/40 dark:text-white/35 mt-1">
+              {step === "register" ? "Set up your admin credentials" : "Enter the code to complete signup"}
+            </p>
           </div>
 
           <AnimatePresence mode="wait">

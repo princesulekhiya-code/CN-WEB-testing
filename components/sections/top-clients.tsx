@@ -57,7 +57,7 @@ export const TopClients: FC = () => {
             Companies That <span className="text-black dark:text-white">Trust Us</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            From Fortune 500 enterprises to high-growth startups, we deliver results that matter.
+            From established industry players to rising startups, we create results that fuel growth and success.
           </p>
         </div>
 

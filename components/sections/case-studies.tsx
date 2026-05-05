@@ -459,7 +459,7 @@ export function CaseStudies() {
             Work That <span className="text-black dark:text-white">Speaks for Itself</span>
           </h2>
           <p className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            Real solutions delivering measurable impact.
+            Delivering real solutions with measurable, business-driven impact.
           </p>
         </div>
 

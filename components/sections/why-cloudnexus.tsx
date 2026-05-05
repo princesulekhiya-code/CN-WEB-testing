@@ -231,8 +231,7 @@ export function WhyCloudNexus() {
             transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
             className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto"
           >
-            For over a decade, CloudNexus has helped enterprises hire smarter,
-            scale seamlessly, and reduce costs.
+            For over a decade, CloudNexus has helped enterprises build smarter, scale seamlessly, and optimize costs with high-performance solutions.
           </motion.p>
         </div>
 

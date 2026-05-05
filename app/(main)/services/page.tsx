@@ -427,7 +427,7 @@ const industries = [
 
 const stats = [
   { value: 150, suffix: "+", label: "Projects Delivered", description: "Production-ready products launched across three continents" },
-  { value: 50, suffix: "+", label: "Global Clients", description: "Partnering with ambitious brands — from seed-stage to enterprise" },
+  { value: 10, suffix: "+", label: "Global Clients", description: "Partnering with ambitious brands — from seed-stage to enterprise" },
   { value: 98, suffix: "%", label: "Client Retention", description: "Relationships built on transparency, results, and mutual growth" },
   { value: 10, suffix: "+", label: "Industries Served", description: "Deep vertical expertise from fintech to healthcare and beyond" },
 ];

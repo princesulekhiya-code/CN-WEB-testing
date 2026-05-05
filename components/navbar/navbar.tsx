@@ -75,7 +75,6 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Blogs", href: "/resources/blog", description: "Insights, tutorials & updates", icon: BookOpen },
       { label: "Careers", href: "/resources/career", description: "Join the CloudNexus team", icon: Briefcase },
       { label: "Free Consultation", href: "/resources/free-consultation", description: "Book a free strategy session", icon: CalendarCheck },
-      { label: "Career Benefits", href: "/company/career-benefits", description: "Perks & benefits of working with us", icon: Gift },
     ],
   },
   {

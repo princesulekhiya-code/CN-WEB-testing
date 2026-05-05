@@ -323,13 +323,13 @@ export default function TeamPage() {
                     <div className="flex gap-6">
                       <div>
                         <div className="text-2xl font-bold" style={{ color: team.accentColor }}>
-                          {i === 0 ? "12+" : i === 1 ? "25+" : i === 2 ? "15+" : "18+"}
+                          {i === 0 ? "25+" : i === 1 ? "25+" : i === 2 ? "25+" : "25+"}
                         </div>
                         <div className="text-[10px] text-black/35 dark:text-white/25 uppercase tracking-wider font-medium">Members</div>
                       </div>
                       <div>
                         <div className="text-2xl font-bold" style={{ color: team.accentColor }}>
-                          {i === 0 ? "40+" : i === 1 ? "80+" : i === 2 ? "35+" : "30+"}
+                          {i === 0 ? "50+" : i === 1 ? "50+" : i === 2 ? "50+" : "50+"}
                         </div>
                         <div className="text-[10px] text-black/35 dark:text-white/25 uppercase tracking-wider font-medium">Projects</div>
                       </div>
