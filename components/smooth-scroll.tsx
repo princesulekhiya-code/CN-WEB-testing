@@ -47,15 +47,22 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       lenis.scrollTo(0, { immediate: true, force: true });
     }
 
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-
-    requestAnimationFrame(() => {
-      window.scrollTo(0, 0);
+    const forceTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
       document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      document.documentElement.style.scrollBehavior = "auto";
+      window.scrollTo(0, 0);
+      document.documentElement.style.scrollBehavior = "";
+    };
+
+    forceTop();
+    requestAnimationFrame(() => {
+      forceTop();
       if (lenis) lenis.start();
     });
+    setTimeout(forceTop, 50);
+    setTimeout(forceTop, 150);
   }, [pathname]);
 
   return <>{children}</>;
