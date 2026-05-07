@@ -17,8 +17,16 @@ const CaseStudies = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: "Build Powerful Digital Products",
-  description: "We design and build scalable digital solutions including web applications, cloud infrastructure, data platforms, and modern software systems.",
+  title: "Cloud Nexus - Custom Software Development & IT Solutions Company",
+  description:
+    "Cloud Nexus is a leading software development company offering custom software, mobile apps, cloud solutions & AI/ML services from Bhopal, India.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Cloud Nexus - Custom Software Development & IT Solutions Company",
+    description:
+      "Cloud Nexus is a leading software development company offering custom software, mobile apps, cloud solutions & AI/ML services from Bhopal, India.",
+    url: "https://cloudnexus.in/",
+  },
 };
 
 export default function HomePage() {
