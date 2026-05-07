@@ -152,14 +152,6 @@ export default function InfrastructurePage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-xs font-semibold tracking-[0.25em] uppercase text-[#4EB3E8] mb-5"
-            >
-              Where Innovation Lives
-            </motion.p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
               Cloud Nexus{" "}
               <span className="text-[#4EB3E8]">Infrastructure</span>
@@ -213,7 +205,6 @@ export default function InfrastructurePage() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#4EB3E8] mb-3">Take a Tour</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Inside Our <span className="text-[#4EB3E8]">Office</span>
           </h2>
@@ -292,7 +283,6 @@ export default function InfrastructurePage() {
                 viewport={{ once: true }}
                 className="text-center mb-14"
               >
-                <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#4EB3E8] mb-3">Our Location</p>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
                   {office.label.replace(" Office", "")}{" "}
                   <span className="text-[#4EB3E8]">Headquarters</span>
@@ -384,7 +374,6 @@ export default function InfrastructurePage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#4EB3E8] mb-3">What We Provide</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             World-Class <span className="text-[#4EB3E8]">Facilities</span>
           </h2>
@@ -441,7 +430,6 @@ export default function InfrastructurePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#4EB3E8] mb-3">Environment</p>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
               Our <span className="text-[#4EB3E8]">Workspace</span>
             </h2>
@@ -495,7 +483,6 @@ export default function InfrastructurePage() {
             }}
           />
           <div className="relative">
-            <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#4EB3E8] mb-4">Let&apos;s Build Together</p>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
               Do you have a project in mind?
             </h2>

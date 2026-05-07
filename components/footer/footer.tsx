@@ -109,7 +109,7 @@ export function Footer() {
             <div>
               <span className="font-medium text-black dark:text-white">Hyderabad</span>
               <p>Hitech City, Hyderabad, Telangana, India</p>
-              <p className="flex items-center gap-1 mt-1"><Phone className="w-3 h-3" />+91 000 000 0000</p>
+              <p className="flex items-center gap-1 mt-1"><Phone className="w-3 h-3" />+91 87938 30447</p>
             </div>
           </div>
           <div className="flex gap-2 text-[13px] text-neutral-500 dark:text-neutral-400">
