@@ -36,7 +36,7 @@ const leadership = [
     highlights: ["Code Quality", "Tech Standards", "Mentorship"],
   },
   {
-    name: "Ariyan Patel",
+    name: "Aryan Patel",
     role: "Chief Marketing Officer",
     photo: "/assets/teams/ariyan-patel.jpeg",
     photoPos: "center 35%",
