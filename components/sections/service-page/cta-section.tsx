@@ -78,15 +78,7 @@ export function CTASection({
         >
           <Link
             href="/resources/free-consultation"
-            className={
-              cyanBoldBackdrop
-                ? "inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#4EB3E8] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#4EB3E8]/25"
-                : teal && tealProminent
-                  ? "inline-flex items-center justify-center gap-2 rounded-lg bg-[#006ea3] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#006ea3]/20 transition-colors hover:bg-[#005580]"
-                : teal
-                  ? "inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#006ea3] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#006ea3]/20"
-                  : "inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#4EB3E8] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#4EB3E8]/20"
-            }
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm shadow-lg transition-colors"
           >
             {primaryCtaLabel ?? "Get a Free Consultation"} <ArrowRight className="w-4 h-4" />
           </Link>

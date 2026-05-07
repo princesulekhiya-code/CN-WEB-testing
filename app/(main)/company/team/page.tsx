@@ -469,7 +469,7 @@ export default function TeamPage() {
             </p>
             <a
               href="mailto:hr@cloudnexus.in"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#4EB3E8] text-white text-sm font-semibold hover:bg-[#3a9fd4] hover:shadow-lg hover:shadow-[#4EB3E8]/20 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold transition-all duration-300 shadow-lg"
             >
               Get In Touch
               <ChevronRight className="w-4 h-4" />

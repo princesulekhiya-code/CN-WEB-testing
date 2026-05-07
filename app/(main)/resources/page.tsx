@@ -122,7 +122,7 @@ export default function ResourcesPage() {
                 From technical support to career opportunities, from expert consultations to in-depth tech insights  -  everything you need from Cloud Nexus is right here.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/resources/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300">
+                <Link href="/resources/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold shadow-lg transition-all duration-300">
                   <Mail className="w-4 h-4" /> Get in Touch
                 </Link>
                 <Link href="/resources/free-consultation" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black dark:bg-white text-white dark:text-black text-sm font-semibold hover:opacity-90 transition-all duration-300">
@@ -686,7 +686,7 @@ export default function ResourcesPage() {
               Whether you&#39;re a startup looking to build your MVP or an enterprise modernizing your stack  -  we&#39;re here to help you build something great.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/resources/free-consultation" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-bold transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20">
+              <Link href="/resources/free-consultation" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-bold shadow-lg transition-all duration-300">
                 Book Free Consultation <ArrowRight className="w-4 h-4" />
               </Link>
               <Link href="/resources/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-black/[0.08] dark:border-white/[0.08] text-sm font-bold hover:border-[#4EB3E8]/30 transition-all duration-300">

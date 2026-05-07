@@ -1006,7 +1006,7 @@ export default function LifeAtCloudNexusPage() {
           </p>
           <Link
             href="/resources/career"
-            className="group mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#3da9dc] via-[#4EB3E8] to-[#5ec4f0] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#4EB3E8]/35 transition-all hover:shadow-xl hover:brightness-[1.03]"
+            className="group mt-8 inline-flex items-center gap-2 rounded-xl bg-black dark:bg-white px-7 py-3.5 text-sm font-semibold text-white dark:text-black shadow-lg transition-all hover:bg-black/90 dark:hover:bg-white/90 hover:shadow-xl"
           >
             Apply now
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -1114,7 +1114,7 @@ export default function LifeAtCloudNexusPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/resources/career"
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-[#4EB3E8] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#4EB3E8]/20 transition-all duration-300 hover:bg-[#3a9fd4] hover:shadow-xl hover:shadow-[#4EB3E8]/30"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 px-8 py-3.5 text-sm font-semibold shadow-lg transition-all duration-300"
                 >
                   Apply now
                   <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-0.5" />

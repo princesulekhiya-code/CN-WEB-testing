@@ -183,7 +183,7 @@ export default function JobDetailPage() {
           <div className="mb-10">
             <button
               onClick={() => setShowApply(true)}
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-white bg-[#4EB3E8] hover:bg-[#3da0d5] transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 shadow-lg transition-all duration-300"
             >
               Apply for this position
               <ArrowRight className="w-4 h-4" />
@@ -253,7 +253,7 @@ export default function JobDetailPage() {
             <p className="text-sm text-black/45 dark:text-white/40 mb-6">Apply now and our HR team will get back to you within 48 hours.</p>
             <button
               onClick={() => setShowApply(true)}
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-white bg-[#4EB3E8] hover:bg-[#3da0d5] transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 shadow-lg transition-all duration-300"
             >
               Apply Now
               <ArrowRight className="w-4 h-4" />
@@ -302,7 +302,7 @@ export default function JobDetailPage() {
                     <p className="text-sm text-black/50 dark:text-white/45 mb-6 max-w-xs mx-auto">
                       We&apos;ve received your application for {job.title}. Our HR team will review and get back to you soon.
                     </p>
-                    <button onClick={closeModal} className="px-6 py-2.5 rounded-xl bg-[#4EB3E8] text-white text-sm font-semibold hover:bg-[#3da0d5] transition-colors">
+                    <button onClick={closeModal} className="px-6 py-2.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold shadow-lg transition-colors">
                       Close
                     </button>
                   </motion.div>
@@ -373,7 +373,7 @@ export default function JobDetailPage() {
                       <button
                         type="submit"
                         disabled={applyLoading}
-                        className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20 disabled:opacity-60"
+                        className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold shadow-lg transition-all duration-300 disabled:opacity-60"
                       >
                         {applyLoading ? (
                           <>

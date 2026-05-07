@@ -429,7 +429,7 @@ export default function SupportPage() {
                   <div className="mt-6">
                     <Link
                       href={channel.href}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-[#4EB3E8] hover:bg-[#3da0d5] transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 shadow-lg transition-all duration-300"
                     >
                       {channel.action}
                       <ArrowRight className="w-4 h-4" />
@@ -664,7 +664,7 @@ export default function SupportPage() {
                     <button
                       type="submit"
                       disabled={supportLoading}
-                      className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20 disabled:opacity-60"
+                      className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold shadow-lg transition-all duration-300 disabled:opacity-60"
                     >
                       {supportLoading ? (
                         <>

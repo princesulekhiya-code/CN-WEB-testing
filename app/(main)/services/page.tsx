@@ -1136,7 +1136,7 @@ function CTASection() {
         >
           <Link
             href="/resources/free-consultation"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[#4EB3E8] text-white font-semibold text-sm hover:bg-[#005580] transition-colors shadow-lg shadow-[#4EB3E8]/20"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm transition-colors shadow-lg"
           >
             Get a Free Consultation <ArrowRight className="w-4 h-4" />
           </Link>

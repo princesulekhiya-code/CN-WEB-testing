@@ -189,7 +189,7 @@ export default function ProcessMethodologyPage() {
                 A walkthrough to our simple, smart, and agile approach to software development. From discovery to deployment  -  every step is transparent, collaborative, and results-driven.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/resources/free-consultation" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#4EB3E8] text-white text-sm font-semibold hover:bg-[#3a9fd4] transition-all shadow-lg shadow-[#4EB3E8]/20">
+                <Link href="/resources/free-consultation" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold transition-all shadow-lg">
                   Start Your Project <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/resources/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-black/10 dark:border-white/10 text-sm font-semibold hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-all">
@@ -563,7 +563,7 @@ export default function ProcessMethodologyPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/resources/free-consultation"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#4EB3E8] text-white font-semibold text-sm hover:bg-[#3a9fd4] transition-all shadow-lg shadow-[#4EB3E8]/20 hover:shadow-xl hover:shadow-[#4EB3E8]/30">
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm transition-all shadow-lg">
                   <CalendarCheck className="w-4 h-4" /> Book Free Consultation
                 </Link>
                 <Link href="/resources/contact"

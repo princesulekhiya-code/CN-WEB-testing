@@ -163,7 +163,7 @@ export default function InfrastructurePage() {
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
               <Link
                 href="/resources/free-consultation"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#4EB3E8] text-white text-sm font-semibold hover:bg-[#3a9fd4] transition-all shadow-lg shadow-[#4EB3E8]/20 hover:shadow-xl hover:shadow-[#4EB3E8]/30 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold transition-all shadow-lg hover:-translate-y-0.5"
               >
                 Get in Touch <ArrowRight className="w-4 h-4" />
               </Link>
@@ -496,7 +496,7 @@ export default function InfrastructurePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/resources/free-consultation"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#4EB3E8] text-white font-semibold text-sm hover:bg-[#3a9fd4] transition-all shadow-lg shadow-[#4EB3E8]/20 hover:shadow-xl hover:shadow-[#4EB3E8]/30 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm transition-all shadow-lg hover:-translate-y-0.5"
               >
                 <CalendarCheck className="w-4 h-4" /> Get in Touch
               </Link>

@@ -311,7 +311,7 @@ export default function ContactPage() {
                     type="submit"
                     size="lg"
                     disabled={loading}
-                    className="w-full bg-[#4EB3E8] text-white hover:bg-[#3a9fd4] rounded-xl h-12 text-sm font-semibold transition-all duration-300 disabled:opacity-60"
+                    className="w-full bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 rounded-xl h-12 text-sm font-semibold shadow-lg transition-all duration-300 disabled:opacity-60"
                   >
                     {loading ? (
                       <>
