@@ -43,7 +43,7 @@ export function HeroSection() {
             <p
               className={`mt-6 text-lg font-medium text-black/50 dark:text-white/50 leading-relaxed max-w-lg transition-all duration-700 delay-200 ${heroReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             >
-              Language-aware products — chatbots, search, summarization, and voice — built for
+              Language-aware products  -  chatbots, search, summarization, and voice  -  built for
               accuracy, safety, and measurable business outcomes.
             </p>
 

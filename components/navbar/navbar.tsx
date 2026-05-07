@@ -87,7 +87,7 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Events", href: "/company/events", description: "Meetups, webinars & conferences", icon: Calendar },
       { label: "About Us", href: "/company/about-us", description: "Our mission, vision & story", icon: Info },
       { label: "Process Methodology", href: "/company/process-methodology", description: "How we deliver projects", icon: GitBranch },
-      { label: "Infrastructure", href: "/company/infrastructure", description: "Our tech & systems setup", icon: Server },
+      { label: "Infrastructure", href: "/company/infrastructure", description: "Our office & workspace", icon: Server },
       { label: "Career Benefits", href: "/company/career-benefits", description: "Perks of working with us", icon: Gift },
     ],
   },

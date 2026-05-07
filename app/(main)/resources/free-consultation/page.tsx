@@ -76,9 +76,9 @@ function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
 /* ═══════ DATA ═══════ */
 const benefits = [
   { icon: BrainCircuit, title: "Expert Strategy Session", desc: "30-minute focused discussion with a senior solutions architect who'll analyze your requirements and suggest the optimal technology stack." },
-  { icon: Target, title: "Custom Project Roadmap", desc: "Receive a tailored roadmap with milestones, timelines, and budget estimates — specific to your business goals and scale." },
+  { icon: Target, title: "Custom Project Roadmap", desc: "Receive a tailored roadmap with milestones, timelines, and budget estimates  -  specific to your business goals and scale." },
   { icon: Shield, title: "NDA Protected", desc: "Your ideas are safe with us. We sign a mutual NDA before every consultation to ensure complete confidentiality." },
-  { icon: Rocket, title: "Zero Obligation", desc: "No strings attached, no hidden fees. Get actionable insights you can use — whether or not you choose to work with us." },
+  { icon: Rocket, title: "Zero Obligation", desc: "No strings attached, no hidden fees. Get actionable insights you can use  -  whether or not you choose to work with us." },
 ];
 
 const processSteps = [
@@ -167,7 +167,7 @@ export default function FreeConsultationPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="mt-5 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-lg"
               >
-                Book a free 30-minute strategy session with our senior architects. Get a custom roadmap, technology recommendations, and a transparent project estimate — zero obligation.
+                Book a free 30-minute strategy session with our senior architects. Get a custom roadmap, technology recommendations, and a transparent project estimate  -  zero obligation.
               </motion.p>
 
               {/* Trust badges */}

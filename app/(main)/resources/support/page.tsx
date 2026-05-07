@@ -705,7 +705,7 @@ export default function SupportPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { icon: Headphones, title: "Human-First Support", desc: "No chatbots, no runaround. Every conversation starts with an experienced engineer who understands your stack." },
-              { icon: Shield, title: "Enterprise-Grade SLA", desc: "Guaranteed response times, uptime commitments, and financial credits — backed by transparent reporting." },
+              { icon: Shield, title: "Enterprise-Grade SLA", desc: "Guaranteed response times, uptime commitments, and financial credits  -  backed by transparent reporting." },
               { icon: CheckCircle2, title: "Resolution, Not Deflection", desc: "We don't close tickets until you're satisfied. Our CSAT score consistently exceeds 98% across all channels." },
             ].map((item, i) => {
               const Icon = item.icon;

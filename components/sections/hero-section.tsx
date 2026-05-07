@@ -114,7 +114,7 @@ function useAnimatedCount(target: number, active: boolean, delay = 0, duration =
 const statsData = [
   { target: 100, suffix: "+", label: "Projects Delivered", delay: 0 },
   { target: 10, suffix: "+ yrs", label: "Proven Expertise", delay: 200 },
-  { target: 90, suffix: "%", label: "Faster Hiring", delay: 400 },
+  { target: 90, suffix: "+", label: "Faster Hiring", delay: 400 },
 ];
 
 function HeroStats() {
@@ -198,7 +198,7 @@ export function HeroSection() {
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.15] md:leading-[1.15] lg:leading-[1.15]">
               <span className="block animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both text-[7vw] sm:text-5xl lg:text-6xl pb-1 md:pb-2 whitespace-nowrap">
-                Pioneering Innovation.
+                Pioneering Innovation
               </span>
               <span className="flex flex-wrap justify-center lg:justify-start gap-x-3 text-muted-foreground/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both text-[7.5vw] sm:text-5xl lg:text-6xl">
                 <span className="text-[#4EB3E8]">with Smart</span>
@@ -214,14 +214,14 @@ export function HeroSection() {
             {/* Description */}
             <div className="relative max-w-xl mx-auto lg:mx-0 w-full flex flex-col items-center lg:items-start">
               <span className="invisible text-center lg:text-left text-base md:text-lg font-medium leading-relaxed select-none pointer-events-none">
-              Code to cloud—seamless, scalable, and built for performance. We design, deploy, and deliver solutions you can trust.
+              Code to cloud - seamless, scalable, and built for performance. We design, deploy, and deliver solutions you can trust.
               </span>
               <TypingAnimation
                 delay={700}
                 duration={25}
                 className="absolute inset-x-0 top-0 text-center lg:text-left text-base md:text-lg font-medium text-muted-foreground leading-relaxed"
               >
-                Code to cloud—seamless, scalable, and built for performance. We design, deploy, and deliver solutions you can trust.
+                Code to cloud - seamless, scalable, and built for performance. We design, deploy, and deliver solutions you can trust.
               </TypingAnimation>
             </div>
 
@@ -256,7 +256,7 @@ export function HeroSection() {
               <div className="absolute inset-y-0 right-0 w-24 md:w-40 bg-gradient-to-l from-white via-white/80 to-transparent dark:from-black dark:via-black/80 pointer-events-none z-20" />
               <div className="absolute inset-x-0 top-0 h-24 md:h-40 bg-gradient-to-b from-white via-white/80 to-transparent dark:from-black dark:via-black/80 pointer-events-none z-20" />
               <div className="absolute inset-x-0 bottom-0 h-24 md:h-40 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-black dark:via-black/80 pointer-events-none z-20" />
-              {/* Watermark cover — bottom-right corner */}
+              {/* Watermark cover  -  bottom-right corner */}
               <div className="absolute bottom-0 right-0 w-48 h-16 bg-gradient-to-tl from-white via-white/95 to-transparent dark:from-black dark:via-black/95 pointer-events-none z-30" />
             </div>
           </div>

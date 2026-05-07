@@ -62,9 +62,9 @@ const ReviewCard = ({
   logoColor: string;
 }) => {
   return (
-    <Card className="w-[32rem] max-w-full shrink-0 rounded-2xl border-[#4EB3E8]/10 bg-[#D9EAFD] dark:border-white/10 dark:bg-black p-8 shadow-none transition-colors hover:border-[#4EB3E8]/25 dark:hover:border-white/20 sm:p-10">
-      <div className="flex h-full flex-col justify-between gap-6">
-        <p className="text-black/50 dark:text-zinc-400 font-medium leading-relaxed text-sm sm:text-base">
+    <Card className="w-[28rem] max-w-full shrink-0 rounded-2xl border-[#4EB3E8]/10 bg-[#D9EAFD] dark:border-white/10 dark:bg-black p-5 shadow-none transition-colors hover:border-[#4EB3E8]/25 dark:hover:border-white/20 sm:p-6">
+      <div className="flex h-full flex-col justify-between gap-4">
+        <p className="text-black/80 dark:text-zinc-300 font-medium leading-relaxed text-sm sm:text-base">
           &ldquo;{text}&rdquo;
         </p>
         <div className="flex items-center gap-4">
@@ -74,7 +74,7 @@ const ReviewCard = ({
               alt={name}
               width={48}
               height={48}
-              className="rounded-full blur-[0.5px] grayscale transition-all hover:blur-none hover:grayscale-0"
+              className="rounded-full transition-all"
             />
             <div
               className={cn(

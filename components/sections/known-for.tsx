@@ -316,14 +316,14 @@ const services = [
   },
   {
     title: 'Software Development',
-    description: 'Full-cycle custom software solutions — enterprise apps, API development, and complex system integrations.',
+    description: 'Full-cycle custom software solutions  -  enterprise apps, API development, and complex system integrations.',
     icon: Monitor,
     href: '/services/software-development',
     Visual: SoftwareDevVisual,
   },
   {
     title: 'Hire Dedicated Developers',
-    description: 'Scale your team on demand with pre-vetted senior engineers — flexible hiring from contributors to full pods.',
+    description: 'Scale your team on demand with pre-vetted senior engineers  -  flexible hiring from contributors to full pods.',
     icon: UsersRound,
     href: '/services/hire-dedicated-developers',
     Visual: HireDevsVisual,
@@ -344,7 +344,7 @@ const services = [
   },
   {
     title: 'UI/UX Design',
-    description: 'User-centric design that converts — from wireframes to pixel-perfect interfaces.',
+    description: 'User-centric design that converts  -  from wireframes to pixel-perfect interfaces.',
     icon: Palette,
     href: '/services/ui-ux-design',
     Visual: UIUXVisual,
@@ -386,7 +386,7 @@ const services = [
   },
   {
     title: 'MVP Development',
-    description: 'Rapid prototyping and lean methodology to validate ideas fast — concept to launch-ready MVP in weeks.',
+    description: 'Rapid prototyping and lean methodology to validate ideas fast  -  concept to launch-ready MVP in weeks.',
     icon: Boxes,
     href: '/services/mvp-development',
     Visual: MVPVisual,
@@ -407,7 +407,7 @@ const services = [
   },
   {
     title: 'Custom Software Development',
-    description: 'End-to-end scalable software engineered to your exact specifications — from architecture to deployment.',
+    description: 'End-to-end scalable software engineered to your exact specifications  -  from architecture to deployment.',
     icon: Code2,
     href: '/services/custom-software-development',
     Visual: CustomSoftwareVisual,
@@ -544,7 +544,7 @@ export const KnownFor: FC = () => {
             })}
           </div>
 
-          {/* Scroll indicator dots — one per page of 2 */}
+          {/* Scroll indicator dots  -  one per page of 2 */}
           <div className="flex items-center justify-center gap-1.5 pt-3">
             {Array.from({ length: Math.ceil(totalCards / 2) }, (_, i) => {
               const pageIndex = i * 2;

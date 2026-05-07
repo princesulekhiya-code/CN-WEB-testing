@@ -142,7 +142,7 @@ export function IndustrySolutionsSection({
                     </div>
                   </div>
 
-                  {/* Left-right navigation arrows — anchored inside the content card */}
+                  {/* Left-right navigation arrows  -  anchored inside the content card */}
                   {solutions.length > 1 && (
                     <div className="absolute bottom-6 right-6 z-20 flex items-center gap-2">
                       <button

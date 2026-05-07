@@ -30,7 +30,7 @@ export function LanguageSwitcher() {
   const activeLang = LANGUAGES.find((l) => l.code === currentLang)!;
 
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <button
           className="flex items-center gap-1.5 h-9 px-2 rounded-lg text-black/60 hover:bg-black/[0.06] hover:text-black dark:text-white/60 dark:hover:bg-white/[0.06] dark:hover:text-white transition-colors text-sm font-medium"
@@ -44,7 +44,8 @@ export function LanguageSwitcher() {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="w-52 rounded-xl border border-black/[0.08] bg-white shadow-2xl shadow-black/10 backdrop-blur-2xl dark:border-white/[0.08] dark:bg-[#0a0a0a] dark:shadow-black/60 p-1.5"
+        sideOffset={8}
+        className="z-[100] w-52 rounded-xl border border-black/[0.08] bg-white shadow-2xl shadow-black/10 backdrop-blur-2xl dark:border-white/[0.08] dark:bg-[#0a0a0a] dark:shadow-black/60 p-1.5"
       >
         {LANGUAGES.map((lang) => (
           <DropdownMenuItem

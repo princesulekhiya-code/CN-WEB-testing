@@ -63,8 +63,8 @@ export default function CareerPage() {
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                 Ready to do{" "}
-                <span className="text-[#4EB3E8] italic">the best work</span>{" "}
-                <span className="text-[#4EB3E8] italic">of your life</span>{" "}
+                <span className="text-[#4EB3E8]">the best work</span>{" "}
+                <span className="text-[#4EB3E8]">of your life</span>{" "}
                 <span>:)</span>
               </h1>
               <p className="mt-5 text-base text-black/50 dark:text-white/45 max-w-lg leading-relaxed">
@@ -264,7 +264,7 @@ export default function CareerPage() {
               Think you&apos;re the right fit?
             </h2>
             <p className="text-sm text-black/45 dark:text-white/40 mb-6 max-w-lg mx-auto leading-relaxed">
-              We&apos;re building something special at Cloud Nexus — a team of dreamers, doers, and disruptors. If you&apos;re passionate about technology and want to make a real impact, we&apos;d love to hear from you.
+              We&apos;re building something special at Cloud Nexus  -  a team of dreamers, doers, and disruptors. If you&apos;re passionate about technology and want to make a real impact, we&apos;d love to hear from you.
             </p>
             <a
               href="mailto:hr@cloudnexus.in"

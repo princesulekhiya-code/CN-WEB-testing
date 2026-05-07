@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "Do you work with startups or only enterprises?",
     answer:
-      "Both — from early-stage startups to Fortune 500s. We've partnered with YC, Tiger Global, and Accel-backed ventures.",
+      "Both  -  from early-stage startups to Fortune 500s. We've partnered with YC, Tiger Global, and Accel-backed ventures.",
   },
   {
     question: "What industries do you specialize in?",
@@ -33,32 +33,32 @@ const faqs = [
   {
     question: "How do you track and communicate project progress?",
     answer:
-      "Through defined milestones, sprint reports, and transparent communication channels — ensuring full visibility and regular client updates at every stage.",
+      "Through defined milestones, sprint reports, and transparent communication channels  -  ensuring full visibility and regular client updates at every stage.",
   },
   {
     question: "What is your pricing model?",
     answer:
-      "Fixed-price, time & material, or dedicated teams — flexible to your scope and budget.",
+      "Fixed-price, time & material, or dedicated teams  -  flexible to your scope and budget.",
   },
   {
     question: "Do you provide post-launch support?",
     answer:
-      "Yes — bug fixes, monitoring, security updates, feature enhancements, and 24/7 support based on your SLA.",
+      "Yes  -  bug fixes, monitoring, security updates, feature enhancements, and 24/7 support based on your SLA.",
   },
   {
     question: "What tech stack does CloudNexus work with?",
     answer:
-      "React, Next.js, Node.js, Python, Flutter, React Native, AWS, Azure, GCP, Docker, Kubernetes, PostgreSQL, MongoDB, and more — we pick the best tools for your project.",
+      "React, Next.js, Node.js, Python, Flutter, React Native, AWS, Azure, GCP, Docker, Kubernetes, PostgreSQL, MongoDB, and more  -  we pick the best tools for your project.",
   },
   {
     question: "Can CloudNexus help migrate my existing application to the cloud?",
     answer:
-      "Absolutely. We handle end-to-end cloud migration — infrastructure assessment, architecture redesign, data migration, and post-migration optimization on AWS, Azure, or GCP.",
+      "Absolutely. We handle end-to-end cloud migration  -  infrastructure assessment, architecture redesign, data migration, and post-migration optimization on AWS, Azure, or GCP.",
   },
   {
     question: "Do you offer AI and Machine Learning solutions?",
     answer:
-      "Yes — from computer vision and NLP to predictive analytics, recommendation engines, and custom AI model training. We build production-ready AI solutions tailored to your business.",
+      "Yes  -  from computer vision and NLP to predictive analytics, recommendation engines, and custom AI model training. We build production-ready AI solutions tailored to your business.",
   },
   {
     question: "What is your process for a new project from start to finish?",
@@ -68,12 +68,12 @@ const faqs = [
   {
     question: "Do you build mobile apps for both iOS and Android?",
     answer:
-      "Yes — we build native (Swift, Kotlin) and cross-platform (Flutter, React Native) mobile applications. We help you choose the right approach based on your budget, timeline, and user needs.",
+      "Yes  -  we build native (Swift, Kotlin) and cross-platform (Flutter, React Native) mobile applications. We help you choose the right approach based on your budget, timeline, and user needs.",
   },
   {
     question: "How can I get a free consultation with CloudNexus?",
     answer:
-      "Simply visit our Free Consultation page or click 'Join Now' in the navigation bar. Book a 30-minute strategy session — no commitment, no cost. Our experts will assess your needs and recommend the best path forward.",
+      "Simply visit our Free Consultation page or click 'Join Now' in the navigation bar. Book a 30-minute strategy session  -  no commitment, no cost. Our experts will assess your needs and recommend the best path forward.",
   },
 ];
 

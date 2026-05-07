@@ -49,7 +49,7 @@ const whyCloudNexus = [
   { icon: Lightbulb, title: "Product-Driven Innovation", desc: "Beyond consulting, we develop intelligent digital products that simplify daily operations, enhance efficiency, and improve user experiences. From HRMS systems to AI-powered automation tools, our solutions make technology work for you." },
   { icon: Shield, title: "Security & Reliability", desc: "Cybersecurity and data protection are at the core of everything we do. We implement robust security protocols to safeguard your IT infrastructure, ensuring compliance, privacy, and peace of mind." },
   { icon: Globe, title: "Expert Team & Global Experience", desc: "Our team of seasoned IT consultants, engineers, and strategists brings extensive experience in helping businesses worldwide navigate complex technological landscapes." },
-  { icon: BarChart3, title: "Business-Centric Results", desc: "We don't just implement technology — we align it with your business objectives, ensuring measurable improvements in efficiency, productivity, and profitability." },
+  { icon: BarChart3, title: "Business-Centric Results", desc: "We don't just implement technology  -  we align it with your business objectives, ensuring measurable improvements in efficiency, productivity, and profitability." },
   { icon: CheckCircle2, title: "End-to-End Support", desc: "From initial consultation to deployment and ongoing support, we are committed to providing seamless, 24/7 assistance, ensuring smooth and uninterrupted IT operations." },
 ];
 
@@ -57,7 +57,7 @@ const offerings = [
   { icon: Smartphone, title: "Mobile App Development", desc: "Native and cross-platform iOS & Android apps built for performance, scalability, and exceptional user experience.", href: "/services/mobile-app-development" },
   { icon: Globe, title: "Web Development", desc: "Responsive, fast, and SEO-optimized web applications using modern frameworks like Next.js, React, and Node.js.", href: "/services/web-development" },
   { icon: Code2, title: "Software Development", desc: "Full-cycle custom software solutions from architecture design to deployment, tailored to your business needs.", href: "/services/software-development" },
-  { icon: Users, title: "Hire Dedicated Developers", desc: "Pre-vetted engineers in 48 hours — full-stack, mobile, AI/ML, DevOps, and QA specialists on flexible engagement models.", href: "/services/hire-dedicated-developers" },
+  { icon: Users, title: "Hire Dedicated Developers", desc: "Pre-vetted engineers in 48 hours  -  full-stack, mobile, AI/ML, DevOps, and QA specialists on flexible engagement models.", href: "/services/hire-dedicated-developers" },
   { icon: Boxes, title: "Product Engineering", desc: "End-to-end product development from ideation to market-ready launch with continuous iteration and optimization.", href: "/services/product-engineering" },
   { icon: Layout, title: "WordPress Development", desc: "Custom themes, plugins, and enterprise WordPress solutions with performance optimization and security hardening.", href: "/services/wordpress-development" },
   { icon: Palette, title: "UI/UX Design", desc: "User-centric design solutions with research-driven wireframes, prototypes, and pixel-perfect interfaces.", href: "/services/ui-ux-design" },
@@ -67,7 +67,7 @@ const offerings = [
   { icon: Megaphone, title: "Digital Marketing", desc: "SEO, social media marketing, PPC campaigns, and content strategies that drive traffic, leads, and revenue.", href: "/services/digital-marketing" },
   { icon: Settings, title: "Technology Consulting", desc: "Strategic technology advisory, architecture reviews, and roadmaps aligned with your business objectives.", href: "/services/technology-consulting" },
   { icon: Rocket, title: "MVP Development", desc: "Rapid prototyping and MVP launches to validate your idea, attract investors, and enter the market faster.", href: "/services/mvp-development" },
-  { icon: ServerCog, title: "Cloud Services", desc: "AWS, Azure & GCP solutions — cloud migration, multi-cloud architecture, CI/CD pipelines, and infrastructure automation.", href: "/services/cloud-services" },
+  { icon: ServerCog, title: "Cloud Services", desc: "AWS, Azure & GCP solutions  -  cloud migration, multi-cloud architecture, CI/CD pipelines, and infrastructure automation.", href: "/services/cloud-services" },
   { icon: Monitor, title: "IT Consulting", desc: "Infrastructure planning, IT strategy, and technology audits to optimize your IT ecosystem for long-term success.", href: "/services/it-consulting" },
 ];
 
@@ -373,7 +373,7 @@ export default function OverviewPage() {
               <span className="text-[#4EB3E8]">Who We Are</span>
             </h2>
             <p className="text-base text-black/55 dark:text-white/50 leading-relaxed mb-4">
-              At CloudNexus, we are more than just an IT consulting company — we are innovators, problem-solvers, and architects of the digital future. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting, helping businesses thrive in an ever-evolving tech landscape.
+              At CloudNexus, we are more than just an IT consulting company  -  we are innovators, problem-solvers, and architects of the digital future. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting, helping businesses thrive in an ever-evolving tech landscape.
             </p>
             <p className="text-base text-black/55 dark:text-white/50 leading-relaxed">
               Our team of technology experts, strategists, and problem-solvers collaborates closely with clients to design tailored solutions that enhance efficiency, drive growth, and future-proof operations. Whether it&apos;s cloud migration, software development, automation, or cybersecurity, we ensure that your IT ecosystem is agile, secure, and optimized for success.
@@ -478,7 +478,7 @@ export default function OverviewPage() {
             <span>CloudNexus?</span>
           </h2>
           <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-2xl mx-auto">
-            Choosing the right technology partner is crucial for business success. We don&apos;t just offer IT solutions — we create transformative experiences that drive innovation, efficiency, and growth.
+            Choosing the right technology partner is crucial for business success. We don&apos;t just offer IT solutions  -  we create transformative experiences that drive innovation, efficiency, and growth.
           </p>
         </motion.div>
 
@@ -568,7 +568,7 @@ export default function OverviewPage() {
             <span>Offices</span>
           </h2>
           <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
-            Strategically located across Rajasthan, India — delivering world-class IT solutions from our development centers.
+            Strategically located across Rajasthan, India  -  delivering world-class IT solutions from our development centers.
           </p>
         </motion.div>
 
@@ -609,7 +609,7 @@ export default function OverviewPage() {
           <motion.div className="text-center mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Our Growth <span className="text-[#4EB3E8]">Journey</span></h2>
             <p className="text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-              From a seed of an idea to a growing force in technology — every milestone marks a step toward our vision.
+              From a seed of an idea to a growing force in technology  -  every milestone marks a step toward our vision.
             </p>
           </motion.div>
 
@@ -625,10 +625,10 @@ export default function OverviewPage() {
             <div className="absolute left-6 md:left-1/2 top-[calc(350px+4rem)] bottom-0 w-[3px] bg-gradient-to-b from-[#4EB3E8]/30 via-[#4EB3E8]/20 to-[#10b981]/10 dark:from-[#4EB3E8]/25 dark:via-[#4EB3E8]/15 dark:to-[#10b981]/5 md:-translate-x-[1.5px] rounded-full" />
 
             {[
-              { icon: Sprout, date: "19 Jan 2025", title: "The Seed Was Planted", desc: "Cloud Nexus was founded with a clear mission — to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful.", color: "#4EB3E8" },
+              { icon: Sprout, date: "19 Jan 2025", title: "The Seed Was Planted", desc: "Cloud Nexus was founded with a clear mission  -  to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful.", color: "#4EB3E8" },
               { icon: Leaf, date: "Mid 2025", title: "Taking Root & Growing", desc: "We expanded our team, onboarded our first global clients, and delivered 30+ successful projects. Our expertise in mobile, web, cloud, and AI started gaining recognition across industries.", color: "#8b5cf6" },
               { icon: TreePine, date: "Early 2026", title: "Branching Out", desc: "With 50+ projects delivered across 15+ industries, we began attending global tech conferences like GITEX, built dedicated AI/ML capabilities, and expanded our service portfolio significantly.", color: "#10b981" },
-              { icon: Sun, date: "Today & Beyond", title: "Reaching New Heights", desc: "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning — with plans to scale further, innovate boldly, and create lasting impact.", color: "#f59e0b" },
+              { icon: Sun, date: "Today & Beyond", title: "Reaching New Heights", desc: "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning  -  with plans to scale further, innovate boldly, and create lasting impact.", color: "#f59e0b" },
             ].map((step, i) => {
               const Icon = step.icon;
               const isLeft = i % 2 === 0;

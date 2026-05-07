@@ -50,7 +50,7 @@ export default function AdminContactsPage() {
                       {contact.phone ? (
                         <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="text-[#4EB3E8] hover:underline">{contact.phone}</a>
                       ) : (
-                        <span className="text-black/20 dark:text-white/15">—</span>
+                        <span className="text-black/20 dark:text-white/15"> - </span>
                       )}
                     </td>
                     <td className="px-5 py-4 hidden lg:table-cell">

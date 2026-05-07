@@ -79,7 +79,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Brain,
         title: "AI, ML & Data Science",
-        description: "From predictive models and natural language processing to computer vision and smart automation — we transform unstructured data into strategic decisions.",
+        description: "From predictive models and natural language processing to computer vision and smart automation  -  we transform unstructured data into strategic decisions.",
         href: "/services/ai-ml-data-science",
         highlights: ["Machine learning models", "NLP & chatbots", "Data pipelines"],
         sublinks: [
@@ -94,7 +94,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Zap,
         title: "Digital Transformation",
-        description: "Revitalize outdated systems, streamline manual processes, and weave in modern tech stacks — so your organization stays ahead of industry shifts.",
+        description: "Revitalize outdated systems, streamline manual processes, and weave in modern tech stacks  -  so your organization stays ahead of industry shifts.",
         href: "/services/digital-transformation",
         highlights: ["Legacy modernization", "Process automation", "Change management"],
         sublinks: [
@@ -109,7 +109,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Shield,
         title: "Cybersecurity & Compliance",
-        description: "End-to-end security assessments, proactive threat detection, and compliance readiness for SOC 2, HIPAA, GDPR, and beyond — protecting what matters most.",
+        description: "End-to-end security assessments, proactive threat detection, and compliance readiness for SOC 2, HIPAA, GDPR, and beyond  -  protecting what matters most.",
         href: "/services/cybersecurity-compliance",
         highlights: ["Penetration testing", "Compliance frameworks", "Threat detection"],
         sublinks: [
@@ -124,7 +124,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Settings,
         title: "Technology Consulting",
-        description: "Strategic advisory across big data, digital experience, IoT, AR, and conversational AI — bridging the gap between emerging tech and tangible business outcomes.",
+        description: "Strategic advisory across big data, digital experience, IoT, AR, and conversational AI  -  bridging the gap between emerging tech and tangible business outcomes.",
         href: "/services/technology-consulting",
         highlights: ["AI & data consulting", "IoT strategy", "AR consulting"],
         sublinks: [
@@ -142,12 +142,12 @@ const categories: ServiceCategory[] = [
     id: "software-engineering",
     icon: Wrench,
     title: "Software Engineering",
-    subtitle: "Craft robust mobile apps, high-performance web platforms, and enterprise-grade software — engineered for speed, reliability, and seamless scalability.",
+    subtitle: "Craft robust mobile apps, high-performance web platforms, and enterprise-grade software  -  engineered for speed, reliability, and seamless scalability.",
     services: [
       {
         icon: Smartphone,
         title: "Mobile App Development",
-        description: "Pixel-perfect native and cross-platform apps for iOS & Android — with fluid interactions, offline-first design, and features users actually love.",
+        description: "Pixel-perfect native and cross-platform apps for iOS & Android  -  with fluid interactions, offline-first design, and features users actually love.",
         href: "/services/mobile-app-development",
         highlights: ["React Native & Flutter", "Native iOS/Android", "App Store optimization"],
         sublinks: [
@@ -161,7 +161,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Globe,
         title: "Web Development",
-        description: "Blazing-fast, secure, and fully responsive web experiences — whether it's a conversion-focused landing page or a complex multi-tenant platform.",
+        description: "Blazing-fast, secure, and fully responsive web experiences  -  whether it's a conversion-focused landing page or a complex multi-tenant platform.",
         href: "/services/web-development",
         highlights: ["Next.js & React", "Progressive Web Apps", "Performance optimization"],
         sublinks: [
@@ -176,7 +176,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Monitor,
         title: "Software Development",
-        description: "Complete lifecycle software engineering — from enterprise applications and API ecosystems to intricate system integrations that grow with your ambition.",
+        description: "Complete lifecycle software engineering  -  from enterprise applications and API ecosystems to intricate system integrations that grow with your ambition.",
         href: "/services/software-development",
         highlights: ["Enterprise apps", "API development", "System integration"],
         sublinks: [
@@ -191,7 +191,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Boxes,
         title: "MVP Development",
-        description: "Validate fast with lean prototypes, single-feature MVPs, or full product builds — then scale confidently with our expert guidance at every stage.",
+        description: "Validate fast with lean prototypes, single-feature MVPs, or full product builds  -  then scale confidently with our expert guidance at every stage.",
         href: "/services/mvp-development",
         highlights: ["Prototype design", "MVP build & scale", "MVP consulting"],
         sublinks: [
@@ -206,7 +206,7 @@ const categories: ServiceCategory[] = [
       {
         icon: UsersRound,
         title: "Hire Dedicated Developers",
-        description: "Plug in pre-vetted senior talent exactly when you need it — from individual specialists to fully integrated engineering pods, tailored to your workflow.",
+        description: "Plug in pre-vetted senior talent exactly when you need it  -  from individual specialists to fully integrated engineering pods, tailored to your workflow.",
         href: "/services/hire-dedicated-developers",
         highlights: ["Staff augmentation", "Dedicated teams", "Flexible models"],
         sublinks: [
@@ -221,7 +221,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Palette,
         title: "UI/UX Design",
-        description: "Research-backed, conversion-driven design — blending intuitive usability with contemporary aesthetics to create interfaces people remember.",
+        description: "Research-backed, conversion-driven design  -  blending intuitive usability with contemporary aesthetics to create interfaces people remember.",
         href: "/services/ui-ux-design",
         highlights: ["Design systems", "User research", "Prototyping & testing"],
         sublinks: [
@@ -251,7 +251,7 @@ const categories: ServiceCategory[] = [
       {
         icon: ServerCog,
         title: "IT Consulting",
-        description: "Clear-eyed infrastructure planning, seamless system integration, and strategic IT advisory — getting the most out of every technology dollar.",
+        description: "Clear-eyed infrastructure planning, seamless system integration, and strategic IT advisory  -  getting the most out of every technology dollar.",
         href: "/services/it-consulting",
         highlights: ["IT strategy", "System integration", "Infrastructure planning"],
         sublinks: [
@@ -269,12 +269,12 @@ const categories: ServiceCategory[] = [
     id: "digital-automation",
     icon: Briefcase,
     title: "Digital Automation",
-    subtitle: "Accelerate revenue with growth-focused marketing, cloud-native infrastructure, and product-led engineering — turning operational complexity into competitive advantage.",
+    subtitle: "Accelerate revenue with growth-focused marketing, cloud-native infrastructure, and product-led engineering  -  turning operational complexity into competitive advantage.",
     services: [
       {
         icon: Package,
         title: "Product Engineering",
-        description: "Full-spectrum product creation — ideation workshops, rapid prototyping, iterative builds, and market launch — transforming concepts into category-defining products.",
+        description: "Full-spectrum product creation  -  ideation workshops, rapid prototyping, iterative builds, and market launch  -  transforming concepts into category-defining products.",
         href: "/services/product-engineering",
         highlights: ["Idea to launch", "Product strategy", "Scalable architecture"],
         sublinks: [
@@ -304,7 +304,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Blocks,
         title: "WordPress Development",
-        description: "Bespoke WordPress themes, performance-optimized plugins, WooCommerce setups, and headless CMS solutions — empowering content-first brands to publish at scale.",
+        description: "Bespoke WordPress themes, performance-optimized plugins, WooCommerce setups, and headless CMS solutions  -  empowering content-first brands to publish at scale.",
         href: "/services/wordpress-development",
         highlights: ["Custom themes", "WooCommerce", "Headless WordPress"],
         sublinks: [
@@ -319,7 +319,7 @@ const categories: ServiceCategory[] = [
       {
         icon: TrendingUp,
         title: "Digital Marketing",
-        description: "Data-driven, full-funnel campaigns — organic search, paid acquisition, social engagement, email nurturing, and ASO — engineered to maximize every click.",
+        description: "Data-driven, full-funnel campaigns  -  organic search, paid acquisition, social engagement, email nurturing, and ASO  -  engineered to maximize every click.",
         href: "/services/digital-marketing",
         highlights: ["SEO & PPC", "Social media & email", "Content & ASO"],
         sublinks: [
@@ -334,7 +334,7 @@ const categories: ServiceCategory[] = [
       {
         icon: Cloud,
         title: "Cloud Services",
-        description: "Architecture, migration, and managed services across AWS, Azure & GCP — with DevOps baked in for cost-efficient, always-on cloud operations.",
+        description: "Architecture, migration, and managed services across AWS, Azure & GCP  -  with DevOps baked in for cost-efficient, always-on cloud operations.",
         href: "/services/cloud-services",
         highlights: ["Cloud migration", "DevOps as a service", "Infrastructure & IaC"],
         sublinks: [
@@ -349,7 +349,7 @@ const categories: ServiceCategory[] = [
       {
         icon: GitMerge,
         title: "DevOps & Cloud Automation",
-        description: "Automated CI/CD, Docker & Kubernetes orchestration, Terraform-driven IaC, and self-healing infrastructure — shipping features faster with zero-drama deployments.",
+        description: "Automated CI/CD, Docker & Kubernetes orchestration, Terraform-driven IaC, and self-healing infrastructure  -  shipping features faster with zero-drama deployments.",
         href: "/services/devops-cloud-automation",
         highlights: ["CI/CD pipelines", "Kubernetes & Docker", "Infrastructure as Code"],
         sublinks: [
@@ -366,12 +366,12 @@ const categories: ServiceCategory[] = [
 ];
 
 const processSteps = [
-  { step: "01", title: "Discovery & Strategy", description: "We map your objectives, uncover friction points, and evaluate your tech ecosystem — then distill it all into a clear, actionable roadmap.", icon: Lightbulb },
-  { step: "02", title: "Design & Architecture", description: "Intuitive interfaces meet resilient system blueprints — designed to delight users today and handle ten-fold growth tomorrow.", icon: Layers },
+  { step: "01", title: "Discovery & Strategy", description: "We map your objectives, uncover friction points, and evaluate your tech ecosystem  -  then distill it all into a clear, actionable roadmap.", icon: Lightbulb },
+  { step: "02", title: "Design & Architecture", description: "Intuitive interfaces meet resilient system blueprints  -  designed to delight users today and handle ten-fold growth tomorrow.", icon: Layers },
   { step: "03", title: "Agile Development", description: "Two-week sprints, daily standups, and real-time demos keep you in the loop while we ship production-ready features fast.", icon: Cog },
-  { step: "04", title: "Testing & QA", description: "Automated regression suites, manual edge-case sweeps, cross-device coverage — every release meets the bar before it leaves the lab.", icon: CheckCircle2 },
+  { step: "04", title: "Testing & QA", description: "Automated regression suites, manual edge-case sweeps, cross-device coverage  -  every release meets the bar before it leaves the lab.", icon: CheckCircle2 },
   { step: "05", title: "Deployment & Launch", description: "Seamless rollouts with blue-green deploys, instant rollback capability, and performance baselining for a confident go-live.", icon: Rocket },
-  { step: "06", title: "Support & Growth", description: "Post-launch, we stay engaged — monitoring health, iterating on analytics insights, and scaling infrastructure as demand climbs.", icon: HeartHandshake },
+  { step: "06", title: "Support & Growth", description: "Post-launch, we stay engaged  -  monitoring health, iterating on analytics insights, and scaling infrastructure as demand climbs.", icon: HeartHandshake },
 ];
 
 const industries = [
@@ -427,7 +427,7 @@ const industries = [
 
 const stats = [
   { value: 150, suffix: "+", label: "Projects Delivered", description: "Production-ready products launched across three continents" },
-  { value: 10, suffix: "+", label: "Global Clients", description: "Partnering with ambitious brands — from seed-stage to enterprise" },
+  { value: 10, suffix: "+", label: "Global Clients", description: "Partnering with ambitious brands  -  from seed-stage to enterprise" },
   { value: 98, suffix: "%", label: "Client Retention", description: "Relationships built on transparency, results, and mutual growth" },
   { value: 10, suffix: "+", label: "Industries Served", description: "Deep vertical expertise from fintech to healthcare and beyond" },
 ];
@@ -573,7 +573,7 @@ function ServiceCardIllustration({ title }: { title: string }) {
 }
 
 /* ═══════════════════════════════════════════════════════
-   CATEGORY VISUALS — gradient icon badges with tech logos
+   CATEGORY VISUALS  -  gradient icon badges with tech logos
    ═══════════════════════════════════════════════════════ */
 
 const categoryLogos: Record<string, { logos: string[]; gradient: string }> = {
@@ -607,7 +607,7 @@ function CategoryVisual({ id }: { id: string }) {
           <Image src={`${DEVICON}/${data.logos[0]}`} alt="" width={28} height={28} className="w-6 h-6 object-contain" unoptimized />
         </div>
 
-        {/* Center logo — larger */}
+        {/* Center logo  -  larger */}
         <div className="w-14 h-14 rounded-2xl bg-white dark:bg-white/10 shadow-lg shadow-black/8 dark:shadow-black/30 border border-black/[0.06] dark:border-white/[0.08] flex items-center justify-center z-10 hover:scale-110 transition-transform duration-500">
           <Image src={`${DEVICON}/${data.logos[1]}`} alt="" width={36} height={36} className="w-8 h-8 object-contain" unoptimized />
         </div>
@@ -820,7 +820,7 @@ function ProcessTimeline() {
             From Concept to <span className="text-black dark:text-white">Production</span>
           </h2>
           <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-            A battle-tested six-phase process balancing speed, quality, and full visibility — so there are no surprises on launch day.
+            A battle-tested six-phase process balancing speed, quality, and full visibility  -  so there are no surprises on launch day.
           </p>
         </motion.div>
 
@@ -921,7 +921,7 @@ function IndustriesSection() {
             Built for <span className="text-black dark:text-white">Your Industry</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            Vertical-specific knowledge baked into every engagement — from regulatory nuances in finance to patient-safety standards in healthcare.
+            Vertical-specific knowledge baked into every engagement  -  from regulatory nuances in finance to patient-safety standards in healthcare.
           </p>
         </motion.div>
 
@@ -1017,10 +1017,10 @@ function WhyChooseUs() {
   const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
   const items = [
-    { icon: Users, title: "Elite Engineering Talent", stat: "90+", statLabel: "Engineers", desc: "Seasoned developers, designers, and strategists — hand-picked for domain depth and cross-functional agility.", highlights: ["Full-stack expertise", "Domain specialists", "Certified professionals"] },
-    { icon: Clock, title: "Predictable Delivery", stat: "95%", statLabel: "On Schedule", desc: "Structured sprints, real-time dashboards, and proactive risk mitigation — 95% of milestones hit on or ahead of schedule.", highlights: ["Agile methodology", "Sprint-based delivery", "Transparent timelines"] },
-    { icon: Layers, title: "Built to Scale", stat: "10x", statLabel: "Growth Ready", desc: "Cloud-native blueprints engineered for ten-fold traffic surges — so your stack never becomes the bottleneck.", highlights: ["Cloud-native design", "Microservices architecture", "Auto-scaling infra"] },
-    { icon: HeartHandshake, title: "Partners, Not Vendors", stat: "98%", statLabel: "Retention", desc: "Post-launch isn't goodbye — we stay embedded with proactive monitoring, continuous optimization, and growth strategy.", highlights: ["Dedicated support", "Continuous optimization", "Strategic guidance"] },
+    { icon: Users, title: "Elite Engineering Talent", stat: "90+", statLabel: "Engineers", desc: "Seasoned developers, designers, and strategists  -  hand-picked for domain depth and cross-functional agility.", highlights: ["Full-stack expertise", "Domain specialists", "Certified professionals"] },
+    { icon: Clock, title: "Predictable Delivery", stat: "95%", statLabel: "On Schedule", desc: "Structured sprints, real-time dashboards, and proactive risk mitigation  -  95% of milestones hit on or ahead of schedule.", highlights: ["Agile methodology", "Sprint-based delivery", "Transparent timelines"] },
+    { icon: Layers, title: "Built to Scale", stat: "10x", statLabel: "Growth Ready", desc: "Cloud-native blueprints engineered for ten-fold traffic surges  -  so your stack never becomes the bottleneck.", highlights: ["Cloud-native design", "Microservices architecture", "Auto-scaling infra"] },
+    { icon: HeartHandshake, title: "Partners, Not Vendors", stat: "98%", statLabel: "Retention", desc: "Post-launch isn't goodbye  -  we stay embedded with proactive monitoring, continuous optimization, and growth strategy.", highlights: ["Dedicated support", "Continuous optimization", "Strategic guidance"] },
   ];
 
   return (
@@ -1039,7 +1039,7 @@ function WhyChooseUs() {
             The Cloud Nexus <span className="text-black dark:text-white">Advantage</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            Technical depth meets business intuition — every solution is calibrated to deliver measurable impact, not just clean code.
+            Technical depth meets business intuition  -  every solution is calibrated to deliver measurable impact, not just clean code.
           </p>
         </motion.div>
 
@@ -1126,7 +1126,7 @@ function CTASection() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed"
         >
-          Share your challenge, and we&apos;ll map a clear path — from architecture to launch — backed by engineers who&apos;ve done it hundreds of times.
+          Share your challenge, and we&apos;ll map a clear path  -  from architecture to launch  -  backed by engineers who&apos;ve done it hundreds of times.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -1182,7 +1182,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-6 pt-28 sm:pt-32 pb-24 relative">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-            {/* Left — Text Content */}
+            {/* Left  -  Text Content */}
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
 
               <motion.h1
@@ -1202,7 +1202,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.7, delay: 0.25 }}
                 className="mt-6 text-lg md:text-xl font-medium text-black/50 dark:text-white/50 max-w-xl leading-relaxed"
               >
-                Strategy, design, engineering, and growth — one partner covering the entire digital lifecycle so you can focus on what matters most: your business.
+                Strategy, design, engineering, and growth  -  one partner covering the entire digital lifecycle so you can focus on what matters most: your business.
               </motion.p>
 
               <motion.p
@@ -1235,7 +1235,7 @@ export default function ServicesPage() {
               </motion.div>
             </div>
 
-            {/* Right — Hero Image */}
+            {/* Right  -  Hero Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.92, x: 40 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -1256,7 +1256,7 @@ export default function ServicesPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
 
-              {/* Floating stats badge — top-right */}
+              {/* Floating stats badge  -  top-right */}
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1274,7 +1274,7 @@ export default function ServicesPage() {
                 </div>
               </motion.div>
 
-              {/* Floating badge — bottom-left */}
+              {/* Floating badge  -  bottom-left */}
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}

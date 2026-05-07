@@ -44,7 +44,7 @@ const stats = [
 const companyPages = [
   {
     icon: Eye, title: "Overview", href: "/company/overview",
-    desc: "Get to know Cloud Nexus — our journey since Jan 2025, our vision for the future, and what drives us to build exceptional technology solutions for businesses worldwide.",
+    desc: "Get to know Cloud Nexus  -  our journey since Jan 2025, our vision for the future, and what drives us to build exceptional technology solutions for businesses worldwide.",
     color: "#4EB3E8",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&q=80",
   },
@@ -56,7 +56,7 @@ const companyPages = [
   },
   {
     icon: Heart, title: "Life @ Cloud Nexus", href: "/company/life-at-cloud-nexus",
-    desc: "Discover what it's like to work at Cloud Nexus — our culture, workspace, team activities, and the environment that fuels innovation.",
+    desc: "Discover what it's like to work at Cloud Nexus  -  our culture, workspace, team activities, and the environment that fuels innovation.",
     color: "#ef4444",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop&q=80",
   },
@@ -68,25 +68,25 @@ const companyPages = [
   },
   {
     icon: GitBranch, title: "Process Methodology", href: "/company/process-methodology",
-    desc: "Our agile development process — sprint planning, code reviews, automated testing, and continuous deployment. See how we deliver 50+ projects on time with quality.",
+    desc: "Our agile development process  -  sprint planning, code reviews, automated testing, and continuous deployment. See how we deliver 50+ projects on time with quality.",
     color: "#f59e0b",
     image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=500&h=300&fit=crop&q=80",
   },
   {
     icon: Server, title: "Infrastructure", href: "/company/infrastructure",
-    desc: "Multi-cloud architecture across AWS, Azure & GCP, enterprise-grade security, automated CI/CD pipelines, and 99.9% uptime SLA that powers our operations.",
+    desc: "A modern, thoughtfully designed workspace in the heart of Bhopal, equipped with high-performance workstations, enterprise connectivity, and world-class facilities for our team.",
     color: "#06b6d4",
-    image: "/assets/images/infra-hero.png",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=300&fit=crop&q=80",
   },
   {
     icon: Calendar, title: "Events", href: "/company/events",
-    desc: "From global tech conferences to hands-on workshops — discover where Cloud Nexus is connecting, learning, and innovating.",
+    desc: "From global tech conferences to hands-on workshops  -  discover where Cloud Nexus is connecting, learning, and innovating.",
     color: "#8b5cf6",
     image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&h=300&fit=crop&q=80",
   },
   {
     icon: Gift, title: "Career Benefits", href: "/company/career-benefits",
-    desc: "12+ unique perks — complimentary meals, ₹2Cr insurance, PS5 chill room, team outings, certifications, and a supportive work culture that values your growth.",
+    desc: "12+ unique perks  -  complimentary meals, ₹2Cr insurance, PS5 chill room, team outings, certifications, and a supportive work culture that values your growth.",
     color: "#f59e0b",
     image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&h=300&fit=crop&q=80",
   },
@@ -95,7 +95,7 @@ const companyPages = [
 const values = [
   { title: "Innovation First", desc: "We push boundaries and embrace cutting-edge technologies to solve complex problems.", color: "#4EB3E8" },
   { title: "Client Success", desc: "Your success is our success. We measure ourselves by the impact we create for your business.", color: "#10b981" },
-  { title: "Transparency", desc: "Open communication, honest timelines, and no surprises — that's how we build trust.", color: "#8b5cf6" },
+  { title: "Transparency", desc: "Open communication, honest timelines, and no surprises  -  that's how we build trust.", color: "#8b5cf6" },
   { title: "Quality Obsession", desc: "Every line of code, every pixel, and every interaction is crafted with precision and care.", color: "#f59e0b" },
 ];
 
@@ -252,7 +252,7 @@ export default function CompanyPage() {
         <motion.div className="text-center mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Our Growth <span className="text-[#4EB3E8]">Journey</span></h2>
           <p className="text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            From a seed of an idea to a growing force in technology — every milestone marks a step toward our vision.
+            From a seed of an idea to a growing force in technology  -  every milestone marks a step toward our vision.
           </p>
         </motion.div>
 
@@ -273,7 +273,7 @@ export default function CompanyPage() {
           {[
             {
               icon: Sprout, date: "19 Jan 2025", title: "The Seed Was Planted",
-              desc: "Cloud Nexus was founded with a clear mission — to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful.",
+              desc: "Cloud Nexus was founded with a clear mission  -  to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful.",
               color: "#4EB3E8",
             },
             {
@@ -288,7 +288,7 @@ export default function CompanyPage() {
             },
             {
               icon: Sun, date: "Today & Beyond", title: "Reaching New Heights",
-              desc: "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning — with plans to scale further, innovate boldly, and create lasting impact.",
+              desc: "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning  -  with plans to scale further, innovate boldly, and create lasting impact.",
               color: "#f59e0b",
             },
           ].map((step, i) => {
@@ -334,7 +334,7 @@ export default function CompanyPage() {
                 Let&apos;s Build Something <span className="text-[#4EB3E8]">Extraordinary</span>
               </h2>
               <p className="text-base text-black/55 dark:text-white/50 max-w-lg mx-auto leading-relaxed mb-8">
-                Whether you&apos;re a startup with a bold idea or an enterprise seeking digital transformation — we&apos;re here to make it happen.
+                Whether you&apos;re a startup with a bold idea or an enterprise seeking digital transformation  -  we&apos;re here to make it happen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/resources/free-consultation"

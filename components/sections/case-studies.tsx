@@ -519,7 +519,7 @@ export function CaseStudies() {
         <Card className="bg-[#D9EAFD] dark:bg-[#0d0d0d] border-[#4EB3E8]/10 dark:border-[#1e1e1e] rounded-2xl overflow-hidden shadow-2xl p-0">
           <div className="grid lg:grid-cols-[1fr_360px] min-h-[480px]">
 
-            {/* Left — Story */}
+            {/* Left  -  Story */}
             <div className={`relative p-5 sm:p-8 md:p-10 lg:p-12 overflow-hidden`}>
 
               {/* Top row: badges */}
@@ -587,7 +587,7 @@ export function CaseStudies() {
               </div>
             </div>
 
-            {/* Right — Timeline */}
+            {/* Right  -  Timeline */}
             <div className="border-t lg:border-t-0 lg:border-l border-[#4EB3E8]/10 dark:border-[#1e1e1e] p-5 sm:p-8 md:p-10 flex flex-col gap-0">
               <div className="flex items-center gap-2 mb-8">
                 <TrendingUp className="w-4 h-4 text-black/35 dark:text-[#555]" />

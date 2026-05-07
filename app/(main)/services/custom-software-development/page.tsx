@@ -11,7 +11,7 @@ const offerings = [
   { icon: Layers, title: "SaaS Products", desc: "End-to-end SaaS development from MVP to market-ready product with multi-tenant architecture." },
   { icon: Settings, title: "Legacy Modernization", desc: "Transform outdated systems into modern, cloud-ready solutions without disrupting operations." },
   { icon: GitBranch, title: "API & Integrations", desc: "RESTful & GraphQL API development with seamless third-party service integrations." },
-  { icon: Shield, title: "Quality Assurance", desc: "Comprehensive testing strategies — unit, integration, E2E, and performance testing." },
+  { icon: Shield, title: "Quality Assurance", desc: "Comprehensive testing strategies  -  unit, integration, E2E, and performance testing." },
   { icon: Zap, title: "Maintenance & Support", desc: "24/7 monitoring, proactive updates, and continuous optimization post-launch." },
 ];
 
@@ -68,7 +68,7 @@ export default function CustomSoftwareDevelopmentPage() {
           className="py-16 max-w-4xl"
         >
           <p className="text-lg md:text-xl text-black/60 dark:text-white/60 leading-relaxed">
-            We build custom software solutions from the ground up — designed to solve your unique challenges, streamline operations, and drive growth. From enterprise platforms to SaaS products, our engineering team delivers high-performance applications that scale with your business.
+            We build custom software solutions from the ground up  -  designed to solve your unique challenges, streamline operations, and drive growth. From enterprise platforms to SaaS products, our engineering team delivers high-performance applications that scale with your business.
           </p>
           <p className="mt-6 text-lg md:text-xl text-black/60 dark:text-white/60 leading-relaxed">
             Every line of code is written with purpose. We follow industry best practices in clean architecture, automated testing, and DevOps to ensure your software is maintainable, secure, and future-proof.

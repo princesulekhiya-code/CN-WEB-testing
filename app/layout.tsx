@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "CN",
     template: "%s | CN",
   },
-  description: "CN — Company website",
+  description: "CN  -  Company website",
 };
 
 export default function RootLayout({

@@ -55,7 +55,7 @@ const executionPhases = [
     icon: Code2,
     steps: [
       "Developers prepare sprint plan with BA & set up backend infrastructure",
-      "Short agile sprints — maximum 2 weeks each for rapid delivery",
+      "Short agile sprints  -  maximum 2 weeks each for rapid delivery",
       "Design, develop, deploy, and QA for each individual sprint",
       "UAT on individual sprints to assure delivery stays on schedule",
     ],
@@ -66,7 +66,7 @@ const executionPhases = [
     color: "#ef4444",
     icon: TestTube,
     steps: [
-      "Comprehensive testing — unit, integration, performance, and security",
+      "Comprehensive testing  -  unit, integration, performance, and security",
       "Cross-browser and cross-device compatibility testing",
       "User acceptance testing (UAT) with client feedback loop",
       "Bug fixes, regression testing, and final quality sign-off",
@@ -88,7 +88,7 @@ const executionPhases = [
 
 const deliverables = [
   { icon: FileText, title: "SRS Draft & Approval", desc: "A formal functional specification drafted based on your requirements. We proceed only after your approval on the documented scope." },
-  { icon: FileCheck, title: "Final SRS Document", desc: "Complete functional specification incorporating your feedback — freezing requirements and drawing a clear project roadmap." },
+  { icon: FileCheck, title: "Final SRS Document", desc: "Complete functional specification incorporating your feedback  -  freezing requirements and drawing a clear project roadmap." },
   { icon: CheckCircle2, title: "Scope Confirmation", desc: "Formally approved specification confirming project scope including features, tech-stack, timeline, and development plan." },
   { icon: Layers, title: "Wireframing & Prototyping", desc: "Non-working prototypes giving you an accurate preview of user interface layout, navigation flow, and interaction patterns." },
   { icon: Code2, title: "Agile Development", desc: "Design-to-code execution with unit testing and peer reviews. We infuse innovative features to bring your vision to life." },
@@ -151,9 +151,9 @@ const techStack = [
 ];
 
 const workingModels = [
-  { icon: DollarSign, title: "Fixed Price Model", desc: "Best for short-term projects with clear, well-documented requirements. You know the exact cost upfront — no surprises. Ideal for MVPs, landing pages, and well-scoped features.", features: ["Defined scope & budget", "Milestone-based payments", "Ideal for MVPs"] },
+  { icon: DollarSign, title: "Fixed Price Model", desc: "Best for short-term projects with clear, well-documented requirements. You know the exact cost upfront  -  no surprises. Ideal for MVPs, landing pages, and well-scoped features.", features: ["Defined scope & budget", "Milestone-based payments", "Ideal for MVPs"] },
   { icon: Clock, title: "Time & Material Model", desc: "Cost-effective for long-term projects with evolving requirements. Enables flexible resource allocation, workload management, and adapting to market needs as the project grows.", features: ["Flexible scope", "Pay for actual hours", "Best for evolving projects"] },
-  { icon: Users, title: "Dedicated Development Team", desc: "Preferred when projects require committed tech staff working exclusively on your product. Get a full team — developers, designers, QA — as an extension of your organization.", features: ["Full-time dedicated team", "Direct communication", "Monthly engagement"] },
+  { icon: Users, title: "Dedicated Development Team", desc: "Preferred when projects require committed tech staff working exclusively on your product. Get a full team  -  developers, designers, QA  -  as an extension of your organization.", features: ["Full-time dedicated team", "Direct communication", "Monthly engagement"] },
 ];
 
 const securityMeasures = [
@@ -186,7 +186,7 @@ export default function ProcessMethodologyPage() {
                 Our Process &<br /><span className="text-[#4EB3E8]">Development Methodology</span>
               </h1>
               <p className="mt-6 text-base md:text-lg text-black/55 dark:text-white/50 leading-relaxed max-w-xl">
-                A walkthrough to our simple, smart, and agile approach to software development. From discovery to deployment — every step is transparent, collaborative, and results-driven.
+                A walkthrough to our simple, smart, and agile approach to software development. From discovery to deployment  -  every step is transparent, collaborative, and results-driven.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/resources/free-consultation" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#4EB3E8] text-white text-sm font-semibold hover:bg-[#3a9fd4] transition-all shadow-lg shadow-[#4EB3E8]/20">
@@ -229,7 +229,7 @@ export default function ProcessMethodologyPage() {
                 We embrace Agile Methodology to encourage transparent communication, foster collaboration, combat uncertainty, cope with change, and continuously deliver new value.
               </p>
               <p className="mt-3 text-sm text-black/45 dark:text-white/40 leading-relaxed">
-                Everything — the development work, the information, and the investment — moves in an integrated fashion with measurable returns at every iteration.
+                Everything  -  the development work, the information, and the investment  -  moves in an integrated fashion with measurable returns at every iteration.
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
@@ -243,7 +243,7 @@ export default function ProcessMethodologyPage() {
             {[
               { icon: MessageSquare, title: "Transparent Communication", desc: "Daily standups, sprint reviews, and open Slack channels. You always know what's happening with your project.", color: "#4EB3E8" },
               { icon: GitBranch, title: "Iterative Development", desc: "2-week sprints with regular demos. You see progress, provide feedback, and steer the direction continuously.", color: "#10b981" },
-              { icon: Target, title: "Goal-Driven Execution", desc: "Every sprint has clear objectives tied to business outcomes. We don't just build features — we deliver results.", color: "#8b5cf6" },
+              { icon: Target, title: "Goal-Driven Execution", desc: "Every sprint has clear objectives tied to business outcomes. We don't just build features  -  we deliver results.", color: "#8b5cf6" },
               { icon: BarChart3, title: "Measurable Progress", desc: "Velocity tracking, burndown charts, and regular reports. Data-driven insights into project health and timeline.", color: "#f59e0b" },
             ].map((item, i) => {
               const Icon = item.icon;
@@ -356,7 +356,7 @@ export default function ProcessMethodologyPage() {
             <motion.div className="lg:col-span-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Our <span className="text-[#4EB3E8]">Deliverables</span></h2>
               <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-                From the moment we take up your project, our duty begins. We keep you informed about every aspect of the development stage — transparent, systemized, and standardized.
+                From the moment we take up your project, our duty begins. We keep you informed about every aspect of the development stage  -  transparent, systemized, and standardized.
               </p>
             </motion.div>
             <motion.div className="lg:col-span-2 hidden lg:block" initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
@@ -559,7 +559,7 @@ export default function ProcessMethodologyPage() {
                 <span className="text-[#4EB3E8]">Let&apos;s Build It Together</span>
               </h2>
               <p className="text-base text-black/55 dark:text-white/50 max-w-lg mx-auto leading-relaxed mb-8">
-                Tell us about your idea and we&apos;ll provide a detailed proposal with architecture recommendations, timeline, and cost estimate — completely free.
+                Tell us about your idea and we&apos;ll provide a detailed proposal with architecture recommendations, timeline, and cost estimate  -  completely free.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/resources/free-consultation"

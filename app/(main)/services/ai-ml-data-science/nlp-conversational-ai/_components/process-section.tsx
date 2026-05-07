@@ -26,7 +26,7 @@ export function ProcessSection() {
             <span className="text-black dark:text-white">Process</span>
           </h2>
           <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-            Discovery through optimization — with evaluation harnesses and governance checkpoints
+            Discovery through optimization  -  with evaluation harnesses and governance checkpoints
             baked in from the start.
           </p>
         </motion.div>

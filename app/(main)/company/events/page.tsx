@@ -34,7 +34,7 @@ const featuredEvents = [
   },
   {
     tag: "EXPO",
-    title: "Collision 2026 — Toronto",
+    title: "Collision 2026  -  Toronto",
     desc: "Cloud Nexus will be showcasing next-generation digital transformation solutions at North America's fastest-growing tech conference. Meet our team at Booth #4217.",
     date: "Jun 23–26, 2026",
     location: "Toronto, Canada",
@@ -48,9 +48,9 @@ const featuredEvents = [
 const upcomingEvents = [
   { title: "Webinar: Scaling SaaS with Microservices", date: "May 15, 2026", time: "4:00 PM IST", location: "Virtual", type: "Webinar", icon: Video, color: "#4EB3E8" },
   { title: "DevOps Workshop: CI/CD Mastery", date: "May 25, 2026", time: "2:00 PM IST", location: "Virtual", type: "Workshop", icon: Zap, color: "#8b5cf6" },
-  { title: "Cloud Nexus Tech Meetup — Delhi NCR", date: "Jun 5, 2026", time: "6:00 PM IST", location: "New Delhi, India", type: "Meetup", icon: Users, color: "#10b981" },
+  { title: "Cloud Nexus Tech Meetup  -  Delhi NCR", date: "Jun 5, 2026", time: "6:00 PM IST", location: "New Delhi, India", type: "Meetup", icon: Users, color: "#10b981" },
   { title: "Hackathon: Build the Future of FinTech", date: "Jun 14–15, 2026", time: "9:00 AM IST", location: "Virtual", type: "Hackathon", icon: Trophy, color: "#f59e0b" },
-  { title: "AI in Healthcare — Panel Discussion", date: "Jul 3, 2026", time: "3:00 PM IST", location: "Virtual", type: "Panel", icon: Mic2, color: "#ef4444" },
+  { title: "AI in Healthcare  -  Panel Discussion", date: "Jul 3, 2026", time: "3:00 PM IST", location: "Virtual", type: "Panel", icon: Mic2, color: "#ef4444" },
   { title: "Cloud Architecture Masterclass", date: "Jul 18, 2026", time: "11:00 AM IST", location: "Bengaluru, India", type: "Workshop", icon: Target, color: "#06b6d4" },
 ];
 
@@ -63,7 +63,7 @@ const pastEvents = [
     desc: "Showcased AI-powered enterprise solutions to 180,000+ attendees from 170+ countries.",
   },
   {
-    title: "Collision 2025 — Toronto",
+    title: "Collision 2025  -  Toronto",
     date: "Jun 2025",
     location: "Toronto, Canada",
     image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=260&fit=crop&q=75",
@@ -122,7 +122,7 @@ export default function EventsPage() {
                 Where We <span className="text-[#4EB3E8]">Connect</span>,<br />Learn & Innovate
               </h1>
               <p className="mt-6 text-base md:text-lg text-black/55 dark:text-white/50 leading-relaxed max-w-xl">
-                From global tech conferences to hands-on workshops — discover where Cloud Nexus is sharing insights, showcasing solutions, and building the future of technology.
+                From global tech conferences to hands-on workshops  -  discover where Cloud Nexus is sharing insights, showcasing solutions, and building the future of technology.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/resources/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#4EB3E8] text-white text-sm font-semibold hover:bg-[#3a9fd4] transition-all shadow-lg shadow-[#4EB3E8]/20">
@@ -261,7 +261,7 @@ export default function EventsPage() {
           <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Upcoming <span className="text-[#4EB3E8]">Schedule</span></h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-              Webinars, workshops, meetups, and hackathons — join us online or in person.
+              Webinars, workshops, meetups, and hackathons  -  join us online or in person.
             </p>
           </motion.div>
 
@@ -306,7 +306,7 @@ export default function EventsPage() {
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Past <span className="text-[#4EB3E8]">Highlights</span></h2>
           <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            A look back at where we&apos;ve been — sharing knowledge, building partnerships, and making an impact.
+            A look back at where we&apos;ve been  -  sharing knowledge, building partnerships, and making an impact.
           </p>
         </motion.div>
 
@@ -337,12 +337,12 @@ export default function EventsPage() {
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why Attend Our <span className="text-[#4EB3E8]">Events</span>?</h2>
               <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-                Whether you&apos;re a developer, startup founder, or enterprise leader — our events are designed to deliver actionable insights, real connections, and hands-on learning.
+                Whether you&apos;re a developer, startup founder, or enterprise leader  -  our events are designed to deliver actionable insights, real connections, and hands-on learning.
               </p>
 
               <div className="mt-8 space-y-4">
                 {[
-                  { icon: Sparkles, title: "Live Product Demos", desc: "See our latest solutions in action — from AI platforms to cloud-native apps.", color: "#4EB3E8" },
+                  { icon: Sparkles, title: "Live Product Demos", desc: "See our latest solutions in action  -  from AI platforms to cloud-native apps.", color: "#4EB3E8" },
                   { icon: Users, title: "Networking & Partnerships", desc: "Connect with CTOs, engineers, and decision-makers from leading companies.", color: "#8b5cf6" },
                   { icon: Mic2, title: "Expert-Led Sessions", desc: "Learn from industry veterans through talks, panels, and hands-on workshops.", color: "#10b981" },
                   { icon: Target, title: "Business Opportunities", desc: "Explore collaboration models, hiring opportunities, and technology partnerships.", color: "#f59e0b" },

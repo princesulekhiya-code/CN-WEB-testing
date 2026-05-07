@@ -74,7 +74,7 @@ export function FreeConsultation() {
                   visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >
-                Book a free consultation with our experts. Share your vision, discuss your challenges, and get a tailored roadmap — no strings attached.
+                Book a free consultation with our experts. Share your vision, discuss your challenges, and get a tailored roadmap  -  no strings attached.
               </p>
 
               <div

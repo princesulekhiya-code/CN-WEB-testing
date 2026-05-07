@@ -22,7 +22,7 @@ export function BuildScaleThrive() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto"
         >
-          From expert talent to scalable cloud solutions—CloudNexus builds, deploys, and delivers real growth.
+          From expert talent to scalable cloud solutions - CloudNexus builds, deploys, and delivers real growth.
         </motion.p>
       </div>
     </section>

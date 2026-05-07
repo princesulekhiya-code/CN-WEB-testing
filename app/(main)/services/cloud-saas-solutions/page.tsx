@@ -42,7 +42,7 @@ export default function CloudSaasSolutionsPage() {
 
       <div className="mx-auto max-w-7xl px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="py-16 max-w-4xl">
-          <p className="text-lg md:text-xl text-black/60 dark:text-white/60 leading-relaxed">We help businesses harness the full power of the cloud — from migrating legacy workloads to building cloud-native SaaS platforms from scratch. Our expertise spans AWS, Azure, and GCP.</p>
+          <p className="text-lg md:text-xl text-black/60 dark:text-white/60 leading-relaxed">We help businesses harness the full power of the cloud  -  from migrating legacy workloads to building cloud-native SaaS platforms from scratch. Our expertise spans AWS, Azure, and GCP.</p>
           <p className="mt-6 text-lg md:text-xl text-black/60 dark:text-white/60 leading-relaxed">Whether you&apos;re moving to the cloud for the first time or optimizing an existing infrastructure, we deliver secure, scalable, and cost-efficient solutions that accelerate your digital transformation.</p>
         </motion.div>
 

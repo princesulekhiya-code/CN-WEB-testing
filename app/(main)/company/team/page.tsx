@@ -16,7 +16,7 @@ const leadership = [
     role: "Founder & CEO",
     photo: "/assets/teams/kaustubh-singh.jpeg",
     photoPos: "center 15%",
-    thought: "Building CloudNexus isn't just about technology — it's about empowering businesses to unlock their full potential through innovation and trust.",
+    thought: "Building CloudNexus isn't just about technology  -  it's about empowering businesses to unlock their full potential through innovation and trust.",
     highlights: ["Strategic Vision", "Business Growth", "Innovation"],
   },
   {
@@ -24,7 +24,7 @@ const leadership = [
     role: "Chief Technology Officer",
     photo: "/assets/teams/yash.png",
     photoPos: "center 35%",
-    thought: "Great technology is invisible — it just works. Our job is to architect systems that scale effortlessly and adapt to tomorrow's challenges.",
+    thought: "Great technology is invisible  -  it just works. Our job is to architect systems that scale effortlessly and adapt to tomorrow's challenges.",
     highlights: ["Tech Strategy", "Architecture", "R&D"],
   },
   {
@@ -32,7 +32,7 @@ const leadership = [
     role: "Technical Head",
     photo: "/assets/teams/shoaib-akhtar.jpeg",
     photoPos: "center 35%",
-    thought: "Code quality isn't a luxury — it's the foundation. Every line we write should be something the next developer can understand and trust.",
+    thought: "Code quality isn't a luxury  -  it's the foundation. Every line we write should be something the next developer can understand and trust.",
     highlights: ["Code Quality", "Tech Standards", "Mentorship"],
   },
   {
@@ -137,7 +137,7 @@ export default function TeamPage() {
               <span className="text-[#4EB3E8]">CloudNexus</span>
             </h1>
             <p className="mt-5 text-base md:text-lg text-black/50 dark:text-white/45 leading-relaxed max-w-2xl mx-auto">
-              A talented crew of engineers, designers, and strategists building the future of technology — one project at a time.
+              A talented crew of engineers, designers, and strategists building the future of technology  -  one project at a time.
             </p>
           </motion.div>
 
@@ -237,7 +237,7 @@ export default function TeamPage() {
         <div className="mx-auto max-w-7xl px-6 py-24">
           <motion.div
             className="text-center mb-14"
-            initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -261,7 +261,7 @@ export default function TeamPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
                   className="group grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden bg-[#f8f9fa] dark:bg-white/[0.02] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#4EB3E8]/20 hover:shadow-xl transition-all duration-400"
                 >
                   {/* Photo side */}
@@ -283,7 +283,7 @@ export default function TeamPage() {
                         {team.department}
                       </span>
                       <h3 className="text-xl font-bold text-white">{team.leader}</h3>
-                      <p className="text-sm text-white/60">{team.leaderRole} — Team {team.name}</p>
+                      <p className="text-sm text-white/60">{team.leaderRole}  -  Team {team.name}</p>
                     </div>
                   </div>
 

@@ -96,7 +96,7 @@ const processSteps = [
 ];
 
 const testimonials = [
-  { quote: "Cloud Nexus transformed our legacy monolith into a modern microservices platform running on Kubernetes. The migration was seamless — zero downtime, 3x faster performance, and our infrastructure costs dropped by 35%. Their engineering team felt like an extension of ours.", author: "Rahul Mehta", role: "Founder & CEO", company: "MedSync Health", initials: "RM", color: "bg-emerald-500", metric: "35% cost reduction" },
+  { quote: "Cloud Nexus transformed our legacy monolith into a modern microservices platform running on Kubernetes. The migration was seamless  -  zero downtime, 3x faster performance, and our infrastructure costs dropped by 35%. Their engineering team felt like an extension of ours.", author: "Rahul Mehta", role: "Founder & CEO", company: "MedSync Health", initials: "RM", color: "bg-emerald-500", metric: "35% cost reduction" },
   { quote: "We needed a mobile app delivered in 8 weeks. Cloud Nexus not only met the deadline but delivered 2 weeks early with features we hadn't even thought of. The UI/UX quality was on par with products from much larger companies. They've been our go-to partner since.", author: "Priya Sharma", role: "Product Manager", company: "ShopEase Retail", initials: "PS", color: "bg-purple-500", metric: "2 weeks early delivery" },
   { quote: "Their DevOps team set up our entire CI/CD pipeline, container orchestration, and monitoring stack. We went from manual deployments to 50+ automated deploys per week with 99.99% uptime. The ROI was visible within the first month.", author: "Arjun Patel", role: "Chief Technology Officer", company: "PayWise Fintech", initials: "AP", color: "bg-[#4EB3E8]", metric: "99.99% uptime achieved" },
 ];
@@ -119,7 +119,7 @@ export default function ResourcesPage() {
                 <span className="text-[#4EB3E8] italic">help you</span> today?
               </h1>
               <p className="mt-5 text-base text-black/50 dark:text-white/45 max-w-lg leading-relaxed">
-                From technical support to career opportunities, from expert consultations to in-depth tech insights — everything you need from Cloud Nexus is right here.
+                From technical support to career opportunities, from expert consultations to in-depth tech insights  -  everything you need from Cloud Nexus is right here.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/resources/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-semibold transition-all duration-300">
@@ -183,7 +183,7 @@ export default function ResourcesPage() {
             <div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">Our <span className="text-[#4EB3E8]">mission</span></h2>
               <p className="text-sm text-black/55 dark:text-white/45 leading-relaxed mb-4">
-                At Cloud Nexus, we believe that great technology should be accessible to every business — not just the ones with massive engineering teams and unlimited budgets. We exist to bridge that gap by providing world-class development, cloud, and AI services at a fraction of the cost of building in-house.
+                At Cloud Nexus, we believe that great technology should be accessible to every business  -  not just the ones with massive engineering teams and unlimited budgets. We exist to bridge that gap by providing world-class development, cloud, and AI services at a fraction of the cost of building in-house.
               </p>
               <p className="text-sm text-black/55 dark:text-white/45 leading-relaxed">
                 Founded by engineers who have worked with Fortune 500 companies and high-growth startups alike, Cloud Nexus brings enterprise-level expertise with the agility and passion of a boutique studio. Every project we take on is treated as a partnership, not a transaction.
@@ -192,7 +192,7 @@ export default function ResourcesPage() {
             <div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">Our <span className="text-[#4EB3E8]">approach</span></h2>
               <p className="text-sm text-black/55 dark:text-white/45 leading-relaxed mb-4">
-                We don&apos;t just write code — we solve problems. Every engagement starts with understanding your business goals, your users, and the outcomes that matter most. Our architects then design solutions that are not only technically sound but also aligned with your growth trajectory.
+                We don&apos;t just write code  -  we solve problems. Every engagement starts with understanding your business goals, your users, and the outcomes that matter most. Our architects then design solutions that are not only technically sound but also aligned with your growth trajectory.
               </p>
               <p className="text-sm text-black/55 dark:text-white/45 leading-relaxed">
                 We follow agile methodologies with transparent communication, regular demos, and iterative feedback. You&apos;ll always know what&apos;s being built, why it&apos;s being built, and when it will be delivered. No surprises, no hidden costs, no black boxes.
@@ -209,7 +209,7 @@ export default function ResourcesPage() {
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Explore our resources</h2>
           <p className="mt-1.5 text-sm text-black/45 dark:text-white/40">Everything you need to get started, stay informed, and grow with Cloud Nexus.</p>
         </motion.div>
-        {/* Top row — first 3 cards */}
+        {/* Top row  -  first 3 cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           {resources.slice(0, 3).map((resource, i) => {
             const Icon = resource.icon;
@@ -250,7 +250,7 @@ export default function ResourcesPage() {
           })}
         </div>
 
-        {/* Bottom row — last 2 cards, wider */}
+        {/* Bottom row  -  last 2 cards, wider */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {resources.slice(3).map((resource, i) => {
             const Icon = resource.icon;
@@ -408,7 +408,7 @@ export default function ResourcesPage() {
               What we <span className="text-[#4EB3E8]">build</span> for you
             </h2>
             <p className="text-sm text-black/50 dark:text-white/40 leading-relaxed mb-6 max-w-lg">
-              Cloud Nexus specializes in designing and building scalable digital solutions — from mobile apps and cloud infrastructure to AI-powered platforms and modern web applications. Our team brings expertise across the full technology spectrum.
+              Cloud Nexus specializes in designing and building scalable digital solutions  -  from mobile apps and cloud infrastructure to AI-powered platforms and modern web applications. Our team brings expertise across the full technology spectrum.
             </p>
             <div className="grid grid-cols-3 gap-3 mb-8">
               {services.map((s) => {
@@ -449,7 +449,7 @@ export default function ResourcesPage() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight">How we work</h2>
-            <p className="mt-1.5 text-sm text-black/45 dark:text-white/40 max-w-xl mx-auto">From first call to launch day — our proven 4-step process delivers results every time.</p>
+            <p className="mt-1.5 text-sm text-black/45 dark:text-white/40 max-w-xl mx-auto">From first call to launch day  -  our proven 4-step process delivers results every time.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -555,7 +555,7 @@ export default function ResourcesPage() {
               <div className="rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white dark:bg-white/[0.02] p-7 h-full">
                 <h3 className="text-lg font-bold mb-3">Long-Term Partnership Mindset</h3>
                 <p className="text-sm text-black/55 dark:text-white/45 leading-relaxed">
-                  We don&apos;t think of projects as one-off transactions. Our best client relationships span years, with Cloud Nexus evolving alongside their business. From the initial MVP to scaling to millions of users, we&apos;re here for the long haul. Over 80% of our revenue comes from repeat clients and referrals — a testament to the trust we build.
+                  We don&apos;t think of projects as one-off transactions. Our best client relationships span years, with Cloud Nexus evolving alongside their business. From the initial MVP to scaling to millions of users, we&apos;re here for the long haul. Over 80% of our revenue comes from repeat clients and referrals  -  a testament to the trust we build.
                 </p>
               </div>
             </motion.div>
@@ -625,11 +625,11 @@ export default function ResourcesPage() {
             {[
               { icon: Shield, title: "Enterprise Security", desc: "Zero-trust architecture, encrypted data, and continuous monitoring for all deployments." },
               { icon: Zap, title: "Fast Delivery", desc: "Agile methodology with 2-week sprints. From concept to MVP in as little as 6 weeks." },
-              { icon: Users, title: "Dedicated Teams", desc: "Experienced engineers assigned to your project — not shared across multiple clients." },
+              { icon: Users, title: "Dedicated Teams", desc: "Experienced engineers assigned to your project  -  not shared across multiple clients." },
               { icon: Award, title: "Quality First", desc: "Automated testing, code reviews, and CI/CD pipelines ensure every release meets the highest standards." },
               { icon: Headphones, title: "24/7 Support", desc: "Post-launch maintenance, monitoring, and round-the-clock support to keep things running smoothly." },
               { icon: Heart, title: "Client-Centric", desc: "Your success is our success. We treat every project as if it were our own product." },
-              { icon: TrendingUp, title: "Scalable Solutions", desc: "Architectures designed to grow with you — from 100 users to 10 million." },
+              { icon: TrendingUp, title: "Scalable Solutions", desc: "Architectures designed to grow with you  -  from 100 users to 10 million." },
               { icon: Globe, title: "Global Reach", desc: "Working with clients across India, US, UK, and the Middle East on diverse technology challenges." },
             ].map((item, i) => {
               const Icon = item.icon;
@@ -662,9 +662,9 @@ export default function ResourcesPage() {
               { q: "What types of projects does Cloud Nexus work on?", a: "We work on a wide range of projects including web applications, mobile apps (iOS & Android), cloud infrastructure, AI/ML solutions, SaaS platforms, e-commerce stores, and enterprise software. Whether you're a startup building your MVP or an enterprise modernizing legacy systems, we have the expertise to help." },
               { q: "How long does a typical project take?", a: "Project timelines vary based on scope and complexity. A simple MVP can be delivered in 6-8 weeks, while a full-featured enterprise platform may take 4-6 months. We provide detailed timelines during the planning phase and use agile sprints to ensure consistent progress and transparency." },
               { q: "What is your pricing model?", a: "We offer flexible pricing models including fixed-price projects, time & material engagements, and dedicated team hiring. During your free consultation, we'll discuss your requirements and recommend the model that best fits your budget and project needs." },
-              { q: "Do you provide post-launch support?", a: "Absolutely. We offer comprehensive post-launch support including bug fixes, performance monitoring, security updates, feature enhancements, and 24/7 emergency support. We believe our relationship doesn't end at launch — it's just the beginning." },
+              { q: "Do you provide post-launch support?", a: "Absolutely. We offer comprehensive post-launch support including bug fixes, performance monitoring, security updates, feature enhancements, and 24/7 emergency support. We believe our relationship doesn't end at launch  -  it's just the beginning." },
               { q: "Can I hire dedicated developers from Cloud Nexus?", a: "Yes. You can hire dedicated developers who work exclusively on your project as an extension of your team. They follow your processes, attend your standups, and are fully committed to your project goals. Available on monthly contracts with flexible scaling." },
-              { q: "How do I get started?", a: "The easiest way is to book a free 30-minute consultation. We'll discuss your project idea, technical requirements, and business goals. After the call, you'll receive a detailed proposal with architecture recommendations, timeline, and cost estimate — all at no obligation." },
+              { q: "How do I get started?", a: "The easiest way is to book a free 30-minute consultation. We'll discuss your project idea, technical requirements, and business goals. After the call, you'll receive a detailed proposal with architecture recommendations, timeline, and cost estimate  -  all at no obligation." },
             ].map((faq, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: i * 0.04 }}>
                 <div className="rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white dark:bg-white/[0.02] p-6">
@@ -683,7 +683,7 @@ export default function ResourcesPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready to start your next project?</h2>
             <p className="text-sm text-black/45 dark:text-white/40 mb-6 max-w-lg mx-auto leading-relaxed">
-              Whether you&#39;re a startup looking to build your MVP or an enterprise modernizing your stack — we&#39;re here to help you build something great.
+              Whether you&#39;re a startup looking to build your MVP or an enterprise modernizing your stack  -  we&#39;re here to help you build something great.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/resources/free-consultation" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#4EB3E8] hover:bg-[#3da0d5] text-white text-sm font-bold transition-all duration-300 hover:shadow-lg hover:shadow-[#4EB3E8]/20">

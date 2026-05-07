@@ -44,7 +44,7 @@ const industries: Industry[] = [
     title: "Healthcare & Lifesciences",
     tagline: "Building Healthier Futures with Technology",
     description:
-      "We build highly advanced and custom healthcare software solutions for all sizes of healthcare organizations and biopharma companies. Our HIPAA-compliant digital health solutions cover telemedicine platforms, electronic health records, patient portals, clinical data management, and medical device integration — designed for security, scalability, and regulatory compliance.",
+      "We build highly advanced and custom healthcare software solutions for all sizes of healthcare organizations and biopharma companies. Our HIPAA-compliant digital health solutions cover telemedicine platforms, electronic health records, patient portals, clinical data management, and medical device integration  -  designed for security, scalability, and regulatory compliance.",
     href: "/industry/healthcare-lifesciences",
     highlights: [
       "Telemedicine & virtual care platforms",
@@ -272,7 +272,7 @@ const industries: Industry[] = [
     title: "Home Service",
     tagline: "On-Demand Services at Your Doorstep",
     description:
-      "We develop on-demand home service platforms that seamlessly connect service providers with customers. Our solutions include intelligent booking engines, provider matching algorithms, scheduling systems, secure in-app payments, and real-time service tracking — all optimized for both web and mobile experiences.",
+      "We develop on-demand home service platforms that seamlessly connect service providers with customers. Our solutions include intelligent booking engines, provider matching algorithms, scheduling systems, secure in-app payments, and real-time service tracking  -  all optimized for both web and mobile experiences.",
     href: "/industry/home-service",
     highlights: [
       "Service booking platforms",

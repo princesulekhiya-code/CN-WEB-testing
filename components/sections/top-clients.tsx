@@ -61,7 +61,7 @@ export const TopClients: FC = () => {
           </p>
         </div>
 
-        {/* Marquee Row 1 — left to right */}
+        {/* Marquee Row 1  -  left to right */}
         <div
           className={`relative mb-6 transition-all duration-700 delay-200 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
@@ -98,7 +98,7 @@ export const TopClients: FC = () => {
           </div>
         </div>
 
-        {/* Marquee Row 2 — right to left */}
+        {/* Marquee Row 2  -  right to left */}
         <div
           className={`relative transition-all duration-700 delay-300 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"

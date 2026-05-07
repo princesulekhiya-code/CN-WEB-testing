@@ -25,7 +25,7 @@ export function ServiceOfferingsSection() {
             <span className="text-black dark:text-white">Services</span>
           </h2>
           <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            From classical NLP to modern LLMs — we design systems that understand your customers,
+            From classical NLP to modern LLMs  -  we design systems that understand your customers,
             employees, and documents at scale.
           </p>
         </motion.div>

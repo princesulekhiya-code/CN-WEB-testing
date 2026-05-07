@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
@@ -13,6 +13,7 @@ import {
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
+  X,
   Gift,
   Globe,
   GraduationCap,
@@ -37,7 +38,7 @@ import { Marquee } from "@/components/ui/marquee";
  * and set each string in `collageSrcs` (5 slots, Codiant-style mosaics) when ready. Empty strings
  * keep gradient placeholders.
  * Hero running strip (codiant.com/life-at-codiant): left column = 2 stacked;
- * middle & right = full-height portraits — URLs in `cultureHeroGallery`.
+ * middle & right = full-height portraits  -  URLs in `cultureHeroGallery`.
  * ═══════ */
 
 type YearKey = "2026" | "2025";
@@ -58,111 +59,110 @@ const emptyCollage = (): [string, string, string, string, string] => ["", "", ""
 const eventsByYear: Record<YearKey, CultureEvent[]> = {
   "2026": [
     {
-      id: "26-republic",
-      title: "Republic Day Celebration",
+      id: "26-cricket",
+      title: "Cricket League CCL'26",
       excerpt:
-        "Our first Republic Day as a growing team — flags, stories, chai, and the kind of morning that reminded us why building together matters more than building alone.",
-      collageSrcs: emptyCollage(),
+        "Season two of Cloud Nexus cricket  -  bigger teams, louder cheers, and sixes that echoed across the ground. When the stumps fell, the only thing standing was team spirit.",
+      collageSrcs: [
+        "/images/cricket-photos/image-22.jpeg",
+        "/images/cricket-photos/image-23.jpeg",
+        "/images/cricket-photos/image-24.jpeg",
+        "/images/cricket-photos/image-25.jpeg",
+        "/images/cricket-photos/image-26.jpeg",
+      ],
     },
     {
-      id: "26-holi",
-      title: "Holi @ Cloud Nexus",
+      id: "26-fun-friday",
+      title: "Fun Friday  -  Team Edition",
       excerpt:
-        "Colour in the air, laughter on every floor, and zero pretence. Holi here is permission to be playful, messy, and human together — before we ship the next big thing.",
-      collageSrcs: emptyCollage(),
+        "Keyboards down, vibes up. Our team's Fun Friday  -  games, laughs, team challenges, and the energy that reminds everyone why Cloud Nexus feels more like a crew than a company.",
+      collageSrcs: [
+        "/images/fun-friday-dev-team/team-photo.png",
+        "/images/fun-friday-dev-team/image-13.jpeg",
+        "/images/fun-friday-dev-team/image-14.jpeg",
+        "/images/fun-friday-dev-team/image-15.jpeg",
+        "/images/fun-friday-dev-team/image-16.jpeg",
+      ],
     },
     {
-      id: "26-hackathon",
-      title: "Hackathon 2.0",
+      id: "26-hyderabad",
+      title: "Hyderabad Team Trip 2026",
       excerpt:
-        "Two days of caffeine, whiteboards, and midnight demos. Teams chased wild ideas with full support — our biggest hackathon yet, with prototypes that could become real products.",
-      collageSrcs: emptyCollage(),
+        "The whole crew hit Hyderabad  -  biryani runs, late-night talks, sightseeing adventures, and the kind of bonding that no Zoom call can replicate. Work hard, travel harder.",
+      collageSrcs: [
+        "/images/hydrabad-/image-6.jpeg",
+        "/images/hydrabad-/image-7.jpeg",
+        "/images/hydrabad-/image-8.jpeg",
+        "/images/hydrabad-/image-9.jpeg",
+        "/images/hydrabad-/image-10.jpeg",
+      ],
     },
     {
-      id: "26-anniversary",
-      title: "1st Anniversary Celebration",
+      id: "26-independence-day",
+      title: "Independence Day 2026",
       excerpt:
-        "One year of Cloud Nexus. From a small team with a big dream to 50+ engineers delivering across 15 industries — we celebrated the journey, the people, and the milestones that got us here.",
-      collageSrcs: emptyCollage(),
-    },
-    {
-      id: "26-retreat",
-      title: "Team Retreat",
-      excerpt:
-        "Road-trip energy, slower conversations, and bonds that Slack threads cannot build. We stepped away to return sharper — with trust that makes the next sprint feel lighter.",
-      collageSrcs: emptyCollage(),
-    },
-    {
-      id: "26-womens-day",
-      title: "Women's Day 2026",
-      excerpt:
-        "Celebrating the women who power Cloud Nexus — 40%+ of our tech team. Games, surprises, heartfelt appreciation, and honest conversations about building a truly inclusive workplace.",
-      collageSrcs: emptyCollage(),
+        "Tricolour pride, patriotic vibes, and the Cloud Nexus team coming together to celebrate the spirit of freedom. A day of unity, gratitude, and national pride.",
+      collageSrcs: [
+        "/images/indipendent-day2026/image-33.jpeg",
+        "/images/indipendent-day2026/image-34.jpeg",
+        "/images/indipendent-day2026/image-33.jpeg",
+        "/images/indipendent-day2026/image-34.jpeg",
+        "/images/indipendent-day2026/image-33.jpeg",
+      ],
     },
   ],
   "2025": [
     {
-      id: "25-founding",
-      title: "Cloud Nexus is Born — Jan 2025",
+      id: "25-christmas",
+      title: "Merry Christmas 2025",
       excerpt:
-        "The day it all began. A small room, a whiteboard full of ambition, and a founding team that believed technology should solve real problems. Cloud Nexus officially launched on 19th January 2025.",
-      collageSrcs: emptyCollage(),
-    },
-    {
-      id: "25-first-project",
-      title: "First Client Project Delivered",
-      excerpt:
-        "Our first milestone — delivering a production-ready application for our very first client. Late nights, high fives, and the conviction that quality is non-negotiable, even from day one.",
-      collageSrcs: emptyCollage(),
-    },
-    {
-      id: "25-holi",
-      title: "Holi 2025 — Our First Festival",
-      excerpt:
-        "The very first festival at Cloud Nexus. Colours, music, and a brand-new team discovering that we already felt like a family — just weeks into building this company together.",
-      collageSrcs: emptyCollage(),
-    },
-    {
-      id: "25-team-grows",
-      title: "Team Grows to 30+",
-      excerpt:
-        "Within months of launch, Cloud Nexus grew from a founding squad to 30+ talented engineers, designers, and strategists. Every hire was a bet on craft, character, and curiosity.",
-      collageSrcs: emptyCollage(),
+        "Santa hats, secret gifts, and the whole Cloud Nexus crew spreading holiday cheer. Our first Christmas celebration  -  carols, cake, and memories that warmed up the entire office.",
+      collageSrcs: [
+        "/images/merry-christmas/image-27.jpeg",
+        "/images/merry-christmas/image-28.jpeg",
+        "/images/merry-christmas/image-29.jpeg",
+        "/images/merry-christmas/image-30.jpeg",
+        "/images/merry-christmas/image-31.jpeg",
+      ],
     },
     {
       id: "25-diwali",
       title: "Diwali Celebration 2025",
       excerpt:
-        "Our first Diwali as a company — tambola cheers, traditional outfits, rangoli, and that unmistakable Cloud Nexus buzz when everyone forgets their titles and celebrates as one crew.",
-      collageSrcs: emptyCollage(),
+        "Our first Diwali as a company  -  tambola cheers, traditional outfits, rangoli, and that unmistakable Cloud Nexus buzz when everyone forgets their titles and celebrates as one crew.",
+      collageSrcs: [
+        "/images/diwali-2025/IMG-20251018-WA0160.jpg",
+        "/images/diwali-2025/IMG_3573.jpg",
+        "/images/diwali-2025/IMG_3583.jpg",
+        "/images/diwali-2025/IMG_3480.jpg",
+        "/images/diwali-2025/IMG_3467.jpg",
+      ],
     },
     {
-      id: "25-cricket",
-      title: "Cricket League CCL'25",
+      id: "25-hackathon",
+      title: "Hackathon 2025",
       excerpt:
-        "Friendly fire on the field, loud cheering from the sidelines, and captains who would never trade their engineers for a trophy. The scoreboard resets — the friendships do not.",
-      collageSrcs: emptyCollage(),
+        "Our first-ever hackathon  -  48 hours of non-stop coding, wild ideas, midnight pizza, and prototypes that proved Cloud Nexus engineers don't just build products, they dream them into existence.",
+      collageSrcs: [
+        "/images/hackthon-2025/image-21.jpeg",
+        "/images/hackthon-2025/image-18.jpeg",
+        "/images/hackthon-2025/image-19.jpeg",
+        "/images/hackthon-2025/image-20.jpeg",
+        "/images/hackthon-2025/image-21.jpeg",
+      ],
     },
     {
-      id: "25-townhall",
-      title: "First Town Hall & Awards",
+      id: "25-founding",
+      title: "Cloud Nexus is Born  -  Jan 2025",
       excerpt:
-        "Our very first all-hands town hall. Transparency on stage, wins in the spotlight, hard questions welcomed — setting the culture of openness that defines Cloud Nexus from the start.",
-      collageSrcs: emptyCollage(),
-    },
-    {
-      id: "25-50-projects",
-      title: "50+ Projects Milestone",
-      excerpt:
-        "In less than a year, Cloud Nexus delivered 50+ projects across 15+ industries. From startups to enterprises, each project reinforced our commitment to quality and innovation.",
-      collageSrcs: emptyCollage(),
-    },
-    {
-      id: "25-year-end",
-      title: "Year-End Bash 2025",
-      excerpt:
-        "Music, food, inside jokes, and a shared exhale after an incredible founding year. We toasted to resilience, to learning curves, and to the people who made Cloud Nexus real.",
-      collageSrcs: emptyCollage(),
+        "The day it all began. A small room, a whiteboard full of ambition, and a founding team that believed technology should solve real problems. Cloud Nexus officially launched on 19th January 2025.",
+      collageSrcs: [
+        "/images/inauguration-2025/image.jpeg",
+        "/images/inauguration-2025/image-1.jpeg",
+        "/images/inauguration-2025/image-2.jpeg",
+        "/images/inauguration-2025/image-3.jpeg",
+        "/images/inauguration-2025/image-4.jpeg",
+      ],
     },
   ],
 };
@@ -172,19 +172,19 @@ const purposeValues = [
     Icon: Globe,
     title: "Diversity",
     description:
-      "We wholeheartedly welcome people at Cloud Nexus from diverse cultures, without discriminating on the basis of gender, race, religion, colour, age, ability, region, or orientation. Different experiences sharpen our products and our empathy — we hire for craft and character, and we protect psychological safety so every voice can speak without performing.",
+      "We wholeheartedly welcome people at Cloud Nexus from diverse cultures, without discriminating on the basis of gender, race, religion, colour, age, ability, region, or orientation. Different experiences sharpen our products and our empathy  -  we hire for craft and character, and we protect psychological safety so every voice can speak without performing.",
   },
   {
     Icon: Scale,
     title: "Equity",
     description:
-      "Our purpose is to be unbiased, impartial, and equitable toward clients and teammates alike. We aim for transparent expectations, fair processes, and outcomes people can trust — from how we scope work to how we review performance. Equity is not a slogan here; it is how we allocate attention, opportunity, and credit.",
+      "Our purpose is to be unbiased, impartial, and equitable toward clients and teammates alike. We aim for transparent expectations, fair processes, and outcomes people can trust  -  from how we scope work to how we review performance. Equity is not a slogan here; it is how we allocate attention, opportunity, and credit.",
   },
   {
     Icon: ShieldCheck,
     title: "Integrity",
     description:
-      "We work with honesty, clarity, and accountability. Trust is built in small moments — timelines kept, credit shared, hard truths spoken kindly, and ownership taken when things miss. At Cloud Nexus, integrity is the default setting for how we ship, how we negotiate, and how we treat one another.",
+      "We work with honesty, clarity, and accountability. Trust is built in small moments  -  timelines kept, credit shared, hard truths spoken kindly, and ownership taken when things miss. At Cloud Nexus, integrity is the default setting for how we ship, how we negotiate, and how we treat one another.",
   },
   {
     Icon: Handshake,
@@ -196,29 +196,29 @@ const purposeValues = [
     Icon: Trophy,
     title: "Meritocracy",
     description:
-      "We foster a meritocratic culture — recruiting, rewarding, promoting, and training in ways that let ideas win on merit, not noise. We sponsor growth paths that are visible and fair, because innovation needs a runway where effort and outcomes are recognised, not politics.",
+      "We foster a meritocratic culture  -  recruiting, rewarding, promoting, and training in ways that let ideas win on merit, not noise. We sponsor growth paths that are visible and fair, because innovation needs a runway where effort and outcomes are recognised, not politics.",
   },
 ];
 
 const diversityAtCloudNexus = [
   "Cloud Nexus is a company that appreciates diversity. We believe that besides employing the best talent, the range of perspectives, ideas, and cultures leads to better outcomes for clients and teams alike.",
-  "We are dedicated to connecting the right person with the right opportunity at the right time — in an inclusive climate for candidates, clients, and employees.",
+  "We are dedicated to connecting the right person with the right opportunity at the right time  -  in an inclusive climate for candidates, clients, and employees.",
   "Our objective is to attract and retain the best qualified people without discrimination on the basis of place of birth, race, colour, religion, gender, sexual orientation, age, or ability.",
   "Recognising diversity as a business advantage, we maintain workplace policies and programmes that foster inclusion, access to opportunity, and sustainable work-life balance.",
   "This non-discrimination policy applies to applicants and employees and covers recruiting, hiring, transfer, performance review, and compensation. Harassment or discrimination based on any of the above factors is not tolerated.",
 ];
 
 const joinPerks = [
-  { Icon: CalendarDays, title: "5 Days a Week", text: "Healthy work-life balance with a 5-day work week policy — no Saturday sprints.", color: "#4EB3E8" },
-  { Icon: Cake, title: "Birthday Celebration", text: "Celebrate your special day with the team — cake, gifts, and good vibes on us.", color: "#ef4444" },
+  { Icon: CalendarDays, title: "5 Days a Week", text: "Healthy work-life balance with a 5-day work week policy  -  no Saturday sprints.", color: "#4EB3E8" },
+  { Icon: Cake, title: "Birthday Celebration", text: "Celebrate your special day with the team  -  cake, gifts, and good vibes on us.", color: "#ef4444" },
   { Icon: PartyPopper, title: "Fun Connect", text: "Regular fun activities, games, and team bonding events to recharge and reconnect.", color: "#8b5cf6" },
   { Icon: Gift, title: "Rewards & Recognition", text: "Monthly and quarterly awards to recognize outstanding contributions and effort.", color: "#f59e0b" },
   { Icon: Plane, title: "Business Trips", text: "Opportunities to travel for client meetings, conferences, and global tech summits.", color: "#10b981" },
   { Icon: HeartPulse, title: "Medical Insurance", text: "Comprehensive health coverage including accidental and air accident cover up to ₹2 Cr.", color: "#06b6d4" },
   { Icon: Award, title: "Certifications", text: "Sponsored certifications and courses to boost your skills and accelerate career growth.", color: "#8b5cf6" },
-  { Icon: GraduationCap, title: "Complimentary Meals", text: "Breakfast, lunch, dinner, and chai — all provided so you stay fuelled and focused.", color: "#22c55e" },
-  { Icon: Smile, title: "Chill Room", text: "PS5, chess, UNO, bunk beds — a dedicated relaxation zone for when you need a break.", color: "#a855f7" },
-  { Icon: UserPlus, title: "Team Outings", text: "Monthly team outings (up to 2x/month) — fun activities that build real friendships.", color: "#f59e0b" },
+  { Icon: GraduationCap, title: "Complimentary Meals", text: "Breakfast, lunch, dinner, and chai  -  all provided so you stay fuelled and focused.", color: "#22c55e" },
+  { Icon: Smile, title: "Chill Room", text: "PS5, chess, UNO, bunk beds  -  a dedicated relaxation zone for when you need a break.", color: "#a855f7" },
+  { Icon: UserPlus, title: "Team Outings", text: "Monthly team outings (up to 2x/month)  -  fun activities that build real friendships.", color: "#f59e0b" },
   { Icon: Music, title: "Cultural Programs", text: "Festivals, traditions, and team rituals that celebrate the diversity of who we are.", color: "#ec4899" },
   { Icon: Sparkles, title: "Positive Environment", text: "A collaborative, respectful culture where teamwork, growth, and wellbeing come first.", color: "#4EB3E8" },
 ];
@@ -233,7 +233,7 @@ const everydayPerks = [
   {
     num: "02",
     title: "Healthy Environment",
-    text: "Psychological safety, open dialogue, and managers who listen — not just allocate tasks.",
+    text: "Psychological safety, open dialogue, and managers who listen  -  not just allocate tasks.",
     Icon: HeartPulse,
   },
   {
@@ -245,7 +245,7 @@ const everydayPerks = [
   {
     num: "04",
     title: "Scope of Growth",
-    text: "Stretch projects, internal mobility, and leaders who sponsor your next leap — not gatekeep it.",
+    text: "Stretch projects, internal mobility, and leaders who sponsor your next leap  -  not gatekeep it.",
     Icon: Rocket,
   },
   {
@@ -299,19 +299,19 @@ function CodiantMomentCollage({
     return (
       <div className="grid aspect-[5/3] w-full grid-cols-6 grid-rows-2 gap-1 bg-white p-[3px] sm:aspect-[16/10] dark:bg-zinc-950">
         <div className={`col-span-2 ${mosaicCell}`}>
-          <MomentCollageCell src={s0} alt={`${title} — photo 1`} />
+          <MomentCollageCell src={s0} alt={`${title}  -  photo 1`} />
         </div>
         <div className={`col-span-2 ${mosaicCell}`}>
-          <MomentCollageCell src={s1} alt={`${title} — photo 2`} />
+          <MomentCollageCell src={s1} alt={`${title}  -  photo 2`} />
         </div>
         <div className={`col-span-2 ${mosaicCell}`}>
-          <MomentCollageCell src={s2} alt={`${title} — photo 3`} />
+          <MomentCollageCell src={s2} alt={`${title}  -  photo 3`} />
         </div>
         <div className={`col-span-3 row-start-2 ${mosaicCell}`}>
-          <MomentCollageCell src={s3} alt={`${title} — photo 4`} />
+          <MomentCollageCell src={s3} alt={`${title}  -  photo 4`} />
         </div>
         <div className={`col-span-3 row-start-2 ${mosaicCell}`}>
-          <MomentCollageCell src={s4} alt={`${title} — photo 5`} />
+          <MomentCollageCell src={s4} alt={`${title}  -  photo 5`} />
         </div>
       </div>
     );
@@ -320,19 +320,19 @@ function CodiantMomentCollage({
   return (
     <div className="grid aspect-[5/3] w-full grid-cols-6 grid-rows-2 gap-1 bg-white p-[3px] sm:aspect-[16/10] dark:bg-zinc-950">
       <div className={`col-span-3 ${mosaicCell}`}>
-        <MomentCollageCell src={s0} alt={`${title} — photo 1`} />
+        <MomentCollageCell src={s0} alt={`${title}  -  photo 1`} />
       </div>
       <div className={`col-span-3 ${mosaicCell}`}>
-        <MomentCollageCell src={s1} alt={`${title} — photo 2`} />
+        <MomentCollageCell src={s1} alt={`${title}  -  photo 2`} />
       </div>
       <div className={`col-span-2 row-start-2 ${mosaicCell}`}>
-        <MomentCollageCell src={s2} alt={`${title} — photo 3`} />
+        <MomentCollageCell src={s2} alt={`${title}  -  photo 3`} />
       </div>
       <div className={`col-span-2 row-start-2 ${mosaicCell}`}>
-        <MomentCollageCell src={s3} alt={`${title} — photo 4`} />
+        <MomentCollageCell src={s3} alt={`${title}  -  photo 4`} />
       </div>
       <div className={`col-span-2 row-start-2 ${mosaicCell}`}>
-        <MomentCollageCell src={s4} alt={`${title} — photo 5`} />
+        <MomentCollageCell src={s4} alt={`${title}  -  photo 5`} />
       </div>
     </div>
   );
@@ -344,11 +344,11 @@ function CodiantMomentCollage({
  */
 const cultureHeroGallery = {
   leftStack: [
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=520&h=280&fit=crop&q=75",
-    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=520&h=280&fit=crop&q=75",
+    "/images/fun-friday-dev-team/team-photo.png",
+    "/images/cricket-photos/image-22.jpeg",
   ] as [string, string],
-  pillarMid: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=520&h=580&fit=crop&q=75",
-  pillarRight: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=520&h=580&fit=crop&q=75",
+  pillarMid: "/images/diwali-2025/IMG-20251018-WA0160.jpg",
+  pillarRight: "/images/inauguration-2025/image.jpeg",
 };
 
 function CultureHeroGalleryImage({
@@ -397,22 +397,22 @@ function CodiantRunningGalleryBlock({ blockId }: { blockId: string }) {
     <div className="grid h-[clamp(240px,40vh,580px)] w-[min(92vw,1040px)] shrink-0 grid-cols-3 grid-rows-2 gap-2 sm:gap-3 md:gap-5 md:h-[clamp(320px,46vh,580px)]">
       <CultureHeroGalleryImage
         src={top}
-        alt={`Cloud Nexus culture — ${blockId} left top`}
+        alt={`Cloud Nexus culture  -  ${blockId} left top`}
         className="col-start-1 row-start-1 h-full min-h-[120px] md:min-h-0"
       />
       <CultureHeroGalleryImage
         src={bottom}
-        alt={`Cloud Nexus culture — ${blockId} left bottom`}
+        alt={`Cloud Nexus culture  -  ${blockId} left bottom`}
         className="col-start-1 row-start-2 h-full min-h-[120px] md:min-h-0"
       />
       <CultureHeroGalleryImage
         src={pillarMid}
-        alt={`Cloud Nexus culture — ${blockId} center`}
+        alt={`Cloud Nexus culture  -  ${blockId} center`}
         className="col-start-2 row-span-2 row-start-1 h-full min-h-[200px] md:min-h-0"
       />
       <CultureHeroGalleryImage
         src={pillarRight}
-        alt={`Cloud Nexus culture — ${blockId} right`}
+        alt={`Cloud Nexus culture  -  ${blockId} right`}
         className="col-start-3 row-span-2 row-start-1 h-full min-h-[200px] md:min-h-0"
       />
     </div>
@@ -475,6 +475,28 @@ export default function LifeAtCloudNexusPage() {
   const [year, setYear] = useState<YearKey>("2026");
   const [momentPage, setMomentPage] = useState(0);
   const [purposeIndex, setPurposeIndex] = useState(0);
+  const [gallery, setGallery] = useState<{ title: string; photos: string[] } | null>(null);
+  const [galleryIdx, setGalleryIdx] = useState(0);
+
+  const openGallery = useCallback((title: string, photos: string[]) => {
+    const valid = photos.filter(Boolean);
+    if (valid.length === 0) return;
+    setGallery({ title, photos: valid });
+    setGalleryIdx(0);
+  }, []);
+
+  const closeGallery = useCallback(() => setGallery(null), []);
+
+  useEffect(() => {
+    if (!gallery) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeGallery();
+      if (e.key === "ArrowRight") setGalleryIdx((p) => (p + 1) % gallery.photos.length);
+      if (e.key === "ArrowLeft") setGalleryIdx((p) => (p - 1 + gallery.photos.length) % gallery.photos.length);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [gallery, closeGallery]);
 
   const yearEvents = eventsByYear[year];
   const momentPageCount = Math.max(1, Math.ceil(yearEvents.length / MOMENTS_PAGE_SIZE));
@@ -516,7 +538,7 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="max-w-xl text-base font-medium leading-relaxed text-black/50 md:text-lg dark:text-white/55"
           >
-            Where talent meets culture. We build products we&apos;re proud of — with people we genuinely care about.
+            Where talent meets culture. We build products we&apos;re proud of  -  with people we genuinely care about.
           </motion.p>
 
           <motion.div
@@ -547,7 +569,7 @@ export default function LifeAtCloudNexusPage() {
             className="mt-14 grid grid-cols-2 gap-6 sm:flex sm:items-center sm:gap-8 md:gap-12"
           >
             {[
-              { value: "50+", label: "Team Members" },
+              { value: "90+", label: "Team Members" },
               { value: "5", label: "Day Work Week" },
               { value: "15+", label: "Countries Served" },
               { value: "40%+", label: "Women in Tech" },
@@ -563,7 +585,7 @@ export default function LifeAtCloudNexusPage() {
 
       <CultureHeroGallery />
 
-      {/* Celebrating The Melody of Moments — Codiant-style */}
+      {/* Celebrating The Melody of Moments  -  Codiant-style */}
       <div className="relative w-full bg-white px-6 pt-16 pb-20 md:px-8 md:pt-20 md:pb-24 dark:bg-zinc-950">
         <div className="mx-auto max-w-7xl">
           {/* Header row */}
@@ -574,10 +596,10 @@ export default function LifeAtCloudNexusPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: 0.05 }}
-                className="text-3xl font-bold tracking-tight md:text-[40px] md:leading-tight italic"
+                className="text-3xl font-bold tracking-tight md:text-[40px] md:leading-tight"
               >
                 Celebrating The Melody of{" "}
-                <span className="bg-gradient-to-r from-[#4EB3E8] to-[#6bc9ef] bg-clip-text text-transparent not-italic">Moments</span>
+                <span className="bg-gradient-to-r from-[#4EB3E8] to-[#6bc9ef] bg-clip-text text-transparent">Moments</span>
               </motion.h2>
             </div>
             <motion.p
@@ -638,28 +660,32 @@ export default function LifeAtCloudNexusPage() {
                     transition={{ duration: 0.35, delay: 0.04 + index * 0.05 }}
                     className="group flex flex-col rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white dark:bg-white/[0.03] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                   >
-                    {/* 5-slot image mosaic (2+3 layout) */}
-                    <div className="relative grid grid-cols-3 grid-rows-2 gap-[3px] p-3 pb-0">
-                      {ev.collageSrcs.map((src, i) => {
-                        const spanClass = i === 0 ? "col-span-2 row-span-2" : "";
-                        return (
-                          <div key={i} className={`relative overflow-hidden rounded-lg ${spanClass} ${i === 0 ? "h-full min-h-[140px]" : "aspect-square"}`}>
-                            {src ? (
-                              <Image src={src} alt={`${ev.title} ${i + 1}`} fill className="object-cover" sizes="(max-width:640px) 50vw, 33vw" />
-                            ) : (
-                              <div className="w-full h-full flex items-center justify-center bg-black/[0.04] dark:bg-white/[0.04]">
-                                <Camera className="w-5 h-5 text-black/15 dark:text-white/15" strokeWidth={1.5} />
-                              </div>
-                            )}
+                    {/* Image collage  -  Airbnb style */}
+                    {(() => {
+                      const p = ev.collageSrcs.filter(Boolean);
+                      if (p.length === 0) return null;
+                      return (
+                        <div className="relative rounded-t-2xl overflow-hidden" style={{ height: "240px" }}>
+                          <div className="absolute inset-0 flex gap-[2px]">
+                            {/* Left hero  -  50% width */}
+                            <div className="relative w-1/2 h-full overflow-hidden">
+                              <Image src={p[0]} alt={`${ev.title} 1`} fill className="object-cover" sizes="(max-width:640px) 50vw, 25vw" />
+                            </div>
+                            {/* Right grid  -  50% width, 2x2 */}
+                            <div className="w-1/2 h-full grid grid-cols-2 grid-rows-2 gap-[2px]">
+                              {p.slice(1, 5).map((src, i) => (
+                                <div key={i} className="relative overflow-hidden">
+                                  <Image src={src} alt={`${ev.title} ${i + 2}`} fill className="object-cover" sizes="(max-width:640px) 25vw, 12vw" />
+                                </div>
+                              ))}
+                            </div>
                           </div>
-                        );
-                      })}
-                      <div className="absolute top-5 right-5 z-10">
-                        <span className="text-[10px] font-black tracking-widest px-2.5 py-1 rounded-md bg-[#4EB3E8] text-white shadow-md">
-                          {year}
-                        </span>
-                      </div>
-                    </div>
+                          <div className="absolute top-3 right-3 z-10">
+                            <span className="text-[9px] font-black tracking-widest px-2.5 py-1 rounded-md bg-black/50 text-white shadow-lg backdrop-blur-md">{year}</span>
+                          </div>
+                        </div>
+                      );
+                    })()}
 
                     {/* Content */}
                     <div className="p-5 sm:p-6 flex flex-col flex-1">
@@ -667,7 +693,10 @@ export default function LifeAtCloudNexusPage() {
                       <p className="line-clamp-4 flex-1 text-[13px] font-medium leading-relaxed text-black/50 dark:text-white/40 sm:text-[14px]">
                         {ev.excerpt}
                       </p>
-                      <button className="mt-5 self-start inline-flex items-center gap-2 rounded-lg border border-[#4EB3E8]/30 px-5 py-2 text-xs font-bold uppercase tracking-wider text-[#4EB3E8] transition-all duration-300 hover:bg-[#4EB3E8] hover:text-white hover:shadow-md">
+                      <button
+                        onClick={() => openGallery(ev.title, ev.collageSrcs)}
+                        className="mt-5 self-start inline-flex items-center gap-2 rounded-lg border border-[#4EB3E8]/30 px-5 py-2 text-xs font-bold uppercase tracking-wider text-[#4EB3E8] transition-all duration-300 hover:bg-[#4EB3E8] hover:text-white hover:shadow-md"
+                      >
                         View All Photos
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                       </button>
@@ -717,7 +746,7 @@ export default function LifeAtCloudNexusPage() {
         </div>
       </div>
 
-      {/* Driven by Purpose — premium interactive cards */}
+      {/* Driven by Purpose  -  premium interactive cards */}
       <div className="relative w-full overflow-hidden text-white">
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(165deg,#07040f_0%,#1a0a28_28%,#12081c_55%,#08051a_100%)]" />
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-90 mix-blend-screen" style={{ backgroundImage: "radial-gradient(ellipse 90% 70% at 10% -10%, rgba(192,38,211,0.45), transparent 52%), radial-gradient(ellipse 80% 60% at 95% 15%, rgba(236,72,153,0.28), transparent 48%), radial-gradient(ellipse 70% 50% at 50% 100%, rgba(78,179,232,0.18), transparent 55%), radial-gradient(ellipse 50% 40% at 70% 60%, rgba(88,28,135,0.35), transparent 50%)" }} />
@@ -841,7 +870,7 @@ export default function LifeAtCloudNexusPage() {
         </div>
       </div>
 
-      {/* Why Should You Join — 12 compact tiles */}
+      {/* Why Should You Join  -  12 compact tiles */}
       <div className="w-full border-t border-black/[0.06] px-6 py-12 md:px-8 md:py-16 dark:border-[#1e1e1e] dark:border-white/[0.06]">
         <div className="mx-auto max-w-7xl">
           <motion.h2
@@ -934,7 +963,7 @@ export default function LifeAtCloudNexusPage() {
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Empowering women is our major goal</h2>
             <p className="mt-5 text-[15px] font-medium leading-relaxed text-black/50 dark:text-[#8b8b8b]">
               We invest in leadership visibility, psychological safety, and growth paths so women can thrive in
-              engineering, product, and operations — not as an exception, but as the norm.
+              engineering, product, and operations  -  not as an exception, but as the norm.
             </p>
             <p className="mt-4 text-[15px] font-medium leading-relaxed text-black/50 dark:text-[#8b8b8b]">
               From mentorship circles to flexible policies and zero-tolerance for harassment, we design a workplace
@@ -1004,7 +1033,7 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.45, delay: 0.1 }}
             className="mt-4 max-w-2xl text-[15px] font-medium leading-relaxed text-black/50 dark:text-[#8b8b8b]"
           >
-            Comfort, safety, and flexibility are how we grow together — with a cheerful environment where people do
+            Comfort, safety, and flexibility are how we grow together  -  with a cheerful environment where people do
             their best work.
           </motion.p>
 
@@ -1080,7 +1109,7 @@ export default function LifeAtCloudNexusPage() {
               </h2>
               <p className="mx-auto mb-8 max-w-lg text-sm font-medium leading-relaxed text-black/50 dark:text-white/50 md:text-base">
                 Bring your curiosity, your craft, and your kindness. We are building products and a culture worth
-                showing up for — every single day.
+                showing up for  -  every single day.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -1104,6 +1133,89 @@ export default function LifeAtCloudNexusPage() {
           </motion.div>
         </div>
       </div>
+
+      {/* Photo Gallery Modal */}
+      <AnimatePresence>
+        {gallery && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 backdrop-blur-sm"
+            onClick={closeGallery}
+          >
+            <button
+              onClick={closeGallery}
+              className="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+            >
+              <X className="w-5 h-5 text-white" strokeWidth={1.5} />
+            </button>
+
+            <div className="absolute top-5 left-5 z-10">
+              <h3 className="text-white font-bold text-lg">{gallery.title}</h3>
+              <p className="text-white/50 text-sm mt-1">
+                {galleryIdx + 1} / {gallery.photos.length}
+              </p>
+            </div>
+
+            <motion.div
+              key={galleryIdx}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.2 }}
+              className="relative w-[90vw] h-[70vh] max-w-4xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={gallery.photos[galleryIdx]}
+                alt={`${gallery.title} ${galleryIdx + 1}`}
+                fill
+                className="object-contain"
+                sizes="90vw"
+              />
+            </motion.div>
+
+            {gallery.photos.length > 1 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setGalleryIdx((p) => (p - 1 + gallery.photos.length) % gallery.photos.length);
+                }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" strokeWidth={1.5} />
+              </button>
+            )}
+
+            {gallery.photos.length > 1 && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setGalleryIdx((p) => (p + 1) % gallery.photos.length);
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              >
+                <ChevronRight className="w-6 h-6 text-white" strokeWidth={1.5} />
+              </button>
+            )}
+
+            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+              {gallery.photos.map((src, i) => (
+                <button
+                  key={i}
+                  onClick={(e) => { e.stopPropagation(); setGalleryIdx(i); }}
+                  className={`relative w-14 h-14 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                    i === galleryIdx ? "border-[#4EB3E8] scale-110" : "border-white/20 opacity-60 hover:opacity-100"
+                  }`}
+                >
+                  <Image src={src} alt="" fill className="object-cover" sizes="56px" />
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

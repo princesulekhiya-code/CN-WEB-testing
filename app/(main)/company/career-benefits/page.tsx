@@ -24,7 +24,7 @@ const overviewCards = [
   { icon: Banknote, title: "Competitive Salary", desc: "Industry-standard compensation with regular appraisals and performance bonuses.", color: "#4EB3E8" },
   { icon: HeartPulse, title: "Health & Wellness", desc: "Comprehensive health insurance, mental health support, and wellness programs.", color: "#ef4444" },
   { icon: GraduationCap, title: "Learning Budget", desc: "Annual budget for courses, certifications, books, and conference tickets.", color: "#8b5cf6" },
-  { icon: Home, title: "Remote Flexibility", desc: "Work from anywhere — office, home, or a beach. We trust our team.", color: "#10b981" },
+  { icon: Home, title: "Remote Flexibility", desc: "Work from anywhere  -  office, home, or a beach. We trust our team.", color: "#10b981" },
   { icon: Plane, title: "Paid Time Off", desc: "Generous leave policy including vacation, sick days, and personal time.", color: "#f59e0b" },
   { icon: Trophy, title: "Recognition & Rewards", desc: "Spot bonuses, shoutouts, and awards for outstanding contributions.", color: "#06b6d4" },
 ];
@@ -84,7 +84,7 @@ const welfareBenefits = [
   {
     icon: Gamepad2, title: "Chill Room", color: "#8b5cf6",
     desc: "A dedicated relaxation area available for booking based on slot availability:",
-    points: ["PS5 gaming console", "Indoor games — Chess, UNO, and more", "Bunk beds for rest and relaxation"],
+    points: ["PS5 gaming console", "Indoor games  -  Chess, UNO, and more", "Bunk beds for rest and relaxation"],
   },
   {
     icon: Users, title: "Supportive Work Culture", color: "#4EB3E8",
@@ -152,7 +152,7 @@ export default function CareerBenefitsPage() {
                 Perks & <span className="text-[#4EB3E8]">Benefits</span><br />That Matter
               </h1>
               <p className="mt-6 text-base md:text-lg text-black/55 dark:text-white/50 leading-relaxed max-w-xl">
-                We ensure a well-rounded employee experience — offering financial security, workplace convenience, and employee-friendly perks that support both professional and personal well-being.
+                We ensure a well-rounded employee experience  -  offering financial security, workplace convenience, and employee-friendly perks that support both professional and personal well-being.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/resources/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#4EB3E8] text-white text-sm font-semibold hover:bg-[#3a9fd4] transition-all shadow-lg shadow-[#4EB3E8]/20">
@@ -220,7 +220,7 @@ export default function CareerBenefitsPage() {
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:sticky lg:top-28">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Banking & <span className="text-[#4EB3E8]">Financial</span> Benefits</h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-              Salary account benefits designed for financial security and convenience — from zero-balance accounts to comprehensive insurance coverage.
+              Salary account benefits designed for financial security and convenience  -  from zero-balance accounts to comprehensive insurance coverage.
             </p>
             <div className="mt-8 hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-lg">
@@ -243,7 +243,7 @@ export default function CareerBenefitsPage() {
           <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Employee Welfare & <span className="text-[#4EB3E8]">Lifestyle</span></h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-              Beyond compensation — we invest in creating a workplace where people genuinely enjoy coming to work.
+              Beyond compensation  -  we invest in creating a workplace where people genuinely enjoy coming to work.
             </p>
           </motion.div>
 
@@ -291,7 +291,7 @@ export default function CareerBenefitsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
             { icon: CalendarDays, title: "5 Days a Week", desc: "Healthy work-life balance with a 5-day work week policy.", color: "#4EB3E8" },
-            { icon: Smile, title: "Birthday Celebration", desc: "Celebrate your special day with the team — cake, gifts, and good vibes.", color: "#ef4444" },
+            { icon: Smile, title: "Birthday Celebration", desc: "Celebrate your special day with the team  -  cake, gifts, and good vibes.", color: "#ef4444" },
             { icon: PartyPopper, title: "Fun Connect", desc: "Regular fun activities, games, and team bonding events to recharge.", color: "#8b5cf6" },
             { icon: Award, title: "Rewards & Benefits", desc: "Performance bonuses, spot awards, and recognition for exceptional work.", color: "#f59e0b" },
             { icon: Globe2, title: "Business Trips", desc: "Opportunities to travel for client meetings, conferences, and summits.", color: "#10b981" },
@@ -331,14 +331,14 @@ export default function CareerBenefitsPage() {
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why People <span className="text-[#4EB3E8]">Love</span> Working Here</h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-              At Cloud Nexus, benefits aren&apos;t just policies — they&apos;re a reflection of how we value our people. We believe when you take care of your team, they build extraordinary things.
+              At Cloud Nexus, benefits aren&apos;t just policies  -  they&apos;re a reflection of how we value our people. We believe when you take care of your team, they build extraordinary things.
             </p>
 
             <div className="mt-8 space-y-4">
               {[
                 { icon: Heart, title: "People-First Culture", desc: "Every policy is designed with employee well-being at the core.", color: "#ef4444" },
                 { icon: Briefcase, title: "Growth Opportunities", desc: "Clear career paths, mentorship programs, and leadership development.", color: "#4EB3E8" },
-                { icon: Trophy, title: "Merit-Based Recognition", desc: "Your hard work is seen, appreciated, and rewarded — always.", color: "#f59e0b" },
+                { icon: Trophy, title: "Merit-Based Recognition", desc: "Your hard work is seen, appreciated, and rewarded  -  always.", color: "#f59e0b" },
                 { icon: Users, title: "Inclusive Environment", desc: "Diverse teams, equal opportunities, and a culture of belonging.", color: "#10b981" },
               ].map((item, i) => {
                 const Icon = item.icon;

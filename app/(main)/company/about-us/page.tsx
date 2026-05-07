@@ -52,8 +52,8 @@ const aboutStats = [
 const values = [
   { icon: Star, title: "Excellence in Work", desc: "We empower businesses and elevate customer experiences through our commitment to delivering outstanding results in every project. Every line of code, every design decision, and every interaction reflects our pursuit of excellence.", color: "#4EB3E8" },
   { icon: Users, title: "Respect Individuality", desc: "We respect individual values and support leading changes to reinvent and emerge powerful. Our culture celebrates diverse perspectives, encouraging every team member to bring their unique strengths to the table.", color: "#10b981" },
-  { icon: ShieldCheck, title: "Integrity", desc: "Driven by integrity, we honor and uphold valuable contributions, building lasting associations based on trust and transparency. We do what we say and say what we do — no exceptions.", color: "#f59e0b" },
-  { icon: Lightbulb, title: "Progressive Learning", desc: "We inspire, innovate, and evolve individual curiosity to fuel expected achievements. Continuous learning is embedded in our DNA — from internal tech talks to sponsored certifications and conference attendance.", color: "#8b5cf6" },
+  { icon: ShieldCheck, title: "Integrity", desc: "Driven by integrity, we honor and uphold valuable contributions, building lasting associations based on trust and transparency. We do what we say and say what we do  -  no exceptions.", color: "#f59e0b" },
+  { icon: Lightbulb, title: "Progressive Learning", desc: "We inspire, innovate, and evolve individual curiosity to fuel expected achievements. Continuous learning is embedded in our DNA  -  from internal tech talks to sponsored certifications and conference attendance.", color: "#8b5cf6" },
 ];
 
 const workforce = [
@@ -67,7 +67,7 @@ const workforce = [
 
 const reasons = [
   { icon: HeartHandshake, title: "Unmatched Customer Service", desc: "Personalized attention, continuous communication, immediate action, and definitive follow-through. We listen and we deliver." },
-  { icon: BrainCircuit, title: "Helpful Experts", desc: "Big ideas need big talents — we only hire the best and invest substantially in their continued education." },
+  { icon: BrainCircuit, title: "Helpful Experts", desc: "Big ideas need big talents  -  we only hire the best and invest substantially in their continued education." },
   { icon: Award, title: "Exceptional Quality", desc: "We take pride in our ability to supply excellent technological solutions, tailored and delivered on time." },
   { icon: Cpu, title: "Technology & Best Practices", desc: "We continually identify, test, and deploy new technologies to make a positive impact on our customers' business." },
   { icon: Eye, title: "Independent & Objective", desc: "Technology-agnostic and vendor neutral. Our experts provide sound and independent strategic advice." },
@@ -257,10 +257,10 @@ export default function AboutUsPage() {
               About <span className="text-[#4EB3E8]">CloudNexus</span>
             </h2>
             <p className="text-base text-black/60 dark:text-white/55 leading-relaxed mb-4">
-              At CloudNexus, we are more than just an IT consulting company — we are innovators, problem-solvers, and architects of the digital future. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting.
+              At CloudNexus, we are more than just an IT consulting company  -  we are innovators, problem-solvers, and architects of the digital future. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting.
             </p>
             <p className="text-base text-black/60 dark:text-white/55 leading-relaxed mb-8">
-              Together with our partnership and industry experience, we are creating a robust ecosystem to bring huge business transformations — enhancing efficiency, driving growth, and future-proofing operations.
+              Together with our partnership and industry experience, we are creating a robust ecosystem to bring huge business transformations  -  enhancing efficiency, driving growth, and future-proofing operations.
             </p>
 
             <div className="grid grid-cols-2 gap-3">
@@ -459,7 +459,7 @@ export default function AboutUsPage() {
         <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight"><span className="text-[#4EB3E8]">Our</span> Offices</h2>
           <p className="mt-4 text-base text-black/50 dark:text-white/50 max-w-xl mx-auto">
-            Strategically located across India — delivering world-class IT solutions from our development centers.
+            Strategically located across India  -  delivering world-class IT solutions from our development centers.
           </p>
         </motion.div>
 
@@ -505,7 +505,7 @@ export default function AboutUsPage() {
               </h2>
 
               <p className="text-base text-black/55 dark:text-white/50 max-w-lg mx-auto leading-relaxed mb-8">
-                Whether you&apos;re a startup building your MVP or an enterprise modernizing your stack — we&apos;re here to help you turn ambitious ideas into reality.
+                Whether you&apos;re a startup building your MVP or an enterprise modernizing your stack  -  we&apos;re here to help you turn ambitious ideas into reality.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
