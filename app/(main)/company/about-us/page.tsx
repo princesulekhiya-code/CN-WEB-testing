@@ -132,7 +132,7 @@ function DonutChart() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-2 w-full max-w-xs">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 w-full max-w-xs">
         {workforce.map((w, i) => (
           <button key={i} onMouseEnter={() => setHovered(i)} onMouseLeave={() => setHovered(null)}
             className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-all duration-200 ${hovered === i ? "bg-black/[0.05] dark:bg-white/[0.06] scale-105" : "hover:bg-black/[0.02] dark:hover:bg-white/[0.02]"}`}
@@ -278,7 +278,7 @@ export default function AboutUsPage() {
 
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="relative">
             <div className="relative rounded-3xl overflow-hidden border border-black/[0.06] dark:border-white/[0.06]">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80&fit=crop" alt="Team collaborating on innovative solutions" className="w-full h-[420px] object-cover" />
+              <img src="/images/stock/stock-53f4689e75.jpg" alt="Team collaborating on innovative solutions" className="w-full h-[420px] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
 
               <div className="absolute bottom-5 left-5 right-5 grid grid-cols-2 gap-2">
@@ -414,7 +414,7 @@ export default function AboutUsPage() {
           <div className="grid lg:grid-cols-5 gap-8">
             <motion.div className="lg:col-span-2" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <div className="relative rounded-3xl overflow-hidden h-full min-h-[400px] border border-black/[0.06] dark:border-white/[0.06]">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&fit=crop" alt="Professional team delivering IT solutions" className="w-full h-full object-cover absolute inset-0" />
+                <img src="/images/stock/stock-72d9fb781c.jpg" alt="Professional team delivering IT solutions" className="w-full h-full object-cover absolute inset-0" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 space-y-2.5">

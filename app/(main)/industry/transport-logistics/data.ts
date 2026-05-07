@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Transport & Logistics Software",
   subtitle: "Streamlining Supply Chains",
   description: "Complete solutions for transport & logistics businesses from on-demand delivery and warehouse management to fleet tracking and courier solutions.",
-  heroImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-4d7fff1498.jpg",
   accentColor: "#f59e0b",
 };
 

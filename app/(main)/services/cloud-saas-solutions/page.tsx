@@ -30,7 +30,7 @@ export default function CloudSaasSolutionsPage() {
   return (
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
       <div className="relative w-full h-[50vh] min-h-[400px] overflow-hidden">
-        <Image src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&q=80" alt="Cloud & SaaS Solutions" fill className="object-cover" priority />
+        <Image src="/images/stock/stock-7c072bda00.jpg" alt="Cloud & SaaS Solutions" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent dark:from-black dark:via-black/60 dark:to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-12">
           <div className="mx-auto max-w-7xl">

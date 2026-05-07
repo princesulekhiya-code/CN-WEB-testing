@@ -32,7 +32,7 @@ export default function CustomSoftwareDevelopmentPage() {
       {/* Hero */}
       <div className="relative w-full h-[50vh] min-h-[400px] overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80"
+          src="/images/stock/stock-8dfad6e1ae.jpg"
           alt="Custom Software Development"
           fill
           className="object-cover"

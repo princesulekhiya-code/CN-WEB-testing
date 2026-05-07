@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Digital Product",
   titleBottom: "Consultation",
   description: "Our tech consultants analyze your business needs and formulate strategies to build the aptest solution that benefits and accelerates your business operations.",
-  heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-e1f7697fb3.jpg",
   heroImageAlt: "Digital Product Consultation",
   topBadge: { icon: null as any, title: "Strategy", subtitle: "Product roadmap", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Expert Team", subtitle: "Advisory board", colorClass: "bg-emerald-500/10" },

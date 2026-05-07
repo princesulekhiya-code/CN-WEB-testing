@@ -33,7 +33,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Services",
   description:
     "Migrate, manage, and monitor applications on IaaS or PaaS cloud platforms to drive flexibility, efficiency, and operational resilience at scale.",
-  heroImage: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-b2e21fd8f5.jpg",
   heroImageAlt: "Cloud Application Services",
   topBadge: {
     icon: null as any,

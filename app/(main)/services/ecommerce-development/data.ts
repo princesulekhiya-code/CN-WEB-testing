@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "eCommerce Software",
   titleBottom: "Development Services",
   description: "Setting new benchmarks in transforming the shopping experience with custom eCommerce software solutions.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "E-commerce development",
   topBadge: { icon: null as any, title: "30+ Stores", subtitle: "Built & scaled", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "3x Revenue", subtitle: "Avg client growth", colorClass: "bg-emerald-500/10" },
@@ -80,7 +80,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "E-Commerce Can Be",
   headingHighlight: "Revenue-Multiplying",
   subtitle: "A strategically built e-commerce platform doesn't just sell products — it creates experiences that convert browsers into loyal customers.",
-  image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-75001c1471.jpg",
   imageAlt: "E-commerce shopping experience",
   items: [
     { title: "24/7 Global Storefront", description: "Your e-commerce store never closes. Serve customers across time zones with automated inventory, payments, and fulfillment — generating revenue while you sleep." },

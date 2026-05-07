@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Mobile App",
   titleBottom: "Development",
   description: "We build iOS and Android experiences people return to daily. From first concept through App Store launch, our mobile practice ships refined, high-performing products with fluid UX, dependable backends, and architecture built to scale.",
-  heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-be6b0ed7f1.jpg",
   heroImageAlt: "Mobile app development",
   topBadge: { icon: null as any, title: "iOS + Android", subtitle: "One codebase", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "4.8★ Avg", subtitle: "App Store rating", colorClass: "bg-emerald-500/10" },
@@ -77,7 +77,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Mobile Apps Can Be",
   headingHighlight: "Game-Changing",
   subtitle: "Our industry-focused app development services help your business become successful and gain access to varied benefits.",
-  image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-865b79fffc.jpg",
   imageAlt: "Mobile app development benefits",
   items: [
     {

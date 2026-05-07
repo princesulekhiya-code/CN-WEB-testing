@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Digital Product",
   titleBottom: "Development",
   description: "Our developers leverage the latest technologies to build basic to advanced digital products and scale MVPs to full-fledged solutions.",
-  heroImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-1e05b0d347.jpg",
   heroImageAlt: "Digital Product Development",
   topBadge: { icon: null as any, title: "Full-Cycle", subtitle: "Idea to launch", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "50+ Products", subtitle: "Shipped globally", colorClass: "bg-emerald-500/10" },

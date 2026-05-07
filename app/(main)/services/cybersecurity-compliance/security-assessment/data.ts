@@ -34,7 +34,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "& Pen Testing",
   description:
     "Vulnerability assessments, penetration testing (network, web, mobile, API), red team exercises, social engineering tests, code security reviews, and compliance-focused testing.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "Security Assessment & Analysis",
   topBadge: { icon: null as any, title: "Deep Audit", subtitle: "Full assessment", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Pen Testing", subtitle: "White-hat team", colorClass: "bg-emerald-500/10" },

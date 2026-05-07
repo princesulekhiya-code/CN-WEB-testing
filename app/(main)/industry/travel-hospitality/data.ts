@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Travel & Hospitality Software",
   subtitle: "Redefining Travel Experiences",
   description: "Booking engines, travel management platforms, and hospitality solutions with dynamic pricing, multi-channel distribution, and personalized recommendations.",
-  heroImage: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-4eae8787e0.jpg",
   accentColor: "#f97316",
 };
 

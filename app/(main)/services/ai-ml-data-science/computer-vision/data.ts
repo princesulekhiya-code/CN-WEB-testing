@@ -32,7 +32,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Computer",
   titleBottom: "Vision",
   description: "Production-grade models that interpret images and video — from quality control to intelligent customer experiences.",
-  heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-c0082bf1e9.jpg",
   heroImageAlt: "95% Accuracy",
   topBadge: { icon: null as any, title: "95% Accuracy", subtitle: "Object detection", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Real-Time", subtitle: "Video processing", colorClass: "bg-emerald-500/10" },

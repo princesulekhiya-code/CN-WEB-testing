@@ -25,7 +25,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Optimization",
   description:
     "Grow qualified organic traffic with technical excellence, intent-led content, and ethical link building — measured against the KPIs that matter to your business.",
-  heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-096e5f6a26.jpg",
   heroImageAlt: "SEO Search Engine Optimization",
   topBadge: { icon: null as any, title: "Page 1 Rank", subtitle: "Google results", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Technical SEO", subtitle: "Full audit", colorClass: "bg-emerald-500/10" },

@@ -300,16 +300,16 @@ export default function ResourcesPage() {
             <p className="mt-1.5 text-sm text-black/45 dark:text-white/40 max-w-xl mx-auto">We bring deep domain expertise across multiple industries, helping businesses solve their most complex technology challenges.</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { name: "Healthcare & Life Sciences", desc: "HIPAA-compliant platforms, telemedicine, patient portals, and medical data analytics.", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=75&fit=crop" },
-              { name: "Fintech & Banking", desc: "Payment gateways, trading platforms, lending systems, and regulatory compliance tools.", image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=75&fit=crop" },
-              { name: "E-Commerce & Retail", desc: "Custom storefronts, inventory management, multi-vendor marketplaces, and omnichannel solutions.", image: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=400&q=75&fit=crop" },
-              { name: "Education & eLearning", desc: "LMS platforms, virtual classrooms, assessment engines, and student management systems.", image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=75&fit=crop" },
-              { name: "Logistics & Transport", desc: "Fleet management, route optimization, real-time tracking, and warehouse automation.", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=75&fit=crop" },
-              { name: "Real Estate & PropTech", desc: "Property listings, virtual tours, CRM systems, and tenant management platforms.", image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=75&fit=crop" },
-              { name: "Media & Entertainment", desc: "Streaming platforms, content management, social apps, and digital publishing tools.", image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&q=75&fit=crop" },
-              { name: "SaaS & Enterprise", desc: "Multi-tenant architectures, enterprise dashboards, workflow automation, and integration platforms.", image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=400&q=75&fit=crop" },
+              { name: "Healthcare & Life Sciences", desc: "HIPAA-compliant platforms, telemedicine, patient portals, and medical data analytics.", image: "/images/stock/stock-44bf6c19c5.jpg" },
+              { name: "Fintech & Banking", desc: "Payment gateways, trading platforms, lending systems, and regulatory compliance tools.", image: "/images/stock/stock-1022c12e8b.jpg" },
+              { name: "E-Commerce & Retail", desc: "Custom storefronts, inventory management, multi-vendor marketplaces, and omnichannel solutions.", image: "/images/stock/stock-e0277ff9ad.jpg" },
+              { name: "Education & eLearning", desc: "LMS platforms, virtual classrooms, assessment engines, and student management systems.", image: "/images/stock/stock-16e7a4b253.jpg" },
+              { name: "Logistics & Transport", desc: "Fleet management, route optimization, real-time tracking, and warehouse automation.", image: "/images/stock/stock-6135b63796.jpg" },
+              { name: "Real Estate & PropTech", desc: "Property listings, virtual tours, CRM systems, and tenant management platforms.", image: "/images/stock/stock-e1459207a8.jpg" },
+              { name: "Media & Entertainment", desc: "Streaming platforms, content management, social apps, and digital publishing tools.", image: "/images/stock/stock-48c4481991.jpg" },
+              { name: "SaaS & Enterprise", desc: "Multi-tenant architectures, enterprise dashboards, workflow automation, and integration platforms.", image: "/images/stock/stock-7334f95cf8.jpg" },
             ].map((ind, i) => (
               <motion.div key={ind.name} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: i * 0.04 }}>
                 <div className="group rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white dark:bg-white/[0.02] overflow-hidden h-full hover:shadow-lg hover:shadow-black/[0.04] dark:hover:shadow-black/30 hover:-translate-y-0.5 transition-all duration-300">
@@ -410,7 +410,7 @@ export default function ResourcesPage() {
             <p className="text-sm text-black/50 dark:text-white/40 leading-relaxed mb-6 max-w-lg">
               Cloud Nexus specializes in designing and building scalable digital solutions  -  from mobile apps and cloud infrastructure to AI-powered platforms and modern web applications. Our team brings expertise across the full technology spectrum.
             </p>
-            <div className="grid grid-cols-3 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
               {services.map((s) => {
                 const Icon = s.icon;
                 return (
@@ -567,13 +567,13 @@ export default function ResourcesPage() {
       <div className="border-t border-black/[0.05] dark:border-white/[0.05]">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <div className="rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-[#4EB3E8]/5 to-purple-500/5 dark:from-[#4EB3E8]/8 dark:to-purple-500/8 p-8 md:p-12">
+              <div className="rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-[#4EB3E8]/5 to-purple-500/5 dark:from-[#4EB3E8]/8 dark:to-purple-500/8 p-6 md:p-12">
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="md:col-span-1">
                   <h3 className="text-xl font-bold mb-2">Reach out to us</h3>
                   <p className="text-sm text-black/50 dark:text-white/40 leading-relaxed">Our team is available Monday to Saturday, 9 AM to 7 PM IST. We typically respond within a few hours.</p>
                 </div>
-                <div className="md:col-span-2 grid sm:grid-cols-3 gap-6">
+                <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-6">
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-xl bg-[#4EB3E8]/10 flex items-center justify-center flex-shrink-0">
                       <Mail className="w-4 h-4 text-[#4EB3E8]" />
@@ -621,7 +621,7 @@ export default function ResourcesPage() {
             <p className="mt-1.5 text-sm text-black/45 dark:text-white/40 max-w-xl mx-auto">We combine technical excellence with a client-first approach to deliver solutions that drive real results.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { icon: Shield, title: "Enterprise Security", desc: "Zero-trust architecture, encrypted data, and continuous monitoring for all deployments." },
               { icon: Zap, title: "Fast Delivery", desc: "Agile methodology with 2-week sprints. From concept to MVP in as little as 6 weeks." },

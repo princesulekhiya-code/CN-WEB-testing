@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "IT Strategy",
   titleBottom: "& Planning",
   description: "Align technology investments with your business vision. We help you build strategic IT roadmaps and guide you to invest in the right technology at the right time.",
-  heroImage: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-3fb6f2550d.jpg",
   heroImageAlt: "IT Strategy & Planning",
   topBadge: { icon: null as any, title: "IT Strategy", subtitle: "Future-proof plan", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Quick Wins", subtitle: "& long-term goals", colorClass: "bg-emerald-500/10" },

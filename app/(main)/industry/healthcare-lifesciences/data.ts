@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Healthcare Software Development",
   subtitle: "Digitizing Healthcare",
   description: "We create secure, scalable, and medical compliant healthcare software services that simplify the interaction between patients & healthcare service providers.",
-  heroImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-b7ee6b8c4f.jpg",
   accentColor: "#10b981",
 };
 

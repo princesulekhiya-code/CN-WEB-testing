@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Enterprise",
   titleBottom: "eCommerce",
   description: "SEO-friendly custom enterprise portals supporting effortless business management with seamless user experience.",
-  heroImage: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6ee4b43a43.jpg",
   heroImageAlt: "Enterprise Ecommerce Solution",
   topBadge: { icon: null as any, title: "Enterprise", subtitle: "High-volume", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "PCI DSS", subtitle: "Compliant", colorClass: "bg-emerald-500/10" },

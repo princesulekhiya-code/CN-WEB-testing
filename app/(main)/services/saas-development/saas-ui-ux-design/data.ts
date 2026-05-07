@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "SaaS",
   titleBottom: "UI/UX Design",
   description: "User-friendly and interactive enterprise-grade UI/UX designs intending to drive higher revenue and user engagement.",
-  heroImage: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6f9a39897b.jpg",
   heroImageAlt: "SaaS UI/UX Design",
   topBadge: { icon: null as any, title: "SaaS UX", subtitle: "User-first design", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "60% Better", subtitle: "Onboarding flow", colorClass: "bg-emerald-500/10" },

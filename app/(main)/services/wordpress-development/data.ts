@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "WordPress",
   titleBottom: "Development",
   description: "Reinvent your business by developing responsive, fully-functional WordPress websites. From custom themes to headless architectures, we deliver enterprise-grade WordPress solutions.",
-  heroImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-164521b16d.jpg",
   heroImageAlt: "WordPress development services",
   topBadge: { icon: null as any, title: "WordPress VIP", subtitle: "Enterprise-grade", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Sub-2s Load", subtitle: "Optimized speed", colorClass: "bg-emerald-500/10" },
@@ -133,7 +133,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "WordPress Can Be",
   headingHighlight: "Enterprise-Ready",
   subtitle: "WordPress powers 43% of the web. With the right engineering, it becomes a scalable, secure platform for serious business applications.",
-  image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-1fe7dec078.jpg",
   imageAlt: "WordPress development",
   items: [
     { title: "Rapid Content Management", description: "Empower your marketing team to publish, update, and manage content without developer involvement. Intuitive editors and custom blocks make content changes instant." },

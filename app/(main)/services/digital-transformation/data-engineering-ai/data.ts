@@ -33,7 +33,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "& AI",
   description:
     "Real-time decision-making using AI-powered data architecture to accelerate data modernization and product customization.",
-  heroImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-b7269deaf9.jpg",
   heroImageAlt: "Data Engineering & AI",
   topBadge: {
     icon: null as any,

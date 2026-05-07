@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Digital",
   titleBottom: "Marketing",
   description: "Fuel sustainable growth with analytics-led digital marketing. From organic search to precision-targeted campaigns, our specialists deliver measurable outcomes that move the revenue needle.",
-  heroImage: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-964cb15f7d.jpg",
   heroImageAlt: "Digital marketing services",
   topBadge: { icon: null as any, title: "300% ROI", subtitle: "Average return", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "10M+ Reach", subtitle: "Monthly impressions", colorClass: "bg-emerald-500/10" },
@@ -73,7 +73,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Digital Marketing Can Be",
   headingHighlight: "Growth-Defining",
   subtitle: "Data-driven marketing strategies that attract, engage, and convert your ideal customers across every digital touchpoint.",
-  image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-2fc5e686cd.jpg",
   imageAlt: "Digital marketing analytics dashboard",
   items: [
     { title: "Measurable ROI on Every Dollar", description: "Unlike traditional marketing, every digital campaign is trackable. Know exactly which channels, ads, and keywords generate revenue — and optimize spend in real time." },

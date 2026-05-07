@@ -55,7 +55,7 @@ const industries: Industry[] = [
       "Patient engagement portals",
     ],
     accentColor: "#10b981",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-b7ee6b8c4f.jpg",
     services: ["Patient Portals", "Telemedicine", "EHR Systems", "Health Analytics"],
   },
   {
@@ -93,7 +93,7 @@ const industries: Industry[] = [
       "Last-mile delivery solutions",
     ],
     accentColor: "#f59e0b",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-4d7fff1498.jpg",
     services: ["Fleet Management", "Route Planning", "Warehouse Systems", "Delivery Apps"],
   },
   {
@@ -112,7 +112,7 @@ const industries: Industry[] = [
       "Dating & matching platforms",
     ],
     accentColor: "#3b82f6",
-    image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-904a8a0ca8.jpg",
     services: ["Social Platforms", "Messaging Apps", "Dating Apps", "Community Portals"],
   },
   {
@@ -131,7 +131,7 @@ const industries: Industry[] = [
       "Tenant management portals",
     ],
     accentColor: "#06b6d4",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-5ff1ee1b1e.jpg",
     services: ["Listing Portals", "Virtual Tours", "Property CRM", "Management Apps"],
   },
   {
@@ -150,7 +150,7 @@ const industries: Industry[] = [
       "Content authoring tools",
     ],
     accentColor: "#ec4899",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-84e9ea17bf.jpg",
     services: ["LMS Platforms", "Virtual Classes", "EdTech Apps", "Assessment Tools"],
   },
   {
@@ -169,7 +169,7 @@ const industries: Industry[] = [
       "Insurance underwriting engines",
     ],
     accentColor: "#4EB3E8",
-    image: "https://plus.unsplash.com/premium_photo-1661306416293-e3ab553eb73a?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-d488a75ddc.jpg",
     services: ["Digital Banking", "Insurance Tech", "Loan Systems", "Compliance Tools"],
   },
   {
@@ -188,7 +188,7 @@ const industries: Industry[] = [
       "Loyalty & rewards programs",
     ],
     accentColor: "#f97316",
-    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-4eae8787e0.jpg",
     services: ["Booking Platforms", "Hotel Systems", "Travel Apps", "Loyalty Programs"],
   },
   {
@@ -207,7 +207,7 @@ const industries: Industry[] = [
       "Predictive maintenance",
     ],
     accentColor: "#64748b",
-    image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-f83a058636.jpg",
     services: ["ERP Systems", "IoT Solutions", "Supply Chain", "Retail Platforms"],
   },
   {
@@ -226,7 +226,7 @@ const industries: Industry[] = [
       "Environmental monitoring",
     ],
     accentColor: "#854d0e",
-    image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-026aa0dc9d.jpg",
     services: ["Asset Management", "Maintenance Systems", "Safety Platforms", "SCADA"],
   },
   {
@@ -245,7 +245,7 @@ const industries: Industry[] = [
       "CDN & global distribution",
     ],
     accentColor: "#dc2626",
-    image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-fa7d8a7ee1.jpg",
     services: ["Streaming Platforms", "CMS Solutions", "Event Ticketing", "Media Analytics"],
   },
   {
@@ -264,7 +264,7 @@ const industries: Industry[] = [
       "In-app payment & wallet",
     ],
     accentColor: "#16a34a",
-    image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-b13b3308c8.jpg",
     services: ["Food Delivery", "Grocery Apps", "Courier Services", "Delivery Logistics"],
   },
   {
@@ -283,7 +283,7 @@ const industries: Industry[] = [
       "Service tracking dashboards",
     ],
     accentColor: "#0891b2",
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-bbc14d0b55.jpg",
     services: ["Booking Apps", "Provider Platforms", "Scheduling Tools", "Payment Systems"],
   },
   {
@@ -302,7 +302,7 @@ const industries: Industry[] = [
       "Regulatory compliance engines",
     ],
     accentColor: "#6366f1",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-a1a452f828.jpg",
     services: ["Digital Wallets", "Payment Systems", "Lending Platforms", "Investment Tools"],
   },
   {
@@ -321,7 +321,7 @@ const industries: Industry[] = [
       "Cross-platform performance",
     ],
     accentColor: "#a855f7",
-    image: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80&fit=crop",
+    image: "/images/stock/stock-be267acabb.jpg",
     services: ["Mobile Stores", "Checkout Systems", "Loyalty Apps", "AR Commerce"],
   },
 ];
@@ -435,7 +435,7 @@ function IndustrySection({
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight mb-5">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-5">
               {industry.title}
             </h2>
 
@@ -584,7 +584,7 @@ export default function IndustryPage() {
               <div className="absolute -inset-4 rounded-3xl bg-[#4EB3E8]/[0.06] blur-2xl pointer-events-none" />
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-black/[0.08] dark:border-white/[0.06] shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&fit=crop"
+                  src="/images/stock/stock-ec34cb9b56.jpg"
                   alt="Digital solutions across industries"
                   fill
                   className="object-cover"
@@ -602,7 +602,7 @@ export default function IndustryPage() {
       {/* Stats Bar */}
       <div className="border-y border-black/[0.04] dark:border-white/[0.04]">
         <div className="mx-auto max-w-7xl px-6 py-14">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -613,7 +613,7 @@ export default function IndustryPage() {
                 className="text-center"
               >
                 <div
-                  className="text-4xl md:text-5xl font-bold tracking-tight"
+                  className="text-3xl md:text-5xl font-bold tracking-tight"
                   style={{ color: stat.color }}
                 >
                   {stat.value}
@@ -637,7 +637,7 @@ export default function IndustryPage() {
       {/* CTA */}
       <div className="border-t border-black/[0.04] dark:border-white/[0.04]">
         <div className="mx-auto max-w-7xl px-6 py-20">
-          <div className="relative rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-black/[0.02] to-transparent dark:from-white/[0.02] p-10 sm:p-16 text-center overflow-hidden">
+          <div className="relative rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-black/[0.02] to-transparent dark:from-white/[0.02] p-6 sm:p-10 md:p-16 text-center overflow-hidden">
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#4EB3E8]/5 via-transparent to-transparent" />
             </div>
@@ -649,7 +649,7 @@ export default function IndustryPage() {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
                 We Serve Every Industry
               </h2>
               <p className="mt-5 text-base font-medium text-black/45 dark:text-white/45 max-w-xl mx-auto leading-relaxed">

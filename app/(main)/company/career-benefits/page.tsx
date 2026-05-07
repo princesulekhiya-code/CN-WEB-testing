@@ -166,7 +166,7 @@ export default function CareerBenefitsPage() {
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="hidden lg:block">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#4EB3E8]/10">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&h=450&fit=crop&q=80" alt="Happy team collaborating" className="w-full h-[400px] object-cover" />
+                <img src="/images/stock/stock-0e99081fe7.jpg" alt="Happy team collaborating" className="w-full h-[400px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="grid grid-cols-4 gap-2">
@@ -224,7 +224,7 @@ export default function CareerBenefitsPage() {
             </p>
             <div className="mt-8 hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=350&fit=crop&q=80" alt="Financial benefits" className="w-full h-[300px] object-cover" />
+                <img src="/images/stock/stock-98f9dc4751.jpg" alt="Financial benefits" className="w-full h-[300px] object-cover" />
               </div>
             </div>
           </motion.div>
@@ -360,7 +360,7 @@ export default function CareerBenefitsPage() {
 
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
             <div className="rounded-2xl overflow-hidden shadow-2xl shadow-[#4EB3E8]/10">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop&q=80" alt="Team collaboration" className="w-full h-[480px] object-cover" />
+              <img src="/images/stock/stock-4167ec0bd7.jpg" alt="Team collaboration" className="w-full h-[480px] object-cover" />
             </div>
           </motion.div>
         </div>

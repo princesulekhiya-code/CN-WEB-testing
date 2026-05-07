@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Headless",
   titleBottom: "Commerce",
   description: "Decoupled front and back-end architecture for ultimate flexibility — plug any backend to any frontend without impact.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-a41ee3d1d8.jpg",
   heroImageAlt: "Headless Commerce API",
   topBadge: { icon: null as any, title: "Headless API", subtitle: "Composable stack", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Sub-2s Load", subtitle: "Blazing fast", colorClass: "bg-emerald-500/10" },

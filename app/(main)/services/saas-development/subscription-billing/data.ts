@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Subscription",
   titleBottom: "& Billing",
   description: "Stripe Billing or custom ledgers for trials, proration, usage meters, and dunning workflows that finance teams can audit.",
-  heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-91acafd5b2.jpg",
   heroImageAlt: "Subscription & Billing System",
   topBadge: { icon: null as any, title: "Billing Engine", subtitle: "Stripe & more", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "MRR Growth", subtitle: "Revenue metrics", colorClass: "bg-emerald-500/10" },

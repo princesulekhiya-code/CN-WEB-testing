@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Home Service Platform Development",
   subtitle: "On-Demand Services at Your Doorstep",
   description: "On-demand home service platforms connecting service providers with customers through intelligent booking, scheduling, and real-time tracking.",
-  heroImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-bbc14d0b55.jpg",
   accentColor: "#0891b2",
 };
 

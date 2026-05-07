@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Data Engineering",
   titleBottom: "& Pipelines",
   description: "Reliable ingestion, transformation, and delivery — so your analytics and ML teams work from a single source of truth.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "ETL Pipelines",
   topBadge: { icon: null as any, title: "ETL Pipelines", subtitle: "Big data ready", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Petabyte Scale", subtitle: "Data warehousing", colorClass: "bg-emerald-500/10" },

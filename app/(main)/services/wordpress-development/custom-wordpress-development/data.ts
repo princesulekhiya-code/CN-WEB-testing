@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Custom WordPress",
   titleBottom: "Development",
   description: "From creative and responsive web development to conversion-focused WordPress websites that maximize ROI and drive business growth.",
-  heroImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-9bc46cc9cc.jpg",
   heroImageAlt: "Custom WordPress Development",
   topBadge: { icon: null as any, title: "Custom WP", subtitle: "Bespoke themes", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Fast & Light", subtitle: "Optimized code", colorClass: "bg-emerald-500/10" },

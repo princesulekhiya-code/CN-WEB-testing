@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Monitoring &",
   titleBottom: "Observability",
   description: "Metrics, traces, and logs engineered as one system—so your team sees production clearly, responds faster, and ships with confidence.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "Monitoring & Observability Dashboard",
   topBadge: { icon: null as any, title: "Observability", subtitle: "Full-stack", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Real-Time", subtitle: "Alert & respond", colorClass: "bg-emerald-500/10" },

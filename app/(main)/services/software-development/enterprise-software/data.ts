@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Enterprise",
   titleBottom: "Software",
   description: "Innovative enterprise solutions for web, mobile, and desktop — including enterprise mobility, role-based\r\n                workflows, audit trails, and seamless integration with your existing business systems.",
-  heroImage: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6ee4b43a43.jpg",
   heroImageAlt: "Enterprise",
   topBadge: { icon: null as any, title: "Enterprise", subtitle: "Mission-critical", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Compliant", subtitle: "SOC 2 & HIPAA", colorClass: "bg-emerald-500/10" },

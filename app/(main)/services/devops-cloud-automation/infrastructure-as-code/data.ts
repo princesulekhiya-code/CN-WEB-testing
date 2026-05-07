@@ -35,7 +35,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "as Code",
   description:
     "Treat infrastructure like application code — reviewed, tested, and versioned — so every environment is reproducible and auditable.",
-  heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-2c1ef39379.jpg",
   heroImageAlt: "Infrastructure as Code",
   topBadge: {
     icon: null as any,

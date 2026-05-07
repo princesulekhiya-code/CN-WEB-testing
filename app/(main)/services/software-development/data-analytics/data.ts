@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Data Analytics",
   titleBottom: "& Information",
   description: "Expert data management, modernization, and analysis services to help you gain actionable insights, build data pipelines, and formulate winning strategies with your business data.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "BI Dashboards",
   topBadge: { icon: null as any, title: "BI Dashboards", subtitle: "Real-time data", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Actionable", subtitle: "Business insights", colorClass: "bg-emerald-500/10" },

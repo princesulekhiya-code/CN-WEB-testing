@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Payment &",
   titleBottom: "Checkout",
   description: "Stripe, PayPal, and regional gateways with fraud signals and mobile-optimized one-page checkout flows.",
-  heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-91acafd5b2.jpg",
   heroImageAlt: "Payment & Checkout System",
   topBadge: { icon: null as any, title: "Secure Pay", subtitle: "Multi-gateway", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "PCI DSS", subtitle: "Level 1 cert", colorClass: "bg-emerald-500/10" },

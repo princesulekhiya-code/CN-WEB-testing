@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Education & eLearning Software",
   subtitle: "Transforming Learning Experiences",
   description: "Highly interactive and engaging educational apps and software with adaptive learning paths, live virtual classrooms, and comprehensive progress analytics.",
-  heroImage: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-84e9ea17bf.jpg",
   accentColor: "#ec4899",
 };
 

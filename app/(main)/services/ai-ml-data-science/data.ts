@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "AI, ML &",
   titleBottom: "Data Science",
   description: "Convert raw data into sharp insight and automated decisions. From predictive analytics through generative AI, we deliver machine learning systems that are production-ready and anchored in measurable business value.",
-  heroImage: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-9d713105ce.jpg",
   heroImageAlt: "AI and machine learning solutions",
   topBadge: { icon: null as any, title: "Deep Learning", subtitle: "Custom models", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "99% Accuracy", subtitle: "Production models", colorClass: "bg-emerald-500/10" },
@@ -76,7 +76,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "AI & ML Can Be",
   headingHighlight: "Revolutionary",
   subtitle: "Harness artificial intelligence to automate decisions, uncover hidden insights, and build products that learn and improve over time.",
-  image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-3639baba1c.jpg",
   imageAlt: "AI and machine learning visualization",
   items: [
     { title: "Intelligent Automation", description: "Automate repetitive cognitive tasks — document processing, customer support, quality inspection — freeing your team to focus on high-value strategic work." },

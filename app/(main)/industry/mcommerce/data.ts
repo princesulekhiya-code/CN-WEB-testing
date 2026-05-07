@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "mCommerce App Development",
   subtitle: "Mobile-First Shopping",
   description: "Mobile commerce platforms optimized for conversions with one-tap checkout, personalized notifications, and seamless integration with e-commerce backends.",
-  heroImage: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-be267acabb.jpg",
   accentColor: "#a855f7",
 };
 

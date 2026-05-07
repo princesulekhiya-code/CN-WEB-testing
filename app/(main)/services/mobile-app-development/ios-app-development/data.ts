@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "iOS App",
   titleBottom: "Development",
   description: "We design and build native iOS experiences for iPhone, iPad, and Apple Watch — using Swift, SwiftUI, and proven\r\n                architecture so your product feels fast, trustworthy, and unmistakably Apple.",
-  heroImage: "https://images.unsplash.com/photo-1621768216002-5ac171876625?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-0967820ad3.jpg",
   heroImageAlt: "iOS app development",
   topBadge: { icon: null as any, title: "Swift & SwiftUI", subtitle: "Native iOS", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "150+ Apps", subtitle: "Shipped to App Store", colorClass: "bg-emerald-500/10" },

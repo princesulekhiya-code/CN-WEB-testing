@@ -31,7 +31,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Services",
   description:
     "Faster, cost-effective transitions to cloud without impacting your business — partnering with leading public cloud providers for seamless migrations.",
-  heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-82e21f8d76.jpg",
   heroImageAlt: "Cloud Migration & Data Transfer",
   topBadge: {
     icon: null as any,

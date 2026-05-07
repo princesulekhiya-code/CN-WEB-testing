@@ -35,7 +35,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Engineering",
   description:
     "Design and operate build-test-deploy pipelines with strong gates, progressive delivery, and observability so every release is boring — in the best way.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-a41ee3d1d8.jpg",
   heroImageAlt: "CI/CD Pipeline Automation",
   topBadge: {
     icon: null as any,

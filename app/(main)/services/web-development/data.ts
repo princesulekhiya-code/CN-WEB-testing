@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Web",
   titleBottom: "Development",
   description: "We engineer responsive, secure, and exceptionally fast web experiences—from refined startup landing pages to sophisticated enterprise platforms—each shaped with performance, accessibility, and SEO excellence top of mind.",
-  heroImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-9bc46cc9cc.jpg",
   heroImageAlt: "Web development",
   topBadge: { icon: null as any, title: "React + Next.js", subtitle: "Full-stack delivery", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "99+ Score", subtitle: "Lighthouse performance", colorClass: "bg-emerald-500/10" },
@@ -81,7 +81,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Web Apps Can Be",
   headingHighlight: "Transformative",
   subtitle: "A high-performance web application is no longer optional — it's the cornerstone of digital growth and customer trust.",
-  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-5713964866.jpg",
   imageAlt: "Web development workspace",
   items: [
     { title: "Global Reach & Accessibility", description: "Web applications are accessible from any device with a browser — no downloads, no app store approvals. Reach customers worldwide instantly with zero friction." },

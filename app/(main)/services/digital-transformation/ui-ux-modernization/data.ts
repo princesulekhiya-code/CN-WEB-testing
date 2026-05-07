@@ -32,7 +32,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Modernization",
   description:
     "Adopt the latest design trends and experiences to create engaging products that boost user engagement and business value.",
-  heroImage: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-37761d5488.jpg",
   heroImageAlt: "UI/UX Modernization",
   topBadge: {
     icon: null as any,

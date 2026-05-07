@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Banking & Finance Software",
   subtitle: "Securing Financial Operations",
   description: "World-class digital banking, finance and insurance services with AI-powered fraud detection, automated claims processing, and PCI-DSS compliant systems.",
-  heroImage: "https://plus.unsplash.com/premium_photo-1661306416293-e3ab553eb73a?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-d488a75ddc.jpg",
   accentColor: "#4EB3E8",
 };
 

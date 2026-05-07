@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Prototype Design /",
   titleBottom: "PoC Development",
   description: "From discovery to dev-ready handoff — structured delivery for rapid validation.",
-  heroImage: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6f9a39897b.jpg",
   heroImageAlt: "Prototype Design & Wireframes",
   topBadge: { icon: null as any, title: "Prototype", subtitle: "Interactive design", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Click & Test", subtitle: "User validated", colorClass: "bg-emerald-500/10" },

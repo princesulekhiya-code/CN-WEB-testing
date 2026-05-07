@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Cybersecurity",
   titleBottom: "& Compliance",
   description: "Lower breach exposure and meet regulatory expectations through structured assessments, continuous monitoring, and compliance initiatives engineered for modern cloud platforms and software delivery.",
-  heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-9bd0d0c036.jpg",
   heroImageAlt: "Cybersecurity and compliance",
   topBadge: { icon: null as any, title: "Zero Breach", subtitle: "Track record", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "SOC 2 Ready", subtitle: "Compliance certified", colorClass: "bg-emerald-500/10" },
@@ -75,7 +75,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Cybersecurity Is",
   headingHighlight: "Business-Essential",
   subtitle: "The average data breach costs $4.45M. Proactive security and compliance aren't expenses — they're investments that protect everything you've built.",
-  image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-9bd0d0c036.jpg",
   imageAlt: "Cybersecurity protection shield",
   items: [
     { title: "Breach Prevention", description: "Proactive security assessments, penetration testing, and vulnerability management identify and eliminate threats before attackers exploit them." },

@@ -25,7 +25,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Email",
   titleBottom: "Marketing",
   description: "Automated email sequences, campaigns, drip flows",
-  heroImage: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-fcbdc3381c.jpg",
   heroImageAlt: "Email Marketing Automation",
   topBadge: { icon: null as any, title: "Automated", subtitle: "Drip campaigns", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "40% Open Rate", subtitle: "Above average", colorClass: "bg-emerald-500/10" },

@@ -35,7 +35,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "SecOps",
   description:
     "Security embedded in every commit—scanning, secrets, compliance checks, and guardrails that keep velocity high and risk low.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-bec6bc3726.jpg",
   heroImageAlt: "DevSecOps Security",
   topBadge: {
     icon: null as any,

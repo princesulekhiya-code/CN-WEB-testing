@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "IT",
   titleBottom: "Assessments",
   description: "Comprehensive evaluation of your IT environment to identify improvement areas, enhance security, boost efficiency, and build a data-driven roadmap for growth.",
-  heroImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-61b992e785.jpg",
   heroImageAlt: "IT Assessment & Audit",
   topBadge: { icon: null as any, title: "Deep Audit", subtitle: "IT assessment", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Gap Analysis", subtitle: "Actionable report", colorClass: "bg-emerald-500/10" },

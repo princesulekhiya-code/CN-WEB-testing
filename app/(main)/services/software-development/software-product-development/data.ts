@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Software Product",
   titleBottom: "Development",
   description: "End-to-end product engineering from requirement analysis and design through development, testing, deployment, and ongoing support — we turn your vision into a market-ready software product.",
-  heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6483454b17.jpg",
   heroImageAlt: "Full-Cycle",
   topBadge: { icon: null as any, title: "Full-Cycle", subtitle: "Product dev", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Ship Fast", subtitle: "Agile sprints", colorClass: "bg-emerald-500/10" },

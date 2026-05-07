@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Security Risk",
   titleBottom: "Assessments",
   description: "Identify security vulnerabilities, assess risk levels, and implement preventive measures to protect your technology-dependent business operations from evolving threats.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-bec6bc3726.jpg",
   heroImageAlt: "Security Risk Assessment",
   topBadge: { icon: null as any, title: "Risk Audit", subtitle: "Security review", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Compliance", subtitle: "SOC 2 ready", colorClass: "bg-emerald-500/10" },

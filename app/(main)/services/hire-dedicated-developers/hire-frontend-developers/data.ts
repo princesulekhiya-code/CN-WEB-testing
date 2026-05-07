@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Hire Front-End",
   titleBottom: "Developers",
   description: "Scale your digital experience with front-end specialists proficient in React, Angular, Vue.js, and modern UI frameworks. Our developers deliver responsive, accessible, high-performance interfaces.",
-  heroImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-9bc46cc9cc.jpg",
   heroImageAlt: "Frontend Web Development",
   topBadge: { icon: null as any, title: "React & Next", subtitle: "Modern frontend", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "UI Experts", subtitle: "Pixel perfect", colorClass: "bg-emerald-500/10" },

@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Custom CRM",
   titleBottom: "Development",
   description: "Purpose-built CRM software including modules, migration services, mobile CRM apps, custom databases, and cloud solutions — designed for your specific industry and workflows.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "Custom CRM",
   topBadge: { icon: null as any, title: "Custom CRM", subtitle: "360° view", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "30% More", subtitle: "Sales efficiency", colorClass: "bg-emerald-500/10" },

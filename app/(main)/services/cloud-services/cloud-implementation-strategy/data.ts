@@ -31,7 +31,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Strategy",
   description:
     "From cloud advisory to adoption roadmaps — guiding enterprises toward the best cloud strategy, security posture, and administration model for lasting results.",
-  heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-e1f7697fb3.jpg",
   heroImageAlt: "Cloud Implementation Strategy",
   topBadge: {
     icon: null as any,

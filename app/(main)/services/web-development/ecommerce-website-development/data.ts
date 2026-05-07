@@ -11,7 +11,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "E-Commerce Website",
   titleBottom: "Development",
   description: "Scalable online stores with secure payments, inventory management, and conversion-optimized shopping experiences.",
-  heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-91acafd5b2.jpg",
   heroImageAlt: "E-Commerce",
   topBadge: { icon: null as any, title: "E-Commerce", subtitle: "Conversion-focused", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "3x Revenue", subtitle: "Growth-driven", colorClass: "bg-emerald-500/10" },

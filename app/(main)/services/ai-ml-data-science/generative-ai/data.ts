@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Generative AI",
   titleBottom: "& LLMs",
   description: "We build retrieval-grounded assistants, fine-tuned models, and agentic workflows that stay on-brand, observable, and ready for enterprise scale.",
-  heroImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-b7269deaf9.jpg",
   heroImageAlt: "LLM Powered",
   topBadge: { icon: null as any, title: "LLM Powered", subtitle: "GPT & beyond", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Custom Models", subtitle: "Fine-tuned AI", colorClass: "bg-emerald-500/10" },

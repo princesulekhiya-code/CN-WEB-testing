@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Flutter App",
   titleBottom: "Development",
   description: "Build once, ship everywhere. With Flutter and Dart you get a single codebase, native performance via Skia, and expressive UI — so your product looks sharp and feels fast on mobile, web, and desktop.",
-  heroImage: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-e84b560e2e.jpg",
   heroImageAlt: "Flutter app development",
   topBadge: { icon: null as any, title: "Single Codebase", subtitle: "iOS, Android & Web", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "60fps Native", subtitle: "Skia rendering engine", colorClass: "bg-emerald-500/10" },

@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Software Product",
   titleBottom: "Architecting",
   description: "Experts analyze your IT infrastructure and needs, utilizing advanced tools and technologies to build scalable, robust software that offers smooth performance.",
-  heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6355372f4e.jpg",
   heroImageAlt: "Software Architecture & Infrastructure",
   topBadge: { icon: null as any, title: "Scalable Arch", subtitle: "Microservices", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Future-Proof", subtitle: "Extensible design", colorClass: "bg-emerald-500/10" },

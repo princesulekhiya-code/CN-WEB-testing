@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Single Page App",
   titleBottom: "Development",
   description: "Lightning-fast SPAs with seamless navigation, instant transitions, and dynamic content loading.",
-  heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-c10bb94cfc.jpg",
   heroImageAlt: "Modern single page application code in editor",
   topBadge: { icon: null as any, title: "SPA Expert", subtitle: "React & Vue", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Instant Nav", subtitle: "Client-side routing", colorClass: "bg-emerald-500/10" },

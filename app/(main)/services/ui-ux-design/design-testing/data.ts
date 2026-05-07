@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Design",
   titleBottom: "Testing",
   description: "Validate every design decision with A/B testing, usability studies, heatmap analysis, and accessibility audits — so your product is built on evidence, not assumptions.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "Design Testing & Analytics",
   topBadge: { icon: null as any, title: "A/B Testing", subtitle: "Data-driven", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "40% Better", subtitle: "Conversion lift", colorClass: "bg-emerald-500/10" },

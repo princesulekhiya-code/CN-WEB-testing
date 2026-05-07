@@ -34,7 +34,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Modernization",
   description:
     "Micro-frontends, cloud development, JavaScript migration to PWA/SPA, and server-side modernization with cutting-edge technologies.",
-  heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-2c1ef39379.jpg",
   heroImageAlt: "Technology Modernization",
   topBadge: {
     icon: null as any,

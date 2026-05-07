@@ -35,7 +35,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Modernization",
   description:
     "Transform aging monolithic systems into modern, cloud-native microservices architectures for scalability and resilience.",
-  heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6355372f4e.jpg",
   heroImageAlt: "Architecture Modernization",
   topBadge: {
     icon: null as any,

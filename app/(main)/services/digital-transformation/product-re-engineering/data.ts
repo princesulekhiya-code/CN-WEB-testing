@@ -33,7 +33,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Re-engineering",
   description:
     "Enhance legacy products with new features, performance optimization, and faster speed-to-market through comprehensive re-engineering.",
-  heroImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-158022e349.jpg",
   heroImageAlt: "Product Re-Engineering",
   topBadge: {
     icon: null as any,

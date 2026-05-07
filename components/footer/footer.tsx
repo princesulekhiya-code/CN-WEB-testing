@@ -22,7 +22,7 @@ export function Footer() {
         </p>
 
         {/* Links Grid - 3 columns on mobile, 6 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-6 gap-y-6 lg:gap-x-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-6 lg:gap-x-8">
           <div>
             <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">Services</h3>
             <ul className="space-y-1.5 text-[13px] text-neutral-500 dark:text-neutral-400">
@@ -103,7 +103,7 @@ export function Footer() {
         </div>
 
         {/* Office Locations */}
-        <div className="mt-8 pt-6 border-t border-black/10 dark:border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="mt-8 pt-6 border-t border-black/10 dark:border-white/10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <div className="flex gap-2 text-[13px] text-neutral-500 dark:text-neutral-400">
             <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5" />
             <div>

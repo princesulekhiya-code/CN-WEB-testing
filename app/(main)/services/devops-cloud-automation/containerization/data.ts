@@ -34,7 +34,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "& Orchestration",
   description:
     "Package applications consistently, run them at scale on Kubernetes, and add mesh-level controls when traffic complexity demands it.",
-  heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6355372f4e.jpg",
   heroImageAlt: "Docker & Kubernetes Containers",
   topBadge: {
     icon: null as any,

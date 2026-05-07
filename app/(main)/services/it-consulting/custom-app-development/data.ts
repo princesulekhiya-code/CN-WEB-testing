@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Custom Web & Mobile",
   titleBottom: "App Development",
   description: "Enterprise-grade web and mobile applications delivered by experienced tech teams to help your business grow, compete, and innovate in the digital market.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-a41ee3d1d8.jpg",
   heroImageAlt: "Custom App Development",
   topBadge: { icon: null as any, title: "Custom Apps", subtitle: "Tailored solutions", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "200+ Apps", subtitle: "Delivered", colorClass: "bg-emerald-500/10" },

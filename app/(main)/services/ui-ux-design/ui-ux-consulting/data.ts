@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "UI/UX",
   titleBottom: "Consulting",
   description: "Strategic UX consulting that aligns design with business goals — UX audits, design strategy, research methodology, and design system governance for products that drive measurable growth.",
-  heroImage: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-3fb6f2550d.jpg",
   heroImageAlt: "UI/UX Consulting & Strategy",
   topBadge: { icon: null as any, title: "UX Advisory", subtitle: "Expert review", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "60% Better", subtitle: "User satisfaction", colorClass: "bg-emerald-500/10" },

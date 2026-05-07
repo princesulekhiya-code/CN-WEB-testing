@@ -379,49 +379,49 @@ const industries = [
     icon: CreditCard, name: "FinTech & Banking", href: "/industry/banking-finance-insurance",
     desc: "Secure digital banking, seamless payment rails, real-time trading interfaces & built-in regulatory safeguards",
     accent: "#10B981", stat: "25+", statLabel: "FinTech Apps",
-    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&h=400&fit=crop&q=80",
+    image: "/images/stock/stock-c9893e80d7.jpg",
   },
   {
     icon: Stethoscope, name: "Healthcare", href: "/industry/healthcare-lifesciences",
     desc: "Virtual care platforms, electronic health records, patient engagement portals & privacy-first architecture",
     accent: "#EF4444", stat: "15+", statLabel: "Health Apps",
-    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop&q=80",
+    image: "/images/stock/stock-f4d0f3ed0c.jpg",
   },
   {
     icon: ShoppingCart, name: "E-Commerce", href: "/industry/ecommerce-solutions",
     desc: "Conversion-optimized storefronts, multi-vendor marketplaces, live inventory sync & composable commerce stacks",
     accent: "#8B5CF6", stat: "30+", statLabel: "Stores Built",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop&q=80",
+    image: "/images/stock/stock-a8fec3798d.jpg",
   },
   {
     icon: GraduationCap, name: "Education", href: "/industry/education-elearning",
     desc: "Immersive learning management systems, gamified courses, live virtual classrooms & adaptive EdTech experiences",
     accent: "#F59E0B", stat: "20+", statLabel: "EdTech Solutions",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80",
+    image: "/images/stock/stock-d493e3a127.jpg",
   },
   {
     icon: Truck, name: "Logistics", href: "/industry/transport-logistics",
     desc: "GPS fleet visibility, AI-powered route planning, warehouse automation & end-to-end supply chain orchestration",
     accent: "#06B6D4", stat: "12+", statLabel: "Logistics Apps",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop&q=80",
+    image: "/images/stock/stock-1fe7db2ba5.jpg",
   },
   {
     icon: Building2, name: "Real Estate", href: "/industry/real-estate",
     desc: "Smart property portals, 3D virtual walkthroughs, agent CRM tools & automated tenant lifecycle management",
     accent: "#EC4899", stat: "10+", statLabel: "PropTech Apps",
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop&q=80",
+    image: "/images/stock/stock-7162862a30.jpg",
   },
   {
     icon: Factory, name: "Manufacturing", href: "/industry/enterprise-retail-manufacturing",
     desc: "Real-time IoT monitoring, ERP connectors, automated QC workflows & digital production line tracking",
     accent: "#F97316", stat: "8+", statLabel: "Mfg Solutions",
-    image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&h=400&fit=crop&q=80",
+    image: "/images/stock/stock-2b273eb759.jpg",
   },
   {
     icon: BarChart3, name: "SaaS & Startups", href: "/industry/fintech",
     desc: "Lean MVP launches, multi-tenant platform architecture, recurring billing engines & growth-stage scaling playbooks",
     accent: "#4EB3E8", stat: "40+", statLabel: "SaaS Products",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&q=80",
+    image: "/images/stock/stock-6056ca11ee.jpg",
   },
 ];
 
@@ -987,7 +987,7 @@ function IndustriesSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"
         >
           {[
             { text: "Tailored vertical solutions", icon: Lightbulb },
@@ -1244,7 +1244,7 @@ export default function ServicesPage() {
             >
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
                 <Image
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80"
+                  src="/images/stock/stock-6483454b17.jpg"
                   alt="Our engineering team collaborating on digital solutions"
                   fill
                   className="object-cover"

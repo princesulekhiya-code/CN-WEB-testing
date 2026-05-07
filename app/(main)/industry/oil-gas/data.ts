@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Oil & Gas Software Solutions",
   subtitle: "Digital Innovation for Energy",
   description: "Advanced IT solutions for Oil & Gas that improve quality, efficiency & optimize reservoir management with digital asset monitoring and safety compliance.",
-  heroImage: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-026aa0dc9d.jpg",
   accentColor: "#854d0e",
 };
 

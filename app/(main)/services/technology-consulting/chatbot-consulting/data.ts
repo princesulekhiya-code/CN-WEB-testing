@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Chatbot",
   titleBottom: "Consulting",
   description: "From requirements to production — structured delivery for conversational AI.",
-  heroImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-c0082bf1e9.jpg",
   heroImageAlt: "Chatbot & Conversational AI",
   topBadge: { icon: null as any, title: "AI Chatbots", subtitle: "NLP powered", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "24/7 Support", subtitle: "Automated CX", colorClass: "bg-emerald-500/10" },

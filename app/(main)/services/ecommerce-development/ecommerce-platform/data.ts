@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "eCommerce",
   titleBottom: "Online Platform",
   description: "Advanced, scalable B2B and B2C eCommerce online stores leveraging the latest tech stack and custom functionalities.",
-  heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-096e5f6a26.jpg",
   heroImageAlt: "Ecommerce Platform Development",
   topBadge: { icon: null as any, title: "Full Platform", subtitle: "End-to-end", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "500+ Stores", subtitle: "Launched", colorClass: "bg-emerald-500/10" },

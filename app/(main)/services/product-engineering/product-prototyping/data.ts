@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Product",
   titleBottom: "Prototyping",
   description: "We leverage the latest market insights and research to build software prototypes — validate, iterate, and optimize to fulfill your software requirements.",
-  heroImage: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-37761d5488.jpg",
   heroImageAlt: "Product Prototyping & Wireframes",
   topBadge: { icon: null as any, title: "Rapid Proto", subtitle: "Interactive demos", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Fast Iterate", subtitle: "Test & learn", colorClass: "bg-emerald-500/10" },

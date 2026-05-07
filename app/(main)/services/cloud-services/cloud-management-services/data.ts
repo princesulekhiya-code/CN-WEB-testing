@@ -32,7 +32,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Services",
   description:
     "Forecast reporting, disaster recovery, automation, and DevOps that protect your cloud assets against downtime and keep costs predictable.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "Cloud Management Monitoring Dashboard",
   topBadge: {
     icon: null as any,

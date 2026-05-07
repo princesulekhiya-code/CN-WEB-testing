@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Digital Experience",
   titleBottom: "Consulting",
   description: "Strategic planning to build conversion-oriented digital solutions with immersive user experiences that attract and retain customers.",
-  heroImage: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6f9a39897b.jpg",
   heroImageAlt: "Digital Experience Consulting",
   topBadge: { icon: null as any, title: "DX Expert", subtitle: "Digital experience", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "40% Better", subtitle: "User engagement", colorClass: "bg-emerald-500/10" },

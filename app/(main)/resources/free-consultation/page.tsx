@@ -341,7 +341,7 @@ export default function FreeConsultationPage() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {processSteps.map((step, i) => {
             const Icon = step.icon;
             const isActive = activeStep === i;

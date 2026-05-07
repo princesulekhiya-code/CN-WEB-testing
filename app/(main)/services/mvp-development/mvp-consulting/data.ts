@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "MVP",
   titleBottom: "Consulting",
   description: "Our qualified team of experienced engineers and business analysts will support idea conceptualization, define must-have functionality, and select the most desirable tech stack for your MVP.",
-  heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-e1f7697fb3.jpg",
   heroImageAlt: "MVP Consulting & Strategy",
   topBadge: { icon: null as any, title: "MVP Strategy", subtitle: "Expert advisory", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Validated", subtitle: "Market-tested", colorClass: "bg-emerald-500/10" },

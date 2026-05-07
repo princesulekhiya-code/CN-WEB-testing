@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "MVP",
   titleBottom: "Improvement",
   description: "Data-driven improvement cycles that compound gains and accelerate product-market fit.",
-  heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-096e5f6a26.jpg",
   heroImageAlt: "MVP Improvement & Iteration",
   topBadge: { icon: null as any, title: "Iterate Fast", subtitle: "User feedback", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "V2 Ready", subtitle: "Scale-up plan", colorClass: "bg-emerald-500/10" },

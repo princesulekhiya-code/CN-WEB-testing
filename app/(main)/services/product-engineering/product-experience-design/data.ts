@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Product Experience",
   titleBottom: "Design",
   description: "Our UI/UX experts understand business specifics and follow the latest industry trends to create intuitive flow and responsive design for your digital products.",
-  heroImage: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6f9a39897b.jpg",
   heroImageAlt: "Product Experience Design",
   topBadge: { icon: null as any, title: "UX Design", subtitle: "User-centered", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "40% Better", subtitle: "Engagement lift", colorClass: "bg-emerald-500/10" },

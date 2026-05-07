@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "WordPress",
   titleBottom: "eCommerce",
   description: "Powered with thousands of cross-functional plugins, our eCommerce development makes your online web store feature-rich, engaging, and profitable.",
-  heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-91acafd5b2.jpg",
   heroImageAlt: "WordPress Ecommerce & WooCommerce",
   topBadge: { icon: null as any, title: "WooCommerce", subtitle: "Full setup", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "200+ Stores", subtitle: "Live & earning", colorClass: "bg-emerald-500/10" },

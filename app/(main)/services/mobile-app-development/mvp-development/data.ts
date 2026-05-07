@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "MVP",
   titleBottom: "Development",
   description: "Build with lean methodology—ship the smallest product that proves your hypothesis, validate ideas fast with real users, and land investor-ready\r\n                prototypes that show traction, not just slides.",
-  heroImage: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-3fb6f2550d.jpg",
   heroImageAlt: "MVP product development and prototyping",
   topBadge: { icon: null as any, title: "Lean & Fast", subtitle: "8-week delivery", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Validate First", subtitle: "Ship → Learn → Iterate", colorClass: "bg-emerald-500/10" },

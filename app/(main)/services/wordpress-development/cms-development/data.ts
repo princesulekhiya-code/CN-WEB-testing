@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "CMS",
   titleBottom: "Development",
   description: "Streamline your digital content effortlessly with our CMS development services. We design, develop, and deploy user-friendly systems for seamless content control.",
-  heroImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-8e7f372d7d.jpg",
   heroImageAlt: "CMS Content Management Platform",
   topBadge: { icon: null as any, title: "CMS Platform", subtitle: "WordPress + more", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "100+ Sites", subtitle: "Live & managed", colorClass: "bg-emerald-500/10" },

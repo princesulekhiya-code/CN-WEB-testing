@@ -11,7 +11,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Custom Website",
   titleBottom: "Development",
   description: "Bespoke high-performance websites tailored to exact business requirements with 3rd party integrations and custom features.",
-  heroImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-1e05b0d347.jpg",
   heroImageAlt: "Developer coding a custom website on laptop",
   topBadge: { icon: null as any, title: "Custom Build", subtitle: "Tailored websites", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Full-Stack", subtitle: "Modern tech", colorClass: "bg-emerald-500/10" },

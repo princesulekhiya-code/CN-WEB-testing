@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "SaaS Application",
   titleBottom: "Development Services",
   description: "Shape a bold concept into a production-grade SaaS product that earns attention, wins trust, and compounds recurring revenue.",
-  heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-096e5f6a26.jpg",
   heroImageAlt: "SaaS platform development",
   topBadge: { icon: null as any, title: "Multi-Tenant", subtitle: "Cloud-native", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "99.99%", subtitle: "Platform uptime", colorClass: "bg-emerald-500/10" },
@@ -79,7 +79,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "SaaS Products Can",
   headingHighlight: "Scale Infinitely",
   subtitle: "Build multi-tenant platforms with subscription billing, seamless onboarding, and architecture that scales with every new customer.",
-  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-5713964866.jpg",
   imageAlt: "SaaS development dashboard",
   items: [
     { title: "Predictable Recurring Revenue", description: "Subscription models create reliable monthly income streams. Combined with low churn and upsell opportunities, SaaS businesses achieve valuations 3-7x higher than traditional software." },

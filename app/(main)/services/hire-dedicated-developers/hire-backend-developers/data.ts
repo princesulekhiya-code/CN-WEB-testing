@@ -11,7 +11,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Hire Back-End",
   titleBottom: "Developers",
   description: "Strengthen application performance, security, and scalability with backend engineers experienced in Node.js, Python, .NET, Java, and modern API architectures.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-a41ee3d1d8.jpg",
   heroImageAlt: "Backend Development",
   topBadge: { icon: null as any, title: "Backend Pros", subtitle: "Node, Python, Go", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Senior Level", subtitle: "5+ years exp", colorClass: "bg-emerald-500/10" },

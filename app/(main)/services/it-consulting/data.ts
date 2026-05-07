@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "IT",
   titleBottom: "Consulting",
   description: "Apply our specialized technology depth across digital transformation to craft near- and long-range plans that future-proof your organization and maximize return on investment.",
-  heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-e1f7697fb3.jpg",
   heroImageAlt: "IT consulting services",
   topBadge: { icon: null as any, title: "IT Strategy", subtitle: "End-to-end", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "ROI Driven", subtitle: "Measurable results", colorClass: "bg-emerald-500/10" },
@@ -75,7 +75,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "IT Consulting Can",
   headingHighlight: "Drive Efficiency",
   subtitle: "Optimize your IT infrastructure, reduce operational costs, and build systems that support your business growth strategy.",
-  image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-32f19b7b62.jpg",
   imageAlt: "IT infrastructure consulting",
   items: [
     { title: "Infrastructure Cost Optimization", description: "Audit your current IT spend and eliminate waste. Right-size servers, consolidate licenses, and negotiate vendor contracts to cut costs by 30-50%." },

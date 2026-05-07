@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "UI/UX",
   titleBottom: "Design",
   description: "Deepen engagement and lift revenue through distinguished UI and UX. From greenfield launches to refinements of mature products, we deliver uncompromising, user-centered craft.",
-  heroImage: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6f9a39897b.jpg",
   heroImageAlt: "UI/UX design services",
   topBadge: { icon: null as any, title: "Pixel Perfect", subtitle: "Design systems", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "95% Score", subtitle: "Usability testing", colorClass: "bg-emerald-500/10" },
@@ -131,7 +131,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Great Design Can Be",
   headingHighlight: "Profit-Driving",
   subtitle: "Every dollar invested in UX returns $100. Strategic design reduces development costs, increases conversions, and builds lasting brand loyalty.",
-  image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-be564387dd.jpg",
   imageAlt: "UI UX design process",
   items: [
     { title: "Higher Conversion Rates", description: "Well-designed interfaces guide users toward action. Strategic UX can boost conversions by 200-400% through clearer navigation, better CTAs, and reduced friction." },

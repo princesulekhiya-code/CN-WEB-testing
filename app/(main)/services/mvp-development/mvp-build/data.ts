@@ -11,7 +11,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "MVP /",
   titleBottom: "Development",
   description: "Fully featured usable version 1.0 from ideation to release with full team support",
-  heroImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-1e05b0d347.jpg",
   heroImageAlt: "MVP Build & Development",
   topBadge: { icon: null as any, title: "MVP Build", subtitle: "8-week delivery", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Ship Fast", subtitle: "Market-ready", colorClass: "bg-emerald-500/10" },

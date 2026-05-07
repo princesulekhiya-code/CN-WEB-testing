@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Digital Transformation",
   titleBottom: "Consulting",
   description: "Study your business processes to improve efficiency, automate workflows, and guide digital transformation initiatives that drive measurable business outcomes.",
-  heroImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-dc982244ba.jpg",
   heroImageAlt: "Digital Transformation Consulting",
   topBadge: { icon: null as any, title: "Digital First", subtitle: "Transformation", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "15+ Years", subtitle: "Industry experts", colorClass: "bg-emerald-500/10" },

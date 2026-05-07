@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Progressive Web",
   titleBottom: "Apps (PWA)",
   description: "Deliver installable web experiences with offline support, push notifications, and app-like UX — without waiting on app store approval.\r\n                Reach users directly from the browser while keeping one codebase and instant updates.",
-  heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-096e5f6a26.jpg",
   heroImageAlt: "Progressive web app development",
   topBadge: { icon: null as any, title: "Installable", subtitle: "No app store needed", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Offline-First", subtitle: "Works without network", colorClass: "bg-emerald-500/10" },

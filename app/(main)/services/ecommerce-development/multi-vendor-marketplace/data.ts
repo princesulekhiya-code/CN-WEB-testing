@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Multi-Vendor",
   titleBottom: "Marketplace",
   description: "Reliable multi-vendor marketplaces with streamlined experiences for buyers and sellers with multiple payment gateways.",
-  heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6483454b17.jpg",
   heroImageAlt: "Multi-Vendor Marketplace",
   topBadge: { icon: null as any, title: "Multi-Vendor", subtitle: "Marketplace", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "10K+ Sellers", subtitle: "Platform scale", colorClass: "bg-emerald-500/10" },

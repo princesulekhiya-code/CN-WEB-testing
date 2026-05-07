@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Custom",
   titleBottom: "Software",
   description: "We offer tailored software solutions that automate processes, scale products, deliver real-time\r\n                analytics, and drive agile innovation — built specifically for your unique business requirements.",
-  heroImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-1e05b0d347.jpg",
   heroImageAlt: "Bespoke",
   topBadge: { icon: null as any, title: "Bespoke", subtitle: "Custom-built", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "200+ Projects", subtitle: "Delivered on time", colorClass: "bg-emerald-500/10" },

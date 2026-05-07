@@ -85,7 +85,7 @@ function HeroImage() {
     >
       <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
         <Image
-          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80"
+          src="/images/stock/stock-909e6b9a6d.jpg"
           alt="Forecasting"
           fill
           className="object-cover"

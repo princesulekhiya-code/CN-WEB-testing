@@ -145,7 +145,7 @@ export default function InfrastructurePage() {
           />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 pt-36 pb-24 md:pt-44 md:pb-32">
+        <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-16 md:pt-44 md:pb-32">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -181,7 +181,7 @@ export default function InfrastructurePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="mt-16 flex flex-wrap justify-center gap-8 md:gap-16"
+            className="mt-12 md:mt-16 flex flex-wrap justify-center gap-6 md:gap-16"
           >
             {office.stats.map((s, i) => (
               <div key={i} className="text-center">
@@ -438,7 +438,7 @@ export default function InfrastructurePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {workspaceHighlights.map((w, i) => {
               const Icon = w.icon;
               return (
@@ -473,7 +473,7 @@ export default function InfrastructurePage() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-[#4EB3E8]/[0.04] to-purple-500/[0.04] dark:from-[#4EB3E8]/[0.06] dark:to-purple-500/[0.06] p-12 sm:p-16 text-center"
+          className="relative overflow-hidden rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-[#4EB3E8]/[0.04] to-purple-500/[0.04] dark:from-[#4EB3E8]/[0.06] dark:to-purple-500/[0.06] p-8 sm:p-12 md:p-16 text-center"
         >
           <div
             className="absolute inset-0 pointer-events-none"

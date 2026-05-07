@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Enterprise & Manufacturing Software",
   subtitle: "Smart Solutions for Industry",
   description: "Customized enterprise, retail & manufacturing solutions that streamline supply chain, optimize operations, and leverage IoT-powered smart factory systems.",
-  heroImage: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-f83a058636.jpg",
   accentColor: "#64748b",
 };
 

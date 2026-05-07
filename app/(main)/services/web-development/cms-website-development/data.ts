@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "CMS Website",
   titleBottom: "Development",
   description: "Content management systems on WordPress, Strapi, Sanity, or headless CMS platforms for easy\r\n                content updates.",
-  heroImage: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-510db88401.jpg",
   heroImageAlt: "CMS dashboard and content management interface",
   topBadge: { icon: null as any, title: "CMS Expert", subtitle: "Content-first", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "200+ Sites", subtitle: "Live & managed", colorClass: "bg-emerald-500/10" },

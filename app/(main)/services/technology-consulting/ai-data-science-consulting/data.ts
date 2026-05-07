@@ -11,7 +11,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "AI & Data Science",
   titleBottom: "Consulting",
   description: "Implement advanced algorithms, predictive analytics, and intelligent automation to drive innovation and competitive\r\n                advantage.",
-  heroImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-b7269deaf9.jpg",
   heroImageAlt: "AI & Data Science Consulting",
   topBadge: { icon: null as any, title: "AI Advisory", subtitle: "ML strategy", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "ROI Focused", subtitle: "Business impact", colorClass: "bg-emerald-500/10" },

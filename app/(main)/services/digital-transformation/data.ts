@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Digital Modernization",
   titleBottom: "& Transformation",
   description: "Automate, reinvent, and modernize enterprise workflows through our digital modernization and transformation services to deliver greater value to your customers.",
-  heroImage: "https://images.unsplash.com/photo-1488229297570-58520851e868?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-b48244db73.jpg",
   heroImageAlt: "Digital transformation strategy",
   topBadge: { icon: null as any, title: "360° Digital", subtitle: "Full transformation", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "40% Faster", subtitle: "Time-to-market", colorClass: "bg-emerald-500/10" },
@@ -80,7 +80,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Digital Transformation Is",
   headingHighlight: "Non-Negotiable",
   subtitle: "Modernize legacy systems, automate workflows, and build digital-first capabilities that keep your business competitive and resilient.",
-  image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-dea3056761.jpg",
   imageAlt: "Digital transformation in enterprise",
   items: [
     { title: "Legacy System Modernization", description: "Replace aging monoliths with cloud-native architectures. Reduce maintenance costs by 60%, improve performance, and unlock the agility that modern business demands." },

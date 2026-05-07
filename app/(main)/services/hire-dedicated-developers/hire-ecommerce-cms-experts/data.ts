@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Hire eCommerce &",
   titleBottom: "CMS Experts",
   description: "Modernize your online presence with experts in WordPress, Shopify, Magento, and custom CMS platforms. Build conversion-focused storefronts with seamless integrations and performance-driven development.",
-  heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-91acafd5b2.jpg",
   heroImageAlt: "E-Commerce Platform",
   topBadge: { icon: null as any, title: "E-Com Experts", subtitle: "Shopify & WP", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "300+ Stores", subtitle: "Launched", colorClass: "bg-emerald-500/10" },

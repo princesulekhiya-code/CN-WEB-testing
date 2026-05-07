@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "SaaS Mobile",
   titleBottom: "Solutions",
   description: "Both native and hybrid SaaS mobile app solutions leveraging smartphone users for maximum reach and engagement.",
-  heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-be6b0ed7f1.jpg",
   heroImageAlt: "SaaS Mobile Solutions",
   topBadge: { icon: null as any, title: "Mobile SaaS", subtitle: "iOS & Android", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Cloud-Native", subtitle: "Always synced", colorClass: "bg-emerald-500/10" },

@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Product",
   titleBottom: "Engineering",
   description: "We design and develop digital solutions that comply with your industry standards and\r\n                accelerate your business operations — from ideation to market release and beyond.",
-  heroImage: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-e91bda71cd.jpg",
   heroImageAlt: "Product engineering and development",
   topBadge: { icon: null as any, title: "Full Lifecycle", subtitle: "Concept to scale", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "3x Faster", subtitle: "Market delivery", colorClass: "bg-emerald-500/10" },
@@ -115,7 +115,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Product Engineering Can",
   headingHighlight: "Accelerate Growth",
   subtitle: "Transform your vision into a market-ready product with end-to-end engineering that balances speed, quality, and scalability.",
-  image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-097f194eb9.jpg",
   imageAlt: "Product engineering and ideation",
   items: [
     { title: "Idea to Market Faster", description: "Structured product engineering reduces time-to-market by 40%. Validated prototypes, agile sprints, and CI/CD pipelines get your product in front of users quickly." },

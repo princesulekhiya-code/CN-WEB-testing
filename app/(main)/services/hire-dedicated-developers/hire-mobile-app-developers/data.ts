@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Hire Mobile App",
   titleBottom: "Developers",
   description: "Build high-performing mobile products with skilled Android, iOS, Flutter, and React Native developers. Our engineers work as an extension of your team — ensuring scalable architecture and faster go-to-market.",
-  heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-be6b0ed7f1.jpg",
   heroImageAlt: "Mobile App Development",
   topBadge: { icon: null as any, title: "Mobile Devs", subtitle: "iOS & Android", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "150+ Apps", subtitle: "Shipped", colorClass: "bg-emerald-500/10" },

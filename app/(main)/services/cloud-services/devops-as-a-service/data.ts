@@ -30,7 +30,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "A Service",
   description:
     "Enhance performance, improve efficiency, and increase ROI through CI/CD pipelines, infrastructure as code, and automated delivery workflows designed for velocity.",
-  heroImage: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-e8282bdf05.jpg",
   heroImageAlt: "DevOps CI/CD Pipeline Automation",
   topBadge: {
     icon: null as any,

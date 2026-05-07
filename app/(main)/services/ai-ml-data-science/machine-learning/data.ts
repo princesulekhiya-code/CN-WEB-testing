@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Machine",
   titleBottom: "Learning Solutions",
   description: "From classical models to deep learning, we design, train, and ship ML systems that stay accurate in production—not just in notebooks.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-bec6bc3726.jpg",
   heroImageAlt: "Deep Learning",
   topBadge: { icon: null as any, title: "Deep Learning", subtitle: "Neural networks", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "95%+ Accuracy", subtitle: "Production models", colorClass: "bg-emerald-500/10" },

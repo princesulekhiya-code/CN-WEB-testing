@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "WordPress Plugin",
   titleBottom: "Development",
   description: "SEO-friendly, secured, and high-potent custom plugins that are scalable, easy-to-integrate, and simple to use for any WordPress site.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-a41ee3d1d8.jpg",
   heroImageAlt: "WordPress Plugin Development",
   topBadge: { icon: null as any, title: "Custom Plugin", subtitle: "WordPress API", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Secure Code", subtitle: "Best practices", colorClass: "bg-emerald-500/10" },

@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "eCommerce",
   titleBottom: "Mobile App",
   description: "Omnichannel mobile shopping supporting anytime, on-the-go convenience — boosting sales and building brand awareness.",
-  heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-be6b0ed7f1.jpg",
   heroImageAlt: "Ecommerce Mobile App",
   topBadge: { icon: null as any, title: "Mobile Store", subtitle: "iOS & Android", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "3x Conversion", subtitle: "Mobile-first", colorClass: "bg-emerald-500/10" },

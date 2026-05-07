@@ -46,49 +46,49 @@ const companyPages = [
     icon: Eye, title: "Overview", href: "/company/overview",
     desc: "Get to know Cloud Nexus  -  our journey since Jan 2025, our vision for the future, and what drives us to build exceptional technology solutions for businesses worldwide.",
     color: "#4EB3E8",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&q=80",
+    image: "/images/stock/stock-55a92f3801.jpg",
   },
   {
     icon: Info, title: "About Us", href: "/company/about-us",
     desc: "Our story, values, and the team culture that makes Cloud Nexus a trusted partner for digital transformation across the globe.",
     color: "#8b5cf6",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=500&h=300&fit=crop&q=80",
+    image: "/images/stock/stock-fc8dfdff10.jpg",
   },
   {
     icon: Heart, title: "Life @ Cloud Nexus", href: "/company/life-at-cloud-nexus",
     desc: "Discover what it's like to work at Cloud Nexus  -  our culture, workspace, team activities, and the environment that fuels innovation.",
     color: "#ef4444",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop&q=80",
+    image: "/images/stock/stock-c3eba1f81a.jpg",
   },
   {
     icon: Users, title: "Our Team", href: "/company/team",
     desc: "Meet the talented engineers, designers, and leaders who bring ideas to life and deliver world-class solutions every day.",
     color: "#10b981",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=300&fit=crop&q=80",
+    image: "/images/stock/stock-cc0cc29ac3.jpg",
   },
   {
     icon: GitBranch, title: "Process Methodology", href: "/company/process-methodology",
     desc: "Our agile development process  -  sprint planning, code reviews, automated testing, and continuous deployment. See how we deliver 50+ projects on time with quality.",
     color: "#f59e0b",
-    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=500&h=300&fit=crop&q=80",
+    image: "/images/stock/stock-8edd9d0bbc.jpg",
   },
   {
     icon: Server, title: "Infrastructure", href: "/company/infrastructure",
     desc: "A modern, thoughtfully designed workspace in the heart of Bhopal, equipped with high-performance workstations, enterprise connectivity, and world-class facilities for our team.",
     color: "#06b6d4",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=300&fit=crop&q=80",
+    image: "/images/stock/stock-ad2b2430e6.jpg",
   },
   {
     icon: Calendar, title: "Events", href: "/company/events",
     desc: "From global tech conferences to hands-on workshops  -  discover where Cloud Nexus is connecting, learning, and innovating.",
     color: "#8b5cf6",
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&h=300&fit=crop&q=80",
+    image: "/images/stock/stock-69ff23980e.jpg",
   },
   {
     icon: Gift, title: "Career Benefits", href: "/company/career-benefits",
     desc: "12+ unique perks  -  complimentary meals, ₹2Cr insurance, PS5 chill room, team outings, certifications, and a supportive work culture that values your growth.",
     color: "#f59e0b",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&h=300&fit=crop&q=80",
+    image: "/images/stock/stock-22acc99230.jpg",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function CompanyPage() {
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="hidden lg:block">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#4EB3E8]/10">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&h=450&fit=crop&q=80" alt="Cloud Nexus office" className="w-full h-[400px] object-cover" />
+                <img src="/images/stock/stock-0ca9676f09.jpg" alt="Cloud Nexus office" className="w-full h-[400px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="grid grid-cols-4 gap-2">
@@ -240,7 +240,7 @@ export default function CompanyPage() {
 
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-2xl shadow-[#4EB3E8]/10">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=500&fit=crop&q=80" alt="Team values" className="w-full h-[480px] object-cover" />
+                <img src="/images/stock/stock-95b9f15766.jpg" alt="Team values" className="w-full h-[480px] object-cover" />
               </div>
             </motion.div>
           </div>
@@ -327,7 +327,7 @@ export default function CompanyPage() {
       <div className="border-t border-black/[0.06] dark:border-white/[0.06]">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="relative overflow-hidden rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-[#4EB3E8]/[0.03] to-purple-500/[0.03] dark:from-[#4EB3E8]/[0.05] dark:to-purple-500/[0.05] p-10 sm:p-14 text-center">
+            className="relative overflow-hidden rounded-3xl border border-black/[0.06] dark:border-white/[0.06] bg-gradient-to-br from-[#4EB3E8]/[0.03] to-purple-500/[0.03] dark:from-[#4EB3E8]/[0.05] dark:to-purple-500/[0.05] p-6 sm:p-10 md:p-14 text-center">
             <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, rgba(78,179,232,0.04) 0%, transparent 70%)" }} />
             <div className="relative">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">

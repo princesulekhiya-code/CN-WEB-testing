@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "DevOps & Cloud",
   titleBottom: "Automation",
   description: "Architect resilient CI/CD pipelines, container-orchestrated deployments, and self-healing infrastructure — so your engineering team ships faster with fewer incidents and full confidence.",
-  heroImage: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-355399787b.jpg",
   heroImageAlt: "DevOps and cloud automation",
   topBadge: { icon: null as any, title: "CI/CD", subtitle: "Fully automated", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "10x Deploy", subtitle: "Faster releases", colorClass: "bg-emerald-500/10" },
@@ -73,7 +73,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "DevOps Can Be",
   headingHighlight: "Business-Critical",
   subtitle: "DevOps isn't just about tools — it's about shipping faster, recovering quicker, and building the confidence to deploy anytime.",
-  image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-5f8a62d35f.jpg",
   imageAlt: "DevOps and cloud infrastructure",
   items: [
     { title: "10x Faster Deployments", description: "CI/CD pipelines, automated testing, and infrastructure as code reduce deployment time from days to minutes. Ship multiple times per day with confidence." },

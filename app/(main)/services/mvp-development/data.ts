@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "MVP",
   titleBottom: "Development",
   description: "Reach market with disciplined capital use, learn from real users with clarity, and rely on bespoke, full-cycle MVP development—from the first sketch to the first paying customer.",
-  heroImage: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-21027990d2.jpg",
   heroImageAlt: "MVP development and launch",
   topBadge: { icon: null as any, title: "8 Weeks", subtitle: "Idea to launch", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "90% Success", subtitle: "Funding rate", colorClass: "bg-emerald-500/10" },
@@ -76,7 +76,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "MVPs Can Be",
   headingHighlight: "Market Validators",
   subtitle: "Test your idea with real users in weeks, not months. Build just enough to prove the concept and attract investors.",
-  image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-0c9340f1a4.jpg",
   imageAlt: "MVP product development startup",
   items: [
     { title: "Validate Before You Invest", description: "Test your core hypothesis with real users before committing to full development. An MVP saves you from spending months building features nobody wants." },

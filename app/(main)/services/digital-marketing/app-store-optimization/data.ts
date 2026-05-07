@@ -26,7 +26,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "App Store",
   titleBottom: "Optimization",
   description: "Improve app visibility and downloads through ASO",
-  heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-be6b0ed7f1.jpg",
   heroImageAlt: "App Store Optimization",
   topBadge: { icon: null as any, title: "Top Rankings", subtitle: "App store SEO", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "5x Downloads", subtitle: "Organic growth", colorClass: "bg-emerald-500/10" },

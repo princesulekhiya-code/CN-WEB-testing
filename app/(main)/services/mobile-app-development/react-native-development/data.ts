@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "React Native",
   titleBottom: "Development",
   description: "Build cross-platform mobile apps with JavaScript and TypeScript — one codebase for iOS and Android, deep native module access when you need it, and hot reload for a fast, productive dev loop from prototype to production.",
-  heroImage: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-ad3cd888d4.jpg",
   heroImageAlt: "React Native cross-platform development",
   topBadge: { icon: null as any, title: "JS & TypeScript", subtitle: "Cross-platform", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Hot Reload", subtitle: "Instant iterations", colorClass: "bg-emerald-500/10" },

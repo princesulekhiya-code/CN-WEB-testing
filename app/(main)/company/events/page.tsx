@@ -16,7 +16,7 @@ const featuredEvents = [
     desc: "Experience how Cloud Nexus transforms businesses with AI-driven solutions, cloud infrastructure, and custom software development at the world's largest tech event in Dubai.",
     date: "Oct 14–18, 2026",
     location: "Dubai World Trade Centre, UAE",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&h=450&fit=crop&q=80",
+    image: "/images/stock/stock-f28034d49b.jpg",
     color: "#4EB3E8",
     highlights: ["Live Product Demos", "1-on-1 Consultation", "Keynote Sessions"],
     status: "upcoming",
@@ -27,7 +27,7 @@ const featuredEvents = [
     desc: "A full-day summit bringing together industry leaders, CTOs, and developers to explore the future of AI, multi-cloud architecture, and scalable SaaS solutions.",
     date: "Aug 22, 2026",
     location: "Bengaluru, India",
-    image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=700&h=450&fit=crop&q=80",
+    image: "/images/stock/stock-1a0dc84c6c.jpg",
     color: "#8b5cf6",
     highlights: ["Expert Panel Discussions", "Networking Lounge", "Startup Showcase"],
     status: "upcoming",
@@ -38,7 +38,7 @@ const featuredEvents = [
     desc: "Cloud Nexus will be showcasing next-generation digital transformation solutions at North America's fastest-growing tech conference. Meet our team at Booth #4217.",
     date: "Jun 23–26, 2026",
     location: "Toronto, Canada",
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=700&h=450&fit=crop&q=80",
+    image: "/images/stock/stock-6342278bab.jpg",
     color: "#10b981",
     highlights: ["Booth Exhibition", "Tech Talks", "Partnership Opportunities"],
     status: "upcoming",
@@ -59,28 +59,28 @@ const pastEvents = [
     title: "GITEX Global 2025",
     date: "Oct 2025",
     location: "Dubai, UAE",
-    image: "https://images.unsplash.com/photo-1582192730841-2a682d7375f9?w=400&h=260&fit=crop&q=75",
+    image: "/images/stock/stock-2f822570f6.jpg",
     desc: "Showcased AI-powered enterprise solutions to 180,000+ attendees from 170+ countries.",
   },
   {
     title: "Collision 2025  -  Toronto",
     date: "Jun 2025",
     location: "Toronto, Canada",
-    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=260&fit=crop&q=75",
+    image: "/images/stock/stock-3456a4230b.jpg",
     desc: "Connected with 40,000+ tech professionals and demonstrated our cloud-native solutions.",
   },
   {
     title: "India Cloud Summit 2025",
     date: "Mar 2025",
     location: "Bengaluru, India",
-    image: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=400&h=260&fit=crop&q=75",
+    image: "/images/stock/stock-991a113913.jpg",
     desc: "Delivered keynote on multi-cloud strategy and digital transformation for enterprises.",
   },
   {
     title: "DevOps Days India 2025",
     date: "Feb 2025",
     location: "Hyderabad, India",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=260&fit=crop&q=75",
+    image: "/images/stock/stock-17f25c7995.jpg",
     desc: "Conducted hands-on workshops on Kubernetes, CI/CD pipelines, and infrastructure as code.",
   },
 ];
@@ -136,7 +136,7 @@ export default function EventsPage() {
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="hidden lg:block">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#4EB3E8]/10">
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&h=450&fit=crop&q=80" alt="Tech conference" className="w-full h-[400px] object-cover" />
+                <img src="/images/stock/stock-f28034d49b.jpg" alt="Tech conference" className="w-full h-[400px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="grid grid-cols-3 gap-2.5">
@@ -365,7 +365,7 @@ export default function EventsPage() {
 
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-2xl shadow-[#4EB3E8]/10">
-                <img src="https://images.unsplash.com/photo-1559223607-b4d0555ae227?w=600&h=500&fit=crop&q=80" alt="Tech event networking" className="w-full h-[480px] object-cover" />
+                <img src="/images/stock/stock-314cbce346.jpg" alt="Tech event networking" className="w-full h-[480px] object-cover" />
               </div>
             </motion.div>
           </div>

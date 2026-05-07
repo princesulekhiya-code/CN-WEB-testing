@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "MVP to /",
   titleBottom: "Full-Scale Product",
   description: "Audit, upgrade, tune, and grow — a disciplined path from MVP traction to enterprise readiness.",
-  heroImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-dc982244ba.jpg",
   heroImageAlt: "MVP to Full Scale Product",
   topBadge: { icon: null as any, title: "Scale Up", subtitle: "MVP to product", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Production", subtitle: "Enterprise-grade", colorClass: "bg-emerald-500/10" },

@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Responsive Website",
   titleBottom: "Design",
   description: "Pixel-perfect responsive websites that adapt seamlessly to every screen size with mobile-first\r\n                approach.",
-  heroImage: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-37761d5488.jpg",
   heroImageAlt: "Responsive website design across multiple devices",
   topBadge: { icon: null as any, title: "Responsive", subtitle: "All devices", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Pixel Perfect", subtitle: "Modern design", colorClass: "bg-emerald-500/10" },

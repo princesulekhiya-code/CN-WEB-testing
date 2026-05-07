@@ -33,7 +33,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Cloud Security",
   description:
     "Network segmentation, zero-trust architecture, cloud security posture management, and endpoint protection to secure your entire infrastructure from edge to cloud.",
-  heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-d2cb4997ca.jpg",
   heroImageAlt: "Infrastructure Security & Network",
   topBadge: { icon: null as any, title: "Zero Trust", subtitle: "Network security", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Multi-Layer", subtitle: "Defense in depth", colorClass: "bg-emerald-500/10" },

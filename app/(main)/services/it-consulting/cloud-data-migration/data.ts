@@ -11,7 +11,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Cloud & Data",
   titleBottom: "Migration Services",
   description: "Choose the right data migration strategy with expert guidance on cloud platform selection, cost analysis, and seamless\r\n                migration execution with minimal business disruption.",
-  heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-d2cb4997ca.jpg",
   heroImageAlt: "Cloud & Data Migration",
   topBadge: { icon: null as any, title: "Zero Downtime", subtitle: "Cloud migration", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Data Safe", subtitle: "Full backup", colorClass: "bg-emerald-500/10" },

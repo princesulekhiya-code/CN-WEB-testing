@@ -62,7 +62,7 @@ const ReviewCard = ({
   logoColor: string;
 }) => {
   return (
-    <Card className="w-[28rem] max-w-full shrink-0 rounded-2xl border-[#4EB3E8]/10 bg-[#D9EAFD] dark:border-white/10 dark:bg-black p-5 shadow-none transition-colors hover:border-[#4EB3E8]/25 dark:hover:border-white/20 sm:p-6">
+    <Card className="w-[85vw] sm:w-[28rem] max-w-full shrink-0 rounded-2xl border-[#4EB3E8]/10 bg-[#D9EAFD] dark:border-white/10 dark:bg-black p-5 shadow-none transition-colors hover:border-[#4EB3E8]/25 dark:hover:border-white/20 sm:p-6">
       <div className="flex h-full flex-col justify-between gap-4">
         <p className="text-black/80 dark:text-zinc-300 font-medium leading-relaxed text-sm sm:text-base">
           &ldquo;{text}&rdquo;

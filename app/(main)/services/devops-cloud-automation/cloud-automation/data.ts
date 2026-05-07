@@ -34,7 +34,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "& Auto-Scaling",
   description:
     "Policies, schedulers, and autoscaling that respond to real demand—balancing performance, resilience, and cloud spend.",
-  heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-d2cb4997ca.jpg",
   heroImageAlt: "Cloud Automation & Scaling",
   topBadge: {
     icon: null as any,

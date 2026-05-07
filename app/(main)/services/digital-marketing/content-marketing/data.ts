@@ -23,7 +23,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Content Writing &",
   titleBottom: "Marketing",
   description: "Engaging content that attracts target audience and drives traffic",
-  heroImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-8e7f372d7d.jpg",
   heroImageAlt: "Content Marketing & Writing",
   topBadge: { icon: null as any, title: "Content First", subtitle: "SEO-optimized", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "3x Traffic", subtitle: "Organic growth", colorClass: "bg-emerald-500/10" },

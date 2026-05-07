@@ -34,7 +34,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "& Encryption",
   description:
     "Data classification & mapping, encryption at rest/transit, DLP policies, access control & IAM, key management, privacy-by-design implementation.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-bec6bc3726.jpg",
   heroImageAlt: "Data Protection & Encryption",
   topBadge: { icon: null as any, title: "Encryption", subtitle: "End-to-end", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Zero Breach", subtitle: "Data secured", colorClass: "bg-emerald-500/10" },

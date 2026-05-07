@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Android App",
   titleBottom: "Development",
   description: "We build native Android experiences with the Android SDK, Kotlin, Jetpack Compose, and Material Design —\r\n                polished UI, solid architecture, and apps that scale across phones, tablets, and wearables.",
-  heroImage: "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-756ae29735.jpg",
   heroImageAlt: "Android app development",
   topBadge: { icon: null as any, title: "Kotlin & Compose", subtitle: "Native Android", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "3B+ Devices", subtitle: "Android ecosystem", colorClass: "bg-emerald-500/10" },
@@ -136,7 +136,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Android Apps Can Be",
   headingHighlight: "Game-Changing",
   subtitle: "Our industry-focused Android development services help your business reach 3 billion+ devices and unlock access to varied benefits.",
-  image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-97571648b3.jpg",
   imageAlt: "Android app development benefits",
   items: [
     {

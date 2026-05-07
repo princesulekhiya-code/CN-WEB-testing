@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "UI/UX",
   titleBottom: "Web Design",
   description: "Expert designers crafting exceptional user experiences to shape your brand identity by enriching user interaction and engagement across web platforms.",
-  heroImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-164521b16d.jpg",
   heroImageAlt: "Web Design & Layout",
   topBadge: { icon: null as any, title: "Web Design", subtitle: "Modern & clean", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Responsive", subtitle: "All devices", colorClass: "bg-emerald-500/10" },

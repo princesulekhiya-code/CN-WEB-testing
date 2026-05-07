@@ -27,7 +27,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Advertising",
   description:
     "Data-driven pay-per-click campaigns across search, social, and display — optimized for conversions, not clicks.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "PPC Advertising & Analytics",
   topBadge: { icon: null as any, title: "300% ROAS", subtitle: "Ad performance", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Data-Driven", subtitle: "Smart bidding", colorClass: "bg-emerald-500/10" },

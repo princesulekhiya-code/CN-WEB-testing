@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Hire Digital Marketing",
   titleBottom: "Experts",
   description: "Accelerate growth with AI-driven digital marketers specializing in SEO, PPC, social media, content marketing, and performance analytics for measurable ROI.",
-  heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-096e5f6a26.jpg",
   heroImageAlt: "Digital Marketing Analytics",
   topBadge: { icon: null as any, title: "Growth Team", subtitle: "SEO & PPC", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Certified", subtitle: "Google & Meta", colorClass: "bg-emerald-500/10" },

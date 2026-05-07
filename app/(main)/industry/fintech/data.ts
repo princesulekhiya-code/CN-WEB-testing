@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Fintech Software Development",
   subtitle: "Next-Gen Financial Technology",
   description: "Scalable financial technology solutions including digital wallets, payment gateways, lending platforms, and robo-advisory systems with PCI-DSS compliance.",
-  heroImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-a1a452f828.jpg",
   accentColor: "#6366f1",
 };
 

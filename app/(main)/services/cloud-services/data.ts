@@ -76,7 +76,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Cloud Services Can",
   headingHighlight: "Transform Operations",
   subtitle: "Migrate, optimize, and innovate on the cloud  -  reduce costs, improve performance, and gain the agility your business needs.",
-  image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-61093386b1.jpg",
   imageAlt: "Cloud computing infrastructure",
   items: [
     { title: "Eliminate Capital Expenses", description: "Shift from heavy upfront hardware investments to predictable monthly costs. Scale resources on demand and pay only for what you consume." },

@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Augmented Reality",
   titleBottom: "Consulting",
   description: "Blend cutting-edge AR technology with strategic insights to integrate solutions that captivate users, streamline operations, and stand out in your industry.",
-  heroImage: "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-027514f12b.jpg",
   heroImageAlt: "Augmented Reality & VR",
   topBadge: { icon: null as any, title: "AR/VR Expert", subtitle: "Immersive tech", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Innovation", subtitle: "Cutting-edge", colorClass: "bg-emerald-500/10" },

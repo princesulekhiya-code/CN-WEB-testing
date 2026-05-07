@@ -32,7 +32,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "& Implementation",
   description:
     "From cloud infrastructure to data centre design — build a customized cloud that aligns to your business requirements and growth trajectory.",
-  heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6355372f4e.jpg",
   heroImageAlt: "Cloud Infrastructure & Data Center",
   topBadge: {
     icon: null as any,

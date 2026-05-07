@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Hire Dedicated",
   titleBottom: "Developers",
   description: "Scale with engagement models that bend to your priorities, depth you can rely on, and teams that have shipped before. Bring in pre-vetted engineers in as little as 48 hours and trim engineering spend by as much as 40%.",
-  heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6483454b17.jpg",
   heroImageAlt: "Hire dedicated developers",
   topBadge: { icon: null as any, title: "150+ Devs", subtitle: "Ready to deploy", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "48 Hours", subtitle: "To first match", colorClass: "bg-emerald-500/10" },
@@ -78,7 +78,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Dedicated Teams Can Be",
   headingHighlight: "Your Superpower",
   subtitle: "Scale your engineering capacity instantly with pre-vetted developers who integrate seamlessly with your existing team and processes.",
-  image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-bbfc4ec317.jpg",
   imageAlt: "Dedicated development team collaboration",
   items: [
     { title: "Rapid Team Scaling", description: "Go from request to productive developer in days, not months. Our bench of pre-vetted engineers lets you scale up or down based on project demands." },

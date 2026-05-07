@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Big Data",
   titleBottom: "Consulting",
   description: "Identify large and complex datasets, optimize your data strategy, and gain actionable insights that power smarter business decisions.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "Big Data Analytics & Visualization",
   topBadge: { icon: null as any, title: "Big Data", subtitle: "Hadoop & Spark", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Petabyte Scale", subtitle: "Data lakes", colorClass: "bg-emerald-500/10" },

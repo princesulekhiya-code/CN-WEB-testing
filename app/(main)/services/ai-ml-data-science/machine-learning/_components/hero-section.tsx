@@ -85,7 +85,7 @@ function HeroImage() {
     >
       <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 border border-black/[0.06] dark:border-white/[0.06]">
         <Image
-          src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop&q=80"
+          src="/images/stock/stock-bec6bc3726.jpg"
           alt="Deep Learning"
           fill
           className="object-cover"

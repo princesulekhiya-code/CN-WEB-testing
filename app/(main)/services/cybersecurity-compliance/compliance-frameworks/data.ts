@@ -33,7 +33,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Regulatory Frameworks",
   description:
     "SOC 2, HIPAA, GDPR, PCI-DSS, and ISO 27001 compliance implementation — from gap analysis through certification and ongoing maintenance.",
-  heroImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-61b992e785.jpg",
   heroImageAlt: "Compliance Frameworks & Audit",
   topBadge: { icon: null as any, title: "SOC 2 & ISO", subtitle: "Full compliance", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "GDPR Ready", subtitle: "Data protection", colorClass: "bg-emerald-500/10" },

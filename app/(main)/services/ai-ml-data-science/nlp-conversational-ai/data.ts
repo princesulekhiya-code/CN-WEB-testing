@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "NLP &",
   titleBottom: "Conversational AI",
   description: "Language-aware products — chatbots, search, summarization, and voice — built for accuracy, safety, and measurable business outcomes.",
-  heroImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-b7269deaf9.jpg",
   heroImageAlt: "NLP Engine",
   topBadge: { icon: null as any, title: "NLP Engine", subtitle: "Multi-language", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Smart Bots", subtitle: "24/7 automation", colorClass: "bg-emerald-500/10" },

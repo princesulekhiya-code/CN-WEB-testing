@@ -33,7 +33,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "& Recovery",
   description:
     "Rapid incident response plans, forensic analysis, breach containment, and business continuity strategies that minimize damage and accelerate recovery.",
-  heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6355372f4e.jpg",
   heroImageAlt: "Incident Response & Recovery",
   topBadge: { icon: null as any, title: "< 15 min", subtitle: "Response time", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "24/7 SOC", subtitle: "Threat response", colorClass: "bg-emerald-500/10" },

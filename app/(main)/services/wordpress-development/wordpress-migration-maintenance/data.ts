@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "WordPress Migration",
   titleBottom: "& Maintenance",
   description: "All key aspects of site maintenance — WordPress core updates, security improvements, and seamless platform migrations with zero downtime.",
-  heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-d2cb4997ca.jpg",
   heroImageAlt: "WordPress Migration & Maintenance",
   topBadge: { icon: null as any, title: "Zero Downtime", subtitle: "Migration", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "24/7 Care", subtitle: "Proactive support", colorClass: "bg-emerald-500/10" },

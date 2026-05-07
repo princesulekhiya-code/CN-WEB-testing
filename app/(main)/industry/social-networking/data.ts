@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Social Networking Platform Development",
   subtitle: "Connecting People at Scale",
   description: "Custom social networking platform development with attractive design and features that boost business evolution and customer engagement.",
-  heroImage: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-904a8a0ca8.jpg",
   accentColor: "#3b82f6",
 };
 

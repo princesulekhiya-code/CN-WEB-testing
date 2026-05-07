@@ -200,7 +200,7 @@ export default function ProcessMethodologyPage() {
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="hidden lg:block">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#4EB3E8]/10">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&h=500&fit=crop&q=80" alt="Team collaboration" className="w-full h-[400px] object-cover" />
+                <img src="/images/stock/stock-ac85f836ff.jpg" alt="Team collaboration" className="w-full h-[400px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="flex gap-2 flex-wrap">
@@ -234,7 +234,7 @@ export default function ProcessMethodologyPage() {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?w=600&h=400&fit=crop&q=80" alt="Agile sprint planning" className="w-full h-[300px] object-cover" />
+                <img src="/images/stock/stock-21347b443f.jpg" alt="Agile sprint planning" className="w-full h-[300px] object-cover" />
               </div>
             </motion.div>
           </div>
@@ -274,7 +274,7 @@ export default function ProcessMethodologyPage() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
             <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=350&fit=crop&q=80" alt="Team discussing project execution" className="w-full h-[260px] object-cover" />
+              <img src="/images/stock/stock-88b3ac0e43.jpg" alt="Team discussing project execution" className="w-full h-[260px] object-cover" />
             </div>
           </motion.div>
         </div>
@@ -361,7 +361,7 @@ export default function ProcessMethodologyPage() {
             </motion.div>
             <motion.div className="lg:col-span-2 hidden lg:block" initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
               <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=350&fit=crop&q=80" alt="Project deliverables and documentation" className="w-full h-[250px] object-cover" />
+                <img src="/images/stock/stock-d892facb6a.jpg" alt="Project deliverables and documentation" className="w-full h-[250px] object-cover" />
               </div>
             </motion.div>
           </div>
@@ -480,7 +480,7 @@ export default function ProcessMethodologyPage() {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop&q=80" alt="Flexible team working together" className="w-full h-[300px] object-cover" />
+                <img src="/images/stock/stock-9fe5cd9db7.jpg" alt="Flexible team working together" className="w-full h-[300px] object-cover" />
               </div>
             </motion.div>
           </div>
@@ -519,7 +519,7 @@ export default function ProcessMethodologyPage() {
         <div className="grid lg:grid-cols-5 gap-10 items-center mb-14">
           <motion.div className="lg:col-span-2 hidden lg:block" initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
             <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=400&fit=crop&q=80" alt="Data security and protection" className="w-full h-[300px] object-cover" />
+              <img src="/images/stock/stock-1bd4a15ed8.jpg" alt="Data security and protection" className="w-full h-[300px] object-cover" />
             </div>
           </motion.div>
           <motion.div className="lg:col-span-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

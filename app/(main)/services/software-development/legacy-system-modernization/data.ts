@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Legacy System",
   titleBottom: "Modernization",
   description: "Transform your outdated IT ecosystem with strategic cloud migration, re-architecture, and technology stack\r\n                upgrades. We analyze your business processes, select the right technologies, and move your applications to\r\n                modern infrastructure.",
-  heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-6355372f4e.jpg",
   heroImageAlt: "Modernize",
   topBadge: { icon: null as any, title: "Modernize", subtitle: "Legacy to cloud", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "50% Faster", subtitle: "System perf", colorClass: "bg-emerald-500/10" },

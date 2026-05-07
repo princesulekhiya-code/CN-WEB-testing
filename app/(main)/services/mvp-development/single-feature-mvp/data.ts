@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Single Feature /",
   titleBottom: "MVP",
   description: "From feature pick to evidence-backed iteration — structured for fast learning.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-a41ee3d1d8.jpg",
   heroImageAlt: "Single Feature MVP",
   topBadge: { icon: null as any, title: "One Feature", subtitle: "Laser focused", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "4-Week Ship", subtitle: "Rapid delivery", colorClass: "bg-emerald-500/10" },

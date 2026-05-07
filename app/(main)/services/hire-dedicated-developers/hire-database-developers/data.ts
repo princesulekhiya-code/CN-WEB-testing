@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Hire Database",
   titleBottom: "Developers",
   description: "Specialists in MySQL, MongoDB, PostgreSQL, Redis, and scalable data architectures. Our database experts build optimized storage, processing, and analytics systems for real-time performance.",
-  heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-d2cb4997ca.jpg",
   heroImageAlt: "Database Infrastructure",
   topBadge: { icon: null as any, title: "DB Experts", subtitle: "SQL & NoSQL", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Certified", subtitle: "Database admin", colorClass: "bg-emerald-500/10" },

@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "UI/UX",
   titleBottom: "Mobile Design",
   description: "Modern, innovative mobile designs for all screen sizes and platforms that align business needs and promote business reach with delightful user experiences.",
-  heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-be6b0ed7f1.jpg",
   heroImageAlt: "Mobile App Design",
   topBadge: { icon: null as any, title: "Mobile UX", subtitle: "iOS & Android", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Award-Winning", subtitle: "App design", colorClass: "bg-emerald-500/10" },

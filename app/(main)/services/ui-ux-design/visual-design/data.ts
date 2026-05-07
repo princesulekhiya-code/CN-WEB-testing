@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Visual",
   titleBottom: "Design",
   description: "Visually appealing, scalable, and risk-free design solutions and templates aligned with evolving business requirements and brand guidelines.",
-  heroImage: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-ce54878e5c.jpg",
   heroImageAlt: "Visual Design & Branding",
   topBadge: { icon: null as any, title: "Pixel Perfect", subtitle: "Visual design", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Design Award", subtitle: "Excellence", colorClass: "bg-emerald-500/10" },

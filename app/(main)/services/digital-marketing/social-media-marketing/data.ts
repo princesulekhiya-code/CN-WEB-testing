@@ -25,7 +25,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Marketing",
   description:
     "Grow awareness, engagement, and conversions with channel-native creative, disciplined community care, and paid social that compounds.",
-  heroImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-336fe3437f.jpg",
   heroImageAlt: "Social Media Marketing",
   topBadge: { icon: null as any, title: "5x Engagement", subtitle: "Social growth", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Multi-Platform", subtitle: "All channels", colorClass: "bg-emerald-500/10" },

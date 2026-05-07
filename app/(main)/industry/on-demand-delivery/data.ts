@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "On Demand Delivery Software",
   subtitle: "Instant Delivery Solutions",
   description: "Tech-friendly on-demand web & app solutions for quick communication between customers, sellers, & delivery companies with AI and real-time tracking.",
-  heroImage: "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-b13b3308c8.jpg",
   accentColor: "#16a34a",
 };
 

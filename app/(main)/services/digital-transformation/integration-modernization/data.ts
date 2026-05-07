@@ -33,7 +33,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "Modernization",
   description:
     "Enterprise integration with communication protocol integration, third-party apps, and API/SDK integration for seamless connectivity.",
-  heroImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-cb6adb58aa.jpg",
   heroImageAlt: "Integration & API Modernization",
   topBadge: {
     icon: null as any,

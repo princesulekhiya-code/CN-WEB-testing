@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Technology",
   titleBottom: "Consulting",
   description: "Technology sets the pace for today's enterprises. We help leaders design ambitious, resilient roadmaps that accelerate growth and deepen return on investment.",
-  heroImage: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-e6be3a594f.jpg",
   heroImageAlt: "Technology consulting services",
   topBadge: { icon: null as any, title: "CTO-Level", subtitle: "Strategic guidance", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "50+ Audits", subtitle: "Completed yearly", colorClass: "bg-emerald-500/10" },
@@ -77,7 +77,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Tech Consulting Can",
   headingHighlight: "Save Millions",
   subtitle: "The right technology decisions today prevent costly mistakes tomorrow. Expert guidance aligns your tech strategy with business outcomes.",
-  image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-3e96fb6ff3.jpg",
   imageAlt: "Technology consulting strategy session",
   items: [
     { title: "Avoid Costly Tech Mistakes", description: "Wrong technology choices cost enterprises millions in rewrites and migrations. Expert evaluation of architectures, tools, and vendors prevents expensive dead ends." },

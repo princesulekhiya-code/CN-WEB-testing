@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Media & Entertainment Software",
   subtitle: "Creating Digital Experiences",
   description: "Streaming platforms, content management systems, and digital media distribution solutions with DRM protection, analytics, and global content delivery.",
-  heroImage: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-fa7d8a7ee1.jpg",
   accentColor: "#dc2626",
 };
 

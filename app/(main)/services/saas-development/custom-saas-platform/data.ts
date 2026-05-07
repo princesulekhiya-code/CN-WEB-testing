@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Custom",
   titleBottom: "SaaS Platform",
   description: "Tech-advanced developers leverage the latest tools and technologies to turn ideas into reality with custom SaaS platform development.",
-  heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-096e5f6a26.jpg",
   heroImageAlt: "Custom SaaS Platform",
   topBadge: { icon: null as any, title: "Custom SaaS", subtitle: "Full platform", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "SOC 2 Ready", subtitle: "Enterprise-grade", colorClass: "bg-emerald-500/10" },

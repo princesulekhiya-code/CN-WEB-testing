@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Interaction",
   titleBottom: "Design",
   description: "Design meaningful micro-interactions, motion systems, and gesture-based patterns that make digital products feel natural, responsive, and delightful.",
-  heroImage: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-cb3f8d7866.jpg",
   heroImageAlt: "Interaction Design",
   topBadge: { icon: null as any, title: "IxD Expert", subtitle: "Micro-interactions", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "60fps Smooth", subtitle: "Fluid animations", colorClass: "bg-emerald-500/10" },

@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Predictive",
   titleBottom: "Analytics",
   description: "Turn historical signals into forward-looking guidance—forecasting, scoring, and monitoring designed for operators and executives.",
-  heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-909e6b9a6d.jpg",
   heroImageAlt: "Forecasting",
   topBadge: { icon: null as any, title: "Forecasting", subtitle: "Data-driven", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "85% Accurate", subtitle: "Predictions", colorClass: "bg-emerald-500/10" },

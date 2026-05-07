@@ -17,7 +17,7 @@ export const heroProps: IndustryHeroProps = {
   title: "Real Estate Software Development",
   subtitle: "Digitizing Property Experiences",
   description: "Personalized property buying & selling experiences with tech-smart tailored services including virtual tours, CRM integration, and property analytics.",
-  heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&fit=crop",
+  heroImage: "/images/stock/stock-5ff1ee1b1e.jpg",
   accentColor: "#06b6d4",
 };
 

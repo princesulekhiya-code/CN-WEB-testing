@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "SaaS Security",
   titleBottom: "& Compliance",
   description: "Best industry practices to maintain SaaS product security and ensure meeting industry compliance standards.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-bec6bc3726.jpg",
   heroImageAlt: "SaaS Security & Compliance",
   topBadge: { icon: null as any, title: "SOC 2 & ISO", subtitle: "Compliance-first", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Zero Trust", subtitle: "Security model", colorClass: "bg-emerald-500/10" },

@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "IoT",
   titleBottom: "Consulting",
   description: "From assessment to deployment — structured delivery for connected solutions.",
-  heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-2c1ef39379.jpg",
   heroImageAlt: "IoT Internet of Things",
   topBadge: { icon: null as any, title: "IoT Solutions", subtitle: "Connected devices", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Edge + Cloud", subtitle: "Hybrid IoT", colorClass: "bg-emerald-500/10" },

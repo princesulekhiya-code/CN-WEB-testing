@@ -9,7 +9,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "SaaS API",
   titleBottom: "& Integration",
   description: "Expert developers integrate varied third-party APIs into your SaaS app by linking external data sources to enhance operations.",
-  heroImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-a41ee3d1d8.jpg",
   heroImageAlt: "SaaS API Integration",
   topBadge: { icon: null as any, title: "API Layer", subtitle: "REST & GraphQL", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Real-Time", subtitle: "Event-driven", colorClass: "bg-emerald-500/10" },

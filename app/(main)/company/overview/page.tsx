@@ -159,7 +159,7 @@ function VisionMissionSection() {
               </div>
               <div className="md:col-span-2 relative">
                 <img
-                  src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&q=80&fit=crop"
+                  src="/images/stock/stock-62f261eec0.jpg"
                   alt="Futuristic technology and digital innovation"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -208,7 +208,7 @@ function VisionMissionSection() {
 
               <div className="md:col-span-2 relative flex items-center">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80&fit=crop"
+                  src="/images/stock/stock-fcc914b15f.jpg"
                   alt="Team working together on digital innovation"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -305,7 +305,7 @@ export default function OverviewPage() {
             >
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700&q=80&fit=crop"
+                  src="/images/stock/stock-fc458b1405.jpg"
                   alt="Team collaborating on digital solutions"
                   className="w-full h-[420px] object-cover rounded-2xl"
                 />
@@ -389,7 +389,7 @@ export default function OverviewPage() {
           >
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=650&q=80&fit=crop"
+                src="/images/stock/stock-bada4b3051.jpg"
                 alt="Team strategy and innovation"
                 className="w-full h-[380px] object-cover rounded-2xl"
               />
@@ -493,7 +493,7 @@ export default function OverviewPage() {
           >
             <div className="relative rounded-2xl overflow-hidden h-full min-h-[420px]">
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&fit=crop"
+                src="/images/stock/stock-72d9fb781c.jpg"
                 alt="Professional team delivering IT solutions"
                 className="w-full h-full object-cover absolute inset-0"
               />

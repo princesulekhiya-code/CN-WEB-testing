@@ -10,7 +10,7 @@ export const heroProps: ServicePageHeroProps = {
   titleTop: "Software",
   titleBottom: "Development",
   description: "Deliver technology-forward, resilient, and scalable digital products. From bespoke enterprise systems through data analytics, we own the complete delivery lifecycle with distinguished engineering and proven industry standards.",
-  heroImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-f38c98c5d5.jpg",
   heroImageAlt: "Custom software development",
   topBadge: { icon: null as any, title: "Enterprise Scale", subtitle: "Production-grade", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "99.9% Uptime", subtitle: "SLA guaranteed", colorClass: "bg-emerald-500/10" },
@@ -80,7 +80,7 @@ export const whyNeedProps: WhyNeedProps = {
   heading: "Custom Software Can Be",
   headingHighlight: "Your Edge",
   subtitle: "Off-the-shelf tools limit growth. Purpose-built software aligns perfectly with your workflows, compliance needs, and competitive strategy.",
-  image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80&fit=crop",
+  image: "/images/stock/stock-e16b683fdb.jpg",
   imageAlt: "Software development process",
   items: [
     { title: "Tailored to Your Business", description: "Custom software is built around your exact workflows, eliminating workarounds and manual processes that generic tools force upon your teams." },

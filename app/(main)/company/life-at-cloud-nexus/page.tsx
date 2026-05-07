@@ -394,26 +394,26 @@ function CodiantRunningGalleryBlock({ blockId }: { blockId: string }) {
   const { leftStack, pillarMid, pillarRight } = cultureHeroGallery;
   const [top, bottom] = leftStack;
   return (
-    <div className="grid h-[clamp(240px,40vh,580px)] w-[min(92vw,1040px)] shrink-0 grid-cols-3 grid-rows-2 gap-2 sm:gap-3 md:gap-5 md:h-[clamp(320px,46vh,580px)]">
+    <div className="grid h-[clamp(300px,50vh,580px)] w-[min(92vw,1040px)] shrink-0 grid-cols-2 grid-rows-2 gap-2 sm:grid-cols-3 sm:gap-3 md:gap-5 md:h-[clamp(320px,46vh,580px)]">
       <CultureHeroGalleryImage
         src={top}
         alt={`Cloud Nexus culture  -  ${blockId} left top`}
-        className="col-start-1 row-start-1 h-full min-h-[120px] md:min-h-0"
+        className="col-start-1 row-start-1 h-full"
       />
       <CultureHeroGalleryImage
         src={bottom}
         alt={`Cloud Nexus culture  -  ${blockId} left bottom`}
-        className="col-start-1 row-start-2 h-full min-h-[120px] md:min-h-0"
+        className="col-start-1 row-start-2 h-full"
       />
       <CultureHeroGalleryImage
         src={pillarMid}
         alt={`Cloud Nexus culture  -  ${blockId} center`}
-        className="col-start-2 row-span-2 row-start-1 h-full min-h-[200px] md:min-h-0"
+        className="col-start-2 row-span-2 row-start-1 h-full"
       />
       <CultureHeroGalleryImage
         src={pillarRight}
         alt={`Cloud Nexus culture  -  ${blockId} right`}
-        className="col-start-3 row-span-2 row-start-1 h-full min-h-[200px] md:min-h-0"
+        className="hidden sm:block col-start-3 row-span-2 row-start-1 h-full"
       />
     </div>
   );
@@ -665,7 +665,7 @@ export default function LifeAtCloudNexusPage() {
                       const p = ev.collageSrcs.filter(Boolean);
                       if (p.length === 0) return null;
                       return (
-                        <div className="relative rounded-t-2xl overflow-hidden" style={{ height: "240px" }}>
+                        <div className="relative rounded-t-2xl overflow-hidden h-[200px] sm:h-[240px]">
                           <div className="absolute inset-0 flex gap-[2px]">
                             {/* Left hero  -  50% width */}
                             <div className="relative w-1/2 h-full overflow-hidden">
@@ -941,7 +941,7 @@ export default function LifeAtCloudNexusPage() {
           >
             <div className="relative overflow-hidden rounded-2xl border border-black/[0.06] dark:border-white/[0.06] shadow-lg shadow-[#4EB3E8]/10 ring-1 ring-[#4EB3E8]/10">
               <img
-                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=420&fit=crop&q=80"
+                src="/images/stock/stock-78f503171c.jpg"
                 alt="Women empowerment at Cloud Nexus"
                 className="w-full h-[380px] md:h-[420px] object-cover"
               />

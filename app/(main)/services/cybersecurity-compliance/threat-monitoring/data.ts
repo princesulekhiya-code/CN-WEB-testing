@@ -33,7 +33,7 @@ export const heroProps: ServicePageHeroProps = {
   titleBottom: "& SOC",
   description:
     "24/7 security monitoring, intrusion detection, and real-time threat intelligence with a dedicated Security Operations Center protecting your business around the clock.",
-  heroImage: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&h=600&fit=crop&q=80",
+  heroImage: "/images/stock/stock-355399787b.jpg",
   heroImageAlt: "Threat Monitoring & SIEM",
   topBadge: { icon: null as any, title: "24/7 SIEM", subtitle: "Threat detection", colorClass: "bg-[#4EB3E8]/10" },
   bottomBadge: { icon: null as any, title: "Real-Time", subtitle: "Instant alerts", colorClass: "bg-emerald-500/10" },
