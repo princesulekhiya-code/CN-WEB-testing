@@ -3,14 +3,18 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { ExpertiseAccordionProps } from "./types";
 
 export function ExpertiseAccordionSection({
-  heading,
-  subtitle,
-  items,
+  heading: rawHeading,
+  subtitle: rawSubtitle,
+  items: rawItems,
   accentColor = "#4EB3E8",
 }: ExpertiseAccordionProps) {
+  const heading = useTranslatedData(rawHeading);
+  const subtitle = useTranslatedData(rawSubtitle);
+  const items = useTranslatedData(rawItems);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [openIdx, setOpenIdx] = useState<number | null>(1);

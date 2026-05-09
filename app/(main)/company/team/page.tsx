@@ -7,6 +7,8 @@ import {
   Users, Shield, Rocket, ChevronRight, Sparkles, ChevronLeft,
   Cpu, Database, MonitorSmartphone, Target, Quote, Layers,
 } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 
 /* ═══════ DATA ═══════ */
 
@@ -106,7 +108,11 @@ const cultureValues = [
 /* ═══════ PAGE ═══════ */
 export default function TeamPage() {
   const [activeTeam, setActiveTeam] = useState(0);
-  const current = teams[activeTeam];
+  const translatedLeadership = useTranslatedData(leadership);
+  const translatedTeams = useTranslatedData(teams);
+  const translatedCultureValues = useTranslatedData(cultureValues);
+  const { t } = useTranslation();
+  const current = translatedTeams[activeTeam];
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (dir: "left" | "right") => {
@@ -133,11 +139,11 @@ export default function TeamPage() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-              The People Behind{" "}
-              <span className="text-[#4EB3E8]">CloudNexus</span>
+              {t("team.hero.title", "The People Behind")}{" "}
+              <span className="text-[#4EB3E8]">{t("team.hero.titleHighlight", "CloudNexus")}</span>
             </h1>
             <p className="mt-5 text-base md:text-lg text-black/50 dark:text-white/45 leading-relaxed max-w-2xl mx-auto">
-              A talented crew of engineers, designers, and strategists building the future of technology  -  one project at a time.
+              {t("team.hero.description", "A talented crew of engineers, designers, and strategists building the future of technology  -  one project at a time.")}
             </p>
           </motion.div>
 
@@ -148,10 +154,10 @@ export default function TeamPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             {[
-              { num: "90+", label: "Team Members" },
-              { num: "4", label: "Specialized Squads" },
-              { num: "3", label: "Office Locations" },
-              { num: "10+", label: "Years of Delivery" },
+              { num: t("team.hero.stat1Num", "90+"), label: t("team.hero.stat1Label", "Team Members") },
+              { num: t("team.hero.stat2Num", "4"), label: t("team.hero.stat2Label", "Specialized Squads") },
+              { num: t("team.hero.stat3Num", "3"), label: t("team.hero.stat3Label", "Office Locations") },
+              { num: t("team.hero.stat4Num", "10+"), label: t("team.hero.stat4Label", "Years of Delivery") },
             ].map((s, i) => (
               <div key={i} className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-[#4EB3E8]">{s.num}</div>
@@ -172,16 +178,16 @@ export default function TeamPage() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            <span className="text-[#4EB3E8]">Leadership</span>{" "}
-            <span>Team</span>
+            <span className="text-[#4EB3E8]">{t("team.leadership.titleHighlight", "Leadership")}</span>{" "}
+            <span>{t("team.leadership.title", "Team")}</span>
           </h2>
           <p className="mt-4 text-sm text-black/45 dark:text-white/40 max-w-lg mx-auto">
-            The driving force behind CloudNexus&apos;s vision, strategy, and execution.
+            {t("team.leadership.description", "The driving force behind CloudNexus\u2019s vision, strategy, and execution.")}
           </p>
         </motion.div>
 
         <div className="space-y-8">
-          {leadership.map((person, i) => {
+          {translatedLeadership.map((person, i) => {
             const isEven = i % 2 === 0;
             return (
               <motion.div
@@ -243,16 +249,16 @@ export default function TeamPage() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              <span className="text-[#4EB3E8]">Engineering</span>{" "}
-              <span>Squads</span>
+              <span className="text-[#4EB3E8]">{t("team.squads.titleHighlight", "Engineering")}</span>{" "}
+              <span>{t("team.squads.title", "Squads")}</span>
             </h2>
             <p className="mt-4 text-sm text-black/45 dark:text-white/40 max-w-lg mx-auto">
-              Specialized teams delivering excellence across DevOps, Development, and Data.
+              {t("team.squads.description", "Specialized teams delivering excellence across DevOps, Development, and Data.")}
             </p>
           </motion.div>
 
           <div className="space-y-8">
-            {teams.map((team, i) => {
+            {translatedTeams.map((team, i) => {
               const Icon = team.icon;
               const isEven = i % 2 === 0;
               return (
@@ -283,7 +289,7 @@ export default function TeamPage() {
                         {team.department}
                       </span>
                       <h3 className="text-xl font-bold text-white">{team.leader}</h3>
-                      <p className="text-sm text-white/60">{team.leaderRole}  -  Team {team.name}</p>
+                      <p className="text-sm text-white/60">{team.leaderRole}  -  {t("team.squads.teamLabel", "Team")} {team.name}</p>
                     </div>
                   </div>
 
@@ -297,8 +303,8 @@ export default function TeamPage() {
                         <Icon className="w-5 h-5" style={{ color: team.accentColor }} strokeWidth={1.5} />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold tracking-tight">Team {team.name}</h3>
-                        <p className="text-xs text-black/40 dark:text-white/35">{team.department} Division</p>
+                        <h3 className="text-xl font-bold tracking-tight">{t("team.squads.teamLabel", "Team")} {team.name}</h3>
+                        <p className="text-xs text-black/40 dark:text-white/35">{team.department} {t("team.squads.division", "Division")}</p>
                       </div>
                     </div>
 
@@ -306,7 +312,7 @@ export default function TeamPage() {
 
                     {/* Tech Stack */}
                     <div className="mb-6">
-                      <h4 className="text-[10px] font-semibold text-black/40 dark:text-white/30 uppercase tracking-wider mb-2.5">Tech Stack</h4>
+                      <h4 className="text-[10px] font-semibold text-black/40 dark:text-white/30 uppercase tracking-wider mb-2.5">{t("team.squads.techStack", "Tech Stack")}</h4>
                       <div className="flex flex-wrap gap-1.5">
                         {team.skills.map((skill) => (
                           <span
@@ -323,15 +329,15 @@ export default function TeamPage() {
                     <div className="flex gap-6">
                       <div>
                         <div className="text-2xl font-bold" style={{ color: team.accentColor }}>
-                          {i === 0 ? "25+" : i === 1 ? "25+" : i === 2 ? "25+" : "25+"}
+                          {i === 0 ? t("team.squads.stat1Num", "25+") : i === 1 ? t("team.squads.stat1Num", "25+") : i === 2 ? t("team.squads.stat1Num", "25+") : t("team.squads.stat1Num", "25+")}
                         </div>
-                        <div className="text-[10px] text-black/35 dark:text-white/25 uppercase tracking-wider font-medium">Members</div>
+                        <div className="text-[10px] text-black/35 dark:text-white/25 uppercase tracking-wider font-medium">{t("team.squads.stat1Label", "Members")}</div>
                       </div>
                       <div>
                         <div className="text-2xl font-bold" style={{ color: team.accentColor }}>
-                          {i === 0 ? "50+" : i === 1 ? "50+" : i === 2 ? "50+" : "50+"}
+                          {i === 0 ? t("team.squads.stat2Num", "50+") : i === 1 ? t("team.squads.stat2Num", "50+") : i === 2 ? t("team.squads.stat2Num", "50+") : t("team.squads.stat2Num", "50+")}
                         </div>
-                        <div className="text-[10px] text-black/35 dark:text-white/25 uppercase tracking-wider font-medium">Projects</div>
+                        <div className="text-[10px] text-black/35 dark:text-white/25 uppercase tracking-wider font-medium">{t("team.squads.stat2Label", "Projects")}</div>
                       </div>
                     </div>
                   </div>
@@ -353,28 +359,28 @@ export default function TeamPage() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
-              <span className="text-[#4EB3E8]">Technical Staff</span>{" "}
-              <span>Comprises</span>
+              <span className="text-[#4EB3E8]">{t("team.techStaff.titleHighlight", "Technical Staff")}</span>{" "}
+              <span>{t("team.techStaff.title", "Comprises")}</span>
             </h2>
             <p className="mt-4 text-sm text-white/40 max-w-2xl mx-auto">
-              At CloudNexus, our technical staff combines AI expertise, innovation, and diverse talent to deliver intelligent, future-ready solutions that exceed expectations.
+              {t("team.techStaff.description", "At CloudNexus, our technical staff combines AI expertise, innovation, and diverse talent to deliver intelligent, future-ready solutions that exceed expectations.")}
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { icon: Brain, title: "AI & Machine Learning Engineers" },
-              { icon: Layers, title: "Software Architects" },
-              { icon: Code2, title: "Full-Stack Developers" },
-              { icon: MonitorSmartphone, title: "App & Web Developers" },
-              { icon: Server, title: "Network & Cloud Engineers" },
-              { icon: Shield, title: "Quality Assurance Specialists" },
-              { icon: Cpu, title: "DevOps Engineers" },
-              { icon: Database, title: "Data Engineers & Analysts" },
-              { icon: Target, title: "UI/UX Designers" },
-              { icon: BarChart3, title: "SEO & Digital Marketing Specialists" },
-              { icon: Users, title: "Project Managers" },
-              { icon: Rocket, title: "Technical Writers" },
+              { icon: Brain, title: t("team.techStaff.aiMl", "AI & Machine Learning Engineers") },
+              { icon: Layers, title: t("team.techStaff.softwareArchitects", "Software Architects") },
+              { icon: Code2, title: t("team.techStaff.fullStack", "Full-Stack Developers") },
+              { icon: MonitorSmartphone, title: t("team.techStaff.appWeb", "App & Web Developers") },
+              { icon: Server, title: t("team.techStaff.networkCloud", "Network & Cloud Engineers") },
+              { icon: Shield, title: t("team.techStaff.qa", "Quality Assurance Specialists") },
+              { icon: Cpu, title: t("team.techStaff.devops", "DevOps Engineers") },
+              { icon: Database, title: t("team.techStaff.dataEngineers", "Data Engineers & Analysts") },
+              { icon: Target, title: t("team.techStaff.uiux", "UI/UX Designers") },
+              { icon: BarChart3, title: t("team.techStaff.seoDigital", "SEO & Digital Marketing Specialists") },
+              { icon: Users, title: t("team.techStaff.projectManagers", "Project Managers") },
+              { icon: Rocket, title: t("team.techStaff.technicalWriters", "Technical Writers") },
             ].map((item, i) => {
               const Icon = item.icon;
               return (
@@ -407,16 +413,16 @@ export default function TeamPage() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            <span className="text-[#4EB3E8]">Our</span>{" "}
-            <span>Culture</span>
+            <span className="text-[#4EB3E8]">{t("team.culture.titleHighlight", "Our")}</span>{" "}
+            <span>{t("team.culture.title", "Culture")}</span>
           </h2>
           <p className="mt-4 text-sm text-black/45 dark:text-white/40 max-w-lg mx-auto">
-            What makes CloudNexus a great place to build your career and grow as a professional.
+            {t("team.culture.description", "What makes CloudNexus a great place to build your career and grow as a professional.")}
           </p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {cultureValues.map((val, i) => {
+          {translatedCultureValues.map((val, i) => {
             const Icon = val.icon;
             return (
               <motion.div
@@ -462,16 +468,16 @@ export default function TeamPage() {
               <Sparkles className="w-7 h-7 text-[#4EB3E8]" strokeWidth={1.5} />
             </div>
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
-              Want to Join Our Team?
+              {t("team.cta.title", "Want to Join Our Team?")}
             </h2>
             <p className="text-sm text-black/45 dark:text-white/40 leading-relaxed mb-8 max-w-lg mx-auto">
-              We&apos;re always looking for talented engineers, designers, and strategists who are passionate about building the future.
+              {t("team.cta.description", "We\u2019re always looking for talented engineers, designers, and strategists who are passionate about building the future.")}
             </p>
             <a
               href="mailto:hr@cloudnexus.in"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold transition-all duration-300 shadow-lg"
             >
-              Get In Touch
+              {t("team.cta.getInTouch", "Get In Touch")}
               <ChevronRight className="w-4 h-4" />
             </a>
           </motion.div>

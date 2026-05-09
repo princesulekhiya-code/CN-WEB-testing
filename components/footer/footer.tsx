@@ -2,8 +2,82 @@
 
 import Link from 'next/link';
 import { MapPin, Phone } from 'lucide-react';
+import { useTranslation } from '@/lib/i18n/context';
+import { useTranslatedData } from '@/lib/i18n/translate-data';
+
+const FOOTER_LINKS = {
+  services: [
+    { href: "/services/mobile-app-development", label: "Mobile App Development" },
+    { href: "/services/web-development", label: "Web Development" },
+    { href: "/services/software-development", label: "Software Development" },
+    { href: "/services/hire-dedicated-developers", label: "Hire Dedicated Developers" },
+    { href: "/services/product-engineering", label: "Product Engineering" },
+    { href: "/services/wordpress-development", label: "WordPress Development" },
+    { href: "/services/ui-ux-design", label: "UI/UX Design" },
+    { href: "/services/digital-transformation", label: "Digital Transformation" },
+  ],
+  moreServices: [
+    { href: "/services/ecommerce-development", label: "E-Commerce Development" },
+    { href: "/services/saas-development", label: "SaaS Development" },
+    { href: "/services/digital-marketing", label: "Digital Marketing" },
+    { href: "/services/technology-consulting", label: "Technology Consulting" },
+    { href: "/services/mvp-development", label: "MVP Development" },
+    { href: "/services/cloud-services", label: "Cloud Services" },
+    { href: "/services/it-consulting", label: "IT Consulting" },
+  ],
+  industries: [
+    { href: "/industry/healthcare-lifesciences", label: "Healthcare & Lifesciences" },
+    { href: "/industry/ecommerce-solutions", label: "E-Commerce Solutions" },
+    { href: "/industry/transport-logistics", label: "Transport & Logistics" },
+    { href: "/industry/social-networking", label: "Social Networking" },
+    { href: "/industry/real-estate", label: "Real Estate" },
+    { href: "/industry/education-elearning", label: "Education & eLearning" },
+    { href: "/industry/banking-finance-insurance", label: "Banking & Finance" },
+    { href: "/industry/travel-hospitality", label: "Travel & Hospitality" },
+  ],
+  moreIndustries: [
+    { href: "/industry/enterprise-retail-manufacturing", label: "Retail & Manufacturing" },
+    { href: "/industry/oil-gas", label: "Oil & Gas" },
+    { href: "/industry/media-entertainment", label: "Media & Entertainment" },
+    { href: "/industry/on-demand-delivery", label: "On Demand Delivery" },
+    { href: "/industry/home-service", label: "Home Service" },
+    { href: "/industry/fintech", label: "Fintech" },
+    { href: "/industry/mcommerce", label: "mCommerce" },
+  ],
+  resources: [
+    { href: "/resources/support", label: "Support" },
+    { href: "/resources/contact", label: "Contact Us" },
+    { href: "/resources/blog", label: "Blogs" },
+    { href: "/resources/career", label: "Careers" },
+    { href: "/resources/free-consultation", label: "Free Consultation" },
+  ],
+  company: [
+    { href: "/company/about-us", label: "About Us" },
+    { href: "/company/life-at-cloud-nexus", label: "Life @ CloudNexus" },
+    { href: "/company/team", label: "Team" },
+    { href: "/company/events", label: "Events" },
+    { href: "#", label: "Privacy Policy" },
+    { href: "#", label: "Terms of Service" },
+  ],
+};
+
+function FooterLinkList({ links }: { links: { href: string; label: string }[] }) {
+  return (
+    <ul className="space-y-1.5 text-[13px] text-neutral-500 dark:text-neutral-400">
+      {links.map((link) => (
+        <li key={link.href + link.label}>
+          <Link href={link.href} className="hover:text-black dark:hover:text-white transition-colors">
+            {link.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export function Footer() {
+  const { t } = useTranslation();
+  const links = useTranslatedData(FOOTER_LINKS);
   return (
     <footer className="relative mt-auto border-t border-black/10 bg-white dark:border-white/10 dark:bg-black overflow-hidden pt-10 sm:pt-14 pb-6 sm:pb-8">
       {/* Background Animation Removed */}
@@ -18,86 +92,39 @@ export function Footer() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8">
         {/* Description */}
         <p className="text-[13px] leading-relaxed text-neutral-400 dark:text-neutral-500 max-w-md mb-8">
-          We design and build scalable digital solutions including web applications, cloud infrastructure, data platforms, and modern software systems.
+          {t("footer.description")}
         </p>
 
         {/* Links Grid - 3 columns on mobile, 6 on desktop */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-6 lg:gap-x-8">
           <div>
-            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">Services</h3>
-            <ul className="space-y-1.5 text-[13px] text-neutral-500 dark:text-neutral-400">
-              <li><Link href="/services/mobile-app-development" className="hover:text-black dark:hover:text-white transition-colors">Mobile App Development</Link></li>
-              <li><Link href="/services/web-development" className="hover:text-black dark:hover:text-white transition-colors">Web Development</Link></li>
-              <li><Link href="/services/software-development" className="hover:text-black dark:hover:text-white transition-colors">Software Development</Link></li>
-              <li><Link href="/services/hire-dedicated-developers" className="hover:text-black dark:hover:text-white transition-colors">Hire Dedicated Developers</Link></li>
-              <li><Link href="/services/product-engineering" className="hover:text-black dark:hover:text-white transition-colors">Product Engineering</Link></li>
-              <li><Link href="/services/wordpress-development" className="hover:text-black dark:hover:text-white transition-colors">WordPress Development</Link></li>
-              <li><Link href="/services/ui-ux-design" className="hover:text-black dark:hover:text-white transition-colors">UI/UX Design</Link></li>
-              <li><Link href="/services/digital-transformation" className="hover:text-black dark:hover:text-white transition-colors">Digital Transformation</Link></li>
-            </ul>
+            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">{t("footer.services")}</h3>
+            <FooterLinkList links={links.services} />
           </div>
 
           <div>
-            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">More Services</h3>
-            <ul className="space-y-1.5 text-[13px] text-neutral-500 dark:text-neutral-400">
-              <li><Link href="/services/ecommerce-development" className="hover:text-black dark:hover:text-white transition-colors">E-Commerce Development</Link></li>
-              <li><Link href="/services/saas-development" className="hover:text-black dark:hover:text-white transition-colors">SaaS Development</Link></li>
-              <li><Link href="/services/digital-marketing" className="hover:text-black dark:hover:text-white transition-colors">Digital Marketing</Link></li>
-              <li><Link href="/services/technology-consulting" className="hover:text-black dark:hover:text-white transition-colors">Technology Consulting</Link></li>
-              <li><Link href="/services/mvp-development" className="hover:text-black dark:hover:text-white transition-colors">MVP Development</Link></li>
-              <li><Link href="/services/cloud-services" className="hover:text-black dark:hover:text-white transition-colors">Cloud Services</Link></li>
-              <li><Link href="/services/it-consulting" className="hover:text-black dark:hover:text-white transition-colors">IT Consulting</Link></li>
-            </ul>
+            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">{t("footer.moreServices")}</h3>
+            <FooterLinkList links={links.moreServices} />
           </div>
 
           <div>
-            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">Industries</h3>
-            <ul className="space-y-1.5 text-[13px] text-neutral-500 dark:text-neutral-400">
-              <li><Link href="/industry/healthcare-lifesciences" className="hover:text-black dark:hover:text-white transition-colors">Healthcare & Lifesciences</Link></li>
-              <li><Link href="/industry/ecommerce-solutions" className="hover:text-black dark:hover:text-white transition-colors">E-Commerce Solutions</Link></li>
-              <li><Link href="/industry/transport-logistics" className="hover:text-black dark:hover:text-white transition-colors">Transport & Logistics</Link></li>
-              <li><Link href="/industry/social-networking" className="hover:text-black dark:hover:text-white transition-colors">Social Networking</Link></li>
-              <li><Link href="/industry/real-estate" className="hover:text-black dark:hover:text-white transition-colors">Real Estate</Link></li>
-              <li><Link href="/industry/education-elearning" className="hover:text-black dark:hover:text-white transition-colors">Education & eLearning</Link></li>
-              <li><Link href="/industry/banking-finance-insurance" className="hover:text-black dark:hover:text-white transition-colors">Banking & Finance</Link></li>
-              <li><Link href="/industry/travel-hospitality" className="hover:text-black dark:hover:text-white transition-colors">Travel & Hospitality</Link></li>
-            </ul>
+            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">{t("footer.industries")}</h3>
+            <FooterLinkList links={links.industries} />
           </div>
 
           <div>
-            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">More Industries</h3>
-            <ul className="space-y-1.5 text-[13px] text-neutral-500 dark:text-neutral-400">
-              <li><Link href="/industry/enterprise-retail-manufacturing" className="hover:text-black dark:hover:text-white transition-colors">Retail & Manufacturing</Link></li>
-              <li><Link href="/industry/oil-gas" className="hover:text-black dark:hover:text-white transition-colors">Oil & Gas</Link></li>
-              <li><Link href="/industry/media-entertainment" className="hover:text-black dark:hover:text-white transition-colors">Media & Entertainment</Link></li>
-              <li><Link href="/industry/on-demand-delivery" className="hover:text-black dark:hover:text-white transition-colors">On Demand Delivery</Link></li>
-              <li><Link href="/industry/home-service" className="hover:text-black dark:hover:text-white transition-colors">Home Service</Link></li>
-              <li><Link href="/industry/fintech" className="hover:text-black dark:hover:text-white transition-colors">Fintech</Link></li>
-              <li><Link href="/industry/mcommerce" className="hover:text-black dark:hover:text-white transition-colors">mCommerce</Link></li>
-            </ul>
+            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">{t("footer.moreIndustries")}</h3>
+            <FooterLinkList links={links.moreIndustries} />
           </div>
 
           <div>
-            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">Resources</h3>
-            <ul className="space-y-1.5 text-[13px] text-neutral-500 dark:text-neutral-400">
-              <li><Link href="/resources/support" className="hover:text-black dark:hover:text-white transition-colors">Support</Link></li>
-              <li><Link href="/resources/contact" className="hover:text-black dark:hover:text-white transition-colors">Contact Us</Link></li>
-              <li><Link href="/resources/blog" className="hover:text-black dark:hover:text-white transition-colors">Blogs</Link></li>
-              <li><Link href="/resources/career" className="hover:text-black dark:hover:text-white transition-colors">Careers</Link></li>
-              <li><Link href="/resources/free-consultation" className="hover:text-black dark:hover:text-white transition-colors">Free Consultation</Link></li>
-            </ul>
+            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">{t("footer.resources")}</h3>
+            <FooterLinkList links={links.resources} />
           </div>
 
           <div>
-            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">Company</h3>
-            <ul className="space-y-1.5 text-[13px] text-neutral-500 dark:text-neutral-400">
-              <li><Link href="/company/about-us" className="hover:text-black dark:hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/company/life-at-cloud-nexus" className="hover:text-black dark:hover:text-white transition-colors">Life @ CloudNexus</Link></li>
-              <li><Link href="/company/team" className="hover:text-black dark:hover:text-white transition-colors">Team</Link></li>
-              <li><Link href="/company/events" className="hover:text-black dark:hover:text-white transition-colors">Events</Link></li>
-              <li><Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link href="#" className="hover:text-black dark:hover:text-white transition-colors">Terms of Service</Link></li>
-            </ul>
+            <h3 className="font-semibold text-black dark:text-white mb-3 text-xs uppercase tracking-wider">{t("footer.company")}</h3>
+            <FooterLinkList links={links.company} />
           </div>
 
         </div>
@@ -107,24 +134,24 @@ export function Footer() {
           <div className="flex gap-2 text-[13px] text-neutral-500 dark:text-neutral-400">
             <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5" />
             <div>
-              <span className="font-medium text-black dark:text-white">Hyderabad</span>
-              <p>Hitech City, Hyderabad, Telangana, India</p>
+              <span className="font-medium text-black dark:text-white">{t("footer.office.hyd", "Hyderabad")}</span>
+              <p>{t("footer.office.hydAddr", "Hitech City, Hyderabad, Telangana, India")}</p>
               <p className="flex items-center gap-1 mt-1"><Phone className="w-3 h-3" />+91 87938 30447</p>
             </div>
           </div>
           <div className="flex gap-2 text-[13px] text-neutral-500 dark:text-neutral-400">
             <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5" />
             <div>
-              <span className="font-medium text-black dark:text-white">Bhopal</span>
-              <p>Plot No 20, Kusturi Arched, Barrai, Bhopal, MP 462042, India</p>
+              <span className="font-medium text-black dark:text-white">{t("footer.office.bpl", "Bhopal")}</span>
+              <p>{t("footer.office.bplAddr", "Plot No 20, Kusturi Arched, Barrai, Bhopal, MP 462042, India")}</p>
               <p className="flex items-center gap-1 mt-1"><Phone className="w-3 h-3" />+91 87938 30447</p>
             </div>
           </div>
           <div className="flex gap-2 text-[13px] text-neutral-500 dark:text-neutral-400">
             <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5" />
             <div>
-              <span className="font-medium text-black dark:text-white">Bengaluru</span>
-              <p>2nd Stage, BTM Layout, Bengaluru, Karnataka 560076, India</p>
+              <span className="font-medium text-black dark:text-white">{t("footer.office.blr", "Bengaluru")}</span>
+              <p>{t("footer.office.blrAddr", "2nd Stage, BTM Layout, Bengaluru, Karnataka 560076, India")}</p>
               <p className="flex items-center gap-1 mt-1"><Phone className="w-3 h-3" />+91 87938 30447</p>
             </div>
           </div>
@@ -132,7 +159,7 @@ export function Footer() {
 
         <div className="mt-6 pt-5 border-t border-black/10 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-neutral-500">
-            © {new Date().getFullYear()} Cloud Nexus. All rights reserved.
+            © {new Date().getFullYear()} Cloud Nexus. {t("footer.copyright")}
           </p>
           <div className="flex space-x-4">
             <Link

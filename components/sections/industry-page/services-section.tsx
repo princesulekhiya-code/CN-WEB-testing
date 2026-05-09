@@ -3,14 +3,19 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { IndustryServicesProps } from "./types";
 
 export function IndustryServicesSection({
-  heading,
-  subtitle,
-  services,
+  heading: rawHeading,
+  subtitle: rawSubtitle,
+  services: rawServices,
   accentColor = "#4EB3E8",
 }: IndustryServicesProps) {
+  const heading = useTranslatedData(rawHeading);
+  const subtitle = useTranslatedData(rawSubtitle);
+  const services = useTranslatedData(rawServices);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 

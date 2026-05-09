@@ -8,8 +8,10 @@ import {
   Mic2, Trophy, Video, ChevronRight,
   CalendarCheck, Mail, Sparkles, Target, Zap,
 } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
-const featuredEvents = [
+const featuredEventsData = [
   {
     tag: "CONFERENCE",
     title: "Cloud Nexus at GITEX Global 2026",
@@ -45,7 +47,7 @@ const featuredEvents = [
   },
 ];
 
-const upcomingEvents = [
+const upcomingEventsData = [
   { title: "Webinar: Scaling SaaS with Microservices", date: "May 15, 2026", time: "4:00 PM IST", location: "Virtual", type: "Webinar", icon: Video, color: "#4EB3E8" },
   { title: "DevOps Workshop: CI/CD Mastery", date: "May 25, 2026", time: "2:00 PM IST", location: "Virtual", type: "Workshop", icon: Zap, color: "#8b5cf6" },
   { title: "Cloud Nexus Tech Meetup  -  Delhi NCR", date: "Jun 5, 2026", time: "6:00 PM IST", location: "New Delhi, India", type: "Meetup", icon: Users, color: "#10b981" },
@@ -54,7 +56,7 @@ const upcomingEvents = [
   { title: "Cloud Architecture Masterclass", date: "Jul 18, 2026", time: "11:00 AM IST", location: "Bengaluru, India", type: "Workshop", icon: Target, color: "#06b6d4" },
 ];
 
-const pastEvents = [
+const pastEventsData = [
   {
     title: "GITEX Global 2025",
     date: "Oct 2025",
@@ -85,7 +87,7 @@ const pastEvents = [
   },
 ];
 
-const stats = [
+const statsData = [
   { value: "15+", label: "Events Attended", icon: Calendar },
   { value: "5,000+", label: "Connections Made", icon: Users },
   { value: "10+", label: "Countries Covered", icon: Globe },
@@ -100,8 +102,22 @@ const typeColors: Record<string, string> = {
   Panel: "#ef4444",
 };
 
+const whyAttendData = [
+  { icon: Sparkles, title: "Live Product Demos", desc: "See our latest solutions in action  -  from AI platforms to cloud-native apps.", color: "#4EB3E8" },
+  { icon: Users, title: "Networking & Partnerships", desc: "Connect with CTOs, engineers, and decision-makers from leading companies.", color: "#8b5cf6" },
+  { icon: Mic2, title: "Expert-Led Sessions", desc: "Learn from industry veterans through talks, panels, and hands-on workshops.", color: "#10b981" },
+  { icon: Target, title: "Business Opportunities", desc: "Explore collaboration models, hiring opportunities, and technology partnerships.", color: "#f59e0b" },
+];
+
 export default function EventsPage() {
   const [activeEvent, setActiveEvent] = useState(0);
+  const { t } = useTranslation();
+
+  const featuredEvents = useTranslatedData(featuredEventsData);
+  const upcomingEvents = useTranslatedData(upcomingEventsData);
+  const pastEvents = useTranslatedData(pastEventsData);
+  const stats = useTranslatedData(statsData);
+  const whyAttend = useTranslatedData(whyAttendData);
 
   return (
     <section className="min-h-screen bg-white text-black dark:bg-[#0a0a0a] dark:text-white">
@@ -119,17 +135,17 @@ export default function EventsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1]">
-                Where We <span className="text-[#4EB3E8]">Connect</span>,<br />Learn & Innovate
+                {t("events.hero.title", "Where We")} <span className="text-[#4EB3E8]">{t("events.hero.titleHighlight", "Connect")}</span>,<br />{t("events.hero.titleLine2", "Learn & Innovate")}
               </h1>
               <p className="mt-6 text-base md:text-lg text-black/55 dark:text-white/50 leading-relaxed max-w-xl">
-                From global tech conferences to hands-on workshops  -  discover where Cloud Nexus is sharing insights, showcasing solutions, and building the future of technology.
+                {t("events.hero.description", "From global tech conferences to hands-on workshops  -  discover where Cloud Nexus is sharing insights, showcasing solutions, and building the future of technology.")}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/resources/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold transition-all shadow-lg">
-                  Meet Us at Events <ArrowRight className="w-4 h-4" />
+                  {t("events.hero.cta", "Meet Us at Events")} <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a href="#upcoming" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-black/10 dark:border-white/10 text-sm font-semibold hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-all">
-                  View Schedule
+                  {t("events.hero.ctaSecondary", "View Schedule")}
                 </a>
               </div>
             </motion.div>
@@ -187,9 +203,9 @@ export default function EventsPage() {
       {/* ═══ FEATURED EVENTS ═══ */}
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Key <span className="text-[#4EB3E8]">Events</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("events.featured.title", "Key")} <span className="text-[#4EB3E8]">{t("events.featured.titleHighlight", "Events")}</span></h2>
           <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            World-class tech conferences where Cloud Nexus unveils breakthroughs, shares insights, and connects with industry leaders.
+            {t("events.featured.description", "World-class tech conferences where Cloud Nexus unveils breakthroughs, shares insights, and connects with industry leaders.")}
           </p>
         </motion.div>
 
@@ -243,7 +259,7 @@ export default function EventsPage() {
 
                     <div className="mt-8">
                       <Link href="/resources/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 transition-all shadow-lg">
-                        Reserve Your Spot <ArrowRight className="w-4 h-4" />
+                        {t("events.featured.reserveSpot", "Reserve Your Spot")} <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
                   </div>
@@ -258,9 +274,9 @@ export default function EventsPage() {
       <div id="upcoming" className="bg-[#fafafa] dark:bg-white/[0.015] border-y border-black/[0.06] dark:border-white/[0.06]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Upcoming <span className="text-[#4EB3E8]">Schedule</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("events.upcoming.title", "Upcoming")} <span className="text-[#4EB3E8]">{t("events.upcoming.titleHighlight", "Schedule")}</span></h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-              Webinars, workshops, meetups, and hackathons  -  join us online or in person.
+              {t("events.upcoming.description", "Webinars, workshops, meetups, and hackathons  -  join us online or in person.")}
             </p>
           </motion.div>
 
@@ -290,7 +306,7 @@ export default function EventsPage() {
 
                   <div className="mt-5 pt-4 border-t border-black/[0.05] dark:border-white/[0.05]">
                     <Link href="/resources/contact" className="inline-flex items-center gap-1.5 text-xs font-semibold transition-colors" style={{ color }}>
-                      Register Now <ChevronRight className="w-3.5 h-3.5" />
+                      {t("events.upcoming.register", "Register Now")} <ChevronRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </motion.div>
@@ -303,9 +319,9 @@ export default function EventsPage() {
       {/* ═══ PAST EVENTS ═══ */}
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Past <span className="text-[#4EB3E8]">Highlights</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("events.past.title", "Past")} <span className="text-[#4EB3E8]">{t("events.past.titleHighlight", "Highlights")}</span></h2>
           <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            A look back at where we&apos;ve been  -  sharing knowledge, building partnerships, and making an impact.
+            {t("events.past.description", "A look back at where we've been  -  sharing knowledge, building partnerships, and making an impact.")}
           </p>
         </motion.div>
 
@@ -334,18 +350,13 @@ export default function EventsPage() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why Attend Our <span className="text-[#4EB3E8]">Events</span>?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("events.whyAttend.title", "Why Attend Our")} <span className="text-[#4EB3E8]">{t("events.whyAttend.titleHighlight", "Events")}</span>?</h2>
               <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-                Whether you&apos;re a developer, startup founder, or enterprise leader  -  our events are designed to deliver actionable insights, real connections, and hands-on learning.
+                {t("events.whyAttend.description", "Whether you're a developer, startup founder, or enterprise leader  -  our events are designed to deliver actionable insights, real connections, and hands-on learning.")}
               </p>
 
               <div className="mt-8 space-y-4">
-                {[
-                  { icon: Sparkles, title: "Live Product Demos", desc: "See our latest solutions in action  -  from AI platforms to cloud-native apps.", color: "#4EB3E8" },
-                  { icon: Users, title: "Networking & Partnerships", desc: "Connect with CTOs, engineers, and decision-makers from leading companies.", color: "#8b5cf6" },
-                  { icon: Mic2, title: "Expert-Led Sessions", desc: "Learn from industry veterans through talks, panels, and hands-on workshops.", color: "#10b981" },
-                  { icon: Target, title: "Business Opportunities", desc: "Explore collaboration models, hiring opportunities, and technology partnerships.", color: "#f59e0b" },
-                ].map((item, i) => {
+                {whyAttend.map((item, i) => {
                   const Icon = item.icon;
                   return (
                     <motion.div key={item.title} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
@@ -379,19 +390,19 @@ export default function EventsPage() {
           <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, rgba(78,179,232,0.04) 0%, transparent 70%)" }} />
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Let&apos;s Meet at the Next <span className="text-[#4EB3E8]">Big Event</span>
+              {t("events.cta.title", "Let's Meet at the Next")} <span className="text-[#4EB3E8]">{t("events.cta.titleHighlight", "Big Event")}</span>
             </h2>
             <p className="text-base text-black/55 dark:text-white/50 max-w-lg mx-auto leading-relaxed mb-8">
-              Want to collaborate, sponsor, or just say hello? Get in touch with our events team and let&apos;s explore opportunities together.
+              {t("events.cta.description", "Want to collaborate, sponsor, or just say hello? Get in touch with our events team and let's explore opportunities together.")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/resources/free-consultation"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm transition-all shadow-lg">
-                <CalendarCheck className="w-4 h-4" /> Schedule a Meeting
+                <CalendarCheck className="w-4 h-4" /> {t("events.cta.primaryBtn", "Schedule a Meeting")}
               </Link>
               <Link href="/resources/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-colors">
-                <Mail className="w-4 h-4" /> Contact Events Team
+                <Mail className="w-4 h-4" /> {t("events.cta.secondaryBtn", "Contact Events Team")}
               </Link>
             </div>
             <p className="mt-5 text-xs text-black/30 dark:text-white/25">work@cloudnexus.in &middot; +91 87938 30447</p>

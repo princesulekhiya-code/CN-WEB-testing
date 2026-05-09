@@ -12,6 +12,8 @@ import {
   CalendarDays, Smile, Award, Globe2, Stethoscope,
   BookOpen, Sparkles as SparklesIcon, Theater,
 } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 
 const heroStats = [
   { value: "12+", label: "Unique Perks" },
@@ -95,6 +97,7 @@ const welfareBenefits = [
 
 function AccordionItem({ item, index }: { item: typeof bankingBenefits[0]; index: number }) {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
   const Icon = item.icon;
   return (
     <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.04 }}
@@ -107,7 +110,7 @@ function AccordionItem({ item, index }: { item: typeof bankingBenefits[0]; index
         </div>
         <div className="flex-1">
           <h4 className="text-sm font-bold">{item.title}</h4>
-          <p className="text-[11px] text-black/40 dark:text-white/35 mt-0.5">{item.points.length} benefit{item.points.length > 1 ? "s" : ""}</p>
+          <p className="text-[11px] text-black/40 dark:text-white/35 mt-0.5">{item.points.length} {item.points.length > 1 ? t("careerBenefits.banking.benefits", "benefits") : t("careerBenefits.banking.benefit", "benefit")}</p>
         </div>
         <ChevronDown className={`w-4 h-4 text-black/30 dark:text-white/25 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
@@ -133,6 +136,12 @@ function AccordionItem({ item, index }: { item: typeof bankingBenefits[0]; index
 }
 
 export default function CareerBenefitsPage() {
+  const translatedHeroStats = useTranslatedData(heroStats);
+  const translatedOverviewCards = useTranslatedData(overviewCards);
+  const translatedBankingBenefits = useTranslatedData(bankingBenefits);
+  const translatedWelfareBenefits = useTranslatedData(welfareBenefits);
+  const { t } = useTranslation();
+
   return (
     <section className="min-h-screen bg-white text-black dark:bg-[#0a0a0a] dark:text-white">
 
@@ -149,17 +158,17 @@ export default function CareerBenefitsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1]">
-                Perks & <span className="text-[#4EB3E8]">Benefits</span><br />That Matter
+                {t("careerBenefits.hero.title", "Perks & ")}<span className="text-[#4EB3E8]">{t("careerBenefits.hero.titleHighlight", "Benefits")}</span><br />{t("careerBenefits.hero.titleEnd", "That Matter")}
               </h1>
               <p className="mt-6 text-base md:text-lg text-black/55 dark:text-white/50 leading-relaxed max-w-xl">
-                We ensure a well-rounded employee experience  -  offering financial security, workplace convenience, and employee-friendly perks that support both professional and personal well-being.
+                {t("careerBenefits.hero.description", "We ensure a well-rounded employee experience  -  offering financial security, workplace convenience, and employee-friendly perks that support both professional and personal well-being.")}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/resources/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold transition-all shadow-lg">
-                  Join Our Team <ArrowRight className="w-4 h-4" />
+                  {t("careerBenefits.hero.joinTeam", "Join Our Team")} <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a href="#benefits" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-black/10 dark:border-white/10 text-sm font-semibold hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-all">
-                  Explore Benefits
+                  {t("careerBenefits.hero.exploreBenefits", "Explore Benefits")}
                 </a>
               </div>
             </motion.div>
@@ -170,7 +179,7 @@ export default function CareerBenefitsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="grid grid-cols-4 gap-2">
-                    {heroStats.map((s, i) => (
+                    {translatedHeroStats.map((s, i) => (
                       <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + i * 0.08 }}
                         className="text-center px-2 py-2.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10">
                         <span className="block text-sm font-black text-white">{s.value}</span>
@@ -189,14 +198,14 @@ export default function CareerBenefitsPage() {
       <div id="benefits" className="border-y border-black/[0.06] dark:border-white/[0.06] bg-[#fafafa] dark:bg-white/[0.015]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">What We <span className="text-[#4EB3E8]">Offer</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("careerBenefits.overview.title", "What We ")}<span className="text-[#4EB3E8]">{t("careerBenefits.overview.titleHighlight", "Offer")}</span></h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-              A snapshot of the key benefits that make Cloud Nexus a great place to work.
+              {t("careerBenefits.overview.description", "A snapshot of the key benefits that make Cloud Nexus a great place to work.")}
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {overviewCards.map((c, i) => {
+            {translatedOverviewCards.map((c, i) => {
               const Icon = c.icon;
               return (
                 <motion.div key={c.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
@@ -218,9 +227,9 @@ export default function CareerBenefitsPage() {
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:sticky lg:top-28">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Banking & <span className="text-[#4EB3E8]">Financial</span> Benefits</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("careerBenefits.banking.title", "Banking & ")}<span className="text-[#4EB3E8]">{t("careerBenefits.banking.titleHighlight", "Financial")}</span>{t("careerBenefits.banking.titleEnd", " Benefits")}</h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-              Salary account benefits designed for financial security and convenience  -  from zero-balance accounts to comprehensive insurance coverage.
+              {t("careerBenefits.banking.description", "Salary account benefits designed for financial security and convenience  -  from zero-balance accounts to comprehensive insurance coverage.")}
             </p>
             <div className="mt-8 hidden lg:block">
               <div className="rounded-2xl overflow-hidden shadow-lg">
@@ -230,7 +239,7 @@ export default function CareerBenefitsPage() {
           </motion.div>
 
           <div className="space-y-3">
-            {bankingBenefits.map((item, i) => (
+            {translatedBankingBenefits.map((item, i) => (
               <AccordionItem key={item.title} item={item} index={i} />
             ))}
           </div>
@@ -241,14 +250,14 @@ export default function CareerBenefitsPage() {
       <div className="bg-[#fafafa] dark:bg-white/[0.015] border-y border-black/[0.06] dark:border-white/[0.06]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Employee Welfare & <span className="text-[#4EB3E8]">Lifestyle</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("careerBenefits.welfare.title", "Employee Welfare & ")}<span className="text-[#4EB3E8]">{t("careerBenefits.welfare.titleHighlight", "Lifestyle")}</span></h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-              Beyond compensation  -  we invest in creating a workplace where people genuinely enjoy coming to work.
+              {t("careerBenefits.welfare.description", "Beyond compensation  -  we invest in creating a workplace where people genuinely enjoy coming to work.")}
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 gap-6">
-            {welfareBenefits.map((item, i) => {
+            {translatedWelfareBenefits.map((item, i) => {
               const Icon = item.icon;
               return (
                 <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
@@ -282,23 +291,23 @@ export default function CareerBenefitsPage() {
       {/* ═══ WHY JOIN CLOUD NEXUS ═══ */}
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why Should You Join <span className="text-[#4EB3E8]">Cloud Nexus</span>?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("careerBenefits.whyJoin.title", "Why Should You Join ")}<span className="text-[#4EB3E8]">{t("careerBenefits.whyJoin.titleHighlight", "Cloud Nexus")}</span>{t("careerBenefits.whyJoin.titleEnd", "?")}</h2>
           <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            Cloud Nexus is the place where you can learn, explore, and boost your overall demeanour. We weave a work culture with knots of empathy, warmth, and care.
+            {t("careerBenefits.whyJoin.description", "Cloud Nexus is the place where you can learn, explore, and boost your overall demeanour. We weave a work culture with knots of empathy, warmth, and care.")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
-            { icon: CalendarDays, title: "5 Days a Week", desc: "Healthy work-life balance with a 5-day work week policy.", color: "#4EB3E8" },
-            { icon: Smile, title: "Birthday Celebration", desc: "Celebrate your special day with the team  -  cake, gifts, and good vibes.", color: "#ef4444" },
-            { icon: PartyPopper, title: "Fun Connect", desc: "Regular fun activities, games, and team bonding events to recharge.", color: "#8b5cf6" },
-            { icon: Award, title: "Rewards & Benefits", desc: "Performance bonuses, spot awards, and recognition for exceptional work.", color: "#f59e0b" },
-            { icon: Globe2, title: "Business Trips", desc: "Opportunities to travel for client meetings, conferences, and summits.", color: "#10b981" },
-            { icon: Stethoscope, title: "Medical Insurance", desc: "Comprehensive health coverage for you and your family.", color: "#06b6d4" },
-            { icon: BookOpen, title: "Certifications", desc: "Sponsored certifications and courses to boost your skills and career.", color: "#8b5cf6" },
-            { icon: SparklesIcon, title: "Positive Environment", desc: "A collaborative, inclusive, and empowering workplace culture.", color: "#4EB3E8" },
-            { icon: Theater, title: "Cultural Programs", desc: "Festivals, cultural days, and celebrations that bring everyone together.", color: "#f59e0b" },
+            { icon: CalendarDays, title: t("careerBenefits.joinCards.fiveDays.title", "5 Days a Week"), desc: t("careerBenefits.joinCards.fiveDays.desc", "Healthy work-life balance with a 5-day work week policy."), color: "#4EB3E8" },
+            { icon: Smile, title: t("careerBenefits.joinCards.birthday.title", "Birthday Celebration"), desc: t("careerBenefits.joinCards.birthday.desc", "Celebrate your special day with the team  -  cake, gifts, and good vibes."), color: "#ef4444" },
+            { icon: PartyPopper, title: t("careerBenefits.joinCards.funConnect.title", "Fun Connect"), desc: t("careerBenefits.joinCards.funConnect.desc", "Regular fun activities, games, and team bonding events to recharge."), color: "#8b5cf6" },
+            { icon: Award, title: t("careerBenefits.joinCards.rewards.title", "Rewards & Benefits"), desc: t("careerBenefits.joinCards.rewards.desc", "Performance bonuses, spot awards, and recognition for exceptional work."), color: "#f59e0b" },
+            { icon: Globe2, title: t("careerBenefits.joinCards.businessTrips.title", "Business Trips"), desc: t("careerBenefits.joinCards.businessTrips.desc", "Opportunities to travel for client meetings, conferences, and summits."), color: "#10b981" },
+            { icon: Stethoscope, title: t("careerBenefits.joinCards.medical.title", "Medical Insurance"), desc: t("careerBenefits.joinCards.medical.desc", "Comprehensive health coverage for you and your family."), color: "#06b6d4" },
+            { icon: BookOpen, title: t("careerBenefits.joinCards.certifications.title", "Certifications"), desc: t("careerBenefits.joinCards.certifications.desc", "Sponsored certifications and courses to boost your skills and career."), color: "#8b5cf6" },
+            { icon: SparklesIcon, title: t("careerBenefits.joinCards.positiveEnv.title", "Positive Environment"), desc: t("careerBenefits.joinCards.positiveEnv.desc", "A collaborative, inclusive, and empowering workplace culture."), color: "#4EB3E8" },
+            { icon: Theater, title: t("careerBenefits.joinCards.cultural.title", "Cultural Programs"), desc: t("careerBenefits.joinCards.cultural.desc", "Festivals, cultural days, and celebrations that bring everyone together."), color: "#f59e0b" },
           ].map((item, i) => {
             const Icon = item.icon;
             return (
@@ -329,17 +338,17 @@ export default function CareerBenefitsPage() {
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why People <span className="text-[#4EB3E8]">Love</span> Working Here</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("careerBenefits.whyLove.title", "Why People ")}<span className="text-[#4EB3E8]">{t("careerBenefits.whyLove.titleHighlight", "Love")}</span>{t("careerBenefits.whyLove.titleEnd", " Working Here")}</h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-              At Cloud Nexus, benefits aren&apos;t just policies  -  they&apos;re a reflection of how we value our people. We believe when you take care of your team, they build extraordinary things.
+              {t("careerBenefits.whyLove.description", "At Cloud Nexus, benefits aren\u2019t just policies  -  they\u2019re a reflection of how we value our people. We believe when you take care of your team, they build extraordinary things.")}
             </p>
 
             <div className="mt-8 space-y-4">
               {[
-                { icon: Heart, title: "People-First Culture", desc: "Every policy is designed with employee well-being at the core.", color: "#ef4444" },
-                { icon: Briefcase, title: "Growth Opportunities", desc: "Clear career paths, mentorship programs, and leadership development.", color: "#4EB3E8" },
-                { icon: Trophy, title: "Merit-Based Recognition", desc: "Your hard work is seen, appreciated, and rewarded  -  always.", color: "#f59e0b" },
-                { icon: Users, title: "Inclusive Environment", desc: "Diverse teams, equal opportunities, and a culture of belonging.", color: "#10b981" },
+                { icon: Heart, title: t("careerBenefits.loveCards.peopleCulture.title", "People-First Culture"), desc: t("careerBenefits.loveCards.peopleCulture.desc", "Every policy is designed with employee well-being at the core."), color: "#ef4444" },
+                { icon: Briefcase, title: t("careerBenefits.loveCards.growth.title", "Growth Opportunities"), desc: t("careerBenefits.loveCards.growth.desc", "Clear career paths, mentorship programs, and leadership development."), color: "#4EB3E8" },
+                { icon: Trophy, title: t("careerBenefits.loveCards.merit.title", "Merit-Based Recognition"), desc: t("careerBenefits.loveCards.merit.desc", "Your hard work is seen, appreciated, and rewarded  -  always."), color: "#f59e0b" },
+                { icon: Users, title: t("careerBenefits.loveCards.inclusive.title", "Inclusive Environment"), desc: t("careerBenefits.loveCards.inclusive.desc", "Diverse teams, equal opportunities, and a culture of belonging."), color: "#10b981" },
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (
@@ -375,19 +384,19 @@ export default function CareerBenefitsPage() {
             <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, rgba(78,179,232,0.04) 0%, transparent 70%)" }} />
             <div className="relative">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Ready to Build Your <span className="text-[#4EB3E8]">Career</span> With Us?
+                {t("careerBenefits.cta.title", "Ready to Build Your ")}<span className="text-[#4EB3E8]">{t("careerBenefits.cta.titleHighlight", "Career")}</span>{t("careerBenefits.cta.titleEnd", " With Us?")}
               </h2>
               <p className="text-base text-black/55 dark:text-white/50 max-w-lg mx-auto leading-relaxed mb-8">
-                Join a team that values your growth, supports your well-being, and rewards your contribution. Explore open positions today.
+                {t("careerBenefits.cta.description", "Join a team that values your growth, supports your well-being, and rewards your contribution. Explore open positions today.")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/company/careers"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm transition-all shadow-lg">
-                  <CalendarCheck className="w-4 h-4" /> View Open Positions
+                  <CalendarCheck className="w-4 h-4" /> {t("careerBenefits.cta.viewPositions", "View Open Positions")}
                 </Link>
                 <Link href="/resources/contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-colors">
-                  <Mail className="w-4 h-4" /> Contact HR Team
+                  <Mail className="w-4 h-4" /> {t("careerBenefits.cta.contactHR", "Contact HR Team")}
                 </Link>
               </div>
               <p className="mt-5 text-xs text-black/30 dark:text-white/25">hr@cloudnexus.in &middot; +91 87938 30447</p>

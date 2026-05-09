@@ -2,6 +2,8 @@
 
 import { type FC, useRef, useCallback, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import Link from 'next/link';
 import {
   ArrowRight, Code2, Smartphone, Globe, Cloud, Palette,
@@ -445,10 +447,12 @@ const services = [
 /* ══════════════════ SECTION ══════════════════ */
 
 export const KnownFor: FC = () => {
+  const { t } = useTranslation();
+  const translatedServices = useTranslatedData(services);
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const totalCards = services.length;
+  const totalCards = translatedServices.length;
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
   const orbY = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
 
@@ -510,7 +514,7 @@ export const KnownFor: FC = () => {
             ref={scrollRef}
             className="flex w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-4 scroll-pl-0"
           >
-            {services.map((service, i) => {
+            {translatedServices.map((service, i) => {
               const Icon = service.icon;
               return (
                 <Link
@@ -536,7 +540,7 @@ export const KnownFor: FC = () => {
                     </p>
 
                     <div className="mt-auto pt-3 flex items-center text-[#006ea3] text-[13px] font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)]">
-                      Explore Service <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                      {t("buildScale.exploreService")} <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                     </div>
                   </div>
                 </Link>
@@ -572,7 +576,7 @@ export const KnownFor: FC = () => {
             href="/services"
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-black text-white text-sm font-medium hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-all duration-300"
           >
-            View All Services
+            {t("buildScale.viewAll")}
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

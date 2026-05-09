@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 import { motion, useInView } from "framer-motion";
 import {
   ArrowRight,
@@ -340,6 +342,7 @@ function IndustrySection({
   industry: Industry;
   index: number;
 }) {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const Icon = industry.icon;
@@ -401,7 +404,7 @@ function IndustrySection({
                       {industry.title}
                     </p>
                     <p className="text-[11px] font-medium text-white/70">
-                      {industry.services.length} solutions
+                      {industry.services.length} {t("industry.solutions", "solutions")}
                     </p>
                   </div>
                 </div>
@@ -482,7 +485,7 @@ function IndustrySection({
               className="group inline-flex items-center gap-2 text-[14px] font-bold transition-all duration-300"
               style={{ color: industry.accentColor }}
             >
-              Explore {industry.title.split("&")[0].trim()}
+              {t("industry.explore", "Explore")} {industry.title.split("&")[0].trim()}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
             </Link>
           </motion.div>
@@ -493,6 +496,9 @@ function IndustrySection({
 }
 
 export default function IndustryPage() {
+  const { t } = useTranslation();
+  const translatedIndustries = useTranslatedData(industries);
+  const translatedStats = useTranslatedData(stats);
   return (
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
       {/* Hero */}
@@ -535,10 +541,10 @@ export default function IndustryPage() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-[1.1]"
               >
-                Tailored Solutions for
+                {t("industry.hero.title1", "Tailored Solutions for")}
                 <br />
                 <span className="bg-gradient-to-r from-[#4EB3E8] via-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent">
-                  Every Industry
+                  {t("industry.hero.title2", "Every Industry")}
                 </span>
               </motion.h1>
 
@@ -548,9 +554,7 @@ export default function IndustryPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mt-6 text-lg font-medium text-black/45 dark:text-white/45 max-w-lg leading-relaxed"
               >
-                Explore our hands-on expertise in creating tailor-made digital
-                solutions packed with strategy, operations and technologies across
-                15+ industry verticals.
+                {t("industry.hero.description", "Explore our hands-on expertise in creating tailor-made digital solutions packed with strategy, operations and technologies across 15+ industry verticals.")}
               </motion.p>
 
               <motion.div
@@ -563,13 +567,13 @@ export default function IndustryPage() {
                   href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-lg"
                 >
-                  Let&apos;s Talk <ArrowRight className="w-4 h-4" />
+                  {t("industry.hero.cta1", "Let's Talk")} <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/our-work"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
                 >
-                  View Our Work
+                  {t("industry.hero.cta2", "View Our Work")}
                 </Link>
               </motion.div>
             </div>
@@ -585,7 +589,7 @@ export default function IndustryPage() {
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-black/[0.08] dark:border-white/[0.06] shadow-2xl">
                 <Image
                   src="/images/stock/stock-ec34cb9b56.jpg"
-                  alt="Digital solutions across industries"
+                  alt={t("industry.hero.altImage", "Digital solutions across industries")}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -603,7 +607,7 @@ export default function IndustryPage() {
       <div className="border-y border-black/[0.04] dark:border-white/[0.04]">
         <div className="mx-auto max-w-7xl px-6 py-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            {stats.map((stat, i) => (
+            {translatedStats.map((stat, i) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 25 }}
@@ -629,7 +633,7 @@ export default function IndustryPage() {
 
       {/* Industry Sections - One by one on scroll */}
       <div>
-        {industries.map((industry, i) => (
+        {translatedIndustries.map((industry, i) => (
           <IndustrySection key={industry.title} industry={industry} index={i} />
         ))}
       </div>
@@ -650,25 +654,24 @@ export default function IndustryPage() {
               className="relative"
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-                We Serve Every Industry
+                {t("industry.cta.title", "We Serve Every Industry")}
               </h2>
               <p className="mt-5 text-base font-medium text-black/45 dark:text-white/45 max-w-xl mx-auto leading-relaxed">
-                From startups to enterprises, we build tailored digital solutions
-                for your domain. Let&apos;s create something impactful together.
+                {t("industry.cta.description", "From startups to enterprises, we build tailored digital solutions for your domain. Let's create something impactful together.")}
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-lg"
                 >
-                  Get a Free Consultation{" "}
+                  {t("industry.cta.btn1", "Get a Free Consultation")}{" "}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/our-work"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
                 >
-                  View Our Work
+                  {t("industry.cta.btn2", "View Our Work")}
                 </Link>
               </div>
             </motion.div>

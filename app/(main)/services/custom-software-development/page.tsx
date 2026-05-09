@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Code, Layers, Settings, Shield, Zap, GitBranch } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 const offerings = [
   { icon: Code, title: "Enterprise Software", desc: "Scalable enterprise-grade applications built with robust architectures that grow with your business." },
@@ -27,13 +29,18 @@ const process = [
 const techStack = ["Java", "Spring Boot", "Node.js", "React", "Next.js", "PostgreSQL", "MongoDB", "Docker", "Kubernetes", "AWS", "Azure", "Redis"];
 
 export default function CustomSoftwareDevelopmentPage() {
+  const { t } = useTranslation();
+  const translatedOfferings = useTranslatedData(offerings);
+  const translatedProcess = useTranslatedData(process);
+  const translatedTechStack = useTranslatedData(techStack);
+
   return (
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
       {/* Hero */}
       <div className="relative w-full h-[50vh] min-h-[400px] overflow-hidden">
         <Image
           src="/images/stock/stock-8dfad6e1ae.jpg"
-          alt="Custom Software Development"
+          alt={t("customSoftware.hero.altImage", "Custom Software Development")}
           fill
           className="object-cover"
           priority
@@ -45,7 +52,7 @@ export default function CustomSoftwareDevelopmentPage() {
               href="/services"
               className="inline-flex items-center gap-2 text-sm text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white transition-colors mb-6"
             >
-              <ArrowLeft size={16} /> Back to Services
+              <ArrowLeft size={16} /> {t("customSoftware.hero.backLink", "Back to Services")}
             </Link>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -53,7 +60,7 @@ export default function CustomSoftwareDevelopmentPage() {
               transition={{ duration: 0.5 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-3xl"
             >
-              Custom Software Development
+              {t("customSoftware.hero.title", "Custom Software Development")}
             </motion.h1>
           </div>
         </div>
@@ -68,18 +75,18 @@ export default function CustomSoftwareDevelopmentPage() {
           className="py-16 max-w-4xl"
         >
           <p className="text-lg md:text-xl text-black/60 dark:text-white/60 leading-relaxed">
-            We build custom software solutions from the ground up  -  designed to solve your unique challenges, streamline operations, and drive growth. From enterprise platforms to SaaS products, our engineering team delivers high-performance applications that scale with your business.
+            {t("customSoftware.intro.p1", "We build custom software solutions from the ground up  -  designed to solve your unique challenges, streamline operations, and drive growth. From enterprise platforms to SaaS products, our engineering team delivers high-performance applications that scale with your business.")}
           </p>
           <p className="mt-6 text-lg md:text-xl text-black/60 dark:text-white/60 leading-relaxed">
-            Every line of code is written with purpose. We follow industry best practices in clean architecture, automated testing, and DevOps to ensure your software is maintainable, secure, and future-proof.
+            {t("customSoftware.intro.p2", "Every line of code is written with purpose. We follow industry best practices in clean architecture, automated testing, and DevOps to ensure your software is maintainable, secure, and future-proof.")}
           </p>
         </motion.div>
 
         {/* What We Offer */}
         <div className="py-16 border-t border-black/[0.06] dark:border-white/[0.06]">
-          <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
+          <h2 className="text-3xl font-bold mb-12">{t("customSoftware.offerings.heading", "What We Offer")}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {offerings.map((item, i) => (
+            {translatedOfferings.map((item, i) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -98,9 +105,9 @@ export default function CustomSoftwareDevelopmentPage() {
 
         {/* Process */}
         <div className="py-16 border-t border-black/[0.06] dark:border-white/[0.06]">
-          <h2 className="text-3xl font-bold mb-12">Our Process</h2>
+          <h2 className="text-3xl font-bold mb-12">{t("customSoftware.process.heading", "Our Process")}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {process.map((item, i) => (
+            {translatedProcess.map((item, i) => (
               <motion.div
                 key={item.step}
                 initial={{ opacity: 0, y: 20 }}
@@ -118,9 +125,9 @@ export default function CustomSoftwareDevelopmentPage() {
 
         {/* Tech Stack */}
         <div className="py-16 border-t border-black/[0.06] dark:border-white/[0.06]">
-          <h2 className="text-3xl font-bold mb-8">Technologies We Use</h2>
+          <h2 className="text-3xl font-bold mb-8">{t("customSoftware.techStack.heading", "Technologies We Use")}</h2>
           <div className="flex flex-wrap gap-3">
-            {techStack.map((tech) => (
+            {translatedTechStack.map((tech) => (
               <span key={tech} className="px-4 py-2 rounded-lg border border-black/[0.08] bg-black/[0.02] text-sm font-medium text-black/60 dark:border-white/[0.08] dark:bg-white/[0.02] dark:text-white/60">
                 {tech}
               </span>
@@ -130,11 +137,11 @@ export default function CustomSoftwareDevelopmentPage() {
 
         {/* CTA */}
         <div className="py-20 border-t border-black/[0.06] dark:border-white/[0.06] text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Build?</h2>
-          <p className="text-black/50 dark:text-white/50 mb-8 max-w-lg mx-auto">Let&apos;s discuss your project requirements and create a custom solution tailored to your business.</p>
+          <h2 className="text-3xl font-bold mb-4">{t("customSoftware.cta.heading", "Ready to Build?")}</h2>
+          <p className="text-black/50 dark:text-white/50 mb-8 max-w-lg mx-auto">{t("customSoftware.cta.description", "Let\u2019s discuss your project requirements and create a custom solution tailored to your business.")}</p>
           <Link href="/resources/free-consultation">
             <Button size="lg" className="rounded-lg bg-black text-white hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 px-8">
-              Book a Free Consultation <ArrowRight size={16} className="ml-2" />
+              {t("customSoftware.cta.button", "Book a Free Consultation")} <ArrowRight size={16} className="ml-2" />
             </Button>
           </Link>
         </div>

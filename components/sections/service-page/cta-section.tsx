@@ -3,13 +3,15 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useInView } from "@/hooks/use-in-view";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { CTAProps } from "./types";
 
 export function CTASection({
-  headingTop,
-  headingBottom,
-  description,
-  primaryCtaLabel,
+  headingTop: rawHeadingTop,
+  headingBottom: rawHeadingBottom,
+  description: rawDescription,
+  primaryCtaLabel: rawPrimaryCtaLabel,
   tealAccent,
   tealProminent,
   headingBottomClassName,
@@ -18,9 +20,14 @@ export function CTASection({
   cyanBoldBackdrop,
 }: CTAProps) {
   const { ref, visible } = useInView(0.25);
+  const { t } = useTranslation();
+  const headingTop = useTranslatedData(rawHeadingTop);
+  const headingBottom = useTranslatedData(rawHeadingBottom);
+  const description = useTranslatedData(rawDescription);
+  const primaryCtaLabel = useTranslatedData(rawPrimaryCtaLabel);
 
   const secondHref = secondaryCtaHref ?? "/our-work";
-  const secondLabel = secondaryCtaLabel ?? "View Our Work";
+  const secondLabel = secondaryCtaLabel ?? t("common.viewAll", "View Our Work");
 
   const teal = !!tealAccent;
   const bottomClass =
@@ -80,7 +87,7 @@ export function CTASection({
             href="/resources/free-consultation"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm shadow-lg transition-colors"
           >
-            {primaryCtaLabel ?? "Get a Free Consultation"} <ArrowRight className="w-4 h-4" />
+            {primaryCtaLabel ?? t("consultation.cta", "Get Free Consultation")} <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href={secondHref}

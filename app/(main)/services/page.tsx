@@ -13,6 +13,8 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { motion, useInView as useMotionInView, type Variants } from "framer-motion";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -626,6 +628,7 @@ function CategoryVisual({ id }: { id: string }) {
    ═══════════════════════════════════════════════════════ */
 
 function ServiceCard({ service }: { service: Service }) {
+  const { t } = useTranslation();
   const Icon = service.icon;
   const hasSublinks = service.sublinks && service.sublinks.length > 0;
   const hasIllustration = !!serviceCardLogos[service.title];
@@ -698,7 +701,7 @@ function ServiceCard({ service }: { service: Service }) {
         )}
 
         <div className="mt-5 flex items-center text-[13px] font-semibold text-[#4EB3E8] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-          Learn more <ArrowRight className="w-3.5 h-3.5 ml-1" />
+          {t("servicesPage.learnMore", "Learn more")} <ArrowRight className="w-3.5 h-3.5 ml-1" />
         </div>
       </div>
     </motion.div>
@@ -744,6 +747,8 @@ function CategorySection({ category, index }: { category: ServiceCategory; index
 }
 
 function StatsBar() {
+  const { t } = useTranslation();
+  const translatedStats = useTranslatedData(stats);
   const ref = useRef(null);
   const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
   const c0 = useAnimatedCount(stats[0].value, isInView, 0);
@@ -765,12 +770,12 @@ function StatsBar() {
           className="text-center mb-14"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
-            Results That <span className="text-black dark:text-white">Tell the Story</span>
+            {t("servicesPage.stats.title1", "Results That")} <span className="text-black dark:text-white">{t("servicesPage.stats.title2", "Tell the Story")}</span>
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-          {stats.map((stat, i) => (
+          {translatedStats.map((stat, i) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 24 }}
@@ -801,6 +806,8 @@ function StatsBar() {
 }
 
 function ProcessTimeline() {
+  const { t } = useTranslation();
+  const translatedProcessSteps = useTranslatedData(processSteps);
   const ref = useRef(null);
   const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
@@ -817,10 +824,10 @@ function ProcessTimeline() {
           className="text-center mb-20"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
-            From Concept to <span className="text-black dark:text-white">Production</span>
+            {t("servicesPage.process.title1", "From Concept to")} <span className="text-black dark:text-white">{t("servicesPage.process.title2", "Production")}</span>
           </h2>
           <p className="mt-4 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-2xl mx-auto">
-            A battle-tested six-phase process balancing speed, quality, and full visibility  -  so there are no surprises on launch day.
+            {t("servicesPage.process.subtitle", "A battle-tested six-phase process balancing speed, quality, and full visibility  -  so there are no surprises on launch day.")}
           </p>
         </motion.div>
 
@@ -828,7 +835,7 @@ function ProcessTimeline() {
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 md:-translate-x-px">
             <div className="w-px h-full bg-gradient-to-b from-[#4EB3E8]/30 via-[#4EB3E8]/15 to-[#4EB3E8]/5" />
           </div>
-          {processSteps.map((step, i) => {
+          {translatedProcessSteps.map((step, i) => {
             const StepIcon = step.icon;
             const isLeft = i % 2 === 0;
             return (
@@ -837,14 +844,14 @@ function ProcessTimeline() {
                   <div className={isLeft ? "pr-12" : ""}>
                     {isLeft && (
                       <div className="group flex flex-col items-end text-right rounded-2xl p-6 border border-transparent hover:border-[#4EB3E8]/15 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#4EB3E8]/[0.04] transition-all duration-500">
-                        <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase mb-2">Step {step.step}</span>
+                        <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase mb-2">{t("servicesPage.process.step", "Step")} {step.step}</span>
                         <h3 className="text-xl font-bold tracking-tight group-hover:text-[#4EB3E8] transition-colors duration-300">{step.title}</h3>
                         <p className="mt-3 text-sm font-medium text-black/45 dark:text-white/40 leading-relaxed max-w-sm ml-auto">{step.description}</p>
                         <div className="mt-4 flex items-center gap-2 w-full max-w-[200px] ml-auto">
                           <div className="flex-1 h-1 rounded-full bg-black/[0.04] dark:bg-white/[0.04] overflow-hidden">
-                            <motion.div className="h-full rounded-full bg-[#4EB3E8]/30" initial={{ width: 0 }} animate={isInView ? { width: `${((i + 1) / processSteps.length) * 100}%` } : {}} transition={{ duration: 1, delay: 0.6 + i * 0.15, ease: "easeOut" }} />
+                            <motion.div className="h-full rounded-full bg-[#4EB3E8]/30" initial={{ width: 0 }} animate={isInView ? { width: `${((i + 1) / translatedProcessSteps.length) * 100}%` } : {}} transition={{ duration: 1, delay: 0.6 + i * 0.15, ease: "easeOut" }} />
                           </div>
-                          <span className="text-[10px] font-semibold text-black/20 dark:text-white/15 tabular-nums">{i + 1}/{processSteps.length}</span>
+                          <span className="text-[10px] font-semibold text-black/20 dark:text-white/15 tabular-nums">{i + 1}/{translatedProcessSteps.length}</span>
                         </div>
                       </div>
                     )}
@@ -863,14 +870,14 @@ function ProcessTimeline() {
                   <div className={!isLeft ? "pl-12" : ""}>
                     {!isLeft && (
                       <div className="group flex flex-col items-start text-left rounded-2xl p-6 border border-transparent hover:border-[#4EB3E8]/15 hover:bg-[#4EB3E8]/[0.02] dark:hover:bg-[#4EB3E8]/[0.04] transition-all duration-500">
-                        <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase mb-2">Step {step.step}</span>
+                        <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase mb-2">{t("servicesPage.process.step", "Step")} {step.step}</span>
                         <h3 className="text-xl font-bold tracking-tight group-hover:text-[#4EB3E8] transition-colors duration-300">{step.title}</h3>
                         <p className="mt-3 text-sm font-medium text-black/45 dark:text-white/40 leading-relaxed max-w-sm">{step.description}</p>
                         <div className="mt-4 flex items-center gap-2 w-full max-w-[200px]">
                           <div className="flex-1 h-1 rounded-full bg-black/[0.04] dark:bg-white/[0.04] overflow-hidden">
-                            <motion.div className="h-full rounded-full bg-[#4EB3E8]/30" initial={{ width: 0 }} animate={isInView ? { width: `${((i + 1) / processSteps.length) * 100}%` } : {}} transition={{ duration: 1, delay: 0.6 + i * 0.15, ease: "easeOut" }} />
+                            <motion.div className="h-full rounded-full bg-[#4EB3E8]/30" initial={{ width: 0 }} animate={isInView ? { width: `${((i + 1) / translatedProcessSteps.length) * 100}%` } : {}} transition={{ duration: 1, delay: 0.6 + i * 0.15, ease: "easeOut" }} />
                           </div>
-                          <span className="text-[10px] font-semibold text-black/20 dark:text-white/15 tabular-nums">{i + 1}/{processSteps.length}</span>
+                          <span className="text-[10px] font-semibold text-black/20 dark:text-white/15 tabular-nums">{i + 1}/{translatedProcessSteps.length}</span>
                         </div>
                       </div>
                     )}
@@ -886,7 +893,7 @@ function ProcessTimeline() {
                     </div>
                   </div>
                   <div className="flex-1 pt-0.5">
-                    <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase">Step {step.step}</span>
+                    <span className="text-[11px] font-bold text-[#4EB3E8] tracking-widest uppercase">{t("servicesPage.process.step", "Step")} {step.step}</span>
                     <h3 className="text-base font-bold mt-1 tracking-tight">{step.title}</h3>
                     <p className="mt-2 text-sm font-medium text-black/45 dark:text-white/40 leading-relaxed">{step.description}</p>
                   </div>
@@ -901,6 +908,8 @@ function ProcessTimeline() {
 }
 
 function IndustriesSection() {
+  const { t } = useTranslation();
+  const translatedIndustries = useTranslatedData(industries);
   const ref = useRef(null);
   const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
@@ -918,15 +927,15 @@ function IndustriesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
-            Built for <span className="text-black dark:text-white">Your Industry</span>
+            {t("servicesPage.industries.title1", "Built for")} <span className="text-black dark:text-white">{t("servicesPage.industries.title2", "Your Industry")}</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            Vertical-specific knowledge baked into every engagement  -  from regulatory nuances in finance to patient-safety standards in healthcare.
+            {t("servicesPage.industries.subtitle", "Vertical-specific knowledge baked into every engagement  -  from regulatory nuances in finance to patient-safety standards in healthcare.")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 mb-14">
-          {industries.map((industry, i) => {
+          {translatedIndustries.map((industry, i) => {
             const IndIcon = industry.icon;
             return (
               <motion.div
@@ -974,7 +983,7 @@ function IndustriesSection() {
                       {industry.desc}
                     </p>
                     <div className="mt-4 flex items-center text-[13px] font-semibold text-[#4EB3E8] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                      Explore industry <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      {t("servicesPage.industries.explore", "Explore industry")} <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </div>
                   </div>
                 </Link>
@@ -990,10 +999,10 @@ function IndustriesSection() {
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"
         >
           {[
-            { text: "Tailored vertical solutions", icon: Lightbulb },
-            { text: "Engineers with domain expertise", icon: Users },
-            { text: "Compliance woven in from day one", icon: Shield },
-            { text: "Architecture that scales with demand", icon: Layers },
+            { text: t("servicesPage.industries.bullet1", "Tailored vertical solutions"), icon: Lightbulb },
+            { text: t("servicesPage.industries.bullet2", "Engineers with domain expertise"), icon: Users },
+            { text: t("servicesPage.industries.bullet3", "Compliance woven in from day one"), icon: Shield },
+            { text: t("servicesPage.industries.bullet4", "Architecture that scales with demand"), icon: Layers },
           ].map((item) => {
             const HIcon = item.icon;
             return (
@@ -1012,16 +1021,18 @@ function IndustriesSection() {
   );
 }
 
+const whyChooseUsItems = [
+  { icon: Users, title: "Elite Engineering Talent", stat: "90+", statLabel: "Engineers", desc: "Seasoned developers, designers, and strategists  -  hand-picked for domain depth and cross-functional agility.", highlights: ["Full-stack expertise", "Domain specialists", "Certified professionals"] },
+  { icon: Clock, title: "Predictable Delivery", stat: "95%", statLabel: "On Schedule", desc: "Structured sprints, real-time dashboards, and proactive risk mitigation  -  95% of milestones hit on or ahead of schedule.", highlights: ["Agile methodology", "Sprint-based delivery", "Transparent timelines"] },
+  { icon: Layers, title: "Built to Scale", stat: "10x", statLabel: "Growth Ready", desc: "Cloud-native blueprints engineered for ten-fold traffic surges  -  so your stack never becomes the bottleneck.", highlights: ["Cloud-native design", "Microservices architecture", "Auto-scaling infra"] },
+  { icon: HeartHandshake, title: "Partners, Not Vendors", stat: "98%", statLabel: "Retention", desc: "Post-launch isn't goodbye  -  we stay embedded with proactive monitoring, continuous optimization, and growth strategy.", highlights: ["Dedicated support", "Continuous optimization", "Strategic guidance"] },
+];
+
 function WhyChooseUs() {
+  const { t } = useTranslation();
+  const items = useTranslatedData(whyChooseUsItems);
   const ref = useRef(null);
   const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
-
-  const items = [
-    { icon: Users, title: "Elite Engineering Talent", stat: "90+", statLabel: "Engineers", desc: "Seasoned developers, designers, and strategists  -  hand-picked for domain depth and cross-functional agility.", highlights: ["Full-stack expertise", "Domain specialists", "Certified professionals"] },
-    { icon: Clock, title: "Predictable Delivery", stat: "95%", statLabel: "On Schedule", desc: "Structured sprints, real-time dashboards, and proactive risk mitigation  -  95% of milestones hit on or ahead of schedule.", highlights: ["Agile methodology", "Sprint-based delivery", "Transparent timelines"] },
-    { icon: Layers, title: "Built to Scale", stat: "10x", statLabel: "Growth Ready", desc: "Cloud-native blueprints engineered for ten-fold traffic surges  -  so your stack never becomes the bottleneck.", highlights: ["Cloud-native design", "Microservices architecture", "Auto-scaling infra"] },
-    { icon: HeartHandshake, title: "Partners, Not Vendors", stat: "98%", statLabel: "Retention", desc: "Post-launch isn't goodbye  -  we stay embedded with proactive monitoring, continuous optimization, and growth strategy.", highlights: ["Dedicated support", "Continuous optimization", "Strategic guidance"] },
-  ];
 
   return (
     <div ref={ref} className="relative overflow-hidden">
@@ -1036,10 +1047,10 @@ function WhyChooseUs() {
           className="text-center mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
-            The Cloud Nexus <span className="text-black dark:text-white">Advantage</span>
+            {t("servicesPage.whyChoose.title1", "The Cloud Nexus")} <span className="text-black dark:text-white">{t("servicesPage.whyChoose.title2", "Advantage")}</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            Technical depth meets business intuition  -  every solution is calibrated to deliver measurable impact, not just clean code.
+            {t("servicesPage.whyChoose.subtitle", "Technical depth meets business intuition  -  every solution is calibrated to deliver measurable impact, not just clean code.")}
           </p>
         </motion.div>
 
@@ -1093,6 +1104,7 @@ function WhyChooseUs() {
 }
 
 function CTASection() {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useMotionInView(ref, { once: true, margin: "-80px" });
 
@@ -1116,9 +1128,9 @@ function CTASection() {
           transition={{ duration: 0.6 }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]"
         >
-          Let&apos;s Turn Your Next Big Idea
+          {t("servicesPage.cta.title1", "Let's Turn Your Next Big Idea")}
           <br />
-          <span className="text-black dark:text-white">Into Reality</span>
+          <span className="text-black dark:text-white">{t("servicesPage.cta.title2", "Into Reality")}</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -1126,7 +1138,7 @@ function CTASection() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="mt-5 text-base md:text-lg font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed"
         >
-          Share your challenge, and we&apos;ll map a clear path  -  from architecture to launch  -  backed by engineers who&apos;ve done it hundreds of times.
+          {t("servicesPage.cta.body", "Share your challenge, and we'll map a clear path  -  from architecture to launch  -  backed by engineers who've done it hundreds of times.")}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -1138,13 +1150,13 @@ function CTASection() {
             href="/resources/free-consultation"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm transition-colors shadow-lg"
           >
-            Get a Free Consultation <ArrowRight className="w-4 h-4" />
+            {t("servicesPage.cta.getConsultation", "Get a Free Consultation")} <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href="/our-work"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
           >
-            View Our Work
+            {t("servicesPage.cta.viewWork", "View Our Work")}
           </Link>
         </motion.div>
       </div>
@@ -1157,6 +1169,8 @@ function CTASection() {
    ═══════════════════════════════════════════════════════ */
 
 export default function ServicesPage() {
+  const { t } = useTranslation();
+  const translatedCategories = useTranslatedData(categories);
   const scrollToServices = useCallback(() => {
     const el = document.getElementById("services-grid");
     el?.scrollIntoView({ behavior: "smooth" });
@@ -1191,9 +1205,9 @@ export default function ServicesPage() {
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-5xl xl:text-6xl"
               >
-                Engineering Excellence.
+                {t("servicesPage.hero.title1", "Engineering Excellence.")}
                 <br />
-                <span className="text-[#4EB3E8]">Measurable Impact.</span>
+                <span className="text-[#4EB3E8]">{t("servicesPage.hero.title2", "Measurable Impact.")}</span>
               </motion.h1>
 
               <motion.p
@@ -1202,7 +1216,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.7, delay: 0.25 }}
                 className="mt-6 text-lg md:text-xl font-medium text-black/50 dark:text-white/50 max-w-xl leading-relaxed"
               >
-                Strategy, design, engineering, and growth  -  one partner covering the entire digital lifecycle so you can focus on what matters most: your business.
+                {t("servicesPage.hero.description", "Strategy, design, engineering, and growth  -  one partner covering the entire digital lifecycle so you can focus on what matters most: your business.")}
               </motion.p>
 
               <motion.p
@@ -1211,7 +1225,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.7, delay: 0.35 }}
                 className="mt-3 text-sm md:text-base font-medium text-[#4EB3E8]/70 max-w-xl leading-relaxed tracking-wide"
               >
-                50+ global partners &bull; 200+ production launches &bull; 98% client retention rate
+                {t("servicesPage.hero.stats", "50+ global partners \u2022 200+ production launches \u2022 98% client retention rate")}
               </motion.p>
 
               <motion.div
@@ -1224,13 +1238,13 @@ export default function ServicesPage() {
                   href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10"
                 >
-                  Get Free Consultation <ArrowRight className="w-4 h-4" />
+                  {t("servicesPage.hero.cta", "Get Free Consultation")} <ArrowRight className="w-4 h-4" />
                 </Link>
                 <button
                   onClick={scrollToServices}
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
                 >
-                  Explore Services
+                  {t("servicesPage.hero.exploreServices", "Explore Services")}
                 </button>
               </motion.div>
             </div>
@@ -1268,8 +1282,8 @@ export default function ServicesPage() {
                     <Rocket className="w-4.5 h-4.5 text-[#4EB3E8]" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-black dark:text-white">200+</div>
-                    <div className="text-[10px] font-medium text-black/40 dark:text-white/40">Projects Shipped</div>
+                    <div className="text-sm font-bold text-black dark:text-white">{t("servicesPage.hero.badge1Value", "200+")}</div>
+                    <div className="text-[10px] font-medium text-black/40 dark:text-white/40">{t("servicesPage.hero.badge1Label", "Projects Shipped")}</div>
                   </div>
                 </div>
               </motion.div>
@@ -1286,8 +1300,8 @@ export default function ServicesPage() {
                     <CheckCircle2 className="w-4.5 h-4.5 text-emerald-500" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-black dark:text-white">98%</div>
-                    <div className="text-[10px] font-medium text-black/40 dark:text-white/40">Client Retention</div>
+                    <div className="text-sm font-bold text-black dark:text-white">{t("servicesPage.hero.badge2Value", "98%")}</div>
+                    <div className="text-[10px] font-medium text-black/40 dark:text-white/40">{t("servicesPage.hero.badge2Label", "Client Retention")}</div>
                   </div>
                 </div>
               </motion.div>
@@ -1302,7 +1316,7 @@ export default function ServicesPage() {
 
       {/* ── Categorized Services ── */}
       <div id="services-grid" className="mx-auto max-w-7xl px-6 py-20">
-        {categories.map((category, i) => (
+        {translatedCategories.map((category, i) => (
           <CategorySection key={category.id} category={category} index={i} />
         ))}
       </div>

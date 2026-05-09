@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslation } from "@/lib/i18n/context";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -18,7 +19,7 @@ interface TechCategory {
 
 const categories: TechCategory[] = [
   {
-    label: "Frontend",
+    label: "techStack.frontend",
     items: [
       { name: "React", logo: `${DEVICON}/react/react-original.svg` },
       { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
@@ -28,7 +29,7 @@ const categories: TechCategory[] = [
     ],
   },
   {
-    label: "Backend",
+    label: "techStack.backend",
     items: [
       { name: "Node.js", logo: `${DEVICON}/nodejs/nodejs-original.svg` },
       { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
@@ -38,7 +39,7 @@ const categories: TechCategory[] = [
     ],
   },
   {
-    label: "Cloud & DevOps",
+    label: "techStack.cloudDevops",
     items: [
       { name: "AWS", logo: `${DEVICON}/amazonwebservices/amazonwebservices-plain-wordmark.svg` },
       { name: "Azure", logo: `${DEVICON}/azure/azure-original.svg` },
@@ -49,7 +50,7 @@ const categories: TechCategory[] = [
     ],
   },
   {
-    label: "Data & AI",
+    label: "techStack.dataAI",
     items: [
       { name: "TensorFlow", logo: `${DEVICON}/tensorflow/tensorflow-original.svg` },
       { name: "PyTorch", logo: `${DEVICON}/pytorch/pytorch-original.svg` },
@@ -59,7 +60,7 @@ const categories: TechCategory[] = [
     ],
   },
   {
-    label: "Tools & CI/CD",
+    label: "techStack.toolsCICD",
     items: [
       { name: "Git", logo: `${DEVICON}/git/git-original.svg` },
       { name: "GitHub Actions", logo: `${DEVICON}/githubactions/githubactions-original.svg` },
@@ -91,6 +92,7 @@ function useInView(threshold = 0.1) {
 }
 
 export function TechStack() {
+  const { t } = useTranslation();
   const { ref, visible } = useInView(0.1);
   const [activeTab, setActiveTab] = useState(0);
 
@@ -107,10 +109,10 @@ export function TechStack() {
           }`}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
-            Built with <span className="text-black dark:text-white">modern technology</span>
+            {t("techStack.titleBlue", "Built with")} <span className="text-black dark:text-white">{t("techStack.titleWhite", "modern technology")}</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            We leverage industry-leading tools and frameworks to build scalable, high-performance solutions.
+            {t("techStack.subtitle")}
           </p>
         </div>
 
@@ -131,7 +133,7 @@ export function TechStack() {
                     : "text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white hover:bg-black/[0.04] dark:hover:bg-white/[0.04]"
                 }`}
               >
-                {cat.label}
+                {t(cat.label)}
               </button>
             ))}
           </div>

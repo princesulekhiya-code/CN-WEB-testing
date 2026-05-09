@@ -9,6 +9,8 @@ import type { LucideIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/navbar/language-switcher";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 interface NavChild {
   label: string;
@@ -93,8 +95,18 @@ const NAV_ITEMS: NavItem[] = [
   },
 ];
 
+const NAV_LABEL_KEYS: Record<string, string> = {
+  Services: "nav.services",
+  Industry: "nav.industry",
+  Resources: "nav.resources",
+  Company: "nav.company",
+};
+
 export function Navbar() {
   const pathname = usePathname();
+  const { t } = useTranslation();
+  const translatedNavItems = useTranslatedData(NAV_ITEMS);
+  const tNav = (label: string) => t(NAV_LABEL_KEYS[label] ?? label, label);
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -189,7 +201,7 @@ export function Navbar() {
         {/* ── Desktop nav ── */}
         <nav aria-label="Main navigation" className="hidden lg:block">
           <ul className="flex items-center gap-1" role="list">
-            {NAV_ITEMS.map((item) => (
+            {translatedNavItems.map((item) => (
               <li
                 key={item.label}
                 className="relative"
@@ -206,11 +218,11 @@ export function Navbar() {
                 >
                   {item.href ? (
                     <Link href={item.href} className="hover:text-black dark:hover:text-white transition-colors">
-                      {item.label}
+                      {tNav(item.label)}
                     </Link>
                   ) : (
                     <button onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}>
-                      {item.label}
+                      {tNav(item.label)}
                     </button>
                   )}
                   <button
@@ -246,10 +258,10 @@ export function Navbar() {
                             </div>
                             <div className="flex flex-col">
                               <span className="text-sm font-semibold text-black dark:text-white">
-                                Our Work
+                                {t("nav.ourWork", "Our Work")}
                               </span>
                               <span className="text-[11px] text-black/45 dark:text-white/45">
-                                View all projects & case studies
+                                {t("nav.ourWorkDesc", "View all projects & case studies")}
                               </span>
                             </div>
                           </Link>
@@ -321,7 +333,7 @@ export function Navbar() {
           <div className="hidden lg:block">
             <Link href="/resources/free-consultation">
               <Button size="sm" className="bg-black text-white dark:bg-white dark:text-black rounded-sm hover:bg-black/80 dark:hover:bg-white/80">
-              Join Now
+              {t("nav.joinNow")}
                 <ArrowRight
                   size={14}
                   className="ml-1.5 transition-transform duration-200 group-hover:translate-x-0.5"
@@ -348,7 +360,7 @@ export function Navbar() {
       {mobileOpen && (
         <div className="lg:hidden border-t border-black/[0.06] bg-white max-h-[calc(100dvh-58px)] overflow-y-auto dark:border-white/[0.06] dark:bg-[#080808]">
           <nav className="flex flex-col gap-0.5 px-3 py-4">
-            {NAV_ITEMS.map((item) => (
+            {translatedNavItems.map((item) => (
               <div key={item.label}>
                 <button
                   onClick={() =>
@@ -359,7 +371,7 @@ export function Navbar() {
                   className="flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-sm font-medium text-black/60 transition-colors hover:bg-black/[0.04] hover:text-black dark:text-white/60 dark:hover:bg-white/[0.04] dark:hover:text-white"
                   aria-expanded={mobileExpanded === item.label}
                 >
-                  {item.label}
+                  {tNav(item.label)}
                   <ChevronDown
                     size={16}
                     className={`transition-transform duration-200 ${
@@ -381,8 +393,8 @@ export function Navbar() {
                             <ArrowRight size={14} strokeWidth={2} />
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-sm font-semibold text-black dark:text-white">Our Work</span>
-                            <span className="text-[10px] text-black/45 dark:text-white/45">All projects & case studies</span>
+                            <span className="text-sm font-semibold text-black dark:text-white">{t("nav.ourWork", "Our Work")}</span>
+                            <span className="text-[10px] text-black/45 dark:text-white/45">{t("nav.allProjects", "All projects & case studies")}</span>
                           </div>
                         </Link>
                         <div className="mx-2 my-1.5 h-px bg-black/[0.06] dark:bg-white/[0.06]" />
@@ -414,7 +426,7 @@ export function Navbar() {
           <div className="px-5 pt-2 pb-6 border-t border-black/[0.06] dark:border-white/[0.06]">
             <Link href="/resources/free-consultation" onClick={() => setMobileOpen(false)}>
               <Button className="w-full rounded-sm bg-black text-white dark:bg-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80">
-                Get Started
+                {t("nav.getStarted", "Get Started")}
                 <ArrowRight size={14} className="ml-2" />
               </Button>
             </Link>

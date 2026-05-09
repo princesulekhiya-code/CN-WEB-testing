@@ -5,14 +5,17 @@ import Image from "next/image";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/use-in-view";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { ServiceOffering, ServicePageSectionProps } from "./types";
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
 export function ServiceOfferingsSection({
-  heading,
-  services,
+  heading: rawHeading,
+  services: rawServices,
 }: { heading: ServicePageSectionProps; services: ServiceOffering[] }) {
+  const heading = useTranslatedData(rawHeading);
+  const services = useTranslatedData(rawServices);
   const { ref, visible } = useInView(0.1);
 
   if (services.length === 0) return null;

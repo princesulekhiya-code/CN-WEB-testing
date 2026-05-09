@@ -2,12 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-
-const stats = [
-  { value: "100", suffix: "+", label: "successful IT projects delivered" },
-  { value: "10", suffix: "+ yrs", label: "of proven expertise in scaling businesses" },
-  { value: "90", suffix: "%", label: "reduction in hiring timelines" },
-];
+import { useTranslation } from "@/lib/i18n/context";
 
 function AnimatedCounter({ value, suffix }: { value: string; suffix: string }) {
   const [displayValue, setDisplayValue] = useState("0");
@@ -65,6 +60,12 @@ function AnimatedCounter({ value, suffix }: { value: string; suffix: string }) {
 }
 
 export function StatsGlobe() {
+  const { t } = useTranslation();
+  const stats = [
+    { value: "100", suffix: "+", label: t("hero.stat.projects", "successful IT projects delivered") },
+    { value: "10", suffix: "+ yrs", label: t("hero.stat.expertise", "of proven expertise in scaling businesses") },
+    { value: "90", suffix: "%", label: t("hero.stat.hiring", "reduction in hiring timelines") },
+  ];
   return (
     <section className="w-full relative bg-white dark:bg-black py-20 md:py-28 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 md:px-8 relative z-10">
@@ -75,11 +76,11 @@ export function StatsGlobe() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black dark:text-white">
-            Proven Track Record
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
+            {t("stats.titleBlue", "Proven")} <span className="text-black dark:text-white">{t("stats.titleWhite", "Track Record")}</span>
           </h2>
           <p className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            A decade of delivering results that speak for themselves.
+            {t("stats.provenSubtitle", "A decade of delivering results that speak for themselves.")}
           </p>
         </motion.div>
 

@@ -11,6 +11,8 @@ import {
   ParkingCircle, UtensilsCrossed, Gamepad2,
   CheckCircle2,
 } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 const officePhotos = [
   "/images/infrastucture-images/team-photo.png",
@@ -48,7 +50,7 @@ function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
   return <span ref={ref}>0{suffix}</span>;
 }
 
-const offices = [
+const officesData = [
   {
     id: "india",
     label: "INDIA Office",
@@ -73,7 +75,7 @@ const offices = [
   },
 ];
 
-const facilityFeatures = [
+const facilityFeaturesData = [
   {
     icon: Monitor,
     title: "High-Performance Workstations",
@@ -112,7 +114,7 @@ const facilityFeatures = [
   },
 ];
 
-const workspaceHighlights = [
+const workspaceHighlightsData = [
   { icon: Building2, title: "Modern Office Space", desc: "Open-plan design with natural lighting, ergonomic furniture, and thoughtful interiors." },
   { icon: Users, title: "Collaboration Zones", desc: "Dedicated brainstorming areas, huddle rooms, and whiteboard walls for team ideation." },
   { icon: TreePine, title: "Green Environment", desc: "Indoor plants, clean air systems, and a refreshing ambiance that boosts productivity." },
@@ -125,6 +127,12 @@ const workspaceHighlights = [
 
 export default function InfrastructurePage() {
   const [activeOffice, setActiveOffice] = useState(0);
+  const { t } = useTranslation();
+
+  const offices = useTranslatedData(officesData);
+  const facilityFeatures = useTranslatedData(facilityFeaturesData);
+  const workspaceHighlights = useTranslatedData(workspaceHighlightsData);
+
   const office = offices[activeOffice];
 
   return (
@@ -153,11 +161,11 @@ export default function InfrastructurePage() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-              Cloud Nexus{" "}
-              <span className="text-[#4EB3E8]">Infrastructure</span>
+              {t("infra.hero.title", "Cloud Nexus")}{" "}
+              <span className="text-[#4EB3E8]">{t("infra.hero.titleHighlight", "Infrastructure")}</span>
             </h1>
             <p className="mt-6 text-base md:text-lg text-black/55 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-              Our thoughtfully designed workspace is built for innovation, collaboration, and high-performance delivery. A modern technology center where world-class software gets built every day.
+              {t("infra.hero.description", "Our thoughtfully designed workspace is built for innovation, collaboration, and high-performance delivery. A modern technology center where world-class software gets built every day.")}
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
@@ -165,13 +173,13 @@ export default function InfrastructurePage() {
                 href="/resources/free-consultation"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold transition-all shadow-lg hover:-translate-y-0.5"
               >
-                Get in Touch <ArrowRight className="w-4 h-4" />
+                {t("infra.hero.cta", "Get in Touch")} <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/company/life-at-cloud-nexus"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-black/10 dark:border-white/10 text-sm font-semibold hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-all hover:-translate-y-0.5"
               >
-                Life at Cloud Nexus
+                {t("infra.hero.ctaSecondary", "Life at Cloud Nexus")}
               </Link>
             </div>
           </motion.div>
@@ -206,10 +214,10 @@ export default function InfrastructurePage() {
           className="text-center mb-14"
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Inside Our <span className="text-[#4EB3E8]">Office</span>
+            {t("infra.gallery.title", "Inside Our")} <span className="text-[#4EB3E8]">{t("infra.gallery.titleHighlight", "Office")}</span>
           </h2>
           <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            A glimpse into where innovation happens every day at Cloud Nexus.
+            {t("infra.gallery.description", "A glimpse into where innovation happens every day at Cloud Nexus.")}
           </p>
         </motion.div>
 
@@ -285,7 +293,7 @@ export default function InfrastructurePage() {
               >
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
                   {office.label.replace(" Office", "")}{" "}
-                  <span className="text-[#4EB3E8]">Headquarters</span>
+                  <span className="text-[#4EB3E8]">{t("infra.location.headquarters", "Headquarters")}</span>
                 </h2>
                 <div className="flex items-center justify-center gap-2 mt-4">
                   <MapPin className="w-4 h-4 text-[#4EB3E8]" strokeWidth={1.5} />
@@ -339,7 +347,7 @@ export default function InfrastructurePage() {
                   <div className="rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white dark:bg-white/[0.03] p-7 md:p-9 shadow-sm">
                     <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
                       <Building2 className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
-                      Office Highlights
+                      {t("infra.location.highlightsTitle", "Office Highlights")}
                     </h3>
                     <ul className="space-y-4">
                       {office.highlights.map((h, i) => (
@@ -375,10 +383,10 @@ export default function InfrastructurePage() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            World-Class <span className="text-[#4EB3E8]">Facilities</span>
+            {t("infra.facilities.title", "World-Class")} <span className="text-[#4EB3E8]">{t("infra.facilities.titleHighlight", "Facilities")}</span>
           </h2>
           <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            Our office is equipped with everything our team needs to deliver exceptional work in a comfortable, secure, and inspiring environment.
+            {t("infra.facilities.description", "Our office is equipped with everything our team needs to deliver exceptional work in a comfortable, secure, and inspiring environment.")}
           </p>
         </motion.div>
 
@@ -431,10 +439,10 @@ export default function InfrastructurePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              Our <span className="text-[#4EB3E8]">Workspace</span>
+              {t("infra.workspace.title", "Our")} <span className="text-[#4EB3E8]">{t("infra.workspace.titleHighlight", "Workspace")}</span>
             </h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-              Designed with care to create an environment where talent thrives, ideas flow, and great products are built.
+              {t("infra.workspace.description", "Designed with care to create an environment where talent thrives, ideas flow, and great products are built.")}
             </p>
           </motion.div>
 
@@ -484,27 +492,26 @@ export default function InfrastructurePage() {
           />
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-              Do you have a project in mind?
+              {t("infra.cta.title", "Do you have a project in mind?")}
             </h2>
             <p className="text-lg font-semibold text-[#4EB3E8] mb-3">
-              Talk to the experts.
+              {t("infra.cta.subtitle", "Talk to the experts.")}
             </p>
             <p className="text-base text-black/55 dark:text-white/50 max-w-lg mx-auto leading-relaxed mb-10">
-              Let&apos;s discuss how Cloud Nexus can help you build, scale,
-              and deliver your next big idea.
+              {t("infra.cta.description", "Let's discuss how Cloud Nexus can help you build, scale, and deliver your next big idea.")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/resources/free-consultation"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm transition-all shadow-lg hover:-translate-y-0.5"
               >
-                <CalendarCheck className="w-4 h-4" /> Get in Touch
+                <CalendarCheck className="w-4 h-4" /> {t("infra.cta.primaryBtn", "Get in Touch")}
               </Link>
               <Link
                 href="/resources/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-colors hover:-translate-y-0.5"
               >
-                <Mail className="w-4 h-4" /> Contact Us
+                <Mail className="w-4 h-4" /> {t("infra.cta.secondaryBtn", "Contact Us")}
               </Link>
             </div>
             <p className="mt-6 text-xs text-black/30 dark:text-white/25">

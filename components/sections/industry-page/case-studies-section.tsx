@@ -13,6 +13,7 @@ import {
   Clock,
   ChevronLeft,
 } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { Project, Metric } from "./types";
 
 function useCounter(target: number, active: boolean, duration = 1200) {
@@ -72,10 +73,11 @@ function MetricCounter({
 }
 
 export function CaseStudiesSection({
-  projects,
+  projects: rawProjects,
 }: {
   projects: Project[];
 }) {
+  const projects = useTranslatedData(rawProjects);
   const [activeIdx, setActiveIdx] = useState(0);
   const [metricsVisible, setMetricsVisible] = useState(false);
   const metricsRef = useRef<HTMLDivElement>(null);

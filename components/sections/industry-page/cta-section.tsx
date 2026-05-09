@@ -3,18 +3,26 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageSquare } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { IndustryCTAProps } from "./types";
 
 export function IndustryCTASection({
-  headingTop,
-  headingBottom,
-  description,
+  headingTop: rawHeadingTop,
+  headingBottom: rawHeadingBottom,
+  description: rawDescription,
   primaryLink = "/resources/free-consultation",
-  primaryLabel = "Get a Free Consultation",
+  primaryLabel: primaryLabelProp,
   secondaryLink = "/our-work",
-  secondaryLabel = "View Our Work",
+  secondaryLabel: secondaryLabelProp,
   accentColor = "#4EB3E8",
 }: IndustryCTAProps) {
+  const { t } = useTranslation();
+  const headingTop = useTranslatedData(rawHeadingTop);
+  const headingBottom = useTranslatedData(rawHeadingBottom);
+  const description = useTranslatedData(rawDescription);
+  const primaryLabel = primaryLabelProp ?? t("consultation.cta", "Get Free Consultation");
+  const secondaryLabel = secondaryLabelProp ?? t("common.viewAll", "View Our Work");
   return (
     <div className="border-t border-black/[0.06] dark:border-white/[0.06]">
       <div className="mx-auto max-w-7xl px-6 py-20">

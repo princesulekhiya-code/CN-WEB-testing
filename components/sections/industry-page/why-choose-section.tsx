@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { IndustryWhyChooseProps } from "./types";
 
 function AnimatedCounter({ value, suffix = "", isInView }: { value: number; suffix?: string; isInView: boolean }) {
@@ -34,11 +35,15 @@ function AnimatedCounter({ value, suffix = "", isInView }: { value: number; suff
 }
 
 export function IndustryWhyChooseSection({
-  heading = "Why Choose Us",
-  subtitle,
-  items,
+  heading: rawHeading = "Why Choose Us",
+  subtitle: rawSubtitle,
+  items: rawItems,
   accentColor = "#4EB3E8",
 }: IndustryWhyChooseProps) {
+  const heading = useTranslatedData(rawHeading);
+  const subtitle = useTranslatedData(rawSubtitle);
+  const items = useTranslatedData(rawItems);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [activeIdx, setActiveIdx] = useState(0);

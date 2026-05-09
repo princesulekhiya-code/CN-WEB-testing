@@ -11,9 +11,11 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { submitSupportForm } from "@/lib/api/services/contact.service";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 
 /* ═══════ TYPING ANIMATION ═══════ */
-const typingPhrases = [
+const typingPhrasesData = [
   "How do I integrate the API?",
   "What are the SLA guarantees?",
   "How to reset my password?",
@@ -22,12 +24,13 @@ const typingPhrases = [
 ];
 
 function TypingPlaceholder() {
+  const translatedPhrases = useTranslatedData(typingPhrasesData);
   const [phraseIdx, setPhraseIdx] = useState(0);
   const [charIdx, setCharIdx] = useState(0);
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const phrase = typingPhrases[phraseIdx];
+    const phrase = translatedPhrases[phraseIdx];
     let timeout: NodeJS.Timeout;
 
     if (!deleting && charIdx < phrase.length) {
@@ -38,13 +41,13 @@ function TypingPlaceholder() {
       timeout = setTimeout(() => setCharIdx((c) => c - 1), 30);
     } else if (deleting && charIdx === 0) {
       setDeleting(false);
-      setPhraseIdx((p) => (p + 1) % typingPhrases.length);
+      setPhraseIdx((p) => (p + 1) % translatedPhrases.length);
     }
 
     return () => clearTimeout(timeout);
-  }, [charIdx, deleting, phraseIdx]);
+  }, [charIdx, deleting, phraseIdx, translatedPhrases]);
 
-  const text = typingPhrases[phraseIdx].slice(0, charIdx);
+  const text = translatedPhrases[phraseIdx].slice(0, charIdx);
 
   return (
     <span className="text-black/25 dark:text-white/25">
@@ -66,8 +69,9 @@ const quickLinks: { icon: LucideIcon; label: string; desc: string }[] = [
   { icon: Phone, label: "Call Us", desc: "Talk to expert" },
 ];
 
-function HeroSection({ searchQuery, setSearchQuery }: { searchQuery: string; setSearchQuery: (v: string) => void }) {
+function HeroSection({ searchQuery, setSearchQuery, quickLinks: ql }: { searchQuery: string; setSearchQuery: (v: string) => void; quickLinks: typeof quickLinks }) {
   const [focusedSearch, setFocusedSearch] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="relative overflow-hidden">
@@ -138,8 +142,8 @@ function HeroSection({ searchQuery, setSearchQuery }: { searchQuery: string; set
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight"
         >
-          <span className="text-[#4EB3E8]">How Can We</span>{" "}
-          <span>Help You?</span>
+          <span className="text-[#4EB3E8]">{t("support.hero.title", "How Can We")}</span>{" "}
+          <span>{t("support.hero.titleHighlight", "Help You?")}</span>
         </motion.h1>
 
         <motion.p
@@ -148,7 +152,7 @@ function HeroSection({ searchQuery, setSearchQuery }: { searchQuery: string; set
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-5 text-base md:text-lg text-black/50 dark:text-white/50 max-w-2xl mx-auto leading-relaxed"
         >
-          Our dedicated support team is here to ensure your success. Whether you need instant help or in-depth guidance, choose the channel that works best for you.
+          {t("support.hero.description", "Our dedicated support team is here to ensure your success. Whether you need instant help or in-depth guidance, choose the channel that works best for you.")}
         </motion.p>
 
         {/* Animated Search Bar */}
@@ -181,13 +185,19 @@ function HeroSection({ searchQuery, setSearchQuery }: { searchQuery: string; set
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-5 flex flex-wrap justify-center gap-2"
         >
-          {["Getting Started", "Account Issues", "Billing", "API Docs", "Integrations"].map((tag) => (
+          {[
+            { key: "support.hero.gettingStarted", fallback: "Getting Started" },
+            { key: "support.hero.accountIssues", fallback: "Account Issues" },
+            { key: "support.hero.billing", fallback: "Billing" },
+            { key: "support.hero.apiDocs", fallback: "API Docs" },
+            { key: "support.hero.integrations", fallback: "Integrations" },
+          ].map(({ key, fallback }) => (
             <button
-              key={tag}
-              onClick={() => setSearchQuery(tag)}
+              key={key}
+              onClick={() => setSearchQuery(fallback)}
               className="px-4 py-2 rounded-full text-xs font-semibold border border-black/[0.06] dark:border-white/[0.06] text-black/50 dark:text-white/40 hover:border-[#4EB3E8]/30 hover:text-[#4EB3E8] hover:bg-[#4EB3E8]/[0.04] transition-all duration-300"
             >
-              {tag}
+              {t(key, fallback)}
             </button>
           ))}
         </motion.div>
@@ -199,7 +209,7 @@ function HeroSection({ searchQuery, setSearchQuery }: { searchQuery: string; set
           transition={{ duration: 0.5, delay: 0.5 }}
           className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto"
         >
-          {quickLinks.map(({ icon: Icon, label, desc }, i) => (
+          {ql.map(({ icon: Icon, label, desc }, i) => (
             <motion.button
               key={label}
               whileHover={{ y: -4 }}
@@ -306,6 +316,12 @@ const priorityToInterest: Record<string, string> = {
 export default function SupportPage() {
   const [openFaq, setOpenFaq] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
+  const translatedQuickLinks = useTranslatedData(quickLinks);
+  const translatedSupportChannels = useTranslatedData(supportChannels);
+  const translatedSelfServiceOptions = useTranslatedData(selfServiceOptions);
+  const translatedFaqs = useTranslatedData(faqs);
+  const translatedSlaStats = useTranslatedData(slaStats);
+  const { t } = useTranslation();
 
   const [supportForm, setSupportForm] = useState({ name: "", email: "", priority: "Low - General question", message: "" });
   const [supportLoading, setSupportLoading] = useState(false);
@@ -334,25 +350,25 @@ export default function SupportPage() {
         err && typeof err === "object" && "response" in err
           ? (err as { response?: { data?: { message?: string } } }).response?.data?.message
           : undefined;
-      setSupportError(msg || "Something went wrong. Please try again.");
+      setSupportError(msg || t("support.form.errorFallback", "Something went wrong. Please try again."));
     } finally {
       setSupportLoading(false);
     }
   };
   const filteredFaqs = searchQuery
-    ? faqs.filter((f) => f.q.toLowerCase().includes(searchQuery.toLowerCase()) || f.a.toLowerCase().includes(searchQuery.toLowerCase()))
-    : faqs;
+    ? translatedFaqs.filter((f) => f.q.toLowerCase().includes(searchQuery.toLowerCase()) || f.a.toLowerCase().includes(searchQuery.toLowerCase()))
+    : translatedFaqs;
 
   return (
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
 
       {/* ═══════ HERO ═══════ */}
-      <HeroSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <HeroSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} quickLinks={translatedQuickLinks} />
 
       {/* ═══════ SLA STATS ═══════ */}
       <div className="mx-auto max-w-7xl px-6 pb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {slaStats.map((stat, i) => {
+          {translatedSlaStats.map((stat, i) => {
             const Icon = stat.icon;
             return (
               <motion.div
@@ -389,16 +405,16 @@ export default function SupportPage() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            <span className="text-[#4EB3E8]">Get in Touch</span>{" "}
-            <span>With Our Team</span>
+            <span className="text-[#4EB3E8]">{t("support.channels.title", "Get in Touch")}</span>{" "}
+            <span>{t("support.channels.titleHighlight", "With Our Team")}</span>
           </h2>
           <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
-            Choose your preferred support channel. All channels are staffed by experienced engineers.
+            {t("support.channels.description", "Choose your preferred support channel. All channels are staffed by experienced engineers.")}
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-5">
-          {supportChannels.map((channel, i) => {
+          {translatedSupportChannels.map((channel, i) => {
             const Icon = channel.icon;
             return (
               <motion.div
@@ -453,16 +469,16 @@ export default function SupportPage() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              <span className="text-[#4EB3E8]">Self-Service</span>{" "}
-              <span>Resources</span>
+              <span className="text-[#4EB3E8]">{t("support.selfService.title", "Self-Service")}</span>{" "}
+              <span>{t("support.selfService.titleHighlight", "Resources")}</span>
             </h2>
             <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
-              Find answers on your own with our comprehensive resource library.
+              {t("support.selfService.description", "Find answers on your own with our comprehensive resource library.")}
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {selfServiceOptions.map((opt, i) => {
+            {translatedSelfServiceOptions.map((opt, i) => {
               const Icon = opt.icon;
               return (
                 <motion.div
@@ -482,7 +498,7 @@ export default function SupportPage() {
                     <h3 className="text-base font-bold tracking-tight mb-1.5 group-hover:text-[#4EB3E8] transition-colors duration-300">{opt.title}</h3>
                     <p className="text-sm text-black/45 dark:text-white/40 leading-relaxed flex-1">{opt.description}</p>
                     <div className="mt-4 flex items-center gap-1 text-xs font-semibold text-[#4EB3E8] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      Browse <ArrowRight className="w-3 h-3" />
+                      {t("support.selfService.browse", "Browse")} <ArrowRight className="w-3 h-3" />
                     </div>
                   </Link>
                 </motion.div>
@@ -502,8 +518,8 @@ export default function SupportPage() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            <span className="text-[#4EB3E8]">Frequently Asked</span>{" "}
-            <span>Questions</span>
+            <span className="text-[#4EB3E8]">{t("support.faq.title", "Frequently Asked")}</span>{" "}
+            <span>{t("support.faq.titleHighlight", "Questions")}</span>
           </h2>
         </motion.div>
 
@@ -577,8 +593,8 @@ export default function SupportPage() {
                   <Send className="w-5 h-5 text-[#4EB3E8]" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold tracking-tight">Send a Message</h3>
-                  <p className="text-xs text-black/40 dark:text-white/40">We&apos;ll get back within 4 hours</p>
+                  <h3 className="text-base font-bold tracking-tight">{t("support.form.title", "Send a Message")}</h3>
+                  <p className="text-xs text-black/40 dark:text-white/40">{t("support.form.subtitle", "We'll get back within 4 hours")}</p>
                 </div>
               </div>
 
@@ -591,10 +607,10 @@ export default function SupportPage() {
                   <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10 border border-green-500/20">
                     <CheckCircle2 className="w-6 h-6 text-green-500" />
                   </div>
-                  <h4 className="text-base font-bold mb-1">Message Sent!</h4>
-                  <p className="text-xs text-black/45 dark:text-white/40 mb-4">We&apos;ll respond within 4 hours.</p>
+                  <h4 className="text-base font-bold mb-1">{t("support.form.successTitle", "Message Sent!")}</h4>
+                  <p className="text-xs text-black/45 dark:text-white/40 mb-4">{t("support.form.successDesc", "We'll respond within 4 hours.")}</p>
                   <button onClick={() => setSupportSent(false)} className="text-xs font-semibold text-[#4EB3E8] hover:underline">
-                    Send Another
+                    {t("support.form.sendAnother", "Send Another")}
                   </button>
                 </motion.div>
               ) : (
@@ -612,52 +628,52 @@ export default function SupportPage() {
 
                   <form className="space-y-4" onSubmit={handleSupportSubmit}>
                     <div>
-                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Name</label>
+                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">{t("support.form.nameLabel", "Name")}</label>
                       <input
                         type="text"
                         name="name"
                         value={supportForm.name}
                         onChange={handleSupportChange}
                         required
-                        placeholder="Your full name"
+                        placeholder={t("support.form.namePlaceholder", "Your full name")}
                         className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Email</label>
+                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">{t("support.form.emailLabel", "Email")}</label>
                       <input
                         type="email"
                         name="email"
                         value={supportForm.email}
                         onChange={handleSupportChange}
                         required
-                        placeholder="you@company.com"
+                        placeholder={t("support.form.emailPlaceholder", "you@company.com")}
                         className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
                       />
                     </div>
                     <div>
-                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Priority</label>
+                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">{t("support.form.priorityLabel", "Priority")}</label>
                       <select
                         name="priority"
                         value={supportForm.priority}
                         onChange={handleSupportChange}
                         className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium text-black/60 dark:text-white/60 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all"
                       >
-                        <option>Low - General question</option>
-                        <option>Medium - Feature request</option>
-                        <option>High - Bug report</option>
-                        <option>Critical - Production down</option>
+                        <option value="Low - General question">{t("support.form.priorityLow", "Low - General question")}</option>
+                        <option value="Medium - Feature request">{t("support.form.priorityMedium", "Medium - Feature request")}</option>
+                        <option value="High - Bug report">{t("support.form.priorityHigh", "High - Bug report")}</option>
+                        <option value="Critical - Production down">{t("support.form.priorityCritical", "Critical - Production down")}</option>
                       </select>
                     </div>
                     <div>
-                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">Message</label>
+                      <label className="text-xs font-semibold text-black/50 dark:text-white/40 uppercase tracking-wider">{t("support.form.messageLabel", "Message")}</label>
                       <textarea
                         name="message"
                         value={supportForm.message}
                         onChange={handleSupportChange}
                         required
                         rows={4}
-                        placeholder="Describe your issue or question..."
+                        placeholder={t("support.form.messagePlaceholder", "Describe your issue or question...")}
                         className="mt-1.5 w-full px-4 py-3 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium placeholder:text-black/25 dark:placeholder:text-white/25 focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all resize-none"
                       />
                     </div>
@@ -669,11 +685,11 @@ export default function SupportPage() {
                       {supportLoading ? (
                         <>
                           <Loader2 className="w-4 h-4 animate-spin" />
-                          Sending...
+                          {t("support.form.sending", "Sending...")}
                         </>
                       ) : (
                         <>
-                          Send Message
+                          {t("support.form.sendMessage", "Send Message")}
                           <ArrowRight className="w-4 h-4" />
                         </>
                       )}
@@ -697,16 +713,16 @@ export default function SupportPage() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              <span className="text-[#4EB3E8]">Our Support</span>{" "}
-              <span>Promise</span>
+              <span className="text-[#4EB3E8]">{t("support.promise.title", "Our Support")}</span>{" "}
+              <span>{t("support.promise.titleHighlight", "Promise")}</span>
             </h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { icon: Headphones, title: "Human-First Support", desc: "No chatbots, no runaround. Every conversation starts with an experienced engineer who understands your stack." },
-              { icon: Shield, title: "Enterprise-Grade SLA", desc: "Guaranteed response times, uptime commitments, and financial credits  -  backed by transparent reporting." },
-              { icon: CheckCircle2, title: "Resolution, Not Deflection", desc: "We don't close tickets until you're satisfied. Our CSAT score consistently exceeds 98% across all channels." },
+              { icon: Headphones, title: t("support.promise.humanFirst.title", "Human-First Support"), desc: t("support.promise.humanFirst.desc", "No chatbots, no runaround. Every conversation starts with an experienced engineer who understands your stack.") },
+              { icon: Shield, title: t("support.promise.enterpriseSla.title", "Enterprise-Grade SLA"), desc: t("support.promise.enterpriseSla.desc", "Guaranteed response times, uptime commitments, and financial credits  -  backed by transparent reporting.") },
+              { icon: CheckCircle2, title: t("support.promise.resolution.title", "Resolution, Not Deflection"), desc: t("support.promise.resolution.desc", "We don't close tickets until you're satisfied. Our CSAT score consistently exceeds 98% across all channels.") },
             ].map((item, i) => {
               const Icon = item.icon;
               return (
@@ -748,13 +764,13 @@ export default function SupportPage() {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                Still Need Help?
+                {t("support.cta.title", "Still Need Help?")}
                 <br />
-                <span className="text-[#4EB3E8]">We&apos;re Here For You</span>
+                <span className="text-[#4EB3E8]">{t("support.cta.titleHighlight", "We're Here For You")}</span>
               </h2>
 
               <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed">
-                Schedule a free consultation with our solutions team to discuss your specific needs and find the right support plan.
+                {t("support.cta.description", "Schedule a free consultation with our solutions team to discuss your specific needs and find the right support plan.")}
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -762,13 +778,13 @@ export default function SupportPage() {
                   href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-lg"
                 >
-                  Book Free Consultation <ArrowRight className="w-4 h-4" />
+                  {t("support.cta.bookConsultation", "Book Free Consultation")} <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/resources/contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
                 >
-                  Contact Sales
+                  {t("support.cta.contactSales", "Contact Sales")}
                 </Link>
               </div>
             </motion.div>

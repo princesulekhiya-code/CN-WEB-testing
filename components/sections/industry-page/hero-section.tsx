@@ -4,17 +4,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { IndustryHeroProps } from "./types";
 
 export function IndustryHeroSection({
-  title,
-  subtitle,
-  description,
+  title: rawTitle,
+  subtitle: rawSubtitle,
+  description: rawDescription,
   heroImage,
   backHref = "/industry",
-  backLabel = "Back to Industries",
+  backLabel: rawBackLabel = "Back to Industries",
   accentColor = "#4EB3E8",
 }: IndustryHeroProps) {
+  const title = useTranslatedData(rawTitle);
+  const subtitle = useTranslatedData(rawSubtitle);
+  const description = useTranslatedData(rawDescription);
+  const backLabel = useTranslatedData(rawBackLabel);
+
   return (
     <div className="relative overflow-hidden">
       <div

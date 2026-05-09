@@ -3,16 +3,21 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Search, Palette, Settings, Code2, ShieldCheck, Rocket } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { IndustryProcessProps } from "./types";
 
 const defaultIcons = [Search, Palette, Settings, Code2, ShieldCheck, Rocket];
 
 export function IndustryProcessSection({
-  heading,
-  subtitle,
-  steps,
+  heading: rawHeading,
+  subtitle: rawSubtitle,
+  steps: rawSteps,
   accentColor = "#4EB3E8",
 }: IndustryProcessProps) {
+  const heading = useTranslatedData(rawHeading);
+  const subtitle = useTranslatedData(rawSubtitle);
+  const steps = useTranslatedData(rawSteps);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [activeIdx, setActiveIdx] = useState(0);

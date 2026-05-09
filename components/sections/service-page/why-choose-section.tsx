@@ -2,15 +2,18 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/use-in-view";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { WhyChooseHeading, WhyChooseItem } from "./types";
 
 export function WhyChooseSection({
-  items,
-  heading,
+  items: rawItems,
+  heading: rawHeading,
 }: {
   items: WhyChooseItem[];
   heading?: WhyChooseHeading;
 }) {
+  const items = useTranslatedData(rawItems);
+  const heading = useTranslatedData(rawHeading);
   const { ref, visible } = useInView(0.2);
 
   return (

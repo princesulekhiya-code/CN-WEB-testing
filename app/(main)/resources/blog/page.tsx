@@ -6,6 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Loader2, ArrowRight, BookOpen, Search } from "lucide-react";
 import { getBlogs, type BlogPost } from "@/lib/api/services/blog.service";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
@@ -16,10 +18,11 @@ function resolveImage(path?: string | null): string | null {
 }
 
 export default function BlogPage() {
+  const { t } = useTranslation();
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   useEffect(() => {
     getBlogs()
@@ -28,11 +31,18 @@ export default function BlogPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  const categories = ["All", ...Array.from(new Set(blogs.map((b) => b.category).filter(Boolean)))];
+  const categories = [t("blog.filter.all", "All"), ...Array.from(new Set(blogs.map((b) => b.category).filter(Boolean)))];
+
+  const stats = useTranslatedData([
+    { value: `${blogs.length}+`, label: t("blog.stat.articles", "Articles") },
+    { value: `${Array.from(new Set(blogs.map(b => b.category).filter(Boolean))).length}`, label: t("blog.stat.topics", "Topics") },
+    { value: `${Array.from(new Set(blogs.map(b => b.authorName).filter(Boolean))).length}`, label: t("blog.stat.authors", "Authors") },
+  ]);
 
   const filteredBlogs = blogs.filter((blog) => {
     const matchSearch = !search || blog.title.toLowerCase().includes(search.toLowerCase()) || blog.excerpt?.toLowerCase().includes(search.toLowerCase());
-    const matchCategory = selectedCategory === "All" || blog.category === selectedCategory;
+    const allLabel = t("blog.filter.all", "All");
+    const matchCategory = !selectedCategory || selectedCategory === allLabel || blog.category === selectedCategory;
     return matchSearch && matchCategory;
   });
 
@@ -53,18 +63,14 @@ export default function BlogPage() {
             {/* Left - Content */}
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-                Insights &amp;{" "}
-                <span className="text-[#4EB3E8] italic">Stories</span>
+                {t("blog.hero.title1", "Insights &")}{" "}
+                <span className="text-[#4EB3E8] italic">{t("blog.hero.title2", "Stories")}</span>
               </h1>
               <p className="mt-5 text-base text-black/50 dark:text-white/45 max-w-lg leading-relaxed">
-                Tutorials, case studies, and tech insights from the Cloud Nexus engineering team. Stay ahead with the latest in cloud, AI, and modern development.
+                {t("blog.hero.description", "Tutorials, case studies, and tech insights from the Cloud Nexus engineering team. Stay ahead with the latest in cloud, AI, and modern development.")}
               </p>
               <div className="mt-8 flex flex-wrap gap-6">
-                {[
-                  { value: `${blogs.length}+`, label: "Articles" },
-                  { value: `${Array.from(new Set(blogs.map(b => b.category).filter(Boolean))).length}`, label: "Topics" },
-                  { value: `${Array.from(new Set(blogs.map(b => b.authorName).filter(Boolean))).length}`, label: "Authors" },
-                ].map((stat) => (
+                {stats.map((stat) => (
                   <div key={stat.label}>
                     <p className="text-2xl font-bold text-[#4EB3E8]">{stat.value}</p>
                     <p className="text-xs text-black/40 dark:text-white/35 font-medium">{stat.label}</p>
@@ -84,7 +90,7 @@ export default function BlogPage() {
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-black/[0.06] dark:border-white/[0.06] shadow-2xl shadow-[#4EB3E8]/[0.08]">
                   <Image
                     src="/assets/images/blog-hero.jpg"
-                    alt="Blog & Insights"
+                    alt={t("blog.hero.imageAlt", "Blog & Insights")}
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 0vw, 450px"
@@ -117,7 +123,7 @@ export default function BlogPage() {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search articles..."
+                placeholder={t("blog.search.placeholder", "Search articles...")}
                 className="w-full pl-11 pr-4 py-3 rounded-xl bg-[#f5f5f5] dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all duration-300"
               />
             </div>
@@ -150,9 +156,9 @@ export default function BlogPage() {
         ) : filteredBlogs.length === 0 ? (
           <div className="text-center py-20">
             <BookOpen className="w-14 h-14 mx-auto text-black/10 dark:text-white/10 mb-4" />
-            <h3 className="text-lg font-bold mb-2">No articles found</h3>
+            <h3 className="text-lg font-bold mb-2">{t("blog.noResults", "No articles found")}</h3>
             <p className="text-sm text-black/40 dark:text-white/35">
-              {blogs.length === 0 ? "No blog posts yet. Check back soon!" : "Try adjusting your search or filter."}
+              {blogs.length === 0 ? t("blog.noResultsEmpty", "No blog posts yet. Check back soon!") : t("blog.noResultsFilter", "Try adjusting your search or filter.")}
             </p>
           </div>
         ) : (
@@ -160,9 +166,9 @@ export default function BlogPage() {
             {/* Featured Post */}
             {featuredBlog && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
                 className="mb-12"
               >
                 <Link href={`/resources/blog/${featuredBlog.slug}`}>
@@ -213,23 +219,23 @@ export default function BlogPage() {
                           </div>
                         )}
                         <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#4EB3E8] group-hover:gap-2.5 transition-all">
-                          Read article <ArrowRight className="w-4 h-4" />
+                          {t("blog.readMore", "Read Article")} <ArrowRight className="w-4 h-4" />
                         </span>
                       </div>
                     </div>
-                  </div>
+      </div>
                 </Link>
               </motion.div>
             )}
 
             {/* Rest of posts */}
             {restBlogs.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {restBlogs.map((blog, i) => (
-                  <motion.article
+            <motion.article
                     key={blog.id}
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: i * 0.06 }}
                   >
                     <Link href={`/resources/blog/${blog.slug}`}>
@@ -251,20 +257,20 @@ export default function BlogPage() {
                           <div className="flex items-center gap-2.5 mb-3">
                             {blog.category && (
                               <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-[#4EB3E8]/10 text-[#4EB3E8] border border-[#4EB3E8]/20">
-                                {blog.category}
-                              </span>
+                      {blog.category}
+                    </span>
                             )}
                             <span className="text-[11px] text-black/35 dark:text-white/30">
                               {new Date(blog.createdAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
                             </span>
-                          </div>
+                  </div>
                           <h3 className="text-base font-bold leading-snug mb-2 group-hover:text-[#4EB3E8] transition-colors">
-                            {blog.title}
-                          </h3>
+                    {blog.title}
+                  </h3>
                           {blog.excerpt && (
                             <p className="text-xs text-black/45 dark:text-white/40 leading-relaxed flex-1 line-clamp-2">
-                              {blog.excerpt}
-                            </p>
+                    {blog.excerpt}
+                  </p>
                           )}
                           <div className="mt-4 pt-4 border-t border-black/[0.05] dark:border-white/[0.05] flex items-center justify-between">
                             {blog.authorName && (
@@ -282,11 +288,11 @@ export default function BlogPage() {
                             <ArrowRight className="w-4 h-4 text-black/20 dark:text-white/15 group-hover:text-[#4EB3E8] transition-colors" />
                           </div>
                         </div>
-                      </div>
-                    </Link>
-                  </motion.article>
-                ))}
-              </div>
+                </div>
+              </Link>
+            </motion.article>
+          ))}
+        </div>
             )}
           </>
         )}

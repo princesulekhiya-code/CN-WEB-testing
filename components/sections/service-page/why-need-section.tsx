@@ -5,9 +5,11 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useInView } from "@/hooks/use-in-view";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { WhyNeedProps } from "./types";
 
-export function WhyNeedSection({ heading, headingHighlight, subtitle, image, imageAlt, items }: WhyNeedProps) {
+export function WhyNeedSection(rawProps: WhyNeedProps) {
+  const { heading, headingHighlight, subtitle, image, imageAlt, items } = useTranslatedData(rawProps);
   const { ref, visible } = useInView(0.15);
   const [activeIndex, setActiveIndex] = useState(0);
 

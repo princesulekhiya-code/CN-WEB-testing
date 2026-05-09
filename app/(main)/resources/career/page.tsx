@@ -11,6 +11,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { getJobListings } from "@/lib/api/services/job.service";
 import type { JobListing } from "@/lib/api/services/job.service";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 function formatDate(dateStr: string) {
   if (!dateStr) return "";
@@ -19,12 +21,18 @@ function formatDate(dateStr: string) {
 }
 
 export default function CareerPage() {
+  const { t } = useTranslation();
   const [jobs, setJobs] = useState<JobListing[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
-  const [selectedDept, setSelectedDept] = useState("All");
+  const [selectedDept, setSelectedDept] = useState("");
 
+  const stats = useTranslatedData([
+    { value: "50+", label: "Team Members" },
+    { value: "100+", label: "Projects Delivered" },
+    { value: "4.8", label: "Glassdoor Rating", icon: Star },
+  ]);
 
   useEffect(() => {
     (async () => {
@@ -32,18 +40,19 @@ export default function CareerPage() {
         const data = await getJobListings();
         setJobs(data);
       } catch {
-        setError("Unable to load job listings.");
+        setError(t("career.error", "Unable to load job listings."));
       } finally {
         setLoading(false);
       }
     })();
-  }, []);
+  }, [t]);
 
-  const departments = ["All", ...Array.from(new Set(jobs.map((j) => j.department)))];
+  const departments = [t("career.filter.all", "All"), ...Array.from(new Set(jobs.map((j) => j.department)))];
 
   const filteredJobs = jobs.filter((job) => {
     const matchSearch = !search || job.title.toLowerCase().includes(search.toLowerCase()) || job.department.toLowerCase().includes(search.toLowerCase());
-    const matchDept = selectedDept === "All" || job.department === selectedDept;
+    const allLabel = t("career.filter.all", "All");
+    const matchDept = !selectedDept || selectedDept === allLabel || job.department === selectedDept;
     return matchSearch && matchDept;
   });
 
@@ -62,21 +71,17 @@ export default function CareerPage() {
             {/* Left - Content */}
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-                Ready to do{" "}
-                <span className="text-[#4EB3E8]">the best work</span>{" "}
-                <span className="text-[#4EB3E8]">of your life</span>{" "}
+                {t("career.hero.title1", "Ready to do")}{" "}
+                <span className="text-[#4EB3E8]">{t("career.hero.title2", "the best work")}</span>{" "}
+                <span className="text-[#4EB3E8]">{t("career.hero.title3", "of your life")}</span>{" "}
                 <span>:)</span>
               </h1>
               <p className="mt-5 text-base text-black/50 dark:text-white/45 max-w-lg leading-relaxed">
-                Join a team of passionate engineers, designers, and innovators building cutting-edge technology solutions for global clients.
+                {t("career.hero.description", "Join a team of passionate engineers, designers, and innovators building cutting-edge technology solutions for global clients.")}
               </p>
 
               <div className="mt-8 flex flex-wrap gap-6">
-                {[
-                  { value: "50+", label: "Team Members" },
-                  { value: "100+", label: "Projects Delivered" },
-                  { value: "4.8", label: "Glassdoor Rating", icon: Star },
-                ].map((stat) => (
+                {stats.map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="flex items-center justify-center gap-1">
                       <span className="text-2xl font-bold text-[#4EB3E8]">{stat.value}</span>
@@ -99,7 +104,7 @@ export default function CareerPage() {
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-black/[0.06] dark:border-white/[0.06] shadow-2xl shadow-[#4EB3E8]/[0.08]">
                   <Image
                     src="/assets/images/career-hero.jpg"
-                    alt="Team collaboration at Cloud Nexus"
+                    alt={t("career.hero.imageAlt", "Team collaboration at Cloud Nexus")}
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 0vw, 450px"
@@ -139,14 +144,14 @@ export default function CareerPage() {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search by job role"
+                placeholder={t("career.search.placeholder", "Search by job role")}
                 className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] text-sm font-medium focus:outline-none focus:border-[#4EB3E8]/40 focus:ring-2 focus:ring-[#4EB3E8]/10 transition-all duration-300"
               />
             </div>
             <div className="flex items-center gap-2 text-xs font-semibold text-black/40 dark:text-white/35 uppercase tracking-wider flex-shrink-0">
-              <span>Active</span>
+              <span>{t("career.search.active", "Active")}</span>
               <span className="text-lg font-bold text-black dark:text-white">{filteredJobs.length}</span>
-              <span>Job {filteredJobs.length === 1 ? "Role" : "Roles"}</span>
+              <span>{filteredJobs.length === 1 ? t("career.search.role", "Job Role") : t("career.search.roles", "Job Roles")}</span>
             </div>
           </div>
 
@@ -179,7 +184,7 @@ export default function CareerPage() {
         ) : error && jobs.length === 0 ? (
           <div className="text-center py-20">
             <AlertCircle className="w-12 h-12 mx-auto text-black/15 dark:text-white/15 mb-4" />
-            <p className="text-sm text-black/40 dark:text-white/35">{error}</p>
+            <p className="text-sm text-black/40 dark:text-white/35">{t("career.error", error)}</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-5">
@@ -237,7 +242,7 @@ export default function CareerPage() {
 
                     {/* View & Apply */}
                     <span className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-[#4EB3E8] group-hover:bg-[#3da0d5] transition-all duration-300 group-hover:shadow-lg group-hover:shadow-[#4EB3E8]/20">
-                      View &amp; Apply
+                      {t("career.job.apply", "View & Apply")}
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </div>
@@ -248,8 +253,8 @@ export default function CareerPage() {
             {filteredJobs.length === 0 && (
               <div className="col-span-2 text-center py-20">
                 <Briefcase className="w-14 h-14 mx-auto text-black/10 dark:text-white/10 mb-4" />
-                <h3 className="text-lg font-bold mb-2">No positions found</h3>
-                <p className="text-sm text-black/40 dark:text-white/35">Try adjusting your search or filter criteria.</p>
+                <h3 className="text-lg font-bold mb-2">{t("career.noResults.title", "No positions found")}</h3>
+                <p className="text-sm text-black/40 dark:text-white/35">{t("career.noResults.description", "Try adjusting your search or filter criteria.")}</p>
               </div>
             )}
           </div>
@@ -261,16 +266,16 @@ export default function CareerPage() {
         <div className="mx-auto max-w-3xl px-6 py-20 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              Think you&apos;re the right fit?
+              {t("career.cta.title", "Think you're the right fit?")}
             </h2>
             <p className="text-sm text-black/45 dark:text-white/40 mb-6 max-w-lg mx-auto leading-relaxed">
-              We&apos;re building something special at Cloud Nexus  -  a team of dreamers, doers, and disruptors. If you&apos;re passionate about technology and want to make a real impact, we&apos;d love to hear from you.
+              {t("career.cta.description", "We're building something special at Cloud Nexus - a team of dreamers, doers, and disruptors. If you're passionate about technology and want to make a real impact, we'd love to hear from you.")}
             </p>
             <a
               href="mailto:hr@cloudnexus.in"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black dark:bg-white text-white dark:text-black text-sm font-semibold hover:opacity-90 transition-all duration-300"
             >
-              Drop us your resume
+              {t("career.cta.resume", "Drop us your resume")}
               <ArrowRight className="w-4 h-4" />
             </a>
             <p className="mt-3 text-xs text-black/30 dark:text-white/25">hr@cloudnexus.in</p>

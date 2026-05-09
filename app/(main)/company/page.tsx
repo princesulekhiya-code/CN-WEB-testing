@@ -9,6 +9,8 @@ import {
   Globe, Award, Rocket, ShieldCheck,
   Sprout, Leaf, TreePine, Sun,
 } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -100,6 +102,10 @@ const values = [
 ];
 
 export default function CompanyPage() {
+  const { t } = useTranslation();
+  const translatedStats = useTranslatedData(stats);
+  const translatedCompanyPages = useTranslatedData(companyPages);
+  const translatedValues = useTranslatedData(values);
   return (
     <section className="min-h-screen bg-white text-black dark:bg-[#0a0a0a] dark:text-white">
 
@@ -116,17 +122,17 @@ export default function CompanyPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1]">
-                Building the Future,<br /><span className="text-[#4EB3E8]">One Solution</span> at a Time
+                {t("companyHub.hero.title.line1", "Building the Future,")}<br /><span className="text-[#4EB3E8]">{t("companyHub.hero.title.highlight", "One Solution")}</span> {t("companyHub.hero.title.line2", "at a Time")}
               </h1>
               <p className="mt-6 text-base md:text-lg text-black/55 dark:text-white/50 leading-relaxed max-w-xl">
-                Cloud Nexus is a technology company that transforms ideas into powerful digital products. Founded in January 2025, we bring together talented engineers, designers, and strategists to deliver exceptional software solutions.
+                {t("companyHub.hero.description", "Cloud Nexus is a technology company that transforms ideas into powerful digital products. Founded in January 2025, we bring together talented engineers, designers, and strategists to deliver exceptional software solutions.")}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/company/about-us" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold transition-all shadow-lg">
-                  Learn About Us <ArrowRight className="w-4 h-4" />
+                  {t("companyHub.hero.cta.learnAbout", "Learn About Us")} <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/resources/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-black/10 dark:border-white/10 text-sm font-semibold hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-all">
-                  Get in Touch
+                  {t("companyHub.hero.cta.getInTouch", "Get in Touch")}
                 </Link>
               </div>
             </motion.div>
@@ -137,7 +143,7 @@ export default function CompanyPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="grid grid-cols-4 gap-2">
-                    {stats.map((s, i) => (
+                    {translatedStats.map((s, i) => (
                       <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + i * 0.08 }}
                         className="text-center px-2 py-2.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10">
                         <span className="block text-sm font-black text-white"><Counter value={s.value} suffix={s.suffix} /></span>
@@ -156,7 +162,7 @@ export default function CompanyPage() {
       <div className="border-y border-black/[0.06] dark:border-white/[0.06]">
         <div className="mx-auto max-w-7xl px-6 py-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.map((s, i) => {
+            {translatedStats.map((s, i) => {
               const Icon = s.icon;
               return (
                 <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
@@ -178,14 +184,14 @@ export default function CompanyPage() {
       {/* ═══ EXPLORE COMPANY ═══ */}
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Explore <span className="text-[#4EB3E8]">Cloud Nexus</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("companyHub.explore.title", "Explore")} <span className="text-[#4EB3E8]">Cloud Nexus</span></h2>
           <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            Discover who we are, how we work, and what makes us the right technology partner for your business.
+            {t("companyHub.explore.description", "Discover who we are, how we work, and what makes us the right technology partner for your business.")}
           </p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {companyPages.map((page, i) => {
+          {translatedCompanyPages.map((page, i) => {
             const Icon = page.icon;
             return (
               <motion.div key={page.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
@@ -204,7 +210,7 @@ export default function CompanyPage() {
                   <div className="p-5">
                     <p className="text-xs text-black/50 dark:text-white/45 leading-relaxed line-clamp-4">{page.desc}</p>
                     <div className="mt-4 flex items-center gap-1.5 text-xs font-semibold" style={{ color: page.color }}>
-                      Explore <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                      {t("companyHub.explore.cardCta", "Explore")} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </Link>
@@ -219,13 +225,13 @@ export default function CompanyPage() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Our Core <span className="text-[#4EB3E8]">Values</span></h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("companyHub.values.title", "Our Core")} <span className="text-[#4EB3E8]">{t("companyHub.values.titleHighlight", "Values")}</span></h2>
               <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-                These principles guide every decision we make, every product we build, and every relationship we nurture.
+                {t("companyHub.values.description", "These principles guide every decision we make, every product we build, and every relationship we nurture.")}
               </p>
 
               <div className="mt-8 space-y-4">
-                {values.map((v, i) => (
+                {translatedValues.map((v, i) => (
                   <motion.div key={v.title} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                     className="flex items-start gap-4 p-4 rounded-xl border border-black/[0.05] dark:border-white/[0.05] bg-white dark:bg-white/[0.02]">
                     <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: v.color }} />
@@ -250,9 +256,9 @@ export default function CompanyPage() {
       {/* ═══ OUR GROWTH JOURNEY ═══ */}
       <div className="mx-auto max-w-7xl px-6 py-20">
         <motion.div className="text-center mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Our Growth <span className="text-[#4EB3E8]">Journey</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{t("companyHub.growth.title", "Our Growth")} <span className="text-[#4EB3E8]">{t("companyHub.growth.titleHighlight", "Journey")}</span></h2>
           <p className="text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-            From a seed of an idea to a growing force in technology  -  every milestone marks a step toward our vision.
+            {t("companyHub.growth.description", "From a seed of an idea to a growing force in technology  -  every milestone marks a step toward our vision.")}
           </p>
         </motion.div>
 
@@ -272,23 +278,23 @@ export default function CompanyPage() {
 
           {[
             {
-              icon: Sprout, date: "19 Jan 2025", title: "The Seed Was Planted",
-              desc: "Cloud Nexus was founded with a clear mission  -  to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful.",
+              icon: Sprout, date: t("companyHub.growth.step1.date", "19 Jan 2025"), title: t("companyHub.growth.step1.title", "The Seed Was Planted"),
+              desc: t("companyHub.growth.step1.desc", "Cloud Nexus was founded with a clear mission  -  to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful."),
               color: "#4EB3E8",
             },
             {
-              icon: Leaf, date: "Mid 2025", title: "Taking Root & Growing",
-              desc: "We expanded our team, onboarded our first global clients, and delivered 30+ successful projects. Our expertise in mobile, web, cloud, and AI started gaining recognition across industries.",
+              icon: Leaf, date: t("companyHub.growth.step2.date", "Mid 2025"), title: t("companyHub.growth.step2.title", "Taking Root & Growing"),
+              desc: t("companyHub.growth.step2.desc", "We expanded our team, onboarded our first global clients, and delivered 30+ successful projects. Our expertise in mobile, web, cloud, and AI started gaining recognition across industries."),
               color: "#8b5cf6",
             },
             {
-              icon: TreePine, date: "Early 2026", title: "Branching Out",
-              desc: "With 50+ projects delivered across 15+ industries, we began attending global tech conferences like GITEX, built dedicated AI/ML capabilities, and expanded our service portfolio significantly.",
+              icon: TreePine, date: t("companyHub.growth.step3.date", "Early 2026"), title: t("companyHub.growth.step3.title", "Branching Out"),
+              desc: t("companyHub.growth.step3.desc", "With 50+ projects delivered across 15+ industries, we began attending global tech conferences like GITEX, built dedicated AI/ML capabilities, and expanded our service portfolio significantly."),
               color: "#10b981",
             },
             {
-              icon: Sun, date: "Today & Beyond", title: "Reaching New Heights",
-              desc: "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning  -  with plans to scale further, innovate boldly, and create lasting impact.",
+              icon: Sun, date: t("companyHub.growth.step4.date", "Today & Beyond"), title: t("companyHub.growth.step4.title", "Reaching New Heights"),
+              desc: t("companyHub.growth.step4.desc", "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning  -  with plans to scale further, innovate boldly, and create lasting impact."),
               color: "#f59e0b",
             },
           ].map((step, i) => {
@@ -331,19 +337,19 @@ export default function CompanyPage() {
             <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, rgba(78,179,232,0.04) 0%, transparent 70%)" }} />
             <div className="relative">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Let&apos;s Build Something <span className="text-[#4EB3E8]">Extraordinary</span>
+                {t("companyHub.cta.title", "Let's Build Something")} <span className="text-[#4EB3E8]">{t("companyHub.cta.titleHighlight", "Extraordinary")}</span>
               </h2>
               <p className="text-base text-black/55 dark:text-white/50 max-w-lg mx-auto leading-relaxed mb-8">
-                Whether you&apos;re a startup with a bold idea or an enterprise seeking digital transformation  -  we&apos;re here to make it happen.
+                {t("companyHub.cta.description", "Whether you're a startup with a bold idea or an enterprise seeking digital transformation  -  we're here to make it happen.")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm transition-all shadow-lg">
-                  <CalendarCheck className="w-4 h-4" /> Book Free Consultation
+                  <CalendarCheck className="w-4 h-4" /> {t("companyHub.cta.bookConsultation", "Book Free Consultation")}
                 </Link>
                 <Link href="/resources/contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-colors">
-                  <Mail className="w-4 h-4" /> Contact Us
+                  <Mail className="w-4 h-4" /> {t("companyHub.cta.contactUs", "Contact Us")}
                 </Link>
               </div>
               <p className="mt-5 text-xs text-black/30 dark:text-white/25">work@cloudnexus.in &middot; +91 87938 30447</p>

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NavigationLoader } from "@/components/navigation-loader";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { I18nProvider } from "@/lib/i18n/context";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -88,10 +89,12 @@ export default function RootLayout({
     >
       <body suppressHydrationWarning className={cn("flex min-h-screen flex-col", GeistSans.className)}>
         <ThemeProvider>
-          <NavigationLoader />
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
+          <I18nProvider>
+            <NavigationLoader />
+            <SmoothScroll>
+              {children}
+            </SmoothScroll>
+          </I18nProvider>
         </ThemeProvider>
       </body>
     </html>

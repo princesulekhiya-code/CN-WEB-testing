@@ -1,7 +1,11 @@
+"use client";
+
 import { Marquee } from "@/components/ui/marquee";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 const reviews = [
   {
@@ -96,6 +100,8 @@ const ReviewCard = ({
 };
 
 export function Testimonials() {
+  const { t } = useTranslation();
+  const translatedReviews = useTranslatedData(reviews);
   return (
     <section className="relative w-full overflow-hidden bg-white dark:bg-black py-12 sm:py-16">
       {/* Subtle top gradient line to separate sections if needed */}
@@ -104,13 +110,13 @@ export function Testimonials() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
         <div className="mb-8 sm:mb-10 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
-            Client <span className="text-black dark:text-white">Testimonials</span>
+            {t("testimonials.titleBlue", "Client")} <span className="text-black dark:text-white">{t("testimonials.titleWhite", "Testimonials")}</span>
           </h2>
         </div>
 
         <div className="relative w-full">
           <Marquee pauseOnHover className="[--duration:50s]">
-            {reviews.map((review) => (
+            {translatedReviews.map((review) => (
               <ReviewCard key={review.name} {...review} />
             ))}
           </Marquee>

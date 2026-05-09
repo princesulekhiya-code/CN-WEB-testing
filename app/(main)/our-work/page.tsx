@@ -10,6 +10,8 @@ import {
   Clock,
 } from "lucide-react";
 import { projects, industries, type Metric, type TimelineStep } from "./data";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 
 // ─── Hooks ─────────────────────────────────────────────────────────────────────
 
@@ -97,16 +99,19 @@ const TimelineStepComp = memo(function TimelineStepComp({
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 
 export default function OurWorkPage() {
+  const { t } = useTranslation();
   const [activeIndustry, setActiveIndustry] = useState("all");
   const [activeProject, setActiveProject] = useState(projects[0].id);
   const [metricsVisible, setMetricsVisible] = useState(false);
   const metricsRef = useRef<HTMLDivElement>(null);
+  const translatedProjects = useTranslatedData(projects);
+  const translatedIndustries = useTranslatedData(industries);
 
   const filtered = useMemo(
     () => activeIndustry === "all"
-      ? projects
-      : projects.filter((p) => p.industrySlug === activeIndustry),
-    [activeIndustry]
+      ? translatedProjects
+      : translatedProjects.filter((p) => p.industrySlug === activeIndustry),
+    [activeIndustry, translatedProjects]
   );
 
   const study = useMemo(
@@ -157,25 +162,25 @@ export default function OurWorkPage() {
         />
         <div className="mx-auto max-w-7xl relative">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-            Our Work
+            {t("ourWork.hero.title", "Our Work")}
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed font-medium">
-            Real projects, real impact. Explore how we&apos;ve helped businesses across industries build scalable digital solutions.
+            {t("ourWork.hero.description", "Real projects, real impact. Explore how we've helped businesses across industries build scalable digital solutions.")}
           </p>
           <div className="flex items-center gap-8 mt-8 pt-8 border-t border-border">
             <div>
-              <span className="text-2xl font-bold text-foreground">{projects.length}+</span>
-              <p className="text-[12px] text-muted-foreground mt-0.5">Projects Delivered</p>
+              <span className="text-2xl font-bold text-foreground">{translatedProjects.length}+</span>
+              <p className="text-[12px] text-muted-foreground mt-0.5">{t("ourWork.hero.projectsDelivered", "Projects Delivered")}</p>
             </div>
             <div className="w-px h-10 bg-card border-border" />
             <div>
-              <span className="text-2xl font-bold text-foreground">{industries.length - 1}</span>
-              <p className="text-[12px] text-muted-foreground mt-0.5">Industries Served</p>
+              <span className="text-2xl font-bold text-foreground">{translatedIndustries.length - 1}</span>
+              <p className="text-[12px] text-muted-foreground mt-0.5">{t("ourWork.hero.industriesServed", "Industries Served")}</p>
             </div>
             <div className="w-px h-10 bg-card border-border" />
             <div>
               <span className="text-2xl font-bold text-foreground">98%</span>
-              <p className="text-[12px] text-muted-foreground mt-0.5">Client Satisfaction</p>
+              <p className="text-[12px] text-muted-foreground mt-0.5">{t("ourWork.hero.clientSatisfaction", "Client Satisfaction")}</p>
             </div>
           </div>
         </div>
@@ -184,11 +189,11 @@ export default function OurWorkPage() {
       {/* Industry Filter */}
       <div className="w-full px-6 md:px-8 pb-6 border-b border-border">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest mb-4">Filter by Industry</p>
+          <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest mb-4">{t("ourWork.filter.label", "Filter by Industry")}</p>
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-            {industries.map((ind) => {
+            {translatedIndustries.map((ind) => {
               const isActive = ind.slug === activeIndustry;
-              const count = ind.slug === "all" ? projects.length : projects.filter((p) => p.industrySlug === ind.slug).length;
+              const count = ind.slug === "all" ? translatedProjects.length : translatedProjects.filter((p) => p.industrySlug === ind.slug).length;
               return (
                 <button
                   key={ind.slug}
@@ -259,11 +264,11 @@ export default function OurWorkPage() {
 
                 <div className="grid sm:grid-cols-2 gap-6 mb-8">
                   <div className="flex flex-col gap-2">
-                    <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">The Challenge</span>
+                    <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">{t("ourWork.theChallenge", "The Challenge")}</span>
                     <p className="text-[14px] text-muted-foreground leading-relaxed font-medium">{study.challenge}</p>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">Our Approach</span>
+                    <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-widest">{t("ourWork.ourApproach", "Our Approach")}</span>
                     <p className="text-[14px] text-muted-foreground leading-relaxed font-medium">{study.solution}</p>
                   </div>
                 </div>
@@ -279,7 +284,7 @@ export default function OurWorkPage() {
                     className="group inline-flex items-center gap-1.5 text-[13px] font-medium transition-all duration-300"
                     style={{ color: study.accentColor }}
                   >
-                    View full case study
+                    {t("ourWork.viewCaseStudy", "View full case study")}
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
@@ -289,7 +294,7 @@ export default function OurWorkPage() {
                 <div className="flex items-center gap-2 mb-8">
                   <TrendingUp className="w-4 h-4 text-muted-foreground" />
                   <span className="text-[12px] font-semibold text-muted-foreground uppercase tracking-widest">
-                    Engagement Timeline
+                    {t("ourWork.engagementTimeline", "Engagement Timeline")}
                   </span>
                 </div>
 
@@ -310,10 +315,10 @@ export default function OurWorkPage() {
                   style={{ borderColor: `${study.accentColor}30`, background: `${study.accentColor}08` }}
                 >
                   <p className="text-[12px] text-muted-foreground leading-relaxed font-medium mb-3">
-                    Every engagement starts with a no-commitment discovery call.
+                    {t("ourWork.discoveryCall", "Every engagement starts with a no-commitment discovery call.")}
                   </p>
                   <button className="inline-flex items-center gap-1 text-[12px] font-semibold text-foreground hover:gap-2 transition-all duration-200">
-                    Start a conversation <ChevronRight className="w-3.5 h-3.5" />
+                    {t("ourWork.startConversation", "Start a conversation")} <ChevronRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
               </div>
@@ -338,7 +343,7 @@ export default function OurWorkPage() {
               ))}
             </div>
             <span className="text-[12px] text-muted-foreground">
-              {filtered.findIndex((p) => p.id === activeProject) + 1} / {filtered.length} projects
+              {filtered.findIndex((p) => p.id === activeProject) + 1} / {filtered.length} {t("ourWork.projects", "projects")}
             </span>
           </div>
         </div>

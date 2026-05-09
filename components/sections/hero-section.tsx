@@ -7,6 +7,7 @@ import { TypingAnimation } from '../ui/typing-animation';
 import { Component, type ReactNode, useState, useEffect, useRef, useCallback } from 'react';
 import { useTheme } from 'next-themes';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslation } from '@/lib/i18n/context';
 
 const SPLINE_DARK = 'https://prod.spline.design/s5qNGeR6oT0MDO0i/scene.splinecode';
 const SPLINE_LIGHT = 'https://prod.spline.design/GKBZHlmODH6AWg9T/scene.splinecode';
@@ -67,14 +68,19 @@ function SafeSpline({ scene, className }: { scene: string; className?: string })
     if (!supported) return;
 
     const handleRejection = (e: PromiseRejectionEvent) => {
-      const msg = e.reason?.message;
-      if (msg && (msg.includes('spline') || msg.includes('scene.splinecode'))) {
+      const msg = e.reason?.message || String(e.reason);
+      if (msg && (msg.includes('spline') || msg.includes('scene.splinecode') || msg.includes('Failed to fetch'))) {
         setLoadError(true);
         e.preventDefault();
       }
     };
+    const handleError = () => setLoadError(true);
     window.addEventListener('unhandledrejection', handleRejection);
-    return () => window.removeEventListener('unhandledrejection', handleRejection);
+    window.addEventListener('error', handleError);
+    return () => {
+      window.removeEventListener('unhandledrejection', handleRejection);
+      window.removeEventListener('error', handleError);
+    };
   }, [supported]);
 
   if (!supported || loadError) return <SplineFallback />;
@@ -111,13 +117,13 @@ function useAnimatedCount(target: number, active: boolean, delay = 0, duration =
   return count;
 }
 
-const statsData = [
-  { target: 100, suffix: "+", label: "Projects Delivered", delay: 0 },
-  { target: 10, suffix: "+ yrs", label: "Proven Expertise", delay: 200 },
-  { target: 90, suffix: "+", label: "Faster Hiring", delay: 400 },
-];
-
 function HeroStats() {
+  const { t } = useTranslation();
+  const statsData = [
+    { target: 100, suffix: "+", label: t("hero.stat.projects"), delay: 0 },
+    { target: 10, suffix: `+ ${t("hero.stat.yrs", "yrs")}`, label: t("hero.stat.expertise"), delay: 200 },
+    { target: 90, suffix: "+", label: t("hero.stat.hiring"), delay: 400 },
+  ];
   const [visible, setVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -176,6 +182,7 @@ function HeroStats() {
 
 export function HeroSection() {
   const { resolvedTheme } = useTheme();
+  const { t } = useTranslation();
   const [mounted, setMounted] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
@@ -198,15 +205,15 @@ export function HeroSection() {
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.15] md:leading-[1.15] lg:leading-[1.15]">
               <span className="block animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both text-[7vw] sm:text-5xl lg:text-6xl pb-1 md:pb-2 whitespace-nowrap">
-                Pioneering Innovation
+                {t("hero.title1")}
               </span>
               <span className="flex flex-wrap justify-center lg:justify-start gap-x-3 text-muted-foreground/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both text-[7.5vw] sm:text-5xl lg:text-6xl">
-                <span className="text-[#4EB3E8]">with Smart</span>
+                <span className="text-[#4EB3E8]">{t("hero.title2")}</span>
                 <span
                   className="text-[#4EB3E8] pb-1 glitch-text"
-                  data-text="Solutions."
+                  data-text={t("hero.title3")}
                 >
-                  Solutions.
+                  {t("hero.title3")}
                 </span>
               </span>
             </h1>
@@ -214,14 +221,14 @@ export function HeroSection() {
             {/* Description */}
             <div className="relative max-w-xl mx-auto lg:mx-0 w-full flex flex-col items-center lg:items-start">
               <span className="invisible text-center lg:text-left text-base md:text-lg font-medium leading-relaxed select-none pointer-events-none">
-              Code to cloud - seamless, scalable, and built for performance. We design, deploy, and deliver solutions you can trust.
+              {t("hero.description")}
               </span>
               <TypingAnimation
                 delay={700}
                 duration={25}
                 className="absolute inset-x-0 top-0 text-center lg:text-left text-base md:text-lg font-medium text-muted-foreground leading-relaxed"
               >
-                Code to cloud - seamless, scalable, and built for performance. We design, deploy, and deliver solutions you can trust.
+                {t("hero.description")}
               </TypingAnimation>
             </div>
 
@@ -229,12 +236,12 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 w-full sm:w-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-1000 fill-mode-both">
               <Link href="/resources/free-consultation">
                 <Button size="lg" className="w-full sm:w-auto rounded-sm bg-black text-white hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80">
-                  Let's connect
+                  {t("hero.cta.connect")}
                 </Button>
               </Link>
               <Link href="/services">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-sm bg-background/50 backdrop-blur-sm border-border/50 hover:bg-accent/50 text-primary hover:text-primary">
-                  Know More
+                  {t("hero.cta.knowMore")}
                 </Button>
               </Link>
             </div>

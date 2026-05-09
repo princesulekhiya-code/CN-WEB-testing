@@ -2,14 +2,18 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { IndustryTechProps } from "./types";
 
 export function IndustryTechSection({
-  heading = "Technologies We Leverage",
-  subtitle,
-  technologies,
+  heading: rawHeading = "Technologies We Leverage",
+  subtitle: rawSubtitle,
+  technologies: rawTechnologies,
   accentColor = "#4EB3E8",
 }: IndustryTechProps) {
+  const heading = useTranslatedData(rawHeading);
+  const subtitle = useTranslatedData(rawSubtitle);
+  const technologies = useTranslatedData(rawTechnologies);
   const sectionRef = useRef(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-80px" });

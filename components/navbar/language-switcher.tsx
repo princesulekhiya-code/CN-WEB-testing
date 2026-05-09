@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Globe, Check } from "lucide-react";
 import {
   DropdownMenu,
@@ -8,26 +7,27 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface Language {
-  code: string;
+  code: "en" | "hi" | "fr" | "es" | "zh";
   label: string;
   nativeLabel: string;
   flag: string;
 }
 
 const LANGUAGES: Language[] = [
-  { code: "en", label: "English", nativeLabel: "English", flag: "🇺🇸" },
-  { code: "hi", label: "Hindi", nativeLabel: "हिन्दी", flag: "🇮🇳" },
-  { code: "fr", label: "French", nativeLabel: "Français", flag: "🇫🇷" },
-  { code: "es", label: "Spanish", nativeLabel: "Español", flag: "🇪🇸" },
-  { code: "zh", label: "Chinese", nativeLabel: "中文", flag: "🇨🇳" },
+  { code: "en", label: "English", nativeLabel: "English", flag: "US" },
+  { code: "hi", label: "Hindi", nativeLabel: "हिन्दी", flag: "IN" },
+  { code: "fr", label: "French", nativeLabel: "Français", flag: "FR" },
+  { code: "es", label: "Spanish", nativeLabel: "Español", flag: "ES" },
+  { code: "zh", label: "Chinese", nativeLabel: "中文", flag: "CN" },
 ];
 
 export function LanguageSwitcher() {
-  const [currentLang, setCurrentLang] = useState<string>("en");
+  const { locale, setLocale } = useTranslation();
 
-  const activeLang = LANGUAGES.find((l) => l.code === currentLang)!;
+  const activeLang = LANGUAGES.find((l) => l.code === locale)!;
 
   return (
     <DropdownMenu modal={false}>
@@ -50,10 +50,10 @@ export function LanguageSwitcher() {
         {LANGUAGES.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => setCurrentLang(lang.code)}
+            onClick={() => setLocale(lang.code)}
             className="flex items-center gap-3 rounded-lg px-3 py-2.5 cursor-pointer transition-colors hover:bg-black/[0.04] dark:hover:bg-white/[0.06]"
           >
-            <span className="text-lg leading-none">{lang.flag}</span>
+            <span className="text-xs font-bold text-black/40 dark:text-white/40 w-6 text-center">{lang.flag}</span>
             <div className="flex flex-col gap-0.5 flex-1">
               <span className="text-sm font-medium text-black/90 dark:text-white/90">
                 {lang.label}
@@ -62,7 +62,7 @@ export function LanguageSwitcher() {
                 {lang.nativeLabel}
               </span>
             </div>
-            {currentLang === lang.code && (
+            {locale === lang.code && (
               <Check
                 size={16}
                 className="text-black dark:text-white flex-shrink-0"

@@ -1,15 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { IndustryIntroProps } from "./types";
 
 export function IndustryIntroSection({
-  heading,
-  descriptionLeft,
-  descriptionRight,
-  highlights,
+  heading: rawHeading,
+  descriptionLeft: rawDescriptionLeft,
+  descriptionRight: rawDescriptionRight,
+  highlights: rawHighlights,
   accentColor = "#4EB3E8",
 }: IndustryIntroProps) {
+  const heading = useTranslatedData(rawHeading);
+  const descriptionLeft = useTranslatedData(rawDescriptionLeft);
+  const descriptionRight = useTranslatedData(rawDescriptionRight);
+  const highlights = useTranslatedData(rawHighlights);
+
   return (
     <div className="w-full px-6 py-20 border-b border-black/[0.06] dark:border-white/[0.06]">
       <div className="mx-auto max-w-7xl">

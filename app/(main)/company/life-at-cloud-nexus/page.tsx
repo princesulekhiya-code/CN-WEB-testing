@@ -4,6 +4,8 @@ import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import {
   ArrowRight,
   Award,
@@ -420,12 +422,13 @@ function CodiantRunningGalleryBlock({ blockId }: { blockId: string }) {
 }
 
 function CultureHeroGallery() {
+  const { t } = useTranslation();
   const prefersReducedMotion = useReducedMotion();
 
   return (
     <section
       className="relative w-full overflow-hidden border-y border-black/[0.06] bg-gradient-to-b from-white via-zinc-50/80 to-white dark:border-[#1e1e1e] dark:from-zinc-950 dark:via-zinc-900/50 dark:to-zinc-950"
-      aria-label="Culture highlights"
+      aria-label={t("life.gallery.ariaLabel", "Culture highlights")}
     >
       <div
         aria-hidden
@@ -472,6 +475,13 @@ function CultureHeroGallery() {
 }
 
 export default function LifeAtCloudNexusPage() {
+  const { t } = useTranslation();
+  const translatedEventsByYear = useTranslatedData(eventsByYear);
+  const translatedPurposeValues = useTranslatedData(purposeValues);
+  const translatedDiversityAtCloudNexus = useTranslatedData(diversityAtCloudNexus);
+  const translatedJoinPerks = useTranslatedData(joinPerks);
+  const translatedEverydayPerks = useTranslatedData(everydayPerks);
+
   const [year, setYear] = useState<YearKey>("2026");
   const [momentPage, setMomentPage] = useState(0);
   const [purposeIndex, setPurposeIndex] = useState(0);
@@ -498,7 +508,7 @@ export default function LifeAtCloudNexusPage() {
     return () => window.removeEventListener("keydown", onKey);
   }, [gallery, closeGallery]);
 
-  const yearEvents = eventsByYear[year];
+  const yearEvents = translatedEventsByYear[year];
   const momentPageCount = Math.max(1, Math.ceil(yearEvents.length / MOMENTS_PAGE_SIZE));
 
   useEffect(() => {
@@ -525,10 +535,10 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.6 }}
             className="mb-6 text-4xl font-black tracking-tight sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.05]"
           >
-            <span className="text-black/90 dark:text-white">Life at </span>
+            <span className="text-black/90 dark:text-white">{t("life.hero.title", "Life at")} </span>
             <br className="sm:hidden" />
             <span className="bg-gradient-to-r from-[#2d8ec4] via-[#4EB3E8] to-[#6bc9ef] bg-clip-text text-transparent dark:from-[#6bc9ef] dark:via-[#4EB3E8] dark:to-[#a8e6ff]">
-              Cloud Nexus
+              {t("life.hero.subtitle", "Cloud Nexus")}
             </span>
           </motion.h1>
 
@@ -538,7 +548,7 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="max-w-xl text-base font-medium leading-relaxed text-black/50 md:text-lg dark:text-white/55"
           >
-            Where talent meets culture. We build products we&apos;re proud of  -  with people we genuinely care about.
+            {t("life.hero.description", "Where talent meets culture. We build products we're proud of  -  with people we genuinely care about.")}
           </motion.p>
 
           <motion.div
@@ -551,14 +561,14 @@ export default function LifeAtCloudNexusPage() {
               href="/resources/career"
               className="group inline-flex items-center gap-2.5 rounded-xl bg-black dark:bg-white px-8 py-3.5 text-sm font-semibold text-white dark:text-black shadow-lg transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5 hover:shadow-xl"
             >
-              Explore Careers
+              {t("life.hero.exploreCareers", "Explore Careers")}
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
             </Link>
             <Link
               href="/resources/contact"
               className="inline-flex items-center gap-2 rounded-xl border border-black/10 dark:border-white/10 px-8 py-3.5 text-sm font-semibold text-black/70 dark:text-white/70 transition-all duration-300 hover:border-[#4EB3E8]/40 hover:text-[#4EB3E8]"
             >
-              Get in Touch
+              {t("life.hero.getInTouch", "Get in Touch")}
             </Link>
           </motion.div>
 
@@ -569,10 +579,10 @@ export default function LifeAtCloudNexusPage() {
             className="mt-14 grid grid-cols-2 gap-6 sm:flex sm:items-center sm:gap-8 md:gap-12"
           >
             {[
-              { value: "90+", label: "Team Members" },
-              { value: "5", label: "Day Work Week" },
-              { value: "15+", label: "Countries Served" },
-              { value: "40%+", label: "Women in Tech" },
+              { value: "90+", label: t("life.stats.teamMembers", "Team Members") },
+              { value: "5", label: t("life.stats.dayWorkWeek", "Day Work Week") },
+              { value: "15+", label: t("life.stats.countriesServed", "Countries Served") },
+              { value: "40%+", label: t("life.stats.womenInTech", "Women in Tech") },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl md:text-3xl font-black tracking-tight text-[#4EB3E8]">{stat.value}</div>
@@ -598,8 +608,8 @@ export default function LifeAtCloudNexusPage() {
                 transition={{ duration: 0.45, delay: 0.05 }}
                 className="text-3xl font-bold tracking-tight md:text-[40px] md:leading-tight"
               >
-                Celebrating The Melody of{" "}
-                <span className="bg-gradient-to-r from-[#4EB3E8] to-[#6bc9ef] bg-clip-text text-transparent">Moments</span>
+                {t("life.moments.title", "Celebrating The Melody of")}{" "}
+                <span className="bg-gradient-to-r from-[#4EB3E8] to-[#6bc9ef] bg-clip-text text-transparent">{t("life.moments.titleHighlight", "Moments")}</span>
               </motion.h2>
             </div>
             <motion.p
@@ -609,7 +619,7 @@ export default function LifeAtCloudNexusPage() {
               transition={{ duration: 0.45, delay: 0.08 }}
               className="max-w-md text-[15px] font-medium leading-relaxed text-black/50 dark:text-white/45 lg:pt-12"
             >
-              Laughter and joyful chatter echoed with the melody of music. See how we&apos;re building success together, one team, one dream at Cloud Nexus.
+              {t("life.moments.description", "Laughter and joyful chatter echoed with the melody of music. See how we're building success together, one team, one dream at Cloud Nexus.")}
             </motion.p>
           </div>
 
@@ -697,7 +707,7 @@ export default function LifeAtCloudNexusPage() {
                         onClick={() => openGallery(ev.title, ev.collageSrcs)}
                         className="mt-5 self-start inline-flex items-center gap-2 rounded-lg border border-[#4EB3E8]/30 px-5 py-2 text-xs font-bold uppercase tracking-wider text-[#4EB3E8] transition-all duration-300 hover:bg-[#4EB3E8] hover:text-white hover:shadow-md"
                       >
-                        View All Photos
+                        {t("life.moments.viewAllPhotos", "View All Photos")}
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                       </button>
                     </div>
@@ -761,8 +771,8 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.45 }}
             className="text-center text-3xl font-bold tracking-tight md:text-4xl lg:text-[2.5rem]"
           >
-            Driven by{" "}
-            <span className="bg-gradient-to-r from-[#4EB3E8] via-[#a78bfa] to-[#ec4899] bg-clip-text text-transparent">Purpose</span>
+            {t("life.purpose.title", "Driven by")}{" "}
+            <span className="bg-gradient-to-r from-[#4EB3E8] via-[#a78bfa] to-[#ec4899] bg-clip-text text-transparent">{t("life.purpose.titleHighlight", "Purpose")}</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -771,12 +781,12 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.4, delay: 0.08 }}
             className="mx-auto mt-4 max-w-xl text-center text-[15px] font-medium leading-relaxed text-white/50"
           >
-            The five pillars that guide everything we build, ship, and stand for.
+            {t("life.purpose.description", "The five pillars that guide everything we build, ship, and stand for.")}
           </motion.p>
 
           {/* Value selector cards */}
           <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5 md:gap-4">
-            {purposeValues.map((v, i) => {
+            {translatedPurposeValues.map((v, i) => {
               const active = purposeIndex === i;
               const ValIcon = v.Icon;
               const colors = ["#4EB3E8", "#a78bfa", "#f59e0b", "#10b981", "#ec4899"];
@@ -825,7 +835,7 @@ export default function LifeAtCloudNexusPage() {
               aria-live="polite"
             >
               {(() => {
-                const PurposeIcon = purposeValues[purposeIndex].Icon;
+                const PurposeIcon = translatedPurposeValues[purposeIndex].Icon;
                 const colors = ["#4EB3E8", "#a78bfa", "#f59e0b", "#10b981", "#ec4899"];
                 const activeColor = colors[purposeIndex % colors.length];
                 return (
@@ -841,16 +851,16 @@ export default function LifeAtCloudNexusPage() {
                         <PurposeIcon className="h-8 w-8 sm:h-9 sm:w-9" style={{ color: activeColor }} strokeWidth={1.2} />
                       </motion.div>
                       <div className="text-center sm:text-left">
-                        <h3 className="text-xl font-bold tracking-tight sm:text-2xl">{purposeValues[purposeIndex].title}</h3>
+                        <h3 className="text-xl font-bold tracking-tight sm:text-2xl">{translatedPurposeValues[purposeIndex].title}</h3>
                         <p className="mt-3 text-[14px] font-normal leading-[1.75] text-white/70 sm:text-[15px]">
-                          {purposeValues[purposeIndex].description}
+                          {translatedPurposeValues[purposeIndex].description}
                         </p>
                       </div>
                     </div>
 
                     {/* Progress bar */}
                     <div className="mt-8 flex items-center gap-2">
-                      {purposeValues.map((_, i) => (
+                      {translatedPurposeValues.map((_, i) => (
                         <button
                           key={i}
                           type="button"
@@ -880,7 +890,7 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.45, delay: 0.05 }}
             className="text-3xl font-bold tracking-tight md:text-4xl"
           >
-            Why Should You Join Cloud Nexus?
+            {t("life.join.title", "Why Should You Join Cloud Nexus?")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -889,12 +899,11 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.45, delay: 0.1 }}
             className="mt-4 max-w-2xl text-[15px] font-medium leading-relaxed text-black/50 dark:text-[#8b8b8b]"
           >
-            Cloud Nexus is the place where you can learn, explore, and grow your craft and confidence. We weave a
-            work culture with empathy, warmth, and care.
+            {t("life.join.description", "Cloud Nexus is the place where you can learn, explore, and grow your craft and confidence. We weave a work culture with empathy, warmth, and care.")}
           </motion.p>
 
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {joinPerks.map((p, index) => (
+            {translatedJoinPerks.map((p, index) => (
               <motion.div
                 key={p.title}
                 initial={{ opacity: 0, y: 16 }}
@@ -942,13 +951,13 @@ export default function LifeAtCloudNexusPage() {
             <div className="relative overflow-hidden rounded-2xl border border-black/[0.06] dark:border-white/[0.06] shadow-lg shadow-[#4EB3E8]/10 ring-1 ring-[#4EB3E8]/10">
               <img
                 src="/images/stock/stock-78f503171c.jpg"
-                alt="Women empowerment at Cloud Nexus"
+                alt={t("life.women.altImage", "Women empowerment at Cloud Nexus")}
                 className="w-full h-[380px] md:h-[420px] object-cover"
               />
               <div className="absolute bottom-5 right-5 rounded-xl border border-white/15 bg-black/50 px-4 py-3 text-center backdrop-blur-md">
                 <div className="text-2xl font-black text-[#4EB3E8]">40%+</div>
                 <div className="text-[10px] font-semibold uppercase tracking-wider text-white/60">
-                  Women in tech roles
+                  {t("life.women.badgeLabel", "Women in tech roles")}
                 </div>
               </div>
             </div>
@@ -960,20 +969,18 @@ export default function LifeAtCloudNexusPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Empowering women is our major goal</h2>
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">{t("life.women.title", "Empowering women is our major goal")}</h2>
             <p className="mt-5 text-[15px] font-medium leading-relaxed text-black/50 dark:text-[#8b8b8b]">
-              We invest in leadership visibility, psychological safety, and growth paths so women can thrive in
-              engineering, product, and operations  -  not as an exception, but as the norm.
+              {t("life.women.description1", "We invest in leadership visibility, psychological safety, and growth paths so women can thrive in engineering, product, and operations  -  not as an exception, but as the norm.")}
             </p>
             <p className="mt-4 text-[15px] font-medium leading-relaxed text-black/50 dark:text-[#8b8b8b]">
-              From mentorship circles to flexible policies and zero-tolerance for harassment, we design a workplace
-              where everyone can bring their full selves to work.
+              {t("life.women.description2", "From mentorship circles to flexible policies and zero-tolerance for harassment, we design a workplace where everyone can bring their full selves to work.")}
             </p>
             <ul className="mt-8 space-y-3">
               {[
-                "Equal opportunity in hiring and promotions",
-                "Leadership sponsorship and mentorship programs",
-                "Safe reporting and supportive HR practices",
+                t("life.women.point1", "Equal opportunity in hiring and promotions"),
+                t("life.women.point2", "Leadership sponsorship and mentorship programs"),
+                t("life.women.point3", "Safe reporting and supportive HR practices"),
               ].map((line) => (
                 <li
                   key={line}
@@ -998,17 +1005,16 @@ export default function LifeAtCloudNexusPage() {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
-            We are always in search of enthusiastic people to join us
+            {t("life.recruit.title", "We are always in search of enthusiastic people to join us")}
           </h2>
           <p className="mt-5 text-[15px] font-medium leading-relaxed text-black/50 dark:text-[#8b8b8b]">
-            At Cloud Nexus, we thrive on the energy of driven individuals. If you&apos;re eager to make a meaningful
-            impact and grow alongside a vibrant community, we&apos;d love to have you on board.
+            {t("life.recruit.description", "At Cloud Nexus, we thrive on the energy of driven individuals. If you're eager to make a meaningful impact and grow alongside a vibrant community, we'd love to have you on board.")}
           </p>
           <Link
             href="/resources/career"
             className="group mt-8 inline-flex items-center gap-2 rounded-xl bg-black dark:bg-white px-7 py-3.5 text-sm font-semibold text-white dark:text-black shadow-lg transition-all hover:bg-black/90 dark:hover:bg-white/90 hover:shadow-xl"
           >
-            Apply now
+            {t("life.recruit.applyNow", "Apply now")}
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
           </Link>
         </motion.div>
@@ -1024,7 +1030,7 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.45, delay: 0.05 }}
             className="text-3xl font-bold tracking-tight md:text-4xl"
           >
-            Perks of Being at Cloud Nexus
+            {t("life.perks.title", "Perks of Being at Cloud Nexus")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -1033,12 +1039,11 @@ export default function LifeAtCloudNexusPage() {
             transition={{ duration: 0.45, delay: 0.1 }}
             className="mt-4 max-w-2xl text-[15px] font-medium leading-relaxed text-black/50 dark:text-[#8b8b8b]"
           >
-            Comfort, safety, and flexibility are how we grow together  -  with a cheerful environment where people do
-            their best work.
+            {t("life.perks.description", "Comfort, safety, and flexibility are how we grow together  -  with a cheerful environment where people do their best work.")}
           </motion.p>
 
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {everydayPerks.map((p, index) => (
+            {translatedEverydayPerks.map((p, index) => (
               <motion.div
                 key={p.num}
                 initial={{ opacity: 0, y: 20 }}
@@ -1067,11 +1072,11 @@ export default function LifeAtCloudNexusPage() {
       <div className="w-full border-t border-black/[0.06] bg-gradient-to-b from-zinc-50/90 via-white to-white px-6 py-14 md:px-8 md:py-20 dark:border-[#1e1e1e] dark:from-zinc-950 dark:via-black dark:to-black">
         <div className="mx-auto max-w-3xl rounded-3xl border border-black/[0.06] bg-white/80 p-8 shadow-[0_20px_60px_-24px_rgba(78,179,232,0.15)] backdrop-blur-sm dark:border-white/[0.08] dark:bg-zinc-900/40 dark:shadow-[0_20px_60px_-24px_rgba(0,0,0,0.5)] md:p-12">
           <h2 className="text-2xl font-bold tracking-tight text-black md:text-3xl dark:text-white">
-            Diversity at{" "}
-            <span className="bg-gradient-to-r from-[#4EB3E8] to-[#6bc9ef] bg-clip-text text-transparent">Cloud Nexus</span>
+            {t("life.diversity.title", "Diversity at")}{" "}
+            <span className="bg-gradient-to-r from-[#4EB3E8] to-[#6bc9ef] bg-clip-text text-transparent">{t("life.diversity.titleHighlight", "Cloud Nexus")}</span>
           </h2>
           <ul className="mt-8 space-y-5">
-            {diversityAtCloudNexus.map((line, idx) => (
+            {translatedDiversityAtCloudNexus.map((line, idx) => (
               <li
                 key={`diversity-${idx}`}
                 className="flex gap-3 text-[15px] font-medium leading-relaxed text-black/75 dark:text-[#b8b8b8]"
@@ -1103,27 +1108,26 @@ export default function LifeAtCloudNexusPage() {
                 <Rocket className="h-7 w-7 text-[#4EB3E8]" strokeWidth={1.5} />
               </div>
               <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tight md:text-4xl">
-                Ready to be part of
+                {t("life.cta.title", "Ready to be part of")}
                 <br className="hidden sm:block" />
-                <span className="text-[#4EB3E8]">the story</span>?
+                <span className="text-[#4EB3E8]">{t("life.cta.titleHighlight", "the story")}</span>?
               </h2>
               <p className="mx-auto mb-8 max-w-lg text-sm font-medium leading-relaxed text-black/50 dark:text-white/50 md:text-base">
-                Bring your curiosity, your craft, and your kindness. We are building products and a culture worth
-                showing up for  -  every single day.
+                {t("life.cta.description", "Bring your curiosity, your craft, and your kindness. We are building products and a culture worth showing up for  -  every single day.")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/resources/career"
                   className="group inline-flex items-center justify-center gap-2 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 px-8 py-3.5 text-sm font-semibold shadow-lg transition-all duration-300"
                 >
-                  Apply now
+                  {t("life.cta.applyNow", "Apply now")}
                   <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
                 <Link
                   href="/resources/contact"
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-black/10 dark:border-white/10 px-8 py-3.5 text-sm font-semibold transition-colors hover:bg-black/[0.03] dark:hover:bg-white/[0.04]"
                 >
-                  Talk to us
+                  {t("life.cta.talkToUs", "Talk to us")}
                 </Link>
               </div>
               <p className="mt-5 text-xs text-black/30 dark:text-white/25">

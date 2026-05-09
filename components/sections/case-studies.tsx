@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef, useMemo, memo, useCallback } from "react";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -317,7 +319,7 @@ const recentWork: CaseStudy[] = [
   },
 ];
 
-const allEntries = [...caseStudies, ...recentWork];
+const allEntriesRaw = [...caseStudies, ...recentWork];
 
 // ─── Animated Counter ─────────────────────────────────────────────────────────
 
@@ -412,6 +414,8 @@ const TimelineStep = memo(function TimelineStep({
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export function CaseStudies() {
+  const { t } = useTranslation();
+  const allEntries = useTranslatedData(allEntriesRaw);
   const [active, setActive] = useState(allEntries[0].id);
   const [metricsVisible, setMetricsVisible] = useState(false);
   const metricsRef = useRef<HTMLDivElement>(null);
@@ -456,10 +460,10 @@ export function CaseStudies() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
-            Work That <span className="text-black dark:text-white">Speaks for Itself</span>
+            {t("caseStudies.titleBlue", "Work That")} <span className="text-black dark:text-white">{t("caseStudies.titleWhite", "Speaks for Itself")}</span>
           </h2>
           <p className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            Delivering real solutions with measurable, business-driven impact.
+            {t("caseStudies.subtitle")}
           </p>
         </div>
 
@@ -547,13 +551,13 @@ export function CaseStudies() {
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
                 <div className="flex flex-col gap-2">
                   <span className="text-[11px] font-semibold text-black/35 dark:text-[#555] uppercase tracking-widest">
-                    The Challenge
+                    {t("caseStudies.challenge")}
                   </span>
                   <p className="text-[14px] text-black/50 dark:text-[#8b8b8b] leading-relaxed font-medium">{study.challenge}</p>
                 </div>
                 <div className="flex flex-col gap-2">
                   <span className="text-[11px] font-semibold text-black/35 dark:text-[#555] uppercase tracking-widest">
-                    Our Approach
+                    {t("caseStudies.approach")}
                   </span>
                   <p className="text-[14px] text-black/50 dark:text-[#8b8b8b] leading-relaxed font-medium">{study.solution}</p>
                 </div>
@@ -565,7 +569,7 @@ export function CaseStudies() {
                 className="flex flex-col gap-4 pt-8 border-t border-[#4EB3E8]/10 dark:border-[#1e1e1e]"
               >
                 <span className="text-[11px] font-semibold text-black/35 dark:text-[#555] uppercase tracking-widest">
-                  Key Metrics
+                  {t("caseStudies.keyMetrics")}
                 </span>
                 <div className="flex flex-wrap gap-8">
                   {study.metrics.map((m) => (
@@ -581,7 +585,7 @@ export function CaseStudies() {
                   className="group inline-flex items-center gap-1.5 text-[13px] font-medium transition-all duration-300"
                   style={{ color: study.accentColor }}
                 >
-                  View full case study
+                  {t("caseStudies.viewCaseStudy")}
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
@@ -592,7 +596,7 @@ export function CaseStudies() {
               <div className="flex items-center gap-2 mb-8">
                 <TrendingUp className="w-4 h-4 text-black/35 dark:text-[#555]" />
                 <span className="text-[12px] font-semibold text-black/35 dark:text-[#555] uppercase tracking-widest">
-                  Timeline
+                  {t("caseStudies.timeline")}
                 </span>
               </div>
 
@@ -614,10 +618,10 @@ export function CaseStudies() {
                 style={{ borderColor: `${study.accentColor}30`, background: `${study.accentColor}08` }}
               >
                 <p className="text-[12px] text-black/40 dark:text-[#666] leading-relaxed mb-3 font-medium">
-                  Every engagement starts with a no-commitment discovery call.
+                  {t("caseStudies.discoveryCallDesc", "Every engagement starts with a no-commitment discovery call.")}
                 </p>
                 <button className="inline-flex items-center gap-1 text-[12px] font-semibold text-black dark:text-white hover:gap-2 transition-all duration-200">
-                  Start a conversation <ChevronRight className="w-3.5 h-3.5" />
+                  {t("caseStudies.startConversation", "Start a conversation")} <ChevronRight className="w-3.5 h-3.5" />
                 </button>
               </div>
             </div>
@@ -643,7 +647,7 @@ export function CaseStudies() {
             ))}
           </div>
           <span className="text-[12px] text-black/35 dark:text-[#555]">
-            {allEntries.findIndex((c) => c.id === active) + 1} / {allEntries.length} projects
+            {allEntries.findIndex((c) => c.id === active) + 1} / {allEntries.length} {t("caseStudies.projects", "projects")}
           </span>
         </div>
 
@@ -651,7 +655,7 @@ export function CaseStudies() {
         <div className="flex justify-center mt-14">
           <Link href="/our-work">
               <Button size="lg" className="rounded-lg bg-black text-white hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/90 px-8 font-semibold">
-              Our Work
+              {t("caseStudies.ourWork", "Our Work")}
               <ArrowRight size={16} className="ml-2" />
             </Button>
           </Link>

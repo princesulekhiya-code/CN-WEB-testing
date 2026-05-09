@@ -8,6 +8,8 @@ import {
   ChevronRight, CalendarCheck, FileSearch, Handshake, BarChart3,
   Zap, Globe, Award, BrainCircuit, Layers, Code2, Sparkles,
 } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 
 const CALENDLY_URL = "https://calendly.com/princesulekhiya2004/30min";
 
@@ -108,6 +110,11 @@ const stats = [
 export default function FreeConsultationPage() {
   const [activeStep, setActiveStep] = useState(0);
   const [isDark, setIsDark] = useState(false);
+  const translatedBenefits = useTranslatedData(benefits);
+  const translatedProcessSteps = useTranslatedData(processSteps);
+  const translatedConsultationTypes = useTranslatedData(consultationTypes);
+  const translatedStats = useTranslatedData(stats);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const check = () => setIsDark(document.documentElement.classList.contains("dark"));
@@ -157,8 +164,8 @@ export default function FreeConsultationPage() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.15]"
               >
-                Let&apos;s Build Your{" "}
-                <span className="text-[#4EB3E8]">Vision Together</span>
+                {t("freeConsult.hero.title", "Let's Build Your")}{" "}
+                <span className="text-[#4EB3E8]">{t("freeConsult.hero.titleHighlight", "Vision Together")}</span>
               </motion.h1>
 
               <motion.p
@@ -167,7 +174,7 @@ export default function FreeConsultationPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="mt-5 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-lg"
               >
-                Book a free 30-minute strategy session with our senior architects. Get a custom roadmap, technology recommendations, and a transparent project estimate  -  zero obligation.
+                {t("freeConsult.hero.description", "Book a free 30-minute strategy session with our senior architects. Get a custom roadmap, technology recommendations, and a transparent project estimate  -  zero obligation.")}
               </motion.p>
 
               {/* Trust badges */}
@@ -178,9 +185,9 @@ export default function FreeConsultationPage() {
                 className="mt-8 flex flex-wrap gap-4"
               >
                 {[
-                  { icon: Shield, label: "NDA Protected" },
-                  { icon: Clock, label: "30 Min Session" },
-                  { icon: Award, label: "Senior Architects" },
+                  { icon: Shield, label: t("freeConsult.hero.ndaProtected", "NDA Protected") },
+                  { icon: Clock, label: t("freeConsult.hero.thirtyMinSession", "30 Min Session") },
+                  { icon: Award, label: t("freeConsult.hero.seniorArchitects", "Senior Architects") },
                 ].map(({ icon: Icon, label }) => (
                   <div key={label} className="flex items-center gap-2 text-xs font-semibold text-black/40 dark:text-white/35">
                     <Icon className="w-4 h-4 text-[#4EB3E8]" strokeWidth={1.5} />
@@ -202,8 +209,8 @@ export default function FreeConsultationPage() {
                   <CalendarCheck className="w-4 h-4 text-[#4EB3E8]" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold tracking-tight">Select a Date & Time</h3>
-                  <p className="text-[11px] text-black/40 dark:text-white/40">30 min • Free consultation</p>
+                  <h3 className="text-sm font-bold tracking-tight">{t("freeConsult.calendly.title", "Select a Date & Time")}</h3>
+                  <p className="text-[11px] text-black/40 dark:text-white/40">{t("freeConsult.calendly.subtitle", "30 min • Free consultation")}</p>
                 </div>
               </div>
               {isDark ? <CalendlyEmbed /> : <CalendlyEmbedLight />}
@@ -216,7 +223,7 @@ export default function FreeConsultationPage() {
       <div className="border-y border-black/[0.05] dark:border-white/[0.05]">
         <div className="mx-auto max-w-7xl px-6 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, i) => (
+            {translatedStats.map((stat, i) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 16 }}
@@ -247,16 +254,16 @@ export default function FreeConsultationPage() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            <span className="text-[#4EB3E8]">What You&apos;ll</span>{" "}
-            <span>Walk Away With</span>
+            <span className="text-[#4EB3E8]">{t("freeConsult.whatYouGet.title", "What You'll")}</span>{" "}
+            <span>{t("freeConsult.whatYouGet.titleHighlight", "Walk Away With")}</span>
           </h2>
           <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
-            Every consultation is designed to deliver tangible, actionable value.
+            {t("freeConsult.whatYouGet.description", "Every consultation is designed to deliver tangible, actionable value.")}
           </p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {benefits.map((b, i) => {
+          {translatedBenefits.map((b, i) => {
             const Icon = b.icon;
             return (
               <motion.div
@@ -289,16 +296,16 @@ export default function FreeConsultationPage() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              <span className="text-[#4EB3E8]">Consultation</span>{" "}
-              <span>Areas</span>
+              <span className="text-[#4EB3E8]">{t("freeConsult.areas.title", "Consultation")}</span>{" "}
+              <span>{t("freeConsult.areas.titleHighlight", "Areas")}</span>
             </h2>
             <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
-              We offer expert guidance across every area of digital product development.
+              {t("freeConsult.areas.description", "We offer expert guidance across every area of digital product development.")}
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {consultationTypes.map((ct, i) => {
+            {translatedConsultationTypes.map((ct, i) => {
               const Icon = ct.icon;
               return (
                 <motion.div
@@ -333,16 +340,16 @@ export default function FreeConsultationPage() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            <span className="text-[#4EB3E8]">How It</span>{" "}
-            <span>Works</span>
+            <span className="text-[#4EB3E8]">{t("freeConsult.process.title", "How It")}</span>{" "}
+            <span>{t("freeConsult.process.titleHighlight", "Works")}</span>
           </h2>
           <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
-            Four simple steps from booking to receiving your custom proposal.
+            {t("freeConsult.process.description", "Four simple steps from booking to receiving your custom proposal.")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-          {processSteps.map((step, i) => {
+          {translatedProcessSteps.map((step, i) => {
             const Icon = step.icon;
             const isActive = activeStep === i;
             return (
@@ -415,13 +422,13 @@ export default function FreeConsultationPage() {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                Ready to Get Started?
+                {t("freeConsult.cta.title", "Ready to Get Started?")}
                 <br />
-                <span className="text-[#4EB3E8]">Let&apos;s Talk Today</span>
+                <span className="text-[#4EB3E8]">{t("freeConsult.cta.titleHighlight", "Let's Talk Today")}</span>
               </h2>
 
               <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed">
-                Join 500+ companies who&apos;ve accelerated their growth with our expert guidance.
+                {t("freeConsult.cta.description", "Join 500+ companies who've accelerated their growth with our expert guidance.")}
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -430,15 +437,15 @@ export default function FreeConsultationPage() {
                   onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-lg"
                 >
-                  Book Free Consultation <ArrowRight className="w-4 h-4" />
+                  {t("freeConsult.cta.bookConsultation", "Book Free Consultation")} <ArrowRight className="w-4 h-4" />
                 </a>
                 <div className="flex items-center justify-center gap-4">
                   <a href="mailto:work@cloudnexus.in" className="flex items-center gap-2 text-sm font-semibold text-black/50 dark:text-white/45 hover:text-[#4EB3E8] transition-colors">
-                    <Mail className="w-4 h-4" /> Email Us
+                    <Mail className="w-4 h-4" /> {t("freeConsult.cta.emailUs", "Email Us")}
                   </a>
                   <span className="text-black/15 dark:text-white/15">|</span>
                   <a href="tel:+918793830447" className="flex items-center gap-2 text-sm font-semibold text-black/50 dark:text-white/45 hover:text-[#4EB3E8] transition-colors">
-                    <Phone className="w-4 h-4" /> Call Us
+                    <Phone className="w-4 h-4" /> {t("freeConsult.cta.callUs", "Call Us")}
                   </a>
                 </div>
               </div>

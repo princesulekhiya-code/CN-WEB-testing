@@ -3,12 +3,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "@/hooks/use-in-view";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { TechCategory, TechItem, ServicePageSectionProps } from "./types";
 
 export function TechStackSection({
-  heading,
-  categories,
+  heading: rawHeading,
+  categories: rawCategories,
 }: { heading: ServicePageSectionProps; categories: TechCategory[] }) {
+  const heading = useTranslatedData(rawHeading);
+  const categories = useTranslatedData(rawCategories);
   const { ref, visible } = useInView(0.1);
   const [activeTab, setActiveTab] = useState(0);
   const allTechs = categories.flatMap((c) => c.items);

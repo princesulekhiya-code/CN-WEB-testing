@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { getJobBySlug, submitApplication } from "@/lib/api/services/job.service";
 import type { JobListing, ApplicationData } from "@/lib/api/services/job.service";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface ApplyForm {
   fullName: string;
@@ -38,6 +39,7 @@ function formatDate(dateStr: string) {
 }
 
 export default function JobDetailPage() {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   const [job, setJob] = useState<JobListing | null>(null);
   const [loading, setLoading] = useState(true);
@@ -96,7 +98,7 @@ export default function JobDetailPage() {
       const msg = err && typeof err === "object" && "response" in err
         ? (err as { response?: { data?: { message?: string } } }).response?.data?.message
         : undefined;
-      setApplyError(msg || "Failed to submit application. Please try again.");
+      setApplyError(msg || t("careerPost.submitError", "Failed to submit application. Please try again."));
     } finally {
       setApplyLoading(false);
     }
@@ -123,9 +125,9 @@ export default function JobDetailPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black text-black dark:text-white gap-4">
         <Briefcase className="w-14 h-14 text-black/15 dark:text-white/15" />
-        <h1 className="text-2xl font-bold">Job not found</h1>
+        <h1 className="text-2xl font-bold">{t("careerPost.notFound", "Job not found")}</h1>
         <Link href="/resources/career" className="text-sm text-[#4EB3E8] hover:underline flex items-center gap-1.5">
-          <ArrowLeft className="w-4 h-4" /> Back to careers
+          <ArrowLeft className="w-4 h-4" /> {t("careerPost.backToCareers", "Back to careers")}
         </Link>
       </div>
     );
@@ -137,14 +139,14 @@ export default function JobDetailPage() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           {/* Back link */}
           <Link href="/resources/career" className="inline-flex items-center gap-1.5 text-sm text-black/40 dark:text-white/35 hover:text-[#4EB3E8] transition-colors mb-8">
-            <ArrowLeft className="w-4 h-4" /> Back to careers
+            <ArrowLeft className="w-4 h-4" /> {t("careerPost.backToCareers", "Back to careers")}
           </Link>
 
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
             <div className="flex items-center gap-3 text-xs text-black/40 dark:text-white/35">
               <button onClick={copyJobId} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/[0.03] dark:bg-white/[0.04] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#4EB3E8]/30 transition-colors font-mono">
-                JOB ID: {job.id.slice(0, 10).toUpperCase()}
+                {t("careerPost.jobIdLabel", "JOB ID:")} {job.id.slice(0, 10).toUpperCase()}
                 {copied ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
               </button>
             </div>
@@ -185,7 +187,7 @@ export default function JobDetailPage() {
               onClick={() => setShowApply(true)}
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 shadow-lg transition-all duration-300"
             >
-              Apply for this position
+              {t("careerPost.applyForPosition", "Apply for this position")}
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -193,7 +195,7 @@ export default function JobDetailPage() {
           {/* Job Description */}
           {job.description && job.description.length > 0 && (
             <div className="mb-10 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-[#fafafa] dark:bg-white/[0.02] p-6 sm:p-8">
-              <h2 className="text-lg font-bold mb-5">Job Description</h2>
+              <h2 className="text-lg font-bold mb-5">{t("careerPost.jobDescription", "Job Description")}</h2>
               <div className="space-y-4 text-sm text-black/70 dark:text-white/65 leading-relaxed">
                 {job.description.map((block, i) => {
                   const lines = block.split(/(?:\.\s+|\n)/).filter(Boolean);
@@ -249,13 +251,13 @@ export default function JobDetailPage() {
 
           {/* Bottom Apply CTA */}
           <div className="mt-12 pt-8 border-t border-black/[0.06] dark:border-white/[0.06] text-center">
-            <h3 className="text-xl font-bold mb-2">Interested in this role?</h3>
-            <p className="text-sm text-black/45 dark:text-white/40 mb-6">Apply now and our HR team will get back to you within 48 hours.</p>
+            <h3 className="text-xl font-bold mb-2">{t("careerPost.interestedInRole", "Interested in this role?")}</h3>
+            <p className="text-sm text-black/45 dark:text-white/40 mb-6">{t("careerPost.applyPrompt", "Apply now and our HR team will get back to you within 48 hours.")}</p>
             <button
               onClick={() => setShowApply(true)}
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 shadow-lg transition-all duration-300"
             >
-              Apply Now
+              {t("careerPost.applyNow", "Apply Now")}
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -282,7 +284,7 @@ export default function JobDetailPage() {
             >
               <div className="p-6 border-b border-black/[0.06] dark:border-white/[0.06] flex items-center justify-between">
                 <div>
-                  <h3 className="text-lg font-bold">Apply for {job.title}</h3>
+                  <h3 className="text-lg font-bold">{t("careerPost.applyFor", "Apply for")} {job.title}</h3>
                   <p className="text-xs text-black/40 dark:text-white/35 mt-0.5">
                     {job.department} &middot; {job.location} &middot; {job.employmentType}
                   </p>
@@ -298,12 +300,12 @@ export default function JobDetailPage() {
                     <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-500/10 border border-green-500/20">
                       <CheckCircle2 className="w-7 h-7 text-green-500" />
                     </div>
-                    <h4 className="text-xl font-bold mb-2">Application Submitted!</h4>
+                    <h4 className="text-xl font-bold mb-2">{t("careerPost.applicationSubmitted", "Application Submitted!")}</h4>
                     <p className="text-sm text-black/50 dark:text-white/45 mb-6 max-w-xs mx-auto">
-                      We&apos;ve received your application for {job.title}. Our HR team will review and get back to you soon.
+                      {t("careerPost.applicationReceived", "We've received your application for")} {job.title}. {t("careerPost.hrReview", "Our HR team will review and get back to you soon.")}
                     </p>
                     <button onClick={closeModal} className="px-6 py-2.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold shadow-lg transition-colors">
-                      Close
+                      {t("careerPost.close", "Close")}
                     </button>
                   </motion.div>
                 ) : (
@@ -323,48 +325,48 @@ export default function JobDetailPage() {
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                            Full Name <span className="text-[#4EB3E8]">*</span>
+                            {t("careerPost.fullName", "Full Name")} <span className="text-[#4EB3E8]">*</span>
                           </label>
-                          <input type="text" name="fullName" value={applyForm.fullName} onChange={handleApplyChange} required placeholder="Your full name" className={inputCls} />
+                          <input type="text" name="fullName" value={applyForm.fullName} onChange={handleApplyChange} required placeholder={t("careerPost.fullNamePlaceholder", "Your full name")} className={inputCls} />
                         </div>
                         <div>
                           <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                            Email <span className="text-[#4EB3E8]">*</span>
+                            {t("careerPost.email", "Email")} <span className="text-[#4EB3E8]">*</span>
                           </label>
-                          <input type="email" name="email" value={applyForm.email} onChange={handleApplyChange} required placeholder="you@email.com" className={inputCls} />
+                          <input type="email" name="email" value={applyForm.email} onChange={handleApplyChange} required placeholder={t("careerPost.emailPlaceholder", "you@email.com")} className={inputCls} />
                         </div>
                       </div>
 
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                            Phone <span className="text-[#4EB3E8]">*</span>
+                            {t("careerPost.phone", "Phone")} <span className="text-[#4EB3E8]">*</span>
                           </label>
                           <input type="tel" name="phone" value={applyForm.phone} onChange={handleApplyChange} required placeholder="+91 XXXXX XXXXX" className={inputCls} />
                         </div>
                         <div>
-                          <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">Current Company</label>
-                          <input type="text" name="currentCompany" value={applyForm.currentCompany} onChange={handleApplyChange} placeholder="Company name" className={inputCls} />
+                          <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">{t("careerPost.currentCompany", "Current Company")}</label>
+                          <input type="text" name="currentCompany" value={applyForm.currentCompany} onChange={handleApplyChange} placeholder={t("careerPost.companyPlaceholder", "Company name")} className={inputCls} />
                         </div>
                       </div>
 
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">Experience</label>
-                          <input type="text" name="experience" value={applyForm.experience} onChange={handleApplyChange} placeholder="e.g. 3 years" className={inputCls} />
+                          <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">{t("careerPost.experience", "Experience")}</label>
+                          <input type="text" name="experience" value={applyForm.experience} onChange={handleApplyChange} placeholder={t("careerPost.experiencePlaceholder", "e.g. 3 years")} className={inputCls} />
                         </div>
                         <div>
-                          <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">Current CTC</label>
-                          <input type="text" name="ctc" value={applyForm.ctc} onChange={handleApplyChange} placeholder="e.g. 8 LPA" className={inputCls} />
+                          <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">{t("careerPost.currentCTC", "Current CTC")}</label>
+                          <input type="text" name="ctc" value={applyForm.ctc} onChange={handleApplyChange} placeholder={t("careerPost.ctcPlaceholder", "e.g. 8 LPA")} className={inputCls} />
                         </div>
                       </div>
 
                       <div>
-                        <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">Resume</label>
+                        <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">{t("careerPost.resume", "Resume")}</label>
                         <label className={`${inputCls} flex items-center gap-3 cursor-pointer`}>
                           <Upload className="w-4 h-4 text-black/30 dark:text-white/30 flex-shrink-0" />
                           <span className={`text-sm ${applyForm.resume ? "" : "text-black/30 dark:text-white/25"}`}>
-                            {applyForm.resume ? applyForm.resume.name : "Upload your resume (PDF, DOC)"}
+                            {applyForm.resume ? applyForm.resume.name : t("careerPost.uploadResume", "Upload your resume (PDF, DOC)")}
                           </span>
                           <input type="file" name="resume" accept=".pdf,.doc,.docx" onChange={handleFileChange} className="hidden" />
                         </label>
@@ -378,11 +380,11 @@ export default function JobDetailPage() {
                         {applyLoading ? (
                           <>
                             <Loader2 className="w-4 h-4 animate-spin" />
-                            Submitting...
+                            {t("careerPost.submitting", "Submitting...")}
                           </>
                         ) : (
                           <>
-                            Submit Application
+                            {t("careerPost.submitApplication", "Submit Application")}
                             <ArrowRight className="w-4 h-4" />
                           </>
                         )}

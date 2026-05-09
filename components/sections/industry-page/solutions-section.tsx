@@ -3,14 +3,19 @@
 import { useState, useRef, useCallback } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { IndustrySolutionsProps } from "./types";
 
 export function IndustrySolutionsSection({
-  heading,
-  subtitle,
-  solutions,
+  heading: rawHeading,
+  subtitle: rawSubtitle,
+  solutions: rawSolutions,
   accentColor = "#4EB3E8",
 }: IndustrySolutionsProps) {
+  const heading = useTranslatedData(rawHeading);
+  const subtitle = useTranslatedData(rawSubtitle);
+  const solutions = useTranslatedData(rawSolutions);
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [active, setActive] = useState(0);

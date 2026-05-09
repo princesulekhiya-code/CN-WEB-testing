@@ -4,6 +4,8 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Globe, Handshake, BrainCircuit, ArrowRight, Award, Target, Users } from "lucide-react";
 import Link from "next/link";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 function AnimatedStat({ stat, isInView }: { stat: string; isInView: boolean }) {
   const numMatch = stat.match(/^([\d.]+)(.*)$/);
@@ -198,6 +200,8 @@ const features = [
 ];
 
 export function WhyCloudNexus() {
+  const { t } = useTranslation();
+  const translatedFeatures = useTranslatedData(features);
   const sectionRef = useRef<HTMLElement>(null);
   const gridRef = useRef(null);
   const isInView = useInView(gridRef, { once: true, margin: "-80px" });
@@ -212,27 +216,27 @@ export function WhyCloudNexus() {
       <motion.div style={{ y: orbY2 }} className="absolute -bottom-20 -right-20 w-[350px] h-[350px] bg-indigo-500/[0.04] rounded-full blur-[100px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-6 md:px-8">
         <div className="text-center mb-10">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 100, damping: 15 }}
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 100, damping: 15 }}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]"
-          >
-            Your Partner for Scalable,
-            <br className="hidden sm:block" />
-            <span className="text-black dark:text-white">Efficient, and Transparent Hiring</span>
-          </motion.h2>
+            >
+            {t("knownFor.titleBlue", "Your Partner for Scalable,")}
+              <br className="hidden sm:block" />
+            <span className="text-black dark:text-white">{t("knownFor.titleWhite", "Efficient, and Transparent Hiring")}</span>
+            </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
-            className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto"
-          >
-            For over a decade, CloudNexus has helped enterprises build smarter, scale seamlessly, and optimize costs with high-performance solutions.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.1 }}
+              className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto"
+            >
+            {t("knownFor.subtitle", "For over a decade, CloudNexus has helped enterprises build smarter, scale seamlessly, and optimize costs with high-performance solutions.")}
+            </motion.p>
         </div>
 
         {/* Bento Grid: Row 1 = large(2col) + 2 small stacked | Row 2 = 4 equal */}
@@ -242,10 +246,10 @@ export function WhyCloudNexus() {
             className="lg:col-span-1 lg:row-span-1 contents lg:block"
           >
             {(() => {
-              const feature = features[0];
+              const feature = translatedFeatures[0];
               const isHovered = hoveredIdx === 0;
               return (
-                <motion.div
+        <motion.div
                   initial={{ opacity: 0, y: 40, scale: 0.95 }}
                   animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                   transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0 }}
@@ -253,7 +257,7 @@ export function WhyCloudNexus() {
                   onMouseLeave={() => setHoveredIdx(null)}
                   className="group relative rounded-2xl bg-[#D9EAFD] dark:bg-[#121212] border border-[#4EB3E8]/10 dark:border-[#2e2e2e] hover:border-[#4EB3E8]/25 dark:hover:border-[#4EB3E8]/50 hover:bg-[#cde3fc] dark:hover:bg-[#161616] hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(59,130,246,0.1)] transition-all duration-500 p-6 sm:p-8 overflow-hidden cursor-pointer h-full"
                 >
-                  <motion.div
+            <motion.div
                     className="absolute top-0 right-0 w-[220px] h-[140px] text-[#4EB3E8] pointer-events-none"
                     initial={false}
                     animate={{ opacity: isHovered ? 1 : 0, scale: isHovered ? 1 : 0.7, x: isHovered ? -8 : 20, y: isHovered ? 8 : -10 }}
@@ -290,7 +294,7 @@ export function WhyCloudNexus() {
 
           {/* Middle: tall card */}
           {(() => {
-            const feature = features[1];
+            const feature = translatedFeatures[1];
             const isHovered = hoveredIdx === 1;
             return (
               <motion.div
@@ -326,7 +330,7 @@ export function WhyCloudNexus() {
 
           {/* Right: 2 stacked small cards */}
           <div className="flex flex-col gap-4">
-            {features.slice(2, 4).map((feature, idx) => {
+            {translatedFeatures.slice(2, 4).map((feature, idx) => {
               const i = idx + 2;
               const isHovered = hoveredIdx === i;
               return (
@@ -352,15 +356,15 @@ export function WhyCloudNexus() {
                       <h3 className="text-sm font-semibold text-black/85 dark:text-[#ededed] tracking-tight group-hover:text-[#4EB3E8] transition-colors duration-500">{feature.title}</h3>
                       <span className="text-lg font-bold text-black dark:text-white tabular-nums"><AnimatedStat stat={feature.stat} isInView={isInView} /></span>
                       <span className="text-[10px] text-black/35 dark:text-[#555] ml-1.5 uppercase tracking-wider font-medium">{feature.statLabel}</span>
-                    </div>
-                  </div>
-                </motion.div>
+                </div>
+              </div>
+            </motion.div>
               );
             })}
           </div>
 
           {/* Row 2: 2 equal cards */}
-          {features.slice(4).map((feature, idx) => {
+          {translatedFeatures.slice(4).map((feature, idx) => {
             const i = idx + 4;
             const isHovered = hoveredIdx === i;
             return (
@@ -392,7 +396,7 @@ export function WhyCloudNexus() {
                     <p className="text-[11px] text-black/35 dark:text-[#555] mt-0.5 uppercase tracking-wider font-medium">{feature.statLabel}</p>
                   </div>
                 </div>
-              </motion.div>
+        </motion.div>
             );
           })}
         </div>
@@ -408,7 +412,7 @@ export function WhyCloudNexus() {
             href="/company/about-us"
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-black text-white dark:bg-white dark:text-black text-sm font-medium hover:bg-black/80 dark:hover:bg-white/80 transition-all duration-300"
           >
-            Learn more about us
+            {t("knownFor.learnMore", "Learn more about us")}
             <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>

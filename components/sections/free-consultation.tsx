@@ -4,16 +4,17 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, MessageSquare, Clock, Shield } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 const highlightIcons = [MessageSquare, Clock, Shield];
 
-const consultationHighlights = [
-  "1-on-1 Expert Session",
-  "30 Min Free Call",
-  "No Commitment Required",
-];
-
 export function FreeConsultation() {
+  const { t } = useTranslation();
+  const consultationHighlights = [
+    t("consultation.expertAdviceDesc", "1-on-1 Expert Session"),
+    t("consultation.freeCallDesc", "30 Min Free Call"),
+    t("consultation.noStringsDesc", "No Commitment Required"),
+  ];
   const sectionRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
@@ -65,16 +66,16 @@ export function FreeConsultation() {
                   visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >
-                Let&apos;s Build Something
+                {t("consultation.titleBlue", "Let's Build Something")}
                 <br className="hidden sm:block" />
-                <span className="text-black dark:text-white">Great Together</span>
+                <span className="text-black dark:text-white">{t("consultation.titleWhite", "Great Together")}</span>
               </h2>
               <p
                 className={`text-sm md:text-base text-black/50 dark:text-white/50 leading-relaxed max-w-md mb-8 transition-all duration-600 delay-[400ms] ${
                   visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >
-                Book a free consultation with our experts. Share your vision, discuss your challenges, and get a tailored roadmap  -  no strings attached.
+                {t("consultation.subtitle")}
               </p>
 
               <div
@@ -102,7 +103,7 @@ export function FreeConsultation() {
                   href="/resources/contact"
                   className="group inline-flex items-center gap-2.5 rounded-lg bg-black dark:bg-white text-white dark:text-black px-7 py-3 text-sm font-semibold hover:bg-black/80 dark:hover:bg-white/90 transition-all duration-300 shadow-lg shadow-black/10 dark:shadow-white/10"
                 >
-                  Get Free Consultation
+                  {t("consultation.cta")}
                   <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
               </div>
@@ -115,10 +116,10 @@ export function FreeConsultation() {
             >
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { icon: MessageSquare, label: "Expert Advice", sub: "1-on-1 sessions", color: "#4EB3E8" },
-                  { icon: Clock, label: "Quick Response", sub: "Within 24 hours", color: "#8b5cf6" },
-                  { icon: Shield, label: "No Strings", sub: "Zero commitment", color: "#10b981" },
-                  { icon: ArrowRight, label: "Free Call", sub: "30 min session", color: "#f59e0b" },
+                  { icon: MessageSquare, label: t("consultation.card.expertAdvice", "Expert Advice"), sub: t("consultation.card.expertAdviceSub", "1-on-1 sessions"), color: "#4EB3E8" },
+                  { icon: Clock, label: t("consultation.card.quickResponse", "Quick Response"), sub: t("consultation.card.quickResponseSub", "Within 24 hours"), color: "#8b5cf6" },
+                  { icon: Shield, label: t("consultation.card.noStrings", "No Strings"), sub: t("consultation.card.noStringsSub", "Zero commitment"), color: "#10b981" },
+                  { icon: ArrowRight, label: t("consultation.card.freeCall", "Free Call"), sub: t("consultation.card.freeCallSub", "30 min session"), color: "#f59e0b" },
                 ].map((card) => {
                   const Icon = card.icon;
                   return (

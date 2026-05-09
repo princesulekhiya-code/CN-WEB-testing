@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft, Loader2, Calendar, User, BookOpen, Clock, Share2 } from "lucide-react";
 import { getBlogBySlug, type BlogPost } from "@/lib/api/services/blog.service";
+import { useTranslation } from "@/lib/i18n/context";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
@@ -22,6 +23,7 @@ function estimateReadTime(content?: string): number {
 }
 
 export default function BlogDetailPage() {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   const [blog, setBlog] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
@@ -47,10 +49,10 @@ export default function BlogDetailPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black text-black dark:text-white gap-4">
         <BookOpen className="w-14 h-14 text-black/10 dark:text-white/10 mb-2" />
-        <h1 className="text-2xl font-bold">Blog post not found</h1>
-        <p className="text-sm text-black/40 dark:text-white/35">The article you&#39;re looking for doesn&#39;t exist or has been removed.</p>
+        <h1 className="text-2xl font-bold">{t("blogPost.notFound", "Blog post not found")}</h1>
+        <p className="text-sm text-black/40 dark:text-white/35">{t("blogPost.notFoundDescription", "The article you're looking for doesn't exist or has been removed.")}</p>
         <Link href="/resources/blog" className="mt-2 inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-[#4EB3E8] hover:bg-[#3da0d5] transition-colors">
-          <ArrowLeft className="w-4 h-4" /> Back to blog
+          <ArrowLeft className="w-4 h-4" /> {t("blogPost.backToBlog", "Back to blog")}
         </Link>
       </div>
     );
@@ -81,7 +83,7 @@ export default function BlogDetailPage() {
                 : "text-black/40 dark:text-white/35 hover:text-[#4EB3E8]"
             }`}
           >
-            <ArrowLeft className="w-4 h-4" /> All articles
+            <ArrowLeft className="w-4 h-4" /> {t("blogPost.allArticles", "All articles")}
           </Link>
 
           {/* Article header card */}
@@ -94,7 +96,7 @@ export default function BlogDetailPage() {
               )}
               <div className="flex items-center gap-1.5 text-xs text-black/35 dark:text-white/30">
                 <Clock className="w-3 h-3" />
-                {readTime} min read
+                {readTime} {t("blogPost.minRead", "min read")}
               </div>
             </div>
 
@@ -138,7 +140,7 @@ export default function BlogDetailPage() {
                   }
                 }}
                 className="p-2.5 rounded-xl border border-black/[0.06] dark:border-white/[0.06] text-black/40 dark:text-white/30 hover:border-[#4EB3E8]/30 hover:text-[#4EB3E8] transition-all"
-                title="Share article"
+                title={t("blogPost.share", "Share article")}
               >
                 <Share2 className="w-4 h-4" />
               </button>
@@ -160,7 +162,7 @@ export default function BlogDetailPage() {
               href="/resources/blog"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-[#4EB3E8] hover:bg-[#3da0d5] transition-colors"
             >
-              <ArrowLeft className="w-4 h-4" /> Back to all articles
+              <ArrowLeft className="w-4 h-4" /> {t("blogPost.backToAllArticles", "Back to all articles")}
             </Link>
           </div>
         </motion.article>

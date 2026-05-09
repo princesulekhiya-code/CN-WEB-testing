@@ -11,6 +11,8 @@ import {
   ShoppingBag, Cloud, Megaphone, Settings, ServerCog, Monitor, Phone,
   Sprout, Leaf, TreePine, Sun,
 } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 
 /* ═══════ ANIMATED COUNTER ═══════ */
 function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -85,7 +87,8 @@ const missionPoints = [
   { icon: Shield, text: "Empowering businesses of all sizes with accessible, secure, and intelligent IT infrastructure that fosters productivity and long-term success." },
 ];
 
-function VisionMissionSection() {
+function VisionMissionSection({ missionPoints: mp }: { missionPoints: typeof missionPoints }) {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"vision" | "mission">("vision");
 
   return (
@@ -99,8 +102,8 @@ function VisionMissionSection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            <span className="text-[#4EB3E8]">Our Purpose</span>{" "}
-            <span>& Direction</span>
+            <span className="text-[#4EB3E8]">{t("overview.vision.title", "Our Purpose")}</span>{" "}
+            <span>{t("overview.vision.titleHighlight", "& Direction")}</span>
           </h2>
         </motion.div>
 
@@ -130,7 +133,7 @@ function VisionMissionSection() {
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
                 )}
-                <span className="relative z-10 capitalize">Our {tab}</span>
+                <span className="relative z-10 capitalize">{tab === "vision" ? t("overview.vision.tabVision", "Our vision") : t("overview.vision.tabMission", "Our mission")}</span>
               </button>
             ))}
           </div>
@@ -151,16 +154,16 @@ function VisionMissionSection() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#4EB3E8]/10 border border-[#4EB3E8]/20">
                     <Eye className="w-6 h-6 text-[#4EB3E8]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-2xl font-bold tracking-tight">Our Vision</h3>
+                  <h3 className="text-2xl font-bold tracking-tight">{t("overview.vision.ourVision", "Our Vision")}</h3>
                 </div>
                 <p className="text-base text-black/55 dark:text-white/50 leading-relaxed">
-                  To be the global leader in IT solutions and digital product innovation, empowering businesses with progressive technology that enhances efficiency, scalability, and growth. At CloudNexus, we envision a future where businesses thrive by leveraging smart, automated, and future-ready solutions.
+                  {t("overview.vision.visionText", "To be the global leader in IT solutions and digital product innovation, empowering businesses with progressive technology that enhances efficiency, scalability, and growth. At CloudNexus, we envision a future where businesses thrive by leveraging smart, automated, and future-ready solutions.")}
                 </p>
               </div>
               <div className="md:col-span-2 relative">
                 <img
                   src="/images/stock/stock-62f261eec0.jpg"
-                  alt="Futuristic technology and digital innovation"
+                  alt={t("overview.vision.altVision", "Futuristic technology and digital innovation")}
                   className="w-full h-full object-cover rounded-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl pointer-events-none" />
@@ -180,13 +183,13 @@ function VisionMissionSection() {
                     <Rocket className="w-6 h-6 text-[#4EB3E8]" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold tracking-tight">Our Mission</h3>
-                    <p className="text-sm text-black/40 dark:text-white/35">Redefining the IT landscape</p>
+                    <h3 className="text-2xl font-bold tracking-tight">{t("overview.vision.ourMission", "Our Mission")}</h3>
+                    <p className="text-sm text-black/40 dark:text-white/35">{t("overview.vision.missionSubtitle", "Redefining the IT landscape")}</p>
                   </div>
                 </div>
 
                 <div className="grid gap-3">
-                  {missionPoints.map((point, i) => {
+                  {mp.map((point, i) => {
                     const Icon = point.icon;
                     return (
                       <motion.div
@@ -209,7 +212,7 @@ function VisionMissionSection() {
               <div className="md:col-span-2 relative flex items-center">
                 <img
                   src="/images/stock/stock-fcc914b15f.jpg"
-                  alt="Team working together on digital innovation"
+                  alt={t("overview.vision.altMission", "Team working together on digital innovation")}
                   className="w-full h-full object-cover rounded-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl pointer-events-none" />
@@ -224,6 +227,13 @@ function VisionMissionSection() {
 
 /* ═══════ PAGE ═══════ */
 export default function OverviewPage() {
+  const translatedStats = useTranslatedData(stats);
+  const translatedWhyCloudNexus = useTranslatedData(whyCloudNexus);
+  const translatedOfferings = useTranslatedData(offerings);
+  const translatedLocations = useTranslatedData(locations);
+  const translatedMissionPoints = useTranslatedData(missionPoints);
+  const { t } = useTranslation();
+
   return (
     <section className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
 
@@ -262,8 +272,8 @@ export default function OverviewPage() {
                 transition={{ duration: 0.5 }}
                 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]"
               >
-                Innovators, Problem-Solvers &{" "}
-                <span className="text-[#4EB3E8]">Architects of the Digital Future</span>
+                {t("overview.hero.title", "Innovators, Problem-Solvers &")}{" "}
+                <span className="text-[#4EB3E8]">{t("overview.hero.titleHighlight", "Architects of the Digital Future")}</span>
               </motion.h1>
 
               <motion.p
@@ -272,7 +282,7 @@ export default function OverviewPage() {
                 transition={{ duration: 0.5, delay: 0.15 }}
                 className="mt-6 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-xl"
               >
-                At CloudNexus, we are more than just an IT consulting company. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting, helping businesses thrive in an ever-evolving tech landscape.
+                {t("overview.hero.description", "At CloudNexus, we are more than just an IT consulting company. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting, helping businesses thrive in an ever-evolving tech landscape.")}
               </motion.p>
 
               <motion.div
@@ -285,13 +295,13 @@ export default function OverviewPage() {
                   href="/resources/free-consultation"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white dark:bg-white dark:text-black text-sm font-semibold hover:opacity-90 transition-all shadow-lg"
                 >
-                  Get Started <ArrowRight className="w-4 h-4" />
+                  {t("overview.hero.getStarted", "Get Started")} <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/company/about-us"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-black/10 dark:border-white/10 text-sm font-semibold hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-all"
                 >
-                  Learn About Us
+                  {t("overview.hero.learnAboutUs", "Learn About Us")}
                 </Link>
               </motion.div>
             </div>
@@ -306,7 +316,7 @@ export default function OverviewPage() {
               <div className="relative rounded-2xl overflow-hidden">
                 <img
                   src="/images/stock/stock-fc458b1405.jpg"
-                  alt="Team collaborating on digital solutions"
+                  alt={t("overview.hero.altTeam", "Team collaborating on digital solutions")}
                   className="w-full h-[420px] object-cover rounded-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-2xl" />
@@ -319,9 +329,9 @@ export default function OverviewPage() {
                   className="absolute bottom-5 left-5 right-5 flex gap-3"
                 >
                   {[
-                    { val: "200+", lbl: "Projects" },
-                    { val: "1+", lbl: "Year" },
-                    { val: "90+", lbl: "Teams" },
+                    { val: t("overview.hero.stat1Val", "200+"), lbl: t("overview.hero.stat1Label", "Projects") },
+                    { val: t("overview.hero.stat2Val", "1+"), lbl: t("overview.hero.stat2Label", "Year") },
+                    { val: t("overview.hero.stat3Val", "90+"), lbl: t("overview.hero.stat3Label", "Teams") },
                   ].map((s) => (
                     <div key={s.lbl} className="flex-1 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 px-3 py-2.5 text-center">
                       <div className="text-lg font-black text-white">{s.val}</div>
@@ -339,7 +349,7 @@ export default function OverviewPage() {
       <div className="border-y border-black/[0.05] dark:border-white/[0.05]">
         <div className="mx-auto max-w-7xl px-6 py-10">
           <div className="flex flex-wrap justify-between items-center gap-8">
-            {stats.map((stat, i) => (
+            {translatedStats.map((stat, i) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 16 }}
@@ -370,13 +380,13 @@ export default function OverviewPage() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-              <span className="text-[#4EB3E8]">Who We Are</span>
+              <span className="text-[#4EB3E8]">{t("overview.whoWeAre.title", "Who We Are")}</span>
             </h2>
             <p className="text-base text-black/55 dark:text-white/50 leading-relaxed mb-4">
-              At CloudNexus, we are more than just an IT consulting company  -  we are innovators, problem-solvers, and architects of the digital future. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting, helping businesses thrive in an ever-evolving tech landscape.
+              {t("overview.whoWeAre.description1", "At CloudNexus, we are more than just an IT consulting company  -  we are innovators, problem-solvers, and architects of the digital future. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting, helping businesses thrive in an ever-evolving tech landscape.")}
             </p>
             <p className="text-base text-black/55 dark:text-white/50 leading-relaxed">
-              Our team of technology experts, strategists, and problem-solvers collaborates closely with clients to design tailored solutions that enhance efficiency, drive growth, and future-proof operations. Whether it&apos;s cloud migration, software development, automation, or cybersecurity, we ensure that your IT ecosystem is agile, secure, and optimized for success.
+              {t("overview.whoWeAre.description2", "Our team of technology experts, strategists, and problem-solvers collaborates closely with clients to design tailored solutions that enhance efficiency, drive growth, and future-proof operations. Whether it's cloud migration, software development, automation, or cybersecurity, we ensure that your IT ecosystem is agile, secure, and optimized for success.")}
             </p>
           </motion.div>
 
@@ -390,7 +400,7 @@ export default function OverviewPage() {
             <div className="relative rounded-2xl overflow-hidden">
               <img
                 src="/images/stock/stock-bada4b3051.jpg"
-                alt="Team strategy and innovation"
+                alt={t("overview.whoWeAre.altTeam", "Team strategy and innovation")}
                 className="w-full h-[380px] object-cover rounded-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-black/50 via-black/20 to-transparent rounded-2xl" />
@@ -398,10 +408,10 @@ export default function OverviewPage() {
               {/* Overlay capabilities */}
               <div className="absolute bottom-5 left-5 right-5 grid grid-cols-2 gap-2">
                 {[
-                  { icon: Rocket, label: "Cloud Transformation" },
-                  { icon: BrainCircuit, label: "AI & Automation" },
-                  { icon: Code2, label: "Software Dev" },
-                  { icon: Shield, label: "Cybersecurity" },
+                  { icon: Rocket, label: t("overview.whoWeAre.capCloud", "Cloud Transformation") },
+                  { icon: BrainCircuit, label: t("overview.whoWeAre.capAI", "AI & Automation") },
+                  { icon: Code2, label: t("overview.whoWeAre.capSoftware", "Software Dev") },
+                  { icon: Shield, label: t("overview.whoWeAre.capCyber", "Cybersecurity") },
                 ].map(({ icon: Icon, label }) => (
                   <div key={label} className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15">
                     <Icon className="w-4 h-4 text-[#4EB3E8] flex-shrink-0" strokeWidth={1.5} />
@@ -418,7 +428,7 @@ export default function OverviewPage() {
       </div>
 
       {/* ═══════ MISSION & VISION ═══════ */}
-      <VisionMissionSection />
+      <VisionMissionSection missionPoints={translatedMissionPoints} />
 
       {/* ═══════ OUR SERVICES ═══════ */}
       <div className="border-y border-black/[0.05] dark:border-white/[0.05]">
@@ -431,16 +441,16 @@ export default function OverviewPage() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              <span className="text-[#4EB3E8]">Our</span>{" "}
-              <span>Services</span>
+              <span className="text-[#4EB3E8]">{t("overview.services.title", "Our")}</span>{" "}
+              <span>{t("overview.services.titleHighlight", "Services")}</span>
             </h2>
             <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
-              End-to-end technology capabilities tailored to your business stage and growth ambitions.
+              {t("overview.services.description", "End-to-end technology capabilities tailored to your business stage and growth ambitions.")}
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-            {offerings.map((item, i) => {
+            {translatedOfferings.map((item, i) => {
               const Icon = item.icon;
               return (
                 <Link key={item.title} href={item.href}>
@@ -474,11 +484,11 @@ export default function OverviewPage() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            <span className="text-[#4EB3E8]">Why</span>{" "}
-            <span>CloudNexus?</span>
+            <span className="text-[#4EB3E8]">{t("overview.whyCloudNexus.title", "Why")}</span>{" "}
+            <span>{t("overview.whyCloudNexus.titleHighlight", "CloudNexus?")}</span>
           </h2>
           <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-2xl mx-auto">
-            Choosing the right technology partner is crucial for business success. We don&apos;t just offer IT solutions  -  we create transformative experiences that drive innovation, efficiency, and growth.
+            {t("overview.whyCloudNexus.description", "Choosing the right technology partner is crucial for business success. We don't just offer IT solutions  -  we create transformative experiences that drive innovation, efficiency, and growth.")}
           </p>
         </motion.div>
 
@@ -494,7 +504,7 @@ export default function OverviewPage() {
             <div className="relative rounded-2xl overflow-hidden h-full min-h-[420px]">
               <img
                 src="/images/stock/stock-72d9fb781c.jpg"
-                alt="Professional team delivering IT solutions"
+                alt={t("overview.whyCloudNexus.altTeam", "Professional team delivering IT solutions")}
                 className="w-full h-full object-cover absolute inset-0"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -502,9 +512,9 @@ export default function OverviewPage() {
               {/* Floating stats on image */}
               <div className="absolute bottom-0 left-0 right-0 p-6 space-y-3">
                 {[
-                  { num: "200+", label: "Projects Delivered" },
-                  { num: "1+", label: "Year of Excellence" },
-                  { num: "90+", label: "Scalable Teams" },
+                  { num: t("overview.whyCloudNexus.stat1Val", "200+"), label: t("overview.whyCloudNexus.stat1Label", "Projects Delivered") },
+                  { num: t("overview.whyCloudNexus.stat2Val", "1+"), label: t("overview.whyCloudNexus.stat2Label", "Year of Excellence") },
+                  { num: t("overview.whyCloudNexus.stat3Val", "90+"), label: t("overview.whyCloudNexus.stat3Label", "Scalable Teams") },
                 ].map((s, i) => (
                   <motion.div
                     key={i}
@@ -527,7 +537,7 @@ export default function OverviewPage() {
 
           {/* Right - Cards grid */}
           <div className="lg:col-span-3 grid sm:grid-cols-2 gap-4">
-            {whyCloudNexus.map((val, i) => {
+            {translatedWhyCloudNexus.map((val, i) => {
               const Icon = val.icon;
               return (
                 <motion.div
@@ -564,16 +574,16 @@ export default function OverviewPage() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            <span className="text-[#4EB3E8]">Our</span>{" "}
-            <span>Offices</span>
+            <span className="text-[#4EB3E8]">{t("overview.offices.title", "Our")}</span>{" "}
+            <span>{t("overview.offices.titleHighlight", "Offices")}</span>
           </h2>
           <p className="mt-4 text-base text-black/45 dark:text-white/45 max-w-xl mx-auto">
-            Strategically located across Rajasthan, India  -  delivering world-class IT solutions from our development centers.
+            {t("overview.offices.description", "Strategically located across Rajasthan, India  -  delivering world-class IT solutions from our development centers.")}
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-5">
-          {locations.map((loc, i) => {
+          {translatedLocations.map((loc, i) => {
             const Icon = loc.icon;
             return (
               <motion.div
@@ -607,9 +617,9 @@ export default function OverviewPage() {
       <div className="bg-[#fafafa] dark:bg-white/[0.015] border-y border-black/[0.06] dark:border-white/[0.06]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <motion.div className="text-center mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Our Growth <span className="text-[#4EB3E8]">Journey</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{t("overview.growth.title", "Our Growth")} <span className="text-[#4EB3E8]">{t("overview.growth.titleHighlight", "Journey")}</span></h2>
             <p className="text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-              From a seed of an idea to a growing force in technology  -  every milestone marks a step toward our vision.
+              {t("overview.growth.description", "From a seed of an idea to a growing force in technology  -  every milestone marks a step toward our vision.")}
             </p>
           </motion.div>
 
@@ -617,7 +627,7 @@ export default function OverviewPage() {
             <div className="flex flex-col items-center mb-0">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 className="rounded-3xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/40 w-full">
-                <img src="/assets/images/growth-plant.png" alt="Growing plant seedling symbolizing company growth" className="w-full h-[280px] md:h-[350px] object-cover" />
+                <img src="/assets/images/growth-plant.png" alt={t("overview.growth.altPlant", "Growing plant seedling symbolizing company growth")} className="w-full h-[280px] md:h-[350px] object-cover" />
               </motion.div>
               <div className="w-[3px] h-16 bg-gradient-to-b from-[#4EB3E8] to-[#4EB3E8]/40 rounded-full" />
             </div>
@@ -625,10 +635,10 @@ export default function OverviewPage() {
             <div className="absolute left-6 md:left-1/2 top-[calc(350px+4rem)] bottom-0 w-[3px] bg-gradient-to-b from-[#4EB3E8]/30 via-[#4EB3E8]/20 to-[#10b981]/10 dark:from-[#4EB3E8]/25 dark:via-[#4EB3E8]/15 dark:to-[#10b981]/5 md:-translate-x-[1.5px] rounded-full" />
 
             {[
-              { icon: Sprout, date: "19 Jan 2025", title: "The Seed Was Planted", desc: "Cloud Nexus was founded with a clear mission  -  to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful.", color: "#4EB3E8" },
-              { icon: Leaf, date: "Mid 2025", title: "Taking Root & Growing", desc: "We expanded our team, onboarded our first global clients, and delivered 30+ successful projects. Our expertise in mobile, web, cloud, and AI started gaining recognition across industries.", color: "#8b5cf6" },
-              { icon: TreePine, date: "Early 2026", title: "Branching Out", desc: "With 50+ projects delivered across 15+ industries, we began attending global tech conferences like GITEX, built dedicated AI/ML capabilities, and expanded our service portfolio significantly.", color: "#10b981" },
-              { icon: Sun, date: "Today & Beyond", title: "Reaching New Heights", desc: "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning  -  with plans to scale further, innovate boldly, and create lasting impact.", color: "#f59e0b" },
+              { icon: Sprout, date: t("overview.growth.step1Date", "19 Jan 2025"), title: t("overview.growth.step1Title", "The Seed Was Planted"), desc: t("overview.growth.step1Desc", "Cloud Nexus was founded with a clear mission  -  to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful."), color: "#4EB3E8" },
+              { icon: Leaf, date: t("overview.growth.step2Date", "Mid 2025"), title: t("overview.growth.step2Title", "Taking Root & Growing"), desc: t("overview.growth.step2Desc", "We expanded our team, onboarded our first global clients, and delivered 30+ successful projects. Our expertise in mobile, web, cloud, and AI started gaining recognition across industries."), color: "#8b5cf6" },
+              { icon: TreePine, date: t("overview.growth.step3Date", "Early 2026"), title: t("overview.growth.step3Title", "Branching Out"), desc: t("overview.growth.step3Desc", "With 50+ projects delivered across 15+ industries, we began attending global tech conferences like GITEX, built dedicated AI/ML capabilities, and expanded our service portfolio significantly."), color: "#10b981" },
+              { icon: Sun, date: t("overview.growth.step4Date", "Today & Beyond"), title: t("overview.growth.step4Title", "Reaching New Heights"), desc: t("overview.growth.step4Desc", "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning  -  with plans to scale further, innovate boldly, and create lasting impact."), color: "#f59e0b" },
             ].map((step, i) => {
               const Icon = step.icon;
               const isLeft = i % 2 === 0;
@@ -678,13 +688,13 @@ export default function OverviewPage() {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                Ready to Innovate?
+                {t("overview.cta.title", "Ready to Innovate?")}
                 <br />
-                <span className="text-[#4EB3E8]">Let&apos;s Build Together</span>
+                <span className="text-[#4EB3E8]">{t("overview.cta.titleHighlight", "Let's Build Together")}</span>
               </h2>
 
               <p className="mt-4 text-base font-medium text-black/50 dark:text-white/50 max-w-xl mx-auto leading-relaxed">
-                Join 500+ companies who trust CloudNexus to deliver technology solutions that drive real business outcomes.
+                {t("overview.cta.description", "Join 500+ companies who trust CloudNexus to deliver technology solutions that drive real business outcomes.")}
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -692,13 +702,13 @@ export default function OverviewPage() {
                   href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white dark:bg-white dark:text-black font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-lg"
                 >
-                  Book Free Consultation <ArrowRight className="w-4 h-4" />
+                  {t("overview.cta.bookConsultation", "Book Free Consultation")} <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/our-work"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
                 >
-                  View Our Work
+                  {t("overview.cta.viewWork", "View Our Work")}
                 </Link>
               </div>
             </motion.div>

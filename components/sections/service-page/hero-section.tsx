@@ -7,9 +7,13 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/use-in-view";
 import { useAnimatedCount } from "@/hooks/use-animated-count";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { ServicePageHeroProps, Stat } from "./types";
 
-export function HeroSection(props: ServicePageHeroProps) {
+export function HeroSection(rawProps: ServicePageHeroProps) {
+  const { t } = useTranslation();
+  const props = useTranslatedData(rawProps);
   const [heroReady, setHeroReady] = useState(false);
 
   useEffect(() => {
@@ -60,14 +64,14 @@ export function HeroSection(props: ServicePageHeroProps) {
                 href="/resources/free-consultation"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-black text-white font-semibold text-sm hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80 transition-colors shadow-lg shadow-black/10 dark:shadow-white/10"
               >
-                {props.primaryCtaLabel ?? "Get Free Consultation"}{" "}
+                {props.primaryCtaLabel ?? t("servicePage.hero.primaryCta", "Get Free Consultation")}{" "}
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/our-work"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors"
               >
-                View Our Work
+                {t("servicePage.hero.viewOurWork", "View Our Work")}
               </Link>
             </div>
           </div>

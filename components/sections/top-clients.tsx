@@ -2,6 +2,7 @@
 
 import { FC, useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import { useTranslation } from "@/lib/i18n/context";
 
 const clients = [
   { name: "Deutsche Bank", logo: "/clients/deutsche-bank.svg" },
@@ -40,6 +41,7 @@ function useInView(threshold = 0.2) {
 
 export const TopClients: FC = () => {
   const { ref, visible } = useInView(0.15);
+  const { t } = useTranslation();
 
   return (
     <section
@@ -54,10 +56,10 @@ export const TopClients: FC = () => {
           }`}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#4EB3E8]">
-            Companies That <span className="text-black dark:text-white">Trust Us</span>
+            {t("topClients.titleBlue", "Companies That")} <span className="text-black dark:text-white">{t("topClients.titleWhite", "Trust Us")}</span>
           </h2>
           <p className="mt-4 text-base md:text-lg text-black/50 dark:text-white/50 leading-relaxed max-w-2xl mx-auto">
-            From established industry players to rising startups, we create results that fuel growth and success.
+            {t("topClients.subtitle")}
           </p>
         </div>
 

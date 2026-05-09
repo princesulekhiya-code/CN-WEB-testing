@@ -3,14 +3,18 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { ChevronLeft, ChevronRight, Layers } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { ProductShowcaseProps } from "./types";
 
 export function ProductShowcaseSection({
-  heading,
-  subtitle,
-  products,
+  heading: rawHeading,
+  subtitle: rawSubtitle,
+  products: rawProducts,
   accentColor = "#4EB3E8",
 }: ProductShowcaseProps) {
+  const heading = useTranslatedData(rawHeading);
+  const subtitle = useTranslatedData(rawSubtitle);
+  const products = useTranslatedData(rawProducts);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [active, setActive] = useState(0);

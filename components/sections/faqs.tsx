@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 const faqs = [
   {
@@ -78,18 +80,15 @@ const faqs = [
 ];
 
 const halfCount = Math.ceil(faqs.length / 2);
-const leftFaqs = faqs.slice(0, halfCount);
-const rightFaqs = faqs.slice(halfCount);
 
-function FAQItem({ faq }: { faq: typeof faqs[0]; index: number }) {
+function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
   const [open, setOpen] = useState(false);
 
   return (
     <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 24, scale: 0.97 },
-        visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 120, damping: 16 } },
-      }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.05 }}
     >
       <button
         onClick={() => setOpen(!open)}
@@ -120,6 +119,10 @@ function FAQItem({ faq }: { faq: typeof faqs[0]; index: number }) {
 }
 
 export function FAQs() {
+  const { t } = useTranslation();
+  const translatedFaqs = useTranslatedData(faqs);
+  const leftFaqs = translatedFaqs.slice(0, halfCount);
+  const rightFaqs = translatedFaqs.slice(halfCount);
   return (
     <section className="w-full py-14 md:py-20 bg-white dark:bg-black">
       <div className="mx-auto max-w-6xl px-6 md:px-8">
@@ -131,13 +134,13 @@ export function FAQs() {
             transition={{ duration: 0.4 }}
             className="lg:w-[260px] flex-shrink-0 mb-8 lg:mb-0 lg:sticky lg:top-24"
           >
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight">
-              <span className="text-[#4EB3E8]">Frequently Asked</span>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#4EB3E8] leading-tight">
+              {t("faq.titleBlue", "Frequently Asked")}
               <br />
-              <span className="text-black dark:text-white">Questions</span>
+              <span className="text-black dark:text-white">{t("faq.titleWhite", "Questions")}</span>
             </h2>
             <p className="mt-3 text-xs text-black/45 dark:text-white/35 leading-relaxed max-w-[220px]">
-              Everything you need to know about working with CloudNexus.
+              {t("faq.subtitle")}
             </p>
           </motion.div>
 
@@ -146,22 +149,22 @@ export function FAQs() {
               className="divide-y divide-black/[0.05] dark:divide-white/[0.05]"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-40px" }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
             >
               {leftFaqs.map((faq, i) => (
-                <FAQItem key={faq.question} faq={faq} index={i} />
+                <FAQItem key={`left-${i}`} faq={faq} index={i} />
               ))}
             </motion.div>
             <motion.div
               className="divide-y divide-black/[0.05] dark:divide-white/[0.05]"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-40px" }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } } }}
             >
               {rightFaqs.map((faq, i) => (
-                <FAQItem key={faq.question} faq={faq} index={i + halfCount} />
+                <FAQItem key={`right-${i}`} faq={faq} index={i + halfCount} />
               ))}
             </motion.div>
           </div>

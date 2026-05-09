@@ -10,6 +10,8 @@ import {
   Clock, Target, BarChart3, GitBranch, RefreshCcw,
   DollarSign, CalendarCheck, Users, Mail,
 } from "lucide-react";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 
 const executionPhases = [
   {
@@ -166,6 +168,12 @@ const securityMeasures = [
 export default function ProcessMethodologyPage() {
   const [activePhase, setActivePhase] = useState(0);
   const [activeTech, setActiveTech] = useState(0);
+  const translatedPhases = useTranslatedData(executionPhases);
+  const translatedDeliverables = useTranslatedData(deliverables);
+  const translatedTechStack = useTranslatedData(techStack);
+  const translatedWorkingModels = useTranslatedData(workingModels);
+  const translatedSecurityMeasures = useTranslatedData(securityMeasures);
+  const { t } = useTranslation();
 
   return (
     <section className="min-h-screen bg-white text-black dark:bg-[#0a0a0a] dark:text-white">
@@ -183,17 +191,17 @@ export default function ProcessMethodologyPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1]">
-                Our Process &<br /><span className="text-[#4EB3E8]">Development Methodology</span>
+                {t("processMethodology.hero.title", "Our Process &")}<br /><span className="text-[#4EB3E8]">{t("processMethodology.hero.titleHighlight", "Development Methodology")}</span>
               </h1>
               <p className="mt-6 text-base md:text-lg text-black/55 dark:text-white/50 leading-relaxed max-w-xl">
-                A walkthrough to our simple, smart, and agile approach to software development. From discovery to deployment  -  every step is transparent, collaborative, and results-driven.
+                {t("processMethodology.hero.description", "A walkthrough to our simple, smart, and agile approach to software development. From discovery to deployment  -  every step is transparent, collaborative, and results-driven.")}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/resources/free-consultation" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 text-sm font-semibold transition-all shadow-lg">
-                  Start Your Project <ArrowRight className="w-4 h-4" />
+                  {t("processMethodology.hero.startProject", "Start Your Project")} <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/resources/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-black/10 dark:border-white/10 text-sm font-semibold hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-all">
-                  Contact Us
+                  {t("processMethodology.hero.contactUs", "Contact Us")}
                 </Link>
               </div>
             </motion.div>
@@ -204,7 +212,7 @@ export default function ProcessMethodologyPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="flex gap-2 flex-wrap">
-                    {executionPhases.map((p, i) => (
+                    {translatedPhases.map((p, i) => (
                       <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + i * 0.06 }}
                         className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/15 backdrop-blur-sm border border-white/10">
                         <span className="text-xs font-black" style={{ color: p.color }}>{p.phase}</span>
@@ -224,12 +232,12 @@ export default function ProcessMethodologyPage() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-14">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">From Agility to <span className="text-[#4EB3E8]">Action</span></h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("processMethodology.agile.title", "From Agility to")} <span className="text-[#4EB3E8]">{t("processMethodology.agile.titleHighlight", "Action")}</span></h2>
               <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-                We embrace Agile Methodology to encourage transparent communication, foster collaboration, combat uncertainty, cope with change, and continuously deliver new value.
+                {t("processMethodology.agile.description", "We embrace Agile Methodology to encourage transparent communication, foster collaboration, combat uncertainty, cope with change, and continuously deliver new value.")}
               </p>
               <p className="mt-3 text-sm text-black/45 dark:text-white/40 leading-relaxed">
-                Everything  -  the development work, the information, and the investment  -  moves in an integrated fashion with measurable returns at every iteration.
+                {t("processMethodology.agile.subDescription", "Everything  -  the development work, the information, and the investment  -  moves in an integrated fashion with measurable returns at every iteration.")}
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
@@ -241,10 +249,10 @@ export default function ProcessMethodologyPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { icon: MessageSquare, title: "Transparent Communication", desc: "Daily standups, sprint reviews, and open Slack channels. You always know what's happening with your project.", color: "#4EB3E8" },
-              { icon: GitBranch, title: "Iterative Development", desc: "2-week sprints with regular demos. You see progress, provide feedback, and steer the direction continuously.", color: "#10b981" },
-              { icon: Target, title: "Goal-Driven Execution", desc: "Every sprint has clear objectives tied to business outcomes. We don't just build features  -  we deliver results.", color: "#8b5cf6" },
-              { icon: BarChart3, title: "Measurable Progress", desc: "Velocity tracking, burndown charts, and regular reports. Data-driven insights into project health and timeline.", color: "#f59e0b" },
+              { icon: MessageSquare, title: t("processMethodology.agile.transparentComm.title", "Transparent Communication"), desc: t("processMethodology.agile.transparentComm.desc", "Daily standups, sprint reviews, and open Slack channels. You always know what's happening with your project."), color: "#4EB3E8" },
+              { icon: GitBranch, title: t("processMethodology.agile.iterativeDev.title", "Iterative Development"), desc: t("processMethodology.agile.iterativeDev.desc", "2-week sprints with regular demos. You see progress, provide feedback, and steer the direction continuously."), color: "#10b981" },
+              { icon: Target, title: t("processMethodology.agile.goalDriven.title", "Goal-Driven Execution"), desc: t("processMethodology.agile.goalDriven.desc", "Every sprint has clear objectives tied to business outcomes. We don't just build features  -  we deliver results."), color: "#8b5cf6" },
+              { icon: BarChart3, title: t("processMethodology.agile.measurableProgress.title", "Measurable Progress"), desc: t("processMethodology.agile.measurableProgress.desc", "Velocity tracking, burndown charts, and regular reports. Data-driven insights into project health and timeline."), color: "#f59e0b" },
             ].map((item, i) => {
               const Icon = item.icon;
               return (
@@ -267,9 +275,9 @@ export default function ProcessMethodologyPage() {
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-10 items-center mb-14">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Project <span className="text-[#4EB3E8]">Execution</span> Structure</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("processMethodology.execution.title", "Project")} <span className="text-[#4EB3E8]">{t("processMethodology.execution.titleHighlight", "Execution")}</span> {t("processMethodology.execution.titleSuffix", "Structure")}</h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-              Our high-performance cross-functional team takes care of you at every step. We adjust as per your requirements and deliver incremented value that embraces your vision.
+              {t("processMethodology.execution.description", "Our high-performance cross-functional team takes care of you at every step. We adjust as per your requirements and deliver incremented value that embraces your vision.")}
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
@@ -281,7 +289,7 @@ export default function ProcessMethodologyPage() {
 
         <div className="grid lg:grid-cols-5 gap-8 items-start">
           <div className="lg:col-span-2 space-y-2">
-            {executionPhases.map((p, i) => {
+            {translatedPhases.map((p, i) => {
               const Icon = p.icon;
               const isActive = activePhase === i;
               return (
@@ -311,26 +319,26 @@ export default function ProcessMethodologyPage() {
             <AnimatePresence mode="wait">
               <motion.div key={activePhase} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.3 }}
                 className="rounded-2xl p-8 md:p-10 bg-white dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.06] relative overflow-hidden shadow-sm dark:shadow-none">
-                <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl" style={{ backgroundColor: executionPhases[activePhase].color }} />
+                <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl" style={{ backgroundColor: translatedPhases[activePhase].color }} />
 
                 <div className="flex items-center gap-4 mb-8">
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl border-2"
-                    style={{ backgroundColor: `${executionPhases[activePhase].color}10`, borderColor: `${executionPhases[activePhase].color}20` }}>
-                    {(() => { const Icon = executionPhases[activePhase].icon; return <Icon className="w-7 h-7" style={{ color: executionPhases[activePhase].color }} strokeWidth={1.5} />; })()}
+                    style={{ backgroundColor: `${translatedPhases[activePhase].color}10`, borderColor: `${translatedPhases[activePhase].color}20` }}>
+                    {(() => { const Icon = translatedPhases[activePhase].icon; return <Icon className="w-7 h-7" style={{ color: translatedPhases[activePhase].color }} strokeWidth={1.5} />; })()}
                   </div>
                   <div>
-                    <span className="text-xs font-black uppercase tracking-widest" style={{ color: executionPhases[activePhase].color }}>Phase {executionPhases[activePhase].phase}</span>
-                    <h3 className="text-xl font-bold tracking-tight">{executionPhases[activePhase].title}</h3>
+                    <span className="text-xs font-black uppercase tracking-widest" style={{ color: translatedPhases[activePhase].color }}>{t("processMethodology.execution.phase", "Phase")} {translatedPhases[activePhase].phase}</span>
+                    <h3 className="text-xl font-bold tracking-tight">{translatedPhases[activePhase].title}</h3>
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  {executionPhases[activePhase].steps.map((step, idx) => (
+                  {translatedPhases[activePhase].steps.map((step, idx) => (
                     <motion.div key={idx} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.08 }}
                       className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                        style={{ backgroundColor: `${executionPhases[activePhase].color}15` }}>
-                        <CheckCircle2 className="w-3.5 h-3.5" style={{ color: executionPhases[activePhase].color }} />
+                        style={{ backgroundColor: `${translatedPhases[activePhase].color}15` }}>
+                        <CheckCircle2 className="w-3.5 h-3.5" style={{ color: translatedPhases[activePhase].color }} />
                       </div>
                       <p className="text-sm text-black/60 dark:text-white/55 leading-relaxed">{step}</p>
                     </motion.div>
@@ -338,9 +346,9 @@ export default function ProcessMethodologyPage() {
                 </div>
 
                 <div className="flex items-center gap-2 mt-8">
-                  {executionPhases.map((_, idx) => (
+                  {translatedPhases.map((_, idx) => (
                     <button key={idx} onClick={() => setActivePhase(idx)} className="h-1.5 rounded-full transition-all duration-300"
-                      style={{ width: idx === activePhase ? 32 : 6, backgroundColor: idx === activePhase ? executionPhases[activePhase].color : "rgba(128,128,128,0.2)" }} />
+                      style={{ width: idx === activePhase ? 32 : 6, backgroundColor: idx === activePhase ? translatedPhases[activePhase].color : "rgba(128,128,128,0.2)" }} />
                   ))}
                 </div>
               </motion.div>
@@ -354,9 +362,9 @@ export default function ProcessMethodologyPage() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid lg:grid-cols-5 gap-10 items-center mb-14">
             <motion.div className="lg:col-span-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Our <span className="text-[#4EB3E8]">Deliverables</span></h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("processMethodology.deliverables.title", "Our")} <span className="text-[#4EB3E8]">{t("processMethodology.deliverables.titleHighlight", "Deliverables")}</span></h2>
               <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-                From the moment we take up your project, our duty begins. We keep you informed about every aspect of the development stage  -  transparent, systemized, and standardized.
+                {t("processMethodology.deliverables.description", "From the moment we take up your project, our duty begins. We keep you informed about every aspect of the development stage  -  transparent, systemized, and standardized.")}
               </p>
             </motion.div>
             <motion.div className="lg:col-span-2 hidden lg:block" initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
@@ -367,9 +375,9 @@ export default function ProcessMethodologyPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {deliverables.map((d, i) => {
+            {translatedDeliverables.map((d, i) => {
               const Icon = d.icon;
-              return (
+          return (
                 <motion.div key={d.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
                   className="group rounded-2xl p-6 bg-white dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.06] hover:border-[#4EB3E8]/20 dark:hover:border-[#4EB3E8]/25 hover:shadow-lg hover:shadow-[#4EB3E8]/[0.04] transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
                   <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#4EB3E8] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
@@ -396,17 +404,17 @@ export default function ProcessMethodologyPage() {
         <div className="relative mx-auto max-w-7xl px-6 py-20">
           <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              <span className="text-[#4EB3E8]">Tools & Technologies</span>{" "}
-              <span className="text-black dark:text-white">We Use</span>
+              <span className="text-[#4EB3E8]">{t("processMethodology.tech.titleHighlight", "Tools & Technologies")}</span>{" "}
+              <span className="text-black dark:text-white">{t("processMethodology.tech.title", "We Use")}</span>
             </h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 max-w-2xl mx-auto leading-relaxed">
-              We use trending technologies backed by a robust suite of tools, frameworks, and platforms to deliver highly scalable, interactive, and innovative solutions.
+              {t("processMethodology.tech.description", "We use trending technologies backed by a robust suite of tools, frameworks, and platforms to deliver highly scalable, interactive, and innovative solutions.")}
             </p>
           </motion.div>
 
           <motion.div className="flex justify-center mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <div className="inline-flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02]">
-              {techStack.map((stack, i) => (
+              {translatedTechStack.map((stack, i) => (
                 <button key={stack.category} type="button" onClick={() => setActiveTech(i)}
                   className={`relative px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 ${
                     activeTech === i
@@ -423,7 +431,7 @@ export default function ProcessMethodologyPage() {
             <motion.div key={activeTech} initial={{ opacity: 0, y: 12, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -12, scale: 0.98 }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
               className="flex flex-wrap justify-center gap-4 md:gap-5">
-              {techStack[activeTech].tools.map((tool, i) => (
+              {translatedTechStack[activeTech].tools.map((tool, i) => (
                 <motion.div key={tool.name} initial={{ opacity: 0, y: 16, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }}
                   className="group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-white/80 dark:bg-white/[0.02] hover:border-[#4EB3E8]/30 hover:bg-[#4EB3E8]/[0.03] dark:hover:border-[#4EB3E8]/30 dark:hover:bg-[#4EB3E8]/[0.05] hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4EB3E8]/5 transition-all duration-300 cursor-default w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] md:w-[calc(25%-0.9375rem)] lg:w-[calc(16.666%-1rem)]">
@@ -452,7 +460,7 @@ export default function ProcessMethodologyPage() {
               <div className="group flex overflow-hidden w-full [--gap:3.5rem] md:[--gap:4.5rem] [--duration:40s] gap-[var(--gap)]">
                 {Array(3).fill(0).map((_, ri) => (
                   <div key={ri} className="flex shrink-0 items-center gap-[var(--gap)] animate-marquee group-hover:[animation-play-state:paused]">
-                    {techStack.flatMap(s => s.tools).map((tool, j) => (
+                    {translatedTechStack.flatMap(s => s.tools).map((tool, j) => (
                       <div key={`${ri}-${j}-${tool.name}`} className="flex items-center gap-3.5 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-default whitespace-nowrap" title={tool.name}>
                         <img src={tool.logo} alt={tool.name} width={32} height={32} className="w-8 h-8 md:w-9 md:h-9 object-contain flex-shrink-0"
                           onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.style.display = "none"; (e.currentTarget.nextElementSibling as HTMLElement).style.display = "flex"; }} />
@@ -473,9 +481,9 @@ export default function ProcessMethodologyPage() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-14">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Flexible <span className="text-[#4EB3E8]">Working Models</span></h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("processMethodology.models.title", "Flexible")} <span className="text-[#4EB3E8]">{t("processMethodology.models.titleHighlight", "Working Models")}</span></h2>
               <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-                Our engineering team delivers services in different engagement models that best fit your needs to launch the desired product in the most efficient way.
+                {t("processMethodology.models.description", "Our engineering team delivers services in different engagement models that best fit your needs to launch the desired product in the most efficient way.")}
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="hidden lg:block">
@@ -486,7 +494,7 @@ export default function ProcessMethodologyPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {workingModels.map((model, i) => {
+            {translatedWorkingModels.map((model, i) => {
               const Icon = model.icon;
               return (
                 <motion.div key={model.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -523,15 +531,15 @@ export default function ProcessMethodologyPage() {
             </div>
           </motion.div>
           <motion.div className="lg:col-span-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Your Ideas Are <span className="text-[#4EB3E8]">Always Safe</span> With Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{t("processMethodology.security.title", "Your Ideas Are")} <span className="text-[#4EB3E8]">{t("processMethodology.security.titleHighlight", "Always Safe")}</span> {t("processMethodology.security.titleSuffix", "With Us")}</h2>
             <p className="mt-4 text-base text-black/55 dark:text-white/50 leading-relaxed">
-              Protecting your ideas, intellectual property, and trade secrets is our top priority. We ensure that your information never reaches unauthorized parties.
+              {t("processMethodology.security.description", "Protecting your ideas, intellectual property, and trade secrets is our top priority. We ensure that your information never reaches unauthorized parties.")}
             </p>
           </motion.div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {securityMeasures.map((item, i) => {
+          {translatedSecurityMeasures.map((item, i) => {
             const Icon = item.icon;
             return (
               <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
@@ -541,9 +549,9 @@ export default function ProcessMethodologyPage() {
                 </div>
                 <h4 className="text-sm font-bold mb-1.5 group-hover:text-emerald-500 transition-colors">{item.title}</h4>
                 <p className="text-xs text-black/50 dark:text-white/45 leading-relaxed">{item.desc}</p>
-              </motion.div>
-            );
-          })}
+            </motion.div>
+          );
+        })}
         </div>
       </div>
 
@@ -555,20 +563,20 @@ export default function ProcessMethodologyPage() {
             <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, rgba(78,179,232,0.04) 0%, transparent 70%)" }} />
             <div className="relative">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                Have a Project in Mind?<br />
-                <span className="text-[#4EB3E8]">Let&apos;s Build It Together</span>
+                {t("processMethodology.cta.title", "Have a Project in Mind?")}<br />
+                <span className="text-[#4EB3E8]">{t("processMethodology.cta.titleHighlight", "Let's Build It Together")}</span>
               </h2>
               <p className="text-base text-black/55 dark:text-white/50 max-w-lg mx-auto leading-relaxed mb-8">
-                Tell us about your idea and we&apos;ll provide a detailed proposal with architecture recommendations, timeline, and cost estimate  -  completely free.
+                {t("processMethodology.cta.description", "Tell us about your idea and we'll provide a detailed proposal with architecture recommendations, timeline, and cost estimate  -  completely free.")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/resources/free-consultation"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 font-semibold text-sm transition-all shadow-lg">
-                  <CalendarCheck className="w-4 h-4" /> Book Free Consultation
+                  <CalendarCheck className="w-4 h-4" /> {t("processMethodology.cta.bookConsultation", "Book Free Consultation")}
                 </Link>
                 <Link href="/resources/contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-black/10 dark:border-white/10 font-semibold text-sm hover:bg-black/[0.03] dark:hover:bg-white/[0.04] transition-colors">
-                  <Mail className="w-4 h-4" /> Contact Us
+                  <Mail className="w-4 h-4" /> {t("processMethodology.cta.contactUs", "Contact Us")}
                 </Link>
               </div>
               <p className="mt-5 text-xs text-black/30 dark:text-white/25">work@cloudnexus.in &middot; +91 87938 30447</p>

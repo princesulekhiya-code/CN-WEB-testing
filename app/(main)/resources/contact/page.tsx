@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { submitContactForm } from "@/lib/api/services/contact.service";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
+import { useTranslation } from "@/lib/i18n/context";
 
 const subjects = [
   "Mobile App Development",
@@ -66,6 +68,12 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const translatedSubjects = useTranslatedData(subjects);
+  const translatedBudgets = useTranslatedData(budgets);
+  const translatedContactInfo = useTranslatedData(contactInfo);
+  const translatedOffices = useTranslatedData(offices);
+  const translatedHeardFromOptions = useTranslatedData(heardFromOptions);
+  const { t } = useTranslation();
 
   const [form, setForm] = useState({
     fullName: "",
@@ -116,7 +124,7 @@ export default function ContactPage() {
         err && typeof err === "object" && "response" in err
           ? (err as { response?: { data?: { message?: string } } }).response?.data?.message
           : undefined;
-      setError(msg || "Something went wrong. Please try again.");
+      setError(msg || t("contact.form.errorFallback", "Something went wrong. Please try again."));
     } finally {
       setLoading(false);
     }
@@ -141,11 +149,11 @@ export default function ContactPage() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="text-[#4EB3E8]">Let&apos;s Build</span>{" "}
-              <span>Something Great</span>
+              <span className="text-[#4EB3E8]">{t("contact.hero.titleHighlight", "Let's Build")}</span>{" "}
+              <span>{t("contact.hero.title", "Something Great")}</span>
             </h1>
             <p className="mt-4 text-base text-black/50 dark:text-white/45 leading-relaxed">
-              Tell us about your project and we&apos;ll get back to you within 24 hours with a tailored plan and expert recommendations.
+              {t("contact.hero.description", "Tell us about your project and we'll get back to you within 24 hours with a tailored plan and expert recommendations.")}
             </p>
           </motion.div>
 
@@ -156,9 +164,9 @@ export default function ContactPage() {
             transition={{ duration: 0.4, delay: 0.2 }}
           >
             {[
-              { num: "< 24h", label: "Response Time" },
-              { num: "200+", label: "Projects Delivered" },
-              { num: "100%", label: "Client Satisfaction" },
+              { num: t("contact.hero.responseTime", "< 24h"), label: t("contact.hero.responseTimeLabel", "Response Time") },
+              { num: t("contact.hero.projectsNum", "200+"), label: t("contact.hero.projectsLabel", "Projects Delivered") },
+              { num: t("contact.hero.satisfactionNum", "100%"), label: t("contact.hero.satisfactionLabel", "Client Satisfaction") },
             ].map((s, i) => (
               <div key={i} className="flex items-center gap-2.5">
                 <span className="text-lg font-bold text-[#4EB3E8]">{s.num}</span>
@@ -189,16 +197,16 @@ export default function ContactPage() {
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-500/10 border border-green-500/20">
                   <CheckCircle2 className="w-7 h-7 text-green-500" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
+                <h3 className="text-2xl font-bold mb-2">{t("contact.success.title", "Message Sent!")}</h3>
                 <p className="text-black/50 dark:text-white/45 mb-6 max-w-sm mx-auto">
-                  Thank you for reaching out. Our team will review your inquiry and get back to you within 24 hours.
+                  {t("contact.success.description", "Thank you for reaching out. Our team will review your inquiry and get back to you within 24 hours.")}
                 </p>
                 <Button
                   onClick={() => setSubmitted(false)}
                   variant="outline"
                   className="rounded-xl border-black/10 dark:border-white/10"
                 >
-                  Send Another Message
+                  {t("contact.success.sendAnother", "Send Another Message")}
                 </Button>
               </motion.div>
             ) : (
@@ -208,8 +216,8 @@ export default function ContactPage() {
                     <MessageSquare className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h2 className="text-lg font-bold">Tell Us About Your Project</h2>
-                    <p className="text-xs text-black/40 dark:text-white/35">All fields marked with * are required</p>
+                    <h2 className="text-lg font-bold">{t("contact.form.title", "Tell Us About Your Project")}</h2>
+                    <p className="text-xs text-black/40 dark:text-white/35">{t("contact.form.subtitle", "All fields marked with * are required")}</p>
                   </div>
                 </div>
 
@@ -228,52 +236,52 @@ export default function ContactPage() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                        Full Name <span className="text-[#4EB3E8]">*</span>
+                        {t("contact.form.fullName", "Full Name")} <span className="text-[#4EB3E8]">*</span>
                       </label>
-                      <input type="text" name="fullName" value={form.fullName} onChange={handleChange} required placeholder="John Doe" className={inputCls} />
+                      <input type="text" name="fullName" value={form.fullName} onChange={handleChange} required placeholder={t("contact.form.fullNamePlaceholder", "John Doe")} className={inputCls} />
                     </div>
                     <div>
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                        Company Name
+                        {t("contact.form.companyName", "Company Name")}
                       </label>
-                      <input type="text" name="companyName" value={form.companyName} onChange={handleChange} placeholder="Your company" className={inputCls} />
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                        Email Address <span className="text-[#4EB3E8]">*</span>
-                      </label>
-                      <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="john@company.com" className={inputCls} />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                        Phone Number
-                      </label>
-                      <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+91 XXXXX XXXXX" className={inputCls} />
+                      <input type="text" name="companyName" value={form.companyName} onChange={handleChange} placeholder={t("contact.form.companyPlaceholder", "Your company")} className={inputCls} />
                     </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                        I&apos;m Interested In <span className="text-[#4EB3E8]">*</span>
+                        {t("contact.form.email", "Email Address")} <span className="text-[#4EB3E8]">*</span>
+                      </label>
+                      <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder={t("contact.form.emailPlaceholder", "john@company.com")} className={inputCls} />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
+                        {t("contact.form.phone", "Phone Number")}
+                      </label>
+                      <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder={t("contact.form.phonePlaceholder", "+91 XXXXX XXXXX")} className={inputCls} />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
+                        {t("contact.form.interestedIn", "I'm Interested In")} <span className="text-[#4EB3E8]">*</span>
                       </label>
                       <select name="interestedIn" value={form.interestedIn} onChange={handleChange} required className={inputCls}>
-                        <option value="" disabled>Select a service</option>
-                        {subjects.map((s) => (
+                        <option value="" disabled>{t("contact.form.selectService", "Select a service")}</option>
+                        {translatedSubjects.map((s) => (
                           <option key={s} value={s}>{s}</option>
                         ))}
                       </select>
                     </div>
                     <div>
                       <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                        Estimated Budget
+                        {t("contact.form.budget", "Estimated Budget")}
                       </label>
                       <select name="estimatedBudget" value={form.estimatedBudget} onChange={handleChange} className={inputCls}>
-                        <option value="" disabled>Select budget range</option>
-                        {budgets.map((b) => (
+                        <option value="" disabled>{t("contact.form.selectBudget", "Select budget range")}</option>
+                        {translatedBudgets.map((b) => (
                           <option key={b} value={b}>{b}</option>
                         ))}
                       </select>
@@ -282,7 +290,7 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                      Project Details <span className="text-[#4EB3E8]">*</span>
+                      {t("contact.form.details", "Project Details")} <span className="text-[#4EB3E8]">*</span>
                     </label>
                     <textarea
                       name="projectDetails"
@@ -290,18 +298,18 @@ export default function ContactPage() {
                       onChange={handleChange}
                       rows={5}
                       required
-                      placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
+                      placeholder={t("contact.form.detailsPlaceholder", "Tell us about your project, goals, timeline, and any specific requirements...")}
                       className={`${inputCls} resize-none`}
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs font-semibold mb-1.5 text-black/70 dark:text-white/60">
-                      How Did You Hear About Us?
+                      {t("contact.form.heardFrom", "How Did You Hear About Us?")}
                     </label>
                     <select name="heardFrom" value={form.heardFrom} onChange={handleChange} className={inputCls}>
-                      <option value="" disabled>Select an option</option>
-                      {heardFromOptions.map((o) => (
+                      <option value="" disabled>{t("contact.form.selectOption", "Select an option")}</option>
+                      {translatedHeardFromOptions.map((o) => (
                         <option key={o} value={o}>{o}</option>
                       ))}
                     </select>
@@ -316,18 +324,18 @@ export default function ContactPage() {
                     {loading ? (
                       <>
                         <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                        Sending...
+                        {t("contact.form.sending", "Sending...")}
                       </>
                     ) : (
                       <>
                         <Send className="w-4 h-4 mr-2" />
-                        Send Message
+                        {t("contact.form.sendMessage", "Send Message")}
                       </>
                     )}
                   </Button>
 
                   <p className="text-center text-xs text-black/30 dark:text-white/25">
-                    By submitting, you agree to our privacy policy. We&apos;ll never share your data.
+                    {t("contact.form.privacyNote", "By submitting, you agree to our privacy policy. We'll never share your data.")}
                   </p>
                 </form>
               </div>
@@ -341,7 +349,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            {contactInfo.map((item, i) => {
+            {translatedContactInfo.map((item, i) => {
               const Icon = item.icon;
               const inner = (
                 <motion.div
@@ -378,10 +386,10 @@ export default function ContactPage() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#4EB3E8]/8 border border-[#4EB3E8]/12 flex-shrink-0">
                   <Building2 className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-sm font-bold">Our Offices</h3>
+                <h3 className="text-sm font-bold">{t("contact.offices.title", "Our Offices")}</h3>
               </div>
               <div className="space-y-3">
-                {offices.map((o, i) => (
+                {translatedOffices.map((o, i) => (
                   <div key={i} className="flex items-start gap-2.5 pl-1">
                     <MapPin className="w-3.5 h-3.5 text-[#4EB3E8] mt-0.5 flex-shrink-0" strokeWidth={1.5} />
                     <div>
@@ -402,16 +410,16 @@ export default function ContactPage() {
             >
               <div className="flex items-center gap-3 mb-3">
                 <Globe className="w-5 h-5 text-[#4EB3E8]" strokeWidth={1.5} />
-                <h3 className="text-sm font-bold">Prefer a Live Conversation?</h3>
+                <h3 className="text-sm font-bold">{t("contact.cta.title", "Prefer a Live Conversation?")}</h3>
               </div>
               <p className="text-xs text-black/45 dark:text-white/40 leading-relaxed mb-4">
-                Schedule a free 30-minute consultation call with our experts to discuss your project in detail.
+                {t("contact.cta.description", "Schedule a free 30-minute consultation call with our experts to discuss your project in detail.")}
               </p>
               <Link
                 href="/resources/free-consultation"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#4EB3E8] hover:gap-2.5 transition-all duration-300"
               >
-                Book Free Consultation
+                {t("contact.cta.bookConsultation", "Book Free Consultation")}
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </motion.div>

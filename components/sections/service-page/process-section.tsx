@@ -2,12 +2,15 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/use-in-view";
+import { useTranslatedData } from "@/lib/i18n/translate-data";
 import type { ProcessStep, ServicePageSectionProps } from "./types";
 
 export function ProcessSection({
-  heading,
-  steps,
+  heading: rawHeading,
+  steps: rawSteps,
 }: { heading: ServicePageSectionProps; steps: ProcessStep[] }) {
+  const heading = useTranslatedData(rawHeading);
+  const steps = useTranslatedData(rawSteps);
   const { ref, visible } = useInView(0.1);
 
   return (
