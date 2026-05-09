@@ -19,7 +19,7 @@ const localePageModules: Record<string, () => Promise<{ default: TranslationDict
 
 function loadLocale(locale: string): Promise<TranslationDict> {
   if (pageTranslationsCache[locale]) return Promise.resolve(pageTranslationsCache[locale]);
-  if (loadingPromises[locale]) return loadingPromises[locale];
+  if (locale in loadingPromises) return loadingPromises[locale];
   const loader = localePageModules[locale];
   if (!loader) return Promise.resolve({});
   loadingPromises[locale] = loader().then((mod) => {
