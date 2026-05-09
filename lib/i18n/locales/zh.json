@@ -163,7 +163,6 @@
   "faq.titleWhite": "问题",
   "consultation.titleBlue": "让我们一起",
   "consultation.titleWhite": "创造精彩",
-
   "servicesPage.hero.title1": "卓越工程。",
   "servicesPage.hero.title2": "可衡量的影响。",
   "servicesPage.hero.description": "战略、设计、工程与增长——一个合作伙伴覆盖整个数字化生命周期，让您专注于最重要的事：您的业务。",
@@ -197,7 +196,6 @@
   "servicesPage.cta.body": "分享您的挑战，我们将为您规划清晰的路径——从架构到上线——由经验丰富的工程师团队提供支持。",
   "servicesPage.cta.getConsultation": "获取免费咨询",
   "servicesPage.cta.viewWork": "查看我们的作品",
-
   "resourcesHub.hero.title": "我们今天能",
   "resourcesHub.hero.titleHighlight": "为您做些",
   "resourcesHub.hero.titleEnd": "什么？",
@@ -282,7 +280,6 @@
   "resourcesHub.cta.bookConsultation": "预约免费咨询",
   "resourcesHub.cta.sendMessage": "发送消息",
   "resourcesHub.cta.footer": "work@cloudnexus.in · +91 87938 30447",
-
   "careerBenefits.hero.title": "福利与",
   "careerBenefits.hero.titleHighlight": "待遇",
   "careerBenefits.hero.titleEnd": "实实在在",
@@ -340,5 +337,996 @@
   "careerBenefits.cta.titleEnd": "了吗？",
   "careerBenefits.cta.description": "加入一个重视您成长、支持您健康、奖励您贡献的团队。立即探索开放职位。",
   "careerBenefits.cta.viewPositions": "查看开放职位",
-  "careerBenefits.cta.contactHR": "联系HR团队"
+  "careerBenefits.cta.contactHR": "联系HR团队",
+  "life.gallery.ariaLabel": "文化亮点",
+  "life.hero.title": "生活在",
+  "life.hero.subtitle": "Cloud Nexus",
+  "life.hero.description": "人才与文化在这里交融。我们打造引以为傲的产品——与真心关怀的人一起。",
+  "life.hero.exploreCareers": "探索职业",
+  "life.hero.getInTouch": "联系我们",
+  "life.stats.teamMembers": "团队成员",
+  "life.stats.dayWorkWeek": "天工作周",
+  "life.stats.countriesServed": "服务国家",
+  "life.stats.womenInTech": "科技领域的女性",
+  "life.moments.title": "庆祝美好",
+  "life.moments.titleHighlight": "时光",
+  "life.moments.description": "欢声笑语与音乐交织。看看我们如何在 Cloud Nexus 携手共建成功，同一个团队，同一个梦想。",
+  "life.moments.viewAllPhotos": "查看所有照片",
+  "life.purpose.title": "使命",
+  "life.purpose.titleHighlight": "驱动",
+  "life.purpose.description": "五大支柱指引着我们构建、交付和坚守的一切。",
+  "life.join.title": "为什么要加入 Cloud Nexus？",
+  "life.join.description": "Cloud Nexus 是一个让您学习、探索和全面提升自我的地方。我们以共情、温暖和关怀编织工作文化。",
+  "life.women.altImage": "Cloud Nexus 的女性赋能",
+  "life.women.badgeLabel": "科技岗位中的女性",
+  "life.women.title": "赋能女性是我们的重要目标",
+  "life.women.description1": "我们投资于领导力展示、心理安全和成长路径，让女性在工程、产品和运营领域蓬勃发展——不是作为例外，而是作为常态。",
+  "life.women.description2": "从导师圈到弹性政策和零容忍骚扰，我们打造一个每个人都能全身心投入工作的职场。",
+  "life.women.point1": "招聘和晋升中的平等机会",
+  "life.women.point2": "领导力赞助和导师计划",
+  "life.women.point3": "安全的举报渠道和支持性人力资源实践",
+  "life.recruit.title": "我们一直在寻找充满热情的人加入我们",
+  "life.recruit.description": "在 Cloud Nexus，我们因充满激情的个体而蓬勃发展。如果您渴望创造有意义的影响并与充满活力的社区一起成长，我们非常欢迎您的加入。",
+  "life.recruit.applyNow": "立即申请",
+  "life.perks.title": "Cloud Nexus 的福利",
+  "life.perks.description": "舒适、安全和灵活是我们共同成长的方式——在一个充满活力的环境中发挥最佳水平。",
+  "life.diversity.title": "多元化在",
+  "life.diversity.titleHighlight": "Cloud Nexus",
+  "life.cta.title": "准备好成为",
+  "life.cta.titleHighlight": "故事的一部分",
+  "life.cta.description": "带上您的好奇心、才华和善良。我们正在打造值得每天为之努力的产品和文化。",
+  "life.cta.applyNow": "立即申请",
+  "life.cta.talkToUs": "与我们交谈",
+  "events.hero.title": "我们在这里",
+  "events.hero.titleHighlight": "连接",
+  "events.hero.titleLine2": "学习与创新",
+  "events.hero.description": "从全球科技大会到实践研讨会——了解 Cloud Nexus 在哪里分享见解、展示解决方案，共建技术的未来。",
+  "events.hero.cta": "在活动中与我们见面",
+  "events.hero.ctaSecondary": "查看日程",
+  "events.featured.title": "重要",
+  "events.featured.titleHighlight": "活动",
+  "events.featured.description": "Cloud Nexus 在世界级科技大会上发布突破性成果、分享见解并与行业领袖建立联系。",
+  "events.featured.reserveSpot": "预留席位",
+  "events.upcoming.title": "即将到来的",
+  "events.upcoming.titleHighlight": "日程",
+  "events.upcoming.description": "网络研讨会、研讨会、聚会和黑客松——线上或线下加入我们。",
+  "events.upcoming.register": "立即注册",
+  "events.past.title": "往期",
+  "events.past.titleHighlight": "精彩回顾",
+  "events.past.description": "回顾我们走过的路——分享知识、建立伙伴关系、创造影响。",
+  "events.whyAttend.title": "为什么参加我们的",
+  "events.whyAttend.titleHighlight": "活动",
+  "events.whyAttend.description": "无论您是开发者、初创企业创始人还是企业领袖——我们的活动旨在提供可行的见解、真实的连接和动手实践的学习。",
+  "events.cta.title": "让我们在下一个",
+  "events.cta.titleHighlight": "重大活动",
+  "events.cta.description": "想要合作、赞助或只是打个招呼？联系我们的活动团队，一起探索合作机会。",
+  "events.cta.primaryBtn": "安排会议",
+  "events.cta.secondaryBtn": "联系活动团队",
+  "aboutUs.workforce.teamMembers": "团队成员",
+  "aboutUs.workforce.title1": "我们的",
+  "aboutUs.workforce.titleHighlight": "远见者",
+  "aboutUs.workforce.title2": "助力",
+  "aboutUs.workforce.title3": "加速流程",
+  "aboutUs.workforce.description": "凭借我们充满热情的团队和经验丰富的工程师，我们以高效的速度打造卓越的解决方案，服务全球企业。",
+  "aboutUs.workforce.statTeam": "团队成员",
+  "aboutUs.workforce.statIndustries": "行业",
+  "aboutUs.workforce.statSupport": "技术支持",
+  "aboutUs.hero.title1": "丰富生活",
+  "aboutUs.hero.title2": "通过我们的",
+  "aboutUs.hero.titleHighlight": "科技创新",
+  "aboutUs.hero.description": "我们以最大胆的创意交付卓越的数字体验，让世界变得更美好。",
+  "aboutUs.hero.getStarted": "开始",
+  "aboutUs.hero.contactUs": "联系我们",
+  "aboutUs.hero.altTeam": "Cloud Nexus 团队创新中",
+  "aboutUs.partner.title1": "您的端到端",
+  "aboutUs.partner.titleHighlight": "AI驱动的软件开发",
+  "aboutUs.partner.title2": "和数字化转型合作伙伴",
+  "aboutUs.partner.description": "拥抱我们的合作伙伴关系，体验集体知识和技术驱动技能的力量，承诺以先进技术注入的最佳成果。",
+  "aboutUs.about.title": "关于",
+  "aboutUs.about.titleHighlight": "CloudNexus",
+  "aboutUs.about.description1": "在 CloudNexus，我们不仅仅是一家IT咨询公司——我们是创新者、问题解决者和数字未来的架构师。我们专注于前沿IT解决方案、云转型、AI驱动的自动化和企业咨询。",
+  "aboutUs.about.description2": "结合我们的合作伙伴关系和行业经验，我们正在创建一个强大的生态系统，带来巨大的业务转型——提升效率、推动增长并为未来做好准备。",
+  "aboutUs.about.altTeam": "团队协作打造创新解决方案",
+  "aboutUs.about.overlayCloud": "云转型",
+  "aboutUs.about.overlayAI": "AI与自动化",
+  "aboutUs.about.overlayEngineering": "软件工程",
+  "aboutUs.about.overlayCyber": "网络安全",
+  "aboutUs.values.titleHighlight": "我们的",
+  "aboutUs.values.title": "价值观",
+  "aboutUs.values.description": "我们的核心价值观由每位成员通过工作方式和商业决策所定义。",
+  "aboutUs.reasons.title": "与我们",
+  "aboutUs.reasons.titleHighlight": "合作的理由",
+  "aboutUs.reasons.description": "我们以卓越的工作承诺在不断变化的世界中赢得最高水平的市场关注。",
+  "aboutUs.reasons.altTeam": "专业团队提供IT解决方案",
+  "aboutUs.reasons.statProjects": "交付的项目",
+  "aboutUs.reasons.statSatisfaction": "客户满意度",
+  "aboutUs.reasons.statSupport": "全天候支持",
+  "aboutUs.offices.titleHighlight": "我们的",
+  "aboutUs.offices.title": "办公室",
+  "aboutUs.offices.description": "战略性地分布在印度各地——从我们的开发中心交付世界级IT解决方案。",
+  "aboutUs.cta.title1": "准备好创造",
+  "aboutUs.cta.titleHighlight": "非凡之作？",
+  "aboutUs.cta.description": "无论您是正在构建MVP的初创企业，还是正在进行技术栈现代化的大型企业——我们都将帮助您将宏大的想法变为现实。",
+  "aboutUs.cta.bookConsultation": "预约免费咨询",
+  "aboutUs.cta.contactUs": "联系我们",
+  "overview.vision.title": "我们的使命",
+  "overview.vision.titleHighlight": "与方向",
+  "overview.vision.tabVision": "我们的愿景",
+  "overview.vision.tabMission": "我们的使命",
+  "overview.vision.ourVision": "我们的愿景",
+  "overview.vision.visionText": "成为IT解决方案和数字产品创新领域的全球领导者，以前沿技术赋能企业，提升效率、可扩展性和增长。在 CloudNexus，我们展望一个企业通过利用智能、自动化和面向未来的解决方案蓬勃发展的未来。",
+  "overview.vision.altVision": "未来科技与数字创新",
+  "overview.vision.ourMission": "我们的使命",
+  "overview.vision.missionSubtitle": "重新定义IT格局",
+  "overview.vision.altMission": "团队协作进行数字创新",
+  "overview.hero.title": "创新者、问题解决者与",
+  "overview.hero.titleHighlight": "数字未来的架构师",
+  "overview.hero.description": "在 CloudNexus，我们不仅仅是一家IT咨询公司。我们专注于前沿IT解决方案、云转型、AI驱动的自动化和企业咨询，帮助企业在不断发展的技术格局中蓬勃发展。",
+  "overview.hero.getStarted": "开始",
+  "overview.hero.learnAboutUs": "了解我们",
+  "overview.hero.altTeam": "团队协作打造数字解决方案",
+  "overview.hero.stat1Val": "200+",
+  "overview.hero.stat1Label": "项目",
+  "overview.hero.stat2Val": "1+",
+  "overview.hero.stat2Label": "年",
+  "overview.hero.stat3Val": "90+",
+  "overview.hero.stat3Label": "团队",
+  "overview.whoWeAre.title": "关于我们",
+  "overview.whoWeAre.description1": "在 CloudNexus，我们不仅仅是一家IT咨询公司——我们是创新者、问题解决者和数字未来的架构师。我们专注于前沿IT解决方案、云转型、AI驱动的自动化和企业咨询，帮助企业在不断发展的技术格局中蓬勃发展。",
+  "overview.whoWeAre.description2": "我们的技术专家、战略师和问题解决者团队与客户紧密合作，设计量身定制的解决方案，以提升效率、推动增长并为未来做好准备。无论是云迁移、软件开发、自动化还是网络安全，我们确保您的IT生态系统敏捷、安全且优化到位。",
+  "overview.whoWeAre.altTeam": "团队战略与创新",
+  "overview.whoWeAre.capCloud": "云转型",
+  "overview.whoWeAre.capAI": "AI与自动化",
+  "overview.whoWeAre.capSoftware": "软件开发",
+  "overview.whoWeAre.capCyber": "网络安全",
+  "overview.services.title": "我们的",
+  "overview.services.titleHighlight": "服务",
+  "overview.services.description": "端到端的技术能力，根据您的业务阶段和增长目标量身定制。",
+  "overview.whyCloudNexus.title": "为什么选择",
+  "overview.whyCloudNexus.titleHighlight": "CloudNexus？",
+  "overview.whyCloudNexus.description": "选择合适的技术合作伙伴对业务成功至关重要。我们不仅仅提供IT解决方案——我们创造推动创新、效率和增长的变革性体验。",
+  "overview.whyCloudNexus.altTeam": "专业团队提供IT解决方案",
+  "overview.whyCloudNexus.stat1Val": "200+",
+  "overview.whyCloudNexus.stat1Label": "交付的项目",
+  "overview.whyCloudNexus.stat2Val": "1+",
+  "overview.whyCloudNexus.stat2Label": "年的卓越",
+  "overview.whyCloudNexus.stat3Val": "90+",
+  "overview.whyCloudNexus.stat3Label": "可扩展团队",
+  "overview.offices.title": "我们的",
+  "overview.offices.titleHighlight": "办公室",
+  "overview.offices.description": "战略性地分布在印度拉贾斯坦邦——从我们的开发中心交付世界级IT解决方案。",
+  "overview.growth.title": "我们的成长",
+  "overview.growth.titleHighlight": "历程",
+  "overview.growth.description": "从一颗创意的种子到科技领域的新生力量——每一个里程碑都标志着迈向愿景的一步。",
+  "overview.growth.altPlant": "生长的幼苗象征公司成长",
+  "overview.growth.step1Date": "2025年1月19日",
+  "overview.growth.step1Title": "种子已播下",
+  "overview.growth.step1Desc": "Cloud Nexus 以明确的使命创立——弥合业务需求与技术之间的差距。从一个怀揣大梦想的小团队开始，奠定了非凡事业的基础。",
+  "overview.growth.step2Date": "2025年中",
+  "overview.growth.step2Title": "扎根与成长",
+  "overview.growth.step2Desc": "我们扩大了团队，签约了首批全球客户，成功交付了30+个项目。我们在移动、Web、云和AI领域的专业知识开始在各行各业获得认可。",
+  "overview.growth.step3Date": "2026年初",
+  "overview.growth.step3Title": "枝繁叶茂",
+  "overview.growth.step3Desc": "成功交付50+个跨15+个行业的项目后，我们开始参加 GITEX 等全球科技大会，建立了专门的AI/ML能力，并显著扩展了服务组合。",
+  "overview.growth.step4Date": "今天及未来",
+  "overview.growth.step4Title": "攀登新高度",
+  "overview.growth.step4Desc": "我们现在是一家受到全球企业信赖的全方位技术公司。我们的旅程才刚刚开始——计划进一步扩展、大胆创新并创造持久影响。",
+  "overview.cta.title": "准备好创新了吗？",
+  "overview.cta.titleHighlight": "让我们一起构建",
+  "overview.cta.description": "加入500+家信赖 CloudNexus 交付能带来真实商业成果的技术解决方案的企业。",
+  "overview.cta.bookConsultation": "预约免费咨询",
+  "overview.cta.viewWork": "查看我们的作品",
+  "team.hero.title": "CloudNexus",
+  "team.hero.titleHighlight": "背后的人",
+  "team.hero.description": "一支由工程师、设计师和战略师组成的才华横溢的团队，一个项目一个项目地构建技术的未来。",
+  "team.hero.stat1Num": "90+",
+  "team.hero.stat1Label": "团队成员",
+  "team.hero.stat2Num": "4",
+  "team.hero.stat2Label": "专业小组",
+  "team.hero.stat3Num": "3",
+  "team.hero.stat3Label": "办公地点",
+  "team.hero.stat4Num": "10+",
+  "team.hero.stat4Label": "年交付经验",
+  "team.leadership.titleHighlight": "领导力",
+  "team.leadership.title": "团队",
+  "team.leadership.description": "CloudNexus 愿景、战略和执行背后的驱动力。",
+  "team.squads.titleHighlight": "工程",
+  "team.squads.title": "小组",
+  "team.squads.description": "专业团队在 DevOps、开发和数据领域交付卓越成果。",
+  "team.squads.teamLabel": "团队",
+  "team.squads.division": "部门",
+  "team.squads.techStack": "技术栈",
+  "team.squads.stat1Num": "25+",
+  "team.squads.stat1Label": "成员",
+  "team.squads.stat2Num": "50+",
+  "team.squads.stat2Label": "项目",
+  "team.techStaff.titleHighlight": "技术人员",
+  "team.techStaff.title": "组成",
+  "team.techStaff.description": "在 CloudNexus，我们的技术团队融合了AI专业知识、创新能力和多元化人才，交付智能且面向未来的解决方案，超越期望。",
+  "team.techStaff.aiMl": "AI与机器学习工程师",
+  "team.techStaff.softwareArchitects": "软件架构师",
+  "team.techStaff.fullStack": "全栈开发人员",
+  "team.techStaff.appWeb": "App与Web开发人员",
+  "team.techStaff.networkCloud": "网络与云工程师",
+  "team.techStaff.qa": "质量保证专家",
+  "team.techStaff.devops": "DevOps工程师",
+  "team.techStaff.dataEngineers": "数据工程师与分析师",
+  "team.techStaff.uiux": "UI/UX 设计师",
+  "team.techStaff.seoDigital": "SEO与数字营销专家",
+  "team.techStaff.projectManagers": "项目经理",
+  "team.techStaff.technicalWriters": "技术文档撰写人",
+  "team.culture.titleHighlight": "我们的",
+  "team.culture.title": "文化",
+  "team.culture.description": "CloudNexus 之所以成为构建职业和专业成长的绝佳之地的原因。",
+  "team.cta.title": "想加入我们的团队吗？",
+  "team.cta.description": "我们一直在寻找有才华的工程师、设计师和战略师，他们对构建未来充满热情。",
+  "team.cta.getInTouch": "联系我们",
+  "processMethodology.hero.title": "我们的流程与",
+  "processMethodology.hero.titleHighlight": "开发方法论",
+  "processMethodology.hero.description": "了解我们简洁、智能且敏捷的软件开发方法。从需求发现到部署上线——每一步都透明、协作且以结果为导向。",
+  "processMethodology.hero.startProject": "启动您的项目",
+  "processMethodology.hero.contactUs": "联系我们",
+  "processMethodology.agile.title": "从敏捷到",
+  "processMethodology.agile.titleHighlight": "行动",
+  "processMethodology.agile.description": "我们采用敏捷方法论，鼓励透明沟通、促进协作、应对不确定性、适应变化并持续交付新价值。",
+  "processMethodology.agile.subDescription": "所有工作——开发、信息和投资——以整合的方式推进，每次迭代都有可衡量的回报。",
+  "processMethodology.agile.transparentComm.title": "透明沟通",
+  "processMethodology.agile.transparentComm.desc": "每日站会、迭代回顾和开放的 Slack 频道。您始终了解项目的进展。",
+  "processMethodology.agile.iterativeDev.title": "迭代开发",
+  "processMethodology.agile.iterativeDev.desc": "2周一次的迭代，定期演示。您可以看到进展，提供反馈，并持续引导方向。",
+  "processMethodology.agile.goalDriven.title": "目标驱动执行",
+  "processMethodology.agile.goalDriven.desc": "每次迭代都有与业务成果相关的明确目标。我们不只是构建功能——我们交付成果。",
+  "processMethodology.agile.measurableProgress.title": "可衡量的进展",
+  "processMethodology.agile.measurableProgress.desc": "速度跟踪、燃尽图和定期报告。数据驱动的项目健康状况和时间线洞察。",
+  "processMethodology.execution.title": "项目",
+  "processMethodology.execution.titleHighlight": "执行",
+  "processMethodology.execution.titleSuffix": "结构",
+  "processMethodology.execution.description": "我们高效的跨职能团队在每个环节为您提供全程支持。我们根据您的需求进行调整，交付与您愿景一致的递增价值。",
+  "processMethodology.execution.phase": "阶段",
+  "processMethodology.deliverables.title": "我们的",
+  "processMethodology.deliverables.titleHighlight": "交付物",
+  "processMethodology.deliverables.description": "从承接项目的那一刻起，我们的职责就已开始。我们让您了解开发阶段的每一个方面——透明、系统化、标准化。",
+  "processMethodology.tech.titleHighlight": "工具与技术",
+  "processMethodology.tech.title": "我们使用的",
+  "processMethodology.tech.description": "我们使用前沿技术，辅以强大的工具、框架和平台，交付高度可扩展、交互性强且创新的解决方案。",
+  "processMethodology.models.title": "灵活的",
+  "processMethodology.models.titleHighlight": "合作模式",
+  "processMethodology.models.description": "我们的工程团队以不同的合作模式提供服务，最大限度地满足您的需求，以最高效的方式推出理想产品。",
+  "processMethodology.security.title": "您的创意",
+  "processMethodology.security.titleHighlight": "始终安全",
+  "processMethodology.security.titleSuffix": "与我们同在",
+  "processMethodology.security.description": "保护您的创意、知识产权和商业机密是我们的首要任务。我们确保您的信息永远不会被未授权方获取。",
+  "processMethodology.cta.title": "有项目想法？",
+  "processMethodology.cta.titleHighlight": "让我们一起实现",
+  "processMethodology.cta.description": "告诉我们您的想法，我们将提供包含架构建议、时间线和成本估算的详细方案——完全免费。",
+  "processMethodology.cta.bookConsultation": "预约免费咨询",
+  "processMethodology.cta.contactUs": "联系我们",
+  "infra.hero.title": "Cloud Nexus",
+  "infra.hero.titleHighlight": "基础设施",
+  "infra.hero.description": "我们精心设计的工作空间专为创新、协作和高效交付而打造。一个每天都在构建世界级软件的现代技术中心。",
+  "infra.hero.cta": "联系我们",
+  "infra.hero.ctaSecondary": "Cloud Nexus 的生活",
+  "infra.gallery.title": "走进我们的",
+  "infra.gallery.titleHighlight": "办公室",
+  "infra.gallery.description": "一窥 Cloud Nexus 每天发生创新的地方。",
+  "infra.location.headquarters": "总部",
+  "infra.location.highlightsTitle": "办公室亮点",
+  "infra.facilities.title": "世界级",
+  "infra.facilities.titleHighlight": "设施",
+  "infra.facilities.description": "我们的办公室配备了团队在舒适、安全和充满灵感的环境中交付卓越工作所需的一切。",
+  "infra.workspace.title": "我们的",
+  "infra.workspace.titleHighlight": "工作空间",
+  "infra.workspace.description": "精心设计，打造一个人才蓬勃发展、灵感涌现、优秀产品诞生的环境。",
+  "infra.cta.title": "您有项目想法吗？",
+  "infra.cta.subtitle": "与专家交谈。",
+  "infra.cta.description": "让我们讨论 Cloud Nexus 如何帮助您构建、扩展和交付您的下一个伟大创意。",
+  "infra.cta.primaryBtn": "联系我们",
+  "infra.cta.secondaryBtn": "联系我们",
+  "companyHub.hero.title.line1": "构建未来，",
+  "companyHub.hero.title.highlight": "一个解决方案",
+  "companyHub.hero.title.line2": "接着一个",
+  "companyHub.hero.description": "Cloud Nexus 是一家将创意转化为强大数字产品的科技公司。成立于2025年1月，我们汇集了才华横溢的工程师、设计师和战略师，交付卓越的软件解决方案。",
+  "companyHub.hero.cta.learnAbout": "了解我们",
+  "companyHub.hero.cta.getInTouch": "联系我们",
+  "companyHub.explore.title": "探索",
+  "companyHub.explore.description": "了解我们是谁、我们如何工作，以及是什么让我们成为您业务的理想技术合作伙伴。",
+  "companyHub.explore.cardCta": "探索",
+  "companyHub.values.title": "我们的核心",
+  "companyHub.values.titleHighlight": "价值观",
+  "companyHub.values.description": "这些原则指导着我们做出的每一个决定、构建的每一个产品以及维护的每一段关系。",
+  "companyHub.growth.title": "我们的成长",
+  "companyHub.growth.titleHighlight": "历程",
+  "companyHub.growth.description": "从一颗创意的种子到科技领域的新生力量——每一个里程碑都标志着迈向愿景的一步。",
+  "companyHub.growth.step1.date": "2025年1月19日",
+  "companyHub.growth.step1.title": "种子已播下",
+  "companyHub.growth.step1.desc": "Cloud Nexus 以明确的使命创立——弥合业务需求与技术之间的差距。从一个怀揣大梦想的小团队开始，奠定了非凡事业的基础。",
+  "companyHub.growth.step2.date": "2025年中",
+  "companyHub.growth.step2.title": "扎根与成长",
+  "companyHub.growth.step2.desc": "我们扩大了团队，签约了首批全球客户，成功交付了30+个项目。我们在移动、Web、云和AI领域的专业知识开始在各行各业获得认可。",
+  "companyHub.growth.step3.date": "2026年初",
+  "companyHub.growth.step3.title": "枝繁叶茂",
+  "companyHub.growth.step3.desc": "成功交付50+个跨15+个行业的项目后，我们开始参加 GITEX 等全球科技大会，建立了专门的AI/ML能力，并显著扩展了服务组合。",
+  "companyHub.growth.step4.date": "今天及未来",
+  "companyHub.growth.step4.title": "攀登新高度",
+  "companyHub.growth.step4.desc": "我们现在是一家受到全球企业信赖的全方位技术公司。我们的旅程才刚刚开始——计划进一步扩展、大胆创新并创造持久影响。",
+  "companyHub.cta.title": "让我们一起构建",
+  "companyHub.cta.titleHighlight": "非凡之作",
+  "companyHub.cta.description": "无论您是怀揣大胆想法的初创企业，还是寻求数字化转型的大型企业——我们都将助您实现。",
+  "companyHub.cta.bookConsultation": "预约免费咨询",
+  "companyHub.cta.contactUs": "联系我们",
+  "life": {
+    "gallery": {
+      "ariaLabel": "文化亮点"
+    },
+    "hero": {
+      "title": "生活在",
+      "subtitle": "Cloud Nexus",
+      "description": "人才与文化相遇的地方。我们打造令我们自豪的产品——与我们真正关心的人一起。",
+      "exploreCareers": "探索职业",
+      "getInTouch": "联系我们"
+    },
+    "stats": {
+      "teamMembers": "团队成员",
+      "dayWorkWeek": "天工作周",
+      "countriesServed": "服务国家",
+      "womenInTech": "科技领域女性"
+    },
+    "moments": {
+      "title": "庆祝美好",
+      "titleHighlight": "时刻",
+      "description": "欢声笑语伴随着音乐的旋律回荡。看看我们如何在Cloud Nexus一起构建成功。",
+      "viewAllPhotos": "查看所有照片"
+    },
+    "purpose": {
+      "title": "由",
+      "titleHighlight": "使命驱动",
+      "description": "五大支柱指引我们所构建、交付和坚守的一切。"
+    },
+    "join": {
+      "title": "为什么加入Cloud Nexus？",
+      "description": "Cloud Nexus是您学习、探索和提升技艺与自信的地方。"
+    },
+    "women": {
+      "altImage": "Cloud Nexus的女性赋能",
+      "badgeLabel": "科技岗位中的女性",
+      "title": "赋能女性是我们的主要目标",
+      "description1": "我们投资于领导力可见性、心理安全和成长路径，让女性在工程、产品和运营中蓬勃发展。",
+      "description2": "从导师圈到灵活政策和零容忍骚扰，我们设计一个每个人都能全身心投入的工作场所。",
+      "point1": "招聘和晋升中的平等机会",
+      "point2": "领导力赞助和导师计划",
+      "point3": "安全举报和支持性人力资源实践"
+    },
+    "recruit": {
+      "title": "我们一直在寻找有热情的人",
+      "description": "在Cloud Nexus，我们因充满动力的个人而蓬勃发展。",
+      "applyNow": "立即申请"
+    },
+    "perks": {
+      "title": "在Cloud Nexus的福利",
+      "description": "舒适、安全和灵活——这就是我们共同成长的方式。"
+    },
+    "diversity": {
+      "title": "多元化",
+      "titleHighlight": "Cloud Nexus"
+    },
+    "cta": {
+      "title": "准备成为",
+      "titleHighlight": "故事的一部分",
+      "description": "带上你的好奇心、技艺和善良。我们正在构建值得每天为之而来的产品和文化。",
+      "applyNow": "立即申请",
+      "talkToUs": "与我们交谈"
+    }
+  },
+  "events": {
+    "hero": {
+      "title": "我们在这里",
+      "titleHighlight": "连接",
+      "titleLine2": "学习与创新",
+      "description": "从全球技术大会到动手工坊——了解Cloud Nexus在哪里分享见解并构建技术未来。",
+      "cta": "在活动中与我们相见",
+      "ctaSecondary": "查看日程"
+    },
+    "featured": {
+      "title": "重要",
+      "titleHighlight": "活动",
+      "description": "Cloud Nexus展示突破性创新并与行业领袖交流的世界级技术大会。",
+      "reserveSpot": "预订您的席位"
+    },
+    "upcoming": {
+      "title": "即将到来的",
+      "titleHighlight": "日程",
+      "description": "网络研讨会、工坊、聚会和黑客马拉松——在线或亲临参加。",
+      "register": "立即注册"
+    },
+    "past": {
+      "title": "过往",
+      "titleHighlight": "精彩回顾",
+      "description": "回顾过去——分享知识、建立合作伙伴关系和产生影响。"
+    },
+    "whyAttend": {
+      "title": "为什么参加我们的",
+      "titleHighlight": "活动",
+      "description": "无论您是开发者、初创企业创始人还是企业领导——我们的活动提供可操作的见解。"
+    },
+    "cta": {
+      "title": "下一个相见在",
+      "titleHighlight": "大型活动",
+      "description": "想要合作、赞助或只是打个招呼？联系我们的活动团队。",
+      "primaryBtn": "安排会议",
+      "secondaryBtn": "联系活动团队"
+    }
+  },
+  "aboutUs": {
+    "workforce": {
+      "teamMembers": "团队成员",
+      "title1": "我们的",
+      "titleHighlight": "远见者",
+      "title2": "帮助",
+      "title3": "加速流程",
+      "description": "凭借我们充满热情的团队和经验丰富的工程师，我们快速创建卓越的解决方案。",
+      "statTeam": "团队成员",
+      "statIndustries": "行业",
+      "statSupport": "支持"
+    },
+    "hero": {
+      "title1": "丰富生活",
+      "title2": "通过我们的",
+      "titleHighlight": "技术创新",
+      "description": "我们用最大胆的想法提供卓越的数字体验，让世界对每个人都变得更美好。",
+      "getStarted": "开始",
+      "contactUs": "联系我们",
+      "altTeam": "Cloud Nexus团队创新中"
+    },
+    "partner": {
+      "title1": "您的端到端",
+      "titleHighlight": "AI驱动软件开发",
+      "title2": "和数字化转型合作伙伴",
+      "description": "拥抱我们的合作伙伴关系，体验集体知识和技术驱动技能的力量。"
+    },
+    "about": {
+      "title": "关于",
+      "titleHighlight": "CloudNexus",
+      "description1": "在CloudNexus，我们不仅仅是一家IT咨询公司——我们是创新者、问题解决者和数字未来的架构师。",
+      "description2": "凭借我们的合作伙伴关系和行业经验，我们正在创建一个强大的生态系统。",
+      "altTeam": "团队协作创新解决方案",
+      "overlayCloud": "云转型",
+      "overlayAI": "AI与自动化",
+      "overlayEngineering": "软件工程",
+      "overlayCyber": "网络安全"
+    },
+    "values": {
+      "titleHighlight": "我们的",
+      "title": "价值观",
+      "description": "我们的核心价值观由我们个人的品格通过工作模式和商业决策来定义。"
+    },
+    "reasons": {
+      "title": "令人信服的理由",
+      "titleHighlight": "与我们合作",
+      "description": "我们以出色的工作承诺获得最高水平的市场关注。",
+      "altTeam": "提供IT解决方案的专业团队",
+      "statProjects": "交付的项目",
+      "statSatisfaction": "客户满意度",
+      "statSupport": "可用支持"
+    },
+    "offices": {
+      "titleHighlight": "我们的",
+      "title": "办公室",
+      "description": "战略性地分布在印度各地——从我们的开发中心提供世界级IT解决方案。"
+    },
+    "cta": {
+      "title1": "准备构建",
+      "titleHighlight": "非凡之物？",
+      "description": "无论是创业公司还是企业——我们在这里帮助您实现目标。",
+      "bookConsultation": "预约免费咨询",
+      "contactUs": "联系我们"
+    }
+  },
+  "overview": {
+    "vision": {
+      "title": "我们的目标",
+      "titleHighlight": "与方向",
+      "tabVision": "我们的愿景",
+      "tabMission": "我们的使命",
+      "ourVision": "我们的愿景",
+      "visionText": "成为IT解决方案和数字产品创新的全球领导者。",
+      "altVision": "未来科技和数字创新",
+      "ourMission": "我们的使命",
+      "missionSubtitle": "重新定义IT格局",
+      "altMission": "团队协作数字创新"
+    },
+    "hero": {
+      "title": "创新者、问题解决者和",
+      "titleHighlight": "数字未来的架构师",
+      "description": "在CloudNexus，我们专注于渐进式IT解决方案、云转型、AI驱动自动化和企业咨询。",
+      "getStarted": "开始",
+      "learnAboutUs": "了解我们",
+      "altTeam": "团队协作数字解决方案",
+      "stat1Val": "200+",
+      "stat1Label": "项目",
+      "stat2Val": "1+",
+      "stat2Label": "年",
+      "stat3Val": "90+",
+      "stat3Label": "团队"
+    },
+    "whoWeAre": {
+      "title": "我们是谁",
+      "description1": "在CloudNexus，我们是创新者和数字未来的架构师。",
+      "description2": "我们的技术专家团队与客户紧密合作，设计量身定制的解决方案。",
+      "altTeam": "团队战略与创新",
+      "capCloud": "云转型",
+      "capAI": "AI与自动化",
+      "capSoftware": "软件开发",
+      "capCyber": "网络安全"
+    },
+    "services": {
+      "title": "我们的",
+      "titleHighlight": "服务",
+      "description": "根据您的业务阶段和增长目标量身定制的端到端技术能力。"
+    },
+    "whyCloudNexus": {
+      "title": "为什么选择",
+      "titleHighlight": "CloudNexus？",
+      "description": "选择正确的技术合作伙伴对业务成功至关重要。",
+      "altTeam": "专业团队",
+      "stat1Val": "200+",
+      "stat1Label": "交付的项目",
+      "stat2Val": "1+",
+      "stat2Label": "卓越之年",
+      "stat3Val": "90+",
+      "stat3Label": "可扩展团队"
+    },
+    "offices": {
+      "title": "我们的",
+      "titleHighlight": "办公室",
+      "description": "战略性地位于印度拉贾斯坦邦。"
+    },
+    "growth": {
+      "title": "我们的成长",
+      "titleHighlight": "历程",
+      "description": "从一颗创意的种子到不断壮大的技术力量。",
+      "altPlant": "象征公司成长的幼苗",
+      "step1Date": "2025年1月19日",
+      "step1Title": "种子已种下",
+      "step1Desc": "Cloud Nexus以明确的使命成立。",
+      "step2Date": "2025年中",
+      "step2Title": "扎根成长",
+      "step2Desc": "扩展团队并交付30+个成功项目。",
+      "step3Date": "2026年初",
+      "step3Title": "枝繁叶茂",
+      "step3Desc": "50+个项目覆盖15+个行业，参加GITEX。",
+      "step4Date": "今天及未来",
+      "step4Title": "攀登新高度",
+      "step4Desc": "现在我们是全球信赖的全方位科技公司。"
+    },
+    "cta": {
+      "title": "准备创新？",
+      "titleHighlight": "一起构建",
+      "description": "500+家企业信赖CloudNexus。",
+      "bookConsultation": "预约免费咨询",
+      "viewWork": "查看我们的作品"
+    }
+  },
+  "team": {
+    "hero": {
+      "title": "背后的人们",
+      "titleHighlight": "CloudNexus",
+      "description": "一支由工程师、设计师和战略家组成的优秀团队——一次一个项目地构建技术的未来。",
+      "stat1Num": "90+",
+      "stat1Label": "团队成员",
+      "stat2Num": "4",
+      "stat2Label": "专业团队",
+      "stat3Num": "3",
+      "stat3Label": "办公地点",
+      "stat4Num": "10+",
+      "stat4Label": "交付经验"
+    },
+    "leadership": {
+      "titleHighlight": "领导",
+      "title": "团队",
+      "description": "CloudNexus愿景、战略和执行背后的驱动力。"
+    },
+    "squads": {
+      "titleHighlight": "工程",
+      "title": "团队",
+      "description": "在DevOps、开发和数据方面提供卓越服务的专业团队。",
+      "teamLabel": "团队",
+      "division": "部门",
+      "techStack": "技术栈",
+      "stat1Num": "25+",
+      "stat1Label": "成员",
+      "stat2Num": "50+",
+      "stat2Label": "项目"
+    },
+    "techStaff": {
+      "titleHighlight": "技术人员",
+      "title": "包括",
+      "description": "我们的技术人员结合了AI专业知识、创新和多元化人才。",
+      "aiMl": "AI和机器学习工程师",
+      "softwareArchitects": "软件架构师",
+      "fullStack": "全栈开发者",
+      "appWeb": "应用和网页开发者",
+      "networkCloud": "网络和云工程师",
+      "qa": "质量保证专家",
+      "devops": "DevOps工程师",
+      "dataEngineers": "数据工程师和分析师",
+      "uiux": "UI/UX设计师",
+      "seoDigital": "SEO和数字营销专家",
+      "projectManagers": "项目经理",
+      "technicalWriters": "技术文档撰写人"
+    },
+    "culture": {
+      "titleHighlight": "我们的",
+      "title": "文化",
+      "description": "是什么让CloudNexus成为建立职业生涯和专业成长的理想场所。"
+    },
+    "cta": {
+      "title": "想加入我们的团队？",
+      "description": "我们一直在寻找有才华的工程师、设计师和战略家。",
+      "getInTouch": "联系我们"
+    }
+  },
+  "processMethodology": {
+    "hero": {
+      "title": "我们的流程和",
+      "titleHighlight": "开发方法论",
+      "description": "我们简单、智能、敏捷的软件开发方法之旅。",
+      "startProject": "启动您的项目",
+      "contactUs": "联系我们"
+    },
+    "agile": {
+      "title": "从敏捷到",
+      "titleHighlight": "行动",
+      "description": "我们采用敏捷方法论来鼓励透明沟通、促进协作并持续交付新价值。",
+      "subDescription": "一切——开发工作、信息和投资——以综合方式推进，每次迭代都有可衡量的回报。",
+      "transparentComm": {
+        "title": "透明沟通",
+        "desc": "每日站会、冲刺回顾和开放的Slack频道。"
+      },
+      "iterativeDev": {
+        "title": "迭代开发",
+        "desc": "2周冲刺，定期演示。"
+      },
+      "goalDriven": {
+        "title": "目标驱动执行",
+        "desc": "每个冲刺都有与业务成果相关的明确目标。"
+      },
+      "measurableProgress": {
+        "title": "可衡量的进展",
+        "desc": "速度跟踪、燃尽图和定期报告。"
+      }
+    },
+    "execution": {
+      "title": "项目",
+      "titleHighlight": "执行",
+      "titleSuffix": "结构",
+      "description": "我们的高绩效跨职能团队在每一步都照顾您。",
+      "phase": "阶段"
+    },
+    "deliverables": {
+      "title": "我们的",
+      "titleHighlight": "交付成果",
+      "description": "从接手项目的那一刻起，我们的责任就开始了。"
+    },
+    "tech": {
+      "titleHighlight": "工具和技术",
+      "title": "我们使用的",
+      "description": "我们使用前沿技术提供高可扩展性、交互性和创新性的解决方案。"
+    },
+    "models": {
+      "title": "灵活的",
+      "titleHighlight": "工作模式",
+      "description": "我们的工程团队以不同的参与模式提供服务。"
+    },
+    "security": {
+      "title": "您的想法",
+      "titleHighlight": "始终安全",
+      "titleSuffix": "在我们这里",
+      "description": "保护您的想法、知识产权和商业机密是我们的首要任务。"
+    },
+    "cta": {
+      "title": "有项目想法？",
+      "titleHighlight": "一起构建",
+      "description": "告诉我们您的想法，我们将提供详细的提案——完全免费。",
+      "bookConsultation": "预约免费咨询",
+      "contactUs": "联系我们"
+    }
+  },
+  "infra": {
+    "hero": {
+      "title": "Cloud Nexus",
+      "titleHighlight": "基础设施",
+      "description": "我们精心设计的工作空间为创新、协作和高效交付而建。",
+      "cta": "联系我们",
+      "ctaSecondary": "Cloud Nexus的生活"
+    },
+    "gallery": {
+      "title": "走进我们的",
+      "titleHighlight": "办公室",
+      "description": "一窥Cloud Nexus每天发生创新的地方。"
+    },
+    "location": {
+      "headquarters": "总部",
+      "highlightsTitle": "办公室亮点"
+    },
+    "facilities": {
+      "title": "世界级",
+      "titleHighlight": "设施",
+      "description": "我们的办公室配备了团队在舒适、安全和激励的环境中完成卓越工作所需的一切。"
+    },
+    "workspace": {
+      "title": "我们的",
+      "titleHighlight": "工作空间",
+      "description": "精心设计，创造一个让人才蓬勃发展、创意流动的环境。"
+    },
+    "cta": {
+      "title": "有项目想法吗？",
+      "subtitle": "与专家交谈。",
+      "description": "让我们讨论Cloud Nexus如何帮助您构建、扩展和交付您的下一个大创意。",
+      "primaryBtn": "联系我们",
+      "secondaryBtn": "与我们联系"
+    }
+  },
+  "companyHub": {
+    "hero": {
+      "title": {
+        "line1": "构建未来，",
+        "highlight": "一个解决方案",
+        "line2": "一步一步"
+      },
+      "description": "Cloud Nexus是一家将创意转化为强大数字产品的科技公司。",
+      "cta": {
+        "learnAbout": "了解我们",
+        "getInTouch": "联系我们"
+      }
+    },
+    "explore": {
+      "title": "探索",
+      "description": "了解我们是谁，我们如何工作，以及什么使我们成为合适的技术合作伙伴。",
+      "cardCta": "探索"
+    },
+    "values": {
+      "title": "我们的核心",
+      "titleHighlight": "价值观",
+      "description": "这些原则指引我们做出的每一个决定。"
+    },
+    "growth": {
+      "title": "我们的成长",
+      "titleHighlight": "历程",
+      "description": "从创意种子到不断壮大的技术力量。",
+      "step1": {
+        "date": "2025年1月19日",
+        "title": "种子已种下",
+        "desc": "Cloud Nexus以明确使命成立。"
+      },
+      "step2": {
+        "date": "2025年中",
+        "title": "扎根成长",
+        "desc": "扩展团队并交付30+项目。"
+      },
+      "step3": {
+        "date": "2026年初",
+        "title": "枝繁叶茂",
+        "desc": "50+项目，参加GITEX，建立AI/ML能力。"
+      },
+      "step4": {
+        "date": "今天及未来",
+        "title": "攀登新高度",
+        "desc": "全球信赖的全方位科技公司。"
+      }
+    },
+    "cta": {
+      "title": "构建",
+      "titleHighlight": "非凡之物",
+      "description": "初创企业或大型企业——我们在这里帮您实现。",
+      "bookConsultation": "预约免费咨询",
+      "contactUs": "联系我们"
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "我们如何",
+      "titleHighlight": "帮助您？",
+      "description": "我们专业的支持团队在这里确保您的成功。"
+    },
+    "channels": {
+      "title": "联系",
+      "titleHighlight": "我们的团队",
+      "description": "选择您喜欢的支持渠道。"
+    },
+    "selfService": {
+      "title": "自助",
+      "titleHighlight": "资源",
+      "description": "在我们的综合资源库中自行查找答案。",
+      "browse": "浏览"
+    },
+    "faq": {
+      "title": "常见",
+      "titleHighlight": "问题"
+    },
+    "form": {
+      "title": "发送消息",
+      "subtitle": "我们将在4小时内回复",
+      "successTitle": "消息已发送！",
+      "successDesc": "我们将在4小时内回复。",
+      "sendAnother": "再发一条",
+      "nameLabel": "姓名",
+      "namePlaceholder": "您的全名",
+      "emailLabel": "邮箱",
+      "emailPlaceholder": "you@company.com",
+      "priorityLabel": "优先级",
+      "priorityLow": "低 - 一般问题",
+      "priorityMedium": "中 - 功能请求",
+      "priorityHigh": "高 - 错误报告",
+      "priorityCritical": "紧急 - 生产环境宕机",
+      "messageLabel": "消息",
+      "messagePlaceholder": "描述您的问题...",
+      "sending": "发送中...",
+      "sendMessage": "发送消息",
+      "errorFallback": "出了点问题。请重试。"
+    },
+    "promise": {
+      "title": "我们的支持",
+      "titleHighlight": "承诺",
+      "humanFirst": {
+        "title": "人工优先支持",
+        "desc": "没有聊天机器人。每次对话都由经验丰富的工程师开始。"
+      },
+      "enterpriseSla": {
+        "title": "企业级SLA",
+        "desc": "保证响应时间和透明报告。"
+      },
+      "resolution": {
+        "title": "解决问题，而非推诿",
+        "desc": "在您满意之前，我们不会关闭工单。"
+      }
+    },
+    "cta": {
+      "title": "仍需帮助？",
+      "titleHighlight": "我们在这里为您服务",
+      "description": "安排免费咨询讨论您的具体需求。",
+      "bookConsultation": "预约免费咨询",
+      "contactSales": "联系销售"
+    }
+  },
+  "career": {
+    "error": "无法加载职位列表。",
+    "filter": {
+      "all": "全部"
+    },
+    "hero": {
+      "title1": "准备好做",
+      "title2": "你人生中最好的",
+      "title3": "工作 :)",
+      "description": "加入一支充满激情的工程师和设计师团队。",
+      "imageAlt": "Cloud Nexus的团队协作"
+    },
+    "search": {
+      "placeholder": "按职位搜索",
+      "active": "活跃",
+      "role": "职位",
+      "roles": "职位"
+    },
+    "job": {
+      "apply": "查看并申请"
+    },
+    "noResults": {
+      "title": "未找到职位",
+      "description": "请调整搜索或筛选条件。"
+    },
+    "cta": {
+      "title": "认为你合适吗？",
+      "description": "我们正在Cloud Nexus打造特别的东西。",
+      "resume": "投递简历"
+    }
+  },
+  "blog": {
+    "filter": {
+      "all": "全部"
+    },
+    "stat": {
+      "articles": "文章",
+      "topics": "主题",
+      "authors": "作者"
+    },
+    "hero": {
+      "title1": "洞见与",
+      "title2": "故事",
+      "description": "来自Cloud Nexus工程团队的教程、案例研究和技术洞见。",
+      "imageAlt": "博客与洞见"
+    },
+    "search": {
+      "placeholder": "搜索文章..."
+    },
+    "noResults": "未找到文章",
+    "noResultsEmpty": "暂无博客文章。请稍后再来！",
+    "noResultsFilter": "请调整搜索条件。",
+    "readMore": "阅读文章"
+  },
+  "contact": {
+    "form": {
+      "errorFallback": "出了点问题。",
+      "title": "告诉我们您的项目",
+      "subtitle": "带*的字段为必填项",
+      "fullName": "全名",
+      "fullNamePlaceholder": "张三",
+      "companyName": "公司名称",
+      "companyPlaceholder": "您的公司",
+      "email": "邮箱地址",
+      "emailPlaceholder": "zhang@company.com",
+      "phone": "电话号码",
+      "phonePlaceholder": "+86 XXX XXXX XXXX",
+      "interestedIn": "我感兴趣的",
+      "selectService": "选择服务",
+      "budget": "预算估计",
+      "selectBudget": "选择预算范围",
+      "details": "项目详情",
+      "detailsPlaceholder": "告诉我们您的项目...",
+      "heardFrom": "您如何了解到我们？",
+      "selectOption": "请选择",
+      "sending": "发送中...",
+      "sendMessage": "发送消息",
+      "privacyNote": "提交即表示您同意我们的隐私政策。"
+    },
+    "hero": {
+      "titleHighlight": "让我们构建",
+      "title": "伟大的产品",
+      "description": "告诉我们您的项目，我们将在24小时内回复。",
+      "responseTime": "< 24h",
+      "responseTimeLabel": "响应时间",
+      "projectsNum": "200+",
+      "projectsLabel": "交付的项目",
+      "satisfactionNum": "100%",
+      "satisfactionLabel": "客户满意度"
+    },
+    "success": {
+      "title": "消息已发送！",
+      "description": "感谢联系我们。我们的团队将在24小时内回复。",
+      "sendAnother": "发送另一条消息"
+    },
+    "offices": {
+      "title": "我们的办公室"
+    },
+    "cta": {
+      "title": "更喜欢实时对话？",
+      "description": "安排一次免费30分钟咨询电话。",
+      "bookConsultation": "预约免费咨询"
+    }
+  },
+  "freeConsult": {
+    "hero": {
+      "title": "让我们共同构建",
+      "titleHighlight": "您的愿景",
+      "description": "预约与我们资深架构师的免费30分钟策略会议。",
+      "ndaProtected": "NDA保护",
+      "thirtyMinSession": "30分钟会议",
+      "seniorArchitects": "资深架构师"
+    },
+    "calendly": {
+      "title": "选择日期和时间",
+      "subtitle": "30分钟 • 免费咨询"
+    },
+    "whatYouGet": {
+      "title": "您将",
+      "titleHighlight": "获得什么",
+      "description": "每次咨询都旨在提供切实可行的价值。"
+    },
+    "areas": {
+      "title": "咨询",
+      "titleHighlight": "领域",
+      "description": "我们在数字产品开发的各个领域提供专家指导。"
+    },
+    "process": {
+      "title": "如何",
+      "titleHighlight": "运作",
+      "description": "从预约到收到提案的四个简单步骤。"
+    },
+    "cta": {
+      "title": "准备开始了吗？",
+      "titleHighlight": "今天就聊聊",
+      "description": "500+家企业通过我们的专家指导加速了增长。",
+      "bookConsultation": "预约免费咨询",
+      "emailUs": "给我们发邮件",
+      "callUs": "给我们打电话"
+    }
+  }
 }

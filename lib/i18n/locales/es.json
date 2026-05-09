@@ -163,7 +163,6 @@
   "faq.titleWhite": "frecuentes",
   "consultation.titleBlue": "Construyamos algo",
   "consultation.titleWhite": "grandioso juntos",
-
   "servicesPage.hero.title1": "Excelencia en Ingeniería.",
   "servicesPage.hero.title2": "Impacto Medible.",
   "servicesPage.hero.description": "Estrategia, diseño, ingeniería y crecimiento: un solo socio que cubre todo el ciclo de vida digital para que puedas enfocarte en lo que más importa: tu negocio.",
@@ -197,7 +196,6 @@
   "servicesPage.cta.body": "Comparte tu desafío y trazaremos un camino claro, desde la arquitectura hasta el lanzamiento, respaldado por ingenieros que lo han hecho cientos de veces.",
   "servicesPage.cta.getConsultation": "Obtener una Consulta Gratuita",
   "servicesPage.cta.viewWork": "Ver Nuestro Trabajo",
-
   "resourcesHub.hero.title": "¿Cómo podemos",
   "resourcesHub.hero.titleHighlight": "ayudarte",
   "resourcesHub.hero.titleEnd": "hoy?",
@@ -282,7 +280,6 @@
   "resourcesHub.cta.bookConsultation": "Reservar Consulta Gratuita",
   "resourcesHub.cta.sendMessage": "Enviar un Mensaje",
   "resourcesHub.cta.footer": "work@cloudnexus.in · +91 87938 30447",
-
   "careerBenefits.hero.title": "Ventajas y ",
   "careerBenefits.hero.titleHighlight": "beneficios",
   "careerBenefits.hero.titleEnd": "que importan",
@@ -340,5 +337,996 @@
   "careerBenefits.cta.titleEnd": " con nosotros?",
   "careerBenefits.cta.description": "Únete a un equipo que valora tu crecimiento, apoya tu bienestar y recompensa tu contribución. Explora las posiciones abiertas hoy.",
   "careerBenefits.cta.viewPositions": "Ver posiciones abiertas",
-  "careerBenefits.cta.contactHR": "Contactar al equipo de RR.HH."
+  "careerBenefits.cta.contactHR": "Contactar al equipo de RR.HH.",
+  "life.gallery.ariaLabel": "Momentos destacados de la cultura",
+  "life.hero.title": "Vida en",
+  "life.hero.subtitle": "Cloud Nexus",
+  "life.hero.description": "Donde el talento se encuentra con la cultura. Construimos productos de los que estamos orgullosos — con personas que genuinamente nos importan.",
+  "life.hero.exploreCareers": "Explorar carreras",
+  "life.hero.getInTouch": "Contáctenos",
+  "life.stats.teamMembers": "Miembros del equipo",
+  "life.stats.dayWorkWeek": "Días laborales a la semana",
+  "life.stats.countriesServed": "Países atendidos",
+  "life.stats.womenInTech": "Mujeres en tecnología",
+  "life.moments.title": "Celebrando la melodía de los",
+  "life.moments.titleHighlight": "Momentos",
+  "life.moments.description": "Risas y charlas alegres resonaron con la melodía de la música. Descubre cómo estamos construyendo el éxito juntos, un equipo, un sueño en Cloud Nexus.",
+  "life.moments.viewAllPhotos": "Ver todas las fotos",
+  "life.purpose.title": "Impulsados por un",
+  "life.purpose.titleHighlight": "Propósito",
+  "life.purpose.description": "Los cinco pilares que guían todo lo que construimos, lanzamos y defendemos.",
+  "life.join.title": "¿Por qué deberías unirte a Cloud Nexus?",
+  "life.join.description": "Cloud Nexus es el lugar donde puedes aprender, explorar y desarrollar tu oficio y confianza. Tejemos una cultura laboral con empatía, calidez y cuidado.",
+  "life.women.altImage": "Empoderamiento femenino en Cloud Nexus",
+  "life.women.badgeLabel": "Mujeres en roles tecnológicos",
+  "life.women.title": "Empoderar a las mujeres es nuestro principal objetivo",
+  "life.women.description1": "Invertimos en visibilidad de liderazgo, seguridad psicológica y caminos de crecimiento para que las mujeres puedan prosperar en ingeniería, producto y operaciones — no como una excepción, sino como la norma.",
+  "life.women.description2": "Desde círculos de mentoría hasta políticas flexibles y tolerancia cero al acoso, diseñamos un lugar de trabajo donde todos pueden ser auténticos.",
+  "life.women.point1": "Igualdad de oportunidades en contratación y ascensos",
+  "life.women.point2": "Programas de patrocinio de liderazgo y mentoría",
+  "life.women.point3": "Reportes seguros y prácticas de RR.HH. de apoyo",
+  "life.recruit.title": "Siempre estamos en busca de personas entusiastas que se unan a nosotros",
+  "life.recruit.description": "En Cloud Nexus, nos alimentamos de la energía de personas comprometidas. Si estás ansioso por generar un impacto significativo y crecer junto a una comunidad vibrante, nos encantaría tenerte a bordo.",
+  "life.recruit.applyNow": "Solicitar ahora",
+  "life.perks.title": "Ventajas de estar en Cloud Nexus",
+  "life.perks.description": "Comodidad, seguridad y flexibilidad son la forma en que crecemos juntos — con un ambiente alegre donde las personas hacen su mejor trabajo.",
+  "life.diversity.title": "Diversidad en",
+  "life.diversity.titleHighlight": "Cloud Nexus",
+  "life.cta.title": "¿Listo para ser parte de",
+  "life.cta.titleHighlight": "la historia",
+  "life.cta.description": "Trae tu curiosidad, tu oficio y tu amabilidad. Estamos construyendo productos y una cultura por la que vale la pena presentarse — cada día.",
+  "life.cta.applyNow": "Solicitar ahora",
+  "life.cta.talkToUs": "Habla con nosotros",
+  "events.hero.title": "Donde nos",
+  "events.hero.titleHighlight": "Conectamos",
+  "events.hero.titleLine2": "Aprendemos e Innovamos",
+  "events.hero.description": "Desde conferencias tecnológicas globales hasta talleres prácticos — descubre dónde Cloud Nexus comparte conocimientos, presenta soluciones y construye el futuro de la tecnología.",
+  "events.hero.cta": "Encuéntranos en eventos",
+  "events.hero.ctaSecondary": "Ver calendario",
+  "events.featured.title": "Eventos",
+  "events.featured.titleHighlight": "Destacados",
+  "events.featured.description": "Conferencias tecnológicas de primer nivel donde Cloud Nexus presenta avances, comparte conocimientos y conecta con líderes de la industria.",
+  "events.featured.reserveSpot": "Reserva tu lugar",
+  "events.upcoming.title": "Calendario",
+  "events.upcoming.titleHighlight": "Próximo",
+  "events.upcoming.description": "Webinars, talleres, encuentros y hackatones — únete en línea o presencialmente.",
+  "events.upcoming.register": "Registrarse ahora",
+  "events.past.title": "Momentos",
+  "events.past.titleHighlight": "Pasados",
+  "events.past.description": "Una mirada a dónde hemos estado — compartiendo conocimiento, construyendo alianzas y generando impacto.",
+  "events.whyAttend.title": "Por qué asistir a nuestros",
+  "events.whyAttend.titleHighlight": "Eventos",
+  "events.whyAttend.description": "Ya seas desarrollador, fundador de startup o líder empresarial — nuestros eventos están diseñados para ofrecer conocimientos prácticos, conexiones reales y aprendizaje práctico.",
+  "events.cta.title": "Encontrémonos en el próximo",
+  "events.cta.titleHighlight": "Gran evento",
+  "events.cta.description": "¿Quieres colaborar, patrocinar o simplemente saludar? Ponte en contacto con nuestro equipo de eventos y exploremos oportunidades juntos.",
+  "events.cta.primaryBtn": "Programar una reunión",
+  "events.cta.secondaryBtn": "Contactar equipo de eventos",
+  "aboutUs.workforce.teamMembers": "Miembros del equipo",
+  "aboutUs.workforce.title1": "Nuestros",
+  "aboutUs.workforce.titleHighlight": "Visionarios",
+  "aboutUs.workforce.title2": "ayudan a",
+  "aboutUs.workforce.title3": "acelerar el proceso",
+  "aboutUs.workforce.description": "Con nuestra fuerza laboral entusiasta e ingenieros experimentados, creamos soluciones excelentes a un ritmo acelerado para servir a empresas en todo el mundo.",
+  "aboutUs.workforce.statTeam": "Miembros del equipo",
+  "aboutUs.workforce.statIndustries": "Industrias",
+  "aboutUs.workforce.statSupport": "Soporte",
+  "aboutUs.hero.title1": "Enriqueciendo vidas",
+  "aboutUs.hero.title2": "a través de nuestras ",
+  "aboutUs.hero.titleHighlight": "Innovaciones tecnológicas",
+  "aboutUs.hero.description": "Estamos ofreciendo experiencias digitales excepcionales con nuestras ideas más audaces que hacen del mundo un lugar mejor para todos.",
+  "aboutUs.hero.getStarted": "Comenzar",
+  "aboutUs.hero.contactUs": "Contáctenos",
+  "aboutUs.hero.altTeam": "Equipo de Cloud Nexus innovando",
+  "aboutUs.partner.title1": "Su socio integral de",
+  "aboutUs.partner.titleHighlight": "desarrollo de software impulsado por IA",
+  "aboutUs.partner.title2": "y transformación digital",
+  "aboutUs.partner.description": "Adopte nuestra alianza para experimentar el poder del conocimiento colectivo y un conjunto de habilidades impulsado por la tecnología que promete el mejor trabajo fusionado con tecnologías avanzadas.",
+  "aboutUs.about.title": "Sobre",
+  "aboutUs.about.titleHighlight": "CloudNexus",
+  "aboutUs.about.description1": "En CloudNexus, somos más que una empresa de consultoría de TI — somos innovadores, solucionadores de problemas y arquitectos del futuro digital. Nos especializamos en soluciones de TI progresivas, transformación en la nube, automatización impulsada por IA y consultoría empresarial.",
+  "aboutUs.about.description2": "Junto con nuestra alianza y experiencia en la industria, estamos creando un ecosistema robusto para generar grandes transformaciones empresariales — mejorando la eficiencia, impulsando el crecimiento y preparando las operaciones para el futuro.",
+  "aboutUs.about.altTeam": "Equipo colaborando en soluciones innovadoras",
+  "aboutUs.about.overlayCloud": "Transformación en la nube",
+  "aboutUs.about.overlayAI": "IA y automatización",
+  "aboutUs.about.overlayEngineering": "Ingeniería de software",
+  "aboutUs.about.overlayCyber": "Ciberseguridad",
+  "aboutUs.values.titleHighlight": "Nuestros",
+  "aboutUs.values.title": "Valores",
+  "aboutUs.values.description": "Nuestros valores fundamentales están definidos por los caracteres individuales a través de sus patrones de trabajo y decisiones empresariales.",
+  "aboutUs.reasons.title": "Razones convincentes para",
+  "aboutUs.reasons.titleHighlight": "asociarse con nosotros",
+  "aboutUs.reasons.description": "Logramos el más alto nivel de atención del mercado con nuestro excelente compromiso de trabajo en un mundo en constante cambio.",
+  "aboutUs.reasons.altTeam": "Equipo profesional entregando soluciones de TI",
+  "aboutUs.reasons.statProjects": "Proyectos entregados",
+  "aboutUs.reasons.statSatisfaction": "Satisfacción del cliente",
+  "aboutUs.reasons.statSupport": "Soporte disponible",
+  "aboutUs.offices.titleHighlight": "Nuestras",
+  "aboutUs.offices.title": "Oficinas",
+  "aboutUs.offices.description": "Estratégicamente ubicadas en toda India — ofreciendo soluciones de TI de clase mundial desde nuestros centros de desarrollo.",
+  "aboutUs.cta.title1": "¿Listo para construir algo",
+  "aboutUs.cta.titleHighlight": "extraordinario?",
+  "aboutUs.cta.description": "Ya sea que seas una startup construyendo tu MVP o una empresa modernizando tu stack — estamos aquí para ayudarte a convertir ideas ambiciosas en realidad.",
+  "aboutUs.cta.bookConsultation": "Reservar consulta gratuita",
+  "aboutUs.cta.contactUs": "Contáctenos",
+  "overview.vision.title": "Nuestro propósito",
+  "overview.vision.titleHighlight": "y dirección",
+  "overview.vision.tabVision": "Nuestra visión",
+  "overview.vision.tabMission": "Nuestra misión",
+  "overview.vision.ourVision": "Nuestra visión",
+  "overview.vision.visionText": "Ser el líder global en soluciones de TI e innovación de productos digitales, empoderando a las empresas con tecnología progresiva que mejora la eficiencia, escalabilidad y crecimiento. En CloudNexus, visualizamos un futuro donde las empresas prosperan aprovechando soluciones inteligentes, automatizadas y preparadas para el futuro.",
+  "overview.vision.altVision": "Tecnología futurista e innovación digital",
+  "overview.vision.ourMission": "Nuestra misión",
+  "overview.vision.missionSubtitle": "Redefiniendo el panorama de TI",
+  "overview.vision.altMission": "Equipo trabajando juntos en innovación digital",
+  "overview.hero.title": "Innovadores, solucionadores de problemas y",
+  "overview.hero.titleHighlight": "arquitectos del futuro digital",
+  "overview.hero.description": "En CloudNexus, somos más que una empresa de consultoría de TI. Nos especializamos en soluciones de TI progresivas, transformación en la nube, automatización impulsada por IA y consultoría empresarial, ayudando a las empresas a prosperar en un panorama tecnológico en constante evolución.",
+  "overview.hero.getStarted": "Comenzar",
+  "overview.hero.learnAboutUs": "Conócenos",
+  "overview.hero.altTeam": "Equipo colaborando en soluciones digitales",
+  "overview.hero.stat1Val": "200+",
+  "overview.hero.stat1Label": "Proyectos",
+  "overview.hero.stat2Val": "1+",
+  "overview.hero.stat2Label": "Año",
+  "overview.hero.stat3Val": "90+",
+  "overview.hero.stat3Label": "Equipos",
+  "overview.whoWeAre.title": "Quiénes somos",
+  "overview.whoWeAre.description1": "En CloudNexus, somos más que una empresa de consultoría de TI — somos innovadores, solucionadores de problemas y arquitectos del futuro digital. Nos especializamos en soluciones de TI progresivas, transformación en la nube, automatización impulsada por IA y consultoría empresarial, ayudando a las empresas a prosperar en un panorama tecnológico en constante evolución.",
+  "overview.whoWeAre.description2": "Nuestro equipo de expertos en tecnología, estrategas y solucionadores de problemas colabora estrechamente con los clientes para diseñar soluciones a medida que mejoran la eficiencia, impulsan el crecimiento y preparan las operaciones para el futuro. Ya sea migración a la nube, desarrollo de software, automatización o ciberseguridad, nos aseguramos de que tu ecosistema de TI sea ágil, seguro y optimizado para el éxito.",
+  "overview.whoWeAre.altTeam": "Estrategia e innovación del equipo",
+  "overview.whoWeAre.capCloud": "Transformación en la nube",
+  "overview.whoWeAre.capAI": "IA y automatización",
+  "overview.whoWeAre.capSoftware": "Desarrollo de software",
+  "overview.whoWeAre.capCyber": "Ciberseguridad",
+  "overview.services.title": "Nuestros",
+  "overview.services.titleHighlight": "Servicios",
+  "overview.services.description": "Capacidades tecnológicas integrales adaptadas a la etapa y ambiciones de crecimiento de tu negocio.",
+  "overview.whyCloudNexus.title": "¿Por qué",
+  "overview.whyCloudNexus.titleHighlight": "CloudNexus?",
+  "overview.whyCloudNexus.description": "Elegir el socio tecnológico adecuado es crucial para el éxito empresarial. No solo ofrecemos soluciones de TI — creamos experiencias transformadoras que impulsan la innovación, eficiencia y crecimiento.",
+  "overview.whyCloudNexus.altTeam": "Equipo profesional entregando soluciones de TI",
+  "overview.whyCloudNexus.stat1Val": "200+",
+  "overview.whyCloudNexus.stat1Label": "Proyectos entregados",
+  "overview.whyCloudNexus.stat2Val": "1+",
+  "overview.whyCloudNexus.stat2Label": "Año de excelencia",
+  "overview.whyCloudNexus.stat3Val": "90+",
+  "overview.whyCloudNexus.stat3Label": "Equipos escalables",
+  "overview.offices.title": "Nuestras",
+  "overview.offices.titleHighlight": "Oficinas",
+  "overview.offices.description": "Estratégicamente ubicadas en Rajastán, India — ofreciendo soluciones de TI de clase mundial desde nuestros centros de desarrollo.",
+  "overview.growth.title": "Nuestro camino de",
+  "overview.growth.titleHighlight": "Crecimiento",
+  "overview.growth.description": "De una semilla de idea a una fuerza creciente en tecnología — cada hito marca un paso hacia nuestra visión.",
+  "overview.growth.altPlant": "Plántula creciendo simbolizando el crecimiento de la empresa",
+  "overview.growth.step1Date": "19 Ene 2025",
+  "overview.growth.step1Title": "La semilla fue plantada",
+  "overview.growth.step1Desc": "Cloud Nexus fue fundada con una misión clara — cerrar la brecha entre las necesidades empresariales y la tecnología. Lo que comenzó como un pequeño equipo con grandes sueños se convirtió en la base de algo significativo.",
+  "overview.growth.step2Date": "Mediados de 2025",
+  "overview.growth.step2Title": "Echando raíces y creciendo",
+  "overview.growth.step2Desc": "Expandimos nuestro equipo, incorporamos nuestros primeros clientes globales y entregamos más de 30 proyectos exitosos. Nuestra experiencia en móvil, web, nube e IA comenzó a ganar reconocimiento en diversas industrias.",
+  "overview.growth.step3Date": "Principios de 2026",
+  "overview.growth.step3Title": "Expandiéndonos",
+  "overview.growth.step3Desc": "Con más de 50 proyectos entregados en más de 15 industrias, comenzamos a asistir a conferencias tecnológicas globales como GITEX, desarrollamos capacidades dedicadas de IA/ML y expandimos significativamente nuestro portafolio de servicios.",
+  "overview.growth.step4Date": "Hoy y más allá",
+  "overview.growth.step4Title": "Alcanzando nuevas alturas",
+  "overview.growth.step4Desc": "Ahora somos una empresa de tecnología de servicio completo en la que confían empresas de todo el mundo. Nuestro viaje apenas comienza — con planes para escalar más, innovar audazmente y crear un impacto duradero.",
+  "overview.cta.title": "¿Listo para innovar?",
+  "overview.cta.titleHighlight": "Construyamos juntos",
+  "overview.cta.description": "Únete a más de 500 empresas que confían en CloudNexus para ofrecer soluciones tecnológicas que generan resultados empresariales reales.",
+  "overview.cta.bookConsultation": "Reservar consulta gratuita",
+  "overview.cta.viewWork": "Ver nuestro trabajo",
+  "team.hero.title": "Las personas detrás de",
+  "team.hero.titleHighlight": "CloudNexus",
+  "team.hero.description": "Un talentoso equipo de ingenieros, diseñadores y estrategas construyendo el futuro de la tecnología — un proyecto a la vez.",
+  "team.hero.stat1Num": "90+",
+  "team.hero.stat1Label": "Miembros del equipo",
+  "team.hero.stat2Num": "4",
+  "team.hero.stat2Label": "Escuadrones especializados",
+  "team.hero.stat3Num": "3",
+  "team.hero.stat3Label": "Ubicaciones de oficina",
+  "team.hero.stat4Num": "10+",
+  "team.hero.stat4Label": "Años de entrega",
+  "team.leadership.titleHighlight": "Equipo de",
+  "team.leadership.title": "Liderazgo",
+  "team.leadership.description": "La fuerza impulsora detrás de la visión, estrategia y ejecución de CloudNexus.",
+  "team.squads.titleHighlight": "Escuadrones de",
+  "team.squads.title": "Ingeniería",
+  "team.squads.description": "Equipos especializados entregando excelencia en DevOps, desarrollo y datos.",
+  "team.squads.teamLabel": "Equipo",
+  "team.squads.division": "División",
+  "team.squads.techStack": "Stack tecnológico",
+  "team.squads.stat1Num": "25+",
+  "team.squads.stat1Label": "Miembros",
+  "team.squads.stat2Num": "50+",
+  "team.squads.stat2Label": "Proyectos",
+  "team.techStaff.titleHighlight": "El personal técnico",
+  "team.techStaff.title": "Comprende",
+  "team.techStaff.description": "En CloudNexus, nuestro personal técnico combina experiencia en IA, innovación y talento diverso para ofrecer soluciones inteligentes y preparadas para el futuro que superan las expectativas.",
+  "team.techStaff.aiMl": "Ingenieros de IA y aprendizaje automático",
+  "team.techStaff.softwareArchitects": "Arquitectos de software",
+  "team.techStaff.fullStack": "Desarrolladores full-stack",
+  "team.techStaff.appWeb": "Desarrolladores de apps y web",
+  "team.techStaff.networkCloud": "Ingenieros de redes y nube",
+  "team.techStaff.qa": "Especialistas en aseguramiento de calidad",
+  "team.techStaff.devops": "Ingenieros DevOps",
+  "team.techStaff.dataEngineers": "Ingenieros y analistas de datos",
+  "team.techStaff.uiux": "Diseñadores UI/UX",
+  "team.techStaff.seoDigital": "Especialistas en SEO y marketing digital",
+  "team.techStaff.projectManagers": "Gerentes de proyecto",
+  "team.techStaff.technicalWriters": "Redactores técnicos",
+  "team.culture.titleHighlight": "Nuestra",
+  "team.culture.title": "Cultura",
+  "team.culture.description": "Lo que hace de CloudNexus un excelente lugar para construir tu carrera y crecer como profesional.",
+  "team.cta.title": "¿Quieres unirte a nuestro equipo?",
+  "team.cta.description": "Siempre estamos buscando ingenieros, diseñadores y estrategas talentosos apasionados por construir el futuro.",
+  "team.cta.getInTouch": "Contáctenos",
+  "processMethodology.hero.title": "Nuestro proceso y",
+  "processMethodology.hero.titleHighlight": "metodología de desarrollo",
+  "processMethodology.hero.description": "Un recorrido por nuestro enfoque simple, inteligente y ágil para el desarrollo de software. Desde el descubrimiento hasta la implementación — cada paso es transparente, colaborativo y orientado a resultados.",
+  "processMethodology.hero.startProject": "Iniciar tu proyecto",
+  "processMethodology.hero.contactUs": "Contáctenos",
+  "processMethodology.agile.title": "De la agilidad a la",
+  "processMethodology.agile.titleHighlight": "Acción",
+  "processMethodology.agile.description": "Adoptamos la metodología ágil para fomentar la comunicación transparente, promover la colaboración, combatir la incertidumbre, adaptarnos al cambio y entregar valor continuamente.",
+  "processMethodology.agile.subDescription": "Todo — el trabajo de desarrollo, la información y la inversión — avanza de manera integrada con retornos medibles en cada iteración.",
+  "processMethodology.agile.transparentComm.title": "Comunicación transparente",
+  "processMethodology.agile.transparentComm.desc": "Reuniones diarias, revisiones de sprint y canales abiertos de Slack. Siempre sabrás qué está pasando con tu proyecto.",
+  "processMethodology.agile.iterativeDev.title": "Desarrollo iterativo",
+  "processMethodology.agile.iterativeDev.desc": "Sprints de 2 semanas con demos regulares. Ves el progreso, proporcionas retroalimentación y diriges la dirección continuamente.",
+  "processMethodology.agile.goalDriven.title": "Ejecución orientada a objetivos",
+  "processMethodology.agile.goalDriven.desc": "Cada sprint tiene objetivos claros vinculados a resultados de negocio. No solo construimos funcionalidades — entregamos resultados.",
+  "processMethodology.agile.measurableProgress.title": "Progreso medible",
+  "processMethodology.agile.measurableProgress.desc": "Seguimiento de velocidad, gráficos de avance y reportes regulares. Información basada en datos sobre la salud y cronograma del proyecto.",
+  "processMethodology.execution.title": "Estructura de",
+  "processMethodology.execution.titleHighlight": "Ejecución",
+  "processMethodology.execution.titleSuffix": "del proyecto",
+  "processMethodology.execution.description": "Nuestro equipo multifuncional de alto rendimiento te acompaña en cada paso. Nos ajustamos a tus requerimientos y entregamos valor incremental que abraza tu visión.",
+  "processMethodology.execution.phase": "Fase",
+  "processMethodology.deliverables.title": "Nuestros",
+  "processMethodology.deliverables.titleHighlight": "Entregables",
+  "processMethodology.deliverables.description": "Desde el momento en que asumimos tu proyecto, nuestro deber comienza. Te mantenemos informado sobre cada aspecto de la etapa de desarrollo — transparente, sistematizado y estandarizado.",
+  "processMethodology.tech.titleHighlight": "Herramientas y tecnologías",
+  "processMethodology.tech.title": "que usamos",
+  "processMethodology.tech.description": "Usamos tecnologías de tendencia respaldadas por un robusto conjunto de herramientas, frameworks y plataformas para entregar soluciones altamente escalables, interactivas e innovadoras.",
+  "processMethodology.models.title": "Modelos de",
+  "processMethodology.models.titleHighlight": "trabajo flexibles",
+  "processMethodology.models.description": "Nuestro equipo de ingeniería ofrece servicios en diferentes modelos de contratación que mejor se adaptan a tus necesidades para lanzar el producto deseado de la manera más eficiente.",
+  "processMethodology.security.title": "Tus ideas están",
+  "processMethodology.security.titleHighlight": "siempre seguras",
+  "processMethodology.security.titleSuffix": "con nosotros",
+  "processMethodology.security.description": "Proteger tus ideas, propiedad intelectual y secretos comerciales es nuestra máxima prioridad. Nos aseguramos de que tu información nunca llegue a partes no autorizadas.",
+  "processMethodology.cta.title": "¿Tienes un proyecto en mente?",
+  "processMethodology.cta.titleHighlight": "Construyámoslo juntos",
+  "processMethodology.cta.description": "Cuéntanos sobre tu idea y te proporcionaremos una propuesta detallada con recomendaciones de arquitectura, cronograma y estimación de costos — completamente gratis.",
+  "processMethodology.cta.bookConsultation": "Reservar consulta gratuita",
+  "processMethodology.cta.contactUs": "Contáctenos",
+  "infra.hero.title": "Cloud Nexus",
+  "infra.hero.titleHighlight": "Infraestructura",
+  "infra.hero.description": "Nuestro espacio de trabajo cuidadosamente diseñado está construido para la innovación, colaboración y entrega de alto rendimiento. Un centro tecnológico moderno donde se construye software de clase mundial todos los días.",
+  "infra.hero.cta": "Contáctenos",
+  "infra.hero.ctaSecondary": "Vida en Cloud Nexus",
+  "infra.gallery.title": "Dentro de nuestra",
+  "infra.gallery.titleHighlight": "Oficina",
+  "infra.gallery.description": "Un vistazo a donde la innovación ocurre cada día en Cloud Nexus.",
+  "infra.location.headquarters": "Sede central",
+  "infra.location.highlightsTitle": "Aspectos destacados de la oficina",
+  "infra.facilities.title": "Instalaciones de",
+  "infra.facilities.titleHighlight": "clase mundial",
+  "infra.facilities.description": "Nuestra oficina está equipada con todo lo que nuestro equipo necesita para entregar un trabajo excepcional en un ambiente cómodo, seguro e inspirador.",
+  "infra.workspace.title": "Nuestro",
+  "infra.workspace.titleHighlight": "Espacio de trabajo",
+  "infra.workspace.description": "Diseñado con cuidado para crear un ambiente donde el talento prospera, las ideas fluyen y se construyen grandes productos.",
+  "infra.cta.title": "¿Tienes un proyecto en mente?",
+  "infra.cta.subtitle": "Habla con los expertos.",
+  "infra.cta.description": "Conversemos sobre cómo Cloud Nexus puede ayudarte a construir, escalar y entregar tu próxima gran idea.",
+  "infra.cta.primaryBtn": "Contáctenos",
+  "infra.cta.secondaryBtn": "Contáctanos",
+  "companyHub.hero.title.line1": "Construyendo el futuro,",
+  "companyHub.hero.title.highlight": "una solución",
+  "companyHub.hero.title.line2": "a la vez",
+  "companyHub.hero.description": "Cloud Nexus es una empresa de tecnología que transforma ideas en poderosos productos digitales. Fundada en enero de 2025, reunimos ingenieros, diseñadores y estrategas talentosos para ofrecer soluciones de software excepcionales.",
+  "companyHub.hero.cta.learnAbout": "Conócenos",
+  "companyHub.hero.cta.getInTouch": "Contáctenos",
+  "companyHub.explore.title": "Explorar",
+  "companyHub.explore.description": "Descubre quiénes somos, cómo trabajamos y qué nos convierte en el socio tecnológico adecuado para tu negocio.",
+  "companyHub.explore.cardCta": "Explorar",
+  "companyHub.values.title": "Nuestros valores",
+  "companyHub.values.titleHighlight": "fundamentales",
+  "companyHub.values.description": "Estos principios guían cada decisión que tomamos, cada producto que construimos y cada relación que cultivamos.",
+  "companyHub.growth.title": "Nuestro camino de",
+  "companyHub.growth.titleHighlight": "Crecimiento",
+  "companyHub.growth.description": "De una semilla de idea a una fuerza creciente en tecnología — cada hito marca un paso hacia nuestra visión.",
+  "companyHub.growth.step1.date": "19 Ene 2025",
+  "companyHub.growth.step1.title": "La semilla fue plantada",
+  "companyHub.growth.step1.desc": "Cloud Nexus fue fundada con una misión clara — cerrar la brecha entre las necesidades empresariales y la tecnología. Lo que comenzó como un pequeño equipo con grandes sueños se convirtió en la base de algo significativo.",
+  "companyHub.growth.step2.date": "Mediados de 2025",
+  "companyHub.growth.step2.title": "Echando raíces y creciendo",
+  "companyHub.growth.step2.desc": "Expandimos nuestro equipo, incorporamos nuestros primeros clientes globales y entregamos más de 30 proyectos exitosos. Nuestra experiencia en móvil, web, nube e IA comenzó a ganar reconocimiento en diversas industrias.",
+  "companyHub.growth.step3.date": "Principios de 2026",
+  "companyHub.growth.step3.title": "Expandiéndonos",
+  "companyHub.growth.step3.desc": "Con más de 50 proyectos entregados en más de 15 industrias, comenzamos a asistir a conferencias tecnológicas globales como GITEX, desarrollamos capacidades dedicadas de IA/ML y expandimos significativamente nuestro portafolio de servicios.",
+  "companyHub.growth.step4.date": "Hoy y más allá",
+  "companyHub.growth.step4.title": "Alcanzando nuevas alturas",
+  "companyHub.growth.step4.desc": "Ahora somos una empresa de tecnología de servicio completo en la que confían empresas de todo el mundo. Nuestro viaje apenas comienza — con planes para escalar más, innovar audazmente y crear un impacto duradero.",
+  "companyHub.cta.title": "Construyamos algo",
+  "companyHub.cta.titleHighlight": "Extraordinario",
+  "companyHub.cta.description": "Ya seas una startup con una idea audaz o una empresa que busca transformación digital — estamos aquí para hacerlo realidad.",
+  "companyHub.cta.bookConsultation": "Reservar consulta gratuita",
+  "companyHub.cta.contactUs": "Contáctenos",
+  "life": {
+    "gallery": {
+      "ariaLabel": "Aspectos culturales destacados"
+    },
+    "hero": {
+      "title": "Vida en",
+      "subtitle": "Cloud Nexus",
+      "description": "Donde el talento se encuentra con la cultura. Creamos productos de los que estamos orgullosos - con personas que realmente nos importan.",
+      "exploreCareers": "Explorar carreras",
+      "getInTouch": "Contáctenos"
+    },
+    "stats": {
+      "teamMembers": "Miembros del equipo",
+      "dayWorkWeek": "Días de trabajo por semana",
+      "countriesServed": "Países atendidos",
+      "womenInTech": "Mujeres en tecnología"
+    },
+    "moments": {
+      "title": "Celebrando la melodía de los",
+      "titleHighlight": "Momentos",
+      "description": "Risas y charlas alegres resonaron con la melodía de la música. Vea cómo estamos construyendo el éxito juntos en Cloud Nexus.",
+      "viewAllPhotos": "Ver todas las fotos"
+    },
+    "purpose": {
+      "title": "Impulsados por",
+      "titleHighlight": "el Propósito",
+      "description": "Los cinco pilares que guían todo lo que construimos, enviamos y defendemos."
+    },
+    "join": {
+      "title": "¿Por qué unirse a Cloud Nexus?",
+      "description": "Cloud Nexus es el lugar donde puedes aprender, explorar y desarrollar tus habilidades y confianza."
+    },
+    "women": {
+      "altImage": "Empoderamiento femenino en Cloud Nexus",
+      "badgeLabel": "Mujeres en roles tecnológicos",
+      "title": "Empoderar a las mujeres es nuestro objetivo principal",
+      "description1": "Invertimos en visibilidad de liderazgo, seguridad psicológica y caminos de crecimiento.",
+      "description2": "Desde círculos de mentoría hasta políticas flexibles y tolerancia cero al acoso.",
+      "point1": "Igualdad de oportunidades en contratación y promociones",
+      "point2": "Programas de patrocinio y mentoría de liderazgo",
+      "point3": "Reportes seguros y prácticas de RRHH de apoyo"
+    },
+    "recruit": {
+      "title": "Siempre buscamos personas entusiastas",
+      "description": "En Cloud Nexus, prosperamos con la energía de personas motivadas.",
+      "applyNow": "Solicitar ahora"
+    },
+    "perks": {
+      "title": "Beneficios de estar en Cloud Nexus",
+      "description": "Comodidad, seguridad y flexibilidad - así es como crecemos juntos."
+    },
+    "diversity": {
+      "title": "Diversidad en",
+      "titleHighlight": "Cloud Nexus"
+    },
+    "cta": {
+      "title": "¿Listo para ser parte de",
+      "titleHighlight": "la historia",
+      "description": "Trae tu curiosidad, tu oficio y tu amabilidad.",
+      "applyNow": "Solicitar ahora",
+      "talkToUs": "Habla con nosotros"
+    }
+  },
+  "events": {
+    "hero": {
+      "title": "Donde",
+      "titleHighlight": "Conectamos",
+      "titleLine2": "Aprendemos e Innovamos",
+      "description": "Desde conferencias tecnológicas globales hasta talleres prácticos - descubra dónde Cloud Nexus comparte ideas y construye el futuro.",
+      "cta": "Encuéntrenos en eventos",
+      "ctaSecondary": "Ver agenda"
+    },
+    "featured": {
+      "title": "Eventos",
+      "titleHighlight": "Principales",
+      "description": "Conferencias tecnológicas de clase mundial donde Cloud Nexus presenta innovaciones.",
+      "reserveSpot": "Reserve su lugar"
+    },
+    "upcoming": {
+      "title": "Agenda",
+      "titleHighlight": "Próxima",
+      "description": "Webinars, talleres, meetups y hackathons - únase en línea o en persona.",
+      "register": "Registrarse ahora"
+    },
+    "past": {
+      "title": "Momentos",
+      "titleHighlight": "Destacados",
+      "description": "Una mirada atrás - compartiendo conocimiento y creando impacto."
+    },
+    "whyAttend": {
+      "title": "¿Por qué asistir a nuestros",
+      "titleHighlight": "Eventos",
+      "description": "Ya sea desarrollador, fundador o líder empresarial - nuestros eventos ofrecen insights accionables."
+    },
+    "cta": {
+      "title": "Nos vemos en el próximo",
+      "titleHighlight": "Gran Evento",
+      "description": "¿Desea colaborar, patrocinar o simplemente saludar? Contacte a nuestro equipo de eventos.",
+      "primaryBtn": "Programar una reunión",
+      "secondaryBtn": "Contactar equipo de eventos"
+    }
+  },
+  "aboutUs": {
+    "workforce": {
+      "teamMembers": "Miembros del equipo",
+      "title1": "Nuestros",
+      "titleHighlight": "Visionarios",
+      "title2": "Ayudan a",
+      "title3": "Acelerar el proceso",
+      "description": "Con nuestro equipo entusiasta e ingenieros experimentados, creamos soluciones excelentes.",
+      "statTeam": "Miembros del equipo",
+      "statIndustries": "Industrias",
+      "statSupport": "Soporte"
+    },
+    "hero": {
+      "title1": "Enriqueciendo vidas",
+      "title2": "A través de nuestras",
+      "titleHighlight": "Innovaciones tecnológicas",
+      "description": "Estamos ofreciendo experiencias digitales excepcionales con nuestras ideas más audaces.",
+      "getStarted": "Comenzar",
+      "contactUs": "Contáctenos",
+      "altTeam": "Equipo Cloud Nexus innovando"
+    },
+    "partner": {
+      "title1": "Su socio",
+      "titleHighlight": "Desarrollo de software impulsado por IA",
+      "title2": "y transformación digital de extremo a extremo",
+      "description": "Adopte nuestra asociación para experimentar el poder del conocimiento colectivo."
+    },
+    "about": {
+      "title": "Acerca de",
+      "titleHighlight": "CloudNexus",
+      "description1": "En CloudNexus, somos más que una empresa de consultoría IT - somos innovadores y arquitectos del futuro digital.",
+      "description2": "Con nuestra asociación y experiencia industrial, creamos un ecosistema robusto.",
+      "altTeam": "Equipo colaborando en soluciones innovadoras",
+      "overlayCloud": "Transformación Cloud",
+      "overlayAI": "IA y Automatización",
+      "overlayEngineering": "Ingeniería de software",
+      "overlayCyber": "Ciberseguridad"
+    },
+    "values": {
+      "titleHighlight": "Nuestros",
+      "title": "Valores",
+      "description": "Nuestros valores fundamentales están definidos por nuestros caracteres individuales."
+    },
+    "reasons": {
+      "title": "Razones convincentes para",
+      "titleHighlight": "Asociarse con nosotros",
+      "description": "Logramos el más alto nivel de atención del mercado.",
+      "altTeam": "Equipo profesional entregando soluciones IT",
+      "statProjects": "Proyectos entregados",
+      "statSatisfaction": "Satisfacción del cliente",
+      "statSupport": "Soporte disponible"
+    },
+    "offices": {
+      "titleHighlight": "Nuestras",
+      "title": "Oficinas",
+      "description": "Estratégicamente ubicadas en India - entregando soluciones IT de clase mundial."
+    },
+    "cta": {
+      "title1": "¿Listo para construir algo",
+      "titleHighlight": "Extraordinario?",
+      "description": "Ya sea startup o empresa - estamos aquí para ayudarle.",
+      "bookConsultation": "Reservar consulta gratuita",
+      "contactUs": "Contáctenos"
+    }
+  },
+  "overview": {
+    "vision": {
+      "title": "Nuestro propósito",
+      "titleHighlight": "y dirección",
+      "tabVision": "Nuestra visión",
+      "tabMission": "Nuestra misión",
+      "ourVision": "Nuestra Visión",
+      "visionText": "Ser el líder global en soluciones IT e innovación de productos digitales.",
+      "altVision": "Tecnología futurista e innovación digital",
+      "ourMission": "Nuestra Misión",
+      "missionSubtitle": "Redefiniendo el panorama IT",
+      "altMission": "Equipo trabajando juntos en innovación"
+    },
+    "hero": {
+      "title": "Innovadores, solucionadores y",
+      "titleHighlight": "Arquitectos del futuro digital",
+      "description": "En CloudNexus, nos especializamos en soluciones IT progresivas, transformación cloud y automatización IA.",
+      "getStarted": "Comenzar",
+      "learnAboutUs": "Conozca más sobre nosotros",
+      "altTeam": "Equipo colaborando en soluciones digitales",
+      "stat1Val": "200+",
+      "stat1Label": "Proyectos",
+      "stat2Val": "1+",
+      "stat2Label": "Año",
+      "stat3Val": "90+",
+      "stat3Label": "Equipos"
+    },
+    "whoWeAre": {
+      "title": "Quiénes somos",
+      "description1": "En CloudNexus, somos innovadores y arquitectos del futuro digital.",
+      "description2": "Nuestro equipo de expertos diseña soluciones personalizadas para mejorar la eficiencia.",
+      "altTeam": "Estrategia e innovación del equipo",
+      "capCloud": "Transformación Cloud",
+      "capAI": "IA y Automatización",
+      "capSoftware": "Des. de software",
+      "capCyber": "Ciberseguridad"
+    },
+    "services": {
+      "title": "Nuestros",
+      "titleHighlight": "Servicios",
+      "description": "Capacidades tecnológicas de extremo a extremo adaptadas a su etapa empresarial."
+    },
+    "whyCloudNexus": {
+      "title": "¿Por qué",
+      "titleHighlight": "CloudNexus?",
+      "description": "Elegir el socio tecnológico correcto es crucial para el éxito.",
+      "altTeam": "Equipo profesional",
+      "stat1Val": "200+",
+      "stat1Label": "Proyectos entregados",
+      "stat2Val": "1+",
+      "stat2Label": "Año de excelencia",
+      "stat3Val": "90+",
+      "stat3Label": "Equipos escalables"
+    },
+    "offices": {
+      "title": "Nuestras",
+      "titleHighlight": "Oficinas",
+      "description": "Estratégicamente ubicadas en Rajastán, India."
+    },
+    "growth": {
+      "title": "Nuestro recorrido",
+      "titleHighlight": "de crecimiento",
+      "description": "De una semilla de idea a una fuerza tecnológica creciente.",
+      "altPlant": "Planta que simboliza el crecimiento",
+      "step1Date": "19 ene. 2025",
+      "step1Title": "La semilla fue plantada",
+      "step1Desc": "Cloud Nexus fue fundada con una misión clara.",
+      "step2Date": "Mediados 2025",
+      "step2Title": "Echando raíces y creciendo",
+      "step2Desc": "Expandimos nuestro equipo y entregamos 30+ proyectos.",
+      "step3Date": "Principios 2026",
+      "step3Title": "Ramificándose",
+      "step3Desc": "50+ proyectos en 15+ industrias, participación en GITEX.",
+      "step4Date": "Hoy y más allá",
+      "step4Title": "Alcanzando nuevas alturas",
+      "step4Desc": "Ahora somos una empresa tecnológica de servicio completo de confianza mundial."
+    },
+    "cta": {
+      "title": "¿Listo para innovar?",
+      "titleHighlight": "Construyamos juntos",
+      "description": "Más de 500 empresas confían en CloudNexus.",
+      "bookConsultation": "Reservar consulta gratuita",
+      "viewWork": "Ver nuestro trabajo"
+    }
+  },
+  "team": {
+    "hero": {
+      "title": "Las personas detrás de",
+      "titleHighlight": "CloudNexus",
+      "description": "Un talentoso equipo de ingenieros, diseñadores y estrategas construyendo el futuro.",
+      "stat1Num": "90+",
+      "stat1Label": "Miembros",
+      "stat2Num": "4",
+      "stat2Label": "Equipos especializados",
+      "stat3Num": "3",
+      "stat3Label": "Oficinas",
+      "stat4Num": "10+",
+      "stat4Label": "Años de experiencia"
+    },
+    "leadership": {
+      "titleHighlight": "Equipo de",
+      "title": "Liderazgo",
+      "description": "La fuerza impulsora detrás de la visión y estrategia de CloudNexus."
+    },
+    "squads": {
+      "titleHighlight": "Equipos de",
+      "title": "Ingeniería",
+      "description": "Equipos especializados en DevOps, desarrollo y datos.",
+      "teamLabel": "Equipo",
+      "division": "División",
+      "techStack": "Stack tecnológico",
+      "stat1Num": "25+",
+      "stat1Label": "Miembros",
+      "stat2Num": "50+",
+      "stat2Label": "Proyectos"
+    },
+    "techStaff": {
+      "titleHighlight": "Personal técnico",
+      "title": "Comprende",
+      "description": "Nuestro personal técnico combina experiencia en IA, innovación y talento diverso.",
+      "aiMl": "Ingenieros de IA y ML",
+      "softwareArchitects": "Arquitectos de software",
+      "fullStack": "Desarrolladores full-stack",
+      "appWeb": "Desarrolladores app y web",
+      "networkCloud": "Ingenieros de red y cloud",
+      "qa": "Especialistas en QA",
+      "devops": "Ingenieros DevOps",
+      "dataEngineers": "Ingenieros y analistas de datos",
+      "uiux": "Diseñadores UI/UX",
+      "seoDigital": "Especialistas SEO y marketing digital",
+      "projectManagers": "Gerentes de proyecto",
+      "technicalWriters": "Redactores técnicos"
+    },
+    "culture": {
+      "titleHighlight": "Nuestra",
+      "title": "Cultura",
+      "description": "Lo que hace de CloudNexus un gran lugar para construir tu carrera."
+    },
+    "cta": {
+      "title": "¿Quieres unirte a nuestro equipo?",
+      "description": "Siempre buscamos ingenieros, diseñadores y estrategas talentosos.",
+      "getInTouch": "Contáctenos"
+    }
+  },
+  "processMethodology": {
+    "hero": {
+      "title": "Nuestro proceso y",
+      "titleHighlight": "Metodología de desarrollo",
+      "description": "Nuestro enfoque simple, inteligente y ágil para el desarrollo de software.",
+      "startProject": "Iniciar su proyecto",
+      "contactUs": "Contáctenos"
+    },
+    "agile": {
+      "title": "De la agilidad a la",
+      "titleHighlight": "Acción",
+      "description": "Adoptamos la metodología ágil para fomentar la comunicación transparente y la colaboración.",
+      "subDescription": "Todo - el trabajo, la información y la inversión - avanza de manera integrada.",
+      "transparentComm": {
+        "title": "Comunicación transparente",
+        "desc": "Stand-ups diarios, revisiones de sprint y canales Slack abiertos."
+      },
+      "iterativeDev": {
+        "title": "Desarrollo iterativo",
+        "desc": "Sprints de 2 semanas con demos regulares."
+      },
+      "goalDriven": {
+        "title": "Ejecución orientada a objetivos",
+        "desc": "Cada sprint tiene objetivos claros vinculados a resultados de negocio."
+      },
+      "measurableProgress": {
+        "title": "Progreso medible",
+        "desc": "Seguimiento de velocidad, gráficos burndown e informes regulares."
+      }
+    },
+    "execution": {
+      "title": "Ejecución",
+      "titleHighlight": "de proyecto",
+      "titleSuffix": "Estructura",
+      "description": "Nuestro equipo multifuncional de alto rendimiento le acompaña en cada paso.",
+      "phase": "Fase"
+    },
+    "deliverables": {
+      "title": "Nuestros",
+      "titleHighlight": "Entregables",
+      "description": "Desde el momento en que tomamos su proyecto, nuestro deber comienza."
+    },
+    "tech": {
+      "titleHighlight": "Herramientas y tecnologías",
+      "title": "que usamos",
+      "description": "Utilizamos tecnologías de vanguardia para soluciones escalables e innovadoras."
+    },
+    "models": {
+      "title": "Modelos de",
+      "titleHighlight": "trabajo flexibles",
+      "description": "Nuestro equipo ofrece servicios en diferentes modelos de compromiso."
+    },
+    "security": {
+      "title": "Sus ideas están",
+      "titleHighlight": "siempre seguras",
+      "titleSuffix": "con nosotros",
+      "description": "Proteger sus ideas y propiedad intelectual es nuestra máxima prioridad."
+    },
+    "cta": {
+      "title": "¿Tiene un proyecto en mente?",
+      "titleHighlight": "Construyámoslo juntos",
+      "description": "Cuéntenos su idea y le proporcionaremos una propuesta detallada - completamente gratis.",
+      "bookConsultation": "Reservar consulta gratuita",
+      "contactUs": "Contáctenos"
+    }
+  },
+  "infra": {
+    "hero": {
+      "title": "Cloud Nexus",
+      "titleHighlight": "Infraestructura",
+      "description": "Nuestro espacio de trabajo está diseñado para la innovación, colaboración y entrega de alto rendimiento.",
+      "cta": "Contáctenos",
+      "ctaSecondary": "Vida en Cloud Nexus"
+    },
+    "gallery": {
+      "title": "Dentro de nuestra",
+      "titleHighlight": "Oficina",
+      "description": "Un vistazo a donde la innovación sucede cada día."
+    },
+    "location": {
+      "headquarters": "Sede central",
+      "highlightsTitle": "Destacados de la oficina"
+    },
+    "facilities": {
+      "title": "Instalaciones de",
+      "titleHighlight": "clase mundial",
+      "description": "Nuestra oficina está equipada con todo lo necesario para un trabajo excepcional."
+    },
+    "workspace": {
+      "title": "Nuestro",
+      "titleHighlight": "Espacio de trabajo",
+      "description": "Diseñado con cuidado para crear un ambiente donde el talento prospera."
+    },
+    "cta": {
+      "title": "¿Tiene un proyecto en mente?",
+      "subtitle": "Hable con los expertos.",
+      "description": "Discutamos cómo Cloud Nexus puede ayudarle.",
+      "primaryBtn": "Contáctenos",
+      "secondaryBtn": "Contactar"
+    }
+  },
+  "companyHub": {
+    "hero": {
+      "title": {
+        "line1": "Construyendo el futuro,",
+        "highlight": "Una solución",
+        "line2": "a la vez"
+      },
+      "description": "Cloud Nexus es una empresa tecnológica que transforma ideas en productos digitales poderosos.",
+      "cta": {
+        "learnAbout": "Conozca más",
+        "getInTouch": "Contáctenos"
+      }
+    },
+    "explore": {
+      "title": "Explorar",
+      "description": "Descubra quiénes somos y qué nos hace el socio tecnológico adecuado.",
+      "cardCta": "Explorar"
+    },
+    "values": {
+      "title": "Nuestros valores",
+      "titleHighlight": "fundamentales",
+      "description": "Estos principios guían cada decisión que tomamos."
+    },
+    "growth": {
+      "title": "Nuestro recorrido",
+      "titleHighlight": "de crecimiento",
+      "description": "De una idea a una fuerza tecnológica creciente.",
+      "step1": {
+        "date": "19 ene. 2025",
+        "title": "La semilla plantada",
+        "desc": "Cloud Nexus fue fundada con una misión clara."
+      },
+      "step2": {
+        "date": "Mediados 2025",
+        "title": "Echando raíces",
+        "desc": "Expansión del equipo y 30+ proyectos entregados."
+      },
+      "step3": {
+        "date": "Principios 2026",
+        "title": "Ramificándose",
+        "desc": "50+ proyectos, GITEX y capacidades IA/ML."
+      },
+      "step4": {
+        "date": "Hoy y más allá",
+        "title": "Nuevas alturas",
+        "desc": "Empresa tecnológica de confianza mundial."
+      }
+    },
+    "cta": {
+      "title": "Construyamos algo",
+      "titleHighlight": "Extraordinario",
+      "description": "Startup o empresa - estamos aquí para ayudarle.",
+      "bookConsultation": "Reservar consulta gratuita",
+      "contactUs": "Contáctenos"
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "¿Cómo podemos",
+      "titleHighlight": "ayudarle?",
+      "description": "Nuestro equipo de soporte dedicado está aquí para asegurar su éxito."
+    },
+    "channels": {
+      "title": "Contacte con",
+      "titleHighlight": "nuestro equipo",
+      "description": "Elija su canal de soporte preferido."
+    },
+    "selfService": {
+      "title": "Recursos de",
+      "titleHighlight": "autoservicio",
+      "description": "Encuentre respuestas por su cuenta.",
+      "browse": "Explorar"
+    },
+    "faq": {
+      "title": "Preguntas",
+      "titleHighlight": "frecuentes"
+    },
+    "form": {
+      "title": "Enviar un mensaje",
+      "subtitle": "Responderemos en 4 horas",
+      "successTitle": "¡Mensaje enviado!",
+      "successDesc": "Responderemos en 4 horas.",
+      "sendAnother": "Enviar otro",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Su nombre completo",
+      "emailLabel": "Email",
+      "emailPlaceholder": "usted@empresa.com",
+      "priorityLabel": "Prioridad",
+      "priorityLow": "Baja - Pregunta general",
+      "priorityMedium": "Media - Solicitud de función",
+      "priorityHigh": "Alta - Reporte de error",
+      "priorityCritical": "Crítica - Producción caída",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Describa su problema...",
+      "sending": "Enviando...",
+      "sendMessage": "Enviar mensaje",
+      "errorFallback": "Algo salió mal. Intente de nuevo."
+    },
+    "promise": {
+      "title": "Nuestra promesa",
+      "titleHighlight": "de soporte",
+      "humanFirst": {
+        "title": "Soporte humano primero",
+        "desc": "Sin chatbots. Cada conversación comienza con un ingeniero experto."
+      },
+      "enterpriseSla": {
+        "title": "SLA empresarial",
+        "desc": "Tiempos de respuesta garantizados y reportes transparentes."
+      },
+      "resolution": {
+        "title": "Resolución, no desvío",
+        "desc": "No cerramos tickets hasta que esté satisfecho."
+      }
+    },
+    "cta": {
+      "title": "¿Aún necesita ayuda?",
+      "titleHighlight": "Estamos aquí para usted",
+      "description": "Programe una consulta gratuita.",
+      "bookConsultation": "Reservar consulta gratuita",
+      "contactSales": "Contactar ventas"
+    }
+  },
+  "career": {
+    "error": "No se pudieron cargar las ofertas.",
+    "filter": {
+      "all": "Todos"
+    },
+    "hero": {
+      "title1": "Listo para hacer",
+      "title2": "el mejor trabajo",
+      "title3": "de tu vida :)",
+      "description": "Únete a un equipo apasionado de ingenieros y diseñadores.",
+      "imageAlt": "Colaboración del equipo en Cloud Nexus"
+    },
+    "search": {
+      "placeholder": "Buscar por rol",
+      "active": "Activo",
+      "role": "Puesto",
+      "roles": "Puestos"
+    },
+    "job": {
+      "apply": "Ver y solicitar"
+    },
+    "noResults": {
+      "title": "No se encontraron puestos",
+      "description": "Ajuste sus criterios de búsqueda."
+    },
+    "cta": {
+      "title": "¿Crees que eres el indicado?",
+      "description": "Estamos construyendo algo especial en Cloud Nexus.",
+      "resume": "Envíanos tu currículum"
+    }
+  },
+  "blog": {
+    "filter": {
+      "all": "Todos"
+    },
+    "stat": {
+      "articles": "Artículos",
+      "topics": "Temas",
+      "authors": "Autores"
+    },
+    "hero": {
+      "title1": "Insights &",
+      "title2": "Historias",
+      "description": "Tutoriales, casos de estudio e insights técnicos del equipo Cloud Nexus.",
+      "imageAlt": "Blog e Insights"
+    },
+    "search": {
+      "placeholder": "Buscar artículos..."
+    },
+    "noResults": "No se encontraron artículos",
+    "noResultsEmpty": "Aún no hay publicaciones. ¡Vuelva pronto!",
+    "noResultsFilter": "Ajuste su búsqueda.",
+    "readMore": "Leer artículo"
+  },
+  "contact": {
+    "form": {
+      "errorFallback": "Algo salió mal.",
+      "title": "Cuéntenos sobre su proyecto",
+      "subtitle": "Los campos con * son obligatorios",
+      "fullName": "Nombre completo",
+      "fullNamePlaceholder": "Juan Pérez",
+      "companyName": "Empresa",
+      "companyPlaceholder": "Su empresa",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "juan@empresa.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+34 XXX XXX XXX",
+      "interestedIn": "Me interesa",
+      "selectService": "Seleccionar servicio",
+      "budget": "Presupuesto estimado",
+      "selectBudget": "Seleccionar rango",
+      "details": "Detalles del proyecto",
+      "detailsPlaceholder": "Cuéntenos sobre su proyecto...",
+      "heardFrom": "¿Cómo nos conoció?",
+      "selectOption": "Seleccionar",
+      "sending": "Enviando...",
+      "sendMessage": "Enviar mensaje",
+      "privacyNote": "Al enviar, acepta nuestra política de privacidad."
+    },
+    "hero": {
+      "titleHighlight": "Construyamos",
+      "title": "algo grandioso",
+      "description": "Cuéntenos su proyecto y le responderemos en 24 horas.",
+      "responseTime": "< 24h",
+      "responseTimeLabel": "Tiempo de respuesta",
+      "projectsNum": "200+",
+      "projectsLabel": "Proyectos entregados",
+      "satisfactionNum": "100%",
+      "satisfactionLabel": "Satisfacción del cliente"
+    },
+    "success": {
+      "title": "¡Mensaje enviado!",
+      "description": "Gracias por contactarnos. Responderemos en 24 horas.",
+      "sendAnother": "Enviar otro mensaje"
+    },
+    "offices": {
+      "title": "Nuestras oficinas"
+    },
+    "cta": {
+      "title": "¿Prefiere una conversación en vivo?",
+      "description": "Programe una llamada gratuita de 30 minutos.",
+      "bookConsultation": "Reservar consulta gratuita"
+    }
+  },
+  "freeConsult": {
+    "hero": {
+      "title": "Construyamos su",
+      "titleHighlight": "Visión juntos",
+      "description": "Reserve una sesión estratégica gratuita de 30 minutos.",
+      "ndaProtected": "Protegido por NDA",
+      "thirtyMinSession": "Sesión de 30 min",
+      "seniorArchitects": "Arquitectos senior"
+    },
+    "calendly": {
+      "title": "Seleccione fecha y hora",
+      "subtitle": "30 min • Consulta gratuita"
+    },
+    "whatYouGet": {
+      "title": "Lo que",
+      "titleHighlight": "obtendrá",
+      "description": "Cada consulta está diseñada para ofrecer valor tangible."
+    },
+    "areas": {
+      "title": "Áreas de",
+      "titleHighlight": "consulta",
+      "description": "Ofrecemos orientación experta en todas las áreas del desarrollo digital."
+    },
+    "process": {
+      "title": "Cómo",
+      "titleHighlight": "funciona",
+      "description": "Cuatro pasos simples desde la reserva hasta la propuesta."
+    },
+    "cta": {
+      "title": "¿Listo para empezar?",
+      "titleHighlight": "Hablemos hoy",
+      "description": "500+ empresas han acelerado su crecimiento con nuestra guía.",
+      "bookConsultation": "Reservar consulta gratuita",
+      "emailUs": "Envíenos un email",
+      "callUs": "Llámenos"
+    }
+  }
 }

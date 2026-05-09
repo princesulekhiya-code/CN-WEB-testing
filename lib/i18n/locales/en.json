@@ -4,7 +4,6 @@
   "nav.resources": "Resources",
   "nav.company": "Company",
   "nav.joinNow": "Join Now",
-
   "hero.title1": "Pioneering Innovation",
   "hero.title2": "with Smart",
   "hero.title3": "Solutions.",
@@ -14,13 +13,11 @@
   "hero.stat.projects": "Projects Delivered",
   "hero.stat.expertise": "Proven Expertise",
   "hero.stat.hiring": "Faster Hiring",
-
   "buildScale.title": "Build, Scale, and Thrive with CloudNexus",
   "buildScale.titleBlue": "Build, Scale, and Thrive with",
   "buildScale.subtitle": "From expert talent to scalable cloud solutions - CloudNexus builds, deploys, and delivers real growth.",
   "buildScale.exploreService": "Explore Service",
   "buildScale.viewAll": "View All Services",
-
   "knownFor.title": "Your Partner for Scalable, Efficient, and Transparent Hiring",
   "knownFor.titleBlue": "Your Partner for Scalable,",
   "knownFor.titleWhite": "Efficient, and Transparent Hiring",
@@ -36,7 +33,6 @@
   "knownFor.scalableTeams": "Scalable Teams",
   "knownFor.scalableTeamsDesc": "Rapidly scale from a single developer to a full 50+ member engineering pod within weeks.",
   "knownFor.learnMore": "Learn more about us",
-
   "techStack.title": "Built with modern technology",
   "techStack.titleBlue": "Built with",
   "techStack.titleWhite": "modern technology",
@@ -46,7 +42,6 @@
   "techStack.cloudDevops": "Cloud & DevOps",
   "techStack.dataAI": "Data & AI",
   "techStack.toolsCICD": "Tools & CI/CD",
-
   "caseStudies.title": "Work That Speaks for Itself",
   "caseStudies.titleBlue": "Work That",
   "caseStudies.titleWhite": "Speaks for Itself",
@@ -60,26 +55,21 @@
   "caseStudies.startConversation": "Start a conversation",
   "caseStudies.projects": "projects",
   "caseStudies.ourWork": "Our Work",
-
   "stats.provenTrackRecord": "Proven Track Record",
   "stats.titleBlue": "Proven",
   "stats.titleWhite": "Track Record",
   "stats.provenSubtitle": "A decade of delivering results that speak for themselves.",
-
   "topClients.title": "Companies That Trust Us",
   "topClients.titleBlue": "Companies That",
   "topClients.titleWhite": "Trust Us",
   "topClients.subtitle": "From established industry players to rising startups, we create results that fuel growth and success.",
-
   "testimonials.title": "Client Testimonials",
   "testimonials.titleBlue": "Client",
   "testimonials.titleWhite": "Testimonials",
-
   "faq.title": "Frequently Asked Questions",
   "faq.titleBlue": "Frequently Asked",
   "faq.titleWhite": "Questions",
   "faq.subtitle": "Everything you need to know about working with CloudNexus.",
-
   "consultation.title": "Let's Build Something Great Together",
   "consultation.titleBlue": "Let's Build Something",
   "consultation.titleWhite": "Great Together",
@@ -93,7 +83,6 @@
   "consultation.noStringsDesc": "Zero commitment",
   "consultation.freeCall": "Free Call",
   "consultation.freeCallDesc": "30 min session",
-
   "footer.description": "We design and build scalable digital solutions including web applications, cloud infrastructure, data platforms, and modern software systems.",
   "footer.services": "Services",
   "footer.moreServices": "More Services",
@@ -108,7 +97,6 @@
   "footer.office.bplAddr": "Plot No 20, Kusturi Arched, Barrai, Bhopal, MP 462042, India",
   "footer.office.blr": "Bengaluru",
   "footer.office.blrAddr": "2nd Stage, BTM Layout, Bengaluru, Karnataka 560076, India",
-
   "services.mobileApp": "Mobile App Development",
   "services.webDev": "Web Development",
   "services.softwareDev": "Software Development",
@@ -129,7 +117,6 @@
   "services.cloudSaas": "Cloud & SaaS Solutions",
   "services.cybersecurity": "Cybersecurity & Compliance",
   "services.devops": "DevOps & Cloud Automation",
-
   "industries.healthcare": "Healthcare & Lifesciences",
   "industries.ecommerce": "E-Commerce Solutions",
   "industries.transport": "Transport & Logistics",
@@ -145,13 +132,11 @@
   "industries.homeService": "Home Service",
   "industries.fintech": "Fintech",
   "industries.mcommerce": "mCommerce",
-
   "resources.support": "Support",
   "resources.contact": "Contact Us",
   "resources.blogs": "Blogs",
   "resources.careers": "Careers",
   "resources.freeConsultation": "Free Consultation",
-
   "company.aboutUs": "About Us",
   "company.lifeAt": "Life @ CloudNexus",
   "company.team": "Team",
@@ -160,7 +145,6 @@
   "company.overview": "Overview",
   "company.careerBenefits": "Career Benefits",
   "company.processMethodology": "Process & Methodology",
-
   "industry.hero.title1": "Tailored Solutions for",
   "industry.hero.title2": "Every Industry",
   "industry.hero.description": "Explore our hands-on expertise in creating tailor-made digital solutions packed with strategy, operations and technologies across 15+ industry verticals.",
@@ -172,14 +156,12 @@
   "industry.cta.btn2": "View Our Work",
   "industry.solutions": "solutions",
   "industry.explore": "Explore",
-
   "common.readMore": "Read More",
   "common.learnMore": "Learn More",
   "common.getStarted": "Get Started",
   "common.contactUs": "Contact Us",
   "common.viewAll": "View All",
   "common.backTo": "Back to",
-
   "blog.hero.title1": "Insights &",
   "blog.hero.title2": "Stories",
   "blog.hero.description": "Tutorials, case studies, and tech insights from the Cloud Nexus engineering team. Stay ahead with the latest in cloud, AI, and modern development.",
@@ -192,7 +174,6 @@
   "blog.noResultsEmpty": "No blog posts yet. Check back soon!",
   "blog.noResultsFilter": "Try adjusting your search or filter.",
   "blog.readMore": "Read Article",
-
   "career.hero.title1": "Ready to do",
   "career.hero.title2": "the best work",
   "career.hero.title3": "of your life",
@@ -213,7 +194,6 @@
   "career.cta.title": "Think you're the right fit?",
   "career.cta.description": "We're building something special at Cloud Nexus - a team of dreamers, doers, and disruptors. If you're passionate about technology and want to make a real impact, we'd love to hear from you.",
   "career.cta.resume": "Drop us your resume",
-
   "servicesPage.hero.title1": "Engineering Excellence.",
   "servicesPage.hero.title2": "Measurable Impact.",
   "servicesPage.hero.description": "Strategy, design, engineering, and growth - one partner covering the entire digital lifecycle so you can focus on what matters most: your business.",
@@ -247,7 +227,6 @@
   "servicesPage.cta.body": "Share your challenge, and we'll map a clear path - from architecture to launch - backed by engineers who've done it hundreds of times.",
   "servicesPage.cta.getConsultation": "Get a Free Consultation",
   "servicesPage.cta.viewWork": "View Our Work",
-
   "resourcesHub.hero.title": "How can we",
   "resourcesHub.hero.titleHighlight": "help you",
   "resourcesHub.hero.titleEnd": "today?",
@@ -332,7 +311,6 @@
   "resourcesHub.cta.bookConsultation": "Book Free Consultation",
   "resourcesHub.cta.sendMessage": "Send a Message",
   "resourcesHub.cta.footer": "work@cloudnexus.in · +91 87938 30447",
-
   "careerBenefits.hero.title": "Perks & ",
   "careerBenefits.hero.titleHighlight": "Benefits",
   "careerBenefits.hero.titleEnd": "That Matter",
@@ -390,5 +368,680 @@
   "careerBenefits.cta.titleEnd": " With Us?",
   "careerBenefits.cta.description": "Join a team that values your growth, supports your well-being, and rewards your contribution. Explore open positions today.",
   "careerBenefits.cta.viewPositions": "View Open Positions",
-  "careerBenefits.cta.contactHR": "Contact HR Team"
+  "careerBenefits.cta.contactHR": "Contact HR Team",
+  "life": {
+    "gallery": {
+      "ariaLabel": "Culture highlights"
+    },
+    "hero": {
+      "title": "Life at",
+      "subtitle": "Cloud Nexus",
+      "description": "Where talent meets culture. We build products we're proud of  -  with people we genuinely care about.",
+      "exploreCareers": "Explore Careers",
+      "getInTouch": "Get in Touch"
+    },
+    "stats": {
+      "teamMembers": "Team Members",
+      "dayWorkWeek": "Day Work Week",
+      "countriesServed": "Countries Served",
+      "womenInTech": "Women in Tech"
+    },
+    "moments": {
+      "title": "Celebrating The Melody of",
+      "titleHighlight": "Moments",
+      "description": "Laughter and joyful chatter echoed with the melody of music. See how we're building success together, one team, one dream at Cloud Nexus.",
+      "viewAllPhotos": "View All Photos"
+    },
+    "purpose": {
+      "title": "Driven by",
+      "titleHighlight": "Purpose",
+      "description": "The five pillars that guide everything we build, ship, and stand for."
+    },
+    "join": {
+      "title": "Why Should You Join Cloud Nexus?",
+      "description": "Cloud Nexus is the place where you can learn, explore, and grow your craft and confidence. We weave a work culture with empathy, warmth, and care."
+    },
+    "women": {
+      "altImage": "Women empowerment at Cloud Nexus",
+      "badgeLabel": "Women in tech roles",
+      "title": "Empowering women is our major goal",
+      "description1": "We invest in leadership visibility, psychological safety, and growth paths so women can thrive in engineering, product, and operations  -  not as an exception, but as the norm.",
+      "description2": "From mentorship circles to flexible policies and zero-tolerance for harassment, we design a workplace where everyone can bring their full selves to work.",
+      "point1": "Equal opportunity in hiring and promotions",
+      "point2": "Leadership sponsorship and mentorship programs",
+      "point3": "Safe reporting and supportive HR practices"
+    },
+    "recruit": {
+      "title": "We are always in search of enthusiastic people to join us",
+      "description": "At Cloud Nexus, we thrive on the energy of driven individuals. If you're eager to make a meaningful impact and grow alongside a vibrant community, we'd love to have you on board.",
+      "applyNow": "Apply now"
+    },
+    "perks": {
+      "title": "Perks of Being at Cloud Nexus",
+      "description": "Comfort, safety, and flexibility are how we grow together  -  with a cheerful environment where people do their best work."
+    },
+    "diversity": {
+      "title": "Diversity at",
+      "titleHighlight": "Cloud Nexus"
+    },
+    "cta": {
+      "title": "Ready to be part of",
+      "titleHighlight": "the story",
+      "description": "Bring your curiosity, your craft, and your kindness. We are building products and a culture worth showing up for  -  every single day.",
+      "applyNow": "Apply now",
+      "talkToUs": "Talk to us"
+    }
+  },
+  "events": {
+    "hero": {
+      "title": "Where We",
+      "titleHighlight": "Connect",
+      "titleLine2": "Learn & Innovate",
+      "description": "From global tech conferences to hands-on workshops  -  discover where Cloud Nexus is sharing insights, showcasing solutions, and building the future of technology.",
+      "cta": "Meet Us at Events",
+      "ctaSecondary": "View Schedule"
+    },
+    "featured": {
+      "title": "Key",
+      "titleHighlight": "Events",
+      "description": "World-class tech conferences where Cloud Nexus unveils breakthroughs, shares insights, and connects with industry leaders.",
+      "reserveSpot": "Reserve Your Spot"
+    },
+    "upcoming": {
+      "title": "Upcoming",
+      "titleHighlight": "Schedule",
+      "description": "Webinars, workshops, meetups, and hackathons  -  join us online or in person.",
+      "register": "Register Now"
+    },
+    "past": {
+      "title": "Past",
+      "titleHighlight": "Highlights",
+      "description": "A look back at where we've been  -  sharing knowledge, building partnerships, and making an impact."
+    },
+    "whyAttend": {
+      "title": "Why Attend Our",
+      "titleHighlight": "Events",
+      "description": "Whether you're a developer, startup founder, or enterprise leader  -  our events are designed to deliver actionable insights, real connections, and hands-on learning."
+    },
+    "cta": {
+      "title": "Let's Meet at the Next",
+      "titleHighlight": "Big Event",
+      "description": "Want to collaborate, sponsor, or just say hello? Get in touch with our events team and let's explore opportunities together.",
+      "primaryBtn": "Schedule a Meeting",
+      "secondaryBtn": "Contact Events Team"
+    }
+  },
+  "aboutUs": {
+    "workforce": {
+      "teamMembers": "Team Members",
+      "title1": "Our",
+      "titleHighlight": "Visionaries",
+      "title2": "Help in",
+      "title3": "Accelerating the Process",
+      "description": "With our enthusiast workforce and seasoned engineers, we create excellent solutions at a rushed pace to serve businesses across the world.",
+      "statTeam": "Team Members",
+      "statIndustries": "Industries",
+      "statSupport": "Support"
+    },
+    "hero": {
+      "title1": "Enriching Lives",
+      "title2": "Through Our ",
+      "titleHighlight": "Tech-Innovations",
+      "description": "We are delivering exceptional digital experiences with our boldest ideas that make the world better for everyone.",
+      "getStarted": "Get Started",
+      "contactUs": "Contact Us",
+      "altTeam": "Cloud Nexus team innovating"
+    },
+    "partner": {
+      "title1": "Your End-To-End",
+      "titleHighlight": "AI-Driven Software Development",
+      "title2": "and Digital Transformation Partner",
+      "description": "Embrace our partnership to experience the power of collective knowledge and a tech-driven skillset that promises the best work infused with advanced technologies."
+    },
+    "about": {
+      "title": "About",
+      "titleHighlight": "CloudNexus",
+      "description1": "At CloudNexus, we are more than just an IT consulting company  -  we are innovators, problem-solvers, and architects of the digital future. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting.",
+      "description2": "Together with our partnership and industry experience, we are creating a robust ecosystem to bring huge business transformations  -  enhancing efficiency, driving growth, and future-proofing operations.",
+      "altTeam": "Team collaborating on innovative solutions",
+      "overlayCloud": "Cloud Transformation",
+      "overlayAI": "AI & Automation",
+      "overlayEngineering": "Software Engineering",
+      "overlayCyber": "Cybersecurity"
+    },
+    "values": {
+      "titleHighlight": "Our",
+      "title": "Values",
+      "description": "Our core values are defined by our individual characters through their work patterns and business decisions."
+    },
+    "reasons": {
+      "title": "Compelling Reasons To",
+      "titleHighlight": "Partner with Us",
+      "description": "We achieve the highest level of market attention with our excellent work commitment in an ever-changing world.",
+      "altTeam": "Professional team delivering IT solutions",
+      "statProjects": "Projects Delivered",
+      "statSatisfaction": "Client Satisfaction",
+      "statSupport": "Support Available"
+    },
+    "offices": {
+      "titleHighlight": "Our",
+      "title": "Offices",
+      "description": "Strategically located across India  -  delivering world-class IT solutions from our development centers."
+    },
+    "cta": {
+      "title1": "Ready to Build Something",
+      "titleHighlight": "Extraordinary?",
+      "description": "Whether you're a startup building your MVP or an enterprise modernizing your stack  -  we're here to help you turn ambitious ideas into reality.",
+      "bookConsultation": "Book Free Consultation",
+      "contactUs": "Contact Us"
+    }
+  },
+  "overview": {
+    "vision": {
+      "title": "Our Purpose",
+      "titleHighlight": "& Direction",
+      "tabVision": "Our vision",
+      "tabMission": "Our mission",
+      "ourVision": "Our Vision",
+      "visionText": "To be the global leader in IT solutions and digital product innovation, empowering businesses with progressive technology that enhances efficiency, scalability, and growth. At CloudNexus, we envision a future where businesses thrive by leveraging smart, automated, and future-ready solutions.",
+      "altVision": "Futuristic technology and digital innovation",
+      "ourMission": "Our Mission",
+      "missionSubtitle": "Redefining the IT landscape",
+      "altMission": "Team working together on digital innovation"
+    },
+    "hero": {
+      "title": "Innovators, Problem-Solvers &",
+      "titleHighlight": "Architects of the Digital Future",
+      "description": "At CloudNexus, we are more than just an IT consulting company. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting, helping businesses thrive in an ever-evolving tech landscape.",
+      "getStarted": "Get Started",
+      "learnAboutUs": "Learn About Us",
+      "altTeam": "Team collaborating on digital solutions",
+      "stat1Val": "200+",
+      "stat1Label": "Projects",
+      "stat2Val": "1+",
+      "stat2Label": "Year",
+      "stat3Val": "90+",
+      "stat3Label": "Teams"
+    },
+    "whoWeAre": {
+      "title": "Who We Are",
+      "description1": "At CloudNexus, we are more than just an IT consulting company  -  we are innovators, problem-solvers, and architects of the digital future. We specialize in progressive IT solutions, cloud transformation, AI-driven automation, and enterprise consulting, helping businesses thrive in an ever-evolving tech landscape.",
+      "description2": "Our team of technology experts, strategists, and problem-solvers collaborates closely with clients to design tailored solutions that enhance efficiency, drive growth, and future-proof operations. Whether it's cloud migration, software development, automation, or cybersecurity, we ensure that your IT ecosystem is agile, secure, and optimized for success.",
+      "altTeam": "Team strategy and innovation",
+      "capCloud": "Cloud Transformation",
+      "capAI": "AI & Automation",
+      "capSoftware": "Software Dev",
+      "capCyber": "Cybersecurity"
+    },
+    "services": {
+      "title": "Our",
+      "titleHighlight": "Services",
+      "description": "End-to-end technology capabilities tailored to your business stage and growth ambitions."
+    },
+    "whyCloudNexus": {
+      "title": "Why",
+      "titleHighlight": "CloudNexus?",
+      "description": "Choosing the right technology partner is crucial for business success. We don't just offer IT solutions  -  we create transformative experiences that drive innovation, efficiency, and growth.",
+      "altTeam": "Professional team delivering IT solutions",
+      "stat1Val": "200+",
+      "stat1Label": "Projects Delivered",
+      "stat2Val": "1+",
+      "stat2Label": "Year of Excellence",
+      "stat3Val": "90+",
+      "stat3Label": "Scalable Teams"
+    },
+    "offices": {
+      "title": "Our",
+      "titleHighlight": "Offices",
+      "description": "Strategically located across Rajasthan, India  -  delivering world-class IT solutions from our development centers."
+    },
+    "growth": {
+      "title": "Our Growth",
+      "titleHighlight": "Journey",
+      "description": "From a seed of an idea to a growing force in technology  -  every milestone marks a step toward our vision.",
+      "altPlant": "Growing plant seedling symbolizing company growth",
+      "step1Date": "19 Jan 2025",
+      "step1Title": "The Seed Was Planted",
+      "step1Desc": "Cloud Nexus was founded with a clear mission  -  to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful.",
+      "step2Date": "Mid 2025",
+      "step2Title": "Taking Root & Growing",
+      "step2Desc": "We expanded our team, onboarded our first global clients, and delivered 30+ successful projects. Our expertise in mobile, web, cloud, and AI started gaining recognition across industries.",
+      "step3Date": "Early 2026",
+      "step3Title": "Branching Out",
+      "step3Desc": "With 50+ projects delivered across 15+ industries, we began attending global tech conferences like GITEX, built dedicated AI/ML capabilities, and expanded our service portfolio significantly.",
+      "step4Date": "Today & Beyond",
+      "step4Title": "Reaching New Heights",
+      "step4Desc": "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning  -  with plans to scale further, innovate boldly, and create lasting impact."
+    },
+    "cta": {
+      "title": "Ready to Innovate?",
+      "titleHighlight": "Let's Build Together",
+      "description": "Join 500+ companies who trust CloudNexus to deliver technology solutions that drive real business outcomes.",
+      "bookConsultation": "Book Free Consultation",
+      "viewWork": "View Our Work"
+    }
+  },
+  "team": {
+    "hero": {
+      "title": "The People Behind",
+      "titleHighlight": "CloudNexus",
+      "description": "A talented crew of engineers, designers, and strategists building the future of technology  -  one project at a time.",
+      "stat1Num": "90+",
+      "stat1Label": "Team Members",
+      "stat2Num": "4",
+      "stat2Label": "Specialized Squads",
+      "stat3Num": "3",
+      "stat3Label": "Office Locations",
+      "stat4Num": "10+",
+      "stat4Label": "Years of Delivery"
+    },
+    "leadership": {
+      "titleHighlight": "Leadership",
+      "title": "Team",
+      "description": "The driving force behind CloudNexus\\u2019s vision, strategy, and execution."
+    },
+    "squads": {
+      "titleHighlight": "Engineering",
+      "title": "Squads",
+      "description": "Specialized teams delivering excellence across DevOps, Development, and Data.",
+      "teamLabel": "Team",
+      "division": "Division",
+      "techStack": "Tech Stack",
+      "stat1Num": "25+",
+      "stat1Label": "Members",
+      "stat2Num": "50+",
+      "stat2Label": "Projects"
+    },
+    "techStaff": {
+      "titleHighlight": "Technical Staff",
+      "title": "Comprises",
+      "description": "At CloudNexus, our technical staff combines AI expertise, innovation, and diverse talent to deliver intelligent, future-ready solutions that exceed expectations.",
+      "aiMl": "AI & Machine Learning Engineers",
+      "softwareArchitects": "Software Architects",
+      "fullStack": "Full-Stack Developers",
+      "appWeb": "App & Web Developers",
+      "networkCloud": "Network & Cloud Engineers",
+      "qa": "Quality Assurance Specialists",
+      "devops": "DevOps Engineers",
+      "dataEngineers": "Data Engineers & Analysts",
+      "uiux": "UI/UX Designers",
+      "seoDigital": "SEO & Digital Marketing Specialists",
+      "projectManagers": "Project Managers",
+      "technicalWriters": "Technical Writers"
+    },
+    "culture": {
+      "titleHighlight": "Our",
+      "title": "Culture",
+      "description": "What makes CloudNexus a great place to build your career and grow as a professional."
+    },
+    "cta": {
+      "title": "Want to Join Our Team?",
+      "description": "We\\u2019re always looking for talented engineers, designers, and strategists who are passionate about building the future.",
+      "getInTouch": "Get In Touch"
+    }
+  },
+  "processMethodology": {
+    "hero": {
+      "title": "Our Process &",
+      "titleHighlight": "Development Methodology",
+      "description": "A walkthrough to our simple, smart, and agile approach to software development. From discovery to deployment  -  every step is transparent, collaborative, and results-driven.",
+      "startProject": "Start Your Project",
+      "contactUs": "Contact Us"
+    },
+    "agile": {
+      "title": "From Agility to",
+      "titleHighlight": "Action",
+      "description": "We embrace Agile Methodology to encourage transparent communication, foster collaboration, combat uncertainty, cope with change, and continuously deliver new value.",
+      "subDescription": "Everything  -  the development work, the information, and the investment  -  moves in an integrated fashion with measurable returns at every iteration.",
+      "transparentComm": {
+        "title": "Transparent Communication",
+        "desc": "Daily standups, sprint reviews, and open Slack channels. You always know what's happening with your project."
+      },
+      "iterativeDev": {
+        "title": "Iterative Development",
+        "desc": "2-week sprints with regular demos. You see progress, provide feedback, and steer the direction continuously."
+      },
+      "goalDriven": {
+        "title": "Goal-Driven Execution",
+        "desc": "Every sprint has clear objectives tied to business outcomes. We don't just build features  -  we deliver results."
+      },
+      "measurableProgress": {
+        "title": "Measurable Progress",
+        "desc": "Velocity tracking, burndown charts, and regular reports. Data-driven insights into project health and timeline."
+      }
+    },
+    "execution": {
+      "title": "Project",
+      "titleHighlight": "Execution",
+      "titleSuffix": "Structure",
+      "description": "Our high-performance cross-functional team takes care of you at every step. We adjust as per your requirements and deliver incremented value that embraces your vision.",
+      "phase": "Phase"
+    },
+    "deliverables": {
+      "title": "Our",
+      "titleHighlight": "Deliverables",
+      "description": "From the moment we take up your project, our duty begins. We keep you informed about every aspect of the development stage  -  transparent, systemized, and standardized."
+    },
+    "tech": {
+      "titleHighlight": "Tools & Technologies",
+      "title": "We Use",
+      "description": "We use trending technologies backed by a robust suite of tools, frameworks, and platforms to deliver highly scalable, interactive, and innovative solutions."
+    },
+    "models": {
+      "title": "Flexible",
+      "titleHighlight": "Working Models",
+      "description": "Our engineering team delivers services in different engagement models that best fit your needs to launch the desired product in the most efficient way."
+    },
+    "security": {
+      "title": "Your Ideas Are",
+      "titleHighlight": "Always Safe",
+      "titleSuffix": "With Us",
+      "description": "Protecting your ideas, intellectual property, and trade secrets is our top priority. We ensure that your information never reaches unauthorized parties."
+    },
+    "cta": {
+      "title": "Have a Project in Mind?",
+      "titleHighlight": "Let's Build It Together",
+      "description": "Tell us about your idea and we'll provide a detailed proposal with architecture recommendations, timeline, and cost estimate  -  completely free.",
+      "bookConsultation": "Book Free Consultation",
+      "contactUs": "Contact Us"
+    }
+  },
+  "infra": {
+    "hero": {
+      "title": "Cloud Nexus",
+      "titleHighlight": "Infrastructure",
+      "description": "Our thoughtfully designed workspace is built for innovation, collaboration, and high-performance delivery. A modern technology center where world-class software gets built every day.",
+      "cta": "Get in Touch",
+      "ctaSecondary": "Life at Cloud Nexus"
+    },
+    "gallery": {
+      "title": "Inside Our",
+      "titleHighlight": "Office",
+      "description": "A glimpse into where innovation happens every day at Cloud Nexus."
+    },
+    "location": {
+      "headquarters": "Headquarters",
+      "highlightsTitle": "Office Highlights"
+    },
+    "facilities": {
+      "title": "World-Class",
+      "titleHighlight": "Facilities",
+      "description": "Our office is equipped with everything our team needs to deliver exceptional work in a comfortable, secure, and inspiring environment."
+    },
+    "workspace": {
+      "title": "Our",
+      "titleHighlight": "Workspace",
+      "description": "Designed with care to create an environment where talent thrives, ideas flow, and great products are built."
+    },
+    "cta": {
+      "title": "Do you have a project in mind?",
+      "subtitle": "Talk to the experts.",
+      "description": "Let's discuss how Cloud Nexus can help you build, scale, and deliver your next big idea.",
+      "primaryBtn": "Get in Touch",
+      "secondaryBtn": "Contact Us"
+    }
+  },
+  "companyHub": {
+    "hero": {
+      "title": {
+        "line1": "Building the Future,",
+        "highlight": "One Solution",
+        "line2": "at a Time"
+      },
+      "description": "Cloud Nexus is a technology company that transforms ideas into powerful digital products. Founded in January 2025, we bring together talented engineers, designers, and strategists to deliver exceptional software solutions.",
+      "cta": {
+        "learnAbout": "Learn About Us",
+        "getInTouch": "Get in Touch"
+      }
+    },
+    "explore": {
+      "title": "Explore",
+      "description": "Discover who we are, how we work, and what makes us the right technology partner for your business.",
+      "cardCta": "Explore"
+    },
+    "values": {
+      "title": "Our Core",
+      "titleHighlight": "Values",
+      "description": "These principles guide every decision we make, every product we build, and every relationship we nurture."
+    },
+    "growth": {
+      "title": "Our Growth",
+      "titleHighlight": "Journey",
+      "description": "From a seed of an idea to a growing force in technology  -  every milestone marks a step toward our vision.",
+      "step1": {
+        "date": "19 Jan 2025",
+        "title": "The Seed Was Planted",
+        "desc": "Cloud Nexus was founded with a clear mission  -  to bridge the gap between business needs and technology. What started as a small team with big dreams became the foundation of something meaningful."
+      },
+      "step2": {
+        "date": "Mid 2025",
+        "title": "Taking Root & Growing",
+        "desc": "We expanded our team, onboarded our first global clients, and delivered 30+ successful projects. Our expertise in mobile, web, cloud, and AI started gaining recognition across industries."
+      },
+      "step3": {
+        "date": "Early 2026",
+        "title": "Branching Out",
+        "desc": "With 50+ projects delivered across 15+ industries, we began attending global tech conferences like GITEX, built dedicated AI/ML capabilities, and expanded our service portfolio significantly."
+      },
+      "step4": {
+        "date": "Today & Beyond",
+        "title": "Reaching New Heights",
+        "desc": "We're now a full-service technology company trusted by businesses worldwide. Our journey is just beginning  -  with plans to scale further, innovate boldly, and create lasting impact."
+      }
+    },
+    "cta": {
+      "title": "Let's Build Something",
+      "titleHighlight": "Extraordinary",
+      "description": "Whether you're a startup with a bold idea or an enterprise seeking digital transformation  -  we're here to make it happen.",
+      "bookConsultation": "Book Free Consultation",
+      "contactUs": "Contact Us"
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "How Can We",
+      "titleHighlight": "Help You?",
+      "description": "Our dedicated support team is here to ensure your success. Whether you need instant help or in-depth guidance, choose the channel that works best for you."
+    },
+    "form": {
+      "errorFallback": "Something went wrong. Please try again.",
+      "title": "Send a Message",
+      "subtitle": "We'll get back within 4 hours",
+      "successTitle": "Message Sent!",
+      "successDesc": "We'll respond within 4 hours.",
+      "sendAnother": "Send Another",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@company.com",
+      "priorityLabel": "Priority",
+      "priorityLow": "Low - General question",
+      "priorityMedium": "Medium - Feature request",
+      "priorityHigh": "High - Bug report",
+      "priorityCritical": "Critical - Production down",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Describe your issue or question...",
+      "sending": "Sending...",
+      "sendMessage": "Send Message"
+    },
+    "channels": {
+      "title": "Get in Touch",
+      "titleHighlight": "With Our Team",
+      "description": "Choose your preferred support channel. All channels are staffed by experienced engineers."
+    },
+    "selfService": {
+      "title": "Self-Service",
+      "titleHighlight": "Resources",
+      "description": "Find answers on your own with our comprehensive resource library.",
+      "browse": "Browse"
+    },
+    "faq": {
+      "title": "Frequently Asked",
+      "titleHighlight": "Questions"
+    },
+    "promise": {
+      "title": "Our Support",
+      "titleHighlight": "Promise",
+      "humanFirst": {
+        "title": "Human-First Support",
+        "desc": "No chatbots, no runaround. Every conversation starts with an experienced engineer who understands your stack."
+      },
+      "enterpriseSla": {
+        "title": "Enterprise-Grade SLA",
+        "desc": "Guaranteed response times, uptime commitments, and financial credits  -  backed by transparent reporting."
+      },
+      "resolution": {
+        "title": "Resolution, Not Deflection",
+        "desc": "We don't close tickets until you're satisfied. Our CSAT score consistently exceeds 98% across all channels."
+      }
+    },
+    "cta": {
+      "title": "Still Need Help?",
+      "titleHighlight": "We're Here For You",
+      "description": "Schedule a free consultation with our solutions team to discuss your specific needs and find the right support plan.",
+      "bookConsultation": "Book Free Consultation",
+      "contactSales": "Contact Sales"
+    }
+  },
+  "career": {
+    "error": "Unable to load job listings.",
+    "filter": {
+      "all": "All"
+    },
+    "hero": {
+      "title1": "Ready to do",
+      "title2": "the best work",
+      "title3": "of your life",
+      "description": "Join a team of passionate engineers, designers, and innovators building cutting-edge technology solutions for global clients.",
+      "imageAlt": "Team collaboration at Cloud Nexus"
+    },
+    "search": {
+      "placeholder": "Search by job role",
+      "active": "Active",
+      "role": "Job Role",
+      "roles": "Job Roles"
+    },
+    "job": {
+      "apply": "View & Apply"
+    },
+    "noResults": {
+      "title": "No positions found",
+      "description": "Try adjusting your search or filter criteria."
+    },
+    "cta": {
+      "title": "Think you're the right fit?",
+      "description": "We're building something special at Cloud Nexus - a team of dreamers, doers, and disruptors. If you're passionate about technology and want to make a real impact, we'd love to hear from you.",
+      "resume": "Drop us your resume"
+    }
+  },
+  "blog": {
+    "filter": {
+      "all": "All"
+    },
+    "stat": {
+      "articles": "Articles",
+      "topics": "Topics",
+      "authors": "Authors"
+    },
+    "hero": {
+      "title1": "Insights &",
+      "title2": "Stories",
+      "description": "Tutorials, case studies, and tech insights from the Cloud Nexus engineering team. Stay ahead with the latest in cloud, AI, and modern development.",
+      "imageAlt": "Blog & Insights"
+    },
+    "search": {
+      "placeholder": "Search articles..."
+    },
+    "noResults": "No articles found",
+    "noResultsEmpty": "No blog posts yet. Check back soon!",
+    "noResultsFilter": "Try adjusting your search or filter.",
+    "readMore": "Read Article"
+  },
+  "contact": {
+    "form": {
+      "errorFallback": "Something went wrong. Please try again.",
+      "title": "Tell Us About Your Project",
+      "subtitle": "All fields marked with * are required",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "companyName": "Company Name",
+      "companyPlaceholder": "Your company",
+      "email": "Email Address",
+      "emailPlaceholder": "john@company.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+91 XXXXX XXXXX",
+      "interestedIn": "I'm Interested In",
+      "selectService": "Select a service",
+      "budget": "Estimated Budget",
+      "selectBudget": "Select budget range",
+      "details": "Project Details",
+      "detailsPlaceholder": "Tell us about your project, goals, timeline, and any specific requirements...",
+      "heardFrom": "How Did You Hear About Us?",
+      "selectOption": "Select an option",
+      "sending": "Sending...",
+      "sendMessage": "Send Message",
+      "privacyNote": "By submitting, you agree to our privacy policy. We'll never share your data."
+    },
+    "hero": {
+      "titleHighlight": "Let's Build",
+      "title": "Something Great",
+      "description": "Tell us about your project and we'll get back to you within 24 hours with a tailored plan and expert recommendations.",
+      "responseTime": "< 24h",
+      "responseTimeLabel": "Response Time",
+      "projectsNum": "200+",
+      "projectsLabel": "Projects Delivered",
+      "satisfactionNum": "100%",
+      "satisfactionLabel": "Client Satisfaction"
+    },
+    "success": {
+      "title": "Message Sent!",
+      "description": "Thank you for reaching out. Our team will review your inquiry and get back to you within 24 hours.",
+      "sendAnother": "Send Another Message"
+    },
+    "offices": {
+      "title": "Our Offices"
+    },
+    "cta": {
+      "title": "Prefer a Live Conversation?",
+      "description": "Schedule a free 30-minute consultation call with our experts to discuss your project in detail.",
+      "bookConsultation": "Book Free Consultation"
+    }
+  },
+  "freeConsult": {
+    "hero": {
+      "title": "Let's Build Your",
+      "titleHighlight": "Vision Together",
+      "description": "Book a free 30-minute strategy session with our senior architects. Get a custom roadmap, technology recommendations, and a transparent project estimate  -  zero obligation.",
+      "ndaProtected": "NDA Protected",
+      "thirtyMinSession": "30 Min Session",
+      "seniorArchitects": "Senior Architects"
+    },
+    "calendly": {
+      "title": "Select a Date & Time",
+      "subtitle": "30 min • Free consultation"
+    },
+    "whatYouGet": {
+      "title": "What You'll",
+      "titleHighlight": "Walk Away With",
+      "description": "Every consultation is designed to deliver tangible, actionable value."
+    },
+    "areas": {
+      "title": "Consultation",
+      "titleHighlight": "Areas",
+      "description": "We offer expert guidance across every area of digital product development."
+    },
+    "process": {
+      "title": "How It",
+      "titleHighlight": "Works",
+      "description": "Four simple steps from booking to receiving your custom proposal."
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "titleHighlight": "Let's Talk Today",
+      "description": "Join 500+ companies who've accelerated their growth with our expert guidance.",
+      "bookConsultation": "Book Free Consultation",
+      "emailUs": "Email Us",
+      "callUs": "Call Us"
+    }
+  }
 }

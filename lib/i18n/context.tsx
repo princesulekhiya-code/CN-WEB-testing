@@ -4,12 +4,13 @@ import { createContext, useContext, useState, useEffect, useCallback, type React
 import en from "./locales/en.json";
 
 type Locale = "en" | "hi" | "fr" | "es" | "zh";
-type Translations = Record<string, string>;
+type TranslationValue = string | { [k: string]: TranslationValue };
+type Translations = Record<string, TranslationValue>;
 
 const STORAGE_KEY = "cn_locale";
 
 const localeModules: Record<Locale, () => Promise<{ default: Translations }>> = {
-  en: () => Promise.resolve({ default: en }),
+  en: () => Promise.resolve({ default: en as Translations }),
   hi: () => import("./locales/hi.json"),
   fr: () => import("./locales/fr.json"),
   es: () => import("./locales/es.json"),
@@ -32,7 +33,7 @@ export function useTranslation() {
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("en");
-  const [translations, setTranslations] = useState<Translations>(en);
+  const [translations, setTranslations] = useState<Translations>(en as Translations);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -58,7 +59,19 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const t = useCallback(
     (key: string, fallback?: string): string => {
-      return translations[key] ?? (en as Translations)[key] ?? fallback ?? key;
+      const resolve = (obj: Record<string, unknown>, path: string): string | undefined => {
+        const parts = path.split(".");
+        let cur: unknown = obj;
+        for (const p of parts) {
+          if (cur == null || typeof cur !== "object") return undefined;
+          cur = (cur as Record<string, unknown>)[p];
+        }
+        return typeof cur === "string" ? cur : undefined;
+      };
+      return resolve(translations as Record<string, unknown>, key)
+        ?? resolve(en as Record<string, unknown>, key)
+        ?? fallback
+        ?? key;
     },
     [translations]
   );

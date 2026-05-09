@@ -163,7 +163,6 @@
   "faq.titleWhite": "प्रश्न",
   "consultation.titleBlue": "आइए कुछ बेहतरीन",
   "consultation.titleWhite": "साथ मिलकर बनाएं",
-
   "servicesPage.hero.title1": "इंजीनियरिंग उत्कृष्टता।",
   "servicesPage.hero.title2": "मापने योग्य प्रभाव।",
   "servicesPage.hero.description": "रणनीति, डिज़ाइन, इंजीनियरिंग और विकास - पूरे डिजिटल जीवनचक्र को कवर करने वाला एक भागीदार ताकि आप सबसे महत्वपूर्ण चीज़ पर ध्यान दे सकें: आपका व्यवसाय।",
@@ -197,7 +196,6 @@
   "servicesPage.cta.body": "अपनी चुनौती साझा करें, और हम एक स्पष्ट रोडमैप तैयार करेंगे - आर्किटेक्चर से लॉन्च तक - ऐसे इंजीनियरों के साथ जिन्होंने सैकड़ों बार यह किया है।",
   "servicesPage.cta.getConsultation": "मुफ्त परामर्श प्राप्त करें",
   "servicesPage.cta.viewWork": "हमारा काम देखें",
-
   "resourcesHub.hero.title": "हम आपकी",
   "resourcesHub.hero.titleHighlight": "किस तरह मदद",
   "resourcesHub.hero.titleEnd": "कर सकते हैं?",
@@ -282,7 +280,6 @@
   "resourcesHub.cta.bookConsultation": "मुफ्त परामर्श बुक करें",
   "resourcesHub.cta.sendMessage": "संदेश भेजें",
   "resourcesHub.cta.footer": "work@cloudnexus.in · +91 87938 30447",
-
   "careerBenefits.hero.title": "विशेष सुविधाएँ और ",
   "careerBenefits.hero.titleHighlight": "लाभ",
   "careerBenefits.hero.titleEnd": "जो मायने रखते हैं",
@@ -340,5 +337,996 @@
   "careerBenefits.cta.titleEnd": " बनाने के लिए तैयार हैं?",
   "careerBenefits.cta.description": "एक ऐसी टीम से जुड़ें जो आपके विकास को महत्व देती है, आपकी भलाई का समर्थन करती है, और आपके योगदान को पुरस्कृत करती है। आज ही खुली पदों की खोज करें।",
   "careerBenefits.cta.viewPositions": "खुली पदें देखें",
-  "careerBenefits.cta.contactHR": "HR टीम से संपर्क करें"
+  "careerBenefits.cta.contactHR": "HR टीम से संपर्क करें",
+  "life.gallery.ariaLabel": "संस्कृति की झलकियाँ",
+  "life.hero.title": "जीवन",
+  "life.hero.subtitle": "Cloud Nexus",
+  "life.hero.description": "जहाँ प्रतिभा संस्कृति से मिलती है। हम ऐसे प्रोडक्ट्स बनाते हैं जिन पर हमें गर्व है - उन लोगों के साथ जिनकी हम सच में परवाह करते हैं।",
+  "life.hero.exploreCareers": "करियर खोजें",
+  "life.hero.getInTouch": "संपर्क करें",
+  "life.stats.teamMembers": "टीम सदस्य",
+  "life.stats.dayWorkWeek": "दिन कार्य सप्ताह",
+  "life.stats.countriesServed": "देशों में सेवा",
+  "life.stats.womenInTech": "टेक में महिलाएं",
+  "life.moments.title": "की धुन का जश्न",
+  "life.moments.titleHighlight": "पलों",
+  "life.moments.description": "हंसी और खुशी की बातें संगीत की धुन के साथ गूंजीं। देखें कैसे हम Cloud Nexus में एक टीम, एक सपना मिलकर सफलता बना रहे हैं।",
+  "life.moments.viewAllPhotos": "सभी फोटो देखें",
+  "life.purpose.title": "प्रेरित",
+  "life.purpose.titleHighlight": "उद्देश्य",
+  "life.purpose.description": "पांच स्तंभ जो हम जो भी बनाते, भेजते और समर्थन करते हैं, उसे मार्गदर्शन देते हैं।",
+  "life.join.title": "आपको Cloud Nexus क्यों जॉइन करना चाहिए?",
+  "life.join.description": "Cloud Nexus वह जगह है जहाँ आप सीख सकते हैं, खोज सकते हैं, और अपनी कला और आत्मविश्वास बढ़ा सकते हैं। हम सहानुभूति, गर्मजोशी और देखभाल के साथ कार्य संस्कृति बुनते हैं।",
+  "life.women.altImage": "Cloud Nexus में महिला सशक्तिकरण",
+  "life.women.badgeLabel": "टेक भूमिकाओं में महिलाएं",
+  "life.women.title": "महिलाओं को सशक्त बनाना हमारा प्रमुख लक्ष्य है",
+  "life.women.description1": "हम नेतृत्व दृश्यता, मनोवैज्ञानिक सुरक्षा और विकास पथों में निवेश करते हैं ताकि महिलाएं इंजीनियरिंग, प्रोडक्ट और ऑपरेशन्स में अपवाद के रूप में नहीं, बल्कि सामान्य रूप में उत्कृष्ट हो सकें।",
+  "life.women.description2": "मेंटरशिप सर्कल से लेकर लचीली नीतियों और उत्पीड़न के लिए शून्य-सहिष्णुता तक, हम एक ऐसा कार्यस्थल डिज़ाइन करते हैं जहाँ हर कोई अपने पूर्ण स्वरूप में काम कर सके।",
+  "life.women.point1": "भर्ती और पदोन्नति में समान अवसर",
+  "life.women.point2": "नेतृत्व प्रायोजन और मेंटरशिप कार्यक्रम",
+  "life.women.point3": "सुरक्षित रिपोर्टिंग और सहायक HR प्रथाएं",
+  "life.recruit.title": "हम हमेशा उत्साही लोगों की तलाश में रहते हैं",
+  "life.recruit.description": "Cloud Nexus में, हम प्रेरित व्यक्तियों की ऊर्जा पर फलते-फूलते हैं। अगर आप सार्थक प्रभाव डालने और एक जीवंत समुदाय के साथ बढ़ने के लिए उत्सुक हैं, तो हम आपका स्वागत करेंगे।",
+  "life.recruit.applyNow": "अभी आवेदन करें",
+  "life.perks.title": "Cloud Nexus में होने के फायदे",
+  "life.perks.description": "आराम, सुरक्षा और लचीलापन - इसी तरह हम साथ मिलकर बढ़ते हैं, एक खुशनुमा माहौल में जहाँ लोग अपना सर्वश्रेष्ठ काम करते हैं।",
+  "life.diversity.title": "विविधता",
+  "life.diversity.titleHighlight": "Cloud Nexus",
+  "life.cta.title": "का हिस्सा बनने के लिए तैयार हैं",
+  "life.cta.titleHighlight": "कहानी",
+  "life.cta.description": "अपनी जिज्ञासा, अपनी कला और अपनी दयालुता लाइए। हम ऐसे प्रोडक्ट्स और संस्कृति बना रहे हैं जिनके लिए हर दिन आना सार्थक हो।",
+  "life.cta.applyNow": "अभी आवेदन करें",
+  "life.cta.talkToUs": "हमसे बात करें",
+  "events.hero.title": "जहाँ हम",
+  "events.hero.titleHighlight": "जुड़ते हैं",
+  "events.hero.titleLine2": "सीखते और नवाचार करते हैं",
+  "events.hero.description": "वैश्विक तकनीकी सम्मेलनों से लेकर व्यावहारिक कार्यशालाओं तक - जानें कि Cloud Nexus कहाँ अंतर्दृष्टि साझा कर रहा है, समाधान प्रदर्शित कर रहा है, और प्रौद्योगिकी का भविष्य बना रहा है।",
+  "events.hero.cta": "इवेंट्स में हमसे मिलें",
+  "events.hero.ctaSecondary": "शेड्यूल देखें",
+  "events.featured.title": "प्रमुख",
+  "events.featured.titleHighlight": "इवेंट्स",
+  "events.featured.description": "विश्व स्तरीय तकनीकी सम्मेलन जहाँ Cloud Nexus नवाचार प्रस्तुत करता है, अंतर्दृष्टि साझा करता है और उद्योग के नेताओं से जुड़ता है।",
+  "events.featured.reserveSpot": "अपनी जगह आरक्षित करें",
+  "events.upcoming.title": "आगामी",
+  "events.upcoming.titleHighlight": "शेड्यूल",
+  "events.upcoming.description": "वेबिनार, कार्यशालाएं, मीटअप्स और हैकाथॉन - ऑनलाइन या व्यक्तिगत रूप से हमसे जुड़ें।",
+  "events.upcoming.register": "अभी रजिस्टर करें",
+  "events.past.title": "पिछले",
+  "events.past.titleHighlight": "हाइलाइट्स",
+  "events.past.description": "एक नज़र पीछे - ज्ञान साझा करना, साझेदारी बनाना और प्रभाव डालना।",
+  "events.whyAttend.title": "हमारे क्यों आएं",
+  "events.whyAttend.titleHighlight": "इवेंट्स",
+  "events.whyAttend.description": "चाहे आप डेवलपर हों, स्टार्टअप संस्थापक हों या एंटरप्राइज़ लीडर - हमारे इवेंट्स कार्रवाई योग्य अंतर्दृष्टि, वास्तविक कनेक्शन और व्यावहारिक सीखने के लिए डिज़ाइन किए गए हैं।",
+  "events.cta.title": "अगले में मिलते हैं",
+  "events.cta.titleHighlight": "बड़ा इवेंट",
+  "events.cta.description": "सहयोग करना चाहते हैं, प्रायोजित करना चाहते हैं, या बस नमस्ते कहना चाहते हैं? हमारी इवेंट्स टीम से संपर्क करें।",
+  "events.cta.primaryBtn": "मीटिंग शेड्यूल करें",
+  "events.cta.secondaryBtn": "इवेंट्स टीम से संपर्क करें",
+  "aboutUs.hero.title1": "जीवन को समृद्ध बनाना",
+  "aboutUs.hero.title2": "हमारे माध्यम से",
+  "aboutUs.hero.titleHighlight": "तकनीकी नवाचार",
+  "aboutUs.hero.description": "हम अपने सबसे साहसिक विचारों के साथ असाधारण डिजिटल अनुभव प्रदान कर रहे हैं जो सभी के लिए दुनिया को बेहतर बनाते हैं।",
+  "aboutUs.hero.getStarted": "शुरू करें",
+  "aboutUs.hero.contactUs": "संपर्क करें",
+  "aboutUs.hero.altTeam": "Cloud Nexus टीम नवाचार करती हुई",
+  "aboutUs.partner.title1": "आपका एंड-टू-एंड",
+  "aboutUs.partner.titleHighlight": "AI-संचालित सॉफ्टवेयर विकास",
+  "aboutUs.partner.title2": "और डिजिटल ट्रांसफॉर्मेशन पार्टनर",
+  "aboutUs.partner.description": "सामूहिक ज्ञान और तकनीक-संचालित कौशल की शक्ति का अनुभव करने के लिए हमारी साझेदारी अपनाएं।",
+  "aboutUs.about.title": "के बारे में",
+  "aboutUs.about.titleHighlight": "CloudNexus",
+  "aboutUs.about.description1": "CloudNexus में, हम सिर्फ एक IT कंसल्टिंग कंपनी नहीं हैं - हम नवप्रवर्तक, समस्या-समाधानकर्ता और डिजिटल भविष्य के वास्तुकार हैं।",
+  "aboutUs.about.description2": "हमारी साझेदारी और उद्योग अनुभव के साथ, हम व्यापार परिवर्तन लाने के लिए एक मजबूत इकोसिस्टम बना रहे हैं।",
+  "aboutUs.about.altTeam": "नवाचारी समाधानों पर सहयोग करती टीम",
+  "aboutUs.about.overlayCloud": "क्लाउड ट्रांसफॉर्मेशन",
+  "aboutUs.about.overlayAI": "AI और ऑटोमेशन",
+  "aboutUs.about.overlayEngineering": "सॉफ्टवेयर इंजीनियरिंग",
+  "aboutUs.about.overlayCyber": "साइबर सुरक्षा",
+  "aboutUs.values.titleHighlight": "हमारे",
+  "aboutUs.values.title": "मूल्य",
+  "aboutUs.values.description": "हमारे मूल मूल्य हमारे व्यक्तिगत चरित्रों द्वारा उनके कार्य पैटर्न और व्यावसायिक निर्णयों के माध्यम से परिभाषित होते हैं।",
+  "aboutUs.workforce.title1": "हमारे",
+  "aboutUs.workforce.titleHighlight": "दूरदर्शी",
+  "aboutUs.workforce.title2": "में मदद करते हैं",
+  "aboutUs.workforce.title3": "प्रक्रिया को तेज करने",
+  "aboutUs.workforce.description": "हमारे उत्साही कार्यबल और अनुभवी इंजीनियरों के साथ, हम दुनिया भर के व्यवसायों की सेवा के लिए तेज गति से उत्कृष्ट समाधान बनाते हैं।",
+  "aboutUs.workforce.teamMembers": "टीम सदस्य",
+  "aboutUs.workforce.statTeam": "टीम सदस्य",
+  "aboutUs.workforce.statIndustries": "उद्योग",
+  "aboutUs.workforce.statSupport": "सहायता",
+  "aboutUs.reasons.title": "के लिए ठोस कारण",
+  "aboutUs.reasons.titleHighlight": "हमारे साथ साझेदारी",
+  "aboutUs.reasons.description": "हम एक बदलती दुनिया में अपनी उत्कृष्ट कार्य प्रतिबद्धता के साथ बाजार का सर्वोच्च ध्यान प्राप्त करते हैं।",
+  "aboutUs.reasons.altTeam": "IT समाधान प्रदान करती पेशेवर टीम",
+  "aboutUs.reasons.statProjects": "प्रोजेक्ट डिलीवर किए",
+  "aboutUs.reasons.statSatisfaction": "क्लाइंट संतुष्टि",
+  "aboutUs.reasons.statSupport": "सहायता उपलब्ध",
+  "aboutUs.offices.titleHighlight": "हमारे",
+  "aboutUs.offices.title": "कार्यालय",
+  "aboutUs.offices.description": "भारत भर में रणनीतिक रूप से स्थित - हमारे विकास केंद्रों से विश्व स्तरीय IT समाधान प्रदान करते हुए।",
+  "aboutUs.cta.title1": "कुछ बनाने के लिए तैयार",
+  "aboutUs.cta.titleHighlight": "असाधारण?",
+  "aboutUs.cta.description": "चाहे आप अपना MVP बनाने वाला स्टार्टअप हों या अपने स्टैक को आधुनिक बनाने वाला एंटरप्राइज़ - हम आपके महत्वाकांक्षी विचारों को वास्तविकता में बदलने के लिए यहाँ हैं।",
+  "aboutUs.cta.bookConsultation": "मुफ्त परामर्श बुक करें",
+  "aboutUs.cta.contactUs": "संपर्क करें",
+  "overview.vision.title": "हमारा उद्देश्य",
+  "overview.vision.titleHighlight": "और दिशा",
+  "overview.vision.tabVision": "हमारी दृष्टि",
+  "overview.vision.tabMission": "हमारा मिशन",
+  "overview.vision.ourVision": "हमारी दृष्टि",
+  "overview.vision.visionText": "IT समाधान और डिजिटल प्रोडक्ट इनोवेशन में वैश्विक नेता बनना, व्यवसायों को प्रगतिशील तकनीक से सशक्त बनाना जो दक्षता, स्केलेबिलिटी और विकास को बढ़ाती है। CloudNexus में, हम एक ऐसे भविष्य की कल्पना करते हैं जहाँ व्यवसाय स्मार्ट, स्वचालित और भविष्य-तैयार समाधानों का लाभ उठाकर फलते-फूलते हैं।",
+  "overview.vision.altVision": "भविष्यवादी तकनीक और डिजिटल नवाचार",
+  "overview.vision.ourMission": "हमारा मिशन",
+  "overview.vision.missionSubtitle": "IT परिदृश्य को फिर से परिभाषित करना",
+  "overview.vision.altMission": "डिजिटल नवाचार पर साथ मिलकर काम करती टीम",
+  "overview.hero.title": "नवप्रवर्तक, समस्या-समाधानकर्ता और",
+  "overview.hero.titleHighlight": "डिजिटल भविष्य के वास्तुकार",
+  "overview.hero.description": "CloudNexus में, हम सिर्फ एक IT कंसल्टिंग कंपनी नहीं हैं। हम प्रगतिशील IT समाधान, क्लाउड ट्रांसफॉर्मेशन, AI-संचालित ऑटोमेशन और एंटरप्राइज़ कंसल्टिंग में विशेषज्ञ हैं, जो व्यवसायों को निरंतर विकसित होते तकनीकी परिदृश्य में फलने-फूलने में मदद करते हैं।",
+  "overview.hero.getStarted": "शुरू करें",
+  "overview.hero.learnAboutUs": "हमारे बारे में जानें",
+  "overview.hero.altTeam": "डिजिटल समाधानों पर सहयोग करती टीम",
+  "overview.hero.stat1Val": "200+",
+  "overview.hero.stat1Label": "प्रोजेक्ट्स",
+  "overview.hero.stat2Val": "1+",
+  "overview.hero.stat2Label": "वर्ष",
+  "overview.hero.stat3Val": "90+",
+  "overview.hero.stat3Label": "टीमें",
+  "overview.whoWeAre.title": "हम कौन हैं",
+  "overview.whoWeAre.description1": "CloudNexus में, हम सिर्फ एक IT कंसल्टिंग कंपनी नहीं हैं - हम नवप्रवर्तक, समस्या-समाधानकर्ता और डिजिटल भविष्य के वास्तुकार हैं। हम प्रगतिशील IT समाधान, क्लाउड ट्रांसफॉर्मेशन, AI-संचालित ऑटोमेशन और एंटरप्राइज़ कंसल्टिंग में विशेषज्ञ हैं, जो व्यवसायों को निरंतर विकसित होते तकनीकी परिदृश्य में फलने-फूलने में मदद करते हैं।",
+  "overview.whoWeAre.description2": "हमारी तकनीकी विशेषज्ञों, रणनीतिकारों और समस्या-समाधानकर्ताओं की टीम क्लाइंट्स के साथ मिलकर ऐसे अनुकूलित समाधान डिज़ाइन करती है जो दक्षता बढ़ाते हैं, विकास को गति देते हैं और ऑपरेशन्स को भविष्य-तैयार बनाते हैं। चाहे क्लाउड माइग्रेशन हो, सॉफ्टवेयर डेवलपमेंट, ऑटोमेशन या साइबर सुरक्षा - हम सुनिश्चित करते हैं कि आपका IT इकोसिस्टम चुस्त, सुरक्षित और सफलता के लिए अनुकूलित हो।",
+  "overview.whoWeAre.altTeam": "टीम रणनीति और नवाचार",
+  "overview.whoWeAre.capCloud": "क्लाउड ट्रांसफॉर्मेशन",
+  "overview.whoWeAre.capAI": "AI और ऑटोमेशन",
+  "overview.whoWeAre.capSoftware": "सॉफ्टवेयर डेवलपमेंट",
+  "overview.whoWeAre.capCyber": "साइबर सुरक्षा",
+  "overview.services.title": "हमारी",
+  "overview.services.titleHighlight": "सेवाएं",
+  "overview.services.description": "आपके व्यवसाय के चरण और विकास महत्वाकांक्षाओं के अनुरूप एंड-टू-एंड तकनीकी क्षमताएं।",
+  "overview.whyCloudNexus.title": "क्यों",
+  "overview.whyCloudNexus.titleHighlight": "CloudNexus?",
+  "overview.whyCloudNexus.description": "सही तकनीकी साझेदार चुनना व्यापार की सफलता के लिए महत्वपूर्ण है। हम सिर्फ IT समाधान प्रदान नहीं करते - हम ऐसे परिवर्तनकारी अनुभव बनाते हैं जो नवाचार, दक्षता और विकास को गति देते हैं।",
+  "overview.whyCloudNexus.altTeam": "IT समाधान प्रदान करती पेशेवर टीम",
+  "overview.whyCloudNexus.stat1Val": "200+",
+  "overview.whyCloudNexus.stat1Label": "प्रोजेक्ट डिलीवर किए",
+  "overview.whyCloudNexus.stat2Val": "1+",
+  "overview.whyCloudNexus.stat2Label": "उत्कृष्टता का वर्ष",
+  "overview.whyCloudNexus.stat3Val": "90+",
+  "overview.whyCloudNexus.stat3Label": "स्केलेबल टीमें",
+  "overview.offices.title": "हमारे",
+  "overview.offices.titleHighlight": "कार्यालय",
+  "overview.offices.description": "राजस्थान, भारत में रणनीतिक रूप से स्थित - हमारे विकास केंद्रों से विश्व स्तरीय IT समाधान प्रदान करते हुए।",
+  "overview.growth.title": "हमारी विकास",
+  "overview.growth.titleHighlight": "यात्रा",
+  "overview.growth.description": "एक विचार के बीज से तकनीक में बढ़ती ताकत तक - हर मील का पत्थर हमारी दृष्टि की ओर एक कदम है।",
+  "overview.growth.altPlant": "कंपनी की वृद्धि का प्रतीक बढ़ता हुआ पौधा",
+  "overview.growth.step1Date": "19 जनवरी 2025",
+  "overview.growth.step1Title": "बीज बोया गया",
+  "overview.growth.step1Desc": "Cloud Nexus की स्थापना एक स्पष्ट मिशन के साथ हुई - व्यावसायिक आवश्यकताओं और तकनीक के बीच की खाई को पाटना। जो एक छोटी टीम के बड़े सपनों से शुरू हुआ, वह कुछ सार्थक की नींव बन गया।",
+  "overview.growth.step2Date": "मध्य 2025",
+  "overview.growth.step2Title": "जड़ें जमाना और बढ़ना",
+  "overview.growth.step2Desc": "हमने अपनी टीम का विस्तार किया, अपने पहले वैश्विक क्लाइंट्स को ऑनबोर्ड किया, और 30+ सफल प्रोजेक्ट डिलीवर किए। मोबाइल, वेब, क्लाउड और AI में हमारी विशेषज्ञता को उद्योगों में पहचान मिलने लगी।",
+  "overview.growth.step3Date": "प्रारंभिक 2026",
+  "overview.growth.step3Title": "शाखाएं फैलाना",
+  "overview.growth.step3Desc": "15+ उद्योगों में 50+ प्रोजेक्ट डिलीवर करने के बाद, हमने GITEX जैसे वैश्विक तकनीकी सम्मेलनों में भाग लेना शुरू किया, समर्पित AI/ML क्षमताएं बनाईं, और अपने सेवा पोर्टफोलियो का महत्वपूर्ण विस्तार किया।",
+  "overview.growth.step4Date": "आज और उससे आगे",
+  "overview.growth.step4Title": "नई ऊंचाइयों तक पहुंचना",
+  "overview.growth.step4Desc": "अब हम दुनिया भर के व्यवसायों द्वारा विश्वसनीय एक पूर्ण-सेवा तकनीकी कंपनी हैं। हमारी यात्रा अभी शुरू हुई है - और आगे बढ़ने, साहसिक नवाचार करने और स्थायी प्रभाव बनाने की योजनाओं के साथ।",
+  "overview.cta.title": "नवाचार के लिए तैयार?",
+  "overview.cta.titleHighlight": "आइए साथ मिलकर बनाएं",
+  "overview.cta.description": "500+ कंपनियों से जुड़ें जो वास्तविक व्यावसायिक परिणाम देने वाले तकनीकी समाधानों के लिए CloudNexus पर भरोसा करती हैं।",
+  "overview.cta.bookConsultation": "मुफ्त परामर्श बुक करें",
+  "overview.cta.viewWork": "हमारा काम देखें",
+  "team.hero.title": "के पीछे के लोग",
+  "team.hero.titleHighlight": "CloudNexus",
+  "team.hero.description": "इंजीनियरों, डिज़ाइनरों और रणनीतिकारों की एक प्रतिभाशाली टीम - एक समय में एक प्रोजेक्ट, तकनीक का भविष्य बना रही है।",
+  "team.hero.stat1Num": "90+",
+  "team.hero.stat1Label": "टीम सदस्य",
+  "team.hero.stat2Num": "4",
+  "team.hero.stat2Label": "विशेष दस्ते",
+  "team.hero.stat3Num": "3",
+  "team.hero.stat3Label": "कार्यालय स्थान",
+  "team.hero.stat4Num": "10+",
+  "team.hero.stat4Label": "डिलीवरी के वर्ष",
+  "team.leadership.titleHighlight": "नेतृत्व",
+  "team.leadership.title": "टीम",
+  "team.leadership.description": "CloudNexus की दृष्टि, रणनीति और निष्पादन के पीछे की प्रेरक शक्ति।",
+  "team.squads.titleHighlight": "इंजीनियरिंग",
+  "team.squads.title": "दस्ते",
+  "team.squads.description": "DevOps, डेवलपमेंट और डेटा में उत्कृष्टता प्रदान करने वाली विशेष टीमें।",
+  "team.squads.teamLabel": "टीम",
+  "team.squads.division": "डिवीज़न",
+  "team.squads.techStack": "तकनीकी स्टैक",
+  "team.squads.stat1Num": "25+",
+  "team.squads.stat1Label": "सदस्य",
+  "team.squads.stat2Num": "50+",
+  "team.squads.stat2Label": "प्रोजेक्ट्स",
+  "team.techStaff.titleHighlight": "तकनीकी स्टाफ",
+  "team.techStaff.title": "में शामिल हैं",
+  "team.techStaff.description": "CloudNexus में, हमारा तकनीकी स्टाफ AI विशेषज्ञता, नवाचार और विविध प्रतिभा को मिलाकर बुद्धिमान, भविष्य-तैयार समाधान प्रदान करता है जो अपेक्षाओं से अधिक हैं।",
+  "team.techStaff.aiMl": "AI और मशीन लर्निंग इंजीनियर",
+  "team.techStaff.softwareArchitects": "सॉफ्टवेयर आर्किटेक्ट्स",
+  "team.techStaff.fullStack": "फुल-स्टैक डेवलपर्स",
+  "team.techStaff.appWeb": "ऐप और वेब डेवलपर्स",
+  "team.techStaff.networkCloud": "नेटवर्क और क्लाउड इंजीनियर",
+  "team.techStaff.qa": "गुणवत्ता आश्वासन विशेषज्ञ",
+  "team.techStaff.devops": "DevOps इंजीनियर",
+  "team.techStaff.dataEngineers": "डेटा इंजीनियर और विश्लेषक",
+  "team.techStaff.uiux": "UI/UX डिज़ाइनर",
+  "team.techStaff.seoDigital": "SEO और डिजिटल मार्केटिंग विशेषज्ञ",
+  "team.techStaff.projectManagers": "प्रोजेक्ट मैनेजर",
+  "team.techStaff.technicalWriters": "तकनीकी लेखक",
+  "team.culture.titleHighlight": "हमारी",
+  "team.culture.title": "संस्कृति",
+  "team.culture.description": "वह जो CloudNexus को अपना करियर बनाने और पेशेवर रूप से बढ़ने के लिए एक शानदार जगह बनाता है।",
+  "team.cta.title": "हमारी टीम से जुड़ना चाहते हैं?",
+  "team.cta.description": "हम हमेशा प्रतिभाशाली इंजीनियरों, डिज़ाइनरों और रणनीतिकारों की तलाश में रहते हैं जो भविष्य बनाने के लिए उत्साही हैं।",
+  "team.cta.getInTouch": "संपर्क करें",
+  "processMethodology.hero.title": "हमारी प्रक्रिया और",
+  "processMethodology.hero.titleHighlight": "विकास कार्यप्रणाली",
+  "processMethodology.hero.description": "सॉफ्टवेयर विकास के लिए हमारे सरल, स्मार्ट और एजाइल दृष्टिकोण का परिचय। खोज से तैनाती तक - हर कदम पारदर्शी, सहयोगी और परिणाम-संचालित है।",
+  "processMethodology.hero.startProject": "अपना प्रोजेक्ट शुरू करें",
+  "processMethodology.hero.contactUs": "संपर्क करें",
+  "processMethodology.agile.title": "चपलता से",
+  "processMethodology.agile.titleHighlight": "कार्रवाई",
+  "processMethodology.agile.description": "हम पारदर्शी संवाद को प्रोत्साहित करने, सहयोग को बढ़ावा देने, अनिश्चितता से निपटने, परिवर्तन को अपनाने और निरंतर नया मूल्य प्रदान करने के लिए एजाइल कार्यप्रणाली अपनाते हैं।",
+  "processMethodology.agile.subDescription": "सब कुछ - विकास कार्य, जानकारी और निवेश - हर पुनरावृत्ति में मापने योग्य रिटर्न के साथ एकीकृत तरीके से आगे बढ़ता है।",
+  "processMethodology.agile.transparentComm.title": "पारदर्शी संवाद",
+  "processMethodology.agile.transparentComm.desc": "डेली स्टैंडअप, स्प्रिंट रिव्यू और ओपन Slack चैनल। आपको हमेशा पता रहता है कि आपके प्रोजेक्ट में क्या हो रहा है।",
+  "processMethodology.agile.iterativeDev.title": "पुनरावृत्तीय विकास",
+  "processMethodology.agile.iterativeDev.desc": "नियमित डेमो के साथ 2-सप्ताह के स्प्रिंट। आप प्रगति देखते हैं, फीडबैक देते हैं, और लगातार दिशा तय करते हैं।",
+  "processMethodology.agile.goalDriven.title": "लक्ष्य-संचालित निष्पादन",
+  "processMethodology.agile.goalDriven.desc": "हर स्प्रिंट के स्पष्ट उद्देश्य व्यावसायिक परिणामों से जुड़े होते हैं। हम सिर्फ फीचर्स नहीं बनाते - हम परिणाम देते हैं।",
+  "processMethodology.agile.measurableProgress.title": "मापने योग्य प्रगति",
+  "processMethodology.agile.measurableProgress.desc": "वेलोसिटी ट्रैकिंग, बर्नडाउन चार्ट और नियमित रिपोर्ट। प्रोजेक्ट की स्थिति और समयसीमा पर डेटा-संचालित अंतर्दृष्टि।",
+  "processMethodology.execution.title": "प्रोजेक्ट",
+  "processMethodology.execution.titleHighlight": "निष्पादन",
+  "processMethodology.execution.titleSuffix": "संरचना",
+  "processMethodology.execution.description": "हमारी उच्च-प्रदर्शन क्रॉस-फंक्शनल टीम हर कदम पर आपका ध्यान रखती है। हम आपकी आवश्यकताओं के अनुसार समायोजित करते हैं और ऐसा वृद्धिशील मूल्य प्रदान करते हैं जो आपकी दृष्टि को अपनाता है।",
+  "processMethodology.execution.phase": "चरण",
+  "processMethodology.deliverables.title": "हमारे",
+  "processMethodology.deliverables.titleHighlight": "डिलीवरेबल्स",
+  "processMethodology.deliverables.description": "जिस क्षण से हम आपका प्रोजेक्ट लेते हैं, हमारा कर्तव्य शुरू होता है। हम आपको विकास चरण के हर पहलू के बारे में सूचित रखते हैं - पारदर्शी, व्यवस्थित और मानकीकृत।",
+  "processMethodology.tech.titleHighlight": "उपकरण और प्रौद्योगिकियाँ",
+  "processMethodology.tech.title": "जो हम उपयोग करते हैं",
+  "processMethodology.tech.description": "हम अत्यधिक स्केलेबल, इंटरैक्टिव और नवाचारी समाधान प्रदान करने के लिए ट्रेंडिंग तकनीकों का उपयोग करते हैं जो उपकरणों, फ्रेमवर्क और प्लेटफॉर्म के एक मजबूत सूट द्वारा समर्थित हैं।",
+  "processMethodology.models.title": "लचीले",
+  "processMethodology.models.titleHighlight": "कार्य मॉडल",
+  "processMethodology.models.description": "हमारी इंजीनियरिंग टीम विभिन्न एंगेजमेंट मॉडल में सेवाएं प्रदान करती है जो आपकी आवश्यकताओं के अनुरूप सबसे कुशल तरीके से वांछित उत्पाद लॉन्च करने में सहायक हैं।",
+  "processMethodology.security.title": "आपके विचार हमेशा",
+  "processMethodology.security.titleHighlight": "सुरक्षित",
+  "processMethodology.security.titleSuffix": "हमारे पास",
+  "processMethodology.security.description": "आपके विचारों, बौद्धिक संपदा और व्यापार रहस्यों की सुरक्षा हमारी सर्वोच्च प्राथमिकता है। हम सुनिश्चित करते हैं कि आपकी जानकारी कभी अनधिकृत पक्षों तक न पहुंचे।",
+  "processMethodology.cta.title": "कोई प्रोजेक्ट मन में है?",
+  "processMethodology.cta.titleHighlight": "आइए साथ मिलकर बनाएं",
+  "processMethodology.cta.description": "हमें अपने विचार के बारे में बताएं और हम आर्किटेक्चर सिफारिशों, समयसीमा और लागत अनुमान के साथ एक विस्तृत प्रस्ताव प्रदान करेंगे - पूरी तरह मुफ्त।",
+  "processMethodology.cta.bookConsultation": "मुफ्त परामर्श बुक करें",
+  "processMethodology.cta.contactUs": "संपर्क करें",
+  "infra.hero.title": "Cloud Nexus",
+  "infra.hero.titleHighlight": "इन्फ्रास्ट्रक्चर",
+  "infra.hero.description": "हमारा सोच-समझकर डिज़ाइन किया गया कार्यक्षेत्र नवाचार, सहयोग और उच्च-प्रदर्शन डिलीवरी के लिए बनाया गया है। एक आधुनिक तकनीकी केंद्र जहाँ हर दिन विश्व-स्तरीय सॉफ्टवेयर बनाया जाता है।",
+  "infra.hero.cta": "संपर्क करें",
+  "infra.hero.ctaSecondary": "Cloud Nexus में जीवन",
+  "infra.gallery.title": "हमारे अंदर",
+  "infra.gallery.titleHighlight": "कार्यालय",
+  "infra.gallery.description": "Cloud Nexus में हर दिन नवाचार कहाँ होता है, इसकी एक झलक।",
+  "infra.location.headquarters": "मुख्यालय",
+  "infra.location.highlightsTitle": "कार्यालय की विशेषताएं",
+  "infra.facilities.title": "विश्व-स्तरीय",
+  "infra.facilities.titleHighlight": "सुविधाएं",
+  "infra.facilities.description": "हमारा कार्यालय उन सभी चीज़ों से सुसज्जित है जो हमारी टीम को एक आरामदायक, सुरक्षित और प्रेरणादायक वातावरण में असाधारण कार्य करने के लिए चाहिए।",
+  "infra.workspace.title": "हमारा",
+  "infra.workspace.titleHighlight": "कार्यक्षेत्र",
+  "infra.workspace.description": "एक ऐसा वातावरण बनाने के लिए सावधानी से डिज़ाइन किया गया जहाँ प्रतिभा फलती-फूलती है, विचार बहते हैं, और शानदार उत्पाद बनाए जाते हैं।",
+  "infra.cta.title": "क्या आपके मन में कोई प्रोजेक्ट है?",
+  "infra.cta.subtitle": "विशेषज्ञों से बात करें।",
+  "infra.cta.description": "आइए चर्चा करें कि Cloud Nexus आपके अगले बड़े विचार को बनाने, बढ़ाने और डिलीवर करने में कैसे मदद कर सकता है।",
+  "infra.cta.primaryBtn": "संपर्क करें",
+  "infra.cta.secondaryBtn": "हमसे संपर्क करें",
+  "companyHub.hero.title.line1": "भविष्य का निर्माण,",
+  "companyHub.hero.title.highlight": "एक समाधान",
+  "companyHub.hero.title.line2": "एक समय में",
+  "companyHub.hero.description": "Cloud Nexus एक तकनीकी कंपनी है जो विचारों को शक्तिशाली डिजिटल उत्पादों में बदलती है। जनवरी 2025 में स्थापित, हम प्रतिभाशाली इंजीनियरों, डिज़ाइनरों और रणनीतिकारों को असाधारण सॉफ्टवेयर समाधान प्रदान करने के लिए एक साथ लाते हैं।",
+  "companyHub.hero.cta.learnAbout": "हमारे बारे में जानें",
+  "companyHub.hero.cta.getInTouch": "संपर्क करें",
+  "companyHub.explore.title": "खोजें",
+  "companyHub.explore.description": "जानें कि हम कौन हैं, कैसे काम करते हैं, और क्या हमें आपके व्यवसाय के लिए सही तकनीकी साझेदार बनाता है।",
+  "companyHub.explore.cardCta": "खोजें",
+  "companyHub.values.title": "हमारे मूल",
+  "companyHub.values.titleHighlight": "मूल्य",
+  "companyHub.values.description": "ये सिद्धांत हमारे हर निर्णय, हर उत्पाद और हर रिश्ते का मार्गदर्शन करते हैं।",
+  "companyHub.growth.title": "हमारी विकास",
+  "companyHub.growth.titleHighlight": "यात्रा",
+  "companyHub.growth.description": "एक विचार के बीज से तकनीक में बढ़ती ताकत तक - हर मील का पत्थर हमारी दृष्टि की ओर एक कदम है।",
+  "companyHub.growth.step1.date": "19 जनवरी 2025",
+  "companyHub.growth.step1.title": "बीज बोया गया",
+  "companyHub.growth.step1.desc": "Cloud Nexus की स्थापना एक स्पष्ट मिशन के साथ हुई - व्यावसायिक आवश्यकताओं और तकनीक के बीच की खाई को पाटना। जो एक छोटी टीम के बड़े सपनों से शुरू हुआ, वह कुछ सार्थक की नींव बन गया।",
+  "companyHub.growth.step2.date": "मध्य 2025",
+  "companyHub.growth.step2.title": "जड़ें जमाना और बढ़ना",
+  "companyHub.growth.step2.desc": "हमने अपनी टीम का विस्तार किया, अपने पहले वैश्विक क्लाइंट्स को ऑनबोर्ड किया, और 30+ सफल प्रोजेक्ट डिलीवर किए। मोबाइल, वेब, क्लाउड और AI में हमारी विशेषज्ञता को उद्योगों में पहचान मिलने लगी।",
+  "companyHub.growth.step3.date": "प्रारंभिक 2026",
+  "companyHub.growth.step3.title": "शाखाएं फैलाना",
+  "companyHub.growth.step3.desc": "15+ उद्योगों में 50+ प्रोजेक्ट डिलीवर करने के बाद, हमने GITEX जैसे वैश्विक तकनीकी सम्मेलनों में भाग लेना शुरू किया, समर्पित AI/ML क्षमताएं बनाईं, और अपने सेवा पोर्टफोलियो का महत्वपूर्ण विस्तार किया।",
+  "companyHub.growth.step4.date": "आज और उससे आगे",
+  "companyHub.growth.step4.title": "नई ऊंचाइयों तक पहुंचना",
+  "companyHub.growth.step4.desc": "अब हम दुनिया भर के व्यवसायों द्वारा विश्वसनीय एक पूर्ण-सेवा तकनीकी कंपनी हैं। हमारी यात्रा अभी शुरू हुई है - और आगे बढ़ने, साहसिक नवाचार करने और स्थायी प्रभाव बनाने की योजनाओं के साथ।",
+  "companyHub.cta.title": "आइए कुछ बनाएं",
+  "companyHub.cta.titleHighlight": "असाधारण",
+  "companyHub.cta.description": "चाहे आप एक साहसिक विचार वाला स्टार्टअप हों या डिजिटल ट्रांसफॉर्मेशन चाहने वाला एंटरप्राइज़ - हम इसे साकार करने के लिए यहाँ हैं।",
+  "companyHub.cta.bookConsultation": "मुफ्त परामर्श बुक करें",
+  "companyHub.cta.contactUs": "संपर्क करें",
+  "life": {
+    "gallery": {
+      "ariaLabel": "संस्कृति की झलकियाँ"
+    },
+    "hero": {
+      "title": "जीवन",
+      "subtitle": "Cloud Nexus",
+      "description": "जहाँ प्रतिभा संस्कृति से मिलती है। हम ऐसे प्रोडक्ट्स बनाते हैं जिन पर हमें गर्व है - उन लोगों के साथ जिनकी हम सच में परवाह करते हैं।",
+      "exploreCareers": "करियर खोजें",
+      "getInTouch": "संपर्क करें"
+    },
+    "stats": {
+      "teamMembers": "टीम सदस्य",
+      "dayWorkWeek": "दिन कार्य सप्ताह",
+      "countriesServed": "देशों में सेवा",
+      "womenInTech": "टेक में महिलाएं"
+    },
+    "moments": {
+      "title": "की धुन का जश्न",
+      "titleHighlight": "पलों",
+      "description": "हंसी और खुशी की बातें संगीत की धुन के साथ गूंजीं। देखें कैसे हम Cloud Nexus में एक टीम, एक सपना मिलकर सफलता बना रहे हैं।",
+      "viewAllPhotos": "सभी फोटो देखें"
+    },
+    "purpose": {
+      "title": "प्रेरित",
+      "titleHighlight": "उद्देश्य",
+      "description": "पांच स्तंभ जो हम जो भी बनाते, भेजते और समर्थन करते हैं, उसे मार्गदर्शन देते हैं।"
+    },
+    "join": {
+      "title": "आपको Cloud Nexus क्यों जॉइन करना चाहिए?",
+      "description": "Cloud Nexus वह जगह है जहाँ आप सीख सकते हैं, खोज सकते हैं, और अपनी कला और आत्मविश्वास बढ़ा सकते हैं। हम सहानुभूति, गर्मजोशी और देखभाल के साथ कार्य संस्कृति बुनते हैं।"
+    },
+    "women": {
+      "altImage": "Cloud Nexus में महिला सशक्तिकरण",
+      "badgeLabel": "टेक भूमिकाओं में महिलाएं",
+      "title": "महिलाओं को सशक्त बनाना हमारा प्रमुख लक्ष्य है",
+      "description1": "हम नेतृत्व दृश्यता, मनोवैज्ञानिक सुरक्षा और विकास पथों में निवेश करते हैं ताकि महिलाएं इंजीनियरिंग, प्रोडक्ट और ऑपरेशन्स में उत्कृष्ट हो सकें।",
+      "description2": "मेंटरशिप सर्कल से लेकर लचीली नीतियों और उत्पीड़न के लिए शून्य-सहिष्णुता तक, हम एक ऐसा कार्यस्थल डिज़ाइन करते हैं जहाँ हर कोई अपने पूर्ण स्वरूप में काम कर सके।",
+      "point1": "भर्ती और पदोन्नति में समान अवसर",
+      "point2": "नेतृत्व प्रायोजन और मेंटरशिप कार्यक्रम",
+      "point3": "सुरक्षित रिपोर्टिंग और सहायक HR प्रथाएं"
+    },
+    "recruit": {
+      "title": "हम हमेशा उत्साही लोगों की तलाश में रहते हैं",
+      "description": "Cloud Nexus में, हम प्रेरित व्यक्तियों की ऊर्जा पर फलते-फूलते हैं। अगर आप सार्थक प्रभाव डालने के लिए उत्सुक हैं, तो हम आपका स्वागत करेंगे।",
+      "applyNow": "अभी आवेदन करें"
+    },
+    "perks": {
+      "title": "Cloud Nexus में होने के फायदे",
+      "description": "आराम, सुरक्षा और लचीलापन - इसी तरह हम साथ मिलकर बढ़ते हैं।"
+    },
+    "diversity": {
+      "title": "विविधता",
+      "titleHighlight": "Cloud Nexus"
+    },
+    "cta": {
+      "title": "का हिस्सा बनने के लिए तैयार हैं",
+      "titleHighlight": "कहानी",
+      "description": "अपनी जिज्ञासा, अपनी कला और अपनी दयालुता लाइए। हम ऐसे प्रोडक्ट्स और संस्कृति बना रहे हैं जिनके लिए हर दिन आना सार्थक हो।",
+      "applyNow": "अभी आवेदन करें",
+      "talkToUs": "हमसे बात करें"
+    }
+  },
+  "events": {
+    "hero": {
+      "title": "जहाँ हम",
+      "titleHighlight": "जुड़ते हैं",
+      "titleLine2": "सीखते और नवाचार करते हैं",
+      "description": "वैश्विक तकनीकी सम्मेलनों से लेकर व्यावहारिक कार्यशालाओं तक - जानें कि Cloud Nexus कहाँ अंतर्दृष्टि साझा कर रहा है और प्रौद्योगिकी का भविष्य बना रहा है।",
+      "cta": "इवेंट्स में हमसे मिलें",
+      "ctaSecondary": "शेड्यूल देखें"
+    },
+    "featured": {
+      "title": "प्रमुख",
+      "titleHighlight": "इवेंट्स",
+      "description": "विश्व स्तरीय तकनीकी सम्मेलन जहाँ Cloud Nexus नवाचार प्रस्तुत करता है और उद्योग के नेताओं से जुड़ता है।",
+      "reserveSpot": "अपनी जगह आरक्षित करें"
+    },
+    "upcoming": {
+      "title": "आगामी",
+      "titleHighlight": "शेड्यूल",
+      "description": "वेबिनार, कार्यशालाएं, मीटअप्स और हैकाथॉन - ऑनलाइन या व्यक्तिगत रूप से हमसे जुड़ें।",
+      "register": "अभी रजिस्टर करें"
+    },
+    "past": {
+      "title": "पिछले",
+      "titleHighlight": "हाइलाइट्स",
+      "description": "एक नज़र पीछे - ज्ञान साझा करना, साझेदारी बनाना और प्रभाव डालना।"
+    },
+    "whyAttend": {
+      "title": "हमारे क्यों आएं",
+      "titleHighlight": "इवेंट्स",
+      "description": "चाहे आप डेवलपर हों, स्टार्टअप संस्थापक हों या एंटरप्राइज़ लीडर - हमारे इवेंट्स कार्रवाई योग्य अंतर्दृष्टि और व्यावहारिक सीखने के लिए डिज़ाइन किए गए हैं।"
+    },
+    "cta": {
+      "title": "अगले में मिलते हैं",
+      "titleHighlight": "बड़ा इवेंट",
+      "description": "सहयोग करना चाहते हैं, प्रायोजित करना चाहते हैं, या बस नमस्ते कहना चाहते हैं? हमारी इवेंट्स टीम से संपर्क करें।",
+      "primaryBtn": "मीटिंग शेड्यूल करें",
+      "secondaryBtn": "इवेंट्स टीम से संपर्क करें"
+    }
+  },
+  "aboutUs": {
+    "workforce": {
+      "teamMembers": "टीम सदस्य",
+      "title1": "हमारे",
+      "titleHighlight": "दूरदर्शी",
+      "title2": "में मदद करते हैं",
+      "title3": "प्रक्रिया को तेज करने",
+      "description": "हमारे उत्साही कार्यबल और अनुभवी इंजीनियरों के साथ, हम दुनिया भर के व्यवसायों की सेवा के लिए तेज गति से उत्कृष्ट समाधान बनाते हैं।",
+      "statTeam": "टीम सदस्य",
+      "statIndustries": "उद्योग",
+      "statSupport": "सहायता"
+    },
+    "hero": {
+      "title1": "जीवन को समृद्ध बनाना",
+      "title2": "हमारे माध्यम से",
+      "titleHighlight": "तकनीकी नवाचार",
+      "description": "हम अपने सबसे साहसिक विचारों के साथ असाधारण डिजिटल अनुभव प्रदान कर रहे हैं जो सभी के लिए दुनिया को बेहतर बनाते हैं।",
+      "getStarted": "शुरू करें",
+      "contactUs": "संपर्क करें",
+      "altTeam": "Cloud Nexus टीम नवाचार करती हुई"
+    },
+    "partner": {
+      "title1": "आपका एंड-टू-एंड",
+      "titleHighlight": "AI-संचालित सॉफ्टवेयर विकास",
+      "title2": "और डिजिटल ट्रांसफॉर्मेशन पार्टनर",
+      "description": "सामूहिक ज्ञान और तकनीक-संचालित कौशल की शक्ति का अनुभव करने के लिए हमारी साझेदारी अपनाएं।"
+    },
+    "about": {
+      "title": "के बारे में",
+      "titleHighlight": "CloudNexus",
+      "description1": "CloudNexus में, हम सिर्फ एक IT कंसल्टिंग कंपनी नहीं हैं - हम नवप्रवर्तक, समस्या-समाधानकर्ता और डिजिटल भविष्य के वास्तुकार हैं।",
+      "description2": "हमारी साझेदारी और उद्योग अनुभव के साथ, हम व्यापार परिवर्तन लाने के लिए एक मजबूत इकोसिस्टम बना रहे हैं।",
+      "altTeam": "नवाचारी समाधानों पर सहयोग करती टीम",
+      "overlayCloud": "क्लाउड ट्रांसफॉर्मेशन",
+      "overlayAI": "AI और ऑटोमेशन",
+      "overlayEngineering": "सॉफ्टवेयर इंजीनियरिंग",
+      "overlayCyber": "साइबर सुरक्षा"
+    },
+    "values": {
+      "titleHighlight": "हमारे",
+      "title": "मूल्य",
+      "description": "हमारे मूल मूल्य हमारे व्यक्तिगत चरित्रों द्वारा उनके कार्य पैटर्न और व्यावसायिक निर्णयों के माध्यम से परिभाषित होते हैं।"
+    },
+    "reasons": {
+      "title": "के लिए ठोस कारण",
+      "titleHighlight": "हमारे साथ साझेदारी",
+      "description": "हम एक बदलती दुनिया में अपनी उत्कृष्ट कार्य प्रतिबद्धता के साथ बाजार का सर्वोच्च ध्यान प्राप्त करते हैं।",
+      "altTeam": "IT समाधान प्रदान करती पेशेवर टीम",
+      "statProjects": "प्रोजेक्ट डिलीवर किए",
+      "statSatisfaction": "क्लाइंट संतुष्टि",
+      "statSupport": "सहायता उपलब्ध"
+    },
+    "offices": {
+      "titleHighlight": "हमारे",
+      "title": "कार्यालय",
+      "description": "भारत भर में रणनीतिक रूप से स्थित - हमारे विकास केंद्रों से विश्व स्तरीय IT समाधान प्रदान करते हुए।"
+    },
+    "cta": {
+      "title1": "कुछ बनाने के लिए तैयार",
+      "titleHighlight": "असाधारण?",
+      "description": "चाहे आप अपना MVP बनाने वाला स्टार्टअप हों या अपने स्टैक को आधुनिक बनाने वाला एंटरप्राइज़ - हम यहाँ हैं।",
+      "bookConsultation": "मुफ्त परामर्श बुक करें",
+      "contactUs": "संपर्क करें"
+    }
+  },
+  "overview": {
+    "vision": {
+      "title": "हमारा उद्देश्य",
+      "titleHighlight": "और दिशा",
+      "tabVision": "हमारा विजन",
+      "tabMission": "हमारा मिशन",
+      "ourVision": "हमारा विजन",
+      "visionText": "IT समाधान और डिजिटल प्रोडक्ट इनोवेशन में वैश्विक नेता बनना, व्यवसायों को प्रगतिशील प्रौद्योगिकी से सशक्त बनाना।",
+      "altVision": "भविष्य की तकनीक और डिजिटल नवाचार",
+      "ourMission": "हमारा मिशन",
+      "missionSubtitle": "IT परिदृश्य को पुनर्परिभाषित करना",
+      "altMission": "डिजिटल नवाचार पर साथ काम करती टीम"
+    },
+    "hero": {
+      "title": "नवप्रवर्तक, समस्या-समाधानकर्ता और",
+      "titleHighlight": "डिजिटल भविष्य के वास्तुकार",
+      "description": "CloudNexus में, हम सिर्फ एक IT कंसल्टिंग कंपनी नहीं हैं। हम प्रगतिशील IT समाधान, क्लाउड ट्रांसफॉर्मेशन, AI-संचालित ऑटोमेशन और एंटरप्राइज़ कंसल्टिंग में विशेषज्ञ हैं।",
+      "getStarted": "शुरू करें",
+      "learnAboutUs": "हमारे बारे में जानें",
+      "altTeam": "डिजिटल समाधानों पर सहयोग करती टीम",
+      "stat1Val": "200+",
+      "stat1Label": "प्रोजेक्ट्स",
+      "stat2Val": "1+",
+      "stat2Label": "वर्ष",
+      "stat3Val": "90+",
+      "stat3Label": "टीमें"
+    },
+    "whoWeAre": {
+      "title": "हम कौन हैं",
+      "description1": "CloudNexus में, हम नवप्रवर्तक, समस्या-समाधानकर्ता और डिजिटल भविष्य के वास्तुकार हैं।",
+      "description2": "हमारी तकनीकी विशेषज्ञों, रणनीतिकारों की टीम ग्राहकों के साथ मिलकर अनुकूलित समाधान डिज़ाइन करती है।",
+      "altTeam": "टीम रणनीति और नवाचार",
+      "capCloud": "क्लाउड ट्रांसफॉर्मेशन",
+      "capAI": "AI और ऑटोमेशन",
+      "capSoftware": "सॉफ्टवेयर डेव",
+      "capCyber": "साइबर सुरक्षा"
+    },
+    "services": {
+      "title": "हमारी",
+      "titleHighlight": "सेवाएं",
+      "description": "आपके व्यवसाय के चरण और विकास की महत्वाकांक्षाओं के अनुरूप एंड-टू-एंड तकनीकी क्षमताएं।"
+    },
+    "whyCloudNexus": {
+      "title": "क्यों",
+      "titleHighlight": "CloudNexus?",
+      "description": "सही तकनीकी साझेदार चुनना व्यावसायिक सफलता के लिए महत्वपूर्ण है।",
+      "altTeam": "IT समाधान प्रदान करती पेशेवर टीम",
+      "stat1Val": "200+",
+      "stat1Label": "प्रोजेक्ट डिलीवर किए",
+      "stat2Val": "1+",
+      "stat2Label": "उत्कृष्टता का वर्ष",
+      "stat3Val": "90+",
+      "stat3Label": "स्केलेबल टीमें"
+    },
+    "offices": {
+      "title": "हमारे",
+      "titleHighlight": "कार्यालय",
+      "description": "राजस्थान, भारत में रणनीतिक रूप से स्थित - हमारे विकास केंद्रों से विश्व स्तरीय IT समाधान।"
+    },
+    "growth": {
+      "title": "हमारी विकास",
+      "titleHighlight": "यात्रा",
+      "description": "एक विचार के बीज से तकनीक की बढ़ती ताकत तक - हर मील का पत्थर हमारे विजन की ओर एक कदम है।",
+      "altPlant": "कंपनी विकास का प्रतीक बढ़ता पौधा",
+      "step1Date": "19 जनवरी 2025",
+      "step1Title": "बीज बोया गया",
+      "step1Desc": "Cloud Nexus की स्थापना एक स्पष्ट मिशन के साथ हुई - व्यावसायिक जरूरतों और तकनीक के बीच की खाई को पाटना।",
+      "step2Date": "मध्य 2025",
+      "step2Title": "जड़ें जमाना और बढ़ना",
+      "step2Desc": "हमने अपनी टीम का विस्तार किया, पहले वैश्विक ग्राहकों को जोड़ा और 30+ सफल प्रोजेक्ट डिलीवर किए।",
+      "step3Date": "प्रारंभ 2026",
+      "step3Title": "शाखाएं फैलाना",
+      "step3Desc": "50+ प्रोजेक्ट डिलीवर करके 15+ उद्योगों में, हमने GITEX जैसे वैश्विक तकनीकी सम्मेलनों में भाग लेना शुरू किया।",
+      "step4Date": "आज और आगे",
+      "step4Title": "नई ऊंचाइयों तक पहुंचना",
+      "step4Desc": "अब हम दुनिया भर के व्यवसायों द्वारा विश्वसनीय एक पूर्ण-सेवा तकनीकी कंपनी हैं।"
+    },
+    "cta": {
+      "title": "नवाचार के लिए तैयार?",
+      "titleHighlight": "साथ मिलकर बनाएं",
+      "description": "500+ कंपनियां CloudNexus पर भरोसा करती हैं।",
+      "bookConsultation": "मुफ्त परामर्श बुक करें",
+      "viewWork": "हमारा काम देखें"
+    }
+  },
+  "team": {
+    "hero": {
+      "title": "के पीछे के लोग",
+      "titleHighlight": "CloudNexus",
+      "description": "इंजीनियरों, डिज़ाइनरों और रणनीतिकारों की एक प्रतिभाशाली टीम - एक बार में एक प्रोजेक्ट, तकनीक का भविष्य बना रही है।",
+      "stat1Num": "90+",
+      "stat1Label": "टीम सदस्य",
+      "stat2Num": "4",
+      "stat2Label": "विशेष टीमें",
+      "stat3Num": "3",
+      "stat3Label": "कार्यालय स्थान",
+      "stat4Num": "10+",
+      "stat4Label": "वर्षों का अनुभव"
+    },
+    "leadership": {
+      "titleHighlight": "नेतृत्व",
+      "title": "टीम",
+      "description": "CloudNexus के विजन, रणनीति और निष्पादन के पीछे की प्रेरक शक्ति।"
+    },
+    "squads": {
+      "titleHighlight": "इंजीनियरिंग",
+      "title": "टीमें",
+      "description": "DevOps, डेवलपमेंट और डेटा में उत्कृष्टता प्रदान करने वाली विशेष टीमें।",
+      "teamLabel": "टीम",
+      "division": "विभाग",
+      "techStack": "टेक स्टैक",
+      "stat1Num": "25+",
+      "stat1Label": "सदस्य",
+      "stat2Num": "50+",
+      "stat2Label": "प्रोजेक्ट्स"
+    },
+    "techStaff": {
+      "titleHighlight": "तकनीकी स्टाफ",
+      "title": "शामिल हैं",
+      "description": "CloudNexus में, हमारा तकनीकी स्टाफ AI विशेषज्ञता, नवाचार और विविध प्रतिभा को जोड़ता है।",
+      "aiMl": "AI और मशीन लर्निंग इंजीनियर",
+      "softwareArchitects": "सॉफ्टवेयर आर्किटेक्ट",
+      "fullStack": "फुल-स्टैक डेवलपर्स",
+      "appWeb": "ऐप और वेब डेवलपर्स",
+      "networkCloud": "नेटवर्क और क्लाउड इंजीनियर",
+      "qa": "क्वालिटी एश्योरेंस स्पेशलिस्ट",
+      "devops": "DevOps इंजीनियर",
+      "dataEngineers": "डेटा इंजीनियर और एनालिस्ट",
+      "uiux": "UI/UX डिज़ाइनर",
+      "seoDigital": "SEO और डिजिटल मार्केटिंग स्पेशलिस्ट",
+      "projectManagers": "प्रोजेक्ट मैनेजर",
+      "technicalWriters": "तकनीकी लेखक"
+    },
+    "culture": {
+      "titleHighlight": "हमारी",
+      "title": "संस्कृति",
+      "description": "CloudNexus को करियर बनाने और पेशेवर रूप से बढ़ने के लिए एक बेहतरीन जगह क्या बनाता है।"
+    },
+    "cta": {
+      "title": "हमारी टीम से जुड़ना चाहते हैं?",
+      "description": "हम हमेशा प्रतिभाशाली इंजीनियरों, डिज़ाइनरों और रणनीतिकारों की तलाश में रहते हैं।",
+      "getInTouch": "संपर्क करें"
+    }
+  },
+  "processMethodology": {
+    "hero": {
+      "title": "हमारी प्रक्रिया और",
+      "titleHighlight": "विकास पद्धति",
+      "description": "सॉफ्टवेयर विकास के लिए हमारे सरल, स्मार्ट और एजाइल दृष्टिकोण की एक वॉकथ्रू।",
+      "startProject": "अपना प्रोजेक्ट शुरू करें",
+      "contactUs": "संपर्क करें"
+    },
+    "agile": {
+      "title": "चपलता से",
+      "titleHighlight": "कार्रवाई",
+      "description": "हम पारदर्शी संचार, सहयोग को बढ़ावा देने और निरंतर नया मूल्य प्रदान करने के लिए एजाइल पद्धति अपनाते हैं।",
+      "subDescription": "सब कुछ - विकास कार्य, जानकारी और निवेश - हर इटरेशन पर मापने योग्य रिटर्न के साथ एकीकृत तरीके से चलता है।",
+      "transparentComm": {
+        "title": "पारदर्शी संचार",
+        "desc": "दैनिक स्टैंडअप, स्प्रिंट रिव्यू और ओपन स्लैक चैनल। आप हमेशा जानते हैं कि आपके प्रोजेक्ट में क्या हो रहा है।"
+      },
+      "iterativeDev": {
+        "title": "पुनरावृत्तीय विकास",
+        "desc": "नियमित डेमो के साथ 2-सप्ताह के स्प्रिंट। आप प्रगति देखते हैं, फीडबैक देते हैं।"
+      },
+      "goalDriven": {
+        "title": "लक्ष्य-संचालित निष्पादन",
+        "desc": "हर स्प्रिंट के व्यावसायिक परिणामों से जुड़े स्पष्ट उद्देश्य होते हैं।"
+      },
+      "measurableProgress": {
+        "title": "मापने योग्य प्रगति",
+        "desc": "वेलोसिटी ट्रैकिंग, बर्नडाउन चार्ट और नियमित रिपोर्ट।"
+      }
+    },
+    "execution": {
+      "title": "प्रोजेक्ट",
+      "titleHighlight": "निष्पादन",
+      "titleSuffix": "संरचना",
+      "description": "हमारी उच्च-प्रदर्शन क्रॉस-फंक्शनल टीम हर कदम पर आपका ख्याल रखती है।",
+      "phase": "चरण"
+    },
+    "deliverables": {
+      "title": "हमारे",
+      "titleHighlight": "डिलिवरेबल्स",
+      "description": "जिस पल से हम आपका प्रोजेक्ट लेते हैं, हमारा कर्तव्य शुरू हो जाता है।"
+    },
+    "tech": {
+      "titleHighlight": "टूल्स और तकनीकें",
+      "title": "जो हम उपयोग करते हैं",
+      "description": "हम उच्च स्केलेबल, इंटरैक्टिव और नवाचारी समाधान देने के लिए ट्रेंडिंग तकनीकों का उपयोग करते हैं।"
+    },
+    "models": {
+      "title": "लचीले",
+      "titleHighlight": "कार्य मॉडल",
+      "description": "हमारी इंजीनियरिंग टीम विभिन्न एंगेजमेंट मॉडल में सेवाएं प्रदान करती है।"
+    },
+    "security": {
+      "title": "आपके विचार हैं",
+      "titleHighlight": "हमेशा सुरक्षित",
+      "titleSuffix": "हमारे पास",
+      "description": "आपके विचारों, बौद्धिक संपदा और व्यापार रहस्यों की रक्षा करना हमारी सर्वोच्च प्राथमिकता है।"
+    },
+    "cta": {
+      "title": "कोई प्रोजेक्ट मन में है?",
+      "titleHighlight": "साथ मिलकर बनाएं",
+      "description": "हमें अपने विचार बताएं और हम आर्किटेक्चर सिफारिशों के साथ एक विस्तृत प्रस्ताव प्रदान करेंगे - पूरी तरह मुफ्त।",
+      "bookConsultation": "मुफ्त परामर्श बुक करें",
+      "contactUs": "संपर्क करें"
+    }
+  },
+  "infra": {
+    "hero": {
+      "title": "Cloud Nexus",
+      "titleHighlight": "इंफ्रास्ट्रक्चर",
+      "description": "हमारा सोच-समझकर डिज़ाइन किया गया कार्यस्थल नवाचार, सहयोग और उच्च-प्रदर्शन डिलीवरी के लिए बनाया गया है।",
+      "cta": "संपर्क करें",
+      "ctaSecondary": "Cloud Nexus में जीवन"
+    },
+    "gallery": {
+      "title": "हमारे अंदर",
+      "titleHighlight": "ऑफिस",
+      "description": "Cloud Nexus में हर दिन नवाचार कहाँ होता है, इसकी एक झलक।"
+    },
+    "location": {
+      "headquarters": "मुख्यालय",
+      "highlightsTitle": "ऑफिस हाइलाइट्स"
+    },
+    "facilities": {
+      "title": "विश्व स्तरीय",
+      "titleHighlight": "सुविधाएं",
+      "description": "हमारा ऑफिस आरामदायक, सुरक्षित और प्रेरणादायक माहौल में असाधारण काम करने के लिए सब कुछ से लैस है।"
+    },
+    "workspace": {
+      "title": "हमारा",
+      "titleHighlight": "कार्यस्थल",
+      "description": "प्रतिभा पनपे, विचार प्रवाहित हों और बेहतरीन प्रोडक्ट बनें - ऐसा माहौल बनाने के लिए डिज़ाइन किया गया।"
+    },
+    "cta": {
+      "title": "कोई प्रोजेक्ट मन में है?",
+      "subtitle": "विशेषज्ञों से बात करें।",
+      "description": "आइए चर्चा करें कि Cloud Nexus आपके अगले बड़े विचार को बनाने, स्केल करने और डिलीवर करने में कैसे मदद कर सकता है।",
+      "primaryBtn": "संपर्क करें",
+      "secondaryBtn": "हमसे संपर्क करें"
+    }
+  },
+  "companyHub": {
+    "hero": {
+      "title": {
+        "line1": "भविष्य का निर्माण,",
+        "highlight": "एक समाधान",
+        "line2": "एक बार में"
+      },
+      "description": "Cloud Nexus एक तकनीकी कंपनी है जो विचारों को शक्तिशाली डिजिटल प्रोडक्ट्स में बदलती है।",
+      "cta": {
+        "learnAbout": "हमारे बारे में जानें",
+        "getInTouch": "संपर्क करें"
+      }
+    },
+    "explore": {
+      "title": "एक्सप्लोर करें",
+      "description": "जानें कि हम कौन हैं, कैसे काम करते हैं, और क्या हमें आपके व्यवसाय के लिए सही तकनीकी साझेदार बनाता है।",
+      "cardCta": "एक्सप्लोर करें"
+    },
+    "values": {
+      "title": "हमारे मुख्य",
+      "titleHighlight": "मूल्य",
+      "description": "ये सिद्धांत हमारे हर निर्णय, हर प्रोडक्ट और हर रिश्ते का मार्गदर्शन करते हैं।"
+    },
+    "growth": {
+      "title": "हमारी विकास",
+      "titleHighlight": "यात्रा",
+      "description": "एक विचार के बीज से तकनीक की बढ़ती ताकत तक।",
+      "step1": {
+        "date": "19 जनवरी 2025",
+        "title": "बीज बोया गया",
+        "desc": "Cloud Nexus की स्थापना एक स्पष्ट मिशन के साथ हुई।"
+      },
+      "step2": {
+        "date": "मध्य 2025",
+        "title": "जड़ें जमाना और बढ़ना",
+        "desc": "हमने अपनी टीम का विस्तार किया और 30+ सफल प्रोजेक्ट डिलीवर किए।"
+      },
+      "step3": {
+        "date": "प्रारंभ 2026",
+        "title": "शाखाएं फैलाना",
+        "desc": "50+ प्रोजेक्ट, 15+ उद्योगों में, GITEX जैसे सम्मेलनों में भाग लिया।"
+      },
+      "step4": {
+        "date": "आज और आगे",
+        "title": "नई ऊंचाइयों तक",
+        "desc": "अब हम दुनिया भर में विश्वसनीय पूर्ण-सेवा तकनीकी कंपनी हैं।"
+      }
+    },
+    "cta": {
+      "title": "कुछ बनाएं",
+      "titleHighlight": "असाधारण",
+      "description": "चाहे आप स्टार्टअप हों या एंटरप्राइज़ - हम इसे साकार करने के लिए यहाँ हैं।",
+      "bookConsultation": "मुफ्त परामर्श बुक करें",
+      "contactUs": "संपर्क करें"
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "हम कैसे",
+      "titleHighlight": "मदद करें?",
+      "description": "हमारी समर्पित सपोर्ट टीम आपकी सफलता सुनिश्चित करने के लिए यहाँ है।"
+    },
+    "channels": {
+      "title": "हमारी टीम से",
+      "titleHighlight": "संपर्क करें",
+      "description": "अपना पसंदीदा सपोर्ट चैनल चुनें।"
+    },
+    "selfService": {
+      "title": "सेल्फ-सर्विस",
+      "titleHighlight": "संसाधन",
+      "description": "हमारी व्यापक संसाधन लाइब्रेरी से खुद जवाब खोजें।",
+      "browse": "ब्राउज़ करें"
+    },
+    "faq": {
+      "title": "अक्सर पूछे जाने वाले",
+      "titleHighlight": "प्रश्न"
+    },
+    "form": {
+      "title": "संदेश भेजें",
+      "subtitle": "हम 4 घंटे में जवाब देंगे",
+      "successTitle": "संदेश भेजा गया!",
+      "successDesc": "हम 4 घंटे में जवाब देंगे।",
+      "sendAnother": "एक और भेजें",
+      "nameLabel": "नाम",
+      "namePlaceholder": "आपका पूरा नाम",
+      "emailLabel": "ईमेल",
+      "emailPlaceholder": "you@company.com",
+      "priorityLabel": "प्राथमिकता",
+      "priorityLow": "कम - सामान्य प्रश्न",
+      "priorityMedium": "मध्यम - फीचर अनुरोध",
+      "priorityHigh": "उच्च - बग रिपोर्ट",
+      "priorityCritical": "गंभीर - प्रोडक्शन डाउन",
+      "messageLabel": "संदेश",
+      "messagePlaceholder": "अपनी समस्या या प्रश्न बताएं...",
+      "sending": "भेज रहे हैं...",
+      "sendMessage": "संदेश भेजें",
+      "errorFallback": "कुछ गलत हुआ। कृपया पुनः प्रयास करें।"
+    },
+    "promise": {
+      "title": "हमारा सपोर्ट",
+      "titleHighlight": "वादा",
+      "humanFirst": {
+        "title": "मानव-प्रथम सपोर्ट",
+        "desc": "कोई चैटबॉट नहीं। हर बातचीत एक अनुभवी इंजीनियर से शुरू होती है।"
+      },
+      "enterpriseSla": {
+        "title": "एंटरप्राइज़-ग्रेड SLA",
+        "desc": "गारंटीड रिस्पॉन्स टाइम, अपटाइम कमिटमेंट और पारदर्शी रिपोर्टिंग।"
+      },
+      "resolution": {
+        "title": "समाधान, टालना नहीं",
+        "desc": "हम तब तक टिकट बंद नहीं करते जब तक आप संतुष्ट नहीं होते। हमारा CSAT स्कोर 98% से ऊपर है।"
+      }
+    },
+    "cta": {
+      "title": "अभी भी मदद चाहिए?",
+      "titleHighlight": "हम आपके लिए यहाँ हैं",
+      "description": "अपनी विशिष्ट जरूरतों पर चर्चा के लिए मुफ्त परामर्श शेड्यूल करें।",
+      "bookConsultation": "मुफ्त परामर्श बुक करें",
+      "contactSales": "सेल्स से संपर्क करें"
+    }
+  },
+  "career": {
+    "error": "जॉब लिस्टिंग लोड करने में असमर्थ।",
+    "filter": {
+      "all": "सभी"
+    },
+    "hero": {
+      "title1": "करने के लिए तैयार",
+      "title2": "अपने जीवन का सबसे अच्छा काम",
+      "title3": ":)",
+      "description": "वैश्विक ग्राहकों के लिए अत्याधुनिक तकनीकी समाधान बनाने वाली भावुक इंजीनियरों, डिज़ाइनरों की टीम से जुड़ें।",
+      "imageAlt": "Cloud Nexus में टीम सहयोग"
+    },
+    "search": {
+      "placeholder": "जॉब रोल से खोजें",
+      "active": "सक्रिय",
+      "role": "जॉब रोल",
+      "roles": "जॉब रोल्स"
+    },
+    "job": {
+      "apply": "देखें और आवेदन करें"
+    },
+    "noResults": {
+      "title": "कोई पद नहीं मिला",
+      "description": "अपनी खोज या फ़िल्टर मानदंड बदलें।"
+    },
+    "cta": {
+      "title": "क्या आप सही फिट हैं?",
+      "description": "हम Cloud Nexus में कुछ खास बना रहे हैं - सपने देखने वालों, करने वालों की एक टीम।",
+      "resume": "हमें अपना रिज़्यूमे भेजें"
+    }
+  },
+  "blog": {
+    "filter": {
+      "all": "सभी"
+    },
+    "stat": {
+      "articles": "लेख",
+      "topics": "विषय",
+      "authors": "लेखक"
+    },
+    "hero": {
+      "title1": "अंतर्दृष्टि और",
+      "title2": "कहानियां",
+      "description": "Cloud Nexus इंजीनियरिंग टीम से ट्यूटोरियल, केस स्टडी और तकनीकी अंतर्दृष्टि।",
+      "imageAlt": "ब्लॉग और अंतर्दृष्टि"
+    },
+    "search": {
+      "placeholder": "लेख खोजें..."
+    },
+    "noResults": "कोई लेख नहीं मिला",
+    "noResultsEmpty": "अभी कोई ब्लॉग पोस्ट नहीं। जल्द वापस आएं!",
+    "noResultsFilter": "अपनी खोज या फ़िल्टर बदलें।",
+    "readMore": "लेख पढ़ें"
+  },
+  "contact": {
+    "form": {
+      "errorFallback": "कुछ गलत हुआ। कृपया पुनः प्रयास करें।",
+      "title": "अपने प्रोजेक्ट के बारे में बताएं",
+      "subtitle": "* वाले सभी फ़ील्ड आवश्यक हैं",
+      "fullName": "पूरा नाम",
+      "fullNamePlaceholder": "John Doe",
+      "companyName": "कंपनी का नाम",
+      "companyPlaceholder": "आपकी कंपनी",
+      "email": "ईमेल पता",
+      "emailPlaceholder": "john@company.com",
+      "phone": "फ़ोन नंबर",
+      "phonePlaceholder": "+91 XXXXX XXXXX",
+      "interestedIn": "मुझे रुचि है",
+      "selectService": "सेवा चुनें",
+      "budget": "अनुमानित बजट",
+      "selectBudget": "बजट सीमा चुनें",
+      "details": "प्रोजेक्ट विवरण",
+      "detailsPlaceholder": "अपने प्रोजेक्ट, लक्ष्य, समयसीमा के बारे में बताएं...",
+      "heardFrom": "आपने हमारे बारे में कैसे सुना?",
+      "selectOption": "विकल्प चुनें",
+      "sending": "भेज रहे हैं...",
+      "sendMessage": "संदेश भेजें",
+      "privacyNote": "सबमिट करके, आप हमारी गोपनीयता नीति से सहमत हैं।"
+    },
+    "hero": {
+      "titleHighlight": "चलिए बनाते हैं",
+      "title": "कुछ शानदार",
+      "description": "अपने प्रोजेक्ट के बारे में बताएं और हम 24 घंटे में जवाब देंगे।",
+      "responseTime": "< 24h",
+      "responseTimeLabel": "रिस्पॉन्स टाइम",
+      "projectsNum": "200+",
+      "projectsLabel": "प्रोजेक्ट डिलीवर किए",
+      "satisfactionNum": "100%",
+      "satisfactionLabel": "क्लाइंट संतुष्टि"
+    },
+    "success": {
+      "title": "संदेश भेजा गया!",
+      "description": "संपर्क करने के लिए धन्यवाद। हमारी टीम 24 घंटे में जवाब देगी।",
+      "sendAnother": "एक और संदेश भेजें"
+    },
+    "offices": {
+      "title": "हमारे कार्यालय"
+    },
+    "cta": {
+      "title": "लाइव बातचीत पसंद करते हैं?",
+      "description": "अपने प्रोजेक्ट पर विस्तार से चर्चा के लिए मुफ्त 30 मिनट की कॉल शेड्यूल करें।",
+      "bookConsultation": "मुफ्त परामर्श बुक करें"
+    }
+  },
+  "freeConsult": {
+    "hero": {
+      "title": "चलिए बनाते हैं आपका",
+      "titleHighlight": "विजन साथ मिलकर",
+      "description": "हमारे सीनियर आर्किटेक्ट्स के साथ मुफ्त 30 मिनट की रणनीति सत्र बुक करें।",
+      "ndaProtected": "NDA संरक्षित",
+      "thirtyMinSession": "30 मिनट सत्र",
+      "seniorArchitects": "सीनियर आर्किटेक्ट्स"
+    },
+    "calendly": {
+      "title": "तारीख और समय चुनें",
+      "subtitle": "30 मिनट • मुफ्त परामर्श"
+    },
+    "whatYouGet": {
+      "title": "आपको क्या",
+      "titleHighlight": "मिलेगा",
+      "description": "हर परामर्श ठोस, कार्रवाई योग्य मूल्य प्रदान करने के लिए डिज़ाइन किया गया है।"
+    },
+    "areas": {
+      "title": "परामर्श",
+      "titleHighlight": "क्षेत्र",
+      "description": "हम डिजिटल प्रोडक्ट विकास के हर क्षेत्र में विशेषज्ञ मार्गदर्शन प्रदान करते हैं।"
+    },
+    "process": {
+      "title": "यह कैसे",
+      "titleHighlight": "काम करता है",
+      "description": "बुकिंग से लेकर प्रस्ताव प्राप्त करने तक चार सरल चरण।"
+    },
+    "cta": {
+      "title": "शुरू करने के लिए तैयार?",
+      "titleHighlight": "आज बात करें",
+      "description": "500+ कंपनियों ने हमारे विशेषज्ञ मार्गदर्शन से अपनी वृद्धि तेज की है।",
+      "bookConsultation": "मुफ्त परामर्श बुक करें",
+      "emailUs": "हमें ईमेल करें",
+      "callUs": "हमें कॉल करें"
+    }
+  }
 }
