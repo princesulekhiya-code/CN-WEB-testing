@@ -59,8 +59,13 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const t = useCallback(
     (key: string, fallback?: string): string => {
-      const resolve = (obj: Record<string, unknown>, path: string): string | undefined => {
-        const parts = path.split(".");
+      const flat = (obj: Record<string, unknown>): string | undefined => {
+        const v = obj[key];
+        return typeof v === "string" ? v : undefined;
+      };
+      const nested = (obj: Record<string, unknown>): string | undefined => {
+        const parts = key.split(".");
+        if (parts.length <= 1) return undefined;
         let cur: unknown = obj;
         for (const p of parts) {
           if (cur == null || typeof cur !== "object") return undefined;
@@ -68,10 +73,9 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         }
         return typeof cur === "string" ? cur : undefined;
       };
-      return resolve(translations as Record<string, unknown>, key)
-        ?? resolve(en as Record<string, unknown>, key)
-        ?? fallback
-        ?? key;
+      const t = translations as Record<string, unknown>;
+      const e = en as Record<string, unknown>;
+      return flat(t) ?? nested(t) ?? flat(e) ?? nested(e) ?? fallback ?? key;
     },
     [translations]
   );
