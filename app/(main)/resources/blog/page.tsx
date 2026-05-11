@@ -64,7 +64,7 @@ export default function BlogPage() {
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                 {t("blog.hero.title1", "Insights &")}{" "}
-                <span className="text-[#4EB3E8] italic">{t("blog.hero.title2", "Stories")}</span>
+                <span className="text-[#4EB3E8]">{t("blog.hero.title2", "Stories")}</span>
               </h1>
               <p className="mt-5 text-base text-black/50 dark:text-white/45 max-w-lg leading-relaxed">
                 {t("blog.hero.description", "Tutorials, case studies, and tech insights from the Cloud Nexus engineering team. Stay ahead with the latest in cloud, AI, and modern development.")}

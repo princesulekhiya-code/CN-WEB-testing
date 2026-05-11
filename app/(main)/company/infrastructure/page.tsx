@@ -16,6 +16,7 @@ import { useTranslatedData } from "@/lib/i18n/translate-data";
 
 const officePhotos = [
   "/images/infrastucture-images/team-photo.png",
+  "/images/infrastucture-images/office-cabin.png",
   "/images/infrastucture-images/media-1.jpeg",
   "/images/infrastucture-images/media-2.jpeg",
   "/images/infrastucture-images/media-3.jpeg",
@@ -256,7 +257,7 @@ export default function InfrastructurePage() {
         </div>
 
         {/* Row 3 — 3 photos */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
           {officePhotos.slice(5, 8).map((src, i) => (
             <motion.div
               key={i}
@@ -271,6 +272,25 @@ export default function InfrastructurePage() {
             </motion.div>
           ))}
         </div>
+
+        {/* Row 4 — remaining photos */}
+        {officePhotos.length > 8 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {officePhotos.slice(8).map((src, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (i + 8) * 0.1 }}
+                className="relative h-[280px] md:h-[340px] rounded-2xl overflow-hidden group border border-black/[0.06] dark:border-white/[0.06]"
+              >
+                <Image src={src} alt={`Cloud Nexus office ${i + 9}`} fill className="object-cover object-center" sizes="(max-width:768px) 100vw, 50vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* OFFICE LOCATION */}

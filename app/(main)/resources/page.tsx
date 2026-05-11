@@ -146,7 +146,7 @@ export default function ResourcesPage() {
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                 {t("resourcesHub.hero.title", "How can we")}{" "}
-                <span className="text-[#4EB3E8] italic">{t("resourcesHub.hero.titleHighlight", "help you")}</span> {t("resourcesHub.hero.titleEnd", "today?")}
+                <span className="text-[#4EB3E8]">{t("resourcesHub.hero.titleHighlight", "help you")}</span> {t("resourcesHub.hero.titleEnd", "today?")}
               </h1>
               <p className="mt-5 text-base text-black/50 dark:text-white/45 max-w-lg leading-relaxed">
                 {t("resourcesHub.hero.description", "From technical support to career opportunities, from expert consultations to in-depth tech insights  -  everything you need from Cloud Nexus is right here.")}
