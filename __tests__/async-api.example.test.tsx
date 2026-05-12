@@ -16,7 +16,7 @@ const fetchUserData = async (userId: string) => {
 
 // Example component that uses the API
 const UserProfile: React.FC<{ userId: string }> = ({ userId }) => {
-  const [user, setUser] = React.useState(null)
+  const [user, setUser] = React.useState<any>(null)
   const [loading, setLoading] = React.useState(true)
   const [error, setError] = React.useState(null)
 
@@ -52,15 +52,15 @@ describe('UserProfile Component - API Integration', () => {
       global.fetch = jest.fn(
         () =>
           new Promise(resolve =>
-            setTimeout(
-              () =>
-                resolve({
-                  ok: true,
-                  json: () => Promise.resolve({ name: 'John', email: 'john@example.com' }),
-                }),
-              100,
-            ),
-          ),
+                setTimeout(
+                  () =>
+                    resolve({
+                      ok: true,
+                      json: () => Promise.resolve({ name: 'John', email: 'john@example.com' }),
+                    } as unknown as Response),
+                  100,
+                ),
+              ),
       )
 
       render(<UserProfile userId="123" />)
@@ -78,8 +78,8 @@ describe('UserProfile Component - API Integration', () => {
               name: 'John Doe',
               email: 'john@example.com',
             }),
-        }),
-      )
+        } as unknown as Response),
+      ) as unknown as typeof fetch
 
       render(<UserProfile userId="123" />)
 
@@ -94,11 +94,8 @@ describe('UserProfile Component - API Integration', () => {
 
     it('should call API with correct userId', async () => {
       const mockFetch = jest.fn(() =>
-        Promise.resolve({
-          ok: true,
-          json: () => Promise.resolve({ name: 'Jane', email: 'jane@example.com' }),
-        }),
-      )
+        Promise.resolve({ ok: true, json: () => Promise.resolve({ name: 'Jane', email: 'jane@example.com' }) } as unknown as Response),
+      ) as unknown as typeof fetch
       global.fetch = mockFetch
 
       render(<UserProfile userId="456" />)
@@ -113,11 +110,7 @@ describe('UserProfile Component - API Integration', () => {
 
   describe('Error State', () => {
     it('should display error message when API call fails', async () => {
-      global.fetch = jest.fn(() =>
-        Promise.resolve({
-          ok: false,
-        }),
-      )
+      global.fetch = jest.fn(() => Promise.resolve({ ok: false } as unknown as Response)) as unknown as typeof fetch
 
       render(<UserProfile userId="123" />)
 
@@ -127,7 +120,7 @@ describe('UserProfile Component - API Integration', () => {
     })
 
     it('should handle network errors gracefully', async () => {
-      global.fetch = jest.fn(() => Promise.reject(new Error('Network error')))
+      global.fetch = jest.fn(() => Promise.reject(new Error('Network error'))) as unknown as typeof fetch
 
       render(<UserProfile userId="123" />)
 
@@ -141,13 +134,10 @@ describe('UserProfile Component - API Integration', () => {
     it('should refetch when userId prop changes', async () => {
       const mockFetch = jest.fn()
 
-      global.fetch = mockFetch.mockImplementation(url => {
+      global.fetch = mockFetch.mockImplementation((url: string) => {
         const userId = url.split('/').pop()
-        return Promise.resolve({
-          ok: true,
-          json: () => Promise.resolve({ name: `User ${userId}`, email: `user${userId}@test.com` }),
-        })
-      })
+        return Promise.resolve({ ok: true, json: () => Promise.resolve({ name: `User ${userId}`, email: `user${userId}@test.com` }) } as unknown as Response)
+      }) as unknown as typeof fetch
 
       const { rerender } = render(<UserProfile userId="123" />)
 
@@ -170,12 +160,7 @@ describe('UserProfile Component - API Integration', () => {
 
   describe('Empty State', () => {
     it('should show empty state when no user data', async () => {
-      global.fetch = jest.fn(() =>
-        Promise.resolve({
-          ok: true,
-          json: () => Promise.resolve(null),
-        }),
-      )
+      global.fetch = jest.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve(null) } as unknown as Response)) as unknown as typeof fetch
 
       render(<UserProfile userId="999" />)
 
@@ -192,14 +177,11 @@ describe('Async Testing Best Practices', () => {
       new Promise(resolve =>
         setTimeout(
           () =>
-            resolve({
-              ok: true,
-              json: () => Promise.resolve({ name: 'Test User', email: 'test@example.com' }),
-            }),
+            resolve({ ok: true, json: () => Promise.resolve({ name: 'Test User', email: 'test@example.com' }) } as unknown as Response),
           50,
         ),
       ),
-    )
+    ) as unknown as typeof fetch
 
     render(<UserProfile userId="123" />)
 
@@ -210,12 +192,7 @@ describe('Async Testing Best Practices', () => {
   })
 
   it('should cleanup timers to prevent memory leaks', async () => {
-    const mockFetch = jest.fn(() =>
-      Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve({ name: 'Test', email: 'test@test.com' }),
-      }),
-    )
+    const mockFetch = jest.fn(() => Promise.resolve({ ok: true, json: () => Promise.resolve({ name: 'Test', email: 'test@test.com' }) } as unknown as Response)) as unknown as typeof fetch
     global.fetch = mockFetch
 
     const { unmount } = render(<UserProfile userId="123" />)

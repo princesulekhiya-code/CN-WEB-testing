@@ -27,7 +27,7 @@ describe('Button Component', () => {
     it('should render button with different variants', () => {
       render(
         <>
-          <Button variant="primary">Primary</Button>
+          <Button variant="default">Primary</Button>
           <Button variant="secondary">Secondary</Button>
           <Button variant="outline">Outline</Button>
           <Button variant="ghost">Ghost</Button>
