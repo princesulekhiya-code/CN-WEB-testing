@@ -65,6 +65,14 @@ jobs:
             echo "::warning::DOCKERHUB_USERNAME secret is empty — build and Trivy use a local tag only. Add DOCKERHUB_USERNAME (and DOCKERHUB_TOKEN) on this repo to push to Docker Hub."
           fi
 
+      - name: Explain Docker Hub push (read this if push is skipped)
+        run: |
+          echo "=== Docker / Trivy behaviour ==="
+          echo "Trivy table = report of known CVEs in the image layers (often Alpine/base). It is NOT the same as 'build failed' when exit-code is 0."
+          echo "Docker Hub push runs ONLY when: push to main + DOCKERHUB_USERNAME set + DOCKERHUB_TOKEN set."
+          echo "Pull requests: build + scan only — login/push steps are skipped by design."
+          echo "can_push=${{ steps.image.outputs.can_push }} | event=${{ github.event_name }} | ref=${{ github.ref }}"
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
